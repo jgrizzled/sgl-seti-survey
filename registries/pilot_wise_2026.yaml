@@ -1,0 +1,618 @@
+# Pilot target registry for the WISE/NEOWISE shakedown (plan §4.2).
+#
+# STATUS: v1.0 (2026-08-18) — curated. All former CURATION flags are
+# resolved; see surveys/wise/notes/registry_curation.md for the evidence
+# behind each decision:
+#   - Alpha Cen: coherent Kervella et al. 2016 (A&A 594, A107) barycenter
+#     solution (position, PM, parallax 747.17 mas, RV, orbit, mass
+#     fraction) replaces the earlier mixed demonstration values.
+#   - Sirius: the van Leeuwen 2007 (hip2) solution is adopted AS the
+#     barycenter — validated against the 2MASS epoch-2000 position of
+#     Sirius A (0.16" agreement, vs 1.4"/3.6" for the alternatives);
+#     PM uncertainties inflated to 20 mas/yr as the systematic allocation
+#     implied by that validation bound. Parallax and systemic RV from
+#     Bond et al. 2017.
+#   - Covariance: DIAGONAL BY DECLARED ASSUMPTION (per-value 1-sigma
+#     uncertainties only; ESA Gaia archive unreachable from the dev
+#     network and VizieR I/355 omits correlation columns). Propagated
+#     99% locus radii are <= 0.1" against a 10" search padding, so
+#     correlation terms cannot change any search decision at pilot scale.
+#
+# Endpoint decisions (2026-08-18): full five-system shortlist; component
+# endpoints (not barycenters) for the multiples -> 7 endpoint hypotheses.
+schema_version: 2
+
+targets:
+  barnard-star:
+    display_name: "Barnard's Star (GJ 699)"
+    endpoint_kind: star
+    priority: 1.0
+    tags: [pilot, high-pm, isolated]
+    notes: >-
+      High-proper-motion pilot case (~10.4 arcsec/yr): stresses the
+      secular-drift term of the SGL track.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "4472832130942575872"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-18)"
+    quality: "Gaia DR3 five-parameter solution with DR3 radial velocity"
+    model_rationale: >-
+      Isolated star with an excellent single-star solution; linear
+      astrometry is the appropriate family.
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 269.44850252544
+        dec_deg: 4.73942005111
+        parallax_mas: 546.9759
+        pm_ra_cosdec_mas_per_yr: -801.551
+        pm_dec_mas_per_yr: 10362.394
+        radial_velocity_km_s: -110.47
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 4472832130942575872 via VizieR I/355/gaiadr3"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0262
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.029
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0401
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.032
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.036
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.13
+          unit: km/s
+
+  ross-154:
+    display_name: "Ross 154 (GJ 729)"
+    endpoint_kind: star
+    priority: 0.8
+    tags: [pilot, linear-control, isolated]
+    notes: >-
+      Ordinary linear-motion control-like endpoint (~0.7 arcsec/yr).
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "4075141768785646848"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-18)"
+    quality: "Gaia DR3 five-parameter solution with DR3 radial velocity"
+    model_rationale: >-
+      Isolated star with an excellent single-star solution; linear
+      astrometry is the appropriate family.
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 282.45878901752
+        dec_deg: -23.83709744873
+        parallax_mas: 336.0266
+        pm_ra_cosdec_mas_per_yr: 639.368
+        pm_dec_mas_per_yr: -193.958
+        radial_velocity_km_s: -11.12
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 4075141768785646848 via VizieR I/355/gaiadr3"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0291
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0262
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0317
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.037
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.032
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.57
+          unit: km/s
+
+  lalande-21185:
+    display_name: "Lalande 21185 (GJ 411)"
+    endpoint_kind: star
+    priority: 0.8
+    tags: [pilot, high-pm, isolated]
+    notes: >-
+      Bright isolated M dwarf, ~4.8 arcsec/yr proper motion; middle
+      ground between Barnard's Star and Ross 154.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "762815470562110464"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-18)"
+    quality: "Gaia DR3 five-parameter solution with DR3 radial velocity"
+    model_rationale: >-
+      Isolated star with an excellent single-star solution; linear
+      astrometry is the appropriate family.
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 165.83095967578
+        dec_deg: 35.94865303266
+        parallax_mas: 392.7529
+        pm_ra_cosdec_mas_per_yr: -580.057
+        pm_dec_mas_per_yr: -4776.589
+        radial_velocity_km_s: -85.11
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 762815470562110464 via VizieR I/355/gaiadr3"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0241
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0294
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0321
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.026
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.03
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.13
+          unit: km/s
+
+  alpha-cen-a:
+    display_name: "Alpha Centauri A"
+    endpoint_kind: component
+    priority: 1.0
+    tags: [pilot, binary-component, crowded-corridor]
+    notes: >-
+      Primary-component endpoint via the coherent Kervella et al. 2016
+      barycentric solution (position, PM, parallax, RV, orbit, and mass
+      fraction from one combined fit; Table 1 and Table 2). Barycenter
+      position uncertainty is a conservative 30 mas allocation reflecting
+      the printed precision of their Table 2 ephemeris.
+    identifiers:
+      - catalog: "HIP"
+        id: "71683"
+        version: "Hipparcos, the New Reduction (van Leeuwen 2007)"
+      - catalog: "Kervella et al."
+        id: "alpha Cen AB barycentric solution"
+        version: "2016, A&A 594, A107, Tables 1-2"
+    quality: "published combined solution; all values from one coherent fit"
+    model_rationale: >-
+      Bright resolved binary with no Gaia five-parameter solution; the
+      published two-body orbit about a linearly moving barycenter is the
+      appropriate model.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 219.88255417
+        dec_deg: -60.83333611
+        pm_ra_cosdec_mas_per_yr: -3619.9
+        pm_dec_mas_per_yr: 693.8
+        parallax_mas: 747.17
+        radial_velocity_km_s: -22.3930
+        reference_epoch_jyear: 2009.1517
+        reference_epoch_scale: tdb
+        source: >-
+          Kervella et al. 2016, A&A 594, A107: barycenter position from
+          Table 2 (epoch 2009.1517), PM/parallax/RV from Table 1
+      provenance:
+        ra_deg:
+          source: "Kervella et al. 2016 Table 2 (conservative allocation at printed precision)"
+          uncertainty: 30.0
+          unit: mas
+        dec_deg:
+          source: "Kervella et al. 2016 Table 2 (conservative allocation at printed precision)"
+          uncertainty: 30.0
+          unit: mas
+        parallax_mas:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.61
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 3.9
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 3.9
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.0043
+          unit: km/s
+        period_yr:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.013
+          unit: yr
+        periastron_epoch_jyear:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.013
+          unit: yr
+        eccentricity:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.0011
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.013
+          unit: arcsec
+        inclination_deg:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.011
+          unit: deg
+        ascending_node_deg:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.033
+          unit: deg
+        arg_periastron_deg:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.051
+          unit: deg
+        mass_fraction_secondary:
+          source: "Kervella et al. 2016 Table 1 (mB/mtot)"
+          uncertainty: 0.00027
+          unit: "1"
+      orbit:
+        period_yr: 79.929
+        periastron_epoch_jyear: 1955.604
+        eccentricity: 0.5208
+        semimajor_axis_arcsec: 17.592
+        inclination_deg: 79.320
+        ascending_node_deg: 205.064
+        arg_periastron_deg: 232.006
+        mass_fraction_secondary: 0.45884
+        component: primary
+        source: "Kervella et al. 2016, A&A 594, A107, Table 1"
+
+  alpha-cen-b:
+    display_name: "Alpha Centauri B"
+    endpoint_kind: component
+    priority: 1.0
+    tags: [pilot, binary-component, crowded-corridor]
+    notes: >-
+      Secondary-component endpoint; same barycenter astrometry and orbit
+      block as alpha-cen-a (Kervella et al. 2016 coherent solution),
+      differing only in component.
+    identifiers:
+      - catalog: "HIP"
+        id: "71681"
+        version: "Hipparcos, the New Reduction (van Leeuwen 2007)"
+      - catalog: "Kervella et al."
+        id: "alpha Cen AB barycentric solution"
+        version: "2016, A&A 594, A107, Tables 1-2"
+    quality: "published combined solution; all values from one coherent fit"
+    model_rationale: >-
+      Bright resolved binary with no Gaia five-parameter solution; the
+      published two-body orbit about a linearly moving barycenter is the
+      appropriate model.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 219.88255417
+        dec_deg: -60.83333611
+        pm_ra_cosdec_mas_per_yr: -3619.9
+        pm_dec_mas_per_yr: 693.8
+        parallax_mas: 747.17
+        radial_velocity_km_s: -22.3930
+        reference_epoch_jyear: 2009.1517
+        reference_epoch_scale: tdb
+        source: >-
+          Kervella et al. 2016, A&A 594, A107: barycenter position from
+          Table 2 (epoch 2009.1517), PM/parallax/RV from Table 1
+      provenance:
+        ra_deg:
+          source: "Kervella et al. 2016 Table 2 (conservative allocation at printed precision)"
+          uncertainty: 30.0
+          unit: mas
+        dec_deg:
+          source: "Kervella et al. 2016 Table 2 (conservative allocation at printed precision)"
+          uncertainty: 30.0
+          unit: mas
+        parallax_mas:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.61
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 3.9
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 3.9
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.0043
+          unit: km/s
+        period_yr:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.013
+          unit: yr
+        periastron_epoch_jyear:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.013
+          unit: yr
+        eccentricity:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.0011
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.013
+          unit: arcsec
+        inclination_deg:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.011
+          unit: deg
+        ascending_node_deg:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.033
+          unit: deg
+        arg_periastron_deg:
+          source: "Kervella et al. 2016 Table 1"
+          uncertainty: 0.051
+          unit: deg
+        mass_fraction_secondary:
+          source: "Kervella et al. 2016 Table 1 (mB/mtot)"
+          uncertainty: 0.00027
+          unit: "1"
+      orbit:
+        period_yr: 79.929
+        periastron_epoch_jyear: 1955.604
+        eccentricity: 0.5208
+        semimajor_axis_arcsec: 17.592
+        inclination_deg: 79.320
+        ascending_node_deg: 205.064
+        arg_periastron_deg: 232.006
+        mass_fraction_secondary: 0.45884
+        component: secondary
+        source: "Kervella et al. 2016, A&A 594, A107, Table 1"
+
+  sirius-a:
+    display_name: "Sirius A"
+    endpoint_kind: component
+    priority: 0.9
+    tags: [pilot, binary-component, bright-artifacts]
+    notes: >-
+      Primary-component endpoint. The hip2 (van Leeuwen 2007) HIP 32349
+      astrometry is adopted AS the system barycenter: validated on
+      2026-08-18 by predicting the 2MASS epoch-2000 position of Sirius A
+      to 0.16 arcsec under this interpretation (vs 1.4 arcsec if treated
+      as an instantaneous photocenter state, and 3.6 arcsec for an
+      explicitly re-corrected barycenter) — see
+      surveys/wise/notes/registry_curation.md. PM uncertainties are
+      inflated to 20 mas/yr as the systematic allocation implied by that
+      0.16 arcsec / 8.75 yr validation bound.
+    identifiers:
+      - catalog: "HIP"
+        id: "32349"
+        version: "Hipparcos, the New Reduction (van Leeuwen 2007), via VizieR I/311/hip2 (retrieved 2026-08-18)"
+      - catalog: "Bond et al."
+        id: "Sirius AB orbit"
+        version: "2017, ApJ 840, 70, Table 4 (confirmed against ar5iv full text 2026-08-18)"
+    quality: "published HST orbit; hip2 barycenter interpretation validated against 2MASS"
+    model_rationale: >-
+      Bright resolved binary with no Gaia solution; two-body orbit about
+      a linearly moving barycenter is the appropriate model.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 101.28854105
+        dec_deg: -16.71314306
+        parallax_mas: 378.90
+        pm_ra_cosdec_mas_per_yr: -546.01
+        pm_dec_mas_per_yr: -1223.07
+        radial_velocity_km_s: -8.47
+        reference_epoch_jyear: 1991.25
+        reference_epoch_scale: tt
+        source: >-
+          Barycenter: van Leeuwen 2007 HIP 32349 via VizieR I/311/hip2
+          (orbit-corrected solution, validated against 2MASS); parallax
+          378.90 mas adopted by Bond et al. 2017 (hip2's 379.21+/-1.58
+          agrees at 0.2 sigma); RV is the gravitational-redshift-corrected
+          systemic velocity from Bond et al. 2017
+      provenance:
+        ra_deg:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 1.21
+          unit: mas
+        dec_deg:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 1.04
+          unit: mas
+        parallax_mas:
+          source: "Bond et al. 2017 adopted (Gatewood & Gatewood 1978 + Hipparcos weighted mean)"
+          uncertainty: 1.27
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "van Leeuwen 2007 (1.33) + 2MASS-validation systematic allocation, quadrature"
+          uncertainty: 20.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "van Leeuwen 2007 (1.24) + 2MASS-validation systematic allocation, quadrature"
+          uncertainty: 20.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Bond et al. 2017 systemic, redshift-corrected (conservative allocation)"
+          uncertainty: 0.5
+          unit: km/s
+        period_yr:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.0043
+          unit: yr
+        periastron_epoch_jyear:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.0058
+          unit: yr
+        eccentricity:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.00037
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.0025
+          unit: arcsec
+        inclination_deg:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.040
+          unit: deg
+        ascending_node_deg:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.071
+          unit: deg
+        arg_periastron_deg:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.075
+          unit: deg
+      orbit:
+        period_yr: 50.1284
+        periastron_epoch_jyear: 1994.5715
+        eccentricity: 0.59142
+        semimajor_axis_arcsec: 7.4957
+        inclination_deg: 136.336
+        ascending_node_deg: 45.4
+        arg_periastron_deg: 149.161
+        mass_fraction_secondary: 0.3304122038299253
+        component: primary
+        source: >-
+          Bond et al. 2017, ApJ 840, 70, Table 4 (single-column new
+          solution, confirmed 2026-08-18); mass fraction from their
+          dynamical masses 1.018/(2.063+1.018)
+
+  sirius-b:
+    display_name: "Sirius B"
+    endpoint_kind: component
+    priority: 0.9
+    tags: [pilot, binary-component, bright-artifacts]
+    notes: >-
+      Secondary-component endpoint; same barycenter astrometry and orbit
+      block as sirius-a (see validation notes there), differing only in
+      component.
+    identifiers:
+      - catalog: "HIP"
+        id: "32349"
+        version: "Hipparcos, the New Reduction (van Leeuwen 2007), via VizieR I/311/hip2 (retrieved 2026-08-18)"
+      - catalog: "Bond et al."
+        id: "Sirius AB orbit"
+        version: "2017, ApJ 840, 70, Table 4 (confirmed against ar5iv full text 2026-08-18)"
+    quality: "published HST orbit; hip2 barycenter interpretation validated against 2MASS"
+    model_rationale: >-
+      Bright resolved binary with no Gaia solution; two-body orbit about
+      a linearly moving barycenter is the appropriate model.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 101.28854105
+        dec_deg: -16.71314306
+        parallax_mas: 378.90
+        pm_ra_cosdec_mas_per_yr: -546.01
+        pm_dec_mas_per_yr: -1223.07
+        radial_velocity_km_s: -8.47
+        reference_epoch_jyear: 1991.25
+        reference_epoch_scale: tt
+        source: >-
+          Barycenter: van Leeuwen 2007 HIP 32349 via VizieR I/311/hip2
+          (orbit-corrected solution, validated against 2MASS); parallax
+          378.90 mas adopted by Bond et al. 2017 (hip2's 379.21+/-1.58
+          agrees at 0.2 sigma); RV is the gravitational-redshift-corrected
+          systemic velocity from Bond et al. 2017
+      provenance:
+        ra_deg:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 1.21
+          unit: mas
+        dec_deg:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 1.04
+          unit: mas
+        parallax_mas:
+          source: "Bond et al. 2017 adopted (Gatewood & Gatewood 1978 + Hipparcos weighted mean)"
+          uncertainty: 1.27
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "van Leeuwen 2007 (1.33) + 2MASS-validation systematic allocation, quadrature"
+          uncertainty: 20.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "van Leeuwen 2007 (1.24) + 2MASS-validation systematic allocation, quadrature"
+          uncertainty: 20.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Bond et al. 2017 systemic, redshift-corrected (conservative allocation)"
+          uncertainty: 0.5
+          unit: km/s
+        period_yr:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.0043
+          unit: yr
+        periastron_epoch_jyear:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.0058
+          unit: yr
+        eccentricity:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.00037
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.0025
+          unit: arcsec
+        inclination_deg:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.040
+          unit: deg
+        ascending_node_deg:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.071
+          unit: deg
+        arg_periastron_deg:
+          source: "Bond et al. 2017 Table 4"
+          uncertainty: 0.075
+          unit: deg
+      orbit:
+        period_yr: 50.1284
+        periastron_epoch_jyear: 1994.5715
+        eccentricity: 0.59142
+        semimajor_axis_arcsec: 7.4957
+        inclination_deg: 136.336
+        ascending_node_deg: 45.4
+        arg_periastron_deg: 149.161
+        mass_fraction_secondary: 0.3304122038299253
+        component: secondary
+        source: >-
+          Bond et al. 2017, ApJ 840, 70, Table 4 (single-column new
+          solution, confirmed 2026-08-18); mass fraction from their
+          dynamical masses 1.018/(2.063+1.018)

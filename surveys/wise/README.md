@@ -1,0 +1,58 @@
+# surveys/wise — WISE/NEOWISE shakedown
+
+First milestone: a completeness-calibrated end-to-end run of Pipeline A
+against the WISE merged L1b products (plan §4).
+
+## Contents
+
+- `hypotheses.md` — the baseline hypothesis freeze (draft until signed off;
+  open decisions are marked `[DECISION]`)
+- `notes/irsa_recon.md` — reconnaissance of the IRSA tables, services, and
+  data-product identifiers this sub-project will query
+- `notes/pilot_registry_shortlist.md` — candidate pilot endpoints and what
+  each one exercises
+- `configs/` — frozen run configurations (target registry ref, sglseti
+  pin, table/release identifiers, query parameters)
+- `scripts/` — runnable pipeline entry points (e.g.
+  `coarse_discovery.py`); every run writes its own `run_config_*.json`
+  under the run directory
+- `results/` — compact, reviewable summaries of runs (tracked); bulky
+  generated products go to `../../runs/wise/<run-id>/` (gitignored)
+
+## Dependency pins
+
+- `sglseti`: adjacent checkout `../../../sglseti`, pin at commit `21f6f3d`
+  (v1.1.0 + type fix), clean working tree as of 2026-08-18. Every run
+  config must record the commit and dirty state at run time.
+
+## Data policy
+
+Disk budget: up to a few hundred GB locally for downloaded frames.
+Everything under `../../runs/` is gitignored; any bulk download must be
+reproducible from a tracked script/config plus the snapshotted query, so
+the data can always be re-fetched rather than committed.
+
+## Shakedown step status (plan §4)
+
+1. Freeze baseline hypotheses — **frozen v1.0 (2026-08-18)**
+2. Curate pilot registry — **curated v1.0 (2026-08-18)**
+   (`registries/pilot_wise_2026.yaml`, 5 systems / 7 component
+   endpoints, sglseti-validated, hash `sha256:82743c09…`). All CURATION
+   flags resolved — Alpha Cen revalidated against Kervella et al. 2016,
+   Sirius hip2-as-barycenter interpretation validated against 2MASS to
+   0.16", diagonal covariance by declared assumption — see
+   `notes/registry_curation.md`. Corridor viability confirmed for all
+   five systems (`notes/corridor_coverage.md`: 470–630 W1/W2 epochs over
+   ~14 yr each, plus cryo W3/W4).
+3. Snapshot frame discovery (IRSA TAP/IBE) — **adapter implemented and
+   run** (`sglsurvey/adapters/irsa_wise.py` +
+   `scripts/coarse_discovery.py`): sglseti discovery cones → snapshotted
+   TAP queries against the merged L1b inventory → Observation records →
+   coarse locus-vs-nominal-WCS IntersectionEvaluations (hits and misses
+   retained). Fetch path (IBE cutouts + md5-verified full products)
+   smoke-tested. Results: `results/coarse_v1_summary.md`.
+4. Precise pass (interval loci × exact WCS footprints + masks) — next up
+5. Screen catalog products — not started
+6. Search images (forced photometry, track-aware coadds) — not started
+7. Calibrate via injections and controls — not started
+8. Report — not started
