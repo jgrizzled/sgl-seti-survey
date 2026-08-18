@@ -51,7 +51,14 @@ the data can always be re-fetched rather than committed.
    coarse locus-vs-nominal-WCS IntersectionEvaluations (hits and misses
    retained). Fetch path (IBE cutouts + md5-verified full products)
    smoke-tested. Results: `results/coarse_v1_summary.md`.
-4. Precise pass (interval loci × exact WCS footprints + masks) — next up
+4. Precise pass (loci × exact WCS + mask usable-pixel tests via
+   `covered_z_intervals`) — **implemented**
+   (`scripts/precise_pass.py`): -msk products (md5-verified; the mask
+   header carries the full frame WCS) define usable pixels with the
+   Explanatory Supplement fatal-bit set; emits precise-stage
+   IntersectionEvaluations with covered relay-distance intervals
+   (disjoint when masks split the locus) and usable-pixel fractions.
+   Results: `results/precise_v1_summary.md`.
 5. Screen catalog products — not started
 6. Search images (forced photometry, track-aware coadds) — not started
 7. Calibrate via injections and controls — not started

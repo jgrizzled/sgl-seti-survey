@@ -82,6 +82,57 @@ class WiseNominalFootprint:
         return bool(np.any(ok))
 
 
+class WiseExactFootprint:
+    """Exact usable-pixel test from a -msk product: full FITS WCS
+    (including SIP distortion when present) plus the mask bitplanes.
+
+    Fatal bits follow the All-Sky Explanatory Supplement IV.4.a Table 2
+    NaN set — {0,1,2,3,4,9,10..18}: broken/noisy/dead hardware and
+    sample-read saturation — plus the transient-condition bits
+    {21 dynamic bad pixel, 27 cosmic ray/outlier, 28 spike-outlier},
+    since a transient at the predicted position corrupts that frame's
+    photometry even though the pixel is healthy.
+    """
+
+    FATAL_BITS = (0, 1, 2, 3, 4, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+                  21, 27, 28)
+    FATAL_MASK = sum(1 << b for b in FATAL_BITS)
+
+    def __init__(self, msk_path: Path):
+        import warnings
+
+        from astropy.io import fits
+        from astropy.utils.exceptions import AstropyWarning
+
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", AstropyWarning)
+            with fits.open(msk_path) as hdul:
+                self._mask = hdul[0].data
+                self._wcs = WCS(hdul[0].header)
+        self._ny, self._nx = self._mask.shape
+
+    def status(self, radec_deg):
+        """Per-point (in_bounds, usable) boolean arrays for (N,2) deg."""
+        import numpy as np
+
+        pix = self._wcs.wcs_world2pix(radec_deg, 0)
+        with np.errstate(invalid="ignore"):
+            x = np.rint(pix[:, 0]).astype(int)
+            y = np.rint(pix[:, 1]).astype(int)
+            inb = (x >= 0) & (x < self._nx) & (y >= 0) & (y < self._ny)
+        usable = np.zeros(len(radec_deg), dtype=bool)
+        if inb.any():
+            usable[inb] = (self._mask[y[inb], x[inb]]
+                           & self.FATAL_MASK) == 0
+        return inb, usable
+
+    def contains(self, ra_deg: float, dec_deg: float) -> bool:
+        import numpy as np
+
+        _, usable = self.status(np.array([[ra_deg, dec_deg]]))
+        return bool(usable[0])
+
+
 class WiseMergeL1bAdapter:
     archive_id = "irsa-wise"
     collection = TABLE
@@ -171,6 +222,11 @@ class WiseMergeL1bAdapter:
     def nominal_footprint(self, obs: Observation,
                           pad_arcsec: float = 0.0) -> WiseNominalFootprint:
         return WiseNominalFootprint(obs, pad_arcsec)
+
+    def exact_footprint(self, obs: Observation,
+                        products: ProductSet) -> WiseExactFootprint:
+        msk = next(p for p in products.products if p.kind == "msk")
+        return WiseExactFootprint(msk.path)
 
     def fetch(self, obs: Observation, kinds: Sequence[str], dest: Path,
               *, cutout: CutoutSpec | None = None) -> ProductSet:
