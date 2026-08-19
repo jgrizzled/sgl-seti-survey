@@ -72,5 +72,13 @@ the data can always be re-fetched rather than committed.
    and offset-trajectory controls; AnalysisRun `run-2f0f4c6fd24a`.
    No detection; 2 marginal cells flagged for stage-7 adjudication.
    Results: `results/stack_v1_summary.md`.
-7. Calibrate via injections and controls — not started
+7. Calibrate via injections and controls — **run**
+   (`scripts/sample_tensor.py` + `scripts/injection_calibrate.py`,
+   AnalysisRun `run-88887a3ac8d9`): 8 offset-control trajectories per
+   endpoint × role define predeclared thresholds (FAR < 1/8 per grid
+   search); analytic Gaussian-source injections on a 1/z-uniform grid
+   (fixes stack_v1's low-z undersampling) yield 90%-recovery depths and
+   **448 ledger-ready Constraint records**; both stack_v1 marginal
+   cells vetoed (Candidate records). No surviving candidate. Results:
+   `results/calib_v1_summary.md`.
 8. Report — not started
