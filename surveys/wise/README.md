@@ -65,6 +65,12 @@ the data can always be re-fetched rather than committed.
    recurrence peaks resolved as static background stars via the
    parallax-phase test → defensible layer-1 null. Results:
    `results/screen_v1_summary.md`.
-6. Search images (forced photometry, track-aware coadds) — not started
+6. Search images — **run** (`scripts/fetch_cutouts.py`,
+   `sglsurvey/photometry.py`, `scripts/forced_stack.py`): matched-filter
+   forced photometry on 4,280 cutouts stacked over a joint 64-z × 5×5-µ
+   grid per endpoint × role × band, with parallax-phase-split stacks
+   and offset-trajectory controls; AnalysisRun `run-2f0f4c6fd24a`.
+   No detection; 2 marginal cells flagged for stage-7 adjudication.
+   Results: `results/stack_v1_summary.md`.
 7. Calibrate via injections and controls — not started
 8. Report — not started
