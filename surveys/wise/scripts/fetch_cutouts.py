@@ -34,15 +34,7 @@ PRECISE_DIR = REPO / "runs" / "wise" / "precise_v1"
 CUT_DIR = REPO / "runs" / "wise" / "products" / "cut"
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 
-CORRIDOR_OF = {
-    "barnard-star": "barnard", "ross-154": "ross154",
-    "lalande-21185": "lalande", "alpha-cen-a": "alphacen",
-    "alpha-cen-b": "alphacen", "sirius-a": "sirius",
-    "sirius-b": "sirius",
-}
-MEMBERS = defaultdict(list)
-for e, c in CORRIDOR_OF.items():
-    MEMBERS[c].append(e)
+from wise_corridors import CORRIDOR_OF, MEMBERS
 
 MARGIN_ARCSEC = 45.0   # PSF (12") + |mu|*14yr (14") + padding (10") + buffer
 PIX_ARCSEC = 2.75

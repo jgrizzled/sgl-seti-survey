@@ -1,8 +1,17 @@
 ---
 title: "WISE/NEOWISE shakedown — baseline hypothesis freeze"
-status: "v1.0 — parameters frozen 2026-08-18"
+status: "v1.1 — parameters frozen 2026-08-18; endpoint set expanded 2026-08-18 (see addendum)"
 date: 2026-08-18
 ---
+
+> **v1.1 addendum (2026-08-18).** Endpoint set expanded after the pilot
+> passed (plan §4.2 expansion gate): added `proxima-cen`, `wolf-359`,
+> `ross-248` (linear provider) and `gj65-a`, `gj65-b` (component
+> endpoints, GRAVITY 2024 orbit) — 12 endpoint hypotheses across 9
+> corridors, registry v1.1 `sha256:27895a11…`. **Every parameter in
+> sections 2–9 is unchanged from v1.0.** Runs pin the hypothesis
+> version they executed under; v1.0-pinned records remain valid (their
+> per-target source hashes are unchanged by the registry expansion).
 
 # Baseline hypothesis freeze — v1.0
 

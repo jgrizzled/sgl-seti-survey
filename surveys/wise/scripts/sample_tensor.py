@@ -54,12 +54,8 @@ OFFSETS = [(0.0, 0.0), (20.0, 0.0), (-20.0, 0.0), (30.0, 0.0),
            (-30.0, 0.0), (40.0, 0.0), (-40.0, 0.0), (0.0, 25.0),
            (0.0, -25.0)]
 
-CORRIDOR_OF = {
-    "barnard-star": "barnard", "ross-154": "ross154",
-    "lalande-21185": "lalande", "alpha-cen-a": "alphacen",
-    "alpha-cen-b": "alphacen", "sirius-a": "sirius",
-    "sirius-b": "sirius",
-}
+from wise_corridors import CORRIDOR_OF
+
 BAND_IDX = {"W1": 1, "W2": 2, "W3": 3, "W4": 4}
 
 

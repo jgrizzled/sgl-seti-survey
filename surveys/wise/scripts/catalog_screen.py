@@ -56,13 +56,8 @@ LOCUS_TOLERANCE_ARCSEC = 2.0
 LOCUS_BIN_DAYS = 0.5          # locus reuse granularity for matching
 VISIT_GAP_DAYS = 5.0
 
-CORRIDORS = {
-    "barnard": ["barnard-star"],
-    "alphacen": ["alpha-cen-a", "alpha-cen-b"],
-    "sirius": ["sirius-a", "sirius-b"],
-    "ross154": ["ross-154"],
-    "lalande": ["lalande-21185"],
-}
+from wise_corridors import MEMBERS as CORRIDORS
+
 ROLES = (Role.RX, Role.TX)
 
 # Mission-phase table selection by frame MJD.

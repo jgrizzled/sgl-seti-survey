@@ -71,6 +71,39 @@ even fully correlated errors could not move any discovery or usability
 decision at pilot scale. Revisit only if a constraint ever becomes
 padding-limited.
 
+## v1.1 expansion curation (2026-08-18)
+
+Five endpoints added after the pilot passed (plan §4.2 gate):
+Proxima Cen, Wolf 359, Ross 248 (linear), GJ 65 A/B (components).
+Registry v1.1 hash `sha256:27895a11f4df…`; hypotheses v1.1 addendum
+(parameters unchanged).
+
+- **Proxima Cen**: Gaia DR3 (RUWE 0.97, DR3 RV). Bound to α Cen AB but
+  the ~550 kyr orbit makes linear astrometry exact at WISE baselines;
+  its corridor is ~2° from the α Cen corridor and separate.
+- **Wolf 359**: Gaia DR3 (RUWE 0.84); no DR3 RV — adopted +19.57 km/s
+  (Fouqué et al. 2018 via SIMBAD, 0.1 km/s conservative floor).
+- **Ross 248**: Gaia DR3 (RUWE 1.03, DR3 RV). Clean.
+- **GJ 65 A/B**: Gaia DR3 component solutions are orbit-corrupted
+  (RUWE 12.4 / 10.5), as expected for a 26.4-yr binary. Adopted the
+  GRAVITY Collaboration 2024 orbit (arXiv:2404.08746 Table 1;
+  P 26.38 yr, e 0.6172, a 5.459 AU → 2.0303″ at the adopted Kervella
+  et al. 2022 parallax 371.92±0.42; masses 0.122+0.116 M☉ →
+  f_B = 0.4874). Barycenter astrometry **constructed** as the
+  dynamical-mass-weighted combination of the two Gaia component
+  solutions at their common 2016.0 epoch (orbital terms cancel), with
+  RUWE-inflated uncertainties (30 mas, 20 mas/yr). Two validations:
+  (1) predicts the 2MASS epoch-1998.58 blended position (pair near
+  periastron, sep ~0.8″, photocenter ≈ barycenter for these near-equal
+  components) to **0.34″ over 17.4 yr**; (2) sglseti propagation of the
+  orbit reproduces the Gaia-measured A→B relative position at 2016.0 to
+  **0.013″** — sign/convention closure confirmed. Systemic RV
+  +15.99 km/s = mass-weighted Gaia component RVs (±2 conservative).
+
+Records provenance across versions: v1.0-pinned records remain valid —
+per-target source hashes are unchanged by the registry expansion; new
+runs pin v1.1.
+
 ## Downstream effects
 
 - Registry hash changed: runs pin

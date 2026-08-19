@@ -7,6 +7,11 @@ analysis_run: "run-88887a3ac8d9"
 
 # calib_v1 results
 
+> **Superseded 2026-08-19** by the registry v1.1 full rerun
+> (`run-20040d16f249`, 24 endpoint-roles, 768 constraints) — see
+> `expansion_v1_1_summary.md`. Methods below are unchanged; this file
+> documents the v1.0 7-endpoint run.
+
 Injection calibration over the full pilot: per-epoch sample tensors for
 the real trajectory plus **8 offset-control trajectories** per
 endpoint × role (14 tensors, 713–916 epochs each, 1.3 GB), searched on

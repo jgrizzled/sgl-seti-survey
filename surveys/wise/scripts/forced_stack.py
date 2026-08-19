@@ -59,12 +59,7 @@ ZP_REF = 20.0
 LOCUS_BIN_DAYS = 0.5
 MIN_GOOD_FRAC = 0.7
 
-CORRIDOR_OF = {
-    "barnard-star": "barnard", "ross-154": "ross154",
-    "lalande-21185": "lalande", "alpha-cen-a": "alphacen",
-    "alpha-cen-b": "alphacen", "sirius-a": "sirius",
-    "sirius-b": "sirius",
-}
+from wise_corridors import CORRIDOR_OF
 
 
 def main() -> None:
@@ -140,10 +135,7 @@ def main() -> None:
     controls = {p: acc() for p in pairs}
     epoch_rows = defaultdict(list)   # (pair) -> per-epoch mu=0 slices
 
-    frames = sorted(corridor_frames["barnard"] | corridor_frames["ross154"]
-                    | corridor_frames["lalande"]
-                    | corridor_frames["alphacen"]
-                    | corridor_frames["sirius"])
+    frames = sorted(set().union(*corridor_frames.values()))
     pairs_of_frame = defaultdict(list)
     for p, oids in usable.items():
         for o in oids:

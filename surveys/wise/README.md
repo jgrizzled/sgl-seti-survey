@@ -35,15 +35,15 @@ the data can always be re-fetched rather than committed.
 ## Shakedown step status (plan §4)
 
 1. Freeze baseline hypotheses — **frozen v1.0 (2026-08-18)**
-2. Curate pilot registry — **curated v1.0 (2026-08-18)**
-   (`registries/pilot_wise_2026.yaml`, 5 systems / 7 component
-   endpoints, sglseti-validated, hash `sha256:82743c09…`). All CURATION
-   flags resolved — Alpha Cen revalidated against Kervella et al. 2016,
-   Sirius hip2-as-barycenter interpretation validated against 2MASS to
-   0.16", diagonal covariance by declared assumption — see
-   `notes/registry_curation.md`. Corridor viability confirmed for all
-   five systems (`notes/corridor_coverage.md`: 470–630 W1/W2 epochs over
-   ~14 yr each, plus cryo W3/W4).
+2. Curate pilot registry — **curated v1.1 (2026-08-18/19)**
+   (`registries/pilot_wise_2026.yaml`, 9 systems / 12 endpoints, hash
+   `sha256:27895a11…`). v1.0: all CURATION flags resolved (Alpha Cen
+   revalidated vs Kervella et al. 2016; Sirius hip2-as-barycenter
+   validated vs 2MASS to 0.16"; diagonal covariance declared). v1.1
+   expansion after the pilot passed: Proxima Cen, Wolf 359, Ross 248,
+   GJ 65 A/B (GRAVITY 2024 orbit; constructed barycenter validated vs
+   2MASS 0.34" and Gaia relative position 0.013"). See
+   `notes/registry_curation.md`, `notes/corridor_coverage.md`.
 3. Snapshot frame discovery (IRSA TAP/IBE) — **adapter implemented and
    run** (`sglsurvey/adapters/irsa_wise.py` +
    `scripts/coarse_discovery.py`): sglseti discovery cones → snapshotted
@@ -82,3 +82,8 @@ the data can always be re-fetched rather than committed.
    cells vetoed (Candidate records). No surviving candidate. Results:
    `results/calib_v1_summary.md`.
 8. Report — not started
+
+**v1.1 expansion (2026-08-19):** all 12 endpoints (9 corridors) run
+through the complete chain; 768 Constraint records under AnalysisRun
+`run-20040d16f249`; 6 vetoed Candidates; no surviving candidate.
+See `results/expansion_v1_1_summary.md`.

@@ -1,8 +1,10 @@
 # Pilot target registry for the WISE/NEOWISE shakedown (plan §4.2).
 #
-# STATUS: v1.0 (2026-08-18) — curated. All former CURATION flags are
-# resolved; see surveys/wise/notes/registry_curation.md for the evidence
-# behind each decision:
+# STATUS: v1.1 (2026-08-18) — curated; expansion endpoints added after
+# the pilot passed (plan §4.2): proxima-cen, wolf-359, ross-248,
+# gj65-a, gj65-b (12 targets total, 9 corridors). v1.0 curation record:
+# see surveys/wise/notes/registry_curation.md for the evidence behind
+# each decision:
 #   - Alpha Cen: coherent Kervella et al. 2016 (A&A 594, A107) barycenter
 #     solution (position, PM, parallax 747.17 mas, RV, orbit, mass
 #     fraction) replaces the earlier mixed demonstration values.
@@ -616,3 +618,401 @@ targets:
           Bond et al. 2017, ApJ 840, 70, Table 4 (single-column new
           solution, confirmed 2026-08-18); mass fraction from their
           dynamical masses 1.018/(2.063+1.018)
+
+  # ---- v1.1 expansion endpoints (2026-08-18) ------------------------
+
+  proxima-cen:
+    display_name: "Proxima Centauri (GJ 551)"
+    endpoint_kind: star
+    priority: 1.0
+    tags: [pilot-expansion, isolated-solution, alpha-cen-system]
+    notes: >-
+      Nearest star. Physically bound to Alpha Cen AB but with a ~550 kyr
+      orbit, so orbital acceleration is negligible over the WISE
+      baseline and the Gaia DR3 single-star solution (RUWE 0.97) is the
+      appropriate model. Corridor is ~2 deg from the Alpha Cen AB
+      corridor and treated separately.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "5853498713190525696"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-18)"
+    quality: "Gaia DR3 five-parameter solution (RUWE 0.97) with DR3 radial velocity"
+    model_rationale: >-
+      Clean single-star Gaia solution; linear astrometry family.
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 217.39232147201
+        dec_deg: -62.67607511677
+        parallax_mas: 768.0665
+        pm_ra_cosdec_mas_per_yr: -3781.741
+        pm_dec_mas_per_yr: 769.465
+        radial_velocity_km_s: -21.94
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 5853498713190525696 via VizieR I/355/gaiadr3"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.024
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0344
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0499
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.031
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.051
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.22
+          unit: km/s
+
+  wolf-359:
+    display_name: "Wolf 359 (GJ 406, CN Leo)"
+    endpoint_kind: star
+    priority: 0.9
+    tags: [pilot-expansion, high-pm, isolated]
+    notes: >-
+      Isolated M dwarf, ~4.7 arcsec/yr proper motion. Gaia DR3 lacks an
+      RV for this source; the systemic RV comes from Fouque et al. 2018
+      via SIMBAD, with a conservative 0.1 km/s uncertainty floor.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "3864972938605115520"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-18)"
+    quality: "Gaia DR3 five-parameter solution (RUWE 0.84); external RV"
+    model_rationale: >-
+      Clean single-star Gaia solution; linear astrometry family.
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 164.10319030756
+        dec_deg: 7.00272694098
+        parallax_mas: 415.1794
+        pm_ra_cosdec_mas_per_yr: -3866.338
+        pm_dec_mas_per_yr: -2699.215
+        radial_velocity_km_s: 19.57
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: >-
+          Gaia DR3 3864972938605115520 via VizieR I/355/gaiadr3; RV from
+          Fouque et al. 2018 (2018MNRAS.475.1960F) via SIMBAD
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0668
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0515
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0684
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.081
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.069
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Fouque et al. 2018 via SIMBAD (conservative floor)"
+          uncertainty: 0.1
+          unit: km/s
+
+  ross-248:
+    display_name: "Ross 248 (GJ 905, HH And)"
+    endpoint_kind: star
+    priority: 0.9
+    tags: [pilot-expansion, isolated]
+    notes: >-
+      Isolated M dwarf, ~1.6 arcsec/yr proper motion, mostly in Dec.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "1926461164913660160"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-18)"
+    quality: "Gaia DR3 five-parameter solution (RUWE 1.03) with DR3 radial velocity"
+    model_rationale: >-
+      Clean single-star Gaia solution; linear astrometry family.
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 355.48001525816
+        dec_deg: 44.17037570075
+        parallax_mas: 316.4812
+        pm_ra_cosdec_mas_per_yr: 112.527
+        pm_dec_mas_per_yr: -1591.65
+        radial_velocity_km_s: -77.29
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 1926461164913660160 via VizieR I/355/gaiadr3"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0322
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0213
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.0444
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.036
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.027
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3"
+          uncertainty: 0.19
+          unit: km/s
+
+  gj65-a:
+    display_name: "Luyten 726-8 A (BL Ceti, GJ 65 A)"
+    endpoint_kind: component
+    priority: 0.9
+    tags: [pilot-expansion, binary-component]
+    notes: >-
+      Primary-component endpoint via the GRAVITY 2024 orbit. Barycenter
+      astrometry is CONSTRUCTED as the dynamical-mass-weighted
+      combination of the two Gaia DR3 component solutions at their
+      common 2016.0 epoch (orbital terms cancel in the mass-weighted
+      sum); the component solutions have RUWE ~11, so uncertainties are
+      inflated. Validated by predicting the 2MASS epoch-1998.58 blended
+      position (pair near periastron, sep ~0.8 arcsec, photocenter ~
+      barycenter for these near-equal components) to 0.34 arcsec over
+      17.4 yr. Orbit sign convention validated against the Gaia DR3
+      A-B relative position at 2016.0 (see registry_curation notes).
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "5140693571158739840"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-18)"
+      - catalog: "GRAVITY Collaboration"
+        id: "GJ65 AB orbit"
+        version: "2024, arXiv:2404.08746, Table 1"
+    quality: "GRAVITY interferometric orbit; constructed barycenter validated vs 2MASS"
+    model_rationale: >-
+      26.4-yr binary: Gaia component solutions are orbit-corrupted
+      (RUWE ~11); two-body orbit about a constructed linearly moving
+      barycenter is the appropriate model.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 24.77161274
+        dec_deg: -17.94799915
+        parallax_mas: 371.92
+        pm_ra_cosdec_mas_per_yr: 3284.6
+        pm_dec_mas_per_yr: 563.7
+        radial_velocity_km_s: 15.99
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: >-
+          Constructed: dynamical-mass-weighted (fA=0.5126, fB=0.4874)
+          combination of Gaia DR3 5140693571158739840 +
+          5140693571158946048 at epoch 2016.0; parallax from Kervella
+          et al. 2022 as adopted by GRAVITY 2024; RV = mass-weighted
+          Gaia DR3 component RVs
+      provenance:
+        ra_deg:
+          source: "constructed from Gaia DR3 components (RUWE-inflated)"
+          uncertainty: 30.0
+          unit: mas
+        dec_deg:
+          source: "constructed from Gaia DR3 components (RUWE-inflated)"
+          uncertainty: 30.0
+          unit: mas
+        parallax_mas:
+          source: "Kervella et al. 2022, as adopted by GRAVITY 2024"
+          uncertainty: 0.42
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "constructed; 2MASS validation bound (0.34 arcsec / 17.4 yr)"
+          uncertainty: 20.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "constructed; 2MASS validation bound (0.34 arcsec / 17.4 yr)"
+          uncertainty: 20.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "mass-weighted Gaia DR3 component RVs (conservative)"
+          uncertainty: 2.0
+          unit: km/s
+        period_yr:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.002
+          unit: yr
+        periastron_epoch_jyear:
+          source: "GRAVITY 2024 Table 1 (T0 = MJD 41333 +/- 8 d)"
+          uncertainty: 0.022
+          unit: yr
+        eccentricity:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.0001
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "GRAVITY 2024 (5.459 +/- 0.002 AU x parallax)"
+          uncertainty: 0.0024
+          unit: arcsec
+        inclination_deg:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.1
+          unit: deg
+        ascending_node_deg:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.1
+          unit: deg
+        arg_periastron_deg:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.1
+          unit: deg
+        mass_fraction_secondary:
+          source: "GRAVITY 2024 masses 0.116/(0.122+0.116)"
+          uncertainty: 0.009
+          unit: "1"
+      orbit:
+        period_yr: 26.38
+        periastron_epoch_jyear: 1972.0425
+        eccentricity: 0.6172
+        semimajor_axis_arcsec: 2.0303
+        inclination_deg: 128.0
+        ascending_node_deg: 325.9
+        arg_periastron_deg: 103.2
+        mass_fraction_secondary: 0.4874
+        component: primary
+        source: >-
+          GRAVITY Collaboration 2024, arXiv:2404.08746, Table 1
+          (building on Kervella et al. 2016); semimajor axis converted
+          from AU with the adopted parallax
+
+  gj65-b:
+    display_name: "Luyten 726-8 B (UV Ceti, GJ 65 B)"
+    endpoint_kind: component
+    priority: 0.9
+    tags: [pilot-expansion, binary-component]
+    notes: >-
+      Secondary-component endpoint; same constructed barycenter
+      astrometry and GRAVITY orbit block as gj65-a (see validation
+      notes there), differing only in component.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "5140693571158946048"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-18)"
+      - catalog: "GRAVITY Collaboration"
+        id: "GJ65 AB orbit"
+        version: "2024, arXiv:2404.08746, Table 1"
+    quality: "GRAVITY interferometric orbit; constructed barycenter validated vs 2MASS"
+    model_rationale: >-
+      26.4-yr binary: Gaia component solutions are orbit-corrupted
+      (RUWE ~11); two-body orbit about a constructed linearly moving
+      barycenter is the appropriate model.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 24.77161274
+        dec_deg: -17.94799915
+        parallax_mas: 371.92
+        pm_ra_cosdec_mas_per_yr: 3284.6
+        pm_dec_mas_per_yr: 563.7
+        radial_velocity_km_s: 15.99
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: >-
+          Constructed: dynamical-mass-weighted (fA=0.5126, fB=0.4874)
+          combination of Gaia DR3 5140693571158739840 +
+          5140693571158946048 at epoch 2016.0; parallax from Kervella
+          et al. 2022 as adopted by GRAVITY 2024; RV = mass-weighted
+          Gaia DR3 component RVs
+      provenance:
+        ra_deg:
+          source: "constructed from Gaia DR3 components (RUWE-inflated)"
+          uncertainty: 30.0
+          unit: mas
+        dec_deg:
+          source: "constructed from Gaia DR3 components (RUWE-inflated)"
+          uncertainty: 30.0
+          unit: mas
+        parallax_mas:
+          source: "Kervella et al. 2022, as adopted by GRAVITY 2024"
+          uncertainty: 0.42
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "constructed; 2MASS validation bound (0.34 arcsec / 17.4 yr)"
+          uncertainty: 20.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "constructed; 2MASS validation bound (0.34 arcsec / 17.4 yr)"
+          uncertainty: 20.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "mass-weighted Gaia DR3 component RVs (conservative)"
+          uncertainty: 2.0
+          unit: km/s
+        period_yr:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.002
+          unit: yr
+        periastron_epoch_jyear:
+          source: "GRAVITY 2024 Table 1 (T0 = MJD 41333 +/- 8 d)"
+          uncertainty: 0.022
+          unit: yr
+        eccentricity:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.0001
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "GRAVITY 2024 (5.459 +/- 0.002 AU x parallax)"
+          uncertainty: 0.0024
+          unit: arcsec
+        inclination_deg:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.1
+          unit: deg
+        ascending_node_deg:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.1
+          unit: deg
+        arg_periastron_deg:
+          source: "GRAVITY 2024 Table 1"
+          uncertainty: 0.1
+          unit: deg
+        mass_fraction_secondary:
+          source: "GRAVITY 2024 masses 0.116/(0.122+0.116)"
+          uncertainty: 0.009
+          unit: "1"
+      orbit:
+        period_yr: 26.38
+        periastron_epoch_jyear: 1972.0425
+        eccentricity: 0.6172
+        semimajor_axis_arcsec: 2.0303
+        inclination_deg: 128.0
+        ascending_node_deg: 325.9
+        arg_periastron_deg: 103.2
+        mass_fraction_secondary: 0.4874
+        component: secondary
+        source: >-
+          GRAVITY Collaboration 2024, arXiv:2404.08746, Table 1
+          (building on Kervella et al. 2016); semimajor axis converted
+          from AU with the adopted parallax
