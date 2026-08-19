@@ -10,6 +10,7 @@ engine. See `notes/project_plan.md` for the full plan.
 | `notes/` | Cross-project research and planning | yes |
 | `docs/` | Methods docs, record schemas, ADRs shared across archives | yes |
 | `sglsurvey/` | Shared Python package: core records, adapter interfaces, sglseti integration, injection framework | yes |
+| `targets/` | Universal (survey-agnostic) target portfolio: census snapshots, ranking config + builder, versioned target list with basket labels | yes |
 | `registries/` | Curated target registries (sglseti registry format), shared across archives | yes |
 | `surveys/<archive>/` | One sub-project per archive family: frozen hypotheses, configs, sub-project notes, compact reviewable results | yes |
 | `runs/<archive>/<run-id>/` | Generated products: query snapshots, downloaded data, analysis outputs | no (gitignored) |

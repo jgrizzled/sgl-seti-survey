@@ -6,6 +6,8 @@ dependencies = [
     "sglseti",
     "astropy>=6.0",
     "requests>=2.31",
+    "scipy>=1.18.0",
+    "pyyaml>=6.0.3",
 ]
 
 [dependency-groups]

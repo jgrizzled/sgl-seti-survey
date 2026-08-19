@@ -1,0 +1,1372 @@
+{
+ "config": {
+  "version": "v1",
+  "census": {
+   "source": "CNS5 (Golovin et al. 2023) via VizieR J/A+A/670/A19, retrieved 2026-08-19",
+   "snapshot": "census/cns5_8pc_2026-08-19.csv",
+   "horizon_pc": 8.0,
+   "system_grouping_pc": 0.1
+  },
+  "stage1": {
+   "historical_window_myr": 1.0,
+   "knn_ks": [
+    1,
+    2,
+    3
+   ]
+  },
+  "stage2": {
+   "close_multiple_au": 100.0,
+   "wide_multiple_au": 1000.0,
+   "orbit_available": [
+    "alpha Cen",
+    "Sirius",
+    "GJ 65",
+    "Procyon",
+    "70 Oph",
+    "Luhman 16"
+   ]
+  },
+  "stage4": {
+   "n_distance_core": 25,
+   "adjacency_vote_min": 3,
+   "n_historical": 8,
+   "track_budget": 60,
+   "selective_drop_classes": [
+    "close_no_orbit",
+    "substellar_no_gaia"
+   ]
+  }
+ },
+ "n_systems": 37,
+ "n_tracks": 49,
+ "systems": [
+  {
+   "system": "Proxima Cen",
+   "dist_pc": 1.302,
+   "n_comp": 2,
+   "min_sep_au": 10289.4,
+   "multiplicity": "close",
+   "flags": [],
+   "adjacency_votes": 6,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel",
+    "rng",
+    "mst",
+    "mknn2",
+    "mknn3"
+   ],
+   "selective_votes": 7,
+   "dmin_1myr_pc": 0.95,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "anti_ra": 37.392,
+   "anti_dec": 62.676,
+   "abs_gal_b": 1.9,
+   "abs_ecl_beta": 44.8,
+   "drift_arcsec_yr": 3.86,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 3,
+   "components": [
+    {
+     "comp": "C",
+     "name": "Proxima Cen",
+     "gaia_dr3": "5853498713190525696",
+     "gmag": 8.984749,
+     "tracks": 1
+    },
+    {
+     "comp": "AB",
+     "name": "alpha Cen AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 2
+    }
+   ]
+  },
+  {
+   "system": "Barnard's Star",
+   "dist_pc": 1.828,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 6,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel",
+    "rng",
+    "mst",
+    "mknn2",
+    "mknn3"
+   ],
+   "selective_votes": 6,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "anti_ra": 89.449,
+   "anti_dec": -4.739,
+   "abs_gal_b": 14.1,
+   "abs_ecl_beta": 28.2,
+   "drift_arcsec_yr": 10.39,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Barnard's Star",
+     "gaia_dr3": "4472832130942575872",
+     "gmag": 8.1939745,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Luhman 16 AB",
+   "dist_pc": 1.998,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "close",
+   "flags": [
+    "substellar_or_faint",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "mknn3"
+   ],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 342.315,
+   "anti_dec": 53.318,
+   "abs_gal_b": 5.3,
+   "abs_ecl_beta": 53.9,
+   "drift_arcsec_yr": 2.78,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "AB",
+     "name": "Luhman 16 AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 2
+    }
+   ]
+  },
+  {
+   "system": "WISE 0855-0714",
+   "dist_pc": 2.278,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "substellar_or_faint",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 313.795,
+   "anti_dec": 7.245,
+   "abs_gal_b": 23.4,
+   "abs_ecl_beta": 23.6,
+   "drift_arcsec_yr": 8.15,
+   "solution_gate": "hard",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "WISE 0855-0714",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Wolf 359",
+   "dist_pc": 2.409,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": 3,
+   "dmin_1myr_pc": 2.27,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SELECTIVE_NETWORK_NEIGHBOR"
+   ],
+   "anti_ra": 344.103,
+   "anti_dec": -7.003,
+   "abs_gal_b": 56.1,
+   "abs_ecl_beta": 0.2,
+   "drift_arcsec_yr": 4.72,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Wolf 359",
+     "gaia_dr3": "3864972938605115520",
+     "gmag": 11.038391,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Lalande 21185",
+   "dist_pc": 2.546,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": 2,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 345.831,
+   "anti_dec": -35.949,
+   "abs_gal_b": 65.4,
+   "abs_ecl_beta": 27.4,
+   "drift_arcsec_yr": 4.81,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Lalande 21185",
+     "gaia_dr3": "762815470562110464",
+     "gmag": 6.551172,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Sirius AB",
+   "dist_pc": 2.67,
+   "n_comp": 2,
+   "min_sep_au": 76.4,
+   "multiplicity": "close",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": 3,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SELECTIVE_NETWORK_NEIGHBOR"
+   ],
+   "anti_ra": 281.287,
+   "anti_dec": 16.721,
+   "abs_gal_b": 8.9,
+   "abs_ecl_beta": 39.6,
+   "drift_arcsec_yr": 1.02,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "B",
+     "name": "Sirius AB",
+     "gaia_dr3": "2947050466531873024",
+     "gmag": 8.524133,
+     "tracks": 1
+    },
+    {
+     "comp": "A",
+     "name": "Sirius AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 65 AB",
+   "dist_pc": 2.703,
+   "n_comp": 2,
+   "min_sep_au": 6.1,
+   "multiplicity": "close",
+   "flags": [],
+   "adjacency_votes": 3,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel",
+    "rng"
+   ],
+   "selective_votes": 3,
+   "dmin_1myr_pc": 2.26,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "anti_ra": 204.772,
+   "anti_dec": 17.948,
+   "abs_gal_b": 75.7,
+   "abs_ecl_beta": 26.2,
+   "drift_arcsec_yr": 3.43,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "GJ 65 AB",
+     "gaia_dr3": "5140693571158739840",
+     "gmag": 10.507542,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "GJ 65 AB",
+     "gaia_dr3": "5140693571158946048",
+     "gmag": 10.817838,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Ross 154",
+   "dist_pc": 2.975,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": 1,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 102.459,
+   "anti_dec": 23.837,
+   "abs_gal_b": 10.3,
+   "abs_ecl_beta": 0.9,
+   "drift_arcsec_yr": 0.67,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Ross 154",
+     "gaia_dr3": "4075141768785646848",
+     "gmag": 9.126414,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Ross 248",
+   "dist_pc": 3.159,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 3,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel",
+    "rng"
+   ],
+   "selective_votes": 3,
+   "dmin_1myr_pc": 0.93,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "anti_ra": 175.48,
+   "anti_dec": -44.17,
+   "abs_gal_b": 16.9,
+   "abs_ecl_beta": 41.4,
+   "drift_arcsec_yr": 1.6,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Ross 248",
+     "gaia_dr3": "1926461164913660160",
+     "gmag": 10.379277,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "eps Eri",
+   "dist_pc": 3.22,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": 1,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 233.228,
+   "anti_dec": 9.458,
+   "abs_gal_b": 48.1,
+   "abs_ecl_beta": 27.7,
+   "drift_arcsec_yr": 0.97,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "eps Eri",
+     "gaia_dr3": "5164707970261890560",
+     "gmag": 3.465752,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Lacaille 9352",
+   "dist_pc": 3.288,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": 2,
+   "dmin_1myr_pc": 3.28,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 166.504,
+   "anti_dec": 35.847,
+   "abs_gal_b": 66.0,
+   "abs_ecl_beta": 27.5,
+   "drift_arcsec_yr": 6.9,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Lacaille 9352",
+     "gaia_dr3": "6553614253923452800",
+     "gmag": 6.5220323,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Ross 128",
+   "dist_pc": 3.374,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 356.938,
+   "anti_dec": -0.799,
+   "abs_gal_b": 59.6,
+   "abs_ecl_beta": 0.5,
+   "drift_arcsec_yr": 1.37,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Ross 128",
+     "gaia_dr3": "3796072592206250624",
+     "gmag": 9.601,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "EZ Aqr",
+   "dist_pc": 3.406,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "close",
+   "flags": [
+    "substellar_or_faint",
+    "close_no_orbit",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 159.651,
+   "anti_dec": 15.29,
+   "abs_gal_b": 57.0,
+   "abs_ecl_beta": 6.2,
+   "drift_arcsec_yr": 3.26,
+   "solution_gate": "hard",
+   "already_searched_wise": false,
+   "n_tracks": 3,
+   "components": [
+    {
+     "comp": "ABC",
+     "name": "EZ Aqr",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 3
+    }
+   ]
+  },
+  {
+   "system": "61 Cyg AB",
+   "dist_pc": 3.497,
+   "n_comp": 2,
+   "min_sep_au": 110.5,
+   "multiplicity": "intermediate",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": 1,
+   "dmin_1myr_pc": 2.8,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 136.748,
+   "anti_dec": -38.764,
+   "abs_gal_b": 5.8,
+   "abs_ecl_beta": 51.9,
+   "drift_arcsec_yr": 5.28,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "61 Cyg AB",
+     "gaia_dr3": "1872046609345556480",
+     "gmag": 4.766713,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "61 Cyg AB",
+     "gaia_dr3": "1872046574983497216",
+     "gmag": 5.4506445,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Procyon AB",
+   "dist_pc": 3.514,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "substellar_or_faint",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 294.827,
+   "anti_dec": -5.228,
+   "abs_gal_b": 13.0,
+   "abs_ecl_beta": 16.0,
+   "drift_arcsec_yr": 1.26,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Procyon AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Struve 2398 AB",
+   "dist_pc": 3.523,
+   "n_comp": 2,
+   "min_sep_au": 40.7,
+   "multiplicity": "close",
+   "flags": [
+    "close_no_orbit"
+   ],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 100.683,
+   "anti_dec": -59.638,
+   "abs_gal_b": 24.2,
+   "abs_ecl_beta": 81.6,
+   "drift_arcsec_yr": 2.22,
+   "solution_gate": "orbit_needed",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "Struve 2398 AB",
+     "gaia_dr3": "2154880616774131840",
+     "gmag": 7.854393,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "Struve 2398 AB",
+     "gaia_dr3": "2154880616774131712",
+     "gmag": 8.524704,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Groombridge 34 AB",
+   "dist_pc": 3.562,
+   "n_comp": 2,
+   "min_sep_au": 122.4,
+   "multiplicity": "intermediate",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 3.47,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 184.613,
+   "anti_dec": -44.025,
+   "abs_gal_b": 18.4,
+   "abs_ecl_beta": 37.9,
+   "drift_arcsec_yr": 2.92,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "Groombridge 34 AB",
+     "gaia_dr3": "385334230892516480",
+     "gmag": 7.218567,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "Groombridge 34 AB",
+     "gaia_dr3": "385334196532776576",
+     "gmag": 9.686646,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1111",
+   "dist_pc": 3.581,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": 1,
+   "dmin_1myr_pc": 1.33,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 307.45,
+   "anti_dec": -26.773,
+   "abs_gal_b": 32.4,
+   "abs_ecl_beta": 7.5,
+   "drift_arcsec_yr": 1.27,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1111",
+     "gaia_dr3": "703790044252850688",
+     "gmag": 12.167455,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "eps Ind",
+   "dist_pc": 3.638,
+   "n_comp": 2,
+   "min_sep_au": 1475.6,
+   "multiplicity": "wide",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 3.26,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 150.872,
+   "anti_dec": 56.797,
+   "abs_gal_b": 48.1,
+   "abs_ecl_beta": 41.4,
+   "drift_arcsec_yr": 4.71,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "eps Ind",
+     "gaia_dr3": "6412595290592307840",
+     "gmag": 4.322904,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "eps Ind",
+     "gaia_dr3": "6412596012146801152",
+     "gmag": 18.056162,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "tau Cet",
+   "dist_pc": 3.65,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 206.009,
+   "anti_dec": 15.934,
+   "abs_gal_b": 73.4,
+   "abs_ecl_beta": 24.8,
+   "drift_arcsec_yr": 1.92,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "tau Cet",
+     "gaia_dr3": "2452378776434477184",
+     "gmag": 3.3003998,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1061",
+   "dist_pc": 3.674,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 234.003,
+   "anti_dec": 44.514,
+   "abs_gal_b": 52.9,
+   "abs_ecl_beta": 60.8,
+   "drift_arcsec_yr": 0.83,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1061",
+     "gaia_dr3": "4848140361962951552",
+     "gmag": 10.995456,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 54",
+   "dist_pc": 3.716,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 198.133,
+   "anti_dec": 16.996,
+   "abs_gal_b": 78.8,
+   "abs_ecl_beta": 22.7,
+   "drift_arcsec_yr": 1.36,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 54",
+     "gaia_dr3": "2358524597030794112",
+     "gmag": 10.436525,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Luyten's Star",
+   "dist_pc": 3.786,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 291.855,
+   "anti_dec": -5.209,
+   "abs_gal_b": 10.4,
+   "abs_ecl_beta": 16.5,
+   "drift_arcsec_yr": 3.74,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Luyten's Star",
+     "gaia_dr3": "3139847906307949696",
+     "gmag": 8.576388,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Teegarden's Star",
+   "dist_pc": 3.831,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": 1,
+   "dmin_1myr_pc": 3.17,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 223.27,
+   "anti_dec": -16.864,
+   "abs_gal_b": 37.0,
+   "abs_ecl_beta": 0.3,
+   "drift_arcsec_yr": 5.12,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Teegarden's Star",
+     "gaia_dr3": "35227046884571776",
+     "gmag": 12.263103,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Kapteyn's Star",
+   "dist_pc": 3.934,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 2.16,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 257.96,
+   "anti_dec": 45.044,
+   "abs_gal_b": 36.0,
+   "abs_ecl_beta": 67.5,
+   "drift_arcsec_yr": 8.64,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Kapteyn's Star",
+     "gaia_dr3": "4810594479418041856",
+     "gmag": 8.063552,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Lacaille 8760",
+   "dist_pc": 3.97,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 3.78,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 139.295,
+   "anti_dec": 38.872,
+   "abs_gal_b": 44.2,
+   "abs_ecl_beta": 22.0,
+   "drift_arcsec_yr": 3.45,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Lacaille 8760",
+     "gaia_dr3": "6583272171336048640",
+     "gmag": 5.984104,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 12724",
+   "dist_pc": 4.005,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 3.77,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 101.298,
+   "anti_dec": 63.961,
+   "abs_gal_b": 23.5,
+   "abs_ecl_beta": 40.8,
+   "drift_arcsec_yr": 2.65,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 12724",
+     "gaia_dr3": "6439125097427143808",
+     "gmag": 14.02148,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Wolf 1061",
+   "dist_pc": 4.307,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 3.22,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 67.575,
+   "anti_dec": 12.668,
+   "abs_gal_b": 23.7,
+   "abs_ecl_beta": 9.1,
+   "drift_arcsec_yr": 1.19,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Wolf 1061",
+     "gaia_dr3": "4330690742322011520",
+     "gmag": 8.801877,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "van Maanen's Star",
+   "dist_pc": 4.314,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 192.297,
+   "anti_dec": -5.377,
+   "abs_gal_b": 57.5,
+   "abs_ecl_beta": 0.1,
+   "drift_arcsec_yr": 2.98,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "van Maanen's Star",
+     "gaia_dr3": "2552928187080872832",
+     "gmag": 12.299163,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "LP 145-141 (WD)",
+   "dist_pc": 4.636,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 356.457,
+   "anti_dec": 64.843,
+   "abs_gal_b": 2.9,
+   "abs_ecl_beta": 57.2,
+   "drift_arcsec_yr": 2.68,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "LP 145-141 (WD)",
+     "gaia_dr3": "5332606522595645952",
+     "gmag": 11.423104,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 908",
+   "dist_pc": 5.908,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 2.81,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 177.307,
+   "anti_dec": -2.397,
+   "abs_gal_b": 56.9,
+   "abs_ecl_beta": 3.3,
+   "drift_arcsec_yr": 1.39,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 908",
+     "gaia_dr3": "2739689239311660672",
+     "gmag": 8.152917,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 783",
+   "dist_pc": 6.012,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "close",
+   "flags": [
+    "close_no_orbit"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 2.05,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 122.802,
+   "anti_dec": 36.108,
+   "abs_gal_b": 30.9,
+   "abs_ecl_beta": 15.7,
+   "drift_arcsec_yr": 1.64,
+   "solution_gate": "orbit_needed",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "AB",
+     "name": "GJ 783",
+     "gaia_dr3": "6697578465310949376",
+     "gmag": 5.033037,
+     "tracks": 2
+    }
+   ]
+  },
+  {
+   "system": "GJ 784",
+   "dist_pc": 6.163,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 3.51,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 123.477,
+   "anti_dec": 45.165,
+   "abs_gal_b": 33.0,
+   "abs_ecl_beta": 24.6,
+   "drift_arcsec_yr": 0.79,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 784",
+     "gaia_dr3": "6673000841376349696",
+     "gmag": 7.2426615,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1221",
+   "dist_pc": 6.21,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 87.016,
+   "anti_dec": -70.882,
+   "abs_gal_b": 30.7,
+   "abs_ecl_beta": 85.5,
+   "drift_arcsec_yr": 1.68,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1221",
+     "gaia_dr3": "1638979384378696704",
+     "gmag": 13.778201,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 9193",
+   "dist_pc": 6.44,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 268.792,
+   "anti_dec": 4.179,
+   "abs_gal_b": 14.4,
+   "abs_ecl_beta": 27.6,
+   "drift_arcsec_yr": 2.38,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 9193",
+     "gaia_dr3": "3022956969731332096",
+     "gmag": 14.236672,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 11068",
+   "dist_pc": 6.798,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "substellar_or_faint",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": 0,
+   "dmin_1myr_pc": 0.33,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 290.013,
+   "anti_dec": 8.781,
+   "abs_gal_b": 2.3,
+   "abs_ecl_beta": 30.6,
+   "drift_arcsec_yr": 0.13,
+   "solution_gate": "hard",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 11068",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  }
+ ]
+}

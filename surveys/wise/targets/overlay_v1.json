@@ -1,0 +1,533 @@
+{
+ "universal_version": "v1",
+ "survey": "wise-neowise-merged-l1b",
+ "exclusions": "none (all-sky survey)",
+ "grandfathered": [
+  "Proxima Cen",
+  "Barnard's Star",
+  "Wolf 359",
+  "Lalande 21185",
+  "Sirius AB",
+  "GJ 65 AB",
+  "Ross 154",
+  "Ross 248"
+ ],
+ "systems": [
+  {
+   "system": "Proxima Cen",
+   "dist_pc": 1.302,
+   "n_tracks": 3,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 74336,
+   "confusion": "high+bright-star",
+   "coverage_proxy": "mid",
+   "status": "searched"
+  },
+  {
+   "system": "Barnard's Star",
+   "dist_pc": 1.828,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 46054,
+   "confusion": "mid",
+   "coverage_proxy": "mid",
+   "status": "searched"
+  },
+  {
+   "system": "Luhman 16 AB",
+   "dist_pc": 1.998,
+   "n_tracks": 2,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 76038,
+   "confusion": "high",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "WISE 0855-0714",
+   "dist_pc": 2.278,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "hard",
+   "catwise_density_deg2": 45386,
+   "confusion": "mid",
+   "coverage_proxy": "baseline",
+   "status": "deferred"
+  },
+  {
+   "system": "Wolf 359",
+   "dist_pc": 2.409,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SELECTIVE_NETWORK_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 27836,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "searched"
+  },
+  {
+   "system": "Lalande 21185",
+   "dist_pc": 2.546,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 30382,
+   "confusion": "low",
+   "coverage_proxy": "mid",
+   "status": "searched"
+  },
+  {
+   "system": "Sirius AB",
+   "dist_pc": 2.67,
+   "n_tracks": 2,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SELECTIVE_NETWORK_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 83174,
+   "confusion": "high",
+   "coverage_proxy": "mid",
+   "status": "searched"
+  },
+  {
+   "system": "GJ 65 AB",
+   "dist_pc": 2.703,
+   "n_tracks": 2,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 31448,
+   "confusion": "low",
+   "coverage_proxy": "mid",
+   "status": "searched"
+  },
+  {
+   "system": "Ross 154",
+   "dist_pc": 2.975,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 48266,
+   "confusion": "mid",
+   "coverage_proxy": "baseline",
+   "status": "searched"
+  },
+  {
+   "system": "Ross 248",
+   "dist_pc": 3.159,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 52418,
+   "confusion": "mid",
+   "coverage_proxy": "mid",
+   "status": "searched"
+  },
+  {
+   "system": "eps Eri",
+   "dist_pc": 3.22,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 37422,
+   "confusion": "mid",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "Lacaille 9352",
+   "dist_pc": 3.288,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 32411,
+   "confusion": "mid",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "Ross 128",
+   "dist_pc": 3.374,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 28528,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "EZ Aqr",
+   "dist_pc": 3.406,
+   "n_tracks": 3,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "hard",
+   "catwise_density_deg2": 35115,
+   "confusion": "mid",
+   "coverage_proxy": "baseline",
+   "status": "deferred"
+  },
+  {
+   "system": "61 Cyg AB",
+   "dist_pc": 3.497,
+   "n_tracks": 2,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 69292,
+   "confusion": "high",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "Procyon AB",
+   "dist_pc": 3.514,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 76826,
+   "confusion": "high",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "Struve 2398 AB",
+   "dist_pc": 3.523,
+   "n_tracks": 2,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "orbit_needed",
+   "catwise_density_deg2": 52904,
+   "confusion": "high",
+   "coverage_proxy": "high",
+   "status": "deferred"
+  },
+  {
+   "system": "Groombridge 34 AB",
+   "dist_pc": 3.562,
+   "n_tracks": 2,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 52944,
+   "confusion": "high",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 1111",
+   "dist_pc": 3.581,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 39125,
+   "confusion": "mid+bright-star",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "eps Ind",
+   "dist_pc": 3.638,
+   "n_tracks": 2,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 32323,
+   "confusion": "low",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "tau Cet",
+   "dist_pc": 3.65,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 28719,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 1061",
+   "dist_pc": 3.674,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 37733,
+   "confusion": "mid",
+   "coverage_proxy": "high",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 54",
+   "dist_pc": 3.716,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 29602,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "Luyten's Star",
+   "dist_pc": 3.786,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 82904,
+   "confusion": "high",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "Teegarden's Star",
+   "dist_pc": 3.831,
+   "n_tracks": 1,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 30517,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "Kapteyn's Star",
+   "dist_pc": 3.934,
+   "n_tracks": 1,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 46460,
+   "confusion": "mid+bright-star",
+   "coverage_proxy": "high",
+   "status": "queued"
+  },
+  {
+   "system": "Lacaille 8760",
+   "dist_pc": 3.97,
+   "n_tracks": 1,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 31806,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 12724",
+   "dist_pc": 4.005,
+   "n_tracks": 1,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 36006,
+   "confusion": "mid",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "Wolf 1061",
+   "dist_pc": 4.307,
+   "n_tracks": 1,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 33962,
+   "confusion": "mid",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "van Maanen's Star",
+   "dist_pc": 4.314,
+   "n_tracks": 1,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 30398,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "LP 145-141 (WD)",
+   "dist_pc": 4.636,
+   "n_tracks": 1,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 80159,
+   "confusion": "high",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 908",
+   "dist_pc": 5.908,
+   "n_tracks": 1,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 29356,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 783",
+   "dist_pc": 6.012,
+   "n_tracks": 2,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "orbit_needed",
+   "catwise_density_deg2": 32331,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "deferred"
+  },
+  {
+   "system": "GJ 784",
+   "dist_pc": 6.163,
+   "n_tracks": 1,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 32339,
+   "confusion": "low",
+   "coverage_proxy": "baseline",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 1221",
+   "dist_pc": 6.21,
+   "n_tracks": 1,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 98616,
+   "confusion": "high",
+   "coverage_proxy": "high",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 9193",
+   "dist_pc": 6.44,
+   "n_tracks": 1,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "universal_gate": "clean",
+   "catwise_density_deg2": 73604,
+   "confusion": "high",
+   "coverage_proxy": "mid",
+   "status": "queued"
+  },
+  {
+   "system": "GJ 11068",
+   "dist_pc": 6.798,
+   "n_tracks": 1,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "universal_gate": "hard",
+   "catwise_density_deg2": 78202,
+   "confusion": "high",
+   "coverage_proxy": "mid",
+   "status": "deferred"
+  }
+ ],
+ "work_queue": [
+  "Ross 128",
+  "eps Ind",
+  "tau Cet",
+  "GJ 54",
+  "Teegarden's Star",
+  "Lacaille 8760",
+  "van Maanen's Star",
+  "GJ 908",
+  "GJ 784",
+  "eps Eri",
+  "Lacaille 9352",
+  "GJ 1061",
+  "GJ 12724",
+  "Wolf 1061",
+  "Luhman 16 AB",
+  "61 Cyg AB",
+  "Procyon AB",
+  "Groombridge 34 AB",
+  "Luyten's Star",
+  "LP 145-141 (WD)",
+  "GJ 1221",
+  "GJ 9193",
+  "GJ 1111",
+  "Kapteyn's Star"
+ ]
+}

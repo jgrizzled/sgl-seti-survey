@@ -1,0 +1,34 @@
+# Universal target-list configuration (survey-agnostic).
+# Method: notes/sgl_seti_star_ranking_methods.md, simplified per the
+# staged design (distance core protected; basket union; labels).
+version: v1
+census:
+  source: "CNS5 (Golovin et al. 2023) via VizieR J/A+A/670/A19, retrieved 2026-08-19"
+  snapshot: "census/cns5_8pc_2026-08-19.csv"
+  horizon_pc: 8.0
+  system_grouping_pc: 0.1        # 3D separation for system consolidation
+
+stage1:
+  historical_window_myr: 1.0     # +/- window for linear closest approach
+  knn_ks: [1, 2, 3]              # mutual-kNN graph family members
+
+stage2:
+  close_multiple_au: 100.0       # min pair separation below which "close"
+  wide_multiple_au: 1000.0
+  # Systems with a curated/published orbit usable for track prediction
+  # (registry v1.1 + well-known published solutions).
+  orbit_available:
+    - "alpha Cen"        # Kervella et al. 2016 (registry v1.1)
+    - "Sirius"           # Bond et al. 2017 (registry v1.1)
+    - "GJ 65"            # GRAVITY 2024 (registry v1.1)
+    - "Procyon"          # Bond et al. 2015 published orbit
+    - "70 Oph"           # long-published visual orbit
+    - "Luhman 16"        # Bedin/GRAVITY orbit solutions
+
+stage4:
+  n_distance_core: 25            # basket A: nearest systems, no exclusions
+  adjacency_vote_min: 3          # basket B: >= votes of 7 graph families
+  n_historical: 8                # basket D: top closest-approach additions
+  track_budget: 60               # max component tracks after union
+  # basket C filter: host classes removed before the selective re-vote
+  selective_drop_classes: ["close_no_orbit", "substellar_no_gaia"]

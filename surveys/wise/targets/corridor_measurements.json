@@ -1,0 +1,150 @@
+{
+ "Proxima Cen": {
+  "catwise_n_r0p2": 9344,
+  "brightest_ks_r0p3": 3.595
+ },
+ "Barnard's Star": {
+  "catwise_n_r0p2": 5789,
+  "brightest_ks_r0p3": 5.166
+ },
+ "Luhman 16 AB": {
+  "catwise_n_r0p2": 9558,
+  "brightest_ks_r0p3": 4.323
+ },
+ "WISE 0855-0714": {
+  "catwise_n_r0p2": 5705,
+  "brightest_ks_r0p3": 6.295
+ },
+ "Wolf 359": {
+  "catwise_n_r0p2": 3499,
+  "brightest_ks_r0p3": 6.71
+ },
+ "Lalande 21185": {
+  "catwise_n_r0p2": 3819,
+  "brightest_ks_r0p3": 9.156
+ },
+ "Sirius AB": {
+  "catwise_n_r0p2": 10455,
+  "brightest_ks_r0p3": 5.869
+ },
+ "GJ 65 AB": {
+  "catwise_n_r0p2": 3953,
+  "brightest_ks_r0p3": 8.586
+ },
+ "Ross 154": {
+  "catwise_n_r0p2": 6067,
+  "brightest_ks_r0p3": 4.611
+ },
+ "Ross 248": {
+  "catwise_n_r0p2": 6589,
+  "brightest_ks_r0p3": 5.101
+ },
+ "eps Eri": {
+  "catwise_n_r0p2": 4704,
+  "brightest_ks_r0p3": 6.52
+ },
+ "Lacaille 9352": {
+  "catwise_n_r0p2": 4074,
+  "brightest_ks_r0p3": 7.005
+ },
+ "Ross 128": {
+  "catwise_n_r0p2": 3586,
+  "brightest_ks_r0p3": 4.591
+ },
+ "EZ Aqr": {
+  "catwise_n_r0p2": 4414,
+  "brightest_ks_r0p3": 6.262
+ },
+ "61 Cyg AB": {
+  "catwise_n_r0p2": 8710,
+  "brightest_ks_r0p3": 4.402
+ },
+ "Procyon AB": {
+  "catwise_n_r0p2": 9657,
+  "brightest_ks_r0p3": 5.997
+ },
+ "Struve 2398 AB": {
+  "catwise_n_r0p2": 6650,
+  "brightest_ks_r0p3": 5.996
+ },
+ "Groombridge 34 AB": {
+  "catwise_n_r0p2": 6655,
+  "brightest_ks_r0p3": 5.1
+ },
+ "GJ 1111": {
+  "catwise_n_r0p2": 4918,
+  "brightest_ks_r0p3": 2.806
+ },
+ "eps Ind": {
+  "catwise_n_r0p2": 4063,
+  "brightest_ks_r0p3": 6.454
+ },
+ "tau Cet": {
+  "catwise_n_r0p2": 3610,
+  "brightest_ks_r0p3": 9.031
+ },
+ "GJ 1061": {
+  "catwise_n_r0p2": 4743,
+  "brightest_ks_r0p3": 5.175
+ },
+ "GJ 54": {
+  "catwise_n_r0p2": 3721,
+  "brightest_ks_r0p3": 7.824
+ },
+ "Luyten's Star": {
+  "catwise_n_r0p2": 10421,
+  "brightest_ks_r0p3": 5.708
+ },
+ "Teegarden's Star": {
+  "catwise_n_r0p2": 3836,
+  "brightest_ks_r0p3": 4.301
+ },
+ "Kapteyn's Star": {
+  "catwise_n_r0p2": 5840,
+  "brightest_ks_r0p3": 2.596
+ },
+ "Lacaille 8760": {
+  "catwise_n_r0p2": 3998,
+  "brightest_ks_r0p3": 8.279
+ },
+ "GJ 12724": {
+  "catwise_n_r0p2": 4526,
+  "brightest_ks_r0p3": 5.206
+ },
+ "Wolf 1061": {
+  "catwise_n_r0p2": 4269,
+  "brightest_ks_r0p3": 7.604
+ },
+ "van Maanen's Star": {
+  "catwise_n_r0p2": 3821,
+  "brightest_ks_r0p3": 5.907
+ },
+ "LP 145-141 (WD)": {
+  "catwise_n_r0p2": 10076,
+  "brightest_ks_r0p3": 5.357
+ },
+ "GJ 908": {
+  "catwise_n_r0p2": 3690,
+  "brightest_ks_r0p3": 9.017
+ },
+ "GJ 783": {
+  "catwise_n_r0p2": 4064,
+  "brightest_ks_r0p3": 7.79
+ },
+ "GJ 784": {
+  "catwise_n_r0p2": 4065,
+  "brightest_ks_r0p3": 8.776
+ },
+ "GJ 1221": {
+  "catwise_n_r0p2": 12396,
+  "brightest_ks_r0p3": 7.686
+ },
+ "GJ 9193": {
+  "catwise_n_r0p2": 9252,
+  "brightest_ks_r0p3": 6.429
+ },
+ "GJ 11068": {
+  "catwise_n_r0p2": 9830,
+  "brightest_ks_r0p3": 4.083
+ }
+}
