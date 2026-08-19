@@ -81,7 +81,9 @@ the data can always be re-fetched rather than committed.
    **448 ledger-ready Constraint records**; both stack_v1 marginal
    cells vetoed (Candidate records). No surviving candidate. Results:
    `results/calib_v1_summary.md`.
-8. Report — not started
+8. Report — **done**: canonical text `../../report/wise_shakedown_v1.md`;
+   published page:
+   https://claude.ai/code/artifact/215afb38-d7d3-41bd-aa3c-da7b87e82ffe
 
 **v1.1 expansion (2026-08-19):** all 12 endpoints (9 corridors) run
 through the complete chain; 768 Constraint records under AnalysisRun
