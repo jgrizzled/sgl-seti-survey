@@ -201,6 +201,51 @@ class Candidate:
     extra: Json = field(default_factory=dict)
 
 
+@dataclass(frozen=True)
+class ScreenMatch:
+    """A catalog detection within the screen radius of a predicted SGL
+    track at its epoch (plan §4.5 layer-1 screening). One record per
+    (detection, endpoint, role) pair; catalog absence or presence alone
+    is neither a detection nor a null result."""
+
+    screen_match_id: str
+    endpoint_id: str
+    role: str
+    hypothesis_version: str
+    registry_source_hash: str
+    source_table: str
+    source_cntr: str
+    source_designation: str | None
+    ra_deg: float
+    dec_deg: float
+    sigra_mas: float | None
+    sigdec_mas: float | None
+    mjd: float
+    scan_id: str | None
+    frame_num: int | None
+    photometry: Json
+    flags: Json
+    dist_arcsec: float
+    implied_z_au: float
+    z_segment_au: tuple[float, float]
+    screen_radius_arcsec: float
+    locus_mjd: float
+    snapshot_id: str | None = None
+    extra: Json = field(default_factory=dict)
+
+    @classmethod
+    def build(cls, **fields: Any) -> "ScreenMatch":
+        sid = stable_id("scr", {
+            "endpoint_id": fields["endpoint_id"],
+            "role": fields["role"],
+            "hypothesis_version": fields["hypothesis_version"],
+            "registry_source_hash": fields["registry_source_hash"],
+            "source_table": fields["source_table"],
+            "source_cntr": fields["source_cntr"],
+        })
+        return cls(screen_match_id=sid, **fields)
+
+
 def to_jsonl_line(record: Any) -> str:
     """Serialize a record dataclass to one canonical JSON line."""
     return canonical_json(dataclasses.asdict(record))

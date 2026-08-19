@@ -59,7 +59,12 @@ the data can always be re-fetched rather than committed.
    IntersectionEvaluations with covered relay-distance intervals
    (disjoint when masks split the locus) and usable-pixel fractions.
    Results: `results/precise_v1_summary.md`.
-5. Screen catalog products — not started
+5. Screen catalog products — **run** (`scripts/catalog_screen.py` +
+   `scripts/screen_recurrence.py`): 43,915 ScreenMatch records from 140
+   snapshotted queries across all corridors and mission phases; all
+   recurrence peaks resolved as static background stars via the
+   parallax-phase test → defensible layer-1 null. Results:
+   `results/screen_v1_summary.md`.
 6. Search images (forced photometry, track-aware coadds) — not started
 7. Calibrate via injections and controls — not started
 8. Report — not started
