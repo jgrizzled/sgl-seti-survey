@@ -146,5 +146,169 @@
  "GJ 11068": {
   "catwise_n_r0p2": 9830,
   "brightest_ks_r0p3": 4.083
+ },
+ "YZ Cet": {
+  "catwise_n_r0p2": 3721,
+  "brightest_ks_r0p3": 7.824
+ },
+ "GJ 11547": {
+  "catwise_n_r0p2": 5424,
+  "brightest_ks_r0p3": 5.3
+ },
+ "GJ 687": {
+  "catwise_n_r0p2": 11830,
+  "brightest_ks_r0p3": 5.027
+ },
+ "GJ 674": {
+  "catwise_n_r0p2": 7146,
+  "brightest_ks_r0p3": 5.282
+ },
+ "GJ 876": {
+  "catwise_n_r0p2": 3612,
+  "brightest_ks_r0p3": 8.036
+ },
+ "GJ 1002": {
+  "catwise_n_r0p2": 3877,
+  "brightest_ks_r0p3": 7.486
+ },
+ "Groombridge 1618": {
+  "catwise_n_r0p2": 4310,
+  "brightest_ks_r0p3": 5.544
+ },
+ "GJ 832": {
+  "catwise_n_r0p2": 3863,
+  "brightest_ks_r0p3": 6.706
+ },
+ "GJ 682": {
+  "catwise_n_r0p2": 7637,
+  "brightest_ks_r0p3": 4.251
+ },
+ "LHS 1723": {
+  "catwise_n_r0p2": 5729,
+  "brightest_ks_r0p3": 5.522
+ },
+ "GJ 526": {
+  "catwise_n_r0p2": 3622,
+  "brightest_ks_r0p3": 7.065
+ },
+ "GJ 251": {
+  "catwise_n_r0p2": 9828,
+  "brightest_ks_r0p3": 4.691
+ },
+ "GJ 229 AB": {
+  "catwise_n_r0p2": 7825,
+  "brightest_ks_r0p3": 5.913
+ },
+ "sigma Dra": {
+  "catwise_n_r0p2": 7069,
+  "brightest_ks_r0p3": 4.336
+ },
+ "GJ 588": {
+  "catwise_n_r0p2": 5705,
+  "brightest_ks_r0p3": 3.734
+ },
+ "82 Eri": {
+  "catwise_n_r0p2": 4487,
+  "brightest_ks_r0p3": 6.255
+ },
+ "GJ 581": {
+  "catwise_n_r0p2": 3486,
+  "brightest_ks_r0p3": 8.478
+ },
+ "GJ 338 AB": {
+  "catwise_n_r0p2": 4518,
+  "brightest_ks_r0p3": 8.106
+ },
+ "GJ 625": {
+  "catwise_n_r0p2": 5349,
+  "brightest_ks_r0p3": 7.854
+ },
+ "HD 219134": {
+  "catwise_n_r0p2": 10535,
+  "brightest_ks_r0p3": 5.762
+ },
+ "LTT 1445 ABC": {
+  "catwise_n_r0p2": 4353,
+  "brightest_ks_r0p3": 7.91
+ },
+ "GJ 667 ABC": {
+  "catwise_n_r0p2": 7032,
+  "brightest_ks_r0p3": 3.309
+ },
+ "Fomalhaut": {
+  "catwise_n_r0p2": 3407,
+  "brightest_ks_r0p3": 6.418
+ },
+ "Wolf 437": {
+  "catwise_n_r0p2": 4018,
+  "brightest_ks_r0p3": 7.964
+ },
+ "GJ 1087 (WD)": {
+  "catwise_n_r0p2": 10012,
+  "brightest_ks_r0p3": 4.48
+ },
+ "GJ 293 (WD)": {
+  "catwise_n_r0p2": 6394,
+  "brightest_ks_r0p3": 5.45
+ },
+ "GJ 66": {
+  "catwise_n_r0p2": 4658,
+  "brightest_ks_r0p3": 7.118
+ },
+ "GJ 915": {
+  "catwise_n_r0p2": 3303,
+  "brightest_ks_r0p3": 4.419
+ },
+ "GJ 518 (WD)": {
+  "catwise_n_r0p2": 3796,
+  "brightest_ks_r0p3": 8.762
+ },
+ "GJ 13157": {
+  "catwise_n_r0p2": 8478,
+  "brightest_ks_r0p3": 2.405
+ },
+ "GJ 318": {
+  "catwise_n_r0p2": 10227,
+  "brightest_ks_r0p3": 4.624
+ },
+ "GJ 1276": {
+  "catwise_n_r0p2": 3390,
+  "brightest_ks_r0p3": 7.864
+ },
+ "61 Vir": {
+  "catwise_n_r0p2": 3403,
+  "brightest_ks_r0p3": 5.358
+ },
+ "GJ 2066": {
+  "catwise_n_r0p2": 6936,
+  "brightest_ks_r0p3": 3.94
+ },
+ "GJ 2012": {
+  "catwise_n_r0p2": 3889,
+  "brightest_ks_r0p3": 7.736
+ },
+ "GJ 3306": {
+  "catwise_n_r0p2": 5204,
+  "brightest_ks_r0p3": 6.771
+ },
+ "GJ 367": {
+  "catwise_n_r0p2": 8158,
+  "brightest_ks_r0p3": 2.262
+ },
+ "GJ 3512": {
+  "catwise_n_r0p2": 4271,
+  "brightest_ks_r0p3": 3.85
+ },
+ "Wolf 1069": {
+  "catwise_n_r0p2": 8828,
+  "brightest_ks_r0p3": 5.963
+ },
+ "GJ 3112": {
+  "catwise_n_r0p2": 4634,
+  "brightest_ks_r0p3": 6.379
+ },
+ "GJ 514": {
+  "catwise_n_r0p2": 4043,
+  "brightest_ks_r0p3": 4.755
  }
 }

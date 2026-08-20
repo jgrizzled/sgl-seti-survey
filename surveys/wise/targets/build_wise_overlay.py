@@ -1,6 +1,7 @@
 """WISE overlay for the universal target list.
 
-Consumes targets/universal_v1.json and produces the WISE-specific
+Consumes targets/universal_<version>.json (version from
+targets/config.yaml) and produces the WISE-specific
 work queue: per-corridor coverage and confusion grades, solution-gate
 verdicts at WISE tolerance, and grandfathered/searched status.
 
@@ -23,10 +24,12 @@ import time
 from pathlib import Path
 
 import requests
+import yaml
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
-UNIVERSAL = json.load(open(REPO / "targets" / "universal_v1.json"))
+VERSION = yaml.safe_load(open(REPO / "targets" / "config.yaml"))["version"]
+UNIVERSAL = json.load(open(REPO / "targets" / f"universal_{VERSION}.json"))
 TAP = "https://irsa.ipac.caltech.edu/TAP/sync"
 SNAP = HERE / "corridor_measurements.json"
 
@@ -102,14 +105,15 @@ def main():
                    key=lambda r: r["queue_key"])
     for r in rows:
         r.pop("queue_key")
-    out = {"universal_version": "v1",
+    out = {"universal_version": VERSION,
            "survey": "wise-neowise-merged-l1b",
            "exclusions": "none (all-sky survey)",
            "grandfathered": [r["system"] for r in rows
                              if r["status"] == "searched"],
            "systems": rows,
            "work_queue": [r["system"] for r in queue]}
-    (HERE / "overlay_v1.json").write_text(json.dumps(out, indent=1))
+    (HERE / f"overlay_{VERSION}.json").write_text(json.dumps(out, indent=1))
+    write_md(rows, queue, HERE / f"overlay_{VERSION}.md")
     print(f"\n{len(rows)} systems: "
           f"{sum(1 for r in rows if r['status'] == 'searched')} searched, "
           f"{len(queue)} queued, "
@@ -123,6 +127,36 @@ def main():
     for r in rows:
         if r["status"] == "deferred":
             print(f"  {r['system']:24s} gate={r['universal_gate']}")
+
+
+def write_md(rows, queue, path):
+    import datetime as dt
+    L = ["---", f'title: "WISE overlay on universal {VERSION}"',
+         f"date: {dt.date.today().isoformat()}",
+         f'status: "{len(rows)} systems: '
+         f'{sum(1 for r in rows if r["status"] == "searched")} searched, '
+         f'{len(queue)} queued, '
+         f'{sum(1 for r in rows if r["status"] == "deferred")} deferred"',
+         "---", "", f"# WISE overlay — universal {VERSION}", "",
+         f"Applies WISE-specific grades to `targets/universal_{VERSION}` "
+         "without changing membership. All-sky: no exclusions; confusion "
+         "(CatWISE2020 density, r = 0.2°) and bright-star hazard "
+         "(2MASS Ks < 4 within 0.3°) order the queue; coverage proxy is "
+         "|β_ecl|.", "",
+         "## Work queue (best first)", "",
+         "| # | System | d (pc) | Tracks | Confusion | Coverage | Baskets |",
+         "| --- | --- | --- | --- | --- | --- | --- |"]
+    for i, r in enumerate(queue, 1):
+        L.append(f"| {i} | {r['system']} | {r['dist_pc']:.2f} | "
+                 f"{r['n_tracks']} | {r['confusion']} | {r['coverage_proxy']} | "
+                 f"{', '.join(r['baskets'])} |")
+    L += ["", "## Deferred (solution gate)", ""]
+    for r in rows:
+        if r["status"] == "deferred":
+            L.append(f"- {r['system']}: {r['universal_gate']}")
+    L += ["", "## Searched (grandfathered from v1 registry)", "",
+          ", ".join(r["system"] for r in rows if r["status"] == "searched")]
+    path.write_text("\n".join(L) + "\n")
 
 
 if __name__ == "__main__":

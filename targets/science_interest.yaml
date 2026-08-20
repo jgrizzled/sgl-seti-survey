@@ -1,0 +1,58 @@
+# Curated science-interest systems (picky-network basket D).
+#
+# Keyed by CNS5 GJ id (the `GJ` column of the census snapshot; component
+# suffix dropped — the system is the graph node). Tier 1 enters the
+# universal list automatically; tier 2 is labeled and enters only if the
+# track budget allows. `reason` is the inclusion argument in the
+# language of notes/picky_network_hypothesis_sgl_seti.md §7; `ref` is
+# the discovery/characterisation paper (first author, year) so each
+# entry can be audited. Systems already in the distance core are listed
+# anyway so the label records the independent motivation.
+#
+# Curation date: 2026-08-20. Not auto-generated — edit by hand.
+version: v1
+tier1:
+  "54.1":  {name: "YZ Cet",          reason: "3 Earth-mass planets, compact system; innermost terrestrial system known", ref: "Astudillo-Defru 2017; Stock 2020"}
+  "273":   {name: "Luyten's Star",   reason: "GJ 273b low-mass planet in/near HZ", ref: "Astudillo-Defru 2017"}
+  "447":   {name: "Ross 128",        reason: "temperate Earth-mass planet b", ref: "Bonfils 2018"}
+  "1061":  {name: "GJ 1061",         reason: "3 low-mass planets, d in HZ", ref: "Dreizler 2020"}
+  "887":   {name: "Lacaille 9352",   reason: "2-3 super-Earths, quiet host, HZ candidate", ref: "Jeffers 2020"}
+  "144":   {name: "eps Eri",         reason: "giant planet + multi-belt debris system (resource + architecture)", ref: "Mawet 2019; Su 2017"}
+  "71":    {name: "tau Cet",         reason: "4 candidate planets + massive debris disk", ref: "Feng 2017; MacGregor 2016"}
+  "845":   {name: "eps Ind",         reason: "cold Jupiter imaged (JWST) + T-dwarf binary", ref: "Matthews 2024"}
+  "876":   {name: "GJ 876",          reason: "Laplace-resonant 4-planet system; science overrides lens cleanliness", ref: "Rivera 2010; Millholland 2018"}
+  "1002":  {name: "GJ 1002",         reason: "two Earth-mass temperate planets around a quiet M5.5", ref: "Suarez Mascareno 2023"}
+  "139":   {name: "82 Eri (HD 20794)", reason: "3 planets incl. HZ super-Earth d; quiet G6V", ref: "Pepe 2011; Nari 2025"}
+  "892":   {name: "HD 219134",       reason: "6 planets incl. 2 transiting rocky; quiet K3V; nearest transiting system", ref: "Motalebi 2015; Gillon 2017"}
+  "3323":  {name: "GJ 3323 (LHS 1723)", reason: "2 planets, b in HZ", ref: "Astudillo-Defru 2017"}
+  "581":   {name: "GJ 581",          reason: "3 confirmed planets incl. HZ-edge e/c; archetype RV system", ref: "Mayor 2009; Robertson 2014"}
+  "667":   {name: "GJ 667 ABC",      reason: "C hosts multi-planet system with HZ super-Earth c; triple (lens = C)", ref: "Anglada-Escude 2013"}
+  "251":   {name: "GJ 251",          reason: "super-Earth b + HZ candidate c; quiet M3", ref: "Stock 2020; Burt 2025"}
+  "367":   {name: "GJ 367",          reason: "ultra-short-period iron sub-Earth (transiting) + 2 outer planets", ref: "Lam 2021; Goffo 2023"}
+  "3193":  {name: "LTT 1445 ABC",    reason: "A hosts 2 transiting rocky planets; nearest transiting M-dwarf triple", ref: "Winters 2019, 2022"}
+  "3512":  {name: "GJ 3512",         reason: "Jupiter-mass planet around 0.12 Msun star — anomalous architecture", ref: "Morales 2019"}
+  "1253":  {name: "Wolf 1069",       reason: "Earth-mass planet in HZ of quiet M5", ref: "Kossakowski 2023"}
+  "506":   {name: "61 Vir",          reason: "3 low-mass planets + debris disk; solar twin-ish G5V", ref: "Vogt 2010; Wyatt 2012"}
+  "881":   {name: "Fomalhaut",       reason: "eccentric debris ring + wide triple; exceptional resource/architecture system (A-type, short-lived)", ref: "Kalas 2008; Gaspar 2023"}
+  "486":   {name: "GJ 486 (Wolf 437)", reason: "transiting rocky planet with best-characterised M-dwarf-planet atmosphere constraints", ref: "Trifonov 2021; Moran 2023"}
+tier2:
+  "357":   {name: "GJ 357",          reason: "transiting b + HZ candidate d", ref: "Luque 2019"}
+  "433":   {name: "GJ 433",          reason: "3 planets incl. cold super-Earth", ref: "Feng 2020"}
+  "436":   {name: "GJ 436",          reason: "archetypal transiting hot Neptune, polar orbit", ref: "Butler 2004; Bourrier 2018"}
+  "229":   {name: "GJ 229 AB",       reason: "first T dwarf (now a T+T binary) + planet candidates", ref: "Nakajima 1995; Xuan 2024"}
+  "514":   {name: "GJ 514",          reason: "eccentric super-Earth crossing the HZ", ref: "Damasso 2022"}
+  "832":   {name: "GJ 832",          reason: "cold Jupiter analogue", ref: "Bailey 2009"}
+  "674":   {name: "GJ 674",          reason: "hot Neptune", ref: "Bonfils 2007"}
+  "687":   {name: "GJ 687",          reason: "2 Neptune-mass planets", ref: "Burt 2014; Feng 2020"}
+  "682":   {name: "GJ 682",          reason: "2 candidate planets incl. HZ (disputed)", ref: "Tuomi 2014"}
+  "338":   {name: "GJ 338 AB",       reason: "wide binary, super-Earth around B", ref: "Gonzalez-Alvarez 2020"}
+  "849":   {name: "GJ 849",          reason: "2 cold giants around an M dwarf", ref: "Butler 2006; Feng 2015"}
+  "176":   {name: "GJ 176",          reason: "hot super-Earth", ref: "Forveille 2009"}
+  "686":   {name: "GJ 686",          reason: "super-Earth near HZ inner edge", ref: "Affer 2019"}
+  "625":   {name: "GJ 625",          reason: "super-Earth at HZ inner edge", ref: "Suarez Mascareno 2017"}
+  "1151":  {name: "GJ 1151",         reason: "coherent radio emission (star-planet interaction) + planet candidates", ref: "Vedantham 2020; Blanco-Pozo 2023"}
+  "191":   {name: "Kapteyn's Star",  reason: "halo-star planet claims (disputed); oldest nearby planetary candidate", ref: "Anglada-Escude 2014; Bortle 2021"}
+  "15":    {name: "Groombridge 34 AB", reason: "GJ 15A b super-Earth + c cold planet", ref: "Howard 2014; Pinamonti 2018"}
+  "628":   {name: "Wolf 1061",       reason: "3 planets, c near HZ", ref: "Wright 2016"}
+  "725":   {name: "Struve 2398 AB",  reason: "B hosts 2 planets", ref: "Feng 2020"}
+  "721":   {name: "Vega",            reason: "massive two-belt debris system + candidate planet (A0V, short-lived)", ref: "Su 2005; Hurt 2021"}

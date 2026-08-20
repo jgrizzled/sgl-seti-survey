@@ -1,0 +1,4981 @@
+{
+ "config": {
+  "version": "v2",
+  "census": {
+   "source": "CNS5 (Golovin et al. 2023) via VizieR J/A+A/670/A19/cns5, retrieved 2026-08-20",
+   "snapshot": "census/cns5_10pc_2026-08-20.csv",
+   "engineering": "census/engineering_2026-08-20.csv",
+   "horizon_pc": 10.0,
+   "system_grouping_pc": 0.1,
+   "system_plx_tol": 0.1
+  },
+  "stage1": {
+   "historical_window_myr": 1.0,
+   "knn_ks": [
+    1,
+    2,
+    3
+   ]
+  },
+  "stage2": {
+   "close_multiple_au": 100.0,
+   "wide_multiple_au": 1000.0,
+   "orbit_available": [
+    "alpha Cen",
+    "Sirius",
+    "GJ 65",
+    "Procyon",
+    "70 Oph",
+    "Luhman 16"
+   ]
+  },
+  "stage2b": {
+   "activity": {
+    "logRpHK_active": -4.75,
+    "pEWHa_active_A": -0.5,
+    "rosat_ecf_erg_cm2_ct": 6e-12,
+    "rosat_limit_ct_s": 0.05,
+    "log_lx_lbol_active": -4.0
+   },
+   "accel": {
+    "pma_snr": 5.0,
+    "hgca_chi2": 11.8,
+    "ruwe": 1.4,
+    "ruwe_bright_g": 6.0
+   },
+   "flame_evol_subgiant": 360,
+   "massive_short_lived_msun": 1.5,
+   "known_evolved": [
+    "Procyon"
+   ],
+   "known_rapid_rotators": [
+    "Altair",
+    "Vega",
+    "Fomalhaut"
+   ],
+   "desirability": {
+    "revote_levels": [
+     1,
+     2
+    ]
+   }
+  },
+  "stage4": {
+   "n_distance_core": 25,
+   "adjacency_vote_min": 3,
+   "n_historical": 8,
+   "n_engineering": 12,
+   "engineering_require_measured_quiet": true,
+   "engineering_weights": {
+    "compactness": 0.2,
+    "power": 0.15,
+    "activity": 0.2,
+    "acceleration": 0.15,
+    "lifetime": 0.05,
+    "distance": 0.25
+   },
+   "track_budget": 95
+  }
+ },
+ "n_systems": 76,
+ "n_tracks": 95,
+ "systems": [
+  {
+   "system": "Proxima Cen",
+   "dist_pc": 1.302,
+   "n_comp": 2,
+   "min_sep_au": 10289.4,
+   "multiplicity": "close",
+   "flags": [],
+   "adjacency_votes": 6,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel",
+    "rng",
+    "mst",
+    "mknn2",
+    "mknn3"
+   ],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.126,
+    "radius_rsun": 0.1543,
+    "lum_lsun": 0.00215,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 5.3,
+    "activity": "active",
+    "activity_evidence": [
+     "logLx/Lbol=-3.7"
+    ],
+    "log_lx_lbol": -3.66,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=0.9",
+     "HGCA chi2=0.5 (PMa decides)",
+     "RUWE=0.97"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M5.5Ve",
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 0.95,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "anti_ra": 37.392,
+   "anti_dec": 62.676,
+   "abs_gal_b": 1.9,
+   "abs_ecl_beta": 44.8,
+   "drift_arcsec_yr": 3.86,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 3,
+   "components": [
+    {
+     "comp": "C",
+     "name": "Proxima Cen",
+     "gaia_dr3": "5853498713190525696",
+     "gmag": 8.984749,
+     "tracks": 1
+    },
+    {
+     "comp": "AB",
+     "name": "alpha Cen AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 2
+    }
+   ]
+  },
+  {
+   "system": "Barnard's Star",
+   "dist_pc": 1.828,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 6,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel",
+    "rng",
+    "mst",
+    "mknn2",
+    "mknn3"
+   ],
+   "selective_votes": {
+    "1": 6,
+    "2": 7
+   },
+   "engineering": {
+    "mass_msun": 0.163,
+    "radius_rsun": 0.194,
+    "lum_lsun": 0.00381,
+    "mass_radius_source": "tic",
+    "compactness_m_r2": 4.33,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.11",
+     "pEWHa=+0.20A",
+     "logLx/Lbol=-5.2"
+    ],
+    "log_lx_lbol": -5.25,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.8",
+     "HGCA chi2=74.9 (PMa decides)",
+     "RUWE=1.08"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M4V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.731,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ENGINEERING_BACKBONE",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "anti_ra": 89.449,
+   "anti_dec": -4.739,
+   "abs_gal_b": 14.1,
+   "abs_ecl_beta": 28.2,
+   "drift_arcsec_yr": 10.39,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Barnard's Star",
+     "gaia_dr3": "4472832130942575872",
+     "gmag": 8.1939745,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Luhman 16 AB",
+   "dist_pc": 1.998,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "close",
+   "flags": [
+    "substellar_or_faint",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "mknn3"
+   ],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": null,
+    "radius_rsun": null,
+    "lum_lsun": null,
+    "mass_radius_source": "unknown_substellar",
+    "compactness_m_r2": null,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": null,
+    "acceleration": "unknown",
+    "acceleration_evidence": [],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 342.315,
+   "anti_dec": 53.318,
+   "abs_gal_b": 5.3,
+   "abs_ecl_beta": 53.9,
+   "drift_arcsec_yr": 2.78,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "AB",
+     "name": "Luhman 16 AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 2
+    }
+   ]
+  },
+  {
+   "system": "WISE 0855-0714",
+   "dist_pc": 2.278,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "substellar_or_faint",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": null,
+    "radius_rsun": null,
+    "lum_lsun": null,
+    "mass_radius_source": "unknown_substellar",
+    "compactness_m_r2": null,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": null,
+    "acceleration": "unknown",
+    "acceleration_evidence": [],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 313.795,
+   "anti_dec": 7.245,
+   "abs_gal_b": 23.4,
+   "abs_ecl_beta": 23.6,
+   "drift_arcsec_yr": 8.15,
+   "solution_gate": "hard",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "WISE 0855-0714",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Wolf 359",
+   "dist_pc": 2.409,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": {
+    "1": 3,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.11,
+    "radius_rsun": 0.1361,
+    "lum_lsun": 0.00153,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 5.95,
+    "activity": "active",
+    "activity_evidence": [
+     "pEWHa=-8.70A",
+     "logLx/Lbol=-3.7"
+    ],
+    "log_lx_lbol": -3.71,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=0.83"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 2.27,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SELECTIVE_NETWORK_NEIGHBOR"
+   ],
+   "anti_ra": 344.103,
+   "anti_dec": -7.003,
+   "abs_gal_b": 56.1,
+   "abs_ecl_beta": 0.2,
+   "drift_arcsec_yr": 4.72,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Wolf 359",
+     "gaia_dr3": "3864972938605115520",
+     "gmag": 11.038391,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Lalande 21185",
+   "dist_pc": 2.546,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": {
+    "1": 2,
+    "2": 5
+   },
+   "engineering": {
+    "mass_msun": 0.365,
+    "radius_rsun": 0.3771,
+    "lum_lsun": 0.01851,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.57,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.19",
+     "pEWHa=+0.20A",
+     "logLx/Lbol=-4.9"
+    ],
+    "log_lx_lbol": -4.86,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=3.2",
+     "HGCA chi2=7.2 (PMa decides)",
+     "RUWE=0.96"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M2+V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.68,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ENGINEERING_BACKBONE",
+    "SELECTIVE_NETWORK_NEIGHBOR"
+   ],
+   "anti_ra": 345.831,
+   "anti_dec": -35.949,
+   "abs_gal_b": 65.4,
+   "abs_ecl_beta": 27.4,
+   "drift_arcsec_yr": 4.81,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Lalande 21185",
+     "gaia_dr3": "762815470562110464",
+     "gmag": 6.551172,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Sirius AB",
+   "dist_pc": 2.67,
+   "n_comp": 2,
+   "min_sep_au": 76.4,
+   "multiplicity": "close",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "active",
+    "activity_evidence": [
+     "logLx/Lbol=-1.2"
+    ],
+    "log_lx_lbol": -1.24,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "RUWE=2.42"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 281.287,
+   "anti_dec": 16.721,
+   "abs_gal_b": 8.9,
+   "abs_ecl_beta": 39.6,
+   "drift_arcsec_yr": 1.02,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "B",
+     "name": "Sirius AB",
+     "gaia_dr3": "2947050466531873024",
+     "gmag": 8.524133,
+     "tracks": 1
+    },
+    {
+     "comp": "A",
+     "name": "Sirius AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 65 AB",
+   "dist_pc": 2.703,
+   "n_comp": 2,
+   "min_sep_au": 6.1,
+   "multiplicity": "close",
+   "flags": [],
+   "adjacency_votes": 3,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel",
+    "rng"
+   ],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.165,
+    "radius_rsun": 0.196,
+    "lum_lsun": 0.00382,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 4.3,
+    "activity": "active",
+    "activity_evidence": [
+     "pEWHa=-4.40A",
+     "logLx/Lbol=-3.6"
+    ],
+    "log_lx_lbol": -3.55,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "RUWE=12.37"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 2.26,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "anti_ra": 204.772,
+   "anti_dec": 17.948,
+   "abs_gal_b": 75.7,
+   "abs_ecl_beta": 26.2,
+   "drift_arcsec_yr": 3.43,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "GJ 65 AB",
+     "gaia_dr3": "5140693571158739840",
+     "gmag": 10.507542,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "GJ 65 AB",
+     "gaia_dr3": "5140693571158946048",
+     "gmag": 10.817838,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Ross 154",
+   "dist_pc": 2.975,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": {
+    "1": 1,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.18,
+    "radius_rsun": 0.2105,
+    "lum_lsun": 0.00451,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 4.05,
+    "activity": "active",
+    "activity_evidence": [
+     "logLx/Lbol=-3.4"
+    ],
+    "log_lx_lbol": -3.4,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.2",
+     "HGCA chi2=1.4 (PMa decides)",
+     "RUWE=0.99"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3.5Ve",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 102.459,
+   "anti_dec": 23.837,
+   "abs_gal_b": 10.3,
+   "abs_ecl_beta": 0.9,
+   "drift_arcsec_yr": 0.67,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Ross 154",
+     "gaia_dr3": "4075141768785646848",
+     "gmag": 9.126414,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Ross 248",
+   "dist_pc": 3.159,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 3,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel",
+    "rng"
+   ],
+   "selective_votes": {
+    "1": 3,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.148,
+    "radius_rsun": 0.178,
+    "lum_lsun": 0.00304,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 4.67,
+    "activity": "active",
+    "activity_evidence": [
+     "logLx/Lbol=-4.0"
+    ],
+    "log_lx_lbol": -3.98,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.03"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 0.93,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR",
+    "ROBUST_GEOMETRIC_NEIGHBOR"
+   ],
+   "anti_ra": 175.48,
+   "anti_dec": -44.17,
+   "abs_gal_b": 16.9,
+   "abs_ecl_beta": 41.4,
+   "drift_arcsec_yr": 1.6,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Ross 248",
+     "gaia_dr3": "1926461164913660160",
+     "gmag": 10.379277,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "eps Eri",
+   "dist_pc": 3.22,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": {
+    "1": 3,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.811,
+    "radius_rsun": 0.7761,
+    "lum_lsun": 0.4326,
+    "mass_radius_source": "flame",
+    "compactness_m_r2": 1.35,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.51",
+     "logLx/Lbol=-4.8"
+    ],
+    "log_lx_lbol": -4.8,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=4.4",
+     "HGCA chi2=33.9 (PMa decides)",
+     "RUWE=2.72 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": 7.304,
+    "sptype": "K2V",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "eps Eri",
+    "reason": "giant planet + multi-belt debris system (resource + architecture)",
+    "ref": "Mawet 2019; Su 2017"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SCIENCE_INTEREST",
+    "SELECTIVE_NETWORK_NEIGHBOR"
+   ],
+   "anti_ra": 233.228,
+   "anti_dec": 9.458,
+   "abs_gal_b": 48.1,
+   "abs_ecl_beta": 27.7,
+   "drift_arcsec_yr": 0.97,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "eps Eri",
+     "gaia_dr3": "5164707970261890560",
+     "gmag": 3.465752,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Lacaille 9352",
+   "dist_pc": 3.288,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": {
+    "1": 2,
+    "2": 3
+   },
+   "engineering": {
+    "mass_msun": 0.46,
+    "radius_rsun": 0.4625,
+    "lum_lsun": 0.0413,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.15,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.83",
+     "logLx/Lbol=-5.0"
+    ],
+    "log_lx_lbol": -5.02,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=4.4",
+     "HGCA chi2=9.6 (PMa decides)",
+     "RUWE=0.93"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M2V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.692,
+   "science": {
+    "tier": 1,
+    "name": "Lacaille 9352",
+    "reason": "2-3 super-Earths, quiet host, HZ candidate",
+    "ref": "Jeffers 2020"
+   },
+   "dmin_1myr_pc": 3.28,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ENGINEERING_BACKBONE",
+    "SCIENCE_INTEREST",
+    "SELECTIVE_NETWORK_NEIGHBOR"
+   ],
+   "anti_ra": 166.504,
+   "anti_dec": 35.847,
+   "abs_gal_b": 66.0,
+   "abs_ecl_beta": 27.5,
+   "drift_arcsec_yr": 6.9,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Lacaille 9352",
+     "gaia_dr3": "6553614253923452800",
+     "gmag": 6.5220323,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Ross 128",
+   "dist_pc": 3.374,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 1
+   },
+   "engineering": {
+    "mass_msun": 0.179,
+    "radius_rsun": 0.2096,
+    "lum_lsun": 0.00396,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 4.07,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.30",
+     "pEWHa=+0.00A",
+     "logLx/Lbol=-4.2"
+    ],
+    "log_lx_lbol": -4.24,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=0.6",
+     "HGCA chi2=0.1 (PMa decides)",
+     "RUWE=1.08"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M4V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.597,
+   "science": {
+    "tier": 1,
+    "name": "Ross 128",
+    "reason": "temperate Earth-mass planet b",
+    "ref": "Bonfils 2018"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 356.938,
+   "anti_dec": -0.799,
+   "abs_gal_b": 59.6,
+   "abs_ecl_beta": 0.5,
+   "drift_arcsec_yr": 1.37,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Ross 128",
+     "gaia_dr3": "3796072592206250624",
+     "gmag": 9.601,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "EZ Aqr",
+   "dist_pc": 3.406,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "close",
+   "flags": [
+    "substellar_or_faint",
+    "close_no_orbit",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 2,
+   "vote_graphs": [
+    "delaunay",
+    "gabriel"
+   ],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": null,
+    "radius_rsun": null,
+    "lum_lsun": null,
+    "mass_radius_source": "unknown_substellar",
+    "compactness_m_r2": null,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": null,
+    "acceleration": "unknown",
+    "acceleration_evidence": [],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 159.651,
+   "anti_dec": 15.29,
+   "abs_gal_b": 57.0,
+   "abs_ecl_beta": 6.2,
+   "drift_arcsec_yr": 3.26,
+   "solution_gate": "hard",
+   "already_searched_wise": true,
+   "n_tracks": 3,
+   "components": [
+    {
+     "comp": "ABC",
+     "name": "EZ Aqr",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 3
+    }
+   ]
+  },
+  {
+   "system": "61 Cyg AB",
+   "dist_pc": 3.497,
+   "n_comp": 2,
+   "min_sep_au": 110.5,
+   "multiplicity": "intermediate",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": {
+    "1": 1,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.664,
+    "radius_rsun": 0.7017,
+    "lum_lsun": 0.11069,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 1.35,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.23",
+     "logLx/Lbol=-5.0"
+    ],
+    "log_lx_lbol": -4.99,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "PMa S/N=14.5",
+     "HGCA chi2=317.4 (PMa decides)",
+     "RUWE=1.20 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "K5V",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 2.8,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 136.748,
+   "anti_dec": -38.764,
+   "abs_gal_b": 5.8,
+   "abs_ecl_beta": 51.9,
+   "drift_arcsec_yr": 5.28,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "61 Cyg AB",
+     "gaia_dr3": "1872046609345556480",
+     "gmag": 4.766713,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "61 Cyg AB",
+     "gaia_dr3": "1872046574983497216",
+     "gmag": 5.4506445,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Procyon AB",
+   "dist_pc": 3.514,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": null,
+    "radius_rsun": null,
+    "lum_lsun": null,
+    "mass_radius_source": "unknown",
+    "compactness_m_r2": null,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.11"
+    ],
+    "log_lx_lbol": null,
+    "acceleration": "unknown",
+    "acceleration_evidence": [],
+    "evolution": "evolved",
+    "evolution_evidence": [
+     "curated"
+    ],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 294.827,
+   "anti_dec": -5.228,
+   "abs_gal_b": 13.0,
+   "abs_ecl_beta": 16.0,
+   "drift_arcsec_yr": 1.26,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Procyon AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Struve 2398 AB",
+   "dist_pc": 3.523,
+   "n_comp": 2,
+   "min_sep_au": 40.7,
+   "multiplicity": "close",
+   "flags": [
+    "close_no_orbit"
+   ],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.331,
+    "radius_rsun": 0.3476,
+    "lum_lsun": 0.01503,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.74,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.27",
+     "logLx/Lbol=-5.0"
+    ],
+    "log_lx_lbol": -5.0,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "PMa S/N=26.2",
+     "HGCA chi2=723.0 (PMa decides)",
+     "RUWE=1.01"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3V",
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 2,
+    "name": "Struve 2398 AB",
+    "reason": "B hosts 2 planets",
+    "ref": "Feng 2020"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 100.683,
+   "anti_dec": -59.638,
+   "abs_gal_b": 24.2,
+   "abs_ecl_beta": 81.6,
+   "drift_arcsec_yr": 2.22,
+   "solution_gate": "orbit_needed",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "Struve 2398 AB",
+     "gaia_dr3": "2154880616774131840",
+     "gmag": 7.854393,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "Struve 2398 AB",
+     "gaia_dr3": "2154880616774131712",
+     "gmag": 8.524704,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Groombridge 34 AB",
+   "dist_pc": 3.562,
+   "n_comp": 2,
+   "min_sep_au": 122.4,
+   "multiplicity": "intermediate",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.399,
+    "radius_rsun": 0.4064,
+    "lum_lsun": 0.0225,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.41,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.21",
+     "logLx/Lbol=-4.5"
+    ],
+    "log_lx_lbol": -4.52,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "PMa S/N=52.0",
+     "HGCA chi2=2456.0 (PMa decides)",
+     "RUWE=1.04"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M2V",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 2,
+    "name": "Groombridge 34 AB",
+    "reason": "GJ 15A b super-Earth + c cold planet",
+    "ref": "Howard 2014; Pinamonti 2018"
+   },
+   "dmin_1myr_pc": 3.47,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 184.613,
+   "anti_dec": -44.025,
+   "abs_gal_b": 18.4,
+   "abs_ecl_beta": 37.9,
+   "drift_arcsec_yr": 2.92,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "Groombridge 34 AB",
+     "gaia_dr3": "385334230892516480",
+     "gmag": 7.218567,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "Groombridge 34 AB",
+     "gaia_dr3": "385334196532776576",
+     "gmag": 9.686646,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1111",
+   "dist_pc": 3.581,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": {
+    "1": 1,
+    "2": 1
+   },
+   "engineering": {
+    "mass_msun": 0.1,
+    "radius_rsun": 0.124,
+    "lum_lsun": 0.00087,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 6.48,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -3.86,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.16"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 1.33,
+   "baskets": [
+    "DISTANCE_CORE",
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 307.45,
+   "anti_dec": -26.773,
+   "abs_gal_b": 32.4,
+   "abs_ecl_beta": 7.5,
+   "drift_arcsec_yr": 1.27,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1111",
+     "gaia_dr3": "703790044252850688",
+     "gmag": 12.167455,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "eps Ind",
+   "dist_pc": 3.638,
+   "n_comp": 2,
+   "min_sep_au": 1475.6,
+   "multiplicity": "wide",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 1,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.73,
+    "radius_rsun": 0.738,
+    "lum_lsun": 0.22183,
+    "mass_radius_source": "tic",
+    "compactness_m_r2": 1.34,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.52",
+     "logLx/Lbol=-5.4"
+    ],
+    "log_lx_lbol": -5.44,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "PMa S/N=15.6",
+     "HGCA chi2=287.5 (PMa decides)",
+     "RUWE=1.15 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": 10.488,
+    "sptype": "K5V",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "eps Ind",
+    "reason": "cold Jupiter imaged (JWST) + T-dwarf binary",
+    "ref": "Matthews 2024"
+   },
+   "dmin_1myr_pc": 3.26,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 150.872,
+   "anti_dec": 56.797,
+   "abs_gal_b": 48.1,
+   "abs_ecl_beta": 41.4,
+   "drift_arcsec_yr": 4.71,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "eps Ind",
+     "gaia_dr3": "6412595290592307840",
+     "gmag": 4.322904,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "eps Ind",
+     "gaia_dr3": "6412596012146801152",
+     "gmag": 18.056162,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "tau Cet",
+   "dist_pc": 3.65,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 1,
+    "2": 2
+   },
+   "engineering": {
+    "mass_msun": 0.94,
+    "radius_rsun": 0.91,
+    "lum_lsun": 0.66,
+    "mass_radius_source": "sptype_table",
+    "compactness_m_r2": 1.14,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.04",
+     "logLx/Lbol=-6.6"
+    ],
+    "log_lx_lbol": -6.56,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.2",
+     "HGCA chi2=2.0 (PMa decides)",
+     "RUWE=2.63 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "G8V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.713,
+   "science": {
+    "tier": 1,
+    "name": "tau Cet",
+    "reason": "4 candidate planets + massive debris disk",
+    "ref": "Feng 2017; MacGregor 2016"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ENGINEERING_BACKBONE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 206.009,
+   "anti_dec": 15.934,
+   "abs_gal_b": 73.4,
+   "abs_ecl_beta": 24.8,
+   "drift_arcsec_yr": 1.92,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "tau Cet",
+     "gaia_dr3": "2452378776434477184",
+     "gmag": 3.3003998,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1061",
+   "dist_pc": 3.674,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 2,
+    "2": 2
+   },
+   "engineering": {
+    "mass_msun": 0.128,
+    "radius_rsun": 0.1558,
+    "lum_lsun": 0.00156,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 5.26,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logLx/Lbol=-4.2"
+    ],
+    "log_lx_lbol": -4.21,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.19"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": 0.521,
+   "science": {
+    "tier": 1,
+    "name": "GJ 1061",
+    "reason": "3 low-mass planets, d in HZ",
+    "ref": "Dreizler 2020"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 234.003,
+   "anti_dec": 44.514,
+   "abs_gal_b": 52.9,
+   "abs_ecl_beta": 60.8,
+   "drift_arcsec_yr": 0.83,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1061",
+     "gaia_dr3": "4848140361962951552",
+     "gmag": 10.995456,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "YZ Cet",
+   "dist_pc": 3.716,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 1,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.139,
+    "radius_rsun": 0.1688,
+    "lum_lsun": 0.00268,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 4.89,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.74",
+     "logLx/Lbol=-3.6"
+    ],
+    "log_lx_lbol": -3.58,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.3",
+     "HGCA chi2=6.0 (PMa decides)",
+     "RUWE=1.00"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M4.0Ve",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "YZ Cet",
+    "reason": "3 Earth-mass planets, compact system; innermost terrestrial system known",
+    "ref": "Astudillo-Defru 2017; Stock 2020"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 198.133,
+   "anti_dec": 16.996,
+   "abs_gal_b": 78.8,
+   "abs_ecl_beta": 22.7,
+   "drift_arcsec_yr": 1.36,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "YZ Cet",
+     "gaia_dr3": "2358524597030794112",
+     "gmag": 10.436525,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Luyten's Star",
+   "dist_pc": 3.786,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 2,
+    "2": 2
+   },
+   "engineering": {
+    "mass_msun": 0.293,
+    "radius_rsun": 0.3147,
+    "lum_lsun": 0.01173,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.96,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.04",
+     "pEWHa=+0.10A",
+     "logLx/Lbol=-5.1"
+    ],
+    "log_lx_lbol": -5.06,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.8",
+     "HGCA chi2=6.3 (PMa decides)",
+     "RUWE=1.24"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3.5V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.689,
+   "science": {
+    "tier": 1,
+    "name": "Luyten's Star",
+    "reason": "GJ 273b low-mass planet in/near HZ",
+    "ref": "Astudillo-Defru 2017"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "DISTANCE_CORE",
+    "ENGINEERING_BACKBONE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 291.855,
+   "anti_dec": -5.209,
+   "abs_gal_b": 10.4,
+   "abs_ecl_beta": 16.5,
+   "drift_arcsec_yr": 3.74,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Luyten's Star",
+     "gaia_dr3": "3139847906307949696",
+     "gmag": 8.576388,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Teegarden's Star",
+   "dist_pc": 3.831,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 1,
+   "vote_graphs": [
+    "delaunay"
+   ],
+   "selective_votes": {
+    "1": 1,
+    "2": 2
+   },
+   "engineering": {
+    "mass_msun": 0.095,
+    "radius_rsun": 0.1187,
+    "lum_lsun": 0.00077,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 6.72,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -3.75,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.30"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 3.17,
+   "baskets": [
+    "DISTANCE_CORE"
+   ],
+   "anti_ra": 223.27,
+   "anti_dec": -16.864,
+   "abs_gal_b": 37.0,
+   "abs_ecl_beta": 0.3,
+   "drift_arcsec_yr": 5.12,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Teegarden's Star",
+     "gaia_dr3": "35227046884571776",
+     "gmag": 12.263103,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Kapteyn's Star",
+   "dist_pc": 3.934,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 1,
+    "2": 1
+   },
+   "engineering": {
+    "mass_msun": 0.279,
+    "radius_rsun": 0.302,
+    "lum_lsun": 0.01062,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 3.06,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.48",
+     "logLx/Lbol=-4.7"
+    ],
+    "log_lx_lbol": -4.75,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.7",
+     "HGCA chi2=29.6 (PMa decides)",
+     "RUWE=1.17"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M1VIp",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.645,
+   "science": {
+    "tier": 2,
+    "name": "Kapteyn's Star",
+    "reason": "halo-star planet claims (disputed); oldest nearby planetary candidate",
+    "ref": "Anglada-Escude 2014; Bortle 2021"
+   },
+   "dmin_1myr_pc": 2.16,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "HISTORICAL_NEIGHBOR",
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 257.96,
+   "anti_dec": 45.044,
+   "abs_gal_b": 36.0,
+   "abs_ecl_beta": 67.5,
+   "drift_arcsec_yr": 8.64,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Kapteyn's Star",
+     "gaia_dr3": "4810594479418041856",
+     "gmag": 8.063552,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Lacaille 8760",
+   "dist_pc": 3.97,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.581,
+    "radius_rsun": 0.5921,
+    "lum_lsun": 0.06509,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 1.66,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.61",
+     "logLx/Lbol=-5.1"
+    ],
+    "log_lx_lbol": -5.13,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=0.8",
+     "HGCA chi2=1.3 (PMa decides)",
+     "RUWE=0.83 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M1V",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 3.78,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 139.295,
+   "anti_dec": 38.872,
+   "abs_gal_b": 44.2,
+   "abs_ecl_beta": 22.0,
+   "drift_arcsec_yr": 3.45,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Lacaille 8760",
+     "gaia_dr3": "6583272171336048640",
+     "gmag": 5.984104,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 12724",
+   "dist_pc": 4.005,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 1,
+    "2": 2
+   },
+   "engineering": {
+    "mass_msun": 0.079,
+    "radius_rsun": 0.1077,
+    "lum_lsun": 0.00046,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 6.83,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -3.48,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.26"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 3.77,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 101.298,
+   "anti_dec": 63.961,
+   "abs_gal_b": 23.5,
+   "abs_ecl_beta": 40.8,
+   "drift_arcsec_yr": 2.65,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 12724",
+     "gaia_dr3": "6439125097427143808",
+     "gmag": 14.02148,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 11547",
+   "dist_pc": 4.044,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 1,
+    "2": 2
+   },
+   "engineering": {
+    "mass_msun": 0.08,
+    "radius_rsun": 0.1078,
+    "lum_lsun": 0.00049,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 6.92,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -3.51,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.04"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 3.79,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 342.054,
+   "anti_dec": 39.94,
+   "abs_gal_b": 17.1,
+   "abs_ecl_beta": 43.1,
+   "drift_arcsec_yr": 1.54,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 11547",
+     "gaia_dr3": "5393446658454453632",
+     "gmag": 14.005882,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Wolf 1061",
+   "dist_pc": 4.307,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.302,
+    "radius_rsun": 0.322,
+    "lum_lsun": 0.0112,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.91,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.09",
+     "pEWHa=+0.10A",
+     "logLx/Lbol=-4.7"
+    ],
+    "log_lx_lbol": -4.73,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.4",
+     "HGCA chi2=4.2 (PMa decides)",
+     "RUWE=1.15"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.63,
+   "science": {
+    "tier": 2,
+    "name": "Wolf 1061",
+    "reason": "3 planets, c near HZ",
+    "ref": "Wright 2016"
+   },
+   "dmin_1myr_pc": 3.22,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "HISTORICAL_NEIGHBOR",
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 67.575,
+   "anti_dec": 12.668,
+   "abs_gal_b": 23.7,
+   "abs_ecl_beta": 9.1,
+   "drift_arcsec_yr": 1.19,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Wolf 1061",
+     "gaia_dr3": "4330690742322011520",
+     "gmag": 8.801877,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "van Maanen's Star",
+   "dist_pc": 4.314,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 1
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -3.24,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=2.1",
+     "HGCA chi2=1621.0 (PMa decides)",
+     "RUWE=1.21"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "DZ7.5",
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 192.297,
+   "anti_dec": -5.377,
+   "abs_gal_b": 57.5,
+   "abs_ecl_beta": 0.1,
+   "drift_arcsec_yr": 2.98,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "van Maanen's Star",
+     "gaia_dr3": "2552928187080872832",
+     "gmag": 12.299163,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 687",
+   "dist_pc": 4.549,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 1,
+    "2": 1
+   },
+   "engineering": {
+    "mass_msun": 0.399,
+    "radius_rsun": 0.4066,
+    "lum_lsun": 0.02253,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.41,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.09",
+     "logLx/Lbol=-4.9"
+    ],
+    "log_lx_lbol": -4.85,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.5",
+     "HGCA chi2=4.1 (PMa decides)",
+     "RUWE=1.22"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3.0V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.644,
+   "science": {
+    "tier": 2,
+    "name": "GJ 687",
+    "reason": "2 Neptune-mass planets",
+    "ref": "Burt 2014; Feng 2020"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 84.104,
+   "anti_dec": -68.333,
+   "abs_gal_b": 32.0,
+   "abs_ecl_beta": 87.1,
+   "drift_arcsec_yr": 1.31,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 687",
+     "gaia_dr3": "1637645127018395776",
+     "gmag": 8.02864,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 674",
+   "dist_pc": 4.552,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.351,
+    "radius_rsun": 0.3648,
+    "lum_lsun": 0.01699,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.64,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.74",
+     "logLx/Lbol=-4.2"
+    ],
+    "log_lx_lbol": -4.2,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.7",
+     "HGCA chi2=7.1 (PMa decides)",
+     "RUWE=1.05"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3V",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 2,
+    "name": "GJ 674",
+    "reason": "hot Neptune",
+    "ref": "Bonfils 2007"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 82.17,
+   "anti_dec": 46.899,
+   "abs_gal_b": 6.8,
+   "abs_ecl_beta": 23.6,
+   "drift_arcsec_yr": 1.05,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 674",
+     "gaia_dr3": "5951824121022278144",
+     "gmag": 8.336431,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "LP 145-141 (WD)",
+   "dist_pc": 4.636,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 1,
+    "2": 1
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -3.17,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=4.1",
+     "HGCA chi2=37.9 (PMa decides)",
+     "RUWE=0.87"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "DQ",
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 356.457,
+   "anti_dec": 64.843,
+   "abs_gal_b": 2.9,
+   "abs_ecl_beta": 57.2,
+   "drift_arcsec_yr": 2.68,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "LP 145-141 (WD)",
+     "gaia_dr3": "5332606522595645952",
+     "gmag": 11.423104,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 876",
+   "dist_pc": 4.671,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.337,
+    "radius_rsun": 0.352,
+    "lum_lsun": 0.0128,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.72,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.00",
+     "logLx/Lbol<-4.8(RASS limit)"
+    ],
+    "log_lx_lbol": -4.8,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=2.4",
+     "HGCA chi2=3.6 (PMa decides)",
+     "RUWE=1.34"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3.5V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.63,
+   "science": {
+    "tier": 1,
+    "name": "GJ 876",
+    "reason": "Laplace-resonant 4-planet system; science overrides lens cleanliness",
+    "ref": "Rivera 2010; Millholland 2018"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 163.324,
+   "anti_dec": 14.267,
+   "abs_gal_b": 59.6,
+   "abs_ecl_beta": 6.6,
+   "drift_arcsec_yr": 1.17,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 876",
+     "gaia_dr3": "2603090003484152064",
+     "gmag": 8.875059,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1002",
+   "dist_pc": 4.846,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.117,
+    "radius_rsun": 0.1437,
+    "lum_lsun": 0.00132,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 5.66,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -3.78,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.34"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "GJ 1002",
+    "reason": "two Earth-mass temperate planets around a quiet M5.5",
+    "ref": "Suarez Mascareno 2023"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 181.676,
+   "anti_dec": 7.546,
+   "abs_gal_b": 67.7,
+   "abs_ecl_beta": 7.6,
+   "drift_arcsec_yr": 2.06,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1002",
+     "gaia_dr3": "2441630500517079808",
+     "gmag": 11.773832,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 832",
+   "dist_pc": 4.966,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.437,
+    "radius_rsun": 0.4412,
+    "lum_lsun": 0.02803,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.25,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logLx/Lbol<-5.1(RASS limit)"
+    ],
+    "log_lx_lbol": -5.08,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "PMa S/N=14.1",
+     "HGCA chi2=278.3 (PMa decides)",
+     "RUWE=1.10"
+    ],
+    "evolution": "evolved",
+    "evolution_evidence": [
+     "logg=3.95"
+    ],
+    "flame_age_gyr": null,
+    "sptype": "M2/3V",
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 2,
+    "name": "GJ 832",
+    "reason": "cold Jupiter analogue",
+    "ref": "Bailey 2009"
+   },
+   "dmin_1myr_pc": 4.16,
+   "baskets": [
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 143.391,
+   "anti_dec": 49.013,
+   "abs_gal_b": 46.3,
+   "abs_ecl_beta": 32.5,
+   "drift_arcsec_yr": 0.82,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 832",
+     "gaia_dr3": "6562924609150908416",
+     "gmag": 7.739947,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 682",
+   "dist_pc": 5.007,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.275,
+    "radius_rsun": 0.2982,
+    "lum_lsun": 0.0088,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 3.09,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logLx/Lbol<-4.6(RASS limit)"
+    ],
+    "log_lx_lbol": -4.57,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=2.2",
+     "HGCA chi2=1.5 (PMa decides)",
+     "RUWE=1.01"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3.5",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.584,
+   "science": {
+    "tier": 2,
+    "name": "GJ 682",
+    "reason": "2 candidate planets incl. HZ (disputed)",
+    "ref": "Tuomi 2014"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 84.261,
+   "anti_dec": 44.323,
+   "abs_gal_b": 6.6,
+   "abs_ecl_beta": 21.0,
+   "drift_arcsec_yr": 1.17,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 682",
+     "gaia_dr3": "5955305209191546112",
+     "gmag": 9.602153,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "LHS 1723",
+   "dist_pc": 5.373,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.173,
+    "radius_rsun": 0.2038,
+    "lum_lsun": 0.00419,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 4.16,
+    "activity": "active",
+    "activity_evidence": [
+     "pEWHa=-0.80A",
+     "logLx/Lbol=-3.8"
+    ],
+    "log_lx_lbol": -3.82,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.10"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "GJ 3323 (LHS 1723)",
+    "reason": "2 planets, b in HZ",
+    "ref": "Astudillo-Defru 2017"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 255.487,
+   "anti_dec": 6.949,
+   "abs_gal_b": 27.5,
+   "abs_ecl_beta": 29.6,
+   "drift_arcsec_yr": 0.77,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "LHS 1723",
+     "gaia_dr3": "3187115498866675456",
+     "gmag": 10.649305,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 526",
+   "dist_pc": 5.434,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.483,
+    "radius_rsun": 0.4846,
+    "lum_lsun": 0.03633,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.05,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.88",
+     "pEWHa=+0.40A",
+     "logLx/Lbol<-5.1(RASS limit)"
+    ],
+    "log_lx_lbol": -5.12,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=0.8",
+     "HGCA chi2=5.0 (PMa decides)",
+     "RUWE=1.05"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M2V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.639,
+   "science": null,
+   "dmin_1myr_pc": 5.26,
+   "baskets": [
+    "ENGINEERING_BACKBONE"
+   ],
+   "anti_ra": 26.441,
+   "anti_dec": -14.885,
+   "abs_gal_b": 72.4,
+   "abs_ecl_beta": 24.0,
+   "drift_arcsec_yr": 2.3,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 526",
+     "gaia_dr3": "3741297293732404352",
+     "gmag": 7.6105833,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 251",
+   "dist_pc": 5.583,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.355,
+    "radius_rsun": 0.3679,
+    "lum_lsun": 0.01625,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.62,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.12",
+     "pEWHa=+0.20A",
+     "logLx/Lbol<-4.7(RASS limit)"
+    ],
+    "log_lx_lbol": -4.74,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.4",
+     "HGCA chi2=5.2 (PMa decides)",
+     "RUWE=1.15"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.606,
+   "science": {
+    "tier": 1,
+    "name": "GJ 251",
+    "reason": "super-Earth b + HZ candidate c; quiet M3",
+    "ref": "Stock 2020; Burt 2025"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 283.7,
+   "anti_dec": -33.266,
+   "abs_gal_b": 15.1,
+   "abs_ecl_beta": 10.4,
+   "drift_arcsec_yr": 0.83,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 251",
+     "gaia_dr3": "939072613334579328",
+     "gmag": 8.863551,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 229 AB",
+   "dist_pc": 5.761,
+   "n_comp": 2,
+   "min_sep_au": 36.4,
+   "multiplicity": "close",
+   "flags": [
+    "close_no_orbit"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.542,
+    "radius_rsun": 0.5468,
+    "lum_lsun": 0.05135,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 1.81,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.61",
+     "logLx/Lbol=-5.1"
+    ],
+    "log_lx_lbol": -5.09,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "PMa S/N=136.9",
+     "HGCA chi2=13040.0 (PMa decides)",
+     "RUWE=1.01"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M1V",
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 2,
+    "name": "GJ 229 AB",
+    "reason": "first T dwarf (now a T+T binary) + planet candidates",
+    "ref": "Nakajima 1995; Xuan 2024"
+   },
+   "dmin_1myr_pc": 5.65,
+   "baskets": [
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 272.644,
+   "anti_dec": 21.868,
+   "abs_gal_b": 18.4,
+   "abs_ecl_beta": 45.3,
+   "drift_arcsec_yr": 0.73,
+   "solution_gate": "orbit_needed",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "GJ 229 AB",
+     "gaia_dr3": "2940856402123426176",
+     "gmag": 7.3134713,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "GJ 229 AB",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "sigma Dra",
+   "dist_pc": 5.764,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.829,
+    "radius_rsun": 0.8265,
+    "lum_lsun": 0.4723,
+    "mass_radius_source": "flame",
+    "compactness_m_r2": 1.21,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.81",
+     "logLx/Lbol=-5.4"
+    ],
+    "log_lx_lbol": -5.42,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=0.9",
+     "HGCA chi2=1.4 (PMa decides)",
+     "RUWE=1.68 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": 9.933,
+    "sptype": "K0V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.636,
+   "science": null,
+   "dmin_1myr_pc": 5.09,
+   "baskets": [
+    "ENGINEERING_BACKBONE"
+   ],
+   "anti_ra": 113.098,
+   "anti_dec": -69.653,
+   "abs_gal_b": 21.9,
+   "abs_ecl_beta": 80.9,
+   "drift_arcsec_yr": 1.84,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "sigma Dra",
+     "gaia_dr3": "2261614264931057664",
+     "gmag": 4.449041,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 908",
+   "dist_pc": 5.908,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.41,
+    "radius_rsun": 0.4169,
+    "lum_lsun": 0.02885,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.36,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.21",
+     "pEWHa=+0.30A",
+     "logLx/Lbol=-4.9"
+    ],
+    "log_lx_lbol": -4.87,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.6",
+     "HGCA chi2=0.4 (PMa decides)",
+     "RUWE=1.16"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M1VFe-1",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.618,
+   "science": null,
+   "dmin_1myr_pc": 2.81,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 177.307,
+   "anti_dec": -2.397,
+   "abs_gal_b": 56.9,
+   "abs_ecl_beta": 3.3,
+   "drift_arcsec_yr": 1.39,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 908",
+     "gaia_dr3": "2739689239311660672",
+     "gmag": 8.152917,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 588",
+   "dist_pc": 5.916,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.457,
+    "radius_rsun": 0.4597,
+    "lum_lsun": 0.03137,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.16,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logLx/Lbol=-5.0"
+    ],
+    "log_lx_lbol": -4.96,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=2.0",
+     "HGCA chi2=5.4 (PMa decides)",
+     "RUWE=1.03"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M2.5V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.611,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "ENGINEERING_BACKBONE"
+   ],
+   "anti_ra": 53.047,
+   "anti_dec": 41.28,
+   "abs_gal_b": 12.1,
+   "abs_ecl_beta": 21.5,
+   "drift_arcsec_yr": 1.56,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 588",
+     "gaia_dr3": "6002807341299977216",
+     "gmag": 8.2741785,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 783",
+   "dist_pc": 6.012,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "close",
+   "flags": [
+    "close_no_orbit"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.714,
+    "radius_rsun": 0.686,
+    "lum_lsun": 0.26006,
+    "mass_radius_source": "tic",
+    "compactness_m_r2": 1.52,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.15",
+     "logLx/Lbol<-5.9(RASS limit)"
+    ],
+    "log_lx_lbol": -5.88,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=2.3",
+     "HGCA chi2=9.2 (PMa decides)",
+     "RUWE=0.95 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "K2.5V",
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 2.05,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 122.802,
+   "anti_dec": 36.108,
+   "abs_gal_b": 30.9,
+   "abs_ecl_beta": 15.7,
+   "drift_arcsec_yr": 1.64,
+   "solution_gate": "orbit_needed",
+   "already_searched_wise": true,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "AB",
+     "name": "GJ 783",
+     "gaia_dr3": "6697578465310949376",
+     "gmag": 5.033037,
+     "tracks": 2
+    }
+   ]
+  },
+  {
+   "system": "82 Eri",
+   "dist_pc": 6.042,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.886,
+    "radius_rsun": 0.9096,
+    "lum_lsun": 0.61622,
+    "mass_radius_source": "flame",
+    "compactness_m_r2": 1.07,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.97",
+     "logLx/Lbol=-6.4"
+    ],
+    "log_lx_lbol": -6.36,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=0.4",
+     "HGCA chi2=0.4 (PMa decides)",
+     "RUWE=1.98 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": 9.191,
+    "sptype": "G6V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.637,
+   "science": {
+    "tier": 1,
+    "name": "82 Eri (HD 20794)",
+    "reason": "3 planets incl. HZ super-Earth d; quiet G6V",
+    "ref": "Pepe 2011; Nari 2025"
+   },
+   "dmin_1myr_pc": 4.31,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "HISTORICAL_NEIGHBOR",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 230.0,
+   "anti_dec": 43.067,
+   "abs_gal_b": 56.1,
+   "abs_ecl_beta": 58.1,
+   "drift_arcsec_yr": 3.12,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "82 Eri",
+     "gaia_dr3": "4847957293278177024",
+     "gmag": 4.063915,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 784",
+   "dist_pc": 6.163,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.547,
+    "radius_rsun": 0.5523,
+    "lum_lsun": 0.05287,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 1.79,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logLx/Lbol=-4.8"
+    ],
+    "log_lx_lbol": -4.8,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.5",
+     "HGCA chi2=6.2 (PMa decides)",
+     "RUWE=1.00"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": 13.083,
+    "sptype": "M0V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.571,
+   "science": null,
+   "dmin_1myr_pc": 3.51,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 123.477,
+   "anti_dec": 45.165,
+   "abs_gal_b": 33.0,
+   "abs_ecl_beta": 24.6,
+   "drift_arcsec_yr": 0.79,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 784",
+     "gaia_dr3": "6673000841376349696",
+     "gmag": 7.2426615,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1221",
+   "dist_pc": 6.21,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.92,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.06"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 87.016,
+   "anti_dec": -70.882,
+   "abs_gal_b": 30.7,
+   "abs_ecl_beta": 85.5,
+   "drift_arcsec_yr": 1.68,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1221",
+     "gaia_dr3": "1638979384378696704",
+     "gmag": 13.778201,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 581",
+   "dist_pc": 6.298,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.311,
+    "radius_rsun": 0.3297,
+    "lum_lsun": 0.01303,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.86,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.32",
+     "pEWHa=+0.10A",
+     "logLx/Lbol<-4.5(RASS limit)"
+    ],
+    "log_lx_lbol": -4.54,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=0.8",
+     "HGCA chi2=0.5 (PMa decides)",
+     "RUWE=1.30"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.544,
+   "science": {
+    "tier": 1,
+    "name": "GJ 581",
+    "reason": "3 confirmed planets incl. HZ-edge e/c; archetype RV system",
+    "ref": "Mayor 2009; Robertson 2014"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 49.856,
+   "anti_dec": 7.723,
+   "abs_gal_b": 40.0,
+   "abs_ecl_beta": 10.3,
+   "drift_arcsec_yr": 1.23,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 581",
+     "gaia_dr3": "6322070093095493504",
+     "gmag": 9.421787,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 338 AB",
+   "dist_pc": 6.332,
+   "n_comp": 2,
+   "min_sep_au": 108.1,
+   "multiplicity": "intermediate",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.6152,
+    "lum_lsun": 0.0731,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 1.59,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.49",
+     "pEWHa=+0.50A",
+     "logLx/Lbol=-4.5"
+    ],
+    "log_lx_lbol": -4.53,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "PMa S/N=10.1",
+     "HGCA chi2=178.2 (PMa decides)",
+     "RUWE=1.08"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "K7V",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 2,
+    "name": "GJ 338 AB",
+    "reason": "wide binary, super-Earth around B",
+    "ref": "Gonzalez-Alvarez 2020"
+   },
+   "dmin_1myr_pc": 6.17,
+   "baskets": [
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 318.584,
+   "anti_dec": -52.684,
+   "abs_gal_b": 42.7,
+   "abs_ecl_beta": 34.8,
+   "drift_arcsec_yr": 1.65,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "GJ 338 AB",
+     "gaia_dr3": "1022456139210632064",
+     "gmag": 6.976026,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "GJ 338 AB",
+     "gaia_dr3": "1022456104850892928",
+     "gmag": 7.054455,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 9193",
+   "dist_pc": 6.44,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.89,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.03"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 268.792,
+   "anti_dec": 4.179,
+   "abs_gal_b": 14.4,
+   "abs_ecl_beta": 27.6,
+   "drift_arcsec_yr": 2.38,
+   "solution_gate": "clean",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 9193",
+     "gaia_dr3": "3022956969731332096",
+     "gmag": 14.236672,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 625",
+   "dist_pc": 6.478,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.32,
+    "radius_rsun": 0.3377,
+    "lum_lsun": 0.01628,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.81,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-5.25",
+     "pEWHa=+0.20A",
+     "logLx/Lbol=-4.9"
+    ],
+    "log_lx_lbol": -4.88,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=3.4",
+     "HGCA chi2=11.8 (PMa decides)",
+     "RUWE=1.05"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M1.5V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.605,
+   "science": {
+    "tier": 2,
+    "name": "GJ 625",
+    "reason": "super-Earth at HZ inner edge",
+    "ref": "Suarez Mascareno 2017"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 66.356,
+   "anti_dec": -54.303,
+   "abs_gal_b": 42.8,
+   "abs_ecl_beta": 73.3,
+   "drift_arcsec_yr": 0.47,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 625",
+     "gaia_dr3": "1428427236986209024",
+     "gmag": 9.139769,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "HD 219134",
+   "dist_pc": 6.542,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.8,
+    "radius_rsun": 0.751,
+    "lum_lsun": 0.28888,
+    "mass_radius_source": "tic",
+    "compactness_m_r2": 1.42,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.86",
+     "logLx/Lbol=-6.1"
+    ],
+    "log_lx_lbol": -6.06,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.8",
+     "HGCA chi2=6.3 (PMa decides)",
+     "RUWE=1.00 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "K3V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.613,
+   "science": {
+    "tier": 1,
+    "name": "HD 219134",
+    "reason": "6 planets incl. 2 transiting rocky; quiet K3V; nearest transiting system",
+    "ref": "Motalebi 2015; Gillon 2017"
+   },
+   "dmin_1myr_pc": 6.29,
+   "baskets": [
+    "ENGINEERING_BACKBONE",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 168.338,
+   "anti_dec": -57.17,
+   "abs_gal_b": 3.2,
+   "abs_ecl_beta": 54.5,
+   "drift_arcsec_yr": 2.1,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "HD 219134",
+     "gaia_dr3": "2009481748875806976",
+     "gmag": 5.2318964,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 11068",
+   "dist_pc": 6.798,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "substellar_or_faint",
+    "substellar_no_gaia"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": null,
+    "radius_rsun": null,
+    "lum_lsun": null,
+    "mass_radius_source": "unknown_substellar",
+    "compactness_m_r2": null,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": null,
+    "acceleration": "unknown",
+    "acceleration_evidence": [],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 0.33,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 290.013,
+   "anti_dec": 8.781,
+   "abs_gal_b": 2.3,
+   "abs_ecl_beta": 30.6,
+   "drift_arcsec_yr": 0.13,
+   "solution_gate": "hard",
+   "already_searched_wise": true,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 11068",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "LTT 1445 ABC",
+   "dist_pc": 6.862,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "close",
+   "flags": [
+    "close_no_orbit"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.249,
+    "radius_rsun": 0.2757,
+    "lum_lsun": 0.009,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 3.28,
+    "activity": "active",
+    "activity_evidence": [
+     "logLx/Lbol=-3.6"
+    ],
+    "log_lx_lbol": -3.62,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "PMa S/N=18.8",
+     "HGCA chi2=215.2 (PMa decides)",
+     "RUWE=1.07"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3.5+M3.0",
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "LTT 1445 ABC",
+    "reason": "A hosts 2 transiting rocky planets; nearest transiting M-dwarf triple",
+    "ref": "Winters 2019, 2022"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 225.462,
+   "anti_dec": 16.595,
+   "abs_gal_b": 58.1,
+   "abs_ecl_beta": 32.3,
+   "drift_arcsec_yr": 0.46,
+   "solution_gate": "orbit_needed",
+   "already_searched_wise": false,
+   "n_tracks": 3,
+   "components": [
+    {
+     "comp": "ABC",
+     "name": "LTT 1445 ABC",
+     "gaia_dr3": "5153091836072107136",
+     "gmag": 10.058402,
+     "tracks": 3
+    }
+   ]
+  },
+  {
+   "system": "GJ 667 ABC",
+   "dist_pc": 7.241,
+   "n_comp": 2,
+   "min_sep_au": 399.4,
+   "multiplicity": "close",
+   "flags": [
+    "close_no_orbit"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.326,
+    "radius_rsun": 0.3426,
+    "lum_lsun": 0.01449,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.78,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.59",
+     "logLx/Lbol=-3.8"
+    ],
+    "log_lx_lbol": -3.82,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=0.96"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "GJ 667 ABC",
+    "reason": "C hosts multi-planet system with HZ super-Earth c; triple (lens = C)",
+    "ref": "Anglada-Escude 2013"
+   },
+   "dmin_1myr_pc": 7.17,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 79.751,
+   "anti_dec": 34.998,
+   "abs_gal_b": 1.4,
+   "abs_ecl_beta": 11.9,
+   "drift_arcsec_yr": 1.15,
+   "solution_gate": "orbit_needed",
+   "already_searched_wise": false,
+   "n_tracks": 3,
+   "components": [
+    {
+     "comp": "C",
+     "name": "GJ 667 ABC",
+     "gaia_dr3": "5975663354131618304",
+     "gmag": 9.386162,
+     "tracks": 1
+    },
+    {
+     "comp": "AB",
+     "name": "GJ 667 ABC",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 2
+    }
+   ]
+  },
+  {
+   "system": "GJ 514",
+   "dist_pc": 7.625,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.501,
+    "radius_rsun": 0.5031,
+    "lum_lsun": 0.04254,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 1.98,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.75",
+     "pEWHa=+0.50A",
+     "logLx/Lbol=-4.7"
+    ],
+    "log_lx_lbol": -4.73,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.9",
+     "HGCA chi2=10.3 (PMa decides)",
+     "RUWE=1.09"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M1.0Ve",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.52,
+   "science": {
+    "tier": 2,
+    "name": "GJ 514",
+    "reason": "eccentric super-Earth crossing the HZ",
+    "ref": "Damasso 2022"
+   },
+   "dmin_1myr_pc": 7.4,
+   "baskets": [
+    "SCIENCE_INTEREST_T2"
+   ],
+   "anti_ra": 22.504,
+   "anti_dec": -10.372,
+   "abs_gal_b": 70.9,
+   "abs_ecl_beta": 18.4,
+   "drift_arcsec_yr": 1.56,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 514",
+     "gaia_dr3": "3738099879558957952",
+     "gmag": 8.205292,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Fomalhaut",
+   "dist_pc": 7.704,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": null,
+    "radius_rsun": null,
+    "lum_lsun": null,
+    "mass_radius_source": "unknown",
+    "compactness_m_r2": null,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": null,
+    "acceleration": "unknown",
+    "acceleration_evidence": [
+     "rapid rotator (curated)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "Fomalhaut",
+    "reason": "eccentric debris ring + wide triple; exceptional resource/architecture system (A-type, short-lived)",
+    "ref": "Kalas 2008; Gaspar 2023"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 164.412,
+   "anti_dec": 29.622,
+   "abs_gal_b": 64.9,
+   "abs_ecl_beta": 21.1,
+   "drift_arcsec_yr": 0.37,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "A",
+     "name": "Fomalhaut",
+     "gaia_dr3": "",
+     "gmag": null,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Wolf 437",
+   "dist_pc": 8.076,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.313,
+    "radius_rsun": 0.3315,
+    "lum_lsun": 0.0117,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.85,
+    "activity": "active",
+    "activity_evidence": [
+     "logR'HK=-4.73",
+     "pEWHa=+0.10A",
+     "logLx/Lbol<-4.3(RASS limit)"
+    ],
+    "log_lx_lbol": -4.28,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=0.3",
+     "HGCA chi2=0.9 (PMa decides)",
+     "RUWE=1.09"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "M3.5Ve",
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "GJ 486 (Wolf 437)",
+    "reason": "transiting rocky planet with best-characterised M-dwarf-planet atmosphere constraints",
+    "ref": "Trifonov 2021; Moran 2023"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 11.981,
+   "anti_dec": -9.749,
+   "abs_gal_b": 72.6,
+   "abs_ecl_beta": 13.7,
+   "drift_arcsec_yr": 1.11,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Wolf 437",
+     "gaia_dr3": "3735000631158990976",
+     "gmag": 10.105141,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1087 (WD)",
+   "dist_pc": 8.114,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.69,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=0.92"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 269.104,
+   "anti_dec": -5.359,
+   "abs_gal_b": 9.7,
+   "abs_ecl_beta": 18.1,
+   "drift_arcsec_yr": 1.03,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1087 (WD)",
+     "gaia_dr3": "3320184202856435840",
+     "gmag": 13.969412,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 293 (WD)",
+   "dist_pc": 8.167,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.68,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.05"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 298.301,
+   "anti_dec": 67.799,
+   "abs_gal_b": 19.4,
+   "abs_ecl_beta": 79.1,
+   "drift_arcsec_yr": 2.09,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 293 (WD)",
+     "gaia_dr3": "5273943488410008832",
+     "gmag": 13.777515,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 66",
+   "dist_pc": 8.189,
+   "n_comp": 2,
+   "min_sep_au": 93.5,
+   "multiplicity": "close",
+   "flags": [
+    "close_no_orbit"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.83,
+    "radius_rsun": 0.777,
+    "lum_lsun": 0.34537,
+    "mass_radius_source": "tic",
+    "compactness_m_r2": 1.37,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.85",
+     "logLx/Lbol=-5.0"
+    ],
+    "log_lx_lbol": -5.03,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.27 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": 0.518,
+    "sptype": null,
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 3.6,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 204.951,
+   "anti_dec": 56.193,
+   "abs_gal_b": 59.7,
+   "abs_ecl_beta": 58.8,
+   "drift_arcsec_yr": 0.26,
+   "solution_gate": "orbit_needed",
+   "already_searched_wise": false,
+   "n_tracks": 2,
+   "components": [
+    {
+     "comp": "A",
+     "name": "GJ 66",
+     "gaia_dr3": "4911306239828325632",
+     "gmag": 5.5083017,
+     "tracks": 1
+    },
+    {
+     "comp": "B",
+     "name": "GJ 66",
+     "gaia_dr3": "4911306239828325760",
+     "gmag": 5.6254873,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 915",
+   "dist_pc": 8.33,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.66,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.14"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 180.548,
+   "anti_dec": 43.168,
+   "abs_gal_b": 71.1,
+   "abs_ecl_beta": 39.1,
+   "drift_arcsec_yr": 0.92,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 915",
+     "gaia_dr3": "4994877094997259264",
+     "gmag": 12.895188,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 518 (WD)",
+   "dist_pc": 8.347,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.66,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.03"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 24.116,
+   "anti_dec": -3.674,
+   "abs_gal_b": 64.2,
+   "abs_ecl_beta": 12.8,
+   "drift_arcsec_yr": 3.9,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 518 (WD)",
+     "gaia_dr3": "3713594960831605760",
+     "gmag": 14.37642,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 13157",
+   "dist_pc": 8.462,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "active",
+    "activity_evidence": [
+     "logLx/Lbol=-3.2"
+    ],
+    "log_lx_lbol": -3.23,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.02"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 147.916,
+   "anti_dec": -59.293,
+   "abs_gal_b": 4.0,
+   "abs_ecl_beta": 63.7,
+   "drift_arcsec_yr": 0.09,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 13157",
+     "gaia_dr3": "2202703050401536000",
+     "gmag": 14.373105,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 318",
+   "dist_pc": 8.514,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.64,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.33"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 310.38,
+   "anti_dec": 32.936,
+   "abs_gal_b": 5.6,
+   "abs_ecl_beta": 48.9,
+   "drift_arcsec_yr": 1.71,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 318",
+     "gaia_dr3": "5639391810273308416",
+     "gmag": 11.822395,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 1276",
+   "dist_pc": 8.534,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.64,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=0.93"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 163.484,
+   "anti_dec": 6.785,
+   "abs_gal_b": 55.5,
+   "abs_ecl_beta": 0.2,
+   "drift_arcsec_yr": 2.58,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 1276",
+     "gaia_dr3": "2611561706216413696",
+     "gmag": 15.421229,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "61 Vir",
+   "dist_pc": 8.535,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.98,
+    "radius_rsun": 0.984,
+    "lum_lsun": 0.83516,
+    "mass_radius_source": "tic",
+    "compactness_m_r2": 1.01,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.93",
+     "logLx/Lbol<-6.1(RASS limit)"
+    ],
+    "log_lx_lbol": -6.09,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=2.3",
+     "HGCA chi2=3.5 (PMa decides)",
+     "RUWE=1.18 (bright, ignored)"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": "G6.5V",
+    "desirability_level": 2
+   },
+   "engineering_score": 0.529,
+   "science": {
+    "tier": 1,
+    "name": "61 Vir",
+    "reason": "3 low-mass planets + debris disk; solar twin-ish G5V",
+    "ref": "Vogt 2010; Wyatt 2012"
+   },
+   "dmin_1myr_pc": 8.46,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 19.596,
+   "anti_dec": 18.316,
+   "abs_gal_b": 44.1,
+   "abs_ecl_beta": 9.3,
+   "drift_arcsec_yr": 1.51,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "61 Vir",
+     "gaia_dr3": "3507879565090229888",
+     "gmag": 4.5325284,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 2066",
+   "dist_pc": 8.936,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.439,
+    "radius_rsun": 0.4427,
+    "lum_lsun": 0.02806,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.24,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logR'HK=-4.91",
+     "pEWHa=+0.30A",
+     "logLx/Lbol<-4.6(RASS limit)"
+    ],
+    "log_lx_lbol": -4.57,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=1.1",
+     "HGCA chi2=2.5 (PMa decides)",
+     "RUWE=1.08"
+    ],
+    "evolution": "evolved",
+    "evolution_evidence": [
+     "logg=3.97"
+    ],
+    "flame_age_gyr": null,
+    "sptype": "M2.0V",
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": 2.27,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR"
+   ],
+   "anti_ra": 304.032,
+   "anti_dec": -1.303,
+   "abs_gal_b": 19.4,
+   "abs_ecl_beta": 18.0,
+   "drift_arcsec_yr": 0.38,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 2066",
+     "gaia_dr3": "3089711447388931584",
+     "gmag": 9.133169,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 2012",
+   "dist_pc": 9.093,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.59,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=0.99"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 190.356,
+   "anti_dec": 22.352,
+   "abs_gal_b": 84.7,
+   "abs_ecl_beta": 24.5,
+   "drift_arcsec_yr": 0.6,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 2012",
+     "gaia_dr3": "2349916559152267008",
+     "gmag": 14.297183,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 3306",
+   "dist_pc": 9.4,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.56,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.00"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 249.449,
+   "anti_dec": 8.827,
+   "abs_gal_b": 33.7,
+   "abs_ecl_beta": 30.6,
+   "drift_arcsec_yr": 1.57,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 3306",
+     "gaia_dr3": "3186021141200137472",
+     "gmag": 13.600672,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 367",
+   "dist_pc": 9.416,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.455,
+    "radius_rsun": 0.4579,
+    "lum_lsun": 0.02951,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 2.17,
+    "activity": "quiet",
+    "activity_evidence": [
+     "logLx/Lbol<-4.6(RASS limit)"
+    ],
+    "log_lx_lbol": -4.55,
+    "acceleration": "clean",
+    "acceleration_evidence": [
+     "PMa S/N=3.8",
+     "HGCA chi2=3.0 (PMa decides)",
+     "RUWE=0.97"
+    ],
+    "evolution": "evolved",
+    "evolution_evidence": [
+     "logg=3.94"
+    ],
+    "flame_age_gyr": null,
+    "sptype": "M1.0",
+    "desirability_level": 0
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "GJ 367",
+    "reason": "ultra-short-period iron sub-Earth (transiting) + 2 outer planets",
+    "ref": "Lam 2021; Goffo 2023"
+   },
+   "dmin_1myr_pc": 5.44,
+   "baskets": [
+    "HISTORICAL_NEIGHBOR",
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 326.121,
+   "anti_dec": 45.779,
+   "abs_gal_b": 5.7,
+   "abs_ecl_beta": 54.3,
+   "drift_arcsec_yr": 0.74,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 367",
+     "gaia_dr3": "5412250540681250560",
+     "gmag": 9.158753,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 3512",
+   "dist_pc": 9.492,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.128,
+    "radius_rsun": 0.156,
+    "lum_lsun": 0.00155,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 5.25,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -3.26,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.25"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "GJ 3512",
+    "reason": "Jupiter-mass planet around 0.12 Msun star \u2014 anomalous architecture",
+    "ref": "Morales 2019"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 310.332,
+   "anti_dec": -59.492,
+   "abs_gal_b": 37.0,
+   "abs_ecl_beta": 39.5,
+   "drift_arcsec_yr": 1.31,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 3512",
+     "gaia_dr3": "1040827088726734976",
+     "gmag": 13.082282,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "Wolf 1069",
+   "dist_pc": 9.574,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.165,
+    "radius_rsun": 0.1955,
+    "lum_lsun": 0.00289,
+    "mass_radius_source": "mann_mks",
+    "compactness_m_r2": 4.31,
+    "activity": "quiet",
+    "activity_evidence": [
+     "pEWHa=+0.00A"
+    ],
+    "log_lx_lbol": -3.53,
+    "acceleration": "accel_detected",
+    "acceleration_evidence": [
+     "RUWE=1.42"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 1
+   },
+   "engineering_score": null,
+   "science": {
+    "tier": 1,
+    "name": "Wolf 1069",
+    "reason": "Earth-mass planet in HZ of quiet M5",
+    "ref": "Kossakowski 2023"
+   },
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "SCIENCE_INTEREST"
+   ],
+   "anti_ra": 126.524,
+   "anti_dec": -58.575,
+   "abs_gal_b": 11.7,
+   "abs_ecl_beta": 71.7,
+   "drift_arcsec_yr": 0.6,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "Wolf 1069",
+     "gaia_dr3": "2188318517720321664",
+     "gmag": 12.352267,
+     "tracks": 1
+    }
+   ]
+  },
+  {
+   "system": "GJ 3112",
+   "dist_pc": 9.714,
+   "n_comp": 1,
+   "min_sep_au": null,
+   "multiplicity": "single",
+   "flags": [
+    "white_dwarf"
+   ],
+   "adjacency_votes": 0,
+   "vote_graphs": [],
+   "selective_votes": {
+    "1": 0,
+    "2": 0
+   },
+   "engineering": {
+    "mass_msun": 0.6,
+    "radius_rsun": 0.0125,
+    "lum_lsun": 0.0003,
+    "mass_radius_source": "wd_nominal",
+    "compactness_m_r2": 3840.0,
+    "activity": "unknown",
+    "activity_evidence": [],
+    "log_lx_lbol": -2.53,
+    "acceleration": "clean_ruwe_only",
+    "acceleration_evidence": [
+     "RUWE=1.05"
+    ],
+    "evolution": "main_sequence",
+    "evolution_evidence": [],
+    "flame_age_gyr": null,
+    "sptype": null,
+    "desirability_level": 2
+   },
+   "engineering_score": null,
+   "science": null,
+   "dmin_1myr_pc": null,
+   "baskets": [
+    "COMPACT_LENS_WILDCARD"
+   ],
+   "anti_ra": 205.75,
+   "anti_dec": 67.313,
+   "abs_gal_b": 49.1,
+   "abs_ecl_beta": 65.9,
+   "drift_arcsec_yr": 1.07,
+   "solution_gate": "clean",
+   "already_searched_wise": false,
+   "n_tracks": 1,
+   "components": [
+    {
+     "comp": "",
+     "name": "GJ 3112",
+     "gaia_dr3": "4698424845771339520",
+     "gmag": 13.696558,
+     "tracks": 1
+    }
+   ]
+  }
+ ]
+}
