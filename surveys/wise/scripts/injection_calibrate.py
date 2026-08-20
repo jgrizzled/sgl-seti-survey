@@ -47,6 +47,15 @@ HYPOTHESIS_VERSION = "wise-hypotheses-v1.0"
 
 ZP_REF = 20.0
 MIN_GOOD_FRAC = 0.7
+# Effective-epoch floor (v0.2.0): cap each epoch's inverse-variance
+# weight at WEIGHT_CAP_FACTOR x the median positive epoch weight of its
+# cell. Closes the single-epoch-dominance capture mechanism found in
+# batch 2 (lacaille-8760/rx/W1: one frame carried S=398 of 399) at the
+# estimator level; with ~400 epochs the cap limits any one epoch to a
+# few percent of total stack weight while leaving normal cells
+# essentially unchanged. Applied identically to real, control, and
+# injection stacks, so thresholds and depths remain self-consistent.
+WEIGHT_CAP_FACTOR = 20.0
 N_REPEATS = 32
 DUTIES = [1.0, 0.5]
 SEED = 20260818
@@ -88,6 +97,7 @@ def main() -> None:
     config = {
         "pipeline_id": "wise-injection-calibration",
         "threshold_rule": "max of 8 offset-control grid maxima",
+        "weight_cap": f"per-cell epoch weights capped at {WEIGHT_CAP_FACTOR}x median positive weight (effective-epoch floor)",
         "n_repeats": N_REPEATS, "duties": DUTIES, "seed": SEED,
         "recovery_probability": RECOVERY_P,
         "min_good_frac": MIN_GOOD_FRAC, "zp_ref": ZP_REF,
@@ -128,6 +138,11 @@ def main() -> None:
             valid = (np.isfinite(fb) & np.isfinite(vb) & (vb > 0)
                      & (gb >= MIN_GOOD_FRAC))
             w = np.where(valid, 1.0 / np.where(vb > 0, vb, 1.0), 0.0)
+            with np.errstate(all="ignore"):
+                wmed = np.nanmedian(np.where(w > 0, w, np.nan), axis=1)
+            cap = WEIGHT_CAP_FACTOR * np.nan_to_num(wmed, nan=np.inf,
+                                                    posinf=np.inf)
+            w = np.minimum(w, cap[:, None])
             A = (np.where(valid, fb, 0.0) * w).sum(axis=1)
             B = w.sum(axis=1)
             with np.errstate(divide="ignore", invalid="ignore"):
@@ -137,12 +152,16 @@ def main() -> None:
             i_real = np.unravel_index(np.nanargmax(S[0]), S[0].shape)
             band = BAND_NAME[b]
             key = f"{endpoint}/{role}/{band}"
+            w2sum = (w[0] ** 2).sum(axis=1)
+            n_eff = float(B[0][i_real] ** 2
+                          / max(w2sum[i_real], 1e-300))
             threshold_report[key] = {
                 "T": T, "control_maxima": null_max.round(2).tolist(),
                 "real_max_S": float(S[0][i_real]),
                 "real_max_z": float(z_grid[i_real[0]]),
                 "exceeds": bool(S[0][i_real] > T),
                 "n_epochs": int(eb.sum()),
+                "n_eff_at_peak": round(n_eff, 1),
             }
 
             # --- injections ------------------------------------------
@@ -185,7 +204,7 @@ def main() -> None:
             "hypothesis": HYPOTHESIS_VERSION,
             "tensors": sorted(p.name for p in tensor_files)}),
         pipeline_id="wise-injection-calibration",
-        pipeline_version="0.1.0", config=config,
+        pipeline_version="0.2.0", config=config,
         observation_set_hash="see-tensor-manifest",
         intersection_set_hash="see-tensor-manifest",
         registry_source_hash=registry.source_hash,

@@ -6,6 +6,11 @@ status: "Complete: plan §4 steps 1–8; registry v1.1; no surviving candidate; 
 
 # WISE/NEOWISE SGL shakedown — survey report v1
 
+> **Superseded by [`wise_survey_v2.md`](wise_survey_v2.md)**
+> (2026-08-19), which covers the expanded 26-endpoint survey, the
+> universal target portfolio, and batches 2–3. This file remains as
+> the 12-endpoint shakedown snapshot.
+
 **Summary.** We searched 14.5 years of WISE/NEOWISE single-exposure
 imaging (2010–2024) for compact persistent sources on the solar
 gravitational lens focal lines of nine nearby stellar systems (twelve
