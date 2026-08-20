@@ -47,6 +47,21 @@ class GeometryContext:
                    tolerance_arcsec=5.0, padding_arcsec=10.0,
                    confidence_level=0.99)
 
+    @classmethod
+    def ztf_default(cls) -> "GeometryContext":
+        """The frozen ZTF pilot configuration (surveys/ztf/hypotheses.md
+        v1.0): same model, relay range, 99% confidence and +10" padding
+        as WISE v1.0; observer is the Palomar P48 terrestrial site."""
+        from sglseti import Tusay2022Eq57V1
+
+        palomar = Observer.from_geodetic("palomar-p48", -116.8650,
+                                         33.3563, 1712.0)
+        return cls(model=Tusay2022Eq57V1(), ephemeris=AstropyEphemeris(),
+                   observer=palomar,
+                   relay_range=RelayRange(550.0, 10000.0),
+                   tolerance_arcsec=5.0, padding_arcsec=10.0,
+                   confidence_level=0.99)
+
     def identities(self) -> dict[str, Any]:
         return {
             "model_id": self.model.model_id,

@@ -1,4 +1,5 @@
-"""Matched-filter forced photometry on WISE L1b cutouts (plan §4.6).
+"""Matched-filter forced photometry on image cutouts (plan §4.6): WISE
+L1b int/unc/msk triplets and ZTF sci/diff/msk cutouts.
 
 Per cutout we build a PSF-matched flux map and its variance map once;
 any trajectory position is then a cheap bilinear lookup. The estimator
@@ -45,11 +46,20 @@ def _read_fits(path: Path):
 
 
 def _gaussian_kernel(fwhm_pix: float, radius_pix: int) -> np.ndarray:
+    """Unit-sum Gaussian PSF model, so the least-squares amplitude
+    ``sum p d / sum p^2`` is the source's TOTAL flux in image units.
+
+    History: before 2026-08-20 the kernel had unit PEAK, so fluxes (and
+    every magnitude derived from them) were the peak amplitude, fainter
+    than the total by 2.5 log10(2 pi sigma_pix^2) — caught by the ZTF
+    asteroid positive control. S/N, thresholds and recovery fractions
+    are invariant to this scale; only magnitude labels changed.
+    """
     sigma = fwhm_pix / 2.3548
     y, x = np.mgrid[-radius_pix:radius_pix + 1,
                     -radius_pix:radius_pix + 1]
     k = np.exp(-(x * x + y * y) / (2 * sigma * sigma))
-    return k
+    return k / k.sum()
 
 
 def _xcorr(img: np.ndarray, kernel: np.ndarray) -> np.ndarray:
@@ -76,6 +86,30 @@ class FluxMap:
     band: str
     magzp: float | None
     mjd: float
+    aux: np.ndarray | None = None  # optional per-pixel auxiliary map
+
+    def sample_aux(self, ra_deg, dec_deg):
+        """Bilinear sample of ``aux`` (NaN outside / if absent)."""
+        ra = np.atleast_1d(np.asarray(ra_deg, dtype=float))
+        if self.aux is None:
+            return np.full(len(ra), np.nan)
+        dec = np.atleast_1d(np.asarray(dec_deg, dtype=float))
+        pix = self.wcs.wcs_world2pix(np.stack([ra, dec], axis=1), 0)
+        x, y = pix[:, 0], pix[:, 1]
+        ny, nx = self.aux.shape
+        out = np.full(len(ra), np.nan)
+        ok = (x >= 0) & (x <= nx - 1.001) & (y >= 0) & (y <= ny - 1.001) \
+            & np.isfinite(x) & np.isfinite(y)
+        if ok.any():
+            x0 = np.floor(x[ok]).astype(int)
+            y0 = np.floor(y[ok]).astype(int)
+            fx, fy = x[ok] - x0, y[ok] - y0
+            a = self.aux
+            out[ok] = (a[y0, x0] * (1 - fx) * (1 - fy)
+                       + a[y0, x0 + 1] * fx * (1 - fy)
+                       + a[y0 + 1, x0] * (1 - fx) * fy
+                       + a[y0 + 1, x0 + 1] * fx * fy)
+        return out
 
     def sample(self, ra_deg, dec_deg):
         """Bilinear sample (flux, var, good_frac) at sky positions.
@@ -131,27 +165,34 @@ def build_flux_map(int_path: Path, unc_path: Path, msk_full_path: Path,
 
     good = (np.isfinite(img) & np.isfinite(unc) & (unc > 0)
             & ((mcut & fatal_mask) == 0))
-    bgpix = img[good]
-    if bgpix.size:
-        med = np.median(bgpix)
-        mad = 1.4826 * np.median(np.abs(bgpix - med)) or 1.0
-        clip = bgpix[np.abs(bgpix - med) < 4 * mad]
-        bg = float(np.median(clip)) if clip.size else float(med)
+    fwhm_pix = PSF_FWHM_ARCSEC[band] / PIX_ARCSEC
+    flux, var, good_frac = matched_filter(img, unc * unc, good, fwhm_pix)
+    return FluxMap(flux=flux, var=var, good_frac=good_frac, wcs=wcs,
+                   band=band, magzp=magzp, mjd=mjd)
+
+
+def matched_filter(img: np.ndarray, var_pix: np.ndarray, good: np.ndarray,
+                   fwhm_pix: float, subtract_background: bool = True):
+    """Core estimator: returns (flux, var, good_frac) maps."""
+    if subtract_background:
+        bgpix = img[good]
+        if bgpix.size:
+            med = np.median(bgpix)
+            mad = 1.4826 * np.median(np.abs(bgpix - med)) or 1.0
+            clip = bgpix[np.abs(bgpix - med) < 4 * mad]
+            bg = float(np.median(clip)) if clip.size else float(med)
+        else:
+            bg = 0.0
     else:
         bg = 0.0
-
-    fwhm_pix = PSF_FWHM_ARCSEC[band] / PIX_ARCSEC
     kernel = _gaussian_kernel(fwhm_pix, int(np.ceil(2.5 * fwhm_pix)))
-
     d = np.where(good, img - bg, 0.0)
     g = good.astype(float)
-    s2 = np.where(good, unc * unc, 0.0)
-
-    num = _xcorr(d, kernel)                 # sum p_i d_i
-    denom = _xcorr(g, kernel * kernel)      # sum p_i^2 over good pixels
-    varnum = _xcorr(s2, kernel * kernel)    # sum p_i^2 s_i^2
-    wsum = _xcorr(g, kernel)                # sum p_i over good pixels
-
+    s2 = np.where(good, var_pix, 0.0)
+    num = _xcorr(d, kernel)
+    denom = _xcorr(g, kernel * kernel)
+    varnum = _xcorr(s2, kernel * kernel)
+    wsum = _xcorr(g, kernel)
     with np.errstate(divide="ignore", invalid="ignore"):
         flux = num / denom
         var = varnum / (denom * denom)
@@ -159,6 +200,95 @@ def build_flux_map(int_path: Path, unc_path: Path, msk_full_path: Path,
     bad = (denom <= 0) | ~np.isfinite(flux)
     flux[bad] = np.nan
     var[bad] = np.nan
+    return flux, var, good_frac
 
+
+def _read_fits_any(path: Path):
+    """Read the first image HDU (handles fpacked 2-HDU ZTF diff cutouts)."""
+    from astropy.io import fits
+    from astropy.utils.exceptions import AstropyWarning
+    from astropy.wcs import WCS
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", AstropyWarning)
+        with fits.open(path) as hdul:
+            hdu = next(h for h in hdul if h.data is not None)
+            data = np.asarray(hdu.data, dtype=np.float64)
+            header = hdu.header
+            wcs = WCS(header)
+    return data, header, wcs
+
+
+ZTF_PIX_ARCSEC = 1.012
+
+
+def build_flux_map_ztf(sci_path: Path, diff_path: Path | None,
+                       msk_path: Path, fatal_mask: int, band: str,
+                       mjd: float) -> FluxMap:
+    """ZTF variant. The search image is a pixelwise hybrid: the
+    PSF-matched difference image wherever the reference image exists
+    (static field removed), and the sky-subtracted science image in the
+    strip outside the reference footprint (constant fill value in the
+    difference product, e.g. -7440). ``FluxMap.aux`` holds the fraction
+    of matched-filter weight drawn from difference-image pixels at each
+    position, so downstream stages can separate the two regimes.
+
+    Per-pixel variance = robust background variance of the search image
+    (computed separately for the two regimes) + Poisson term from the
+    science image (|sci - sky| / GAIN, DN^2). PSF FWHM from the science
+    header SEEING; MAGZP from the header. All cutouts share one pixel
+    grid (same IBE cutout request), checked via CRPIX.
+    """
+    sci, hdr, wcs = _read_fits_any(sci_path)
+    msk, mhdr, _ = _read_fits_any(msk_path)
+    mcut = np.asarray(msk, dtype=np.int64)
+    unmasked = np.isfinite(sci) & ((mcut & fatal_mask) == 0)
+    gain = float(hdr.get("GAIN", 6.2))
+    scipix = sci[unmasked]
+    sky = float(np.median(scipix)) if scipix.size else 0.0
+
+    is_diff = np.zeros(sci.shape, dtype=bool)
+    img = sci - sky
+    if diff_path is not None:
+        diff, dhdr, _ = _read_fits_any(diff_path)
+        for other in (mhdr, dhdr):
+            if (abs(other["CRPIX1"] - hdr["CRPIX1"]) > 0.01
+                    or abs(other["CRPIX2"] - hdr["CRPIX2"]) > 0.01
+                    or other["NAXIS1"] != hdr["NAXIS1"]):
+                raise ValueError("cutout grids differ")
+        is_diff = np.isfinite(diff)
+        vals, counts = np.unique(np.round(diff[is_diff]), return_counts=True)
+        if counts.size and counts.max() > 0.02 * diff.size:
+            fill = vals[np.argmax(counts)]
+            if abs(fill) > 100:
+                is_diff &= np.abs(diff - fill) > 2.0
+        img = np.where(is_diff, diff, img)
+    good = unmasked & np.isfinite(img)
+
+    def robust_var(pix):
+        if pix.size < 50:
+            return None
+        med = np.median(pix)
+        mad = 1.4826 * np.median(np.abs(pix - med))
+        return float(mad * mad) if mad > 0 else float(np.var(pix))
+
+    v_diff = robust_var(img[good & is_diff])
+    v_sci = robust_var(img[good & ~is_diff])
+    v_any = v_diff if v_diff is not None else (v_sci or 1.0)
+    bgvar = np.where(is_diff, v_diff if v_diff is not None else v_any,
+                     v_sci if v_sci is not None else v_any)
+    poisson = np.clip(sci - sky, 0.0, None) / gain
+    var_pix = bgvar + poisson
+    fwhm_arcsec = float(hdr.get("SEEING", 2.0)) or 2.0
+    fwhm_pix = fwhm_arcsec / ZTF_PIX_ARCSEC
+    # background already removed in both regimes
+    flux, var, good_frac = matched_filter(img, var_pix, good, fwhm_pix,
+                                          subtract_background=False)
+    kernel = _gaussian_kernel(fwhm_pix, int(np.ceil(2.5 * fwhm_pix)))
+    with np.errstate(divide="ignore", invalid="ignore"):
+        dfrac = _xcorr((good & is_diff).astype(float), kernel) / np.maximum(
+            _xcorr(good.astype(float), kernel), 1e-9)
     return FluxMap(flux=flux, var=var, good_frac=good_frac, wcs=wcs,
-                   band=band, magzp=magzp, mjd=mjd)
+                   band=band, magzp=(float(hdr["MAGZP"])
+                                     if "MAGZP" in hdr else None),
+                   mjd=mjd, aux=np.clip(dfrac, 0.0, 1.0))

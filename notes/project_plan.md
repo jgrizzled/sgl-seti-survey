@@ -1,7 +1,7 @@
 ---
 title: "sgl-seti-survey — Project Plan"
-date: 2026-08-18
-status: "Exploratory draft v0.2"
+date: 2026-08-20
+status: "v0.3 — WISE complete, ZTF pilot starting"
 tags:
   - SETI
   - technosignatures
@@ -222,82 +222,150 @@ an observation constraining.
 
 | Priority | Archive or product family                                                                                                          | Rationale                                                                                                                                   |
 | -------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1        | WISE merged L1b: cryogenic WISE + NEOWISE single exposures; source/reject tables; CatWISE, unWISE, VarWISE, moving-object products | Mature all-sky multi-epoch shakedown; W1/W2 motion and hot-source sensitivity; W3/W4 and derived products add complementary tests           |
+| 1        | WISE merged L1b: cryogenic WISE + NEOWISE single exposures; source/reject tables; CatWISE, unWISE, VarWISE, moving-object products | **Done (§4).** Mature all-sky multi-epoch shakedown; W1/W2 motion and hot-source sensitivity; W3/W4 carry the warm waste-heat test        |
 | 2        | SPHEREx public spectral images                                                                                                     | Repeated all-sky coverage in 102 near-IR channels; spectral discrimination and a second IRSA adapter                                        |
-| 3        | Rubin/LSST, ZTF, Pan-STARRS, DECam/NOIRLab, ATLAS, Catalina, SkyMapper, HSC/CFHT                                                   | Multi-epoch optical detections and image-level shift-and-stack; Rubin is now a current rather than purely future source                     |
-| 4        | IRAS, AKARI, Herschel, Planck, Spitzer; 2MASS and photographic plates such as POSS/DASCH                                           | Longer-wavelength thermal tests and long time baselines; some require spacecraft observers or older target solutions                        |
-| 5        | Breakthrough Listen; VLA/VLASS/COSMIC; RACS/EMU, LoTSS, GLEAM, NVSS/SUMSS; suitable ALMA/MeerKAT data                              | Local traffic, narrowband or broadband signals, and wide-field radio coverage of antipodal corridors                                        |
-| 6        | TESS FFIs, Kepler/K2, and other high-cadence imaging                                                                               | Time-domain searches of corridors and crossing events, with interval-aware spacecraft geometry                                              |
-| 7        | MPC isolated observations and tracklets, JPL/MPC known-object ephemerides, survey reject tables                                    | Candidate and veto inputs; not a complete search because 550–10,000 AU reflex rates may fall below ordinary intra-night tracklet thresholds |
-| 8        | GALEX; Chandra/XMM/eROSITA/Swift; Fermi-LAT event products                                                                         | Opportunistic UV and high-energy coincidence and persistent-source tests                                                                    |
-| 9        | ESO/Keck and other spectral archives                                                                                               | Continuous or pulsed laser-line searches at the target and local corridor                                                                   |
+| 4        | Rubin/LSST, Pan-STARRS, DECam/NOIRLab, ATLAS, Catalina, SkyMapper, HSC/CFHT                                                   | Multi-epoch optical detections and image-level shift-and-stack; Rubin is now a current rather than purely future source                     |
+| 5        | IRAS, AKARI, Herschel, Planck, Spitzer; 2MASS and photographic plates such as POSS/DASCH                                           | Longer-wavelength thermal tests and long time baselines; some require spacecraft observers or older target solutions                        |
+| 6        | Breakthrough Listen; VLA/VLASS/COSMIC; RACS/EMU, LoTSS, GLEAM, NVSS/SUMSS; suitable ALMA/MeerKAT data                              | Local traffic, narrowband or broadband signals, and wide-field radio coverage of antipodal corridors                                        |
+| 7        | TESS FFIs, Kepler/K2, and other high-cadence imaging                                                                               | Time-domain searches of corridors and crossing events, with interval-aware spacecraft geometry                                              |
+| 8        | MPC isolated observations and tracklets, JPL/MPC known-object ephemerides, survey reject tables                                    | Candidate and veto inputs; not a complete search because 550–10,000 AU reflex rates may fall below ordinary intra-night tracklet thresholds |
+| 9        | GALEX; Chandra/XMM/eROSITA/Swift; Fermi-LAT event products                                                                         | Opportunistic UV and high-energy coincidence and persistent-source tests                                                                    |
+| 10       | ESO/Keck and other spectral archives                                                                                               | Continuous or pulsed laser-line searches at the target and local corridor                                                                   |
 
-## 4. Concrete next step: WISE/NEOWISE shakedown
+## 4. WISE/NEOWISE — shakedown and first survey (complete)
 
-The first milestone is a completeness-calibrated end-to-end run of
-Pipeline A against the WISE family of products:
+The first milestone — a completeness-calibrated end-to-end run of
+Pipeline A against the WISE merged L1b products — was executed
+2026-08-18 → 20. All eight shakedown steps (hypothesis freeze, pilot
+registry, snapshotted discovery, precise WCS+mask pass, catalog
+screening, forced-photometry shift-and-stack, injection calibration,
+report) passed their success criteria, and the pipeline was then run
+over the full universal target list. Canonical documents:
 
-1. **Freeze the baseline hypotheses.** Declare target endpoint, role,
-   relay-distance prior, source morphology, persistence assumption,
-   residual-motion bounds, and the intended W1/W2 and W3/W4 physical
-   interpretations.
-2. **Curate a deliberately diverse pilot registry.** Start with 3–5
-   endpoints: an isolated linear-motion case, a high-proper-motion case,
-   and at least one bright or multiple system using the improved orbital
-   target-state support. Use the best available solution for each endpoint,
-   not Gaia DR3 by default, with covariance and per-value provenance.
-   Expand to roughly 20 nearby systems after the pilot passes.
-3. **Snapshot frame discovery.** Query the IRSA SIA/IBE WISE merged L1b
-   metadata around computed discovery envelopes, covering the original
-   cryogenic mission and the final NEOWISE reactivation release. Preserve
-   the exact query, raw response, archive release, and product identifiers.
-4. **Run the precise pass.** Generate interval-aware loci and intersect
-   exact WCS footprints and masks. Record hit/miss audit results, usable
-   pixels, quality flags, and all covered relay-distance intervals.
-5. **Screen catalog products.** Query single-exposure sources, reject
-   tables, CatWISE, time-resolved unWISE, variability products, and
-   moving-object associations without treating any one catalog as
-   complete.
-6. **Search the images.** Perform forced photometry and trajectory-aware
-   coaddition or difference imaging along the baseline SGL tracks. Fit
-   relay distance and bounded residual motion jointly.
-7. **Calibrate the analysis.** Inject blind synthetic relays into real
-   images across flux, distance, detector position, background, duty
-   cycle, and source morphology. Run matched control corridors and recover
-   known moving sources where available.
-8. **Report.** Publish observation, intersection, analysis-run,
-   constraint, and candidate records; coverage by epoch and relay-distance
-   interval; completeness curves; empirical false-alarm rates; and the
-   physical assumptions needed to interpret the flux limits.
+- Hypothesis freeze v1.0 + addenda: `surveys/wise/hypotheses.md`
+- Per-step status and result summaries: `surveys/wise/README.md`,
+  `surveys/wise/results/*.md`
+- Registry curation and corridor notes: `surveys/wise/notes/`
+- Reports: `report/wise_shakedown_v1.md` (pilot, 12 endpoints),
+  `report/wise_survey_v2.md` (47 endpoints / 38 corridors)
+- Target selection: `targets/universal_v2.md`,
+  `notes/sgl_seti_star_ranking_methods.md`,
+  `notes/picky_network_hypothesis_sgl_seti.md`
 
-WISE remains a good shakedown because its all-sky repetition guarantees
-geometric opportunities for every pilot corridor and exercises the
-parallax model. Its scientific interpretation must be band-specific. The
-10.6-year NEOWISE reactivation products contain W1/W2 measurements at 3.4
-and 4.6 microns, which primarily test reflected light, unusually hot
-components, or nonthermal emission. A solar-equilibrium blackbody at 550 AU
-is roughly 12 K and peaks near 240 microns; a 300 K radiator peaks near 9.7
-microns. Original W3/W4 exposures and later far-IR archives therefore carry
-different and necessary waste-heat sensitivity.
+**Outcome.** Registry v1.5 (89 endpoints / 77 corridors, batch 5 in
+progress at time of writing). Through v1.4: 3,008 ledger-ready
+Constraint records, 34 Candidate records — every one vetoed — and no
+surviving candidate. W1 90%-recovery depths span ~13–17.5 Vega mag,
+set by field crowding rather than noise. Physically, the W3 nulls
+exclude warm (~300 K) structures ≳ 39 km at 550 AU; reflected-light and
+12 K-equilibrium hypotheses are essentially unconstrained by WISE.
 
-Success criteria:
+**Learnings that shape later adapters** (details in the linked docs):
 
-- all discovery and precise-intersection joins reproduce from frozen
-  metadata and manifests;
-- injected sources achieve a declared recovery probability over at least
-  one nontrivial flux-by-distance region;
-- positive and negative controls behave within predeclared thresholds;
-- every claimed constraint can be traced to usable pixels and an analysis
-  run, not merely an exposure footprint; and
-- at least one target receives a ledger-ready constraint or an explicit,
-  evidence-backed statement that the available data cannot yet support
-  one.
+1. *Masks carry the WCS.* ~130 KB `-msk` products give exact astrometry
+   and usable pixels without the image; precise passes are cheap.
+2. *Parallax-phase test is the decisive veto.* A static background
+   source recurs at one day-of-year window; a real relay must appear at
+   both alternating parallax phases. Built into screening and stacking;
+   loses power in dense corridors where both phase positions are
+   occupied.
+3. *Confusion, not noise, sets depth* at 6" resolution. Control
+   trajectories (8 offsets) define thresholds; per-pixel uncertainties
+   understate the real floor.
+4. *Effective-epoch floor.* One frame can dominate a stack
+   (lacaille-8760 S=398/399); calibration v0.2.0 caps per-epoch weight
+   at 20× median and reports N_eff.
+5. *z-grid must be uniform in 1/z*, not log z — a log grid left 17"
+   gaps at small relay distance.
+6. *Endpoint curation dominates effort.* Published Hipparcos/hip2
+   solutions for Sirius and Procyon are already barycentric; Gaia
+   component solutions for tight binaries (GJ 65, RUWE ~11) are
+   orbit-corrupted; propagate CNS5 epochs before cross-matching;
+   always Kepler-check extracted orbits.
+7. *Registry is survey-agnostic.* Endpoint solutions, corridor grouping
+   (`wise_corridors.py`) and the universal list are reused verbatim by
+   later archives; only per-survey overlays change ordering.
+8. *Erratum (2026-08-20).* The shared matched filter returned PSF peak
+   amplitude, not total flux; WISE depth labels are optimistic by
+   1.9 mag (W1–W3) / 3.3 mag (W4). Detection statistics are unaffected.
+   See `surveys/wise/results/erratum_flux_scale_2026-08-20.md`.
 
-What we learn here — query ergonomics, footprint semantics, artifact and
-background behavior, compute volume, motion-model degeneracies, and
-completeness — determines the adapters and methods for later archives.
+## 5. Second adapter: ZTF (active)
 
-## 5. Open questions and research directions
+**Why ZTF second.** The plan's second adapter exists to stress the
+interfaces with a genuinely different archive and to open a physical
+cell WISE left closed. ZTF does both: ground-based observer state,
+CCD-quadrant footprints, three filters, seeing/airmass/moon quality
+dimensions, and reference-subtracted difference images as a first-class
+product; scientifically, 1" pixels remove the confusion floor, g/r/i is
+the reflected-sunlight band, and 8 years × ~1,000 epochs per corridor
+give ~16 parallax cycles for the phase test and enough cadence to fit
+continuous relay distance + residual motion. It is also ~90% of a
+Rubin adapter. Probed 2026-08-20: IRSA IBE `ztf/products/sci` returns
+1,132 frames (g 483 / r 494 / i 155, 2018-06 → 2026-06) at the
+Ross 128 corridor. Coverage: corridors at Dec ≳ −30°, i.e. **52 of 76
+universal-list systems** (the southern stars).
+
+**Pilot (3 corridors) — complete 2026-08-20.** Report
+`report/ztf_pilot_v1.md`, stage detail `surveys/ztf/results/pilot_v1_summary.md`.
+Outcome: 80 Constraint records, 0 candidates, m90 ≈ 21.2–21.5 AB;
+lessons — fixed-grid CCD gaps (all three antipodes affected; ≈13 % of
+sky), reference-image edge strips (hybrid search image), per-cell epoch
+floor + single-epoch clip, and the asteroid control's flux-scale catch.
+The steps as executed:
+
+1. Freeze `surveys/ztf/hypotheses.md`: same prior, roles, duty cycle
+   and |µ_resid| bound as WISE v1.0; add filter set, Palomar observer
+   site, reflected-light and hot-source interpretations, per-exposure
+   quality cuts, and an explicit statement of what a g/r limit means
+   physically.
+2. Choose three corridors from the in-footprint set spanning low/mid
+   Galactic latitude and both hemispheres of the ecliptic; reuse the
+   existing registry entries unchanged.
+3. Adapter `sglsurvey/adapters/irsa_ztf.py`: discovery via IBE
+   `products/sci` metadata (snapshotted), nominal footprint from the
+   quadrant CD matrix, exact footprint from the science-image WCS +
+   mask product, cutouts via IBE `?center=&size=`.
+4. Precise pass, then screening against `ztf_objects_dr24` (and the
+   per-frame PSF source lists) with the parallax-phase test.
+5. Forced photometry on difference-image cutouts along the track;
+   joint z × µ stack with phase-split and offset controls; injection
+   calibration on a 1/z-uniform grid with the effective-epoch cap.
+6. Positive control: recover a known main-belt asteroid through the
+   same shift-and-stack machinery (§3.4 has lacked a positive control).
+7. Report `report/ztf_pilot_v1.md`; then scale to all 52 in-footprint
+   systems via a ZTF overlay of the universal list.
+
+Success criteria are those of §4 (reproducible joins, declared
+recovery probability over a nontrivial flux × distance region, controls
+inside thresholds, constraints traceable to usable pixels), plus: the
+adapter interface in `sglsurvey/adapters/base.py` survives without
+WISE-specific leakage, and the ground-based observer state validates
+against sglseti's terrestrial-site model at the arcsecond level. All
+met (topocentric shift ≤ 0.016″; interface unchanged, two estimator
+generalisations in the shared calibration).
+
+**Scale-up (next):** ZTF overlay of the universal list with primary-
+grid gap position and secondary-field epoch counts per corridor; custom
+per-corridor reference images for the edge strips; a fainter second
+asteroid control; then the 52 in-footprint systems.
+
+## 6. Third adapter: SPHEREx (next)
+
+SPHEREx QR1/QR2 are served at IRSA (`spherex.obscore`, SIA collections
+`spherex_qr1/qr2`; ~330 exposures per sky position for 2025-06 →
+2026-06). It is the right third adapter rather than second: its
+0.75–5 µm, 6.2"-pixel regime largely overlaps W1/W2 physically, and one
+year yields only ~2 parallax phases, but it adds (a) 102-channel
+spectral discrimination of any candidate against a stellar SED, (b)
+coverage of the 24 northern-star / southern-corridor systems ZTF cannot
+reach, and (c) a third, spectral-cube-shaped data product to test the
+adapter interface. Plan: after the ZTF pilot report, freeze a SPHEREx
+hypothesis document reusing the WISE band-specific interpretations,
+start with the 24 ZTF-inaccessible systems, and grow the baseline as
+quick-release data accrue.
+
+## 7. Open questions and research directions
 
 - **Endpoint hypotheses.** A network may aim at a stellar component,
   system barycenter, planet, or orbital acquisition region. Determine which
@@ -351,7 +419,7 @@ completeness — determines the adapters and methods for later archives.
   heterogeneous, model-specific completeness curves. A count of archive
   intersections is not a population constraint.
 
-## 6. Practical notes
+## 8. Practical notes
 
 - **Repo layout:** retain `notes/` for research and planning,
   `sglsurvey/` (or similar) for the pipeline package, `registries/` for
@@ -377,8 +445,8 @@ completeness — determines the adapters and methods for later archives.
   permanently; record content hashes and durable archive identifiers for
   large images or event files; retain local cutouts and injected products
   according to a documented regeneration policy.
-- **Implementation sequence:** complete the required `sglseti` gates,
+- **Implementation sequence:** ~~complete the required `sglseti` gates,
   implement a WISE adapter and the five core records, run the 3–5-endpoint
-  pilot through injection recovery and reporting, add SPHEREx or one
-  optical archive as the second adapter, then expand targets and archive
-  families only after the interfaces survive both.
+  pilot through injection recovery and reporting~~ (done, §4); ZTF as the
+  second adapter via a 3-corridor pilot (§5), SPHEREx third (§6); expand
+  archive families only after the interfaces survive all three.
