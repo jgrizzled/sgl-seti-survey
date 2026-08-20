@@ -37,6 +37,23 @@ CORRIDOR_OF = {
     "gj-1061": "gj1061",
     "gj-12724": "gj12724",
     "wolf-1061": "wolf1061",
+    # v1.4 batch 4 + unblocked deferred
+    "61-cyg-a": "cyg61", "61-cyg-b": "cyg61",
+    "struve-2398-a": "struve2398", "struve-2398-b": "struve2398",
+    "groombridge-34-a": "grb34", "groombridge-34-b": "grb34",
+    "gj-1111": "gj1111",
+    "luyten-star": "luyten",
+    "kapteyn-star": "kapteyn",
+    "lp-145-141": "lp145141",
+    "gj-1221": "gj1221",
+    "gj-9193": "gj9193",
+    "gj-783": "gj783",
+    "eps-ind-b": "epsind",
+    "gj-11068": "gj11068",
+    "wise-0855": "wise0855",
+    "ez-aqr": "ezaqr",
+    "luhman16-a": "luhman16", "luhman16-b": "luhman16",
+    "procyon-a": "procyon", "procyon-b": "procyon",
 }
 
 MEMBERS = defaultdict(list)

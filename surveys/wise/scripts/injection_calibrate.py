@@ -43,7 +43,7 @@ CAL_DIR = REPO / "runs" / "wise" / "calib_v1"
 TENSOR_DIR = CAL_DIR / "tensors"
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "wise" / "hypotheses.md"
-HYPOTHESIS_VERSION = "wise-hypotheses-v1.0"
+HYPOTHESIS_VERSION = "wise-hypotheses-v1.4"
 
 ZP_REF = 20.0
 MIN_GOOD_FRAC = 0.7
@@ -152,7 +152,7 @@ def main() -> None:
             i_real = np.unravel_index(np.nanargmax(S[0]), S[0].shape)
             band = BAND_NAME[b]
             key = f"{endpoint}/{role}/{band}"
-            w2sum = (w[0] ** 2).sum(axis=1)
+            w2sum = (w[0] ** 2).sum(axis=0)
             n_eff = float(B[0][i_real] ** 2
                           / max(w2sum[i_real], 1e-300))
             threshold_report[key] = {

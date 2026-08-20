@@ -4,6 +4,17 @@ status: "v1.1 — parameters frozen 2026-08-18; endpoint set expanded 2026-08-18
 date: 2026-08-18
 ---
 
+> **v1.4 addendum (2026-08-19).** Batch-4 + all previously deferred
+> endpoints: 22 added (61 Cyg A/B, Struve 2398 A/B, Groombridge 34
+> A/B, GJ 1111, Luyten's Star, Kapteyn's Star, LP 145-141, GJ 1221,
+> GJ 9193, GJ 783, ε Ind Ba/Bb photocenter, GJ 11068, WISE 0855,
+> EZ Aqr photocenter, Luhman 16 A/B, Procyon A/B) — **48 endpoint
+> hypotheses across 38 corridors**, registry v1.4 `sha256:09366624…`.
+> Every parameter in sections 2–9 remains unchanged from v1.0. The
+> calibration pipeline moves to v0.2.0 (effective-epoch weight cap) —
+> an estimator change, recorded in the analysis-run config, not a
+> hypothesis change.
+>
 > **v1.3 addendum (2026-08-19).** Batch-3 endpoint expansion (WISE
 > overlay mid-confusion queue): `eps-eri`, `lacaille-9352`, `gj-1061`,
 > `gj-12724`, `wolf-1061` — 26 endpoint hypotheses across 23 corridors,

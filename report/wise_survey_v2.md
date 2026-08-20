@@ -1,8 +1,8 @@
 # WISE/NEOWISE SGL Survey — Report v2
 
-**Date:** 2026-08-19 · **Status:** 26 endpoints / 23 corridors searched, no surviving candidate, 1,664 injection-calibrated constraints · **Supersedes:** `wise_shakedown_v1.md` (the 12-endpoint shakedown report)
+**Date:** 2026-08-20 · **Status:** **complete over the full universal target portfolio** — 47 endpoints / 38 corridors / 94 endpoint-role hypotheses searched, no surviving candidate, 3,008 injection-calibrated constraints · **Supersedes:** `wise_shakedown_v1.md`
 
-**Pins:** registry v1.3 `sha256:a476a3e3…` · hypotheses v1.3 (physics parameters frozen at v1.0, endpoint set expanded v1.1–v1.3) · sglseti `21f6f3d` / `tusay2022_eq5_7_v1` v1.1.0 · calibration AnalysisRun `run-04d6098fb26e`
+**Pins:** registry v1.4 `sha256:09366624…` · hypotheses v1.4 (physics parameters frozen at v1.0, endpoint set expanded v1.1–v1.4) · sglseti `21f6f3d` / `tusay2022_eq5_7_v1` v1.1.0 · calibration v0.2.0 AnalysisRun `run-76251a7d4ad3`
 
 ## Summary
 
@@ -14,12 +14,15 @@ v1 shakedown report, the survey has grown from an ad-hoc pilot to a
 list built from the CNS5 8 pc census (protected distance core +
 geometric-adjacency, historical-approach, and white-dwarf-wildcard
 baskets), with a WISE-specific overlay that grades corridors by
-*measured* confusion and orders the work queue. Three batches later,
-**26 endpoint hypotheses across 23 corridors (52 endpoint-role
-hypotheses) are searched: no candidate survives.** Thirteen threshold
-or marginal excesses were individually adjudicated and vetoed — static
-field stars caught by the parallax-phase test, one bright-star halo,
-one single-epoch artifact, and control-level placement variance. Every
+*measured* confusion and orders the work queue. Four batches later —
+including every formerly deferred system — **the entire searchable
+portfolio is done: 47 endpoint hypotheses across 38 corridors (94
+endpoint-role hypotheses), and no candidate survives.** Thirty-four
+threshold or marginal excesses were individually adjudicated and
+vetoed: static field stars caught by the parallax-phase test, a
+bright-star halo, a single-epoch artifact (which motivated a
+calibration-level fix — see §7), coincident static sources under
+single-visit W3/W4 cells, and dense-corridor contamination. Every
 endpoint carries 90%-recovery flux limits over 550–10,000 AU in all
 four WISE bands.
 
@@ -33,19 +36,27 @@ cycle ≥ 0.5; residual motion |µ| ≤ 1″/yr; 99% propagated confidence
 approximation). Out of scope (separate model IDs): barycenter and
 planetary endpoints, duty < 0.5, |µ| > 1″/yr, extended morphologies.
 
-**Endpoints (26).** Pilot + expansions, all with per-value provenance:
+**Endpoints (47).** Pilot + expansions, all with per-value provenance:
 Barnard's Star, Ross 154, Lalande 21185, α Cen A/B, Sirius A/B
 (v1.0); Proxima Cen, Wolf 359, Ross 248, GJ 65 A/B (v1.1); Ross 128,
 ε Ind A, τ Cet, GJ 54, Teegarden's Star, Lacaille 8760, van Maanen's
 Star (first white-dwarf wildcard), GJ 908, GJ 784 (v1.2); ε Eri,
-Lacaille 9352, GJ 1061, GJ 12724, Wolf 1061 (v1.3). Curation
+Lacaille 9352, GJ 1061, GJ 12724, Wolf 1061 (v1.3); 61 Cyg A/B,
+Struve 2398 A/B, Groombridge 34 A/B, GJ 1111, Luyten's Star, Kapteyn's
+Star, LP 145-141, GJ 1221, GJ 9193, GJ 783, ε Ind Ba/Bb photocenter,
+GJ 11068, WISE 0855, EZ Aqr photocenter, Luhman 16 A/B (Garcia 2017
+orbit), Procyon A/B (Bond 2015 orbit) (v1.4). Curation
 highlights: the Hipparcos Sirius solution validated *as* the
 orbit-corrected barycenter (0.16″ vs 2MASS); GJ 65's barycenter
 constructed from mass-weighted Gaia components (0.34″/17.4 yr vs
 2MASS; orbit convention closed to 0.013″ vs the Gaia relative
-position); τ Cet and ε Eri adopted with ×3-inflated uncertainties
-(saturation-degraded RUWE); ε Ind Ba/Bb deferred (photocenter rides
-its 11-yr orbit).
+position); the Hipparcos Procyon solution likewise validated as the
+barycenter (0.31″ vs 1.02″); the Bond 2015 Procyon orbit extracted
+directly from the PDF after two garbled web renderings and
+Kepler-validated; τ Cet and ε Eri adopted with ×3-inflated
+uncertainties (saturation-degraded RUWE); ε Ind Ba/Bb and EZ Aqr
+entered as photocenter tracks whose orbital wobble sits inside the
+frozen residual-motion cell.
 
 ## 2. Target selection: universal list + survey overlay
 
@@ -79,14 +90,14 @@ coverage is the norm and every record carries its intervals.
 
 | Record stream | Count |
 | --- | --- |
-| QuerySnapshot (verbatim archive responses) | 692 |
-| Observation (unique frame-band products) | 50,109 |
-| IntersectionEvaluation (coarse + precise) | 113,770 + 46,295 |
-| ScreenMatch (catalog detections vs tracks) | 120,911 |
-| Constraint (current, run-04d6098fb26e) | 1,664 |
-| Candidate (all vetoed, with recorded reasons) | 13 |
+| QuerySnapshot (verbatim archive responses) | 880 |
+| Observation (unique frame-band products) | 98,982 |
+| IntersectionEvaluation (coarse + precise) | 246,762 + 100,282 |
+| ScreenMatch (catalog detections vs tracks) | 193,320 |
+| Constraint (current, run-76251a7d4ad3, calibration v0.2.0) | 3,008 |
+| Candidate (all vetoed, with recorded reasons) | 34 |
 
-Archive-data footprint: 11 GB under `runs/wise/`, all regenerable from
+Archive-data footprint: 23 GB under `runs/wise/`, all regenerable from
 tracked scripts, snapshots, and checksums.
 
 ## 4. Search results and adjudications
@@ -104,19 +115,24 @@ endpoint-role-band at the maximum of **8 offset-control trajectories**
 (empirical FAR < 1/8 per grid search; the W1/W2 search is field-star
 contamination limited, with control maxima up to S ≈ 2,650).
 
-**13 of 208 pair-band searches exceeded threshold; all vetoed:**
+**27 of 376 pair-band searches exceeded the v0.2.0 weight-capped
+thresholds; all vetoed** (34 vetoed candidates cumulatively across
+calibration versions):
 
-| Mechanism | Cells | Example |
-| --- | --- | --- |
-| Single-phase static field star | 7 | proxima-cen/tx/W2: phase split −6.7 / +284.8 |
-| Bright-star halo (screening excludes a real source that bright) | 1 | sirius-a/rx/W2: S=871 vs T=451 |
-| **Single-epoch dominance** (one frame carries the stack) | 1 | lacaille-8760/rx/W1: MJD 57855 contributes S=397.8 of 399.3 |
-| Single-visit cryo placement variance (≤3% over an 8-draw null) | 4 | barnard-star/tx/W3: 8.8 vs 8.7 |
+| Mechanism | Example |
+| --- | --- |
+| Single-phase static field star (the parallax-phase veto) | groombridge-34-a/rx/W1: phase split 6.4 / 396.0 |
+| Bright-star halo (screening excludes a source that bright) | sirius-a/rx/W2: S=871 vs T=451 (v1.1 run) |
+| Single-epoch artifact — **eliminated by the v0.2.0 weight cap** | lacaille-8760/rx/W1 no longer exceeds once capped |
+| Single-visit W3/W4 cell coincident with a W1-identified static source | luhman16-a/rx/W3: S=192, W1 at same cell S=222 |
+| Dense-corridor contamination where the phase test loses power | gj-11068/rx/W1 (galactic latitude 2.3°, control null S≈1000): balanced phases from *distinct* static sources ~50″ apart; the catalog-screening null excludes any track-consistent source at this brightness |
+| Placement variance at ≤3% over an 8-draw null | ross-154/tx/W3: 7.1 vs 7.0 |
 
-A subtlety worth recording: gj-1061/tx exceeded in W1 *and* W2 at the
-same cell — cross-band consistency mimicking a real source — but the
-phase split and star-like flux ratio identified a static star whose
-own cross-band consistency produced the pairing.
+Two subtleties worth recording: cross-band consistency can be mimicked
+by a static star's own colors (gj-1061/tx exceeded in W1 and W2 at one
+cell); and in fields dense enough that both parallax-phase positions
+host stars, the phase veto weakens and the screening null becomes the
+operative backstop.
 
 ## 5. Completeness
 
@@ -154,20 +170,29 @@ constrain cold passive infrastructure or planet-scale reflectors.
 
 Gaussian-PSF search/injections (throughput, not PSF-wing mismatch);
 8 controls per pair-band (coarse FAR resolution); W3/W4 rest on one
-2010 visit; no known-moving-object positive control yet; nulls cover
-the frozen hypothesis cell only. Pipeline improvement identified in
-batch 2 and scheduled: an **effective-epoch floor / weight cap** in
-the stack, closing the single-epoch-dominance capture mechanism at
-the estimator level rather than by post-hoc veto.
+2010 visit and are vulnerable to coincident static red sources (no
+recurrence information — a documented verdict class); the
+parallax-phase veto loses power in the densest corridors (screening
+null is the backstop there); no known-moving-object positive control
+yet; nulls cover the frozen hypothesis cell only. The
+single-epoch-dominance mechanism found in batch 2 is now **closed at
+the estimator level**: calibration v0.2.0 caps per-epoch stack
+weights at 20× the cell's median positive weight and reports the
+effective epoch count at every peak.
 
-## 8. Remaining work queue
+## 8. Work queue: complete
 
-10 systems queued (8 high-confusion: Luhman 16, 61 Cyg, Procyon,
-Groombridge 34, Luyten's Star, LP 145-141, GJ 1221, GJ 9193; 2
-bright-star: GJ 1111, Kapteyn's Star) and 5 deferred with named
-unblocking conditions (published orbits: Struve 2398, GJ 783;
-non-Gaia astrometry: WISE 0855, EZ Aqr, GJ 11068; photocenter orbit:
-ε Ind Ba/Bb).
+Every system in the universal portfolio's WISE overlay queue is
+searched, including all formerly deferred systems (Struve 2398 and
+GJ 783 unblocked by clean per-component Gaia solutions with negligible
+orbital curvature; ε Ind Ba/Bb and EZ Aqr as photocenter tracks whose
+wobble sits inside the residual-motion cell; WISE 0855 and GJ 11068 on
+CNS5 compilation astrometry; Luhman 16 and Procyon with published
+orbits). Notable depth outcomes: Kapteyn's Star reached W1 m₉₀ = 17.2
+despite its bright-star flag; the galactic-plane GJ 11068 corridor
+bottomed at 13.6, as its confusion grade predicted. Growing the
+portfolio further means raising the universal-list horizon or adding
+baskets — a config change, not new machinery.
 
 ## 9. Reproducibility
 

@@ -100,3 +100,11 @@ universal-list WISE overlay queue; registry v1.2, 21 endpoints /
 v1.3, 26 endpoints / 23 corridors, 1,664 Constraint records under
 `run-04d6098fb26e`; 13 vetoed Candidates total; no surviving candidate.
 See `results/batch3_summary.md`.
+
+**v1.4 batch 4 + deferred (2026-08-20): PORTFOLIO COMPLETE.** All
+remaining queued and deferred systems; registry v1.4, 47 endpoints /
+38 corridors; calibration v0.2.0 (effective-epoch weight cap) →
+3,008 Constraint records under `run-76251a7d4ad3`; 34 vetoed
+Candidates; no surviving candidate. The universal-list WISE queue is
+empty. See `results/batch4_summary.md` and
+`../../report/wise_survey_v2.md`.

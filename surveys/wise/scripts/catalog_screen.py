@@ -48,7 +48,7 @@ PRECISE_DIR = REPO / "runs" / "wise" / "precise_v1"
 RUN_DIR = REPO / "runs" / "wise" / "screen_v1"
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "wise" / "hypotheses.md"
-HYPOTHESIS_VERSION = "wise-hypotheses-v1.0"
+HYPOTHESIS_VERSION = "wise-hypotheses-v1.4"
 
 TAP_SYNC = "https://irsa.ipac.caltech.edu/TAP/sync"
 SCREEN_RADIUS_ARCSEC = 10.0   # frozen padding (hypotheses v1.0 §5)

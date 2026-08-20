@@ -155,7 +155,7 @@
    "abs_ecl_beta": 53.9,
    "drift_arcsec_yr": 2.78,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 2,
    "components": [
     {
@@ -193,7 +193,7 @@
    "abs_ecl_beta": 23.6,
    "drift_arcsec_yr": 8.15,
    "solution_gate": "hard",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {
@@ -565,7 +565,7 @@
    "abs_ecl_beta": 6.2,
    "drift_arcsec_yr": 3.26,
    "solution_gate": "hard",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 3,
    "components": [
     {
@@ -599,7 +599,7 @@
    "abs_ecl_beta": 51.9,
    "drift_arcsec_yr": 5.28,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 2,
    "components": [
     {
@@ -641,7 +641,7 @@
    "abs_ecl_beta": 16.0,
    "drift_arcsec_yr": 1.26,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {
@@ -677,7 +677,7 @@
    "abs_ecl_beta": 81.6,
    "drift_arcsec_yr": 2.22,
    "solution_gate": "orbit_needed",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 2,
    "components": [
     {
@@ -716,7 +716,7 @@
    "abs_ecl_beta": 37.9,
    "drift_arcsec_yr": 2.92,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 2,
    "components": [
     {
@@ -758,7 +758,7 @@
    "abs_ecl_beta": 7.5,
    "drift_arcsec_yr": 1.27,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {
@@ -925,7 +925,7 @@
    "abs_ecl_beta": 16.5,
    "drift_arcsec_yr": 3.74,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {
@@ -991,7 +991,7 @@
    "abs_ecl_beta": 67.5,
    "drift_arcsec_yr": 8.64,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {
@@ -1155,7 +1155,7 @@
    "abs_ecl_beta": 57.2,
    "drift_arcsec_yr": 2.68,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {
@@ -1221,7 +1221,7 @@
    "abs_ecl_beta": 15.7,
    "drift_arcsec_yr": 1.64,
    "solution_gate": "orbit_needed",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 2,
    "components": [
     {
@@ -1287,7 +1287,7 @@
    "abs_ecl_beta": 85.5,
    "drift_arcsec_yr": 1.68,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {
@@ -1321,7 +1321,7 @@
    "abs_ecl_beta": 27.6,
    "drift_arcsec_yr": 2.38,
    "solution_gate": "clean",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {
@@ -1356,7 +1356,7 @@
    "abs_ecl_beta": 30.6,
    "drift_arcsec_yr": 0.13,
    "solution_gate": "hard",
-   "already_searched_wise": false,
+   "already_searched_wise": true,
    "n_tracks": 1,
    "components": [
     {

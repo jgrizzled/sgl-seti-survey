@@ -1,529 +1,917 @@
-<svg viewBox="0 0 1050 1426" width="1050" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="90 percent recovery depth by endpoint and band">
-<style>text{font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;fill:#333}.pt{font-size:15px;font-weight:600}.ps{font-size:13px;fill:#777;font-weight:400}.tk{font-size:10.5px;fill:#999}.ax{font-size:11px;fill:#666}.rl{font-size:11.5px}.gr{stroke:#e8e8e4;stroke-width:1}.wh{stroke:#c4c4be;stroke-width:2;stroke-linecap:round}.rx{fill:#b4551f}.tx{fill:#fdfdfc;stroke:#b4551f;stroke-width:1.8}</style>
-<rect x="0" y="0" width="1050" height="1426" fill="#fdfdfc" rx="8"/>
-<text x="150" y="22" class="pt">90% recovery depth by endpoint and band<tspan class="ps"> · duty ≥ 0.5 · filled = Rx, open = Tx, bar = range over 550–10,000 AU</tspan></text>
-<text x="150" y="38" class="pt">W1<tspan class="ps"> · 3.4 μm</tspan></text>
-<line x1="199.7" y1="46" x2="199.7" y2="618" class="gr"/>
-<text x="199.7" y="632" class="tk" text-anchor="middle">13</text>
-<line x1="261.8" y1="46" x2="261.8" y2="618" class="gr"/>
-<text x="261.8" y="632" class="tk" text-anchor="middle">14</text>
-<line x1="323.9" y1="46" x2="323.9" y2="618" class="gr"/>
-<text x="323.9" y="632" class="tk" text-anchor="middle">15</text>
-<line x1="386.1" y1="46" x2="386.1" y2="618" class="gr"/>
-<text x="386.1" y="632" class="tk" text-anchor="middle">16</text>
-<line x1="448.2" y1="46" x2="448.2" y2="618" class="gr"/>
-<text x="448.2" y="632" class="tk" text-anchor="middle">17</text>
-<line x1="510.3" y1="46" x2="510.3" y2="618" class="gr"/>
-<text x="510.3" y="632" class="tk" text-anchor="middle">18</text>
-<text x="355" y="650" class="ax" text-anchor="middle">Vega mag → deeper</text>
-<text x="142" y="62.0" class="rl" text-anchor="end">lacaille-8760</text>
-<line x1="470.3" y1="56" x2="543.5" y2="56" class="wh"/>
-<circle cx="478.2" cy="56" r="3.6" class="rx"/>
-<line x1="264.2" y1="65" x2="270.8" y2="65" class="wh"/>
-<circle cx="267.7" cy="65" r="3.6" class="tx"/>
-<text x="142" y="84.0" class="rl" text-anchor="end">gj-54</text>
-<line x1="468.4" y1="78" x2="483.5" y2="78" class="wh"/>
-<circle cx="475.2" cy="78" r="3.6" class="rx"/>
-<line x1="473.8" y1="87" x2="490.5" y2="87" class="wh"/>
-<circle cx="480.6" cy="87" r="3.6" class="tx"/>
-<text x="142" y="106.0" class="rl" text-anchor="end">lacaille-9352</text>
-<line x1="440.8" y1="100" x2="483.8" y2="100" class="wh"/>
-<circle cx="449.4" cy="100" r="3.6" class="rx"/>
-<line x1="435.8" y1="109" x2="460.5" y2="109" class="wh"/>
-<circle cx="441.8" cy="109" r="3.6" class="tx"/>
-<text x="142" y="128.0" class="rl" text-anchor="end">lalande-21185</text>
-<line x1="434.3" y1="122" x2="461.9" y2="122" class="wh"/>
-<circle cx="440.0" cy="122" r="3.6" class="rx"/>
-<line x1="463.3" y1="131" x2="512.1" y2="131" class="wh"/>
-<circle cx="471.1" cy="131" r="3.6" class="tx"/>
-<text x="142" y="150.0" class="rl" text-anchor="end">gj-908</text>
-<line x1="429.5" y1="144" x2="462.9" y2="144" class="wh"/>
-<circle cx="436.7" cy="144" r="3.6" class="rx"/>
-<line x1="373.4" y1="153" x2="423.8" y2="153" class="wh"/>
-<circle cx="380.9" cy="153" r="3.6" class="tx"/>
-<text x="142" y="172.0" class="rl" text-anchor="end">eps-eri</text>
-<line x1="423.1" y1="166" x2="437.8" y2="166" class="wh"/>
-<circle cx="427.5" cy="166" r="3.6" class="rx"/>
-<line x1="411.9" y1="175" x2="431.2" y2="175" class="wh"/>
-<circle cx="417.3" cy="175" r="3.6" class="tx"/>
-<text x="142" y="194.0" class="rl" text-anchor="end">wolf-359</text>
-<line x1="418.5" y1="188" x2="455.4" y2="188" class="wh"/>
-<circle cx="424.7" cy="188" r="3.6" class="rx"/>
-<line x1="323.5" y1="197" x2="335.3" y2="197" class="wh"/>
-<circle cx="328.6" cy="197" r="3.6" class="tx"/>
-<text x="142" y="216.0" class="rl" text-anchor="end">van-maanen</text>
-<line x1="414.0" y1="210" x2="430.9" y2="210" class="wh"/>
-<circle cx="420.4" cy="210" r="3.6" class="rx"/>
-<line x1="418.8" y1="219" x2="471.0" y2="219" class="wh"/>
-<circle cx="428.1" cy="219" r="3.6" class="tx"/>
-<text x="142" y="238.0" class="rl" text-anchor="end">gj65-a</text>
-<line x1="408.6" y1="232" x2="426.0" y2="232" class="wh"/>
-<circle cx="414.6" cy="232" r="3.6" class="rx"/>
-<line x1="447.9" y1="241" x2="488.9" y2="241" class="wh"/>
-<circle cx="452.9" cy="241" r="3.6" class="tx"/>
-<text x="142" y="260.0" class="rl" text-anchor="end">wolf-1061</text>
-<line x1="407.0" y1="254" x2="430.5" y2="254" class="wh"/>
-<circle cx="413.2" cy="254" r="3.6" class="rx"/>
-<line x1="407.7" y1="263" x2="425.0" y2="263" class="wh"/>
-<circle cx="415.1" cy="263" r="3.6" class="tx"/>
-<text x="142" y="282.0" class="rl" text-anchor="end">tau-cet</text>
-<line x1="402.1" y1="276" x2="415.7" y2="276" class="wh"/>
-<circle cx="407.0" cy="276" r="3.6" class="rx"/>
-<line x1="434.8" y1="285" x2="455.7" y2="285" class="wh"/>
-<circle cx="441.9" cy="285" r="3.6" class="tx"/>
-<text x="142" y="304.0" class="rl" text-anchor="end">gj65-b</text>
-<line x1="400.0" y1="298" x2="414.0" y2="298" class="wh"/>
-<circle cx="406.1" cy="298" r="3.6" class="rx"/>
-<line x1="446.4" y1="307" x2="486.7" y2="307" class="wh"/>
-<circle cx="451.7" cy="307" r="3.6" class="tx"/>
-<text x="142" y="326.0" class="rl" text-anchor="end">ross-248</text>
-<line x1="361.4" y1="320" x2="384.3" y2="320" class="wh"/>
-<circle cx="369.2" cy="320" r="3.6" class="rx"/>
-<line x1="373.2" y1="329" x2="412.9" y2="329" class="wh"/>
-<circle cx="381.0" cy="329" r="3.6" class="tx"/>
-<text x="142" y="348.0" class="rl" text-anchor="end">gj-784</text>
-<line x1="363.5" y1="342" x2="375.8" y2="342" class="wh"/>
-<circle cx="368.1" cy="342" r="3.6" class="rx"/>
-<line x1="335.3" y1="351" x2="354.3" y2="351" class="wh"/>
-<circle cx="341.8" cy="351" r="3.6" class="tx"/>
-<text x="142" y="370.0" class="rl" text-anchor="end">ross-128</text>
-<line x1="356.1" y1="364" x2="370.0" y2="364" class="wh"/>
-<circle cx="362.1" cy="364" r="3.6" class="rx"/>
-<line x1="365.3" y1="373" x2="414.1" y2="373" class="wh"/>
-<circle cx="373.1" cy="373" r="3.6" class="tx"/>
-<text x="142" y="392.0" class="rl" text-anchor="end">barnard-star</text>
-<line x1="355.2" y1="386" x2="371.9" y2="386" class="wh"/>
-<circle cx="361.8" cy="386" r="3.6" class="rx"/>
-<line x1="264.6" y1="395" x2="275.2" y2="395" class="wh"/>
-<circle cx="269.8" cy="395" r="3.6" class="tx"/>
-<text x="142" y="414.0" class="rl" text-anchor="end">gj-1061</text>
-<line x1="356.5" y1="408" x2="362.7" y2="408" class="wh"/>
-<circle cx="359.6" cy="408" r="3.6" class="rx"/>
-<line x1="482.6" y1="417" x2="551.2" y2="417" class="wh"/>
-<circle cx="490.1" cy="417" r="3.6" class="tx"/>
-<text x="142" y="436.0" class="rl" text-anchor="end">ross-154</text>
-<line x1="348.8" y1="430" x2="372.6" y2="430" class="wh"/>
-<circle cx="357.2" cy="430" r="3.6" class="rx"/>
-<line x1="331.5" y1="439" x2="364.0" y2="439" class="wh"/>
-<circle cx="340.1" cy="439" r="3.6" class="tx"/>
-<text x="142" y="458.0" class="rl" text-anchor="end">alpha-cen-b</text>
-<line x1="332.4" y1="452" x2="362.4" y2="452" class="wh"/>
-<circle cx="341.0" cy="452" r="3.6" class="rx"/>
-<line x1="257.2" y1="461" x2="269.3" y2="461" class="wh"/>
-<circle cx="264.0" cy="461" r="3.6" class="tx"/>
-<text x="142" y="480.0" class="rl" text-anchor="end">eps-ind-a</text>
-<line x1="325.3" y1="474" x2="334.8" y2="474" class="wh"/>
-<circle cx="328.7" cy="474" r="3.6" class="rx"/>
-<line x1="362.1" y1="483" x2="377.3" y2="483" class="wh"/>
-<circle cx="366.6" cy="483" r="3.6" class="tx"/>
-<text x="142" y="502.0" class="rl" text-anchor="end">alpha-cen-a</text>
-<line x1="316.3" y1="496" x2="335.3" y2="496" class="wh"/>
-<circle cx="322.5" cy="496" r="3.6" class="rx"/>
-<line x1="255.8" y1="505" x2="264.9" y2="505" class="wh"/>
-<circle cx="260.0" cy="505" r="3.6" class="tx"/>
-<text x="142" y="524.0" class="rl" text-anchor="end">proxima-cen</text>
-<line x1="304.0" y1="518" x2="323.9" y2="518" class="wh"/>
-<circle cx="310.8" cy="518" r="3.6" class="rx"/>
-<line x1="307.0" y1="527" x2="337.7" y2="527" class="wh"/>
-<circle cx="313.2" cy="527" r="3.6" class="tx"/>
-<text x="142" y="546.0" class="rl" text-anchor="end">teegarden</text>
-<line x1="272.6" y1="540" x2="280.4" y2="540" class="wh"/>
-<circle cx="277.5" cy="540" r="3.6" class="rx"/>
-<line x1="354.1" y1="549" x2="386.4" y2="549" class="wh"/>
-<circle cx="359.9" cy="549" r="3.6" class="tx"/>
-<text x="142" y="568.0" class="rl" text-anchor="end">gj-12724</text>
-<line x1="237.8" y1="562" x2="248.1" y2="562" class="wh"/>
-<circle cx="243.9" cy="562" r="3.6" class="rx"/>
-<line x1="361.4" y1="571" x2="389.5" y2="571" class="wh"/>
-<circle cx="366.8" cy="571" r="3.6" class="tx"/>
-<text x="142" y="590.0" class="rl" text-anchor="end">sirius-b</text>
-<line x1="222.9" y1="584" x2="238.6" y2="584" class="wh"/>
-<circle cx="234.6" cy="584" r="3.6" class="rx"/>
-<line x1="281.7" y1="593" x2="302.7" y2="593" class="wh"/>
-<circle cx="290.0" cy="593" r="3.6" class="tx"/>
-<text x="142" y="612.0" class="rl" text-anchor="end">sirius-a</text>
-<line x1="179.6" y1="606" x2="201.8" y2="606" class="wh"/>
-<circle cx="196.5" cy="606" r="3.6" class="rx"/>
-<line x1="323.4" y1="615" x2="364.1" y2="615" class="wh"/>
-<circle cx="335.5" cy="615" r="3.6" class="tx"/>
-<text x="614" y="38" class="pt">W2<tspan class="ps"> · 4.6 μm</tspan></text>
-<line x1="672.6" y1="46" x2="672.6" y2="618" class="gr"/>
-<text x="672.6" y="632" class="tk" text-anchor="middle">13</text>
-<line x1="745.8" y1="46" x2="745.8" y2="618" class="gr"/>
-<text x="745.8" y="632" class="tk" text-anchor="middle">14</text>
-<line x1="819.0" y1="46" x2="819.0" y2="618" class="gr"/>
-<text x="819.0" y="632" class="tk" text-anchor="middle">15</text>
-<line x1="892.2" y1="46" x2="892.2" y2="618" class="gr"/>
-<text x="892.2" y="632" class="tk" text-anchor="middle">16</text>
-<line x1="965.4" y1="46" x2="965.4" y2="618" class="gr"/>
-<text x="965.4" y="632" class="tk" text-anchor="middle">17</text>
-<text x="819" y="650" class="ax" text-anchor="middle">Vega mag → deeper</text>
-<line x1="930.1" y1="56" x2="992.9" y2="56" class="wh"/>
-<circle cx="943.3" cy="56" r="3.6" class="rx"/>
-<line x1="856.0" y1="65" x2="867.4" y2="65" class="wh"/>
-<circle cx="862.0" cy="65" r="3.6" class="tx"/>
-<line x1="905.4" y1="78" x2="921.4" y2="78" class="wh"/>
-<circle cx="914.4" cy="78" r="3.6" class="rx"/>
-<line x1="934.1" y1="87" x2="954.8" y2="87" class="wh"/>
-<circle cx="940.1" cy="87" r="3.6" class="tx"/>
-<line x1="853.4" y1="100" x2="876.6" y2="100" class="wh"/>
-<circle cx="862.5" cy="100" r="3.6" class="rx"/>
-<line x1="891.2" y1="109" x2="927.8" y2="109" class="wh"/>
-<circle cx="901.6" cy="109" r="3.6" class="tx"/>
-<line x1="931.2" y1="122" x2="958.4" y2="122" class="wh"/>
-<circle cx="943.6" cy="122" r="3.6" class="rx"/>
-<line x1="837.4" y1="131" x2="856.8" y2="131" class="wh"/>
-<circle cx="844.4" cy="131" r="3.6" class="tx"/>
-<line x1="927.9" y1="144" x2="999.7" y2="144" class="wh"/>
-<circle cx="949.4" cy="144" r="3.6" class="rx"/>
-<line x1="842.1" y1="153" x2="903.3" y2="153" class="wh"/>
-<circle cx="852.2" cy="153" r="3.6" class="tx"/>
-<line x1="800.2" y1="166" x2="817.1" y2="166" class="wh"/>
-<circle cx="811.6" cy="166" r="3.6" class="rx"/>
-<line x1="803.2" y1="175" x2="814.8" y2="175" class="wh"/>
-<circle cx="809.8" cy="175" r="3.6" class="tx"/>
-<line x1="915.1" y1="188" x2="970.8" y2="188" class="wh"/>
-<circle cx="924.2" cy="188" r="3.6" class="rx"/>
-<line x1="857.0" y1="197" x2="903.6" y2="197" class="wh"/>
-<circle cx="869.0" cy="197" r="3.6" class="tx"/>
-<line x1="836.8" y1="210" x2="853.8" y2="210" class="wh"/>
-<circle cx="846.6" cy="210" r="3.6" class="rx"/>
-<line x1="842.6" y1="219" x2="874.6" y2="219" class="wh"/>
-<circle cx="847.6" cy="219" r="3.6" class="tx"/>
-<line x1="837.0" y1="232" x2="849.4" y2="232" class="wh"/>
-<circle cx="843.4" cy="232" r="3.6" class="rx"/>
-<line x1="879.2" y1="241" x2="906.9" y2="241" class="wh"/>
-<circle cx="885.4" cy="241" r="3.6" class="tx"/>
-<line x1="894.8" y1="254" x2="921.6" y2="254" class="wh"/>
-<circle cx="905.5" cy="254" r="3.6" class="rx"/>
-<line x1="862.8" y1="263" x2="882.4" y2="263" class="wh"/>
-<circle cx="872.2" cy="263" r="3.6" class="tx"/>
-<line x1="892.4" y1="276" x2="908.5" y2="276" class="wh"/>
-<circle cx="899.6" cy="276" r="3.6" class="rx"/>
-<line x1="916.3" y1="285" x2="936.5" y2="285" class="wh"/>
-<circle cx="926.9" cy="285" r="3.6" class="tx"/>
-<line x1="833.0" y1="298" x2="843.3" y2="298" class="wh"/>
-<circle cx="838.1" cy="298" r="3.6" class="rx"/>
-<line x1="883.8" y1="307" x2="913.6" y2="307" class="wh"/>
-<circle cx="891.5" cy="307" r="3.6" class="tx"/>
-<line x1="789.6" y1="320" x2="806.4" y2="320" class="wh"/>
-<circle cx="796.7" cy="320" r="3.6" class="rx"/>
-<line x1="802.3" y1="329" x2="846.3" y2="329" class="wh"/>
-<circle cx="808.3" cy="329" r="3.6" class="tx"/>
-<line x1="807.4" y1="342" x2="822.8" y2="342" class="wh"/>
-<circle cx="817.7" cy="342" r="3.6" class="rx"/>
-<line x1="828.0" y1="351" x2="862.6" y2="351" class="wh"/>
-<circle cx="838.1" cy="351" r="3.6" class="tx"/>
-<line x1="786.6" y1="364" x2="800.7" y2="364" class="wh"/>
-<circle cx="793.2" cy="364" r="3.6" class="rx"/>
-<line x1="790.5" y1="373" x2="832.1" y2="373" class="wh"/>
-<circle cx="798.6" cy="373" r="3.6" class="tx"/>
-<line x1="813.6" y1="386" x2="844.8" y2="386" class="wh"/>
-<circle cx="822.0" cy="386" r="3.6" class="rx"/>
-<line x1="752.8" y1="395" x2="790.6" y2="395" class="wh"/>
-<circle cx="762.4" cy="395" r="3.6" class="tx"/>
-<line x1="958.6" y1="408" x2="981.4" y2="408" class="wh"/>
-<circle cx="967.8" cy="408" r="3.6" class="rx"/>
-<line x1="974.8" y1="417" x2="1057.1" y2="417" class="wh"/>
-<circle cx="986.3" cy="417" r="3.6" class="tx"/>
-<line x1="766.7" y1="430" x2="781.1" y2="430" class="wh"/>
-<circle cx="774.2" cy="430" r="3.6" class="rx"/>
-<line x1="725.9" y1="439" x2="764.9" y2="439" class="wh"/>
-<circle cx="734.3" cy="439" r="3.6" class="tx"/>
-<line x1="765.0" y1="452" x2="805.8" y2="452" class="wh"/>
-<circle cx="776.8" cy="452" r="3.6" class="rx"/>
-<line x1="756.2" y1="461" x2="795.4" y2="461" class="wh"/>
-<circle cx="766.4" cy="461" r="3.6" class="tx"/>
-<line x1="812.7" y1="474" x2="861.8" y2="474" class="wh"/>
-<circle cx="820.2" cy="474" r="3.6" class="rx"/>
-<line x1="795.9" y1="483" x2="837.4" y2="483" class="wh"/>
-<circle cx="803.7" cy="483" r="3.6" class="tx"/>
-<line x1="764.3" y1="496" x2="807.5" y2="496" class="wh"/>
-<circle cx="775.2" cy="496" r="3.6" class="rx"/>
-<line x1="738.4" y1="505" x2="770.8" y2="505" class="wh"/>
-<circle cx="750.6" cy="505" r="3.6" class="tx"/>
-<line x1="670.7" y1="518" x2="688.5" y2="518" class="wh"/>
-<circle cx="679.5" cy="518" r="3.6" class="rx"/>
-<line x1="761.1" y1="527" x2="833.2" y2="527" class="wh"/>
-<circle cx="770.1" cy="527" r="3.6" class="tx"/>
-<line x1="820.9" y1="540" x2="869.0" y2="540" class="wh"/>
-<circle cx="829.5" cy="540" r="3.6" class="rx"/>
-<line x1="788.7" y1="549" x2="845.3" y2="549" class="wh"/>
-<circle cx="794.6" cy="549" r="3.6" class="tx"/>
-<line x1="814.4" y1="562" x2="843.9" y2="562" class="wh"/>
-<circle cx="820.1" cy="562" r="3.6" class="rx"/>
-<line x1="814.0" y1="571" x2="869.3" y2="571" class="wh"/>
-<circle cx="820.1" cy="571" r="3.6" class="tx"/>
-<line x1="712.1" y1="584" x2="798.9" y2="584" class="wh"/>
-<circle cx="723.2" cy="584" r="3.6" class="rx"/>
-<line x1="683.8" y1="593" x2="707.7" y2="593" class="wh"/>
-<circle cx="689.2" cy="593" r="3.6" class="tx"/>
-<line x1="699.3" y1="606" x2="749.5" y2="606" class="wh"/>
-<circle cx="710.1" cy="606" r="3.6" class="rx"/>
-<line x1="694.5" y1="615" x2="722.9" y2="615" class="wh"/>
-<circle cx="705.4" cy="615" r="3.6" class="tx"/>
-<text x="150" y="750" class="pt">W3<tspan class="ps"> · 12 μm</tspan></text>
-<line x1="196.9" y1="758" x2="196.9" y2="1330" class="gr"/>
-<text x="196.9" y="1344" class="tk" text-anchor="middle">9</text>
-<line x1="255.4" y1="758" x2="255.4" y2="1330" class="gr"/>
-<text x="255.4" y="1344" class="tk" text-anchor="middle">10</text>
-<line x1="314.0" y1="758" x2="314.0" y2="1330" class="gr"/>
-<text x="314.0" y="1344" class="tk" text-anchor="middle">11</text>
-<line x1="372.6" y1="758" x2="372.6" y2="1330" class="gr"/>
-<text x="372.6" y="1344" class="tk" text-anchor="middle">12</text>
-<line x1="431.1" y1="758" x2="431.1" y2="1330" class="gr"/>
-<text x="431.1" y="1344" class="tk" text-anchor="middle">13</text>
-<line x1="489.7" y1="758" x2="489.7" y2="1330" class="gr"/>
-<text x="489.7" y="1344" class="tk" text-anchor="middle">14</text>
-<line x1="548.3" y1="758" x2="548.3" y2="1330" class="gr"/>
-<text x="548.3" y="1344" class="tk" text-anchor="middle">15</text>
-<text x="355" y="1362" class="ax" text-anchor="middle">Vega mag → deeper</text>
-<text x="142" y="774.0" class="rl" text-anchor="end">lacaille-8760</text>
-<line x1="364.0" y1="768" x2="405.3" y2="768" class="wh"/>
-<circle cx="384.9" cy="768" r="3.6" class="rx"/>
-<line x1="344.7" y1="777" x2="398.4" y2="777" class="wh"/>
-<circle cx="382.5" cy="777" r="3.6" class="tx"/>
-<text x="142" y="796.0" class="rl" text-anchor="end">gj-54</text>
-<line x1="418.4" y1="790" x2="475.7" y2="790" class="wh"/>
-<circle cx="448.1" cy="790" r="3.6" class="rx"/>
-<line x1="414.9" y1="799" x2="469.3" y2="799" class="wh"/>
-<circle cx="451.1" cy="799" r="3.6" class="tx"/>
-<text x="142" y="818.0" class="rl" text-anchor="end">lacaille-9352</text>
-<line x1="386.2" y1="812" x2="427.0" y2="812" class="wh"/>
-<circle cx="410.7" cy="812" r="3.6" class="rx"/>
-<line x1="351.3" y1="821" x2="396.3" y2="821" class="wh"/>
-<circle cx="366.7" cy="821" r="3.6" class="tx"/>
-<text x="142" y="840.0" class="rl" text-anchor="end">lalande-21185</text>
-<line x1="441.2" y1="834" x2="497.7" y2="834" class="wh"/>
-<circle cx="468.2" cy="834" r="3.6" class="rx"/>
-<line x1="387.5" y1="843" x2="423.9" y2="843" class="wh"/>
-<circle cx="404.3" cy="843" r="3.6" class="tx"/>
-<text x="142" y="862.0" class="rl" text-anchor="end">gj-908</text>
-<line x1="430.8" y1="856" x2="486.9" y2="856" class="wh"/>
-<circle cx="453.8" cy="856" r="3.6" class="rx"/>
-<line x1="335.3" y1="865" x2="377.4" y2="865" class="wh"/>
-<circle cx="352.5" cy="865" r="3.6" class="tx"/>
-<text x="142" y="884.0" class="rl" text-anchor="end">eps-eri</text>
-<line x1="402.5" y1="878" x2="428.7" y2="878" class="wh"/>
-<circle cx="414.6" cy="878" r="3.6" class="rx"/>
-<line x1="396.5" y1="887" x2="421.3" y2="887" class="wh"/>
-<circle cx="411.1" cy="887" r="3.6" class="tx"/>
-<text x="142" y="906.0" class="rl" text-anchor="end">wolf-359</text>
-<line x1="332.1" y1="900" x2="376.1" y2="900" class="wh"/>
-<circle cx="353.3" cy="900" r="3.6" class="rx"/>
-<line x1="291.6" y1="909" x2="424.5" y2="909" class="wh"/>
-<circle cx="334.8" cy="909" r="3.6" class="tx"/>
-<text x="142" y="928.0" class="rl" text-anchor="end">van-maanen</text>
-<line x1="375.9" y1="922" x2="446.8" y2="922" class="wh"/>
-<circle cx="391.0" cy="922" r="3.6" class="rx"/>
-<line x1="417.7" y1="931" x2="455.2" y2="931" class="wh"/>
-<circle cx="439.1" cy="931" r="3.6" class="tx"/>
-<text x="142" y="950.0" class="rl" text-anchor="end">gj65-a</text>
-<line x1="416.1" y1="944" x2="461.4" y2="944" class="wh"/>
-<circle cx="439.2" cy="944" r="3.6" class="rx"/>
-<line x1="345.5" y1="953" x2="387.5" y2="953" class="wh"/>
-<circle cx="371.2" cy="953" r="3.6" class="tx"/>
-<text x="142" y="972.0" class="rl" text-anchor="end">wolf-1061</text>
-<line x1="419.6" y1="966" x2="492.2" y2="966" class="wh"/>
-<circle cx="437.6" cy="966" r="3.6" class="rx"/>
-<line x1="408.4" y1="975" x2="491.9" y2="975" class="wh"/>
-<circle cx="439.0" cy="975" r="3.6" class="tx"/>
-<text x="142" y="994.0" class="rl" text-anchor="end">tau-cet</text>
-<line x1="417.6" y1="988" x2="451.4" y2="988" class="wh"/>
-<circle cx="432.7" cy="988" r="3.6" class="rx"/>
-<line x1="456.1" y1="997" x2="504.3" y2="997" class="wh"/>
-<circle cx="479.6" cy="997" r="3.6" class="tx"/>
-<text x="142" y="1016.0" class="rl" text-anchor="end">gj65-b</text>
-<line x1="421.6" y1="1010" x2="468.8" y2="1010" class="wh"/>
-<circle cx="444.2" cy="1010" r="3.6" class="rx"/>
-<line x1="344.9" y1="1019" x2="382.8" y2="1019" class="wh"/>
-<circle cx="368.4" cy="1019" r="3.6" class="tx"/>
-<text x="142" y="1038.0" class="rl" text-anchor="end">ross-248</text>
-<line x1="376.5" y1="1032" x2="413.7" y2="1032" class="wh"/>
-<circle cx="396.8" cy="1032" r="3.6" class="rx"/>
-<line x1="427.7" y1="1041" x2="475.5" y2="1041" class="wh"/>
-<circle cx="453.6" cy="1041" r="3.6" class="tx"/>
-<text x="142" y="1060.0" class="rl" text-anchor="end">gj-784</text>
-<line x1="394.0" y1="1054" x2="439.3" y2="1054" class="wh"/>
-<circle cx="413.6" cy="1054" r="3.6" class="rx"/>
-<line x1="398.6" y1="1063" x2="434.9" y2="1063" class="wh"/>
-<circle cx="417.5" cy="1063" r="3.6" class="tx"/>
-<text x="142" y="1082.0" class="rl" text-anchor="end">ross-128</text>
-<line x1="414.7" y1="1076" x2="493.6" y2="1076" class="wh"/>
-<circle cx="446.6" cy="1076" r="3.6" class="rx"/>
-<line x1="409.7" y1="1085" x2="474.6" y2="1085" class="wh"/>
-<circle cx="441.6" cy="1085" r="3.6" class="tx"/>
-<text x="142" y="1104.0" class="rl" text-anchor="end">barnard-star</text>
-<line x1="297.8" y1="1098" x2="338.9" y2="1098" class="wh"/>
-<circle cx="325.5" cy="1098" r="3.6" class="rx"/>
-<line x1="399.5" y1="1107" x2="432.7" y2="1107" class="wh"/>
-<circle cx="415.3" cy="1107" r="3.6" class="tx"/>
-<text x="142" y="1126.0" class="rl" text-anchor="end">gj-1061</text>
-<line x1="433.6" y1="1120" x2="462.9" y2="1120" class="wh"/>
-<circle cx="442.4" cy="1120" r="3.6" class="rx"/>
-<line x1="433.8" y1="1129" x2="475.1" y2="1129" class="wh"/>
-<circle cx="444.5" cy="1129" r="3.6" class="tx"/>
-<text x="142" y="1148.0" class="rl" text-anchor="end">ross-154</text>
-<line x1="402.3" y1="1142" x2="461.3" y2="1142" class="wh"/>
-<circle cx="418.1" cy="1142" r="3.6" class="rx"/>
-<line x1="386.6" y1="1151" x2="459.3" y2="1151" class="wh"/>
-<circle cx="421.1" cy="1151" r="3.6" class="tx"/>
-<text x="142" y="1170.0" class="rl" text-anchor="end">alpha-cen-b</text>
-<line x1="295.5" y1="1164" x2="332.3" y2="1164" class="wh"/>
-<circle cx="313.3" cy="1164" r="3.6" class="rx"/>
-<line x1="283.9" y1="1173" x2="335.1" y2="1173" class="wh"/>
-<circle cx="309.4" cy="1173" r="3.6" class="tx"/>
-<text x="142" y="1192.0" class="rl" text-anchor="end">eps-ind-a</text>
-<line x1="404.5" y1="1186" x2="438.3" y2="1186" class="wh"/>
-<circle cx="423.6" cy="1186" r="3.6" class="rx"/>
-<line x1="286.9" y1="1195" x2="318.0" y2="1195" class="wh"/>
-<circle cx="306.0" cy="1195" r="3.6" class="tx"/>
-<text x="142" y="1214.0" class="rl" text-anchor="end">alpha-cen-a</text>
-<line x1="331.1" y1="1208" x2="391.6" y2="1208" class="wh"/>
-<circle cx="355.2" cy="1208" r="3.6" class="rx"/>
-<line x1="278.6" y1="1217" x2="318.8" y2="1217" class="wh"/>
-<circle cx="304.3" cy="1217" r="3.6" class="tx"/>
-<text x="142" y="1236.0" class="rl" text-anchor="end">proxima-cen</text>
-<line x1="277.5" y1="1230" x2="308.2" y2="1230" class="wh"/>
-<circle cx="297.9" cy="1230" r="3.6" class="rx"/>
-<line x1="279.8" y1="1239" x2="317.1" y2="1239" class="wh"/>
-<circle cx="303.7" cy="1239" r="3.6" class="tx"/>
-<text x="142" y="1258.0" class="rl" text-anchor="end">teegarden</text>
-<line x1="346.3" y1="1252" x2="378.6" y2="1252" class="wh"/>
-<circle cx="362.8" cy="1252" r="3.6" class="rx"/>
-<line x1="423.5" y1="1261" x2="474.9" y2="1261" class="wh"/>
-<circle cx="440.2" cy="1261" r="3.6" class="tx"/>
-<text x="142" y="1280.0" class="rl" text-anchor="end">gj-12724</text>
-<line x1="419.5" y1="1274" x2="496.4" y2="1274" class="wh"/>
-<circle cx="454.4" cy="1274" r="3.6" class="rx"/>
-<line x1="414.7" y1="1283" x2="499.8" y2="1283" class="wh"/>
-<circle cx="456.1" cy="1283" r="3.6" class="tx"/>
-<text x="142" y="1302.0" class="rl" text-anchor="end">sirius-b</text>
-<line x1="272.3" y1="1296" x2="304.8" y2="1296" class="wh"/>
-<circle cx="290.1" cy="1296" r="3.6" class="rx"/>
-<line x1="263.1" y1="1305" x2="303.3" y2="1305" class="wh"/>
-<circle cx="286.4" cy="1305" r="3.6" class="tx"/>
-<text x="142" y="1324.0" class="rl" text-anchor="end">sirius-a</text>
-<line x1="265.7" y1="1318" x2="303.7" y2="1318" class="wh"/>
-<circle cx="290.0" cy="1318" r="3.6" class="rx"/>
-<line x1="192.3" y1="1327" x2="222.4" y2="1327" class="wh"/>
-<circle cx="210.3" cy="1327" r="3.6" class="tx"/>
-<text x="614" y="750" class="pt">W4<tspan class="ps"> · 22 μm</tspan></text>
-<line x1="656.4" y1="758" x2="656.4" y2="1330" class="gr"/>
-<text x="656.4" y="1344" class="tk" text-anchor="middle">8</text>
-<line x1="727.1" y1="758" x2="727.1" y2="1330" class="gr"/>
-<text x="727.1" y="1344" class="tk" text-anchor="middle">9</text>
-<line x1="797.8" y1="758" x2="797.8" y2="1330" class="gr"/>
-<text x="797.8" y="1344" class="tk" text-anchor="middle">10</text>
-<line x1="868.5" y1="758" x2="868.5" y2="1330" class="gr"/>
-<text x="868.5" y="1344" class="tk" text-anchor="middle">11</text>
-<line x1="939.2" y1="758" x2="939.2" y2="1330" class="gr"/>
-<text x="939.2" y="1344" class="tk" text-anchor="middle">12</text>
-<line x1="1009.9" y1="758" x2="1009.9" y2="1330" class="gr"/>
-<text x="1009.9" y="1344" class="tk" text-anchor="middle">13</text>
-<text x="819" y="1362" class="ax" text-anchor="middle">Vega mag → deeper</text>
-<line x1="768.1" y1="768" x2="867.1" y2="768" class="wh"/>
-<circle cx="798.9" cy="768" r="3.6" class="rx"/>
-<line x1="756.5" y1="777" x2="848.4" y2="777" class="wh"/>
-<circle cx="798.5" cy="777" r="3.6" class="tx"/>
-<line x1="775.4" y1="790" x2="844.9" y2="790" class="wh"/>
-<circle cx="810.3" cy="790" r="3.6" class="rx"/>
-<line x1="771.0" y1="799" x2="868.2" y2="799" class="wh"/>
-<circle cx="812.3" cy="799" r="3.6" class="tx"/>
-<line x1="801.6" y1="812" x2="946.0" y2="812" class="wh"/>
-<circle cx="852.6" cy="812" r="3.6" class="rx"/>
-<line x1="771.1" y1="821" x2="962.5" y2="821" class="wh"/>
-<circle cx="827.4" cy="821" r="3.6" class="tx"/>
-<line x1="819.2" y1="834" x2="920.5" y2="834" class="wh"/>
-<circle cx="867.1" cy="834" r="3.6" class="rx"/>
-<line x1="785.3" y1="843" x2="1004.6" y2="843" class="wh"/>
-<circle cx="830.3" cy="843" r="3.6" class="tx"/>
-<line x1="788.9" y1="856" x2="883.9" y2="856" class="wh"/>
-<circle cx="835.7" cy="856" r="3.6" class="rx"/>
-<line x1="763.7" y1="865" x2="879.5" y2="865" class="wh"/>
-<circle cx="816.7" cy="865" r="3.6" class="tx"/>
-<line x1="820.8" y1="878" x2="902.0" y2="878" class="wh"/>
-<circle cx="868.7" cy="878" r="3.6" class="rx"/>
-<line x1="817.9" y1="887" x2="990.8" y2="887" class="wh"/>
-<circle cx="855.8" cy="887" r="3.6" class="tx"/>
-<line x1="694.5" y1="900" x2="965.1" y2="900" class="wh"/>
-<circle cx="773.6" cy="900" r="3.6" class="rx"/>
-<line x1="661.1" y1="909" x2="840.0" y2="909" class="wh"/>
-<circle cx="709.9" cy="909" r="3.6" class="tx"/>
-<line x1="772.8" y1="922" x2="885.5" y2="922" class="wh"/>
-<circle cx="797.2" cy="922" r="3.6" class="rx"/>
-<line x1="782.1" y1="931" x2="900.6" y2="931" class="wh"/>
-<circle cx="836.1" cy="931" r="3.6" class="tx"/>
-<line x1="807.2" y1="944" x2="869.1" y2="944" class="wh"/>
-<circle cx="839.0" cy="944" r="3.6" class="rx"/>
-<line x1="728.3" y1="953" x2="769.7" y2="953" class="wh"/>
-<circle cx="751.6" cy="953" r="3.6" class="tx"/>
-<line x1="749.9" y1="966" x2="893.4" y2="966" class="wh"/>
-<circle cx="792.7" cy="966" r="3.6" class="rx"/>
-<line x1="740.6" y1="975" x2="924.8" y2="975" class="wh"/>
-<circle cx="794.3" cy="975" r="3.6" class="tx"/>
-<line x1="825.8" y1="988" x2="947.9" y2="988" class="wh"/>
-<circle cx="861.0" cy="988" r="3.6" class="rx"/>
-<line x1="805.9" y1="997" x2="923.8" y2="997" class="wh"/>
-<circle cx="848.0" cy="997" r="3.6" class="tx"/>
-<line x1="813.8" y1="1010" x2="883.5" y2="1010" class="wh"/>
-<circle cx="844.7" cy="1010" r="3.6" class="rx"/>
-<line x1="721.7" y1="1019" x2="772.8" y2="1019" class="wh"/>
-<circle cx="744.4" cy="1019" r="3.6" class="tx"/>
-<line x1="742.3" y1="1032" x2="791.2" y2="1032" class="wh"/>
-<circle cx="768.5" cy="1032" r="3.6" class="rx"/>
-<line x1="826.4" y1="1041" x2="898.3" y2="1041" class="wh"/>
-<circle cx="856.6" cy="1041" r="3.6" class="tx"/>
-<line x1="741.1" y1="1054" x2="812.4" y2="1054" class="wh"/>
-<circle cx="774.8" cy="1054" r="3.6" class="rx"/>
-<line x1="798.3" y1="1063" x2="951.4" y2="1063" class="wh"/>
-<circle cx="860.1" cy="1063" r="3.6" class="tx"/>
-<line x1="792.7" y1="1076" x2="892.5" y2="1076" class="wh"/>
-<circle cx="829.2" cy="1076" r="3.6" class="rx"/>
-<line x1="774.7" y1="1085" x2="899.7" y2="1085" class="wh"/>
-<circle cx="826.2" cy="1085" r="3.6" class="tx"/>
-<line x1="787.9" y1="1098" x2="931.4" y2="1098" class="wh"/>
-<circle cx="857.2" cy="1098" r="3.6" class="rx"/>
-<line x1="797.1" y1="1107" x2="909.1" y2="1107" class="wh"/>
-<circle cx="838.5" cy="1107" r="3.6" class="tx"/>
-<line x1="810.6" y1="1120" x2="859.5" y2="1120" class="wh"/>
-<circle cx="823.8" cy="1120" r="3.6" class="rx"/>
-<line x1="803.9" y1="1129" x2="917.8" y2="1129" class="wh"/>
-<circle cx="821.6" cy="1129" r="3.6" class="tx"/>
-<line x1="792.5" y1="1142" x2="926.5" y2="1142" class="wh"/>
-<circle cx="826.2" cy="1142" r="3.6" class="rx"/>
-<line x1="793.2" y1="1151" x2="926.2" y2="1151" class="wh"/>
-<circle cx="835.2" cy="1151" r="3.6" class="tx"/>
-<line x1="717.6" y1="1164" x2="882.5" y2="1164" class="wh"/>
-<circle cx="786.2" cy="1164" r="3.6" class="rx"/>
-<line x1="731.2" y1="1173" x2="883.7" y2="1173" class="wh"/>
-<circle cx="790.7" cy="1173" r="3.6" class="tx"/>
-<line x1="790.8" y1="1186" x2="839.7" y2="1186" class="wh"/>
-<circle cx="817.7" cy="1186" r="3.6" class="rx"/>
-<line x1="776.6" y1="1195" x2="941.5" y2="1195" class="wh"/>
-<circle cx="855.9" cy="1195" r="3.6" class="tx"/>
-<line x1="717.2" y1="1208" x2="877.7" y2="1208" class="wh"/>
-<circle cx="783.1" cy="1208" r="3.6" class="rx"/>
-<line x1="740.2" y1="1217" x2="902.0" y2="1217" class="wh"/>
-<circle cx="790.9" cy="1217" r="3.6" class="tx"/>
-<line x1="747.8" y1="1230" x2="897.2" y2="1230" class="wh"/>
-<circle cx="795.1" cy="1230" r="3.6" class="rx"/>
-<line x1="722.7" y1="1239" x2="809.1" y2="1239" class="wh"/>
-<circle cx="761.3" cy="1239" r="3.6" class="tx"/>
-<line x1="745.5" y1="1252" x2="831.7" y2="1252" class="wh"/>
-<circle cx="777.8" cy="1252" r="3.6" class="rx"/>
-<line x1="700.8" y1="1261" x2="844.8" y2="1261" class="wh"/>
-<circle cx="722.0" cy="1261" r="3.6" class="tx"/>
-<line x1="763.4" y1="1274" x2="936.9" y2="1274" class="wh"/>
-<circle cx="854.7" cy="1274" r="3.6" class="rx"/>
-<line x1="756.3" y1="1283" x2="896.9" y2="1283" class="wh"/>
-<circle cx="798.7" cy="1283" r="3.6" class="tx"/>
-<line x1="767.1" y1="1296" x2="883.4" y2="1296" class="wh"/>
-<circle cx="805.7" cy="1296" r="3.6" class="rx"/>
-<line x1="741.2" y1="1305" x2="838.7" y2="1305" class="wh"/>
-<circle cx="785.4" cy="1305" r="3.6" class="tx"/>
-<line x1="777.6" y1="1318" x2="912.0" y2="1318" class="wh"/>
-<circle cx="807.7" cy="1318" r="3.6" class="rx"/>
-<line x1="742.7" y1="1327" x2="808.1" y2="1327" class="wh"/>
-<circle cx="767.8" cy="1327" r="3.6" class="tx"/>
+<svg viewBox="0 0 1058 2134" width="1058" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="90 percent recovery depth by endpoint and band">
+<style>text{font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;fill:#333}.pt{font-size:15px;font-weight:600}.ps{font-size:13px;fill:#777;font-weight:400}.tk{font-size:10.5px;fill:#999}.ax{font-size:11px;fill:#666}.rl{font-size:11px}.gr{stroke:#e8e8e4;stroke-width:1}.wh{stroke:#c4c4be;stroke-width:1.8;stroke-linecap:round}.rx{fill:#b4551f}.tx{fill:#fdfdfc;stroke:#b4551f;stroke-width:1.6}</style>
+<rect x="0" y="0" width="1058" height="2134" fill="#fdfdfc" rx="8"/>
+<text x="158" y="22" class="pt">90% recovery depth by endpoint and band<tspan class="ps"> · duty ≥ 0.5 · filled = Rx, open = Tx, bar = range over 550–10,000 AU · calibration v0.2.0</tspan></text>
+<text x="158" y="38" class="pt">W1<tspan class="ps"> · 3.4 μm</tspan></text>
+<line x1="158.0" y1="46" x2="158.0" y2="986" class="gr"/>
+<text x="158.0" y="1000" class="tk" text-anchor="middle">12</text>
+<line x1="216.6" y1="46" x2="216.6" y2="986" class="gr"/>
+<text x="216.6" y="1000" class="tk" text-anchor="middle">13</text>
+<line x1="275.1" y1="46" x2="275.1" y2="986" class="gr"/>
+<text x="275.1" y="1000" class="tk" text-anchor="middle">14</text>
+<line x1="333.7" y1="46" x2="333.7" y2="986" class="gr"/>
+<text x="333.7" y="1000" class="tk" text-anchor="middle">15</text>
+<line x1="392.3" y1="46" x2="392.3" y2="986" class="gr"/>
+<text x="392.3" y="1000" class="tk" text-anchor="middle">16</text>
+<line x1="450.9" y1="46" x2="450.9" y2="986" class="gr"/>
+<text x="450.9" y="1000" class="tk" text-anchor="middle">17</text>
+<line x1="509.4" y1="46" x2="509.4" y2="986" class="gr"/>
+<text x="509.4" y="1000" class="tk" text-anchor="middle">18</text>
+<line x1="568.0" y1="46" x2="568.0" y2="986" class="gr"/>
+<text x="568.0" y="1000" class="tk" text-anchor="middle">19</text>
+<text x="363" y="1018" class="ax" text-anchor="middle">Vega mag → deeper</text>
+<text x="150" y="60.0" class="rl" text-anchor="end">lalande-21185</text>
+<line x1="486.7" y1="54" x2="552.4" y2="54" class="wh"/>
+<circle cx="496.8" cy="54" r="3.3" class="rx"/>
+<line x1="463.8" y1="62" x2="507.6" y2="62" class="wh"/>
+<circle cx="473.3" cy="62" r="3.3" class="tx"/>
+<text x="150" y="80.0" class="rl" text-anchor="end">lacaille-8760</text>
+<line x1="470.3" y1="74" x2="545.6" y2="74" class="wh"/>
+<circle cx="479.7" cy="74" r="3.3" class="rx"/>
+<line x1="425.6" y1="82" x2="436.6" y2="82" class="wh"/>
+<circle cx="430.8" cy="82" r="3.3" class="tx"/>
+<text x="150" y="100.0" class="rl" text-anchor="end">gj-54</text>
+<line x1="469.5" y1="94" x2="484.7" y2="94" class="wh"/>
+<circle cx="476.3" cy="94" r="3.3" class="rx"/>
+<line x1="475.0" y1="102" x2="492.7" y2="102" class="wh"/>
+<circle cx="480.9" cy="102" r="3.3" class="tx"/>
+<text x="150" y="120.0" class="rl" text-anchor="end">gj-1061</text>
+<line x1="469.7" y1="114" x2="493.6" y2="114" class="wh"/>
+<circle cx="474.7" cy="114" r="3.3" class="rx"/>
+<line x1="484.7" y1="122" x2="549.8" y2="122" class="wh"/>
+<circle cx="491.0" cy="122" r="3.3" class="tx"/>
+<text x="150" y="140.0" class="rl" text-anchor="end">kapteyn-star</text>
+<line x1="457.2" y1="134" x2="489.0" y2="134" class="wh"/>
+<circle cx="463.3" cy="134" r="3.3" class="rx"/>
+<line x1="471.3" y1="142" x2="528.4" y2="142" class="wh"/>
+<circle cx="480.6" cy="142" r="3.3" class="tx"/>
+<text x="150" y="160.0" class="rl" text-anchor="end">lacaille-9352</text>
+<line x1="452.4" y1="154" x2="501.6" y2="154" class="wh"/>
+<circle cx="461.0" cy="154" r="3.3" class="rx"/>
+<line x1="441.1" y1="162" x2="463.4" y2="162" class="wh"/>
+<circle cx="445.6" cy="162" r="3.3" class="tx"/>
+<text x="150" y="180.0" class="rl" text-anchor="end">ez-aqr</text>
+<line x1="451.1" y1="174" x2="520.6" y2="174" class="wh"/>
+<circle cx="457.5" cy="174" r="3.3" class="rx"/>
+<line x1="476.0" y1="182" x2="492.5" y2="182" class="wh"/>
+<circle cx="483.1" cy="182" r="3.3" class="tx"/>
+<text x="150" y="200.0" class="rl" text-anchor="end">wise-0855</text>
+<line x1="432.3" y1="194" x2="494.8" y2="194" class="wh"/>
+<circle cx="441.5" cy="194" r="3.3" class="rx"/>
+<line x1="407.0" y1="202" x2="435.2" y2="202" class="wh"/>
+<circle cx="413.8" cy="202" r="3.3" class="tx"/>
+<text x="150" y="220.0" class="rl" text-anchor="end">wolf-359</text>
+<line x1="435.1" y1="214" x2="474.5" y2="214" class="wh"/>
+<circle cx="440.9" cy="214" r="3.3" class="rx"/>
+<line x1="392.3" y1="222" x2="412.1" y2="222" class="wh"/>
+<circle cx="397.4" cy="222" r="3.3" class="tx"/>
+<text x="150" y="240.0" class="rl" text-anchor="end">gj-908</text>
+<line x1="430.6" y1="234" x2="461.6" y2="234" class="wh"/>
+<circle cx="440.0" cy="234" r="3.3" class="rx"/>
+<line x1="380.8" y1="242" x2="426.2" y2="242" class="wh"/>
+<circle cx="387.6" cy="242" r="3.3" class="tx"/>
+<text x="150" y="260.0" class="rl" text-anchor="end">gj-783</text>
+<line x1="431.9" y1="254" x2="477.4" y2="254" class="wh"/>
+<circle cx="438.8" cy="254" r="3.3" class="rx"/>
+<line x1="307.7" y1="262" x2="322.0" y2="262" class="wh"/>
+<circle cx="312.2" cy="262" r="3.3" class="tx"/>
+<text x="150" y="280.0" class="rl" text-anchor="end">eps-eri</text>
+<line x1="427.7" y1="274" x2="442.4" y2="274" class="wh"/>
+<circle cx="431.1" cy="274" r="3.3" class="rx"/>
+<line x1="415.2" y1="282" x2="434.2" y2="282" class="wh"/>
+<circle cx="422.1" cy="282" r="3.3" class="tx"/>
+<text x="150" y="300.0" class="rl" text-anchor="end">van-maanen</text>
+<line x1="417.4" y1="294" x2="433.6" y2="294" class="wh"/>
+<circle cx="425.0" cy="294" r="3.3" class="rx"/>
+<line x1="425.4" y1="302" x2="471.3" y2="302" class="wh"/>
+<circle cx="432.2" cy="302" r="3.3" class="tx"/>
+<text x="150" y="320.0" class="rl" text-anchor="end">barnard-star</text>
+<line x1="410.6" y1="314" x2="446.8" y2="314" class="wh"/>
+<circle cx="421.3" cy="314" r="3.3" class="rx"/>
+<line x1="276.7" y1="322" x2="286.9" y2="322" class="wh"/>
+<circle cx="282.6" cy="322" r="3.3" class="tx"/>
+<text x="150" y="340.0" class="rl" text-anchor="end">gj65-a</text>
+<line x1="413.2" y1="334" x2="428.5" y2="334" class="wh"/>
+<circle cx="419.4" cy="334" r="3.3" class="rx"/>
+<line x1="449.2" y1="342" x2="487.4" y2="342" class="wh"/>
+<circle cx="454.7" cy="342" r="3.3" class="tx"/>
+<text x="150" y="360.0" class="rl" text-anchor="end">wolf-1061</text>
+<line x1="412.1" y1="354" x2="434.6" y2="354" class="wh"/>
+<circle cx="417.3" cy="354" r="3.3" class="rx"/>
+<line x1="412.1" y1="362" x2="429.7" y2="362" class="wh"/>
+<circle cx="419.6" cy="362" r="3.3" class="tx"/>
+<text x="150" y="380.0" class="rl" text-anchor="end">61-cyg-b</text>
+<line x1="402.4" y1="374" x2="434.1" y2="374" class="wh"/>
+<circle cx="412.2" cy="374" r="3.3" class="rx"/>
+<line x1="371.3" y1="382" x2="394.9" y2="382" class="wh"/>
+<circle cx="377.4" cy="382" r="3.3" class="tx"/>
+<text x="150" y="400.0" class="rl" text-anchor="end">tau-cet</text>
+<line x1="407.8" y1="394" x2="417.1" y2="394" class="wh"/>
+<circle cx="412.2" cy="394" r="3.3" class="rx"/>
+<line x1="439.2" y1="402" x2="456.5" y2="402" class="wh"/>
+<circle cx="445.4" cy="402" r="3.3" class="tx"/>
+<text x="150" y="420.0" class="rl" text-anchor="end">gj65-b</text>
+<line x1="403.8" y1="414" x2="422.5" y2="414" class="wh"/>
+<circle cx="411.3" cy="414" r="3.3" class="rx"/>
+<line x1="449.0" y1="422" x2="487.2" y2="422" class="wh"/>
+<circle cx="454.7" cy="422" r="3.3" class="tx"/>
+<text x="150" y="440.0" class="rl" text-anchor="end">61-cyg-a</text>
+<line x1="379.7" y1="434" x2="414.0" y2="434" class="wh"/>
+<circle cx="396.5" cy="434" r="3.3" class="rx"/>
+<line x1="325.3" y1="442" x2="353.5" y2="442" class="wh"/>
+<circle cx="332.0" cy="442" r="3.3" class="tx"/>
+<text x="150" y="460.0" class="rl" text-anchor="end">teegarden</text>
+<line x1="387.3" y1="454" x2="411.7" y2="454" class="wh"/>
+<circle cx="392.8" cy="454" r="3.3" class="rx"/>
+<line x1="362.4" y1="462" x2="392.2" y2="462" class="wh"/>
+<circle cx="367.8" cy="462" r="3.3" class="tx"/>
+<text x="150" y="480.0" class="rl" text-anchor="end">groombridge-34-a</text>
+<line x1="380.4" y1="474" x2="464.3" y2="474" class="wh"/>
+<circle cx="388.9" cy="474" r="3.3" class="rx"/>
+<line x1="348.8" y1="482" x2="357.2" y2="482" class="wh"/>
+<circle cx="351.6" cy="482" r="3.3" class="tx"/>
+<text x="150" y="500.0" class="rl" text-anchor="end">eps-ind-a</text>
+<line x1="380.7" y1="494" x2="402.0" y2="494" class="wh"/>
+<circle cx="384.5" cy="494" r="3.3" class="rx"/>
+<line x1="415.1" y1="502" x2="452.4" y2="502" class="wh"/>
+<circle cx="421.3" cy="502" r="3.3" class="tx"/>
+<text x="150" y="520.0" class="rl" text-anchor="end">ross-248</text>
+<line x1="370.2" y1="514" x2="391.6" y2="514" class="wh"/>
+<circle cx="376.0" cy="514" r="3.3" class="rx"/>
+<line x1="381.7" y1="522" x2="416.8" y2="522" class="wh"/>
+<circle cx="387.5" cy="522" r="3.3" class="tx"/>
+<text x="150" y="540.0" class="rl" text-anchor="end">gj-12724</text>
+<line x1="369.8" y1="534" x2="395.9" y2="534" class="wh"/>
+<circle cx="375.6" cy="534" r="3.3" class="rx"/>
+<line x1="367.0" y1="542" x2="395.8" y2="542" class="wh"/>
+<circle cx="374.2" cy="542" r="3.3" class="tx"/>
+<text x="150" y="560.0" class="rl" text-anchor="end">gj-784</text>
+<line x1="370.9" y1="554" x2="380.8" y2="554" class="wh"/>
+<circle cx="375.4" cy="554" r="3.3" class="rx"/>
+<line x1="382.4" y1="562" x2="419.6" y2="562" class="wh"/>
+<circle cx="388.3" cy="562" r="3.3" class="tx"/>
+<text x="150" y="580.0" class="rl" text-anchor="end">luyten-star</text>
+<line x1="362.9" y1="574" x2="405.9" y2="574" class="wh"/>
+<circle cx="372.0" cy="574" r="3.3" class="rx"/>
+<line x1="296.4" y1="582" x2="315.9" y2="582" class="wh"/>
+<circle cx="301.6" cy="582" r="3.3" class="tx"/>
+<text x="150" y="600.0" class="rl" text-anchor="end">gj-9193</text>
+<line x1="364.8" y1="594" x2="435.9" y2="594" class="wh"/>
+<circle cx="371.2" cy="594" r="3.3" class="rx"/>
+<line x1="303.5" y1="602" x2="331.3" y2="602" class="wh"/>
+<circle cx="309.5" cy="602" r="3.3" class="tx"/>
+<text x="150" y="620.0" class="rl" text-anchor="end">ross-128</text>
+<line x1="363.1" y1="614" x2="376.1" y2="614" class="wh"/>
+<circle cx="369.6" cy="614" r="3.3" class="rx"/>
+<line x1="372.4" y1="622" x2="416.4" y2="622" class="wh"/>
+<circle cx="381.2" cy="622" r="3.3" class="tx"/>
+<text x="150" y="640.0" class="rl" text-anchor="end">gj-1221</text>
+<line x1="355.3" y1="634" x2="389.1" y2="634" class="wh"/>
+<circle cx="366.8" cy="634" r="3.3" class="rx"/>
+<line x1="375.2" y1="642" x2="436.6" y2="642" class="wh"/>
+<circle cx="395.7" cy="642" r="3.3" class="tx"/>
+<text x="150" y="660.0" class="rl" text-anchor="end">ross-154</text>
+<line x1="358.7" y1="654" x2="379.4" y2="654" class="wh"/>
+<circle cx="364.8" cy="654" r="3.3" class="rx"/>
+<line x1="342.8" y1="662" x2="374.7" y2="662" class="wh"/>
+<circle cx="348.4" cy="662" r="3.3" class="tx"/>
+<text x="150" y="680.0" class="rl" text-anchor="end">lp-145-141</text>
+<line x1="345.7" y1="674" x2="377.7" y2="674" class="wh"/>
+<circle cx="355.8" cy="674" r="3.3" class="rx"/>
+<line x1="356.5" y1="682" x2="415.0" y2="682" class="wh"/>
+<circle cx="367.9" cy="682" r="3.3" class="tx"/>
+<text x="150" y="700.0" class="rl" text-anchor="end">groombridge-34-b</text>
+<line x1="346.9" y1="694" x2="376.9" y2="694" class="wh"/>
+<circle cx="351.7" cy="694" r="3.3" class="rx"/>
+<line x1="347.0" y1="702" x2="357.1" y2="702" class="wh"/>
+<circle cx="351.7" cy="702" r="3.3" class="tx"/>
+<text x="150" y="720.0" class="rl" text-anchor="end">proxima-cen</text>
+<line x1="341.8" y1="714" x2="375.4" y2="714" class="wh"/>
+<circle cx="350.8" cy="714" r="3.3" class="rx"/>
+<line x1="328.3" y1="722" x2="370.9" y2="722" class="wh"/>
+<circle cx="336.3" cy="722" r="3.3" class="tx"/>
+<text x="150" y="740.0" class="rl" text-anchor="end">alpha-cen-b</text>
+<line x1="341.9" y1="734" x2="367.4" y2="734" class="wh"/>
+<circle cx="350.5" cy="734" r="3.3" class="rx"/>
+<line x1="344.6" y1="742" x2="376.1" y2="742" class="wh"/>
+<circle cx="356.7" cy="742" r="3.3" class="tx"/>
+<text x="150" y="760.0" class="rl" text-anchor="end">eps-ind-b</text>
+<line x1="254.9" y1="754" x2="370.9" y2="754" class="wh"/>
+<circle cx="346.5" cy="754" r="3.3" class="rx"/>
+<line x1="317.2" y1="762" x2="442.7" y2="762" class="wh"/>
+<circle cx="392.2" cy="762" r="3.3" class="tx"/>
+<text x="150" y="780.0" class="rl" text-anchor="end">luhman16-a</text>
+<line x1="335.9" y1="774" x2="383.8" y2="774" class="wh"/>
+<circle cx="344.0" cy="774" r="3.3" class="rx"/>
+<line x1="333.9" y1="782" x2="362.6" y2="782" class="wh"/>
+<circle cx="341.0" cy="782" r="3.3" class="tx"/>
+<text x="150" y="800.0" class="rl" text-anchor="end">procyon-a</text>
+<line x1="333.3" y1="794" x2="372.2" y2="794" class="wh"/>
+<circle cx="341.7" cy="794" r="3.3" class="rx"/>
+<line x1="350.8" y1="802" x2="372.2" y2="802" class="wh"/>
+<circle cx="356.3" cy="802" r="3.3" class="tx"/>
+<text x="150" y="820.0" class="rl" text-anchor="end">struve-2398-a</text>
+<line x1="335.3" y1="814" x2="347.7" y2="814" class="wh"/>
+<circle cx="338.5" cy="814" r="3.3" class="rx"/>
+<line x1="409.9" y1="822" x2="445.0" y2="822" class="wh"/>
+<circle cx="415.1" cy="822" r="3.3" class="tx"/>
+<text x="150" y="840.0" class="rl" text-anchor="end">gj-1111</text>
+<line x1="332.1" y1="834" x2="343.8" y2="834" class="wh"/>
+<circle cx="336.7" cy="834" r="3.3" class="rx"/>
+<line x1="329.0" y1="842" x2="343.7" y2="842" class="wh"/>
+<circle cx="334.1" cy="842" r="3.3" class="tx"/>
+<text x="150" y="860.0" class="rl" text-anchor="end">procyon-b</text>
+<line x1="326.1" y1="854" x2="352.6" y2="854" class="wh"/>
+<circle cx="332.8" cy="854" r="3.3" class="rx"/>
+<line x1="347.1" y1="862" x2="371.6" y2="862" class="wh"/>
+<circle cx="353.6" cy="862" r="3.3" class="tx"/>
+<text x="150" y="880.0" class="rl" text-anchor="end">alpha-cen-a</text>
+<line x1="326.3" y1="874" x2="342.7" y2="874" class="wh"/>
+<circle cx="332.7" cy="874" r="3.3" class="rx"/>
+<line x1="305.4" y1="882" x2="318.2" y2="882" class="wh"/>
+<circle cx="309.8" cy="882" r="3.3" class="tx"/>
+<text x="150" y="900.0" class="rl" text-anchor="end">luhman16-b</text>
+<line x1="319.7" y1="894" x2="348.5" y2="894" class="wh"/>
+<circle cx="326.3" cy="894" r="3.3" class="rx"/>
+<line x1="332.0" y1="902" x2="358.4" y2="902" class="wh"/>
+<circle cx="337.5" cy="902" r="3.3" class="tx"/>
+<text x="150" y="920.0" class="rl" text-anchor="end">struve-2398-b</text>
+<line x1="320.1" y1="914" x2="327.1" y2="914" class="wh"/>
+<circle cx="323.6" cy="914" r="3.3" class="rx"/>
+<line x1="380.8" y1="922" x2="399.9" y2="922" class="wh"/>
+<circle cx="384.3" cy="922" r="3.3" class="tx"/>
+<text x="150" y="940.0" class="rl" text-anchor="end">sirius-a</text>
+<line x1="291.4" y1="934" x2="326.0" y2="934" class="wh"/>
+<circle cx="309.8" cy="934" r="3.3" class="rx"/>
+<line x1="328.4" y1="942" x2="366.7" y2="942" class="wh"/>
+<circle cx="339.2" cy="942" r="3.3" class="tx"/>
+<text x="150" y="960.0" class="rl" text-anchor="end">sirius-b</text>
+<line x1="271.1" y1="954" x2="301.7" y2="954" class="wh"/>
+<circle cx="290.3" cy="954" r="3.3" class="rx"/>
+<line x1="336.1" y1="962" x2="373.9" y2="962" class="wh"/>
+<circle cx="346.1" cy="962" r="3.3" class="tx"/>
+<text x="150" y="980.0" class="rl" text-anchor="end">gj-11068</text>
+<line x1="244.3" y1="974" x2="289.7" y2="974" class="wh"/>
+<circle cx="253.9" cy="974" r="3.3" class="rx"/>
+<line x1="256.1" y1="982" x2="309.1" y2="982" class="wh"/>
+<circle cx="266.7" cy="982" r="3.3" class="tx"/>
+<text x="622" y="38" class="pt">W2<tspan class="ps"> · 4.6 μm</tspan></text>
+<line x1="622.0" y1="46" x2="622.0" y2="986" class="gr"/>
+<text x="622.0" y="1000" class="tk" text-anchor="middle">12</text>
+<line x1="690.3" y1="46" x2="690.3" y2="986" class="gr"/>
+<text x="690.3" y="1000" class="tk" text-anchor="middle">13</text>
+<line x1="758.7" y1="46" x2="758.7" y2="986" class="gr"/>
+<text x="758.7" y="1000" class="tk" text-anchor="middle">14</text>
+<line x1="827.0" y1="46" x2="827.0" y2="986" class="gr"/>
+<text x="827.0" y="1000" class="tk" text-anchor="middle">15</text>
+<line x1="895.3" y1="46" x2="895.3" y2="986" class="gr"/>
+<text x="895.3" y="1000" class="tk" text-anchor="middle">16</text>
+<line x1="963.7" y1="46" x2="963.7" y2="986" class="gr"/>
+<text x="963.7" y="1000" class="tk" text-anchor="middle">17</text>
+<line x1="1032.0" y1="46" x2="1032.0" y2="986" class="gr"/>
+<text x="1032.0" y="1000" class="tk" text-anchor="middle">18</text>
+<text x="827" y="1018" class="ax" text-anchor="middle">Vega mag → deeper</text>
+<line x1="928.9" y1="54" x2="957.8" y2="54" class="wh"/>
+<circle cx="942.8" cy="54" r="3.3" class="rx"/>
+<line x1="843.3" y1="62" x2="862.6" y2="62" class="wh"/>
+<circle cx="850.1" cy="62" r="3.3" class="tx"/>
+<line x1="931.3" y1="74" x2="991.8" y2="74" class="wh"/>
+<circle cx="943.2" cy="74" r="3.3" class="rx"/>
+<line x1="858.1" y1="82" x2="872.9" y2="82" class="wh"/>
+<circle cx="867.6" cy="82" r="3.3" class="tx"/>
+<line x1="963.8" y1="94" x2="988.9" y2="94" class="wh"/>
+<circle cx="975.5" cy="94" r="3.3" class="rx"/>
+<line x1="969.1" y1="102" x2="998.9" y2="102" class="wh"/>
+<circle cx="977.7" cy="102" r="3.3" class="tx"/>
+<line x1="957.3" y1="114" x2="976.5" y2="114" class="wh"/>
+<circle cx="965.5" cy="114" r="3.3" class="rx"/>
+<line x1="972.1" y1="122" x2="1039.8" y2="122" class="wh"/>
+<circle cx="981.9" cy="122" r="3.3" class="tx"/>
+<line x1="910.4" y1="134" x2="938.7" y2="134" class="wh"/>
+<circle cx="917.1" cy="134" r="3.3" class="rx"/>
+<line x1="906.1" y1="142" x2="935.6" y2="142" class="wh"/>
+<circle cx="913.3" cy="142" r="3.3" class="tx"/>
+<line x1="913.9" y1="154" x2="954.4" y2="154" class="wh"/>
+<circle cx="923.3" cy="154" r="3.3" class="rx"/>
+<line x1="895.5" y1="162" x2="930.5" y2="162" class="wh"/>
+<circle cx="904.3" cy="162" r="3.3" class="tx"/>
+<line x1="948.4" y1="174" x2="1053.4" y2="174" class="wh"/>
+<circle cx="960.0" cy="174" r="3.3" class="rx"/>
+<line x1="949.5" y1="182" x2="971.4" y2="182" class="wh"/>
+<circle cx="956.2" cy="182" r="3.3" class="tx"/>
+<line x1="883.2" y1="194" x2="941.3" y2="194" class="wh"/>
+<circle cx="895.8" cy="194" r="3.3" class="rx"/>
+<line x1="815.1" y1="202" x2="832.6" y2="202" class="wh"/>
+<circle cx="822.7" cy="202" r="3.3" class="tx"/>
+<line x1="917.4" y1="214" x2="977.4" y2="214" class="wh"/>
+<circle cx="925.7" cy="214" r="3.3" class="rx"/>
+<line x1="860.7" y1="222" x2="907.3" y2="222" class="wh"/>
+<circle cx="874.7" cy="222" r="3.3" class="tx"/>
+<line x1="928.5" y1="234" x2="994.5" y2="234" class="wh"/>
+<circle cx="949.7" cy="234" r="3.3" class="rx"/>
+<line x1="848.8" y1="242" x2="902.0" y2="242" class="wh"/>
+<circle cx="857.4" cy="242" r="3.3" class="tx"/>
+<line x1="924.5" y1="254" x2="969.3" y2="254" class="wh"/>
+<circle cx="933.1" cy="254" r="3.3" class="rx"/>
+<line x1="745.9" y1="262" x2="770.2" y2="262" class="wh"/>
+<circle cx="750.9" cy="262" r="3.3" class="tx"/>
+<line x1="815.3" y1="274" x2="825.5" y2="274" class="wh"/>
+<circle cx="819.9" cy="274" r="3.3" class="rx"/>
+<line x1="810.8" y1="282" x2="823.3" y2="282" class="wh"/>
+<circle cx="818.3" cy="282" r="3.3" class="tx"/>
+<line x1="845.2" y1="294" x2="858.2" y2="294" class="wh"/>
+<circle cx="852.9" cy="294" r="3.3" class="rx"/>
+<line x1="844.6" y1="302" x2="878.9" y2="302" class="wh"/>
+<circle cx="853.3" cy="302" r="3.3" class="tx"/>
+<line x1="823.0" y1="314" x2="851.8" y2="314" class="wh"/>
+<circle cx="833.9" cy="314" r="3.3" class="rx"/>
+<line x1="810.2" y1="322" x2="880.4" y2="322" class="wh"/>
+<circle cx="818.8" cy="322" r="3.3" class="tx"/>
+<line x1="844.9" y1="334" x2="856.0" y2="334" class="wh"/>
+<circle cx="850.0" cy="334" r="3.3" class="rx"/>
+<line x1="882.2" y1="342" x2="906.6" y2="342" class="wh"/>
+<circle cx="889.3" cy="342" r="3.3" class="tx"/>
+<line x1="895.6" y1="354" x2="924.1" y2="354" class="wh"/>
+<circle cx="906.6" cy="354" r="3.3" class="rx"/>
+<line x1="869.0" y1="362" x2="885.1" y2="362" class="wh"/>
+<circle cx="877.3" cy="362" r="3.3" class="tx"/>
+<line x1="829.8" y1="374" x2="851.4" y2="374" class="wh"/>
+<circle cx="836.9" cy="374" r="3.3" class="rx"/>
+<line x1="787.0" y1="382" x2="808.5" y2="382" class="wh"/>
+<circle cx="792.7" cy="382" r="3.3" class="tx"/>
+<line x1="894.8" y1="394" x2="913.3" y2="394" class="wh"/>
+<circle cx="902.5" cy="394" r="3.3" class="rx"/>
+<line x1="912.9" y1="402" x2="936.1" y2="402" class="wh"/>
+<circle cx="927.8" cy="402" r="3.3" class="tx"/>
+<line x1="839.8" y1="414" x2="851.4" y2="414" class="wh"/>
+<circle cx="845.3" cy="414" r="3.3" class="rx"/>
+<line x1="886.5" y1="422" x2="911.7" y2="422" class="wh"/>
+<circle cx="891.9" cy="422" r="3.3" class="tx"/>
+<line x1="816.0" y1="434" x2="851.6" y2="434" class="wh"/>
+<circle cx="826.3" cy="434" r="3.3" class="rx"/>
+<line x1="747.2" y1="442" x2="769.2" y2="442" class="wh"/>
+<circle cx="756.3" cy="442" r="3.3" class="tx"/>
+<line x1="829.4" y1="454" x2="877.0" y2="454" class="wh"/>
+<circle cx="836.5" cy="454" r="3.3" class="rx"/>
+<line x1="796.4" y1="462" x2="852.5" y2="462" class="wh"/>
+<circle cx="804.1" cy="462" r="3.3" class="tx"/>
+<line x1="789.8" y1="474" x2="933.8" y2="474" class="wh"/>
+<circle cx="800.3" cy="474" r="3.3" class="rx"/>
+<line x1="767.3" y1="482" x2="776.3" y2="482" class="wh"/>
+<circle cx="771.9" cy="482" r="3.3" class="tx"/>
+<line x1="829.3" y1="494" x2="884.0" y2="494" class="wh"/>
+<circle cx="833.9" cy="494" r="3.3" class="rx"/>
+<line x1="806.9" y1="502" x2="849.6" y2="502" class="wh"/>
+<circle cx="812.9" cy="502" r="3.3" class="tx"/>
+<line x1="800.0" y1="514" x2="816.3" y2="514" class="wh"/>
+<circle cx="805.8" cy="514" r="3.3" class="rx"/>
+<line x1="810.7" y1="522" x2="852.2" y2="522" class="wh"/>
+<circle cx="817.0" cy="522" r="3.3" class="tx"/>
+<line x1="824.0" y1="534" x2="851.7" y2="534" class="wh"/>
+<circle cx="828.2" cy="534" r="3.3" class="rx"/>
+<line x1="823.4" y1="542" x2="875.9" y2="542" class="wh"/>
+<circle cx="827.7" cy="542" r="3.3" class="tx"/>
+<line x1="817.1" y1="554" x2="833.4" y2="554" class="wh"/>
+<circle cx="825.4" cy="554" r="3.3" class="rx"/>
+<line x1="837.9" y1="562" x2="876.1" y2="562" class="wh"/>
+<circle cx="845.0" cy="562" r="3.3" class="tx"/>
+<line x1="782.0" y1="574" x2="825.6" y2="574" class="wh"/>
+<circle cx="791.9" cy="574" r="3.3" class="rx"/>
+<line x1="760.5" y1="582" x2="877.7" y2="582" class="wh"/>
+<circle cx="771.5" cy="582" r="3.3" class="tx"/>
+<line x1="808.4" y1="594" x2="883.0" y2="594" class="wh"/>
+<circle cx="815.6" cy="594" r="3.3" class="rx"/>
+<line x1="720.9" y1="602" x2="762.4" y2="602" class="wh"/>
+<circle cx="729.1" cy="602" r="3.3" class="tx"/>
+<line x1="796.0" y1="614" x2="809.9" y2="614" class="wh"/>
+<circle cx="802.6" cy="614" r="3.3" class="rx"/>
+<line x1="799.7" y1="622" x2="841.0" y2="622" class="wh"/>
+<circle cx="807.1" cy="622" r="3.3" class="tx"/>
+<line x1="778.5" y1="634" x2="804.9" y2="634" class="wh"/>
+<circle cx="785.8" cy="634" r="3.3" class="rx"/>
+<line x1="850.6" y1="642" x2="928.4" y2="642" class="wh"/>
+<circle cx="869.2" cy="642" r="3.3" class="tx"/>
+<line x1="778.4" y1="654" x2="791.5" y2="654" class="wh"/>
+<circle cx="784.6" cy="654" r="3.3" class="rx"/>
+<line x1="737.8" y1="662" x2="775.6" y2="662" class="wh"/>
+<circle cx="748.5" cy="662" r="3.3" class="tx"/>
+<line x1="775.3" y1="674" x2="805.6" y2="674" class="wh"/>
+<circle cx="784.1" cy="674" r="3.3" class="rx"/>
+<line x1="742.5" y1="682" x2="788.7" y2="682" class="wh"/>
+<circle cx="749.6" cy="682" r="3.3" class="tx"/>
+<line x1="767.6" y1="694" x2="828.5" y2="694" class="wh"/>
+<circle cx="774.9" cy="694" r="3.3" class="rx"/>
+<line x1="769.8" y1="702" x2="782.7" y2="702" class="wh"/>
+<circle cx="777.3" cy="702" r="3.3" class="tx"/>
+<line x1="748.0" y1="714" x2="783.3" y2="714" class="wh"/>
+<circle cx="762.0" cy="714" r="3.3" class="rx"/>
+<line x1="772.7" y1="722" x2="836.4" y2="722" class="wh"/>
+<circle cx="781.9" cy="722" r="3.3" class="tx"/>
+<line x1="777.0" y1="734" x2="817.3" y2="734" class="wh"/>
+<circle cx="787.4" cy="734" r="3.3" class="rx"/>
+<line x1="767.7" y1="742" x2="803.3" y2="742" class="wh"/>
+<circle cx="778.0" cy="742" r="3.3" class="tx"/>
+<line x1="706.9" y1="754" x2="823.8" y2="754" class="wh"/>
+<circle cx="801.5" cy="754" r="3.3" class="rx"/>
+<line x1="734.6" y1="762" x2="843.0" y2="762" class="wh"/>
+<circle cx="803.4" cy="762" r="3.3" class="tx"/>
+<line x1="741.0" y1="774" x2="798.5" y2="774" class="wh"/>
+<circle cx="751.6" cy="774" r="3.3" class="rx"/>
+<line x1="740.8" y1="782" x2="771.7" y2="782" class="wh"/>
+<circle cx="747.3" cy="782" r="3.3" class="tx"/>
+<line x1="706.1" y1="794" x2="722.5" y2="794" class="wh"/>
+<circle cx="711.2" cy="794" r="3.3" class="rx"/>
+<line x1="784.5" y1="802" x2="809.0" y2="802" class="wh"/>
+<circle cx="792.8" cy="802" r="3.3" class="tx"/>
+<line x1="802.2" y1="814" x2="823.2" y2="814" class="wh"/>
+<circle cx="805.8" cy="814" r="3.3" class="rx"/>
+<line x1="830.4" y1="822" x2="871.8" y2="822" class="wh"/>
+<circle cx="835.8" cy="822" r="3.3" class="tx"/>
+<line x1="829.7" y1="834" x2="861.3" y2="834" class="wh"/>
+<circle cx="840.6" cy="834" r="3.3" class="rx"/>
+<line x1="733.7" y1="842" x2="744.7" y2="842" class="wh"/>
+<circle cx="737.8" cy="842" r="3.3" class="tx"/>
+<line x1="723.3" y1="854" x2="742.2" y2="854" class="wh"/>
+<circle cx="730.0" cy="854" r="3.3" class="rx"/>
+<line x1="796.8" y1="862" x2="825.0" y2="862" class="wh"/>
+<circle cx="803.0" cy="862" r="3.3" class="tx"/>
+<line x1="774.8" y1="874" x2="817.8" y2="874" class="wh"/>
+<circle cx="786.8" cy="874" r="3.3" class="rx"/>
+<line x1="756.4" y1="882" x2="782.2" y2="882" class="wh"/>
+<circle cx="764.2" cy="882" r="3.3" class="tx"/>
+<line x1="742.9" y1="894" x2="810.8" y2="894" class="wh"/>
+<circle cx="750.7" cy="894" r="3.3" class="rx"/>
+<line x1="741.6" y1="902" x2="775.5" y2="902" class="wh"/>
+<circle cx="748.2" cy="902" r="3.3" class="tx"/>
+<line x1="826.0" y1="914" x2="844.5" y2="914" class="wh"/>
+<circle cx="830.1" cy="914" r="3.3" class="rx"/>
+<line x1="800.0" y1="922" x2="819.7" y2="922" class="wh"/>
+<circle cx="804.7" cy="922" r="3.3" class="tx"/>
+<line x1="715.6" y1="934" x2="758.2" y2="934" class="wh"/>
+<circle cx="725.8" cy="934" r="3.3" class="rx"/>
+<line x1="707.7" y1="942" x2="725.1" y2="942" class="wh"/>
+<circle cx="716.6" cy="942" r="3.3" class="tx"/>
+<line x1="726.1" y1="954" x2="795.3" y2="954" class="wh"/>
+<circle cx="737.5" cy="954" r="3.3" class="rx"/>
+<line x1="736.1" y1="962" x2="771.9" y2="962" class="wh"/>
+<circle cx="744.8" cy="962" r="3.3" class="tx"/>
+<line x1="667.3" y1="974" x2="722.9" y2="974" class="wh"/>
+<circle cx="677.3" cy="974" r="3.3" class="rx"/>
+<line x1="680.2" y1="982" x2="736.4" y2="982" class="wh"/>
+<circle cx="694.7" cy="982" r="3.3" class="tx"/>
+<text x="158" y="1104" class="pt">W3<tspan class="ps"> · 12 μm</tspan></text>
+<line x1="158.0" y1="1112" x2="158.0" y2="2052" class="gr"/>
+<text x="158.0" y="2066" class="tk" text-anchor="middle">8</text>
+<line x1="213.4" y1="1112" x2="213.4" y2="2052" class="gr"/>
+<text x="213.4" y="2066" class="tk" text-anchor="middle">9</text>
+<line x1="268.8" y1="1112" x2="268.8" y2="2052" class="gr"/>
+<text x="268.8" y="2066" class="tk" text-anchor="middle">10</text>
+<line x1="324.2" y1="1112" x2="324.2" y2="2052" class="gr"/>
+<text x="324.2" y="2066" class="tk" text-anchor="middle">11</text>
+<line x1="379.6" y1="1112" x2="379.6" y2="2052" class="gr"/>
+<text x="379.6" y="2066" class="tk" text-anchor="middle">12</text>
+<line x1="435.0" y1="1112" x2="435.0" y2="2052" class="gr"/>
+<text x="435.0" y="2066" class="tk" text-anchor="middle">13</text>
+<line x1="490.4" y1="1112" x2="490.4" y2="2052" class="gr"/>
+<text x="490.4" y="2066" class="tk" text-anchor="middle">14</text>
+<line x1="545.8" y1="1112" x2="545.8" y2="2052" class="gr"/>
+<text x="545.8" y="2066" class="tk" text-anchor="middle">15</text>
+<text x="363" y="2084" class="ax" text-anchor="middle">Vega mag → deeper</text>
+<text x="150" y="1126.0" class="rl" text-anchor="end">lalande-21185</text>
+<line x1="447.4" y1="1120" x2="498.5" y2="1120" class="wh"/>
+<circle cx="472.4" cy="1120" r="3.3" class="rx"/>
+<line x1="389.0" y1="1128" x2="424.3" y2="1128" class="wh"/>
+<circle cx="409.4" cy="1128" r="3.3" class="tx"/>
+<text x="150" y="1146.0" class="rl" text-anchor="end">lacaille-8760</text>
+<line x1="372.9" y1="1140" x2="408.9" y2="1140" class="wh"/>
+<circle cx="394.9" cy="1140" r="3.3" class="rx"/>
+<line x1="369.4" y1="1148" x2="412.2" y2="1148" class="wh"/>
+<circle cx="391.0" cy="1148" r="3.3" class="tx"/>
+<text x="150" y="1166.0" class="rl" text-anchor="end">gj-54</text>
+<line x1="418.3" y1="1160" x2="485.1" y2="1160" class="wh"/>
+<circle cx="450.0" cy="1160" r="3.3" class="rx"/>
+<line x1="419.2" y1="1168" x2="473.5" y2="1168" class="wh"/>
+<circle cx="451.0" cy="1168" r="3.3" class="tx"/>
+<text x="150" y="1186.0" class="rl" text-anchor="end">gj-1061</text>
+<line x1="435.3" y1="1180" x2="458.4" y2="1180" class="wh"/>
+<circle cx="445.7" cy="1180" r="3.3" class="rx"/>
+<line x1="439.5" y1="1188" x2="477.1" y2="1188" class="wh"/>
+<circle cx="447.7" cy="1188" r="3.3" class="tx"/>
+<text x="150" y="1206.0" class="rl" text-anchor="end">kapteyn-star</text>
+<line x1="411.0" y1="1200" x2="436.9" y2="1200" class="wh"/>
+<circle cx="423.5" cy="1200" r="3.3" class="rx"/>
+<line x1="419.4" y1="1208" x2="461.1" y2="1208" class="wh"/>
+<circle cx="434.1" cy="1208" r="3.3" class="tx"/>
+<text x="150" y="1226.0" class="rl" text-anchor="end">lacaille-9352</text>
+<line x1="389.3" y1="1220" x2="434.8" y2="1220" class="wh"/>
+<circle cx="416.4" cy="1220" r="3.3" class="rx"/>
+<line x1="350.4" y1="1228" x2="411.6" y2="1228" class="wh"/>
+<circle cx="375.4" cy="1228" r="3.3" class="tx"/>
+<text x="150" y="1246.0" class="rl" text-anchor="end">ez-aqr</text>
+<line x1="410.0" y1="1240" x2="464.1" y2="1240" class="wh"/>
+<circle cx="427.7" cy="1240" r="3.3" class="rx"/>
+<line x1="405.9" y1="1248" x2="516.3" y2="1248" class="wh"/>
+<circle cx="454.5" cy="1248" r="3.3" class="tx"/>
+<text x="150" y="1266.0" class="rl" text-anchor="end">wise-0855</text>
+<line x1="358.1" y1="1260" x2="384.9" y2="1260" class="wh"/>
+<circle cx="371.9" cy="1260" r="3.3" class="rx"/>
+<line x1="361.8" y1="1268" x2="384.5" y2="1268" class="wh"/>
+<circle cx="372.8" cy="1268" r="3.3" class="tx"/>
+<text x="150" y="1286.0" class="rl" text-anchor="end">wolf-359</text>
+<line x1="331.6" y1="1280" x2="397.0" y2="1280" class="wh"/>
+<circle cx="358.3" cy="1280" r="3.3" class="rx"/>
+<line x1="307.6" y1="1288" x2="423.0" y2="1288" class="wh"/>
+<circle cx="341.1" cy="1288" r="3.3" class="tx"/>
+<text x="150" y="1306.0" class="rl" text-anchor="end">gj-908</text>
+<line x1="431.8" y1="1300" x2="487.8" y2="1300" class="wh"/>
+<circle cx="456.1" cy="1300" r="3.3" class="rx"/>
+<line x1="342.4" y1="1308" x2="376.6" y2="1308" class="wh"/>
+<circle cx="361.4" cy="1308" r="3.3" class="tx"/>
+<text x="150" y="1326.0" class="rl" text-anchor="end">gj-783</text>
+<line x1="429.8" y1="1320" x2="493.6" y2="1320" class="wh"/>
+<circle cx="465.9" cy="1320" r="3.3" class="rx"/>
+<line x1="258.8" y1="1328" x2="292.5" y2="1328" class="wh"/>
+<circle cx="278.7" cy="1328" r="3.3" class="tx"/>
+<text x="150" y="1346.0" class="rl" text-anchor="end">eps-eri</text>
+<line x1="408.0" y1="1340" x2="429.6" y2="1340" class="wh"/>
+<circle cx="419.0" cy="1340" r="3.3" class="rx"/>
+<line x1="400.8" y1="1348" x2="425.3" y2="1348" class="wh"/>
+<circle cx="415.3" cy="1348" r="3.3" class="tx"/>
+<text x="150" y="1366.0" class="rl" text-anchor="end">van-maanen</text>
+<line x1="381.4" y1="1360" x2="454.9" y2="1360" class="wh"/>
+<circle cx="398.9" cy="1360" r="3.3" class="rx"/>
+<line x1="418.6" y1="1368" x2="462.1" y2="1368" class="wh"/>
+<circle cx="441.4" cy="1368" r="3.3" class="tx"/>
+<text x="150" y="1386.0" class="rl" text-anchor="end">barnard-star</text>
+<line x1="247.3" y1="1380" x2="348.8" y2="1380" class="wh"/>
+<circle cx="331.0" cy="1380" r="3.3" class="rx"/>
+<line x1="324.9" y1="1388" x2="430.2" y2="1388" class="wh"/>
+<circle cx="352.5" cy="1388" r="3.3" class="tx"/>
+<text x="150" y="1406.0" class="rl" text-anchor="end">gj65-a</text>
+<line x1="420.3" y1="1400" x2="462.5" y2="1400" class="wh"/>
+<circle cx="443.3" cy="1400" r="3.3" class="rx"/>
+<line x1="354.9" y1="1408" x2="393.1" y2="1408" class="wh"/>
+<circle cx="377.8" cy="1408" r="3.3" class="tx"/>
+<text x="150" y="1426.0" class="rl" text-anchor="end">wolf-1061</text>
+<line x1="423.4" y1="1420" x2="494.5" y2="1420" class="wh"/>
+<circle cx="440.3" cy="1420" r="3.3" class="rx"/>
+<line x1="421.9" y1="1428" x2="492.5" y2="1428" class="wh"/>
+<circle cx="442.7" cy="1428" r="3.3" class="tx"/>
+<text x="150" y="1446.0" class="rl" text-anchor="end">61-cyg-b</text>
+<line x1="430.5" y1="1440" x2="500.4" y2="1440" class="wh"/>
+<circle cx="452.7" cy="1440" r="3.3" class="rx"/>
+<line x1="422.4" y1="1448" x2="541.4" y2="1448" class="wh"/>
+<circle cx="453.5" cy="1448" r="3.3" class="tx"/>
+<text x="150" y="1466.0" class="rl" text-anchor="end">tau-cet</text>
+<line x1="424.1" y1="1460" x2="459.4" y2="1460" class="wh"/>
+<circle cx="439.6" cy="1460" r="3.3" class="rx"/>
+<line x1="456.2" y1="1468" x2="510.8" y2="1468" class="wh"/>
+<circle cx="479.5" cy="1468" r="3.3" class="tx"/>
+<text x="150" y="1486.0" class="rl" text-anchor="end">gj65-b</text>
+<line x1="421.4" y1="1480" x2="462.9" y2="1480" class="wh"/>
+<circle cx="445.3" cy="1480" r="3.3" class="rx"/>
+<line x1="365.3" y1="1488" x2="388.0" y2="1488" class="wh"/>
+<circle cx="377.3" cy="1488" r="3.3" class="tx"/>
+<text x="150" y="1506.0" class="rl" text-anchor="end">61-cyg-a</text>
+<line x1="438.2" y1="1500" x2="509.3" y2="1500" class="wh"/>
+<circle cx="454.3" cy="1500" r="3.3" class="rx"/>
+<line x1="378.1" y1="1508" x2="426.6" y2="1508" class="wh"/>
+<circle cx="403.9" cy="1508" r="3.3" class="tx"/>
+<text x="150" y="1526.0" class="rl" text-anchor="end">teegarden</text>
+<line x1="358.8" y1="1520" x2="384.6" y2="1520" class="wh"/>
+<circle cx="371.6" cy="1520" r="3.3" class="rx"/>
+<line x1="424.9" y1="1528" x2="481.8" y2="1528" class="wh"/>
+<circle cx="444.1" cy="1528" r="3.3" class="tx"/>
+<text x="150" y="1546.0" class="rl" text-anchor="end">groombridge-34-a</text>
+<line x1="380.8" y1="1540" x2="415.0" y2="1540" class="wh"/>
+<circle cx="396.6" cy="1540" r="3.3" class="rx"/>
+<line x1="385.6" y1="1548" x2="410.1" y2="1548" class="wh"/>
+<circle cx="396.7" cy="1548" r="3.3" class="tx"/>
+<text x="150" y="1566.0" class="rl" text-anchor="end">eps-ind-a</text>
+<line x1="411.7" y1="1560" x2="440.7" y2="1560" class="wh"/>
+<circle cx="428.2" cy="1560" r="3.3" class="rx"/>
+<line x1="299.6" y1="1568" x2="324.9" y2="1568" class="wh"/>
+<circle cx="314.9" cy="1568" r="3.3" class="tx"/>
+<text x="150" y="1586.0" class="rl" text-anchor="end">ross-248</text>
+<line x1="384.7" y1="1580" x2="420.2" y2="1580" class="wh"/>
+<circle cx="403.9" cy="1580" r="3.3" class="rx"/>
+<line x1="429.9" y1="1588" x2="482.3" y2="1588" class="wh"/>
+<circle cx="455.3" cy="1588" r="3.3" class="tx"/>
+<text x="150" y="1606.0" class="rl" text-anchor="end">gj-12724</text>
+<line x1="424.9" y1="1600" x2="487.9" y2="1600" class="wh"/>
+<circle cx="456.0" cy="1600" r="3.3" class="rx"/>
+<line x1="417.5" y1="1608" x2="497.5" y2="1608" class="wh"/>
+<circle cx="455.6" cy="1608" r="3.3" class="tx"/>
+<text x="150" y="1626.0" class="rl" text-anchor="end">gj-784</text>
+<line x1="394.1" y1="1620" x2="446.4" y2="1620" class="wh"/>
+<circle cx="416.9" cy="1620" r="3.3" class="rx"/>
+<line x1="401.4" y1="1628" x2="439.1" y2="1628" class="wh"/>
+<circle cx="425.1" cy="1628" r="3.3" class="tx"/>
+<text x="150" y="1646.0" class="rl" text-anchor="end">luyten-star</text>
+<line x1="255.9" y1="1640" x2="311.1" y2="1640" class="wh"/>
+<circle cx="284.5" cy="1640" r="3.3" class="rx"/>
+<line x1="259.7" y1="1648" x2="303.3" y2="1648" class="wh"/>
+<circle cx="286.7" cy="1648" r="3.3" class="tx"/>
+<text x="150" y="1666.0" class="rl" text-anchor="end">gj-9193</text>
+<line x1="392.4" y1="1660" x2="481.6" y2="1660" class="wh"/>
+<circle cx="407.3" cy="1660" r="3.3" class="rx"/>
+<line x1="356.1" y1="1668" x2="402.2" y2="1668" class="wh"/>
+<circle cx="370.2" cy="1668" r="3.3" class="tx"/>
+<text x="150" y="1686.0" class="rl" text-anchor="end">ross-128</text>
+<line x1="414.0" y1="1680" x2="486.4" y2="1680" class="wh"/>
+<circle cx="452.0" cy="1680" r="3.3" class="rx"/>
+<line x1="415.0" y1="1688" x2="470.3" y2="1688" class="wh"/>
+<circle cx="445.7" cy="1688" r="3.3" class="tx"/>
+<text x="150" y="1706.0" class="rl" text-anchor="end">gj-1221</text>
+<line x1="421.8" y1="1700" x2="501.2" y2="1700" class="wh"/>
+<circle cx="457.0" cy="1700" r="3.3" class="rx"/>
+<line x1="418.4" y1="1708" x2="566.4" y2="1708" class="wh"/>
+<circle cx="454.0" cy="1708" r="3.3" class="tx"/>
+<text x="150" y="1726.0" class="rl" text-anchor="end">ross-154</text>
+<line x1="400.2" y1="1720" x2="455.6" y2="1720" class="wh"/>
+<circle cx="420.7" cy="1720" r="3.3" class="rx"/>
+<line x1="390.7" y1="1728" x2="451.8" y2="1728" class="wh"/>
+<circle cx="425.0" cy="1728" r="3.3" class="tx"/>
+<text x="150" y="1746.0" class="rl" text-anchor="end">lp-145-141</text>
+<line x1="332.1" y1="1740" x2="376.0" y2="1740" class="wh"/>
+<circle cx="344.7" cy="1740" r="3.3" class="rx"/>
+<line x1="286.7" y1="1748" x2="312.9" y2="1748" class="wh"/>
+<circle cx="297.9" cy="1748" r="3.3" class="tx"/>
+<text x="150" y="1766.0" class="rl" text-anchor="end">groombridge-34-b</text>
+<line x1="388.2" y1="1760" x2="417.5" y2="1760" class="wh"/>
+<circle cx="398.5" cy="1760" r="3.3" class="rx"/>
+<line x1="387.8" y1="1768" x2="407.8" y2="1768" class="wh"/>
+<circle cx="394.8" cy="1768" r="3.3" class="tx"/>
+<text x="150" y="1786.0" class="rl" text-anchor="end">proxima-cen</text>
+<line x1="265.9" y1="1780" x2="323.7" y2="1780" class="wh"/>
+<circle cx="307.2" cy="1780" r="3.3" class="rx"/>
+<line x1="292.2" y1="1788" x2="328.3" y2="1788" class="wh"/>
+<circle cx="312.6" cy="1788" r="3.3" class="tx"/>
+<text x="150" y="1806.0" class="rl" text-anchor="end">alpha-cen-b</text>
+<line x1="267.8" y1="1800" x2="338.1" y2="1800" class="wh"/>
+<circle cx="282.7" cy="1800" r="3.3" class="rx"/>
+<line x1="296.2" y1="1808" x2="385.6" y2="1808" class="wh"/>
+<circle cx="325.1" cy="1808" r="3.3" class="tx"/>
+<text x="150" y="1826.0" class="rl" text-anchor="end">eps-ind-b</text>
+<line x1="458.0" y1="1820" x2="483.1" y2="1820" class="wh"/>
+<circle cx="469.3" cy="1820" r="3.3" class="rx"/>
+<line x1="441.4" y1="1828" x2="487.3" y2="1828" class="wh"/>
+<circle cx="478.6" cy="1828" r="3.3" class="tx"/>
+<text x="150" y="1846.0" class="rl" text-anchor="end">luhman16-a</text>
+<line x1="269.3" y1="1840" x2="327.1" y2="1840" class="wh"/>
+<circle cx="281.7" cy="1840" r="3.3" class="rx"/>
+<line x1="248.2" y1="1848" x2="272.9" y2="1848" class="wh"/>
+<circle cx="258.7" cy="1848" r="3.3" class="tx"/>
+<text x="150" y="1866.0" class="rl" text-anchor="end">procyon-a</text>
+<line x1="382.6" y1="1860" x2="445.7" y2="1860" class="wh"/>
+<circle cx="413.2" cy="1860" r="3.3" class="rx"/>
+<line x1="406.7" y1="1868" x2="458.5" y2="1868" class="wh"/>
+<circle cx="431.0" cy="1868" r="3.3" class="tx"/>
+<text x="150" y="1886.0" class="rl" text-anchor="end">struve-2398-a</text>
+<line x1="321.4" y1="1880" x2="340.4" y2="1880" class="wh"/>
+<circle cx="334.2" cy="1880" r="3.3" class="rx"/>
+<line x1="436.5" y1="1888" x2="476.9" y2="1888" class="wh"/>
+<circle cx="445.4" cy="1888" r="3.3" class="tx"/>
+<text x="150" y="1906.0" class="rl" text-anchor="end">gj-1111</text>
+<line x1="347.5" y1="1900" x2="381.8" y2="1900" class="wh"/>
+<circle cx="364.3" cy="1900" r="3.3" class="rx"/>
+<line x1="346.7" y1="1908" x2="393.1" y2="1908" class="wh"/>
+<circle cx="363.7" cy="1908" r="3.3" class="tx"/>
+<text x="150" y="1926.0" class="rl" text-anchor="end">procyon-b</text>
+<line x1="385.1" y1="1920" x2="438.9" y2="1920" class="wh"/>
+<circle cx="406.6" cy="1920" r="3.3" class="rx"/>
+<line x1="411.8" y1="1928" x2="453.1" y2="1928" class="wh"/>
+<circle cx="431.8" cy="1928" r="3.3" class="tx"/>
+<text x="150" y="1946.0" class="rl" text-anchor="end">alpha-cen-a</text>
+<line x1="309.6" y1="1940" x2="381.6" y2="1940" class="wh"/>
+<circle cx="333.4" cy="1940" r="3.3" class="rx"/>
+<line x1="298.3" y1="1948" x2="376.7" y2="1948" class="wh"/>
+<circle cx="315.1" cy="1948" r="3.3" class="tx"/>
+<text x="150" y="1966.0" class="rl" text-anchor="end">luhman16-b</text>
+<line x1="266.3" y1="1960" x2="320.0" y2="1960" class="wh"/>
+<circle cx="277.3" cy="1960" r="3.3" class="rx"/>
+<line x1="250.8" y1="1968" x2="270.6" y2="1968" class="wh"/>
+<circle cx="260.5" cy="1968" r="3.3" class="tx"/>
+<text x="150" y="1986.0" class="rl" text-anchor="end">struve-2398-b</text>
+<line x1="276.9" y1="1980" x2="302.1" y2="1980" class="wh"/>
+<circle cx="295.4" cy="1980" r="3.3" class="rx"/>
+<line x1="430.9" y1="1988" x2="469.9" y2="1988" class="wh"/>
+<circle cx="442.7" cy="1988" r="3.3" class="tx"/>
+<text x="150" y="2006.0" class="rl" text-anchor="end">sirius-a</text>
+<line x1="279.0" y1="2000" x2="311.1" y2="2000" class="wh"/>
+<circle cx="299.0" cy="2000" r="3.3" class="rx"/>
+<line x1="207.5" y1="2008" x2="238.4" y2="2008" class="wh"/>
+<circle cx="226.8" cy="2008" r="3.3" class="tx"/>
+<text x="150" y="2026.0" class="rl" text-anchor="end">sirius-b</text>
+<line x1="283.9" y1="2020" x2="310.4" y2="2020" class="wh"/>
+<circle cx="300.3" cy="2020" r="3.3" class="rx"/>
+<line x1="276.7" y1="2028" x2="310.9" y2="2028" class="wh"/>
+<circle cx="297.1" cy="2028" r="3.3" class="tx"/>
+<text x="150" y="2046.0" class="rl" text-anchor="end">gj-11068</text>
+<line x1="276.8" y1="2040" x2="334.9" y2="2040" class="wh"/>
+<circle cx="299.6" cy="2040" r="3.3" class="rx"/>
+<line x1="279.2" y1="2048" x2="321.5" y2="2048" class="wh"/>
+<circle cx="301.7" cy="2048" r="3.3" class="tx"/>
+<text x="622" y="1104" class="pt">W4<tspan class="ps"> · 22 μm</tspan></text>
+<line x1="674.9" y1="1112" x2="674.9" y2="2052" class="gr"/>
+<text x="674.9" y="2066" class="tk" text-anchor="middle">8</text>
+<line x1="741.0" y1="1112" x2="741.0" y2="2052" class="gr"/>
+<text x="741.0" y="2066" class="tk" text-anchor="middle">9</text>
+<line x1="807.2" y1="1112" x2="807.2" y2="2052" class="gr"/>
+<text x="807.2" y="2066" class="tk" text-anchor="middle">10</text>
+<line x1="873.3" y1="1112" x2="873.3" y2="2052" class="gr"/>
+<text x="873.3" y="2066" class="tk" text-anchor="middle">11</text>
+<line x1="939.4" y1="1112" x2="939.4" y2="2052" class="gr"/>
+<text x="939.4" y="2066" class="tk" text-anchor="middle">12</text>
+<line x1="1005.5" y1="1112" x2="1005.5" y2="2052" class="gr"/>
+<text x="1005.5" y="2066" class="tk" text-anchor="middle">13</text>
+<text x="827" y="2084" class="ax" text-anchor="middle">Vega mag → deeper</text>
+<line x1="821.1" y1="1120" x2="925.5" y2="1120" class="wh"/>
+<circle cx="870.7" cy="1120" r="3.3" class="rx"/>
+<line x1="794.8" y1="1128" x2="979.9" y2="1128" class="wh"/>
+<circle cx="836.3" cy="1128" r="3.3" class="tx"/>
+<line x1="766.8" y1="1140" x2="853.5" y2="1140" class="wh"/>
+<circle cx="809.0" cy="1140" r="3.3" class="rx"/>
+<line x1="772.5" y1="1148" x2="853.4" y2="1148" class="wh"/>
+<circle cx="810.9" cy="1148" r="3.3" class="tx"/>
+<line x1="781.9" y1="1160" x2="861.8" y2="1160" class="wh"/>
+<circle cx="819.4" cy="1160" r="3.3" class="rx"/>
+<line x1="784.5" y1="1168" x2="862.9" y2="1168" class="wh"/>
+<circle cx="822.6" cy="1168" r="3.3" class="tx"/>
+<line x1="817.0" y1="1180" x2="865.4" y2="1180" class="wh"/>
+<circle cx="830.1" cy="1180" r="3.3" class="rx"/>
+<line x1="818.8" y1="1188" x2="921.4" y2="1188" class="wh"/>
+<circle cx="829.1" cy="1188" r="3.3" class="tx"/>
+<line x1="831.4" y1="1200" x2="905.2" y2="1200" class="wh"/>
+<circle cx="863.9" cy="1200" r="3.3" class="rx"/>
+<line x1="837.5" y1="1208" x2="995.4" y2="1208" class="wh"/>
+<circle cx="866.0" cy="1208" r="3.3" class="tx"/>
+<line x1="814.1" y1="1220" x2="969.5" y2="1220" class="wh"/>
+<circle cx="861.1" cy="1220" r="3.3" class="rx"/>
+<line x1="786.3" y1="1228" x2="962.0" y2="1228" class="wh"/>
+<circle cx="835.4" cy="1228" r="3.3" class="tx"/>
+<line x1="653.9" y1="1240" x2="770.2" y2="1240" class="wh"/>
+<circle cx="671.9" cy="1240" r="3.3" class="rx"/>
+<line x1="669.0" y1="1248" x2="892.9" y2="1248" class="wh"/>
+<circle cx="687.1" cy="1248" r="3.3" class="tx"/>
+<line x1="791.7" y1="1260" x2="887.2" y2="1260" class="wh"/>
+<circle cx="831.6" cy="1260" r="3.3" class="rx"/>
+<line x1="784.1" y1="1268" x2="907.7" y2="1268" class="wh"/>
+<circle cx="818.4" cy="1268" r="3.3" class="tx"/>
+<line x1="713.7" y1="1280" x2="968.4" y2="1280" class="wh"/>
+<circle cx="782.6" cy="1280" r="3.3" class="rx"/>
+<line x1="677.9" y1="1288" x2="838.8" y2="1288" class="wh"/>
+<circle cx="719.2" cy="1288" r="3.3" class="tx"/>
+<line x1="815.4" y1="1300" x2="889.2" y2="1300" class="wh"/>
+<circle cx="848.5" cy="1300" r="3.3" class="rx"/>
+<line x1="765.9" y1="1308" x2="892.8" y2="1308" class="wh"/>
+<circle cx="831.8" cy="1308" r="3.3" class="tx"/>
+<line x1="805.9" y1="1320" x2="877.1" y2="1320" class="wh"/>
+<circle cx="837.8" cy="1320" r="3.3" class="rx"/>
+<line x1="777.1" y1="1328" x2="877.5" y2="1328" class="wh"/>
+<circle cx="816.8" cy="1328" r="3.3" class="tx"/>
+<line x1="825.5" y1="1340" x2="897.7" y2="1340" class="wh"/>
+<circle cx="871.8" cy="1340" r="3.3" class="rx"/>
+<line x1="828.6" y1="1348" x2="990.8" y2="1348" class="wh"/>
+<circle cx="858.9" cy="1348" r="3.3" class="tx"/>
+<line x1="781.6" y1="1360" x2="887.9" y2="1360" class="wh"/>
+<circle cx="805.9" cy="1360" r="3.3" class="rx"/>
+<line x1="788.5" y1="1368" x2="896.1" y2="1368" class="wh"/>
+<circle cx="844.1" cy="1368" r="3.3" class="tx"/>
+<line x1="797.4" y1="1380" x2="934.4" y2="1380" class="wh"/>
+<circle cx="861.7" cy="1380" r="3.3" class="rx"/>
+<line x1="797.5" y1="1388" x2="915.9" y2="1388" class="wh"/>
+<circle cx="847.4" cy="1388" r="3.3" class="tx"/>
+<line x1="804.7" y1="1400" x2="875.1" y2="1400" class="wh"/>
+<circle cx="846.7" cy="1400" r="3.3" class="rx"/>
+<line x1="737.0" y1="1408" x2="782.3" y2="1408" class="wh"/>
+<circle cx="763.5" cy="1408" r="3.3" class="tx"/>
+<line x1="770.8" y1="1420" x2="892.7" y2="1420" class="wh"/>
+<circle cx="805.0" cy="1420" r="3.3" class="rx"/>
+<line x1="750.7" y1="1428" x2="925.3" y2="1428" class="wh"/>
+<circle cx="807.5" cy="1428" r="3.3" class="tx"/>
+<line x1="801.5" y1="1440" x2="1003.2" y2="1440" class="wh"/>
+<circle cx="857.3" cy="1440" r="3.3" class="rx"/>
+<line x1="798.1" y1="1448" x2="988.6" y2="1448" class="wh"/>
+<circle cx="840.4" cy="1448" r="3.3" class="tx"/>
+<line x1="831.9" y1="1460" x2="954.5" y2="1460" class="wh"/>
+<circle cx="867.7" cy="1460" r="3.3" class="rx"/>
+<line x1="808.0" y1="1468" x2="936.0" y2="1468" class="wh"/>
+<circle cx="848.4" cy="1468" r="3.3" class="tx"/>
+<line x1="813.8" y1="1480" x2="886.0" y2="1480" class="wh"/>
+<circle cx="846.9" cy="1480" r="3.3" class="rx"/>
+<line x1="726.7" y1="1488" x2="781.1" y2="1488" class="wh"/>
+<circle cx="758.1" cy="1488" r="3.3" class="tx"/>
+<line x1="804.8" y1="1500" x2="988.3" y2="1500" class="wh"/>
+<circle cx="853.0" cy="1500" r="3.3" class="rx"/>
+<line x1="783.5" y1="1508" x2="903.8" y2="1508" class="wh"/>
+<circle cx="839.9" cy="1508" r="3.3" class="tx"/>
+<line x1="752.3" y1="1520" x2="826.6" y2="1520" class="wh"/>
+<circle cx="790.6" cy="1520" r="3.3" class="rx"/>
+<line x1="718.7" y1="1528" x2="849.0" y2="1528" class="wh"/>
+<circle cx="737.8" cy="1528" r="3.3" class="tx"/>
+<line x1="829.5" y1="1540" x2="893.7" y2="1540" class="wh"/>
+<circle cx="861.7" cy="1540" r="3.3" class="rx"/>
+<line x1="827.5" y1="1548" x2="944.1" y2="1548" class="wh"/>
+<circle cx="875.7" cy="1548" r="3.3" class="tx"/>
+<line x1="792.6" y1="1560" x2="847.8" y2="1560" class="wh"/>
+<circle cx="827.0" cy="1560" r="3.3" class="rx"/>
+<line x1="799.8" y1="1568" x2="936.6" y2="1568" class="wh"/>
+<circle cx="859.6" cy="1568" r="3.3" class="tx"/>
+<line x1="754.4" y1="1580" x2="814.6" y2="1580" class="wh"/>
+<circle cx="778.8" cy="1580" r="3.3" class="rx"/>
+<line x1="839.6" y1="1588" x2="902.1" y2="1588" class="wh"/>
+<circle cx="863.3" cy="1588" r="3.3" class="tx"/>
+<line x1="766.9" y1="1600" x2="939.7" y2="1600" class="wh"/>
+<circle cx="870.1" cy="1600" r="3.3" class="rx"/>
+<line x1="756.2" y1="1608" x2="904.6" y2="1608" class="wh"/>
+<circle cx="812.4" cy="1608" r="3.3" class="tx"/>
+<line x1="752.6" y1="1620" x2="815.3" y2="1620" class="wh"/>
+<circle cx="786.2" cy="1620" r="3.3" class="rx"/>
+<line x1="817.4" y1="1628" x2="942.0" y2="1628" class="wh"/>
+<circle cx="865.1" cy="1628" r="3.3" class="tx"/>
+<line x1="779.7" y1="1640" x2="893.1" y2="1640" class="wh"/>
+<circle cx="817.0" cy="1640" r="3.3" class="rx"/>
+<line x1="799.2" y1="1648" x2="920.6" y2="1648" class="wh"/>
+<circle cx="824.6" cy="1648" r="3.3" class="tx"/>
+<line x1="734.5" y1="1660" x2="877.8" y2="1660" class="wh"/>
+<circle cx="772.5" cy="1660" r="3.3" class="rx"/>
+<line x1="742.3" y1="1668" x2="858.2" y2="1668" class="wh"/>
+<circle cx="769.7" cy="1668" r="3.3" class="tx"/>
+<line x1="788.9" y1="1680" x2="896.7" y2="1680" class="wh"/>
+<circle cx="832.0" cy="1680" r="3.3" class="rx"/>
+<line x1="794.8" y1="1688" x2="895.1" y2="1688" class="wh"/>
+<circle cx="830.7" cy="1688" r="3.3" class="tx"/>
+<line x1="837.1" y1="1700" x2="907.5" y2="1700" class="wh"/>
+<circle cx="873.7" cy="1700" r="3.3" class="rx"/>
+<line x1="844.1" y1="1708" x2="964.2" y2="1708" class="wh"/>
+<circle cx="876.5" cy="1708" r="3.3" class="tx"/>
+<line x1="801.6" y1="1720" x2="928.9" y2="1720" class="wh"/>
+<circle cx="833.2" cy="1720" r="3.3" class="rx"/>
+<line x1="793.8" y1="1728" x2="940.6" y2="1728" class="wh"/>
+<circle cx="840.8" cy="1728" r="3.3" class="tx"/>
+<line x1="663.5" y1="1740" x2="715.3" y2="1740" class="wh"/>
+<circle cx="680.3" cy="1740" r="3.3" class="rx"/>
+<line x1="721.9" y1="1748" x2="896.1" y2="1748" class="wh"/>
+<circle cx="742.9" cy="1748" r="3.3" class="tx"/>
+<line x1="825.4" y1="1760" x2="899.7" y2="1760" class="wh"/>
+<circle cx="870.5" cy="1760" r="3.3" class="rx"/>
+<line x1="823.8" y1="1768" x2="948.5" y2="1768" class="wh"/>
+<circle cx="867.2" cy="1768" r="3.3" class="tx"/>
+<line x1="764.1" y1="1780" x2="888.6" y2="1780" class="wh"/>
+<circle cx="805.3" cy="1780" r="3.3" class="rx"/>
+<line x1="736.7" y1="1788" x2="824.5" y2="1788" class="wh"/>
+<circle cx="771.0" cy="1788" r="3.3" class="tx"/>
+<line x1="733.9" y1="1800" x2="901.3" y2="1800" class="wh"/>
+<circle cx="793.0" cy="1800" r="3.3" class="rx"/>
+<line x1="749.4" y1="1808" x2="881.9" y2="1808" class="wh"/>
+<circle cx="796.6" cy="1808" r="3.3" class="tx"/>
+<line x1="818.3" y1="1820" x2="913.3" y2="1820" class="wh"/>
+<circle cx="859.5" cy="1820" r="3.3" class="rx"/>
+<line x1="803.6" y1="1828" x2="920.9" y2="1828" class="wh"/>
+<circle cx="864.6" cy="1828" r="3.3" class="tx"/>
+<line x1="748.4" y1="1840" x2="840.5" y2="1840" class="wh"/>
+<circle cx="772.7" cy="1840" r="3.3" class="rx"/>
+<line x1="758.1" y1="1848" x2="868.0" y2="1848" class="wh"/>
+<circle cx="776.7" cy="1848" r="3.3" class="tx"/>
+<line x1="699.9" y1="1860" x2="737.3" y2="1860" class="wh"/>
+<circle cx="721.2" cy="1860" r="3.3" class="rx"/>
+<line x1="782.3" y1="1868" x2="837.7" y2="1868" class="wh"/>
+<circle cx="812.5" cy="1868" r="3.3" class="tx"/>
+<line x1="842.9" y1="1880" x2="895.9" y2="1880" class="wh"/>
+<circle cx="870.9" cy="1880" r="3.3" class="rx"/>
+<line x1="899.1" y1="1888" x2="969.1" y2="1888" class="wh"/>
+<circle cx="931.3" cy="1888" r="3.3" class="tx"/>
+<line x1="766.6" y1="1900" x2="875.9" y2="1900" class="wh"/>
+<circle cx="797.7" cy="1900" r="3.3" class="rx"/>
+<line x1="764.2" y1="1908" x2="874.1" y2="1908" class="wh"/>
+<circle cx="799.4" cy="1908" r="3.3" class="tx"/>
+<line x1="703.2" y1="1920" x2="746.0" y2="1920" class="wh"/>
+<circle cx="730.6" cy="1920" r="3.3" class="rx"/>
+<line x1="771.9" y1="1928" x2="828.6" y2="1928" class="wh"/>
+<circle cx="793.0" cy="1928" r="3.3" class="tx"/>
+<line x1="747.8" y1="1940" x2="881.1" y2="1940" class="wh"/>
+<circle cx="793.3" cy="1940" r="3.3" class="rx"/>
+<line x1="748.2" y1="1948" x2="902.3" y2="1948" class="wh"/>
+<circle cx="799.1" cy="1948" r="3.3" class="tx"/>
+<line x1="745.8" y1="1960" x2="846.7" y2="1960" class="wh"/>
+<circle cx="773.2" cy="1960" r="3.3" class="rx"/>
+<line x1="755.9" y1="1968" x2="879.7" y2="1968" class="wh"/>
+<circle cx="773.9" cy="1968" r="3.3" class="tx"/>
+<line x1="835.9" y1="1980" x2="890.8" y2="1980" class="wh"/>
+<circle cx="864.6" cy="1980" r="3.3" class="rx"/>
+<line x1="878.7" y1="1988" x2="1012.4" y2="1988" class="wh"/>
+<circle cx="928.2" cy="1988" r="3.3" class="tx"/>
+<line x1="780.0" y1="2000" x2="908.5" y2="2000" class="wh"/>
+<circle cx="819.3" cy="2000" r="3.3" class="rx"/>
+<line x1="744.4" y1="2008" x2="812.7" y2="2008" class="wh"/>
+<circle cx="780.8" cy="2008" r="3.3" class="tx"/>
+<line x1="784.7" y1="2020" x2="874.2" y2="2020" class="wh"/>
+<circle cx="814.8" cy="2020" r="3.3" class="rx"/>
+<line x1="753.2" y1="2028" x2="851.8" y2="2028" class="wh"/>
+<circle cx="797.4" cy="2028" r="3.3" class="tx"/>
+<line x1="740.0" y1="2040" x2="820.1" y2="2040" class="wh"/>
+<circle cx="777.4" cy="2040" r="3.3" class="rx"/>
+<line x1="731.7" y1="2048" x2="842.6" y2="2048" class="wh"/>
+<circle cx="779.0" cy="2048" r="3.3" class="tx"/>
 </svg>

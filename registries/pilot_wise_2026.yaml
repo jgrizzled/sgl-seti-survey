@@ -1,6 +1,13 @@
 # Pilot target registry for the WISE/NEOWISE shakedown (plan §4.2).
 #
-# STATUS: v1.3 (2026-08-19) — batch-3 endpoints added (WISE overlay
+# STATUS: v1.4 (2026-08-19) — batch-4 + unblocked-deferred endpoints
+# (47 targets, 38 corridors): 61-cyg-a/b, struve-2398-a/b,
+# groombridge-34-a/b, gj-1111, luyten-star, kapteyn-star, lp-145-141,
+# gj-1221, gj-9193, gj-783, eps-ind-b, gj-11068, wise-0855, ez-aqr,
+# luhman16-a/b (Garcia 2017 orbit), procyon-a/b (Bond 2015 orbit,
+# hip2-as-barycenter validated vs 2MASS 0.31"). No deferred systems
+# remain.
+# v1.3 (2026-08-19) — batch-3 endpoints added (WISE overlay
 # mid-confusion queue): eps-eri, lacaille-9352, gj-1061, gj-12724,
 # wolf-1061 (26 targets, 23 corridors).
 # v1.2 (2026-08-19) — batch-2 endpoints added from the
@@ -1783,3 +1790,1359 @@ targets:
           source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
           uncertainty: 0.13
           unit: km/s
+
+  # ---- v1.4 batch-4 + unblocked-deferred endpoints (2026-08-19) ----
+
+  61-cyg-a:
+    display_name: "61 Cygni A (GJ 820 A)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Wide/moderate pair: the instantaneous Gaia PM absorbs orbital velocity; curvature over the WISE baseline is < few mas (declared approximation). K5V, ~84 AU pair; RUWE 1.20.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "1872046609345556480"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 316.748479294
+        dec_deg: 38.7638624465
+        parallax_mas: 285.9949
+        pm_ra_cosdec_mas_per_yr: 4164.209
+        pm_dec_mas_per_yr: 3249.614
+        radial_velocity_km_s: -65.98
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 1872046609345556480 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0388
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0485
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0599
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.055
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.055
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.12
+          unit: km/s
+
+  61-cyg-b:
+    display_name: "61 Cygni B (GJ 820 B)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Wide/moderate pair: the instantaneous Gaia PM absorbs orbital velocity; curvature over the WISE baseline is < few mas (declared approximation). K7V; RUWE 0.96.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "1872046574983497216"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 316.75366275256
+        dec_deg: 38.75607277206
+        parallax_mas: 286.0054
+        pm_ra_cosdec_mas_per_yr: 4105.976
+        pm_dec_mas_per_yr: 3155.942
+        radial_velocity_km_s: -64.59
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 1872046574983497216 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.019
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0232
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0289
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.026
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.027
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.12
+          unit: km/s
+
+  struve-2398-a:
+    display_name: "Struve 2398 A (GJ 725 A)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Wide/moderate pair: the instantaneous Gaia PM absorbs orbital velocity; curvature over the WISE baseline is < few mas (declared approximation). M3V, ~56 AU pair (formerly deferred as orbit_needed; the clean per-component Gaia solutions with negligible curvature unblock it); RUWE 1.01.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "2154880616774131840"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 280.68307083523
+        dec_deg: 59.63835790775
+        parallax_mas: 283.8401
+        pm_ra_cosdec_mas_per_yr: -1311.679
+        pm_dec_mas_per_yr: 1792.325
+        radial_velocity_km_s: -1.3
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 2154880616774131840 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0216
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0216
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.022
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.027
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.026
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.12
+          unit: km/s
+
+  struve-2398-b:
+    display_name: "Struve 2398 B (GJ 725 B)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Wide/moderate pair: the instantaneous Gaia PM absorbs orbital velocity; curvature over the WISE baseline is < few mas (declared approximation). M3.5V; RUWE 1.31.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "2154880616774131712"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 280.68308624583
+        dec_deg: 59.63514545482
+        parallax_mas: 283.8378
+        pm_ra_cosdec_mas_per_yr: -1400.264
+        pm_dec_mas_per_yr: 1862.525
+        radial_velocity_km_s: 0.88
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 2154880616774131712 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0307
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0265
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0287
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.039
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.033
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.15
+          unit: km/s
+
+  groombridge-34-a:
+    display_name: "Groombridge 34 A (GJ 15 A)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Wide/moderate pair: the instantaneous Gaia PM absorbs orbital velocity; curvature over the WISE baseline is < few mas (declared approximation). M1.5V, ~147 AU pair; RUWE 1.04.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "385334230892516480"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 4.61322625756
+        dec_deg: 44.02478674399
+        parallax_mas: 280.7068
+        pm_ra_cosdec_mas_per_yr: 2891.518
+        pm_dec_mas_per_yr: 411.832
+        radial_velocity_km_s: 11.37
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 385334230892516480 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0144
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0101
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0203
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.015
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.013
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.12
+          unit: km/s
+
+  groombridge-34-b:
+    display_name: "Groombridge 34 B (GJ 15 B)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Wide/moderate pair: the instantaneous Gaia PM absorbs orbital velocity; curvature over the WISE baseline is < few mas (declared approximation). M3.5V; RUWE 1.18.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "385334196532776576"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 4.62530068122
+        dec_deg: 44.02874451664
+        parallax_mas: 280.6947
+        pm_ra_cosdec_mas_per_yr: 2862.796
+        pm_dec_mas_per_yr: 336.432
+        radial_velocity_km_s: 10.6
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 385334196532776576 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0206
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0138
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0278
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.023
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.019
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.15
+          unit: km/s
+
+  gj-1111:
+    display_name: "GJ 1111 (DX Cnc, G 51-15)"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      M6.5V; bright-star corridor (overlay flag); RUWE 1.16.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "703790044252850688"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 127.45009240231
+        dec_deg: 26.77328596508
+        parallax_mas: 279.2496
+        pm_ra_cosdec_mas_per_yr: -1113.694
+        pm_dec_mas_per_yr: -612.191
+        radial_velocity_km_s: 10.62
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 703790044252850688 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0552
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0397
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0637
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.064
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.047
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Fouque et al. 2018 via SIMBAD (0.1 km/s floor)"
+          uncertainty: 0.1
+          unit: km/s
+
+  luyten-star:
+    display_name: "Luyten's Star (GJ 273)"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      M3.5V with small known planets (reflex negligible); RUWE 1.24.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "3139847906307949696"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 111.85462844259
+        dec_deg: 5.20938270171
+        parallax_mas: 264.1269
+        pm_ra_cosdec_mas_per_yr: 571.232
+        pm_dec_mas_per_yr: -3691.487
+        radial_velocity_km_s: 17.35
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 3139847906307949696 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0388
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0341
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0413
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.045
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.036
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.19
+          unit: km/s
+
+  kapteyn-star:
+    display_name: "Kapteyn's Star (GJ 191)"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Halo M subdwarf, RV +245 km/s, 8.6 arcsec/yr PM (best corridor drift in the survey); bright-star corridor (overlay flag); RUWE 1.17.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "4810594479418041856"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 77.95993735022
+        dec_deg: -45.04381269936
+        parallax_mas: 254.1986
+        pm_ra_cosdec_mas_per_yr: 6491.223
+        pm_dec_mas_per_yr: -5708.614
+        radial_velocity_km_s: 245.05
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 4810594479418041856 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0151
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0164
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0168
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.018
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.021
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.13
+          unit: km/s
+
+  lp-145-141:
+    display_name: "LP 145-141 (GJ 440, WD)"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Isolated white dwarf — COMPACT_LENS_WILDCARD; RUWE 0.87.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "5332606522595645952"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 176.4566466173
+        dec_deg: -64.8430528461
+        parallax_mas: 215.6753
+        pm_ra_cosdec_mas_per_yr: 2661.64
+        pm_dec_mas_per_yr: -344.933
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 5332606522595645952 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0138
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0151
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0181
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.018
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.019
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "no measured RV (white dwarf; any spectroscopic value would be GR-contaminated); 0 +/- 80 km/s conservative allocation, locus impact < 0.2 arcsec"
+          uncertainty: 80.0
+          unit: km/s
+
+  gj-1221:
+    display_name: "GJ 1221 (G 227-28, WD)"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Isolated white dwarf — COMPACT_LENS_WILDCARD; RUWE 1.06.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "1638979384378696704"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 267.01612290515
+        dec_deg: 70.88157381434
+        parallax_mas: 160.9952
+        pm_ra_cosdec_mas_per_yr: -1266.387
+        pm_dec_mas_per_yr: 1108.801
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 1638979384378696704 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0116
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0128
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0119
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.016
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.016
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "no measured RV (white dwarf); 0 +/- 80 km/s conservative allocation"
+          uncertainty: 80.0
+          unit: km/s
+
+  gj-9193:
+    display_name: "GJ 9193 (EGGR 45, WD)"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Isolated white dwarf — COMPACT_LENS_WILDCARD; RUWE 1.03.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "3022956969731332096"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 88.79209555774
+        dec_deg: -4.17892709155
+        parallax_mas: 155.2373
+        pm_ra_cosdec_mas_per_yr: 535.249
+        pm_dec_mas_per_yr: -2317.011
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 3022956969731332096 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0148
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0143
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0175
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.017
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.015
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "no measured RV (white dwarf); 0 +/- 80 km/s conservative allocation"
+          uncertainty: 80.0
+          unit: km/s
+
+  gj-783:
+    display_name: "GJ 783 AB (HR 7703)"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      K2V + M companion at ~45 AU; CNS5 merges the pair and this Gaia source tracks the primary; orbital curvature negligible over the baseline (formerly deferred as orbit_needed — unblocked by the clean RUWE 0.95 solution). One track.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "6697578465310949376"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 302.80226904331
+        dec_deg: -36.10821653737
+        parallax_mas: 166.3272
+        pm_ra_cosdec_mas_per_yr: 458.882
+        pm_dec_mas_per_yr: -1576.732
+        radial_velocity_km_s: -129.27
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 6697578465310949376 via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0853
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0664
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.1065
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.1
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.073
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.12
+          unit: km/s
+
+  eps-ind-b:
+    display_name: "Epsilon Indi Ba/Bb photocenter"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      T1+T6 binary photocenter (P ~11 yr, RUWE 4.3): position and PM uncertainties inflated to cover the photocenter orbit; the ~0.2 arcsec/yr wobble sits INSIDE the frozen |mu_resid| <= 1 arcsec/yr search cell, so the joint (z, mu) fit absorbs it. Parallax taken from eps Ind A (same system). Formerly deferred.
+    identifiers:
+      - catalog: "Gaia DR3"
+        id: "6412596012146801152"
+        version: "Gaia DR3, via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 331.07645259656
+        dec_deg: -56.79381206688
+        parallax_mas: 274.8431
+        pm_ra_cosdec_mas_per_yr: 3981.977
+        pm_dec_mas_per_yr: -2466.832
+        radial_velocity_km_s: -40.43
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3 6412596012146801152 (positions/PM; inflated), parallax from eps Ind A 6412595290592307840"
+      provenance:
+        ra_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 100.0
+          unit: mas
+        dec_deg:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 100.0
+          unit: mas
+        parallax_mas:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 0.0956
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 200.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Gaia DR3 via VizieR I/355/gaiadr3 (retrieved 2026-08-19)"
+          uncertainty: 200.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "system RV from eps Ind A (Gaia) +/- 2 km/s allocation"
+          uncertainty: 2.0
+          unit: km/s
+
+  gj-11068:
+    display_name: "GJ 11068 (CNS5 1819)"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Closest-approach standout (d_min ~0.33 pc within +/-1 Myr). No Gaia DR3 solution; CNS5 compilation astrometry with inflated uncertainties (formerly deferred as hard).
+    identifiers:
+      - catalog: "CNS5"
+        id: "gj-11068"
+        version: "CNS5 (Golovin et al. 2023) via VizieR J/A+A/670/A19"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 110.01338013598
+        dec_deg: -8.78105451925
+        parallax_mas: 147.1
+        pm_ra_cosdec_mas_per_yr: -46.0
+        pm_dec_mas_per_yr: -116.5
+        radial_velocity_km_s: 83.1
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3  via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 100.0
+          unit: mas
+        dec_deg:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 100.0
+          unit: mas
+        parallax_mas:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 1.2
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 10.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 10.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 0.4
+          unit: km/s
+
+  wise-0855:
+    display_name: "WISE J085510.83-071442.5"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Y2 dwarf, 4th nearest system. CNS5 compilation astrometry (Spitzer/WISE-based) with inflated uncertainties (formerly deferred as hard). 8.2 arcsec/yr PM.
+    identifiers:
+      - catalog: "CNS5"
+        id: "wise-0855"
+        version: "CNS5 (Golovin et al. 2023) via VizieR J/A+A/670/A19"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 133.7947598
+        dec_deg: -7.2451456
+        parallax_mas: 439.0
+        pm_ra_cosdec_mas_per_yr: -8123.7
+        pm_dec_mas_per_yr: 673.2
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3  via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 150.0
+          unit: mas
+        dec_deg:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 150.0
+          unit: mas
+        parallax_mas:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 2.4
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 30.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 30.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "no measured RV (Y dwarf); 0 +/- 60 km/s allocation"
+          uncertainty: 60.0
+          unit: km/s
+
+  ez-aqr:
+    display_name: "EZ Aquarii ABC (GJ 866) photocenter"
+    endpoint_kind: star
+    priority: 0.5
+    tags: [batch-4, universal-v1]
+    notes: >-
+      Close M-dwarf triple: photocenter wobble <~0.35 arcsec with orbital velocity inside the |mu_resid| <= 1 arcsec/yr cell; CNS5 compilation astrometry with inflated uncertainties (formerly deferred as hard). One photocenter track.
+    identifiers:
+      - catalog: "CNS5"
+        id: "ez-aqr"
+        version: "CNS5 (Golovin et al. 2023) via VizieR J/A+A/670/A19"
+    quality: "see notes"
+    model_rationale: >-
+      Linear astrometry family; orbital/companion effects either
+      negligible at WISE-baseline precision or absorbed into inflated
+      uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 339.650693945
+        dec_deg: -15.28964705186
+        parallax_mas: 293.6
+        pm_ra_cosdec_mas_per_yr: 2314.8
+        pm_dec_mas_per_yr: 2295.3
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: "Gaia DR3  via VizieR I/355/gaiadr3; RV per provenance"
+      provenance:
+        ra_deg:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 350.0
+          unit: mas
+        dec_deg:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 350.0
+          unit: mas
+        parallax_mas:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 0.9
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 100.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "CNS5 compilation (Golovin et al. 2023)"
+          uncertainty: 100.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "SIMBAD catalog RV (+6824.7) is spurious; treated as unknown, 0 +/- 100 km/s allocation"
+          uncertainty: 100.0
+          unit: km/s
+
+  luhman16-a:
+    display_name: "Luhman 16 A (WISE J1049-5319 A)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1, binary-component]
+    notes: >-
+      L7.5 primary of the nearest brown-dwarf binary (2.0 pc). Garcia et al. 2017 coherent orbit+mass fit adopted (masses 34.2 + 27.9 MJup); an alternative Bedin et al. 2017 solution differs in inclination — orbit-element uncertainties are carried in provenance and propagate through the Monte Carlo. Systemic RV unmeasured.
+    identifiers:
+      - catalog: "CNS5"
+        id: "2653"
+        version: "CNS5 via VizieR J/A+A/670/A19 (retrieved 2026-08-19)"
+      - catalog: "Garcia et al."
+        id: "Luhman 16 AB orbit"
+        version: "2017, arXiv:1708.02714, Table 5"
+    quality: "published orbit; see notes"
+    model_rationale: >-
+      Resolved binary with orbit-corrupted or absent per-component
+      solutions; two-body orbit about a linearly moving barycenter.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 162.314706
+        dec_deg: -53.3183847
+        parallax_mas: 501.01
+        pm_ra_cosdec_mas_per_yr: -2762.16
+        pm_dec_mas_per_yr: 357.79
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: >-
+          Barycenter position from the CNS5 (Bedin-based) merged entry;
+          barycentric PM and parallax from Garcia et al. 2017
+          (arXiv:1708.02714); systemic RV unmeasured (0 +/- 30
+          allocation)
+      provenance:
+        ra_deg:
+          source: "CNS5 merged entry (conservative)"
+          uncertainty: 50.0
+          unit: mas
+        dec_deg:
+          source: "CNS5 merged entry (conservative)"
+          uncertainty: 50.0
+          unit: mas
+        parallax_mas:
+          source: "Garcia et al. 2017"
+          uncertainty: 0.53
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Garcia et al. 2017"
+          uncertainty: 2.43
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Garcia et al. 2017"
+          uncertainty: 3.44
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "unmeasured; conservative allocation"
+          uncertainty: 30.0
+          unit: km/s
+        period_yr:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 1.03
+          unit: yr
+        periastron_epoch_jyear:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 0.65
+          unit: yr
+        eccentricity:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 0.02
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "Garcia et al. 2017 (5.10 +0.22/-0.19 AU x parallax)"
+          uncertainty: 0.103
+          unit: arcsec
+        inclination_deg:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 1.9
+          unit: deg
+        ascending_node_deg:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 6.0
+          unit: deg
+        arg_periastron_deg:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 8.6
+          unit: deg
+        mass_fraction_secondary:
+          source: "Garcia et al. 2017 masses 27.9/(34.2+27.9)"
+          uncertainty: 0.02
+          unit: "1"
+      orbit:
+        period_yr: 27.55
+        periastron_epoch_jyear: 2017.9
+        eccentricity: 0.35
+        semimajor_axis_arcsec: 2.5552
+        inclination_deg: 98.4
+        ascending_node_deg: 133.2
+        arg_periastron_deg: 48.1
+        mass_fraction_secondary: 0.44928
+        component: primary
+        source: >-
+          Garcia et al. 2017, arXiv:1708.02714, Table 5; semimajor axis converted from AU with their parallax
+  luhman16-b:
+    display_name: "Luhman 16 B"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1, binary-component]
+    notes: >-
+      T0.5 secondary; same barycenter astrometry and orbit block as luhman16-a, differing only in component.
+    identifiers:
+      - catalog: "CNS5"
+        id: "2653"
+        version: "CNS5 via VizieR J/A+A/670/A19 (retrieved 2026-08-19)"
+      - catalog: "Garcia et al."
+        id: "Luhman 16 AB orbit"
+        version: "2017, arXiv:1708.02714, Table 5"
+    quality: "published orbit; see notes"
+    model_rationale: >-
+      Resolved binary with orbit-corrupted or absent per-component
+      solutions; two-body orbit about a linearly moving barycenter.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 162.314706
+        dec_deg: -53.3183847
+        parallax_mas: 501.01
+        pm_ra_cosdec_mas_per_yr: -2762.16
+        pm_dec_mas_per_yr: 357.79
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: >-
+          Barycenter position from the CNS5 (Bedin-based) merged entry;
+          barycentric PM and parallax from Garcia et al. 2017
+          (arXiv:1708.02714); systemic RV unmeasured (0 +/- 30
+          allocation)
+      provenance:
+        ra_deg:
+          source: "CNS5 merged entry (conservative)"
+          uncertainty: 50.0
+          unit: mas
+        dec_deg:
+          source: "CNS5 merged entry (conservative)"
+          uncertainty: 50.0
+          unit: mas
+        parallax_mas:
+          source: "Garcia et al. 2017"
+          uncertainty: 0.53
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "Garcia et al. 2017"
+          uncertainty: 2.43
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "Garcia et al. 2017"
+          uncertainty: 3.44
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "unmeasured; conservative allocation"
+          uncertainty: 30.0
+          unit: km/s
+        period_yr:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 1.03
+          unit: yr
+        periastron_epoch_jyear:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 0.65
+          unit: yr
+        eccentricity:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 0.02
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "Garcia et al. 2017 (5.10 +0.22/-0.19 AU x parallax)"
+          uncertainty: 0.103
+          unit: arcsec
+        inclination_deg:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 1.9
+          unit: deg
+        ascending_node_deg:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 6.0
+          unit: deg
+        arg_periastron_deg:
+          source: "Garcia et al. 2017 Table 5"
+          uncertainty: 8.6
+          unit: deg
+        mass_fraction_secondary:
+          source: "Garcia et al. 2017 masses 27.9/(34.2+27.9)"
+          uncertainty: 0.02
+          unit: "1"
+      orbit:
+        period_yr: 27.55
+        periastron_epoch_jyear: 2017.9
+        eccentricity: 0.35
+        semimajor_axis_arcsec: 2.5552
+        inclination_deg: 98.4
+        ascending_node_deg: 133.2
+        arg_periastron_deg: 48.1
+        mass_fraction_secondary: 0.44928
+        component: secondary
+        source: >-
+          Garcia et al. 2017, arXiv:1708.02714, Table 5; semimajor axis converted from AU with their parallax
+  procyon-a:
+    display_name: "Procyon A (GJ 280 A)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1, binary-component]
+    notes: >-
+      F5 IV-V primary. hip2 solution validated AS the barycenter against 2MASS (0.31 vs 1.02 arcsec — the Sirius pattern); Bond et al. 2015 orbit extracted directly from the PDF after two garbled web extractions, and Kepler-validated (a^3/P^2 -> 2.08 Msun vs their 2.070 dynamical total).
+    identifiers:
+      - catalog: "HIP"
+        id: "37279"
+        version: "Hipparcos, the New Reduction (van Leeuwen 2007), via VizieR I/311/hip2 (retrieved 2026-08-19)"
+      - catalog: "Bond et al."
+        id: "Procyon AB orbit"
+        version: "2015, ApJ 813, 106, Table 8 (extracted from PDF, Kepler-validated)"
+    quality: "published orbit; see notes"
+    model_rationale: >-
+      Resolved binary with orbit-corrupted or absent per-component
+      solutions; two-body orbit about a linearly moving barycenter.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 114.82724202
+        dec_deg: 5.22750758
+        parallax_mas: 284.56
+        pm_ra_cosdec_mas_per_yr: -714.59
+        pm_dec_mas_per_yr: -1036.80
+        radial_velocity_km_s: -4.505
+        reference_epoch_jyear: 1991.25
+        reference_epoch_scale: tt
+        source: >-
+          van Leeuwen 2007 HIP 37279 via VizieR I/311/hip2, adopted AS
+          the orbit-corrected barycenter — validated by predicting the
+          2MASS epoch-1999.93 position of Procyon A to 0.31 arcsec
+          (vs 1.02 arcsec as photocenter-linear); RV from Jonsson et
+          al. 2020 via SIMBAD
+      provenance:
+        ra_deg:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 0.98
+          unit: mas
+        dec_deg:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 0.55
+          unit: mas
+        parallax_mas:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 1.26
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "hip2 (2.06) + 2MASS-validation systematic, quadrature"
+          uncertainty: 20.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "hip2 (1.15) + 2MASS-validation systematic, quadrature"
+          uncertainty: 20.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Jonsson et al. 2020 via SIMBAD (floor)"
+          uncertainty: 0.1
+          unit: km/s
+        period_yr:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.022
+          unit: yr
+        periastron_epoch_jyear:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.023
+          unit: yr
+        eccentricity:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.00025
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.0016
+          unit: arcsec
+        inclination_deg:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.05
+          unit: deg
+        ascending_node_deg:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.095
+          unit: deg
+        arg_periastron_deg:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.11
+          unit: deg
+        mass_fraction_secondary:
+          source: "Bond et al. 2015 masses 0.592/(1.478+0.592)"
+          uncertainty: 0.003
+          unit: "1"
+      orbit:
+        period_yr: 40.840
+        periastron_epoch_jyear: 1968.076
+        eccentricity: 0.39785
+        semimajor_axis_arcsec: 4.3075
+        inclination_deg: 31.408
+        ascending_node_deg: 100.683
+        arg_periastron_deg: 89.23
+        mass_fraction_secondary: 0.28599
+        component: primary
+        source: >-
+          Bond et al. 2015, ApJ 813, 106, Table 8 (PDF-extracted, Kepler-validated)
+  procyon-b:
+    display_name: "Procyon B (GJ 280 B)"
+    endpoint_kind: component
+    priority: 0.5
+    tags: [batch-4, universal-v1, binary-component]
+    notes: >-
+      DQZ white-dwarf secondary; same barycenter astrometry and orbit block as procyon-a, differing only in component.
+    identifiers:
+      - catalog: "HIP"
+        id: "37279"
+        version: "Hipparcos, the New Reduction (van Leeuwen 2007), via VizieR I/311/hip2 (retrieved 2026-08-19)"
+      - catalog: "Bond et al."
+        id: "Procyon AB orbit"
+        version: "2015, ApJ 813, 106, Table 8 (extracted from PDF, Kepler-validated)"
+    quality: "published orbit; see notes"
+    model_rationale: >-
+      Resolved binary with orbit-corrupted or absent per-component
+      solutions; two-body orbit about a linearly moving barycenter.
+    state:
+      provider: two_body_orbit_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 114.82724202
+        dec_deg: 5.22750758
+        parallax_mas: 284.56
+        pm_ra_cosdec_mas_per_yr: -714.59
+        pm_dec_mas_per_yr: -1036.80
+        radial_velocity_km_s: -4.505
+        reference_epoch_jyear: 1991.25
+        reference_epoch_scale: tt
+        source: >-
+          van Leeuwen 2007 HIP 37279 via VizieR I/311/hip2, adopted AS
+          the orbit-corrected barycenter — validated by predicting the
+          2MASS epoch-1999.93 position of Procyon A to 0.31 arcsec
+          (vs 1.02 arcsec as photocenter-linear); RV from Jonsson et
+          al. 2020 via SIMBAD
+      provenance:
+        ra_deg:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 0.98
+          unit: mas
+        dec_deg:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 0.55
+          unit: mas
+        parallax_mas:
+          source: "van Leeuwen 2007 via VizieR I/311/hip2"
+          uncertainty: 1.26
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: "hip2 (2.06) + 2MASS-validation systematic, quadrature"
+          uncertainty: 20.0
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: "hip2 (1.15) + 2MASS-validation systematic, quadrature"
+          uncertainty: 20.0
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: "Jonsson et al. 2020 via SIMBAD (floor)"
+          uncertainty: 0.1
+          unit: km/s
+        period_yr:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.022
+          unit: yr
+        periastron_epoch_jyear:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.023
+          unit: yr
+        eccentricity:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.00025
+          unit: "1"
+        semimajor_axis_arcsec:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.0016
+          unit: arcsec
+        inclination_deg:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.05
+          unit: deg
+        ascending_node_deg:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.095
+          unit: deg
+        arg_periastron_deg:
+          source: "Bond et al. 2015 Table 8"
+          uncertainty: 0.11
+          unit: deg
+        mass_fraction_secondary:
+          source: "Bond et al. 2015 masses 0.592/(1.478+0.592)"
+          uncertainty: 0.003
+          unit: "1"
+      orbit:
+        period_yr: 40.840
+        periastron_epoch_jyear: 1968.076
+        eccentricity: 0.39785
+        semimajor_axis_arcsec: 4.3075
+        inclination_deg: 31.408
+        ascending_node_deg: 100.683
+        arg_periastron_deg: 89.23
+        mass_fraction_secondary: 0.28599
+        component: secondary
+        source: >-
+          Bond et al. 2015, ApJ 813, 106, Table 8 (PDF-extracted, Kepler-validated)

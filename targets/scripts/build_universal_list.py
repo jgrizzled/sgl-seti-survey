@@ -53,7 +53,12 @@ SEARCHED_SYSTEM_KEYS = ["alpha Cen", "Proxima", "Barnard", "Sirius",
                         "GJ 908", "GJ 784",
                         # batch 3 (2026-08-19)
                         "eps Eri", "Lacaille 9352", "GJ 1061",
-                        "GJ 12724", "Wolf 1061"]
+                        "GJ 12724", "Wolf 1061",
+                        # batch 4 + unblocked deferred (2026-08-20)
+                        "61 Cyg", "Struve 2398", "Groombridge 34",
+                        "GJ 1111", "Luyten", "Kapteyn", "LP 145-141",
+                        "GJ 1221", "GJ 9193", "GJ 783", "GJ 11068",
+                        "WISE 0855", "EZ Aqr", "Luhman 16", "Procyon"]
 
 KM_S_TO_PC_MYR = 1.0227
 
