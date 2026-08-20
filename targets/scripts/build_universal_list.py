@@ -46,7 +46,14 @@ ALREADY_SEARCHED = {  # registry v1.1 systems (WISE shakedown complete)
 }
 SEARCHED_SYSTEM_KEYS = ["alpha Cen", "Proxima", "Barnard", "Sirius",
                         "Ross 154", "Ross 248", "Lalande 21185",
-                        "Wolf 359", "GJ 65", "CN Leo", "HH And"]
+                        "Wolf 359", "GJ 65", "CN Leo", "HH And",
+                        # batch 2 (2026-08-19)
+                        "Ross 128", "eps Ind", "tau Cet", "GJ 54",
+                        "Teegarden", "Lacaille 8760", "van Maanen",
+                        "GJ 908", "GJ 784",
+                        # batch 3 (2026-08-19)
+                        "eps Eri", "Lacaille 9352", "GJ 1061",
+                        "GJ 12724", "Wolf 1061"]
 
 KM_S_TO_PC_MYR = 1.0227
 

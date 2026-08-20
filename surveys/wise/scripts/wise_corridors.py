@@ -21,6 +21,22 @@ CORRIDOR_OF = {
     "ross-248": "ross248",
     "gj65-a": "gj65",
     "gj65-b": "gj65",
+    # v1.2 batch 2 (universal list / WISE overlay queue)
+    "ross-128": "ross128",
+    "eps-ind-a": "epsind",
+    "tau-cet": "taucet",
+    "gj-54": "gj54",
+    "teegarden": "teegarden",
+    "lacaille-8760": "lacaille8760",
+    "van-maanen": "vanmaanen",
+    "gj-908": "gj908",
+    "gj-784": "gj784",
+    # v1.3 batch 3 (mid-confusion queue)
+    "eps-eri": "epseri",
+    "lacaille-9352": "lacaille9352",
+    "gj-1061": "gj1061",
+    "gj-12724": "gj12724",
+    "wolf-1061": "wolf1061",
 }
 
 MEMBERS = defaultdict(list)

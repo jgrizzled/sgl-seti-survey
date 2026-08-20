@@ -10,7 +10,21 @@
   "Sirius AB",
   "GJ 65 AB",
   "Ross 154",
-  "Ross 248"
+  "Ross 248",
+  "eps Eri",
+  "Lacaille 9352",
+  "Ross 128",
+  "eps Ind",
+  "tau Cet",
+  "GJ 1061",
+  "GJ 54",
+  "Teegarden's Star",
+  "Lacaille 8760",
+  "GJ 12724",
+  "Wolf 1061",
+  "van Maanen's Star",
+  "GJ 908",
+  "GJ 784"
  ],
  "systems": [
   {
@@ -162,7 +176,7 @@
    "catwise_density_deg2": 37422,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Lacaille 9352",
@@ -175,7 +189,7 @@
    "catwise_density_deg2": 32411,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Ross 128",
@@ -188,7 +202,7 @@
    "catwise_density_deg2": 28528,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "EZ Aqr",
@@ -280,7 +294,7 @@
    "catwise_density_deg2": 32323,
    "confusion": "low",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "tau Cet",
@@ -293,7 +307,7 @@
    "catwise_density_deg2": 28719,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 1061",
@@ -306,7 +320,7 @@
    "catwise_density_deg2": 37733,
    "confusion": "mid",
    "coverage_proxy": "high",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 54",
@@ -319,7 +333,7 @@
    "catwise_density_deg2": 29602,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Luyten's Star",
@@ -345,7 +359,7 @@
    "catwise_density_deg2": 30517,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Kapteyn's Star",
@@ -371,7 +385,7 @@
    "catwise_density_deg2": 31806,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 12724",
@@ -384,7 +398,7 @@
    "catwise_density_deg2": 36006,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Wolf 1061",
@@ -397,7 +411,7 @@
    "catwise_density_deg2": 33962,
    "confusion": "mid",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "van Maanen's Star",
@@ -410,7 +424,7 @@
    "catwise_density_deg2": 30398,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "LP 145-141 (WD)",
@@ -436,7 +450,7 @@
    "catwise_density_deg2": 29356,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 783",
@@ -462,7 +476,7 @@
    "catwise_density_deg2": 32339,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 1221",
@@ -505,20 +519,6 @@
   }
  ],
  "work_queue": [
-  "Ross 128",
-  "eps Ind",
-  "tau Cet",
-  "GJ 54",
-  "Teegarden's Star",
-  "Lacaille 8760",
-  "van Maanen's Star",
-  "GJ 908",
-  "GJ 784",
-  "eps Eri",
-  "Lacaille 9352",
-  "GJ 1061",
-  "GJ 12724",
-  "Wolf 1061",
   "Luhman 16 AB",
   "61 Cyg AB",
   "Procyon AB",

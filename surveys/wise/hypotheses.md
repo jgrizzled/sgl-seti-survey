@@ -4,6 +4,20 @@ status: "v1.1 — parameters frozen 2026-08-18; endpoint set expanded 2026-08-18
 date: 2026-08-18
 ---
 
+> **v1.3 addendum (2026-08-19).** Batch-3 endpoint expansion (WISE
+> overlay mid-confusion queue): `eps-eri`, `lacaille-9352`, `gj-1061`,
+> `gj-12724`, `wolf-1061` — 26 endpoint hypotheses across 23 corridors,
+> registry v1.3 `sha256:a476a3e3…`. **Every parameter in sections 2–9
+> remains unchanged from v1.0.**
+>
+> **v1.2 addendum (2026-08-19).** Batch-2 endpoint expansion from the
+> universal target list (`targets/universal_v1`) per the WISE overlay
+> queue: `ross-128`, `eps-ind-a`, `tau-cet`, `gj-54`, `teegarden`,
+> `lacaille-8760`, `van-maanen`, `gj-908`, `gj-784` — 21 endpoint
+> hypotheses across 18 corridors, registry v1.2 `sha256:f03b821f…`.
+> ε Ind Ba/Bb deferred (photocenter-orbit model needed). **Every
+> parameter in sections 2–9 remains unchanged from v1.0.**
+>
 > **v1.1 addendum (2026-08-18).** Endpoint set expanded after the pilot
 > passed (plan §4.2 expansion gate): added `proxima-cen`, `wolf-359`,
 > `ross-248` (linear provider) and `gj65-a`, `gj65-b` (component

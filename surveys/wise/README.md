@@ -89,3 +89,14 @@ the data can always be re-fetched rather than committed.
 through the complete chain; 768 Constraint records under AnalysisRun
 `run-20040d16f249`; 6 vetoed Candidates; no surviving candidate.
 See `results/expansion_v1_1_summary.md`.
+
+**v1.2 batch 2 (2026-08-19):** nine low-confusion corridors from the
+universal-list WISE overlay queue; registry v1.2, 21 endpoints /
+18 corridors, 1,344 Constraint records under `run-2d18a690aa95`;
+9 vetoed Candidates total; no surviving candidate; deepest limits yet
+(W1 m90 ≈ 17.5). See `results/batch2_summary.md`.
+
+**v1.3 batch 3 (2026-08-19):** five mid-confusion corridors; registry
+v1.3, 26 endpoints / 23 corridors, 1,664 Constraint records under
+`run-04d6098fb26e`; 13 vetoed Candidates total; no surviving candidate.
+See `results/batch3_summary.md`.
