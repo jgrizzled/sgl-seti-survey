@@ -1,6 +1,13 @@
 # Pilot target registry for the WISE/NEOWISE shakedown (plan §4.2).
 #
-# STATUS: v1.4 (2026-08-19) — batch-4 + unblocked-deferred endpoints
+# STATUS: v1.5 (2026-08-20) — batch-5: universal v2 (10 pc, picky-
+# network baskets) expansion, 41 endpoints / 39 corridors added (88
+# targets, 77 corridors) by scripts/add_registry_entries.py: all 35
+# queued overlay_v2 systems plus formerly orbit-needed components
+# unblocked on per-component Gaia solutions (GJ 229 A, GJ 667 C,
+# LTT 1445 A, GJ 66 A/B; Struve 2398 precedent). Fomalhaut on
+# Hipparcos-2 (Gaia-saturated). White dwarfs: 0 +/- 50 km/s RV.
+# v1.4 (2026-08-19) — batch-4 + unblocked-deferred endpoints
 # (47 targets, 38 corridors): 61-cyg-a/b, struve-2398-a/b,
 # groombridge-34-a/b, gj-1111, luyten-star, kapteyn-star, lp-145-141,
 # gj-1221, gj-9193, gj-783, eps-ind-b, gj-11068, wise-0855, ez-aqr,
@@ -3146,3 +3153,2197 @@ targets:
         component: secondary
         source: >-
           Bond et al. 2015, ApJ 813, 106, Table 8 (PDF-extracted, Kepler-validated)
+
+  # ---- batch-5 (2026-08-20): universal v2 picky-network expansion ----
+  gj-876:
+    display_name: GJ 876 (M3.5V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone, Science Interest. RUWE 1.34.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2603090003484152064'
+      version: Gaia DR3 2603090003484152064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 343.32411100184
+        dec_deg: -14.26668939352
+        parallax_mas: 214.038
+        pm_ra_cosdec_mas_per_yr: 957.715
+        pm_dec_mas_per_yr: -673.601
+        radial_velocity_km_s: -2.09
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2603090003484152064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2603090003484152064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0338
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2603090003484152064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0258
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2603090003484152064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0356
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2603090003484152064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.041
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2603090003484152064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.031
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 2603090003484152064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.15
+          unit: km/s
+  gj-1002:
+    display_name: GJ 1002
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. RUWE 1.34.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2441630500517079808'
+      version: Gaia DR3 2441630500517079808 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 1.67635042594
+        dec_deg: -7.54647532526
+        parallax_mas: 206.35
+        pm_ra_cosdec_mas_per_yr: -811.566
+        pm_dec_mas_per_yr: -1893.251
+        radial_velocity_km_s: -40.46
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2441630500517079808 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2441630500517079808 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0445
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2441630500517079808 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0315
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2441630500517079808 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0474
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2441630500517079808 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.064
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2441630500517079808 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.034
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 2441630500517079808 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.3
+          unit: km/s
+  gj-832:
+    display_name: GJ 832 (M2/3V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest T2. RUWE 1.10.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '6562924609150908416'
+      version: Gaia DR3 6562924609150908416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 323.39125187764
+        dec_deg: -49.01263039681
+        parallax_mas: 201.3252
+        pm_ra_cosdec_mas_per_yr: -45.917
+        pm_dec_mas_per_yr: -816.875
+        radial_velocity_km_s: 12.72
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 6562924609150908416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 6562924609150908416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0181
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 6562924609150908416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0143
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 6562924609150908416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0237
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 6562924609150908416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.023
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 6562924609150908416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 6562924609150908416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.13
+          unit: km/s
+  gj-526:
+    display_name: GJ 526 (M2V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone. RUWE 1.05.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3741297293732404352'
+      version: Gaia DR3 3741297293732404352 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 206.44056584486
+        dec_deg: 14.8850527046
+        parallax_mas: 183.9962
+        pm_ra_cosdec_mas_per_yr: 1776.006
+        pm_dec_mas_per_yr: -1455.156
+        radial_velocity_km_s: 15.58
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3741297293732404352 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3741297293732404352 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0216
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3741297293732404352 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0143
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3741297293732404352 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0253
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3741297293732404352 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.034
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3741297293732404352 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.017
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 3741297293732404352 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s
+  gj-581:
+    display_name: GJ 581 (M3V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. RUWE 1.30.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '6322070093095493504'
+      version: Gaia DR3 6322070093095493504 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 229.85630133329
+        dec_deg: -7.72270702416
+        parallax_mas: 158.7183
+        pm_ra_cosdec_mas_per_yr: -1221.278
+        pm_dec_mas_per_yr: -97.229
+        radial_velocity_km_s: -9.75
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 6322070093095493504 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 6322070093095493504 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.027
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 6322070093095493504 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.021
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 6322070093095493504 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0301
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 6322070093095493504 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.037
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 6322070093095493504 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.027
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 6322070093095493504 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.16
+          unit: km/s
+  gj-514:
+    display_name: GJ 514 (M1.0Ve)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest T2. RUWE 1.09.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3738099879558957952'
+      version: Gaia DR3 3738099879558957952 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 202.50420163284
+        dec_deg: 10.37238957413
+        parallax_mas: 131.1013
+        pm_ra_cosdec_mas_per_yr: 1127.341
+        pm_dec_mas_per_yr: -1073.888
+        radial_velocity_km_s: 14.12
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3738099879558957952 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3738099879558957952 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0227
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3738099879558957952 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0136
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3738099879558957952 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.027
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3738099879558957952 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.027
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3738099879558957952 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.014
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 3738099879558957952 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s
+  fomalhaut:
+    display_name: Fomalhaut
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. Gaia-saturated: Hipparcos-2 solution adopted (Sirius/Procyon
+      precedent; single star, no barycenter correction needed).'
+    identifiers:
+    - catalog: Hipparcos
+      id: '113368'
+      version: Hipparcos-2 (van Leeuwen 2007) HIP 113368 via VizieR I/311/hip2 (retrieved 2026-08-20)
+    quality: Hipparcos-2 solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 344.41177299
+        dec_deg: -29.62183680
+        parallax_mas: 129.81
+        pm_ra_cosdec_mas_per_yr: 328.95
+        pm_dec_mas_per_yr: -164.67
+        radial_velocity_km_s: 6.5
+        reference_epoch_jyear: 1991.25
+        reference_epoch_scale: tt
+        source: Hipparcos-2 (van Leeuwen 2007) HIP 113368 via VizieR I/311/hip2 (retrieved 2026-08-20);
+          RV per provenance
+      provenance:
+        ra_deg:
+          source: Hipparcos-2 (van Leeuwen 2007) HIP 113368 via VizieR I/311/hip2 (retrieved 2026-08-20)
+          uncertainty: 0.39
+          unit: mas
+        dec_deg:
+          source: Hipparcos-2 (van Leeuwen 2007) HIP 113368 via VizieR I/311/hip2 (retrieved 2026-08-20)
+          uncertainty: 0.3
+          unit: mas
+        parallax_mas:
+          source: Hipparcos-2 (van Leeuwen 2007) HIP 113368 via VizieR I/311/hip2 (retrieved 2026-08-20)
+          uncertainty: 0.47
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Hipparcos-2 (van Leeuwen 2007) HIP 113368 via VizieR I/311/hip2 (retrieved 2026-08-20)
+          uncertainty: 0.5
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Hipparcos-2 (van Leeuwen 2007) HIP 113368 via VizieR I/311/hip2 (retrieved 2026-08-20)
+          uncertainty: 0.35
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gontcharov 2006 (PCRV) via SIMBAD
+          uncertainty: 0.5
+          unit: km/s
+  wolf-437:
+    display_name: Wolf 437 (M3.5Ve)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. RUWE 1.09.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3735000631158990976'
+      version: Gaia DR3 3735000631158990976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 191.98138882517
+        dec_deg: 9.74935423088
+        parallax_mas: 123.7756
+        pm_ra_cosdec_mas_per_yr: -1008.267
+        pm_dec_mas_per_yr: -460.034
+        radial_velocity_km_s: 19.2
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3735000631158990976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3735000631158990976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0264
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3735000631158990976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0158
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3735000631158990976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0329
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3735000631158990976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.04
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3735000631158990976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.033
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 3735000631158990976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.17
+          unit: km/s
+  gj-915:
+    display_name: GJ 915
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 1.14.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '4994877094997259264'
+      version: Gaia DR3 4994877094997259264 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 0.5484242195
+        dec_deg: -43.16843961827
+        parallax_mas: 120.0143
+        pm_ra_cosdec_mas_per_yr: 613.785
+        pm_dec_mas_per_yr: -686.989
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 4994877094997259264 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 4994877094997259264 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.015
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 4994877094997259264 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0135
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 4994877094997259264 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0215
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 4994877094997259264 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 4994877094997259264 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.017
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  gj-518:
+    display_name: GJ 518 (WD)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 1.03.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3713594960831605760'
+      version: Gaia DR3 3713594960831605760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 204.11607940812
+        dec_deg: 3.67447928671
+        parallax_mas: 119.7566
+        pm_ra_cosdec_mas_per_yr: -3735.839
+        pm_dec_mas_per_yr: -1113.581
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3713594960831605760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3713594960831605760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0214
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3713594960831605760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0137
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3713594960831605760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0304
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3713594960831605760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.026
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3713594960831605760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  gj-1276:
+    display_name: GJ 1276
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 0.93.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2611561706216413696'
+      version: Gaia DR3 2611561706216413696 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 343.48356406408
+        dec_deg: -6.78483020608
+        parallax_mas: 117.1388
+        pm_ra_cosdec_mas_per_yr: 2485.799
+        pm_dec_mas_per_yr: -681.254
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2611561706216413696 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2611561706216413696 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.03
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2611561706216413696 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0281
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2611561706216413696 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0341
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2611561706216413696 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.038
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2611561706216413696 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.04
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  61-vir:
+    display_name: 61 Vir (G6.5V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. RUWE 1.18.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3507879565090229888'
+      version: Gaia DR3 3507879565090229888 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 199.59629813235
+        dec_deg: -18.31592210065
+        parallax_mas: 117.1726
+        pm_ra_cosdec_mas_per_yr: -1070.202
+        pm_dec_mas_per_yr: -1063.849
+        radial_velocity_km_s: -7.86
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3507879565090229888 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3507879565090229888 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.1037
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3507879565090229888 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.1099
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3507879565090229888 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.1456
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3507879565090229888 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.153
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3507879565090229888 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.123
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 3507879565090229888 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.13
+          unit: km/s
+  gj-2012:
+    display_name: GJ 2012
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 0.99.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2349916559152267008'
+      version: Gaia DR3 2349916559152267008 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 10.35621992537
+        dec_deg: -22.35233354273
+        parallax_mas: 109.9276
+        pm_ra_cosdec_mas_per_yr: -463.206
+        pm_dec_mas_per_yr: -381.784
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2349916559152267008 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2349916559152267008 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0149
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2349916559152267008 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.011
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2349916559152267008 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0202
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2349916559152267008 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.022
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2349916559152267008 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  gj-11547:
+    display_name: GJ 11547
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Historical Neighbor. RUWE 1.04.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '5393446658454453632'
+      version: Gaia DR3 5393446658454453632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 162.05388771667
+        dec_deg: -39.93962594731
+        parallax_mas: 247.2156
+        pm_ra_cosdec_mas_per_yr: -1179.311
+        pm_dec_mas_per_yr: -988.121
+        radial_velocity_km_s: -11.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 5393446658454453632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 5393446658454453632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0334
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 5393446658454453632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0396
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 5393446658454453632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0512
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 5393446658454453632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.056
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 5393446658454453632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.056
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: CNS5 compilation RV (retrieved 2026-08-20)
+          uncertainty: 2.0
+          unit: km/s
+  lhs-1723:
+    display_name: LHS 1723
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. RUWE 1.10.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3187115498866675456'
+      version: Gaia DR3 3187115498866675456 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 75.48680521252
+        dec_deg: -6.94858740903
+        parallax_mas: 186.0466
+        pm_ra_cosdec_mas_per_yr: -551.746
+        pm_dec_mas_per_yr: -533.648
+        radial_velocity_km_s: 42.29
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3187115498866675456 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3187115498866675456 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0196
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3187115498866675456 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0147
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3187115498866675456 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0277
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3187115498866675456 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.026
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3187115498866675456 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.021
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 3187115498866675456 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.18
+          unit: km/s
+  82-eri:
+    display_name: 82 Eri (G6V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone, Historical Neighbor, Science Interest. Gaia RUWE
+      1.98: uncertainties inflated x3 (tau Cet precedent).'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '4847957293278177024'
+      version: Gaia DR3 4847957293278177024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 50.00034361894
+        dec_deg: -43.06655252783
+        parallax_mas: 165.5242
+        pm_ra_cosdec_mas_per_yr: 3035.017
+        pm_dec_mas_per_yr: 726.964
+        radial_velocity_km_s: 87.76
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 4847957293278177024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 4847957293278177024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.1911
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 4847957293278177024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.195
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 4847957293278177024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.2352
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 4847957293278177024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.243
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 4847957293278177024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.303
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 4847957293278177024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.39
+          unit: km/s
+  gj-338-a:
+    display_name: GJ 338 AB A (K7V)
+    endpoint_kind: component
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest T2. RUWE 1.08. Multiple system: component endpoint
+      on its own Gaia solution; orbital curvature over the WISE baseline negligible at the declared separation
+      (108.1 AU) — Struve 2398 precedent.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '1022456139210632064'
+      version: Gaia DR3 1022456139210632064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 138.58356161522
+        dec_deg: 52.68408016691
+        parallax_mas: 157.8879
+        pm_ra_cosdec_mas_per_yr: -1545.787
+        pm_dec_mas_per_yr: -569.053
+        radial_velocity_km_s: 10.64
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 1022456139210632064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 1022456139210632064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0156
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 1022456139210632064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.013
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 1022456139210632064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0197
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 1022456139210632064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 1022456139210632064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 1022456139210632064 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s
+  gj-338-b:
+    display_name: GJ 338 AB B (K7V)
+    endpoint_kind: component
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest T2. RUWE 1.12. Multiple system: component endpoint
+      on its own Gaia solution; orbital curvature over the WISE baseline negligible at the declared separation
+      (108.1 AU) — Struve 2398 precedent.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '1022456104850892928'
+      version: Gaia DR3 1022456104850892928 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 138.59131179667
+        dec_deg: 52.68342944184
+        parallax_mas: 157.8825
+        pm_ra_cosdec_mas_per_yr: -1573.04
+        pm_dec_mas_per_yr: -659.906
+        radial_velocity_km_s: 11.97
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 1022456104850892928 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 1022456104850892928 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0156
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 1022456104850892928 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0145
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 1022456104850892928 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0211
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 1022456104850892928 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 1022456104850892928 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.019
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 1022456104850892928 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s
+  gj-625:
+    display_name: GJ 625 (M1.5V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone, Science Interest T2. RUWE 1.05.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '1428427236986209024'
+      version: Gaia DR3 1428427236986209024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 246.35588833282
+        dec_deg: 54.3033386656
+        parallax_mas: 154.3503
+        pm_ra_cosdec_mas_per_yr: 432.23
+        pm_dec_mas_per_yr: -171.652
+        radial_velocity_km_s: -13.37
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 1428427236986209024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 1428427236986209024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0148
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 1428427236986209024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.016
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 1428427236986209024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0161
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 1428427236986209024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.019
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 1428427236986209024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.022
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 1428427236986209024 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.14
+          unit: km/s
+  gj-293:
+    display_name: GJ 293 (WD)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 1.05.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '5273943488410008832'
+      version: Gaia DR3 5273943488410008832 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 118.30118445722
+        dec_deg: -67.79867244989
+        parallax_mas: 122.413
+        pm_ra_cosdec_mas_per_yr: 1467.123
+        pm_dec_mas_per_yr: -1489.721
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 5273943488410008832 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 5273943488410008832 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0114
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 5273943488410008832 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0116
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 5273943488410008832 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0114
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 5273943488410008832 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.014
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 5273943488410008832 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.015
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  gj-3306:
+    display_name: GJ 3306
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 1.00.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3186021141200137472'
+      version: Gaia DR3 3186021141200137472 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 69.4486024352
+        dec_deg: -8.82651621861
+        parallax_mas: 106.339
+        pm_ra_cosdec_mas_per_yr: 238.381
+        pm_dec_mas_per_yr: -1552.408
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3186021141200137472 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3186021141200137472 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0121
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3186021141200137472 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0082
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3186021141200137472 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0152
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3186021141200137472 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.017
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3186021141200137472 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.016
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  gj-3112:
+    display_name: GJ 3112
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 1.05.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '4698424845771339520'
+      version: Gaia DR3 4698424845771339520 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 25.75030396963
+        dec_deg: -67.3129581576
+        parallax_mas: 102.9078
+        pm_ra_cosdec_mas_per_yr: -329.264
+        pm_dec_mas_per_yr: -1018.509
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 4698424845771339520 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 4698424845771339520 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0108
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 4698424845771339520 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0099
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 4698424845771339520 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0111
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 4698424845771339520 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.013
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 4698424845771339520 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.013
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  gj-687:
+    display_name: GJ 687 (M3.0V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone, Science Interest T2. RUWE 1.22.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '1637645127018395776'
+      version: Gaia DR3 1637645127018395776 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 264.1040525732
+        dec_deg: 68.33349763759
+        parallax_mas: 219.7898
+        pm_ra_cosdec_mas_per_yr: -320.675
+        pm_dec_mas_per_yr: -1269.893
+        radial_velocity_km_s: -28.9
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 1637645127018395776 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 1637645127018395776 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.02
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 1637645127018395776 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0207
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 1637645127018395776 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.021
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 1637645127018395776 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.024
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 1637645127018395776 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.027
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 1637645127018395776 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.13
+          unit: km/s
+  gj-674:
+    display_name: GJ 674 (M3V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest T2. RUWE 1.05.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '5951824121022278144'
+      version: Gaia DR3 5951824121022278144 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 262.17016392212
+        dec_deg: -46.89910489864
+        parallax_mas: 219.6463
+        pm_ra_cosdec_mas_per_yr: 572.568
+        pm_dec_mas_per_yr: -880.583
+        radial_velocity_km_s: -3.37
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 5951824121022278144 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 5951824121022278144 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0247
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 5951824121022278144 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0177
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 5951824121022278144 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0262
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 5951824121022278144 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.04
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 5951824121022278144 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.027
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 5951824121022278144 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.13
+          unit: km/s
+  gj-682:
+    display_name: GJ 682 (M3.5)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest T2. RUWE 1.01.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '5955305209191546112'
+      version: Gaia DR3 5955305209191546112 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 264.26088738973
+        dec_deg: -44.32338224304
+        parallax_mas: 199.6944
+        pm_ra_cosdec_mas_per_yr: -705.945
+        pm_dec_mas_per_yr: -938.08
+        radial_velocity_km_s: -34.9
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 5955305209191546112 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 5955305209191546112 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0272
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 5955305209191546112 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.024
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 5955305209191546112 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0312
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 5955305209191546112 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.035
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 5955305209191546112 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.021
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 5955305209191546112 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.3
+          unit: km/s
+  gj-251:
+    display_name: GJ 251 (M3V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone, Science Interest. RUWE 1.15.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '939072613334579328'
+      version: Gaia DR3 939072613334579328 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 103.70012922714
+        dec_deg: 33.26640801817
+        parallax_mas: 179.0629
+        pm_ra_cosdec_mas_per_yr: -726.672
+        pm_dec_mas_per_yr: -398.102
+        radial_velocity_km_s: 22.3
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 939072613334579328 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 939072613334579328 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0253
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 939072613334579328 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0228
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 939072613334579328 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.028
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 939072613334579328 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.03
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 939072613334579328 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.024
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 939072613334579328 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.19
+          unit: km/s
+  sigma-dra:
+    display_name: sigma Dra (K0V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone. Gaia RUWE 1.68: uncertainties inflated x3 (tau
+      Cet precedent).'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2261614264931057664'
+      version: Gaia DR3 2261614264931057664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 293.09759805108
+        dec_deg: 69.65345106255
+        parallax_mas: 173.4939
+        pm_ra_cosdec_mas_per_yr: 597.384
+        pm_dec_mas_per_yr: -1738.286
+        radial_velocity_km_s: 26.55
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2261614264931057664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2261614264931057664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.2262
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2261614264931057664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.2124
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2261614264931057664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.2244
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2261614264931057664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.345
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2261614264931057664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.306
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 2261614264931057664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.39
+          unit: km/s
+  hd-219134:
+    display_name: HD 219134 (K3V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone, Science Interest. RUWE 1.00.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2009481748875806976'
+      version: Gaia DR3 2009481748875806976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 348.33773395483
+        dec_deg: 57.16966644274
+        parallax_mas: 152.864
+        pm_ra_cosdec_mas_per_yr: 2074.414
+        pm_dec_mas_per_yr: 294.452
+        radial_velocity_km_s: -18.68
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2009481748875806976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2009481748875806976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0368
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2009481748875806976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0362
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2009481748875806976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0494
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2009481748875806976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.05
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2009481748875806976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.043
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 2009481748875806976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s
+  gj-1087:
+    display_name: GJ 1087 (WD)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RUWE 0.92.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3320184202856435840'
+      version: Gaia DR3 3320184202856435840 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 89.10409821981
+        dec_deg: 5.35934470933
+        parallax_mas: 123.1989
+        pm_ra_cosdec_mas_per_yr: -444.685
+        pm_dec_mas_per_yr: -925.14
+        radial_velocity_km_s: -414.02
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3320184202856435840 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3320184202856435840 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0143
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3320184202856435840 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0119
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3320184202856435840 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.017
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3320184202856435840 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3320184202856435840 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.015
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 3320184202856435840 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 10.41
+          unit: km/s
+  gj-318:
+    display_name: GJ 318
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 1.33.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '5639391810273308416'
+      version: Gaia DR3 5639391810273308416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 130.37950135632
+        dec_deg: -32.93649496565
+        parallax_mas: 117.3961
+        pm_ra_cosdec_mas_per_yr: -1061.158
+        pm_dec_mas_per_yr: 1345.9
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 5639391810273308416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 5639391810273308416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0116
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 5639391810273308416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0161
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 5639391810273308416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0205
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 5639391810273308416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.016
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 5639391810273308416 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.021
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  wolf-1069:
+    display_name: Wolf 1069
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. Gaia RUWE 1.42: uncertainties inflated x3 (tau Cet
+      precedent).'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2188318517720321664'
+      version: Gaia DR3 2188318517720321664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 306.52431726019
+        dec_deg: 58.57537971546
+        parallax_mas: 104.4415
+        pm_ra_cosdec_mas_per_yr: 261.038
+        pm_dec_mas_per_yr: 542.906
+        radial_velocity_km_s: -60.26
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2188318517720321664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2188318517720321664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0702
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2188318517720321664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0762
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2188318517720321664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0783
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2188318517720321664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.096
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2188318517720321664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.093
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 2188318517720321664 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 1.62
+          unit: km/s
+  gj-588:
+    display_name: GJ 588 (M2.5V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Engineering Backbone. RUWE 1.03.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '6002807341299977216'
+      version: Gaia DR3 6002807341299977216 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 233.04692742483
+        dec_deg: -41.28017408697
+        parallax_mas: 168.9965
+        pm_ra_cosdec_mas_per_yr: -1176.447
+        pm_dec_mas_per_yr: -1030.97
+        radial_velocity_km_s: 21.06
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 6002807341299977216 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 6002807341299977216 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0214
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 6002807341299977216 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0164
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 6002807341299977216 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.027
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 6002807341299977216 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.029
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 6002807341299977216 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.021
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 6002807341299977216 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s
+  gj-3512:
+    display_name: GJ 3512
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. RUWE 1.25.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '1040827088726734976'
+      version: Gaia DR3 1040827088726734976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 130.33159038955
+        dec_deg: 59.49165865054
+        parallax_mas: 105.2935
+        pm_ra_cosdec_mas_per_yr: -260.276
+        pm_dec_mas_per_yr: -1279.562
+        radial_velocity_km_s: 7.13
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 1040827088726734976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 1040827088726734976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0206
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 1040827088726734976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0218
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 1040827088726734976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0313
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 1040827088726734976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.023
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 1040827088726734976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.026
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 1040827088726734976 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 2.45
+          unit: km/s
+  gj-13157:
+    display_name: GJ 13157
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Compact Lens Wildcard. RV unavailable: +/-50 km/s allocation. RUWE 1.02.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2202703050401536000'
+      version: Gaia DR3 2202703050401536000 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 327.91636041932
+        dec_deg: 59.29292978332
+        parallax_mas: 118.1551
+        pm_ra_cosdec_mas_per_yr: -86.742
+        pm_dec_mas_per_yr: -19.237
+        radial_velocity_km_s: 0.0
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2202703050401536000 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2202703050401536000 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0134
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2202703050401536000 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0147
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2202703050401536000 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0155
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2202703050401536000 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2202703050401536000 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.018
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: no catalog RV; 0 +/- 50 km/s allocation (locus impact < 0.1")
+          uncertainty: 50.0
+          unit: km/s
+  gj-2066:
+    display_name: GJ 2066 (M2.0V)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Historical Neighbor. RUWE 1.08.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '3089711447388931584'
+      version: Gaia DR3 3089711447388931584 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 124.03158305458
+        dec_deg: 1.30284272698
+        parallax_mas: 111.8698
+        pm_ra_cosdec_mas_per_yr: -376.196
+        pm_dec_mas_per_yr: 60.538
+        radial_velocity_km_s: 61.82
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 3089711447388931584 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 3089711447388931584 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0193
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 3089711447388931584 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.016
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 3089711447388931584 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0228
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 3089711447388931584 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.024
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 3089711447388931584 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.019
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 3089711447388931584 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.15
+          unit: km/s
+  gj-367:
+    display_name: GJ 367 (M1.0)
+    endpoint_kind: star
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Historical Neighbor, Science Interest. RUWE 0.97.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '5412250540681250560'
+      version: Gaia DR3 5412250540681250560 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 146.12137189336
+        dec_deg: -45.77909735115
+        parallax_mas: 106.1727
+        pm_ra_cosdec_mas_per_yr: -462.621
+        pm_dec_mas_per_yr: -582.668
+        radial_velocity_km_s: 47.42
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 5412250540681250560 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 5412250540681250560 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0108
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 5412250540681250560 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.012
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 5412250540681250560 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0141
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 5412250540681250560 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.014
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 5412250540681250560 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.015
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 5412250540681250560 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.14
+          unit: km/s
+  gj-229-a:
+    display_name: GJ 229 AB A (M1V)
+    endpoint_kind: component
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest T2. RUWE 1.01. Multiple system: component endpoint
+      on its own Gaia solution; orbital curvature over the WISE baseline negligible at the declared separation
+      (36.4 AU) — Struve 2398 precedent.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '2940856402123426176'
+      version: Gaia DR3 2940856402123426176 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 92.64357908168
+        dec_deg: -21.86782311323
+        parallax_mas: 173.574
+        pm_ra_cosdec_mas_per_yr: -135.692
+        pm_dec_mas_per_yr: -719.178
+        radial_velocity_km_s: 4.23
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 2940856402123426176 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 2940856402123426176 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0082
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 2940856402123426176 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0137
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 2940856402123426176 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.017
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 2940856402123426176 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.011
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 2940856402123426176 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.017
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 2940856402123426176 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s
+  gj-667-c:
+    display_name: GJ 667 ABC C
+    endpoint_kind: component
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. RUWE 0.96. Multiple system: component endpoint on
+      its own Gaia solution; orbital curvature over the WISE baseline negligible at the declared separation
+      (399.4 AU) — Struve 2398 precedent.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '5975663354131618304'
+      version: Gaia DR3 5975663354131618304 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 259.75125274377
+        dec_deg: -34.99779509268
+        parallax_mas: 138.0663
+        pm_ra_cosdec_mas_per_yr: 1131.517
+        pm_dec_mas_per_yr: -215.569
+        radial_velocity_km_s: 6.13
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 5975663354131618304 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 5975663354131618304 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.02
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 5975663354131618304 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0164
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 5975663354131618304 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0283
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 5975663354131618304 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.025
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 5975663354131618304 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.02
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 5975663354131618304 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.3
+          unit: km/s
+  ltt-1445-a:
+    display_name: LTT 1445 ABC A (M3.5+M3.0)
+    endpoint_kind: component
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Science Interest. RUWE 1.07. Multiple system: component endpoint on
+      its own Gaia solution; orbital curvature over the WISE baseline negligible at the declared separation
+      (None AU) — Struve 2398 precedent.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '5153091836072107136'
+      version: Gaia DR3 5153091836072107136 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 45.46242451176
+        dec_deg: -16.59453280551
+        parallax_mas: 145.6922
+        pm_ra_cosdec_mas_per_yr: -369.972
+        pm_dec_mas_per_yr: -267.931
+        radial_velocity_km_s: -5.74
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 5153091836072107136 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 5153091836072107136 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0171
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 5153091836072107136 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0192
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 5153091836072107136 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0244
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 5153091836072107136 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.029
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 5153091836072107136 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.028
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 5153091836072107136 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.33
+          unit: km/s
+  gj-66-a:
+    display_name: GJ 66 A
+    endpoint_kind: component
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Historical Neighbor. RUWE 1.27. Multiple system: component endpoint
+      on its own Gaia solution; orbital curvature over the WISE baseline negligible at the declared separation
+      (93.5 AU) — Struve 2398 precedent.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '4911306239828325632'
+      version: Gaia DR3 4911306239828325632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 24.95131741551
+        dec_deg: -56.19325138477
+        parallax_mas: 122.1088
+        pm_ra_cosdec_mas_per_yr: 262.615
+        pm_dec_mas_per_yr: 14.961
+        radial_velocity_km_s: 21.74
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 4911306239828325632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 4911306239828325632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0269
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 4911306239828325632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0312
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 4911306239828325632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0365
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 4911306239828325632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.032
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 4911306239828325632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.036
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 4911306239828325632 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s
+  gj-66-b:
+    display_name: GJ 66 B
+    endpoint_kind: component
+    priority: 0.5
+    tags:
+    - batch-5
+    - universal-v2
+    notes: 'Universal v2 baskets: Historical Neighbor. RUWE 1.22. Multiple system: component endpoint
+      on its own Gaia solution; orbital curvature over the WISE baseline negligible at the declared separation
+      (93.5 AU) — Struve 2398 precedent.'
+    identifiers:
+    - catalog: Gaia DR3
+      id: '4911306239828325760'
+      version: Gaia DR3 4911306239828325760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+    quality: Gaia DR3 five-parameter solution; see notes
+    model_rationale: Linear astrometry family; orbital/companion effects either negligible at WISE-baseline
+      precision or absorbed into inflated uncertainties and the residual-motion search cell (see notes).
+    state:
+      provider: linear_astrometry_v1
+      astrometry:
+        frame: icrs
+        ra_deg: 24.95065662376
+        dec_deg: -56.19640006625
+        parallax_mas: 122.0035
+        pm_ra_cosdec_mas_per_yr: 309.23
+        pm_dec_mas_per_yr: 10.815
+        radial_velocity_km_s: 20.15
+        reference_epoch_jyear: 2016.0
+        reference_epoch_scale: tcb
+        source: Gaia DR3 4911306239828325760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20); RV per provenance
+      provenance:
+        ra_deg:
+          source: Gaia DR3 4911306239828325760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0247
+          unit: mas
+        dec_deg:
+          source: Gaia DR3 4911306239828325760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0249
+          unit: mas
+        parallax_mas:
+          source: Gaia DR3 4911306239828325760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.0319
+          unit: mas
+        pm_ra_cosdec_mas_per_yr:
+          source: Gaia DR3 4911306239828325760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.029
+          unit: mas/yr
+        pm_dec_mas_per_yr:
+          source: Gaia DR3 4911306239828325760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.032
+          unit: mas/yr
+        radial_velocity_km_s:
+          source: Gaia DR3 4911306239828325760 via VizieR I/355/gaiadr3 (retrieved 2026-08-20)
+          uncertainty: 0.12
+          unit: km/s

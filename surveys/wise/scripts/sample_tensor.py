@@ -12,7 +12,10 @@ Trajectory 0 is the real (z, mu) grid; 1..8 are the declared offsets.
 All downstream calibration (nulls, thresholds, injections, constraint
 curves) runs from these arrays without touching FITS again.
 
-Usage: uv run python surveys/wise/scripts/sample_tensor.py
+Usage: uv run python surveys/wise/scripts/sample_tensor.py [--only-missing]
+  --only-missing  build tensors only for endpoint x role pairs without
+                  an existing .npz (incremental batches); existing
+                  tensors are left untouched.
 """
 
 from __future__ import annotations
@@ -60,6 +63,8 @@ BAND_IDX = {"W1": 1, "W2": 2, "W3": 3, "W4": 4}
 
 
 def main() -> None:
+    import sys
+    only_missing = "--only-missing" in sys.argv[1:]
     registry = load_target_registry(REGISTRY_PATH)
     ctx = GeometryContext.wise_coarse_default()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -72,6 +77,11 @@ def main() -> None:
         if r["stage"] == "precise" and r["usable"] in ("usable", "partial"):
             usable[(r["endpoint_id"], r["role"])].append(
                 r["observation_id"])
+    if only_missing:
+        usable = {k: v for k, v in usable.items()
+                  if not (OUT_DIR / f"{k[0]}__{k[1]}.npz").exists()}
+        print(f"--only-missing: {len(usable)} endpoint-role pairs to build",
+              flush=True)
     manifest = {json.loads(l)["observation_id"]: json.loads(l)
                 for l in open(CUT_DIR / "manifest.jsonl")}
 

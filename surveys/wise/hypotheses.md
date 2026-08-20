@@ -4,6 +4,17 @@ status: "v1.1 — parameters frozen 2026-08-18; endpoint set expanded 2026-08-18
 date: 2026-08-18
 ---
 
+> **v1.5 addendum (2026-08-20).** Batch-5 endpoint expansion from the
+> universal target list **v2** (`targets/universal_v2`: horizon 10 pc,
+> picky-network baskets — Engineering Backbone, Science Interest,
+> desirability-filtered Selective Network Neighbor; see
+> `notes/picky_network_hypothesis_sgl_seti.md`): 41 endpoints added
+> (35 queued overlay_v2 systems incl. GJ 338 A/B, plus GJ 229 A,
+> GJ 667 C, LTT 1445 A, GJ 66 A/B unblocked on per-component Gaia
+> solutions) — **89 endpoint hypotheses across 77 corridors**, registry
+> v1.5 `sha256:794d9f90…`. **Every parameter in sections 2–9 remains
+> unchanged from v1.0.** Calibration pipeline v0.2.0 unchanged.
+>
 > **v1.4 addendum (2026-08-19).** Batch-4 + all previously deferred
 > endpoints: 22 added (61 Cyg A/B, Struve 2398 A/B, Groombridge 34
 > A/B, GJ 1111, Luyten's Star, Kapteyn's Star, LP 145-141, GJ 1221,

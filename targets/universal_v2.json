@@ -82,6 +82,7 @@
  "systems": [
   {
    "system": "Proxima Cen",
+   "gj": "551",
    "dist_pc": 1.302,
    "n_comp": 2,
    "min_sep_au": 10289.4,
@@ -158,6 +159,7 @@
   },
   {
    "system": "Barnard's Star",
+   "gj": "699",
    "dist_pc": 1.828,
    "n_comp": 1,
    "min_sep_au": null,
@@ -229,6 +231,7 @@
   },
   {
    "system": "Luhman 16 AB",
+   "gj": "11551",
    "dist_pc": 1.998,
    "n_comp": 1,
    "min_sep_au": null,
@@ -289,6 +292,7 @@
   },
   {
    "system": "WISE 0855-0714",
+   "gj": "11286",
    "dist_pc": 2.278,
    "n_comp": 1,
    "min_sep_au": null,
@@ -349,6 +353,7 @@
   },
   {
    "system": "Wolf 359",
+   "gj": "406",
    "dist_pc": 2.409,
    "n_comp": 1,
    "min_sep_au": null,
@@ -412,6 +417,7 @@
   },
   {
    "system": "Lalande 21185",
+   "gj": "411",
    "dist_pc": 2.546,
    "n_comp": 1,
    "min_sep_au": null,
@@ -479,6 +485,7 @@
   },
   {
    "system": "Sirius AB",
+   "gj": "244",
    "dist_pc": 2.67,
    "n_comp": 2,
    "min_sep_au": 76.4,
@@ -549,6 +556,7 @@
   },
   {
    "system": "GJ 65 AB",
+   "gj": "65",
    "dist_pc": 2.703,
    "n_comp": 2,
    "min_sep_au": 6.1,
@@ -620,6 +628,7 @@
   },
   {
    "system": "Ross 154",
+   "gj": "729",
    "dist_pc": 2.975,
    "n_comp": 1,
    "min_sep_au": null,
@@ -682,6 +691,7 @@
   },
   {
    "system": "Ross 248",
+   "gj": "905",
    "dist_pc": 3.159,
    "n_comp": 1,
    "min_sep_au": null,
@@ -746,6 +756,7 @@
   },
   {
    "system": "eps Eri",
+   "gj": "144",
    "dist_pc": 3.22,
    "n_comp": 1,
    "min_sep_au": null,
@@ -816,6 +827,7 @@
   },
   {
    "system": "Lacaille 9352",
+   "gj": "887",
    "dist_pc": 3.288,
    "n_comp": 1,
    "min_sep_au": null,
@@ -888,6 +900,7 @@
   },
   {
    "system": "Ross 128",
+   "gj": "447",
    "dist_pc": 3.374,
    "n_comp": 1,
    "min_sep_au": null,
@@ -956,6 +969,7 @@
   },
   {
    "system": "EZ Aqr",
+   "gj": "866",
    "dist_pc": 3.406,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1017,6 +1031,7 @@
   },
   {
    "system": "61 Cyg AB",
+   "gj": "820",
    "dist_pc": 3.497,
    "n_comp": 2,
    "min_sep_au": 110.5,
@@ -1087,6 +1102,7 @@
   },
   {
    "system": "Procyon AB",
+   "gj": "280",
    "dist_pc": 3.514,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1145,6 +1161,7 @@
   },
   {
    "system": "Struve 2398 AB",
+   "gj": "725",
    "dist_pc": 3.523,
    "n_comp": 2,
    "min_sep_au": 40.7,
@@ -1223,6 +1240,7 @@
   },
   {
    "system": "Groombridge 34 AB",
+   "gj": "15",
    "dist_pc": 3.562,
    "n_comp": 2,
    "min_sep_au": 122.4,
@@ -1297,6 +1315,7 @@
   },
   {
    "system": "GJ 1111",
+   "gj": "1111",
    "dist_pc": 3.581,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1356,6 +1375,7 @@
   },
   {
    "system": "eps Ind",
+   "gj": "845",
    "dist_pc": 3.638,
    "n_comp": 2,
    "min_sep_au": 1475.6,
@@ -1430,6 +1450,7 @@
   },
   {
    "system": "tau Cet",
+   "gj": "71",
    "dist_pc": 3.65,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1498,6 +1519,7 @@
   },
   {
    "system": "GJ 1061",
+   "gj": "1061",
    "dist_pc": 3.674,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1562,6 +1584,7 @@
   },
   {
    "system": "YZ Cet",
+   "gj": "54.1",
    "dist_pc": 3.716,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1629,6 +1652,7 @@
   },
   {
    "system": "Luyten's Star",
+   "gj": "273",
    "dist_pc": 3.786,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1698,6 +1722,7 @@
   },
   {
    "system": "Teegarden's Star",
+   "gj": "10393",
    "dist_pc": 3.831,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1756,6 +1781,7 @@
   },
   {
    "system": "Kapteyn's Star",
+   "gj": "191",
    "dist_pc": 3.934,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1824,6 +1850,7 @@
   },
   {
    "system": "Lacaille 8760",
+   "gj": "825",
    "dist_pc": 3.97,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1885,6 +1912,7 @@
   },
   {
    "system": "GJ 12724",
+   "gj": "12724",
    "dist_pc": 4.005,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1941,6 +1969,7 @@
   },
   {
    "system": "GJ 11547",
+   "gj": "11547",
    "dist_pc": 4.044,
    "n_comp": 1,
    "min_sep_au": null,
@@ -1997,6 +2026,7 @@
   },
   {
    "system": "Wolf 1061",
+   "gj": "628",
    "dist_pc": 4.307,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2066,6 +2096,7 @@
   },
   {
    "system": "van Maanen's Star",
+   "gj": "35",
    "dist_pc": 4.314,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2126,6 +2157,7 @@
   },
   {
    "system": "GJ 687",
+   "gj": "687",
    "dist_pc": 4.549,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2193,6 +2225,7 @@
   },
   {
    "system": "GJ 674",
+   "gj": "674",
    "dist_pc": 4.552,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2259,6 +2292,7 @@
   },
   {
    "system": "LP 145-141 (WD)",
+   "gj": "440",
    "dist_pc": 4.636,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2319,6 +2353,7 @@
   },
   {
    "system": "GJ 876",
+   "gj": "876",
    "dist_pc": 4.671,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2386,6 +2421,7 @@
   },
   {
    "system": "GJ 1002",
+   "gj": "1002",
    "dist_pc": 4.846,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2447,6 +2483,7 @@
   },
   {
    "system": "GJ 832",
+   "gj": "832",
    "dist_pc": 4.966,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2514,6 +2551,7 @@
   },
   {
    "system": "GJ 682",
+   "gj": "682",
    "dist_pc": 5.007,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2579,6 +2617,7 @@
   },
   {
    "system": "LHS 1723",
+   "gj": "3323",
    "dist_pc": 5.373,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2643,6 +2682,7 @@
   },
   {
    "system": "GJ 526",
+   "gj": "526",
    "dist_pc": 5.434,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2705,6 +2745,7 @@
   },
   {
    "system": "GJ 251",
+   "gj": "251",
    "dist_pc": 5.583,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2773,6 +2814,7 @@
   },
   {
    "system": "GJ 229 AB",
+   "gj": "229",
    "dist_pc": 5.761,
    "n_comp": 2,
    "min_sep_au": 36.4,
@@ -2848,6 +2890,7 @@
   },
   {
    "system": "sigma Dra",
+   "gj": "764",
    "dist_pc": 5.764,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2909,6 +2952,7 @@
   },
   {
    "system": "GJ 908",
+   "gj": "908",
    "dist_pc": 5.908,
    "n_comp": 1,
    "min_sep_au": null,
@@ -2972,6 +3016,7 @@
   },
   {
    "system": "GJ 588",
+   "gj": "588",
    "dist_pc": 5.916,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3032,6 +3077,7 @@
   },
   {
    "system": "GJ 783",
+   "gj": "783",
    "dist_pc": 6.012,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3095,6 +3141,7 @@
   },
   {
    "system": "82 Eri",
+   "gj": "139",
    "dist_pc": 6.042,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3163,6 +3210,7 @@
   },
   {
    "system": "GJ 784",
+   "gj": "784",
    "dist_pc": 6.163,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3223,6 +3271,7 @@
   },
   {
    "system": "GJ 1221",
+   "gj": "1221",
    "dist_pc": 6.21,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3281,6 +3330,7 @@
   },
   {
    "system": "GJ 581",
+   "gj": "581",
    "dist_pc": 6.298,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3348,6 +3398,7 @@
   },
   {
    "system": "GJ 338 AB",
+   "gj": "338",
    "dist_pc": 6.332,
    "n_comp": 2,
    "min_sep_au": 108.1,
@@ -3422,6 +3473,7 @@
   },
   {
    "system": "GJ 9193",
+   "gj": "9193",
    "dist_pc": 6.44,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3480,6 +3532,7 @@
   },
   {
    "system": "GJ 625",
+   "gj": "625",
    "dist_pc": 6.478,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3548,6 +3601,7 @@
   },
   {
    "system": "HD 219134",
+   "gj": "892",
    "dist_pc": 6.542,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3615,6 +3669,7 @@
   },
   {
    "system": "GJ 11068",
+   "gj": "11068",
    "dist_pc": 6.798,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3672,6 +3727,7 @@
   },
   {
    "system": "LTT 1445 ABC",
+   "gj": "3193",
    "dist_pc": 6.862,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3739,6 +3795,7 @@
   },
   {
    "system": "GJ 667 ABC",
+   "gj": "667",
    "dist_pc": 7.241,
    "n_comp": 2,
    "min_sep_au": 399.4,
@@ -3812,6 +3869,7 @@
   },
   {
    "system": "GJ 514",
+   "gj": "514",
    "dist_pc": 7.625,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3879,6 +3937,7 @@
   },
   {
    "system": "Fomalhaut",
+   "gj": "881",
    "dist_pc": 7.704,
    "n_comp": 1,
    "min_sep_au": null,
@@ -3940,6 +3999,7 @@
   },
   {
    "system": "Wolf 437",
+   "gj": "486",
    "dist_pc": 8.076,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4007,6 +4067,7 @@
   },
   {
    "system": "GJ 1087 (WD)",
+   "gj": "1087",
    "dist_pc": 8.114,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4065,6 +4126,7 @@
   },
   {
    "system": "GJ 293 (WD)",
+   "gj": "293",
    "dist_pc": 8.167,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4123,6 +4185,7 @@
   },
   {
    "system": "GJ 66",
+   "gj": "66",
    "dist_pc": 8.189,
    "n_comp": 2,
    "min_sep_au": 93.5,
@@ -4191,6 +4254,7 @@
   },
   {
    "system": "GJ 915",
+   "gj": "915",
    "dist_pc": 8.33,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4249,6 +4313,7 @@
   },
   {
    "system": "GJ 518 (WD)",
+   "gj": "518",
    "dist_pc": 8.347,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4307,6 +4372,7 @@
   },
   {
    "system": "GJ 13157",
+   "gj": "13157",
    "dist_pc": 8.462,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4367,6 +4433,7 @@
   },
   {
    "system": "GJ 318",
+   "gj": "318",
    "dist_pc": 8.514,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4425,6 +4492,7 @@
   },
   {
    "system": "GJ 1276",
+   "gj": "1276",
    "dist_pc": 8.534,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4483,6 +4551,7 @@
   },
   {
    "system": "61 Vir",
+   "gj": "506",
    "dist_pc": 8.535,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4549,6 +4618,7 @@
   },
   {
    "system": "GJ 2066",
+   "gj": "2066",
    "dist_pc": 8.936,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4613,6 +4683,7 @@
   },
   {
    "system": "GJ 2012",
+   "gj": "2012",
    "dist_pc": 9.093,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4671,6 +4742,7 @@
   },
   {
    "system": "GJ 3306",
+   "gj": "3306",
    "dist_pc": 9.4,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4729,6 +4801,7 @@
   },
   {
    "system": "GJ 367",
+   "gj": "367",
    "dist_pc": 9.416,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4797,6 +4870,7 @@
   },
   {
    "system": "GJ 3512",
+   "gj": "3512",
    "dist_pc": 9.492,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4858,6 +4932,7 @@
   },
   {
    "system": "Wolf 1069",
+   "gj": "1253",
    "dist_pc": 9.574,
    "n_comp": 1,
    "min_sep_au": null,
@@ -4921,6 +4996,7 @@
   },
   {
    "system": "GJ 3112",
+   "gj": "3112",
    "dist_pc": 9.714,
    "n_comp": 1,
    "min_sep_au": null,

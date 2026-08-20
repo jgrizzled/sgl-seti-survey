@@ -716,7 +716,8 @@ def main():
     out = []
     for s in kept:
         out.append({
-            "system": s["name"], "dist_pc": round(s["dist_pc"], 3),
+            "system": s["name"], "gj": s["gj"],
+            "dist_pc": round(s["dist_pc"], 3),
             "n_comp": s["n_comp"],
             "min_sep_au": (round(s["min_sep_au"], 1)
                            if s["min_sep_au"] else None),
