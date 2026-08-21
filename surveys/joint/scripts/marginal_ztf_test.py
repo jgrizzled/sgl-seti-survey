@@ -53,10 +53,32 @@ def weighted_S(f, v, g):
     return float((np.where(valid, f, 0) * w).sum() / np.sqrt(w.sum())), int((w > 0).sum())
 
 
-def run_marginal_tests(out_dir: Path, analysis_run_id: str | None = None) -> None:
-    adj = json.load(open(ADJ))
-    cells = {k: v for k, v in adj.items() if v["status"] == "marginal"}
-    print(f"\n{len(cells)} marginal PS1 cells to test against ZTF", flush=True)
+PS1_CAND = REPO / "runs" / "panstarrs" / "calib_v1" / "records" / "candidate.jsonl"
+
+
+def retained_ps1_cells() -> dict:
+    """Every PS1 exceedance the automatic rules retain (phase test +
+    catalogued-static-source test), as {key: {cell, S_real, T}}."""
+    cells = {}
+    for c in read_records(PS1_CAND):
+        if c["status"] != "retained":
+            continue
+        mc = c["model_comparison"]
+        key = f"{c['endpoint_id']}/{c['role']}/{c['extra']['band']}"
+        cells[key] = {"cell": {"z_au": c["fitted_z_au"], "mu": mc["mu_arcsec_yr"]},
+                      "S_real": mc["real_max_S"], "T": mc["threshold_8_controls"]}
+    return cells
+
+
+def run_marginal_tests(out_dir: Path, analysis_run_id: str | None = None,
+                       all_retained: bool = True) -> None:
+    if all_retained:
+        cells = retained_ps1_cells()
+    else:
+        adj = json.load(open(ADJ))
+        cells = {k: v for k, v in adj.items() if v["status"] == "marginal"}
+    print(f"\n{len(cells)} automatically-retained PS1 cells to test against ZTF",
+          flush=True)
     registry = load_target_registry(REPO / "registries" / "pilot_wise_2026.yaml")
     ctx = GeometryContext.ztf_default()
     obs_by_id = {r["observation_id"]: r for r in read_records(

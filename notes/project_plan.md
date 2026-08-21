@@ -531,9 +531,32 @@ too sparse/clustered to carry the phase test; the catalogued-star test
 belongs in the automatic rules; a common µ reference epoch is needed
 for any joint µ-grid analysis.
 
-Next: common-T0 tensors for a joint µ-grid calibration; extend the
-joint stage to WISE (thermal cell) on the same corridors;
-DECam/NOIRLab or SPHEREx for the 15 southern corridors.
+Next: common-T0 tensors for a joint µ-grid calibration (in progress,
+2026-08-21); catalogued-star test promoted into every adapter's
+automatic candidate rules (`sglsurvey/vetting.py`, 2026-08-21).
+
+**TODO — three-archive and southern extension of the joint stage:**
+
+- *WISE into the joint stage.* PS1 + ZTF close only the reflected /
+  self-luminous optical cell; the thermal cell is WISE's, and the WISE
+  batches already cover these corridors at both parallax phases
+  (NEOWISE 6-month cadence). Adding WISE to `surveys/joint` gives a
+  three-archive test with a colour axis (a real relay must be
+  consistent from 0.5 to 22 µm) and lets the phase veto and the
+  W1:W2 static-source veto act on the same records. Needs: WISE
+  tensors on a common µ reference epoch (see above), Vega→AB and
+  surface-brightness conventions reconciled in `vetting`/`joint`.
+- *Southern corridors.* 15 of 77 universal-list corridors lie below
+  δ = −30° (Lalande 21185, Ross 248, 61 Cyg, Struve 2398, Groombridge
+  34, GJ 1221, GJ 338, GJ 625, GJ 687, GJ 251, σ Dra, HD 219134,
+  Wolf 1069, GJ 3512, GJ 13157), unreachable by PS1 and ZTF, so the
+  optical cell there is currently closed by nothing — and several
+  top engineering-basket targets (σ Dra, HD 219134, Lalande 21185)
+  are among them. Options: SPHEREx (piloted, all-sky, 0.75–5 µm) as
+  the in-hand near-IR route; DECam/NOIRLab Astro Data Lab (reachable,
+  unprobed) as the only 1″ multi-epoch optical equivalent of PS1/ZTF.
+  First step: a DECam recon + 3-corridor pilot on the ZTF/PS1 pattern
+  (Lalande 21185, σ Dra, HD 219134), then a southern overlay.
 
 ## 8. Open questions and research directions
 

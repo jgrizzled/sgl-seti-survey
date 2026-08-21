@@ -168,9 +168,20 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--only-missing", action="store_true")
     ap.add_argument("--corridors", nargs="*", default=None)
+    ap.add_argument("--t0", type=float, default=None,
+                    help="mu reference epoch (MJD); default T0_MJD=56000. "
+                         "Use 59800 for tensors joinable with ZTF's")
+    ap.add_argument("--out-dir", default=None,
+                    help="tensor directory (default runs/panstarrs/calib_v1/tensors)")
     args = ap.parse_args()
     only_missing = args.only_missing
     only = set(args.corridors) if args.corridors else None
+    global T0_MJD, OUT_DIR
+    if args.t0 is not None:
+        T0_MJD = float(args.t0)
+    if args.out_dir is not None:
+        OUT_DIR = Path(args.out_dir)
+    print(f"T0_MJD={T0_MJD} out={OUT_DIR}", flush=True)
     registry = load_target_registry(REGISTRY_PATH)
     ctx = GeometryContext.ps1_default()
     OUT_DIR.mkdir(parents=True, exist_ok=True)

@@ -4,7 +4,7 @@ cutout index, checksums and tensors (plan section 9 data retention:
 content hashes + durable archive identifiers are kept; large images are
 re-downloadable with fetch_cutouts.py / precise_pass.py).
 
-Usage: uv run python surveys/panstarrs/scripts/purge_products.py <corridor ...>
+Usage: [PURGE_TENSOR_DIR=...] uv run python surveys/panstarrs/scripts/purge_products.py <corridor ...>
 """
 
 from __future__ import annotations
@@ -23,8 +23,10 @@ P = REPO / "runs" / "panstarrs"
 
 
 def main(corridors: list[str]) -> None:
+    import os
+    tensor_dir = Path(os.environ.get("PURGE_TENSOR_DIR", P / "calib_v1" / "tensors"))
     corridors = set(corridors)
-    tens = {p.stem for p in (P / "calib_v1" / "tensors").glob("*.npz")}
+    tens = {p.stem for p in tensor_dir.glob("*.npz")}
     ready = set()
     for c in corridors:
         eps = [e for e, cc in CORRIDOR_OF.items() if cc == c]

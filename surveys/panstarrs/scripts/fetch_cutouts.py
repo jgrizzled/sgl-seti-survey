@@ -62,7 +62,13 @@ def main() -> None:
     done = set()
     if manifest_path.exists():
         with manifest_path.open() as fh:
-            done = {json.loads(l)["observation_id"] for l in fh}
+            for l in fh:
+                m = json.loads(l)
+                # purged products (purge_products.py) must be re-fetched
+                msk_ok = (not m.get("msk")) or (REPO / "runs" / "panstarrs" / "products"
+                                                / "msk" / m["msk"]).exists()
+                if msk_ok and all((CUT_DIR / f).exists() for f in m["files"].values()):
+                    done.add(m["observation_id"])
     if only is not None:
         usable = {o: cs for o, cs in usable.items() if cs & only}
     todo = [o for o in usable if o not in done and o in cut_index]
@@ -80,6 +86,19 @@ def main() -> None:
                             size_pix=ci["size_pix"])
         adapter = Ps1WarpAdapter(session=requests.Session())
         files, missing = {}, []
+        # full skycell mask (precise pass product) — re-fetch if purged
+        msk_dir = REPO / "runs" / "panstarrs" / "products" / "msk"
+        if ci["path"] and not (REPO / ci["path"]).exists():
+            for attempt in (1, 2, 3):
+                try:
+                    adapter.fetch(obs, ["msk"], msk_dir)
+                    break
+                except FileNotFoundError:
+                    break
+                except Exception:
+                    if attempt == 3:
+                        missing.append("msk")
+                    _time.sleep(2.0 * attempt)
         for kind in KINDS:
             for attempt in (1, 2, 3):
                 try:

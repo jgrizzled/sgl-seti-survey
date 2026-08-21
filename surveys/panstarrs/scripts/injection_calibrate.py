@@ -28,9 +28,12 @@ from sglseti import canonical_json, load_target_registry, stable_id
 
 from sglsurvey.records import (AnalysisRun, Candidate, Constraint,
                                append_records)
+from sglsurvey.vetting import (STATIC_RADIUS_ARCSEC, load_ps1_mean,
+                               static_reason, static_source_test)
 
 REPO = Path(__file__).resolve().parents[3]
 CAL_DIR = REPO / "runs" / "panstarrs" / "calib_v1"
+SCREEN_DIR = REPO / "runs" / "panstarrs" / "screen_v1"
 TENSOR_DIR = CAL_DIR / "tensors"
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "panstarrs" / "hypotheses.md"
@@ -105,7 +108,10 @@ def main() -> None:
                            "Candidate; vetoed if either parallax phase "
                            f"has < {MIN_PHASE_EPOCHS} epochs or the "
                            "phase-split significances disagree (one "
-                           "phase < 2 sigma while combined > T)"),
+                           "phase < 2 sigma while combined > T), or a "
+                           "catalogued DR2 source lies within "
+                           f"{STATIC_RADIUS_ARCSEC['ps1']}\" of the track at "
+                           "the major-phase epochs (sglsurvey.vetting)"),
         "size_conversion": f"asteroid H-D convention, albedo {ALBEDO_REF}",
         "control_throughput_mag": CONTROL_THROUGHPUT_MAG,
         "flux_scale": ("per-warp ZP from DR2 mean-table stars through the "
@@ -123,6 +129,12 @@ def main() -> None:
     started = datetime.now(timezone.utc).isoformat()
     constraints, candidates = [], []
     threshold_report, m90_store, meta_store = {}, {}, {}
+    epoch_store, catalog_cache = {}, {}
+    from sglsurvey.geometry import GeometryContext
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from ps1_corridors import CORRIDOR_OF as _CORR
+    ctx = GeometryContext.ps1_default()
     tensor_files = sorted(TENSOR_DIR.glob("*.npz"))
 
     for path in tensor_files:
@@ -131,6 +143,8 @@ def main() -> None:
         z_grid, mu_grid = d["z_grid"], d["mu_grid"]
         zp_ref = float(d["zp_ref"])
         mjd, band_idx, phase = d["mjd"], d["band_idx"], d["phase"]
+        epoch_store[(endpoint, role)] = (mjd.copy(), band_idx.copy(), phase.copy(),
+                                         float(d["t0_mjd"]))
         seeing = d["seeing"]
         f, v, g = d["f"], np.asarray(d["v"]), np.asarray(d["g"],
                                                         dtype=np.float32)
@@ -255,7 +269,7 @@ def main() -> None:
             "hypothesis": HYPOTHESIS_VERSION,
             "tensors": sorted(p.name for p in tensor_files)}),
         pipeline_id="ps1-injection-calibration",
-        pipeline_version="0.1.0", config=config,
+        pipeline_version="0.2.0", config=config,
         observation_set_hash="see-tensor-manifest",
         intersection_set_hash="see-tensor-manifest",
         registry_source_hash=registry.source_hash,
@@ -282,6 +296,20 @@ def main() -> None:
                 "with a static source or artifact at one phase position")
         else:
             status, reason = "retained", None
+        static = None
+        if status == "retained":
+            corr = _CORR[endpoint]
+            if corr not in catalog_cache:
+                catalog_cache[corr] = load_ps1_mean(SCREEN_DIR, corr, band if band in "gri" else "r")
+            mjd_, bidx_, ph_, t0_ = epoch_store[(endpoint, role)]
+            eb_ = bidx_ == {v: k for k, v in BAND_NAME.items()}[band]
+            static = static_source_test(
+                ctx, registry[endpoint], role, r["real_max_z"], r["real_max_mu"],
+                t0_, mjd_[eb_], ph_[eb_], catalog_cache[corr],
+                STATIC_RADIUS_ARCSEC["ps1"])
+            if static["static"]:
+                status, reason = "vetoed", static_reason(static)
+            r["static_source_test"] = static
         candidates.append(Candidate(
             candidate_id=stable_id("cnd", {
                 "endpoint": endpoint, "role": role, "band": band,
@@ -294,7 +322,8 @@ def main() -> None:
                               "threshold_8_controls": r["T"],
                               "control_maxima": r["control_maxima"],
                               "phase_S": pS, "phase_n": pn,
-                              "mu_arcsec_yr": r["real_max_mu"]},
+                              "mu_arcsec_yr": r["real_max_mu"],
+                              "static_source_test": static},
             status=status, veto_reason=reason,
             extra={"band": band, "origin": "threshold exceedance census"},
         ))

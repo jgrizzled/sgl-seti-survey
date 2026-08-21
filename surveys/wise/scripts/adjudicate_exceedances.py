@@ -114,7 +114,27 @@ def peak_position(registry, ctx, endpoint, role, z, mu, t0, mjd):
 
 def catwise_nearest(session, ra, dec, r_arcsec=15.0):
     """(sep, w1, w2) of the nearest source, plus the brightest source
-    within the cone as a 4th element (sep, w1)."""
+    within the cone as a 4th element (sep, w1).
+
+    Primary source since 2026-08-21: the shared VizieR CatWISE2020 loader
+    (sglsurvey.vetting, CDS — avoids IRSA TAP 503s/rate limits; cached
+    under calib_v1/catwise_cache). IRSA TAP remains the fallback.
+    """
+    try:
+        from sglsurvey.vetting import load_catwise_vizier
+        cat = load_catwise_vizier(ra, dec, r_arcsec / 3600.0,
+                                  CAL_DIR / "catwise_cache")
+        if len(cat.ra):
+            cosd = np.cos(np.deg2rad(dec))
+            d = np.hypot((cat.ra - ra) * cosd, cat.dec - dec) * 3600
+            k = int(np.argmin(d))
+            w1 = cat.mag
+            kb = int(np.nanargmin(np.where(np.isfinite(w1), w1, np.inf))) if np.isfinite(w1).any() else None
+            return (float(d[k]), float(w1[k]), float("nan"),
+                    (float(d[kb]), float(w1[kb])) if kb is not None else None)
+        return (float("inf"), float("nan"), float("nan"), None)
+    except Exception:
+        pass
     q = ("SELECT ra, dec, w1mpro, w2mpro FROM catwise_2020 WHERE "
          f"CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',{ra:.6f},{dec:.6f},"
          f"{r_arcsec / 3600:.6f}))=1")

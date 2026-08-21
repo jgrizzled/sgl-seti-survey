@@ -25,6 +25,9 @@ from sglseti import canonical_json, load_target_registry, stable_id
 
 from sglsurvey.records import (AnalysisRun, Candidate, Constraint,
                                append_records)
+from sglsurvey.vetting import (STATIC_RADIUS_ARCSEC, load_ztf_objects,
+                               static_reason, static_source_test,
+                               track_position)
 
 REPO = Path(__file__).resolve().parents[3]
 CAL_DIR = REPO / "runs" / "ztf" / "calib_v1"
@@ -104,7 +107,10 @@ def main() -> None:
                            "Candidate; vetoed if either parallax phase "
                            f"has < {MIN_PHASE_EPOCHS} epochs or the "
                            "phase-split significances disagree (one "
-                           "phase < 2 sigma while combined > T)"),
+                           "phase < 2 sigma while combined > T), or a "
+                           "catalogued DR24 object (>= 3 good obs) lies "
+                           f"within {STATIC_RADIUS_ARCSEC['ztf']}\" of the "
+                           "track at the major-phase epochs (sglsurvey.vetting)"),
         "size_conversion": f"asteroid H-D convention, albedo {ALBEDO_REF}",
         "control_throughput_mag": CONTROL_THROUGHPUT_MAG,
         "control_run": "control_v1 (asteroid 60000)",
@@ -121,6 +127,11 @@ def main() -> None:
     constraints, candidates = [], []
     threshold_report, m90_store, meta_store = {}, {}, {}
     tensor_files = sorted(TENSOR_DIR.glob("*.npz"))
+    # catalogued-static-source test inputs (sglsurvey.vetting, 2026-08-21)
+    epoch_store, catalog_cache = {}, {}
+    from sglsurvey.geometry import GeometryContext
+    ctx = GeometryContext.ztf_default()
+    SCREEN_DIR = REPO / "runs" / "ztf" / "screen_v1"
 
     for path in tensor_files:
         endpoint, role = path.stem.split("__")
@@ -129,6 +140,8 @@ def main() -> None:
         zp_ref = float(d["zp_ref"])
         mjd, band_idx, phase = d["mjd"], d["band_idx"], d["phase"]
         seeing = d["seeing"]
+        epoch_store[(endpoint, role)] = (mjd.copy(), band_idx.copy(), phase.copy(),
+                                         float(d["t0_mjd"]))
         f, v, g = d["f"], np.asarray(d["v"]), np.asarray(d["g"],
                                                         dtype=np.float32)
         nt = f.shape[0]
@@ -282,6 +295,22 @@ def main() -> None:
                 "with a static source or artifact at one phase position")
         else:
             status, reason = "retained", None
+        static = None
+        if status == "retained":
+            mjd_, bidx_, ph_, t0_ = epoch_store[(endpoint, role)]
+            eb_ = bidx_ == {v: k for k, v in BAND_NAME.items()}[band]
+            if (endpoint, role) not in catalog_cache:
+                ra_c, dec_c = track_position(ctx, registry[endpoint], role,
+                                             2000.0, (0.0, 0.0), t0_, t0_)
+                catalog_cache[(endpoint, role)] = load_ztf_objects(SCREEN_DIR, ra_c, dec_c)
+            cat = catalog_cache[(endpoint, role)]
+            if cat is not None:
+                static = static_source_test(
+                    ctx, registry[endpoint], role, r["real_max_z"], r["real_max_mu"],
+                    t0_, mjd_[eb_], ph_[eb_], cat, STATIC_RADIUS_ARCSEC["ztf"])
+                if static["static"]:
+                    status, reason = "vetoed", static_reason(static)
+                r["static_source_test"] = static
         candidates.append(Candidate(
             candidate_id=stable_id("cnd", {
                 "endpoint": endpoint, "role": role, "band": band,
@@ -294,7 +323,8 @@ def main() -> None:
                               "threshold_8_controls": r["T"],
                               "control_maxima": r["control_maxima"],
                               "phase_S": pS, "phase_n": pn,
-                              "mu_arcsec_yr": r["real_max_mu"]},
+                              "mu_arcsec_yr": r["real_max_mu"],
+                              "static_source_test": static},
             status=status, veto_reason=reason,
             extra={"band": band, "origin": "threshold exceedance census"},
         ))

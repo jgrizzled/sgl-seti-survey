@@ -51,6 +51,8 @@ from sglseti import canonical_json, load_target_registry, stable_id
 
 from sglsurvey.records import (AnalysisRun, Candidate, Constraint,
                                append_records)
+from sglsurvey.vetting import (STATIC_RADIUS_ARCSEC, load_ps1_mean,
+                               static_reason, static_source_test)
 
 REPO = Path(__file__).resolve().parents[3]
 PS1_T = REPO / "runs" / "panstarrs" / "calib_v1" / "tensors"
@@ -139,6 +141,12 @@ def main() -> None:
     ztf_scale = 10 ** (0.4 * ZTF_THROUGHPUT_MAG)
 
     report, m90_store, meta = {}, {}, {}
+    epoch_store, catalog_cache = {}, {}
+    from sglsurvey.geometry import GeometryContext
+    sys.path.insert(0, str(REPO / "surveys" / "panstarrs" / "scripts"))
+    from ps1_corridors import CORRIDOR_OF as _CORR
+    ctx_ps1 = GeometryContext.ps1_default()
+    SCREEN_PS1 = REPO / "runs" / "panstarrs" / "screen_v1"
     for stem in pairs:
         e, role = stem.split("__")
         dp, dz = np.load(PS1_T / f"{stem}.npz"), np.load(ZTF_T / f"{stem}.npz")
@@ -239,6 +247,7 @@ def main() -> None:
                 hal[name] = [float((fp_ * wp).sum() / np.sqrt(wp.sum())) if wp.sum() > 0 else -99.0,
                              int((wp > 0).sum())]
             report[key]["split_half"] = hal
+            epoch_store[key] = (mjd.copy(), phase.copy())
             print(f"  {key:24s} N={ep.sum():3d}+{ez.sum():3d} T={T:5.2f} S={S[0][zi]:5.2f} "
                   f"phase {ph_S['0']:.1f}/{ph_S['1']:.1f} (n {ph_n['0']}/{ph_n['1']}) "
                   f"m90 med={np.nanmedian(m90):5.2f}", flush=True)
@@ -257,7 +266,11 @@ def main() -> None:
         "phase_reference": "circular-median PS1 day-of-year per endpoint-role",
         "n_repeats": N_REPEATS, "recovery_probability": RECOVERY_P, "seed": SEED,
         "candidate_rule": (f"exceedance vetoed if either phase has < {MIN_PHASE_EPOCHS} "
-                           "epochs or a phase S < 2; both archives' S reported"),
+                           "epochs or a phase S < 2, if not persistent across the "
+                           "early/late halves, if absent in the other paired bands at "
+                           "the same z, or if a catalogued DR2 source (>= 3 detections) "
+                           "lies within 2\" of the track at the major-phase epochs "
+                           "(sglsurvey.vetting); both archives' S reported"),
     }
     try:
         commit = subprocess.run(["git", "-C", str(REPO.parent / "sglseti"), "rev-parse",
@@ -270,7 +283,7 @@ def main() -> None:
                                           "registry": registry.source_hash,
                                           "hypothesis": HYPOTHESIS_VERSION,
                                           "pairs": pairs}),
-        pipeline_id="joint-ps1-ztf-stack", pipeline_version="0.1.0", config=config,
+        pipeline_id="joint-ps1-ztf-stack", pipeline_version="0.2.0", config=config,
         observation_set_hash="see-ps1-and-ztf-tensor-manifests",
         intersection_set_hash="see-ps1-and-ztf-tensor-manifests",
         registry_source_hash=registry.source_hash,
@@ -310,6 +323,18 @@ def main() -> None:
                                             f"{ {k: round(v, 2) for k, v in others.items()} }")
             else:
                 status, reason = "retained", None
+        static = None
+        if status == "retained":
+            corr = _CORR[e]
+            if corr not in catalog_cache:
+                catalog_cache[corr] = load_ps1_mean(SCREEN_PS1, corr, band)
+            mjd_, ph_ = epoch_store[key]
+            static = static_source_test(
+                ctx_ps1, registry[e], role, r["real_max_z"], (0.0, 0.0), 56000.0,
+                mjd_, ph_, catalog_cache[corr], STATIC_RADIUS_ARCSEC["ps1"])
+            if static["static"]:
+                status, reason = "vetoed", static_reason(static)
+            r["static_source_test"] = static
         candidates.append(Candidate(
             candidate_id=stable_id("cnd", {"endpoint": e, "role": role, "band": band,
                                            "source": "joint-ps1-ztf-v1-exceedance",
@@ -322,7 +347,8 @@ def main() -> None:
                               "archive_S": r["archive_S_at_peak"],
                               "archive_n": r["archive_n_at_peak"],
                               "split_half": r["split_half"],
-                              "other_bands_at_z": r.get("other_bands_at_z")},
+                              "other_bands_at_z": r.get("other_bands_at_z"),
+                              "static_source_test": static},
             status=status, veto_reason=reason,
             extra={"band": band, "origin": "joint exceedance census"}))
 
