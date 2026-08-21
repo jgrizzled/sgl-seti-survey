@@ -1,18 +1,33 @@
-"""Shared corridor configuration for the ZTF pilot scripts.
+"""Shared corridor configuration for the ZTF scripts.
 
-Registry ids are the shared survey-agnostic registry's. Corridor keys
-match surveys/wise/scripts/wise_corridors.py so cross-archive joins
-are by corridor name.
+Corridor keys and endpoint→corridor mapping are the shared WISE ones
+(surveys/wise/scripts/wise_corridors.py); membership for ZTF is the set
+of corridors graded visible by the ZTF overlay
+(surveys/ztf/targets/overlay_v1.json, Dec > -28). Pilot v1.0 ran the
+first three; the scale-up runs the overlay queue.
 """
 
+import json
+import sys
 from collections import defaultdict
+from pathlib import Path
 
-CORRIDOR_OF = {
-    # v1.0 pilot (hypotheses.md §1)
-    "ross-128": "ross128",
-    "eps-ind-a": "epsind",
-    "proxima-cen": "proxima",
-}
+_REPO = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(_REPO / "surveys" / "wise" / "scripts"))
+from wise_corridors import CORRIDOR_OF as _WISE_CORRIDOR_OF  # noqa: E402
+
+PILOT_CORRIDORS = ["ross128", "epsind", "proxima"]
+_overlay_path = _REPO / "surveys" / "ztf" / "targets" / "overlay_v1.json"
+if _overlay_path.exists():
+    _ov = json.loads(_overlay_path.read_text())
+    VISIBLE_CORRIDORS = [r["corridor"] for r in _ov["rows"] if r["ztf_visible"]]
+    QUEUE = list(_ov["queue"])
+    GRID_FLAG = {r["corridor"]: r.get("grid_flag") for r in _ov["rows"]}
+else:  # pre-overlay fallback (pilot)
+    VISIBLE_CORRIDORS, QUEUE, GRID_FLAG = list(PILOT_CORRIDORS), [], {}
+
+CORRIDOR_OF = {e: c for e, c in _WISE_CORRIDOR_OF.items()
+               if c in VISIBLE_CORRIDORS}
 
 MEMBERS = defaultdict(list)
 for _e, _c in CORRIDOR_OF.items():

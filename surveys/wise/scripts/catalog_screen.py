@@ -48,7 +48,7 @@ PRECISE_DIR = REPO / "runs" / "wise" / "precise_v1"
 RUN_DIR = REPO / "runs" / "wise" / "screen_v1"
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "wise" / "hypotheses.md"
-HYPOTHESIS_VERSION = "wise-hypotheses-v1.4"
+HYPOTHESIS_VERSION = "wise-hypotheses-v1.5"
 
 TAP_SYNC = "https://irsa.ipac.caltech.edu/TAP/sync"
 SCREEN_RADIUS_ARCSEC = 10.0   # frozen padding (hypotheses v1.0 §5)
@@ -108,9 +108,20 @@ def gap_cluster(mjds: list[float], gap: float) -> list[list[float]]:
 
 
 def tap_query(session, query: str, store: SnapshotStore):
-    request_utc = datetime.now(timezone.utc).isoformat()
-    resp = session.get(TAP_SYNC, params={"QUERY": query, "FORMAT": "CSV"},
-                       timeout=900)
+    # Retry transient IRSA outages (5xx / connection errors) with
+    # backoff; a 6-hour batch-5 run was killed by a single 503.
+    for attempt in range(6):
+        request_utc = datetime.now(timezone.utc).isoformat()
+        try:
+            resp = session.get(TAP_SYNC,
+                               params={"QUERY": query, "FORMAT": "CSV"},
+                               timeout=900)
+            if resp.status_code < 500:
+                break
+            print(f"  TAP {resp.status_code}; retry {attempt + 1}", flush=True)
+        except requests.RequestException as exc:
+            print(f"  TAP error {exc}; retry {attempt + 1}", flush=True)
+        _time.sleep(30 * (attempt + 1))
     resp.raise_for_status()
     import csv as _csv
     import io as _io

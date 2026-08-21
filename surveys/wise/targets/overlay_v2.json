@@ -31,15 +31,54 @@
   "Kapteyn's Star",
   "Lacaille 8760",
   "GJ 12724",
+  "GJ 11547",
   "Wolf 1061",
   "van Maanen's Star",
+  "GJ 687",
+  "GJ 674",
   "LP 145-141 (WD)",
+  "GJ 876",
+  "GJ 1002",
+  "GJ 832",
+  "GJ 682",
+  "LHS 1723",
+  "GJ 526",
+  "GJ 251",
+  "GJ 229 AB",
+  "sigma Dra",
   "GJ 908",
+  "GJ 588",
   "GJ 783",
+  "82 Eri",
   "GJ 784",
   "GJ 1221",
+  "GJ 581",
+  "GJ 338 AB",
   "GJ 9193",
-  "GJ 11068"
+  "GJ 625",
+  "HD 219134",
+  "GJ 11068",
+  "LTT 1445 ABC",
+  "GJ 667 ABC",
+  "GJ 514",
+  "Fomalhaut",
+  "Wolf 437",
+  "GJ 1087 (WD)",
+  "GJ 293 (WD)",
+  "GJ 66",
+  "GJ 915",
+  "GJ 518 (WD)",
+  "GJ 13157",
+  "GJ 318",
+  "GJ 1276",
+  "61 Vir",
+  "GJ 2066",
+  "GJ 2012",
+  "GJ 3306",
+  "GJ 367",
+  "GJ 3512",
+  "Wolf 1069",
+  "GJ 3112"
  ],
  "systems": [
   {
@@ -445,7 +484,7 @@
    "catwise_density_deg2": 43150,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Wolf 1061",
@@ -487,7 +526,7 @@
    "catwise_density_deg2": 94113,
    "confusion": "high",
    "coverage_proxy": "high",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 674",
@@ -500,7 +539,7 @@
    "catwise_density_deg2": 56850,
    "confusion": "high",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "LP 145-141 (WD)",
@@ -527,7 +566,7 @@
    "catwise_density_deg2": 28735,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 1002",
@@ -540,7 +579,7 @@
    "catwise_density_deg2": 30843,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 832",
@@ -553,7 +592,7 @@
    "catwise_density_deg2": 30732,
    "confusion": "low",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 682",
@@ -566,7 +605,7 @@
    "catwise_density_deg2": 60756,
    "confusion": "high",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "LHS 1723",
@@ -579,7 +618,7 @@
    "catwise_density_deg2": 45577,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 526",
@@ -592,7 +631,7 @@
    "catwise_density_deg2": 28815,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 251",
@@ -606,7 +645,7 @@
    "catwise_density_deg2": 78186,
    "confusion": "high",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 229 AB",
@@ -619,7 +658,7 @@
    "catwise_density_deg2": 62251,
    "confusion": "high",
    "coverage_proxy": "mid",
-   "status": "deferred"
+   "status": "searched"
   },
   {
    "system": "sigma Dra",
@@ -632,7 +671,7 @@
    "catwise_density_deg2": 56237,
    "confusion": "high",
    "coverage_proxy": "high",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 908",
@@ -659,7 +698,7 @@
    "catwise_density_deg2": 45386,
    "confusion": "mid+bright-star",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 783",
@@ -687,7 +726,7 @@
    "catwise_density_deg2": 35696,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 784",
@@ -726,7 +765,7 @@
    "catwise_density_deg2": 27733,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 338 AB",
@@ -739,7 +778,7 @@
    "catwise_density_deg2": 35943,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 9193",
@@ -766,7 +805,7 @@
    "catwise_density_deg2": 42554,
    "confusion": "mid",
    "coverage_proxy": "high",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "HD 219134",
@@ -780,7 +819,7 @@
    "catwise_density_deg2": 83811,
    "confusion": "high",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 11068",
@@ -806,7 +845,7 @@
    "catwise_density_deg2": 34630,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "deferred"
+   "status": "searched"
   },
   {
    "system": "GJ 667 ABC",
@@ -819,7 +858,7 @@
    "catwise_density_deg2": 55943,
    "confusion": "high+bright-star",
    "coverage_proxy": "baseline",
-   "status": "deferred"
+   "status": "searched"
   },
   {
    "system": "GJ 514",
@@ -832,7 +871,7 @@
    "catwise_density_deg2": 32164,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Fomalhaut",
@@ -845,7 +884,7 @@
    "catwise_density_deg2": 27104,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Wolf 437",
@@ -858,7 +897,7 @@
    "catwise_density_deg2": 31965,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 1087 (WD)",
@@ -871,7 +910,7 @@
    "catwise_density_deg2": 79650,
    "confusion": "high",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 293 (WD)",
@@ -884,7 +923,7 @@
    "catwise_density_deg2": 50867,
    "confusion": "mid",
    "coverage_proxy": "high",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 66",
@@ -897,7 +936,7 @@
    "catwise_density_deg2": 37056,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "deferred"
+   "status": "searched"
   },
   {
    "system": "GJ 915",
@@ -910,7 +949,7 @@
    "catwise_density_deg2": 26277,
    "confusion": "low",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 518 (WD)",
@@ -923,7 +962,7 @@
    "catwise_density_deg2": 30199,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 13157",
@@ -936,7 +975,7 @@
    "catwise_density_deg2": 67446,
    "confusion": "high+bright-star",
    "coverage_proxy": "high",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 318",
@@ -949,7 +988,7 @@
    "catwise_density_deg2": 81360,
    "confusion": "high",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 1276",
@@ -962,7 +1001,7 @@
    "catwise_density_deg2": 26969,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "61 Vir",
@@ -975,7 +1014,7 @@
    "catwise_density_deg2": 27072,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 2066",
@@ -988,7 +1027,7 @@
    "catwise_density_deg2": 55179,
    "confusion": "high+bright-star",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 2012",
@@ -1001,7 +1040,7 @@
    "catwise_density_deg2": 30939,
    "confusion": "low",
    "coverage_proxy": "baseline",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 3306",
@@ -1014,7 +1053,7 @@
    "catwise_density_deg2": 41400,
    "confusion": "mid",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 367",
@@ -1028,7 +1067,7 @@
    "catwise_density_deg2": 64901,
    "confusion": "high+bright-star",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 3512",
@@ -1041,7 +1080,7 @@
    "catwise_density_deg2": 33978,
    "confusion": "mid+bright-star",
    "coverage_proxy": "mid",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "Wolf 1069",
@@ -1054,7 +1093,7 @@
    "catwise_density_deg2": 70231,
    "confusion": "high",
    "coverage_proxy": "high",
-   "status": "queued"
+   "status": "searched"
   },
   {
    "system": "GJ 3112",
@@ -1067,44 +1106,8 @@
    "catwise_density_deg2": 36866,
    "confusion": "mid",
    "coverage_proxy": "high",
-   "status": "queued"
+   "status": "searched"
   }
  ],
- "work_queue": [
-  "GJ 876",
-  "GJ 1002",
-  "GJ 832",
-  "GJ 526",
-  "GJ 581",
-  "GJ 514",
-  "Fomalhaut",
-  "Wolf 437",
-  "GJ 915",
-  "GJ 518 (WD)",
-  "GJ 1276",
-  "61 Vir",
-  "GJ 2012",
-  "GJ 11547",
-  "LHS 1723",
-  "82 Eri",
-  "GJ 338 AB",
-  "GJ 625",
-  "GJ 293 (WD)",
-  "GJ 3306",
-  "GJ 3112",
-  "GJ 687",
-  "GJ 674",
-  "GJ 682",
-  "GJ 251",
-  "sigma Dra",
-  "HD 219134",
-  "GJ 1087 (WD)",
-  "GJ 318",
-  "Wolf 1069",
-  "GJ 588",
-  "GJ 3512",
-  "GJ 13157",
-  "GJ 2066",
-  "GJ 367"
- ]
+ "work_queue": []
 }

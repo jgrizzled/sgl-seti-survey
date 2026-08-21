@@ -12,11 +12,12 @@ single-epoch products at IRSA, mirroring the WISE shakedown steps.
 - `scripts/` — pipeline entry points, in execution order:
   `ztf_corridors.py` (config) → `coarse_discovery.py` → `precise_pass.py`
   → `catalog_screen.py` + `screen_recurrence.py` → `fetch_cutouts.py` →
-  `sample_tensor.py` → `injection_calibrate.py`; `asteroid_control.py`
-  is the independent positive control. Each run writes
+  `sample_tensor.py` → `injection_calibrate.py` → `look_elsewhere.py` →
+  `adjudicate_candidates.py` → `make_figures.py`; `asteroid_control.py`
+  is the independent positive control; `run_scaleup.sh` drives the chain. Each run writes
   `run_config_*.json` under `../../runs/ztf/<run-id>/` (gitignored)
 - `results/` — compact tracked summaries per stage
-- `targets/` — ZTF overlay of the universal list (scale-up; not pilot)
+- `targets/` — ZTF overlay (`build_ztf_overlay.py` → `overlay_v1.json/.md`): per-corridor public frame counts, primary-field grid position and gap/edge/ok flag, secondary-field counts; defines scale-up membership (62 corridors Dec > −28) and order
 
 Adapter: `sglsurvey/adapters/irsa_ztf.py`. Registry: shared
 `registries/pilot_wise_2026.yaml` (survey-agnostic; no ZTF entries
@@ -42,3 +43,12 @@ needed for the pilot).
 8. Report — **done**: `../../report/ztf_pilot_v1.md`
 
 Stage details: `results/pilot_v1_summary.md`.
+
+## Scale-up v1 (2026-08-20 → 21) — COMPLETE
+
+`scripts/run_scaleup.sh [resume-stage]` ran the whole chain over the
+overlay (62 corridors / 69 endpoints). AnalysisRun `run-1dc29a973d0c`:
+2,640 Constraints, 24 exceedances, 0 surviving candidates after
+`adjudicate_candidates.py` (A–E) and `look_elsewhere.py`. Depths m90
+≈ 22.5 AB (g/r) median. Summary `results/scaleup_v1_summary.md`;
+report `../../report/ztf_survey_v1.md`.

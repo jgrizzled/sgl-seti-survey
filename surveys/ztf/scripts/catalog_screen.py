@@ -134,6 +134,19 @@ def main() -> None:
              if any(e in members for e, _ in pairs)),
             key=lambda o: obs_by_id[o].t_mid_mjd_utc)
         print(f"[{corridor}] {len(obs_ids)} usable exposures", flush=True)
+        # threaded psfcat prefetch (IO-bound); misses are re-raised below
+        from concurrent.futures import ThreadPoolExecutor
+
+        def _pre(oid):
+            import requests as _rq
+            try:
+                ZtfSciAdapter(session=_rq.Session()).fetch(
+                    obs_by_id[oid], ["psfcat"], PRODUCT_DIR)
+            except Exception:
+                pass
+        todo = [o for o in obs_ids if f"exp:{o}" not in progress]
+        with ThreadPoolExecutor(max_workers=6) as ex:
+            list(ex.map(_pre, todo))
         t0 = _time.monotonic()
         new = []
         for i, oid in enumerate(obs_ids):
@@ -141,7 +154,19 @@ def main() -> None:
                 continue
             obs = obs_by_id[oid]
             try:
-                pset = adapter.fetch(obs, ["psfcat"], PRODUCT_DIR)
+                pset = None
+                for attempt in (1, 2, 3):
+                    try:
+                        pset = adapter.fetch(obs, ["psfcat"], PRODUCT_DIR)
+                        break
+                    except FileNotFoundError:
+                        raise
+                    except Exception as exc:
+                        if attempt == 3:
+                            print(f"  psfcat fetch failed {oid}: {exc}",
+                                  flush=True)
+                            raise FileNotFoundError(str(exc))
+                        _time.sleep(3.0 * attempt)
             except FileNotFoundError:
                 for e, r in usable[oid]:
                     summary[(e, r)][2] += 1

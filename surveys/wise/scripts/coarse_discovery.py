@@ -40,7 +40,7 @@ RUN_ID = "coarse_v1"
 RUN_DIR = REPO / "runs" / "wise" / RUN_ID
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "wise" / "hypotheses.md"
-HYPOTHESIS_VERSION = "wise-hypotheses-v1.4"
+HYPOTHESIS_VERSION = "wise-hypotheses-v1.5"
 
 # Full WISE+NEOWISE archive span, generous on both ends.
 TIME_RANGE = MjdRange(start_mjd_utc=55150.0, stop_mjd_utc=60550.0)

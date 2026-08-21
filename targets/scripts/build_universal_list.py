@@ -76,7 +76,17 @@ SEARCHED_SYSTEM_KEYS = ["alpha Cen", "Proxima", "Barnard", "Sirius",
                         "61 Cyg", "Struve 2398", "Groombridge 34",
                         "GJ 1111", "Luyten", "Kapteyn", "LP 145-141",
                         "GJ 1221", "GJ 9193", "GJ 783", "GJ 11068",
-                        "WISE 0855", "EZ Aqr", "Luhman 16", "Procyon"]
+                        "WISE 0855", "EZ Aqr", "Luhman 16", "Procyon",
+                        # batch 5 (2026-08-21): universal v2 expansion
+                        "GJ 876", "GJ 1002", "GJ 832", "GJ 526", "GJ 581",
+                        "GJ 514", "Fomalhaut", "Wolf 437", "GJ 915",
+                        "GJ 518", "GJ 1276", "61 Vir", "GJ 2012",
+                        "GJ 11547", "LHS 1723", "82 Eri", "GJ 338",
+                        "GJ 625", "GJ 293", "GJ 3306", "GJ 3112", "GJ 687",
+                        "GJ 674", "GJ 682", "GJ 251", "sigma Dra",
+                        "HD 219134", "GJ 1087", "GJ 318", "Wolf 1069",
+                        "GJ 588", "GJ 3512", "GJ 13157", "GJ 2066",
+                        "GJ 367", "GJ 229", "GJ 667", "LTT 1445", "GJ 66"]
 
 KM_S_TO_PC_MYR = 1.0227
 SCIENCE = yaml.safe_load((TDIR / "science_interest.yaml").read_text())

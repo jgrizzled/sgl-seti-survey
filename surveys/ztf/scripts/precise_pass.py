@@ -74,6 +74,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("endpoints", nargs="*")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--workers", type=int, default=6)
     args = ap.parse_args()
     endpoints = set(args.endpoints) or None
 
@@ -121,10 +122,11 @@ def main() -> None:
     summary = defaultdict(lambda: defaultdict(lambda: [0, 0, 0, 0.0, 0]))
     t0 = _time.monotonic()
     new_records, cut_records = [], []
-    for i, oid in enumerate(obs_ids):
+
+    # Phase 1 (CPU): loci + cutout spec per exposure.
+    def plan(oid):
         obs = obs_by_id[oid]
         t_mid = Time(obs.t_mid_mjd_utc, format="mjd")
-        # loci for every (endpoint, role) hit on this exposure
         loci = {}
         for endpoint_id, role_name in hits_by_obs[oid]:
             al = adaptive_locus(
@@ -138,110 +140,127 @@ def main() -> None:
             np.array([[p.icrs_ra_deg, p.icrs_dec_deg] for p in al.points])
             for al in loci.values()])
         cone = enclosing_cone(all_pts, 0.0)
-        cutout = CutoutSpec(ra_deg=cone.ra_deg, dec_deg=cone.dec_deg,
-                            size_pix=CUTOUT_PIX)
-        available = True
-        try:
-            for attempt in (1, 2, 3):
-                try:
-                    pset = adapter.fetch(obs, ["msk"], PRODUCT_DIR,
-                                         cutout=cutout)
-                    break
-                except FileNotFoundError:
-                    raise
-                except Exception as exc:
-                    if attempt == 3:
-                        raise
-                    print(f"  retry {attempt} for {oid}: {exc}", flush=True)
-                    _time.sleep(2.0 * attempt)
-        except FileNotFoundError:
-            available = False
-        cut_records.append({"observation_id": oid, "kind": "msk",
-                            "available": available,
-                            "center_ra_deg": cutout.ra_deg,
-                            "center_dec_deg": cutout.dec_deg,
-                            "size_pix": CUTOUT_PIX,
-                            "path": (str(pset.products[0].path.relative_to(REPO))
-                                     if available else None),
-                            "checksum": (pset.products[0].checksum
-                                         if available else None)})
-        fp = (ZtfExactFootprint(pset.products[0].path) if available
-              else None)
-        bad_quality = bool(obs.quality_flags.get("bad_quality"))
-        for (endpoint_id, role_name), al in loci.items():
-            role = ROLE_BY_NAME[role_name]
-            target = registry[endpoint_id]
-            pts = np.array([[p.icrs_ra_deg, p.icrs_dec_deg]
-                            for p in al.points])
-            if fp is None:
-                hit, frac, covered = False, None, []
-                label, note = "unknown", "product not served (404)"
-            else:
-                inb, usable = fp.status(pts)
-                frac = float(usable[inb].mean()) if inb.any() else None
-                covered = covered_z_intervals(
-                    target=target, role=role, observation_time=t_mid,
-                    observer=ctx.observer, relay_range=ctx.relay_range,
-                    contains=fp.contains,
-                    tolerance_arcsec=PRECISE_TOLERANCE_ARCSEC,
-                    ephemeris=ctx.ephemeris, model=ctx.model, locus=al,
-                    seed_step_arcsec=SEED_STEP_ARCSEC)
-                hit = len(covered) > 0
-                if bad_quality:
-                    label, note = "unusable", "infobits bit 25 (bad quality)"
-                elif not hit:
-                    label, note = "unusable", "no usable-pixel crossing"
-                elif frac is not None and frac > 0.99:
-                    label, note = "usable", None
+        return loci, CutoutSpec(ra_deg=cone.ra_deg, dec_deg=cone.dec_deg,
+                                size_pix=CUTOUT_PIX)
+
+    # Phase 2 (IO): threaded cutout fetch.
+    def fetch(oid, cutout):
+        import requests as _rq
+        ad = ZtfSciAdapter(session=_rq.Session())
+        for attempt in (1, 2, 3):
+            try:
+                return ad.fetch(obs_by_id[oid], ["msk"], PRODUCT_DIR,
+                                cutout=cutout)
+            except FileNotFoundError:
+                return None
+            except Exception as exc:
+                if attempt == 3:
+                    print(f"  fetch failed {oid}: {exc}", flush=True)
+                    return None
+                _time.sleep(2.0 * attempt)
+
+    from concurrent.futures import ThreadPoolExecutor
+    CHUNK = 200
+    for c0 in range(0, len(obs_ids), CHUNK):
+        chunk = obs_ids[c0:c0 + CHUNK]
+        plans = {oid: plan(oid) for oid in chunk}
+        with ThreadPoolExecutor(max_workers=args.workers) as ex:
+            fetched = dict(zip(chunk, ex.map(
+                lambda o: fetch(o, plans[o][1]), chunk)))
+        for j, oid in enumerate(chunk):
+            i = c0 + j
+            obs = obs_by_id[oid]
+            t_mid = Time(obs.t_mid_mjd_utc, format="mjd")
+            loci, cutout = plans[oid]
+            pset = fetched[oid]
+            available = pset is not None
+            cut_records.append({"observation_id": oid, "kind": "msk",
+                                "available": available,
+                                "center_ra_deg": cutout.ra_deg,
+                                "center_dec_deg": cutout.dec_deg,
+                                "size_pix": CUTOUT_PIX,
+                                "path": (str(pset.products[0].path.relative_to(REPO))
+                                         if available else None),
+                                "checksum": (pset.products[0].checksum
+                                             if available else None)})
+            # --- evaluation (unchanged below) ---
+            fp = (ZtfExactFootprint(pset.products[0].path) if available
+                  else None)
+            bad_quality = bool(obs.quality_flags.get("bad_quality"))
+            for (endpoint_id, role_name), al in loci.items():
+                role = ROLE_BY_NAME[role_name]
+                target = registry[endpoint_id]
+                pts = np.array([[p.icrs_ra_deg, p.icrs_dec_deg]
+                                for p in al.points])
+                if fp is None:
+                    hit, frac, covered = False, None, []
+                    label, note = "unknown", "product not served (404)"
                 else:
-                    label, note = "partial", None
-            ixn = IntersectionEvaluation.build(
-                observation_id=oid,
-                hypothesis_version=HYPOTHESIS_VERSION,
-                hypothesis_hash=hyp_hash,
-                endpoint_id=endpoint_id, role=role_name,
-                registry_source_hash=registry.source_hash,
-                target_source_hash=target_hashes[endpoint_id],
-                model_id=ctx.model.model_id,
-                model_version=ctx.model.model_version,
-                ephemeris_id=ctx.identities()["ephemeris_id"],
-                tolerance_arcsec=PRECISE_TOLERANCE_ARCSEC,
-                confidence_level=ctx.confidence_level,
-                padding_arcsec=0.0,
-                stage="precise", hit=hit,
-                covered_z_intervals_au=tuple(
-                    (zi.z_min_au, zi.z_max_au) for zi in covered),
-                envelope_pad_arcsec=0.0,
-                warnings=al.warnings,
-                usable=label, usable_fraction=frac,
-                usability_notes=note,
-                extra={"seed_step_arcsec": SEED_STEP_ARCSEC,
-                       "fatal_mask_template": ZtfExactFootprint.FATAL_MASK,
-                       "bad_quality": bad_quality,
-                       "product_available": available,
-                       "cutout_pix": CUTOUT_PIX},
-            )
-            if ixn.intersection_id not in known_ixn:
-                known_ixn.add(ixn.intersection_id)
-                new_records.append(ixn)
-            s = summary[(endpoint_id, role_name)][obs.band]
-            s[0] += 1
-            s[1] += hit
-            s[2] += label in ("usable", "partial")
-            if frac is not None:
-                s[3] += frac
-            s[4] += (not available)
-        if (i + 1) % 50 == 0:
-            rate = (i + 1) / (_time.monotonic() - t0)
-            print(f"  {i + 1}/{len(obs_ids)} exposures ({rate:.2f}/s)",
-                  flush=True)
-        if len(new_records) >= 200:
-            append_records(ixn_path, new_records)
-            new_records = []
-            with cutout_index_path().open("a") as fh:
-                for rec in cut_records:
-                    fh.write(json.dumps(rec) + "\n")
-            cut_records = []
+                    inb, usable = fp.status(pts)
+                    frac = float(usable[inb].mean()) if inb.any() else None
+                    covered = covered_z_intervals(
+                        target=target, role=role, observation_time=t_mid,
+                        observer=ctx.observer, relay_range=ctx.relay_range,
+                        contains=fp.contains,
+                        tolerance_arcsec=PRECISE_TOLERANCE_ARCSEC,
+                        ephemeris=ctx.ephemeris, model=ctx.model, locus=al,
+                        seed_step_arcsec=SEED_STEP_ARCSEC)
+                    hit = len(covered) > 0
+                    if bad_quality:
+                        label, note = "unusable", "infobits bit 25 (bad quality)"
+                    elif not hit:
+                        label, note = "unusable", "no usable-pixel crossing"
+                    elif frac is not None and frac > 0.99:
+                        label, note = "usable", None
+                    else:
+                        label, note = "partial", None
+                ixn = IntersectionEvaluation.build(
+                    observation_id=oid,
+                    hypothesis_version=HYPOTHESIS_VERSION,
+                    hypothesis_hash=hyp_hash,
+                    endpoint_id=endpoint_id, role=role_name,
+                    registry_source_hash=registry.source_hash,
+                    target_source_hash=target_hashes[endpoint_id],
+                    model_id=ctx.model.model_id,
+                    model_version=ctx.model.model_version,
+                    ephemeris_id=ctx.identities()["ephemeris_id"],
+                    tolerance_arcsec=PRECISE_TOLERANCE_ARCSEC,
+                    confidence_level=ctx.confidence_level,
+                    padding_arcsec=0.0,
+                    stage="precise", hit=hit,
+                    covered_z_intervals_au=tuple(
+                        (zi.z_min_au, zi.z_max_au) for zi in covered),
+                    envelope_pad_arcsec=0.0,
+                    warnings=al.warnings,
+                    usable=label, usable_fraction=frac,
+                    usability_notes=note,
+                    extra={"seed_step_arcsec": SEED_STEP_ARCSEC,
+                           "fatal_mask_template": ZtfExactFootprint.FATAL_MASK,
+                           "bad_quality": bad_quality,
+                           "product_available": available,
+                           "cutout_pix": CUTOUT_PIX},
+                )
+                if ixn.intersection_id not in known_ixn:
+                    known_ixn.add(ixn.intersection_id)
+                    new_records.append(ixn)
+                s = summary[(endpoint_id, role_name)][obs.band]
+                s[0] += 1
+                s[1] += hit
+                s[2] += label in ("usable", "partial")
+                if frac is not None:
+                    s[3] += frac
+                s[4] += (not available)
+            if (i + 1) % 50 == 0:
+                rate = (i + 1) / (_time.monotonic() - t0)
+                print(f"  {i + 1}/{len(obs_ids)} exposures ({rate:.2f}/s)",
+                      flush=True)
+            if len(new_records) >= 200:
+                append_records(ixn_path, new_records)
+                new_records = []
+                with cutout_index_path().open("a") as fh:
+                    for rec in cut_records:
+                        fh.write(json.dumps(rec) + "\n")
+                cut_records = []
     append_records(ixn_path, new_records)
     with cutout_index_path().open("a") as fh:
         for rec in cut_records:

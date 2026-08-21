@@ -108,3 +108,16 @@ remaining queued and deferred systems; registry v1.4, 47 endpoints /
 Candidates; no surviving candidate. The universal-list WISE queue is
 empty. See `results/batch4_summary.md` and
 `../../report/wise_survey_v2.md`.
+
+**v1.5 batch 5 (2026-08-20/21): UNIVERSAL v2 PORTFOLIO COMPLETE.**
+The picky-network expansion (`targets/universal_v2`: 10 pc horizon,
+engineering-backbone + science-interest baskets): 41 endpoints /
+39 corridors incl. four formerly orbit-needed components; registry
+v1.5 (`scripts/add_registry_entries.py`), 88 endpoints / 77
+corridors; flux-scale erratum closed by rebuilding all 176 tensors
+under the total-flux kernel → calibration v0.2.1, 5,632 Constraint
+records under `run-1b2e86e9219e`; uniform exceedance census over all
+batches (`scripts/adjudicate_exceedances.py`): 70 cells, all vetoed
+(one by manual review — bright-star halo, now a rule); no surviving
+candidate. See `results/batch5_summary.md` and
+`../../report/wise_survey_v3.md`.

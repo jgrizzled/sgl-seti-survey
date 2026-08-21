@@ -87,6 +87,19 @@ class FluxMap:
     magzp: float | None
     mjd: float
     aux: np.ndarray | None = None  # optional per-pixel auxiliary map
+    sip: bool = False  # use the iterative SIP inverse (SPHEREx)
+    upsample: int = 1  # maps evaluated at 1/upsample-pixel phases
+
+    def world2pix(self, ra, dec):
+        """Sky -> map pixel coordinates (image pixels x ``upsample``)."""
+        xy = np.stack([ra, dec], axis=1)
+        if self.sip:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore")
+                pix = self.wcs.all_world2pix(xy, 0, quiet=True)
+        else:
+            pix = self.wcs.wcs_world2pix(xy, 0)
+        return pix * self.upsample
 
     def sample_aux(self, ra_deg, dec_deg):
         """Bilinear sample of ``aux`` (NaN outside / if absent)."""
@@ -94,7 +107,7 @@ class FluxMap:
         if self.aux is None:
             return np.full(len(ra), np.nan)
         dec = np.atleast_1d(np.asarray(dec_deg, dtype=float))
-        pix = self.wcs.wcs_world2pix(np.stack([ra, dec], axis=1), 0)
+        pix = self.world2pix(ra, dec)
         x, y = pix[:, 0], pix[:, 1]
         ny, nx = self.aux.shape
         out = np.full(len(ra), np.nan)
@@ -118,7 +131,7 @@ class FluxMap:
         """
         ra = np.atleast_1d(np.asarray(ra_deg, dtype=float))
         dec = np.atleast_1d(np.asarray(dec_deg, dtype=float))
-        pix = self.wcs.wcs_world2pix(np.stack([ra, dec], axis=1), 0)
+        pix = self.world2pix(ra, dec)
         x, y = pix[:, 0], pix[:, 1]
         ny, nx = self.flux.shape
         out_f = np.full(len(ra), np.nan)
@@ -172,8 +185,14 @@ def build_flux_map(int_path: Path, unc_path: Path, msk_full_path: Path,
 
 
 def matched_filter(img: np.ndarray, var_pix: np.ndarray, good: np.ndarray,
-                   fwhm_pix: float, subtract_background: bool = True):
-    """Core estimator: returns (flux, var, good_frac) maps."""
+                   fwhm_pix: float, subtract_background: bool = True,
+                   kernel: np.ndarray | None = None):
+    """Core estimator: returns (flux, var, good_frac) maps.
+
+    ``kernel`` overrides the Gaussian model with an arbitrary unit-sum
+    PSF (odd-sized, centred); it is flipped internally so that the FFT
+    product computes a cross-correlation for asymmetric profiles.
+    """
     if subtract_background:
         bgpix = img[good]
         if bgpix.size:
@@ -185,7 +204,11 @@ def matched_filter(img: np.ndarray, var_pix: np.ndarray, good: np.ndarray,
             bg = 0.0
     else:
         bg = 0.0
-    kernel = _gaussian_kernel(fwhm_pix, int(np.ceil(2.5 * fwhm_pix)))
+    if kernel is None:
+        kernel = _gaussian_kernel(fwhm_pix, int(np.ceil(2.5 * fwhm_pix)))
+    else:
+        kernel = np.asarray(kernel, dtype=float)
+        kernel = kernel[::-1, ::-1] / kernel.sum()
     d = np.where(good, img - bg, 0.0)
     g = good.astype(float)
     s2 = np.where(good, var_pix, 0.0)
@@ -292,3 +315,208 @@ def build_flux_map_ztf(sci_path: Path, diff_path: Path | None,
                    band=band, magzp=(float(hdr["MAGZP"])
                                      if "MAGZP" in hdr else None),
                    mjd=mjd, aux=np.clip(dfrac, 0.0, 1.0))
+
+
+SPHEREX_PIX_ARCSEC = 6.15
+ARCSEC2_TO_SR = (np.pi / 648000.0) ** 2
+
+
+def spherex_kernel(psf_plane: np.ndarray, oversamp: int = 10,
+                   shift_pix: tuple[float, float] = (0.0, 0.0)) -> np.ndarray:
+    """Bin a 10x-oversampled SPHEREx PSF plane (101 x 101 at 0.615",
+    centre at index 50) to detector sampling, keeping the PSF centre at
+    the centre of the middle detector pixel plus ``shift_pix`` (x, y)
+    detector pixels (sub-pixel phases). Returns a unit-sum odd kernel
+    (11 x 11 for the Level-2 products)."""
+    p = np.asarray(psf_plane, dtype=float)
+    sx = int(round(shift_pix[0] * oversamp))
+    sy = int(round(shift_pix[1] * oversamp))
+    if sx or sy:
+        q = np.zeros_like(p)
+        ys, xs = slice(max(sy, 0), p.shape[0] + min(sy, 0)), slice(max(sx, 0), p.shape[1] + min(sx, 0))
+        yd, xd = slice(max(-sy, 0), p.shape[0] + min(-sy, 0)), slice(max(-sx, 0), p.shape[1] + min(-sx, 0))
+        q[ys, xs] = p[yd, xd]
+        p = q
+    n = p.shape[0]
+    c = n // 2
+    half = oversamp // 2
+    # pad so that the central bin spans [c-half, c+half)
+    lo = (c - half) % oversamp
+    pad_lo = (oversamp - lo) % oversamp
+    p = np.pad(p, ((pad_lo, 0), (pad_lo, 0)))
+    pad_hi = (oversamp - p.shape[0] % oversamp) % oversamp
+    p = np.pad(p, ((0, pad_hi), (0, pad_hi)))
+    m = p.shape[0]
+    k = p.reshape(m // oversamp, oversamp, m // oversamp, oversamp).sum(axis=(1, 3))
+    if k.shape[0] % 2 == 0:  # make odd, keeping the peak central
+        iy, ix = np.unravel_index(k.argmax(), k.shape)
+        k = k[1:, 1:] if iy > (k.shape[0] - 1) // 2 else k[:-1, :-1]
+    k = np.clip(k, 0.0, None)
+    return k / k.sum()
+
+
+def build_flux_map_spherex(cut_path: Path, fatal_mask: int, band: str,
+                           mjd: float, use_psf: bool = True,
+                           upsample: int = 2) -> FluxMap:
+    """SPHEREx variant on a slim cutout (adapter ``irsa_spherex``).
+
+    Search image = IMAGE - ZODI (model) with a robust constant residual
+    background removed by the estimator; per-pixel variance from the
+    VARIANCE extension; usable pixels = finite and no fatal FLAGS bit;
+    kernel = the exposure's PSF-zone plane binned to detector sampling
+    (Gaussian at the header PSF_FWHM if ``use_psf`` is False).
+
+    Units: the matched-filter amplitude with a unit-sum kernel is the
+    source's total surface-brightness sum (MJy/sr summed over pixels);
+    it is converted to micro-Jansky with the per-exposure median pixel
+    solid angle (header OMEGA_MEDIAN, arcsec^2), so ``flux``/``var`` are
+    in uJy / uJy^2 and AB = 23.9 - 2.5 log10(flux). ``magzp`` = 23.9.
+    ``aux`` holds the wavelength (um) map is NOT stored here — it is a
+    smooth function of detector position handled by the caller.
+    """
+    from astropy.io import fits
+    from astropy.utils.exceptions import AstropyWarning
+    from astropy.wcs import WCS
+
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", AstropyWarning)
+        with fits.open(cut_path) as hdul:
+            hdr = hdul["IMAGE"].header
+            img = np.asarray(hdul["IMAGE"].data, dtype=np.float64)
+            flags = np.asarray(hdul["FLAGS"].data, dtype=np.int64)
+            var = np.asarray(hdul["VARIANCE"].data, dtype=np.float64)
+            zodi = np.asarray(hdul["ZODI"].data, dtype=np.float64)
+            psf = np.asarray(hdul["PSF"].data, dtype=np.float64)
+            wcs = WCS(hdr)
+    good = (np.isfinite(img) & np.isfinite(var) & (var > 0)
+            & ((flags & fatal_mask) == 0))
+    omega_sr = float(hdr.get("OMEGA_MEDIAN", PIX_ARCSEC ** 2)) * ARCSEC2_TO_SR
+    to_ujy = omega_sr * 1e12  # MJy/sr * sr -> MJy -> uJy
+    fwhm_pix = float(hdr.get("PSF_FWHM", 5.3)) / SPHEREX_PIX_ARCSEC
+    resid = img - zodi
+    # Empirical variance: the pipeline VARIANCE plane omits confusion /
+    # zodi-model residuals in sparse fields and is conservative by up to
+    # ~3x in the deep fields (template reduced chi2 0.12 before this
+    # step); rescale to the robust (MAD) scatter of the residual image.
+    gp = resid[good]
+    var_scale = 1.0
+    if gp.size > 100:
+        med = np.median(gp)
+        mad = 1.4826 * np.median(np.abs(gp - med))
+        model = float(np.sqrt(np.median(var[good])))
+        if mad > 0 and model > 0:
+            var_scale = float((mad / model) ** 2)
+    # Under-sampled PSF: evaluate the estimator at UP x UP sub-pixel
+    # phases (kernel shifted before binning) and interleave into a map
+    # with UP x finer sampling, so that bilinear lookup between nodes
+    # loses <~ 0.1 mag instead of up to 0.5 mag at half-pixel offsets
+    # (measured with the star control, 2026-08-20).
+    UP = upsample if (use_psf and psf.ndim == 2) else 1
+    ny, nx = resid.shape
+    flux = np.empty((ny * UP, nx * UP))
+    v = np.empty_like(flux)
+    good_frac = np.empty_like(flux)
+    kernel0 = None
+    for dy in range(UP):
+        for dx in range(UP):
+            if UP == 1 and not (use_psf and psf.ndim == 2):
+                kern = None
+            else:
+                kern = spherex_kernel(psf, shift_pix=(dx / UP, dy / UP))
+                kernel0 = kern if (dx == 0 and dy == 0) else kernel0
+            f_, v_, g_ = matched_filter(resid, var * var_scale, good,
+                                        fwhm_pix, subtract_background=True,
+                                        kernel=kern)
+            flux[dy::UP, dx::UP] = f_
+            v[dy::UP, dx::UP] = v_
+            good_frac[dy::UP, dx::UP] = g_
+    fm = FluxMap(flux=flux * to_ujy, var=v * to_ujy * to_ujy,
+                 good_frac=good_frac, wcs=wcs, band=band, magzp=23.9,
+                 mjd=mjd, sip=True, upsample=UP)
+    fm.var_scale = var_scale
+    fm.kernel = kernel0
+    fm.omega_sr = omega_sr
+    return fm
+
+
+PS1_PIX_ARCSEC = 0.25
+
+
+def build_flux_map_ps1(img_path: Path, wt_path: Path | None,
+                       msk_full_path: Path, fatal_mask: int, band: str,
+                       mjd: float, magzp: float | None = None) -> FluxMap:
+    """Pan-STARRS1 warp variant (adapter ``mast_ps1``).
+
+    Inputs are a fitscut image cutout (full skycell WCS with shifted
+    CRPIX), the matching weight cutout (optional) and the FULL skycell
+    mask (fpack), aligned to the cutout by the integer CRPIX offset as in
+    the WISE builder. Usable pixels = finite image, no fatal mask bit,
+    positive variance.
+
+    Variance: the ``.wt`` plane's convention is checked empirically per
+    cutout against the robust background scatter of the image — it is
+    used as variance if the two agree within a factor 3 (``var_source =
+    "wt"``), as inverse variance if 1/wt agrees (``"1/wt"``), otherwise
+    the ZTF-style robust-background + Poisson model (``"robust"``). The
+    choice is recorded on the returned map.
+
+    Kernel: Gaussian at the header ``CHIP.SEEING`` FWHM (pixels, clipped
+    to 2-16). ``magzp`` defaults to header ``FPA.ZP``; the sampling stage
+    replaces it with the in-frame star calibration, which also absorbs
+    the Gaussian-vs-true-PSF throughput of this estimator.
+    """
+    img, hdr, wcs = _read_fits_any(img_path)
+    msk, mhdr, _ = _read_fits_any(msk_full_path)
+    msk = np.where(np.isfinite(msk), msk, 0).astype(np.int64)
+    dx = int(round(mhdr["CRPIX1"] - hdr["CRPIX1"]))
+    dy = int(round(mhdr["CRPIX2"] - hdr["CRPIX2"]))
+    ny, nx = img.shape
+    mcut = np.full((ny, nx), int(fatal_mask), dtype=np.int64)
+    y0, y1 = max(0, -dy), min(ny, msk.shape[0] - dy)
+    x0, x1 = max(0, -dx), min(nx, msk.shape[1] - dx)
+    if y1 > y0 and x1 > x0:
+        mcut[y0:y1, x0:x1] = msk[y0 + dy:y1 + dy, x0 + dx:x1 + dx]
+    unmasked = np.isfinite(img) & ((mcut & fatal_mask) == 0)
+
+    pix = img[unmasked]
+    sky = float(np.median(pix)) if pix.size else 0.0
+    mad = 1.4826 * float(np.median(np.abs(pix - sky))) if pix.size else 1.0
+    bgvar = mad * mad if mad > 0 else 1.0
+    gain = float(hdr.get("CELL.GAIN", hdr.get("HIERARCH CELL.GAIN", 1.0))
+                 or 1.0)
+    var_source = "robust"
+    var_pix = bgvar + np.clip(img - sky, 0.0, None) / gain
+    if wt_path is not None:
+        wt, whdr, _ = _read_fits_any(wt_path)
+        if (abs(whdr["CRPIX1"] - hdr["CRPIX1"]) > 0.01
+                or whdr["NAXIS1"] != hdr["NAXIS1"]):
+            raise ValueError("weight cutout grid differs from image")
+        wok = unmasked & np.isfinite(wt) & (wt > 0)
+        if wok.sum() > 1000:
+            w_med = float(np.median(wt[wok]))
+            if 1 / 3 < w_med / bgvar < 3:
+                var_pix = np.where(wok, wt, np.nan)
+                var_source = "wt"
+            elif 1 / 3 < (1.0 / w_med) / bgvar < 3:
+                var_pix = np.where(wok, 1.0 / wt, np.nan)
+                var_source = "1/wt"
+        unmasked &= np.isfinite(var_pix) & (var_pix > 0)
+    good = unmasked
+    see = float(hdr.get("CHIP.SEEING", hdr.get("HIERARCH CHIP.SEEING", 5.0))
+                or 5.0)
+    fwhm_pix = float(np.clip(see, 2.0, 16.0))
+    flux, var, good_frac = matched_filter(img, np.nan_to_num(var_pix, nan=1e30),
+                                          good, fwhm_pix,
+                                          subtract_background=True)
+    if magzp is None:
+        zp = hdr.get("FPA.ZP", hdr.get("HIERARCH FPA.ZP"))
+        magzp = float(zp) if zp is not None else None
+    fm = FluxMap(flux=flux, var=var, good_frac=good_frac, wcs=wcs,
+                 band=band, magzp=magzp, mjd=mjd)
+    fm.var_source = var_source
+    fm.fwhm_pix = fwhm_pix
+    fm.sky = sky
+    fm.bg_sigma = mad
+    fm.exptime = float(hdr.get("EXPTIME", 0.0) or 0.0)
+    fm.mjd_obs = float(hdr.get("MJD-OBS", mjd))
+    return fm

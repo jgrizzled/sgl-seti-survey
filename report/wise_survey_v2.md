@@ -1,5 +1,7 @@
 # WISE/NEOWISE SGL Survey — Report v2
 
+> **Superseded by `wise_survey_v3.md` (2026-08-21):** the universal v2 / picky-network expansion (88 endpoints, 77 corridors).
+
 **Date:** 2026-08-20 · **Status:** **complete over the full universal target portfolio** — 47 endpoints / 38 corridors / 94 endpoint-role hypotheses searched, no surviving candidate, 3,008 injection-calibrated constraints · **Supersedes:** `wise_shakedown_v1.md`
 
 **Pins:** registry v1.4 `sha256:09366624…` · hypotheses v1.4 (physics parameters frozen at v1.0, endpoint set expanded v1.1–v1.4) · sglseti `21f6f3d` / `tusay2022_eq5_7_v1` v1.1.0 · calibration v0.2.0 AnalysisRun `run-76251a7d4ad3`

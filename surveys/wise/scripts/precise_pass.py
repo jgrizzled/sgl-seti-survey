@@ -41,7 +41,7 @@ RUN_DIR = REPO / "runs" / "wise" / "precise_v1"
 PRODUCT_DIR = REPO / "runs" / "wise" / "products" / "msk"
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "wise" / "hypotheses.md"
-HYPOTHESIS_VERSION = "wise-hypotheses-v1.4"
+HYPOTHESIS_VERSION = "wise-hypotheses-v1.5"
 
 PRECISE_TOLERANCE_ARCSEC = 2.0
 SEED_STEP_ARCSEC = 30.0  # usable stretches narrower than this may be missed

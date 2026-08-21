@@ -62,6 +62,38 @@ class GeometryContext:
                    tolerance_arcsec=5.0, padding_arcsec=10.0,
                    confidence_level=0.99)
 
+    @classmethod
+    def spherex_default(cls) -> "GeometryContext":
+        """The frozen SPHEREx pilot configuration
+        (surveys/spherex/hypotheses.md v1.0): WISE v1.0 model, relay
+        range, 99% confidence and +10" padding; observer is the Earth
+        centre (SPHEREx is in a ~650 km LEO: the geocentric-vs-spacecraft
+        locus shift is <= 7,000 km / 550 AU = 0.017", carried in the
+        accuracy budget rather than modelled)."""
+        from sglseti import Tusay2022Eq57V1
+
+        return cls(model=Tusay2022Eq57V1(), ephemeris=AstropyEphemeris(),
+                   observer=Observer.earth_center(),
+                   relay_range=RelayRange(550.0, 10000.0),
+                   tolerance_arcsec=5.0, padding_arcsec=10.0,
+                   confidence_level=0.99)
+
+    @classmethod
+    def ps1_default(cls) -> "GeometryContext":
+        """The frozen Pan-STARRS1 pilot configuration
+        (surveys/panstarrs/hypotheses.md v1.0): WISE v1.0 model, relay
+        range, 99% confidence and +10" padding; observer is the PS1
+        Haleakala site (warp header FPA.LONGITUDE/LATITUDE/ELEVATION)."""
+        from sglseti import Tusay2022Eq57V1
+
+        haleakala = Observer.from_geodetic("haleakala-ps1", -156.2559,
+                                           20.7071, 3048.0)
+        return cls(model=Tusay2022Eq57V1(), ephemeris=AstropyEphemeris(),
+                   observer=haleakala,
+                   relay_range=RelayRange(550.0, 10000.0),
+                   tolerance_arcsec=5.0, padding_arcsec=10.0,
+                   confidence_level=0.99)
+
     def identities(self) -> dict[str, Any]:
         return {
             "model_id": self.model.model_id,

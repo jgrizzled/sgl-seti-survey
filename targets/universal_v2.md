@@ -1,7 +1,7 @@
 ---
 title: "Universal SGL target list — v2"
-date: 2026-08-20
-status: "76 systems / 95 component tracks; 39 systems not yet searched in WISE"
+date: 2026-08-21
+status: "76 systems / 95 component tracks; 0 systems not yet searched in WISE"
 ---
 
 # Universal target list v2
@@ -42,54 +42,54 @@ Desirability is the network's presumed taste and is distinct from the solution g
 | Kapteyn's Star | 3.93 | 1 | single | M1VIp | 3.1 | quiet | clean | 0 / 1 / 1 | 0.65 | clean | done | Engineering Backbone, Historical Neighbor, Science Interest (tier 2) |
 | Lacaille 8760 | 3.97 | 1 | single | M1V | 1.7 | active | clean | 0 / 0 / 0 | — | clean | done | Historical Neighbor |
 | GJ 12724 | 4.00 | 1 | single | — | 6.8 | unknown | clean ruwe only | 0 / 1 / 2 | — | clean | done | Historical Neighbor |
-| GJ 11547 | 4.04 | 1 | single | — | 6.9 | unknown | clean ruwe only | 0 / 1 / 2 | — | clean | queue | Historical Neighbor |
+| GJ 11547 | 4.04 | 1 | single | — | 6.9 | unknown | clean ruwe only | 0 / 1 / 2 | — | clean | done | Historical Neighbor |
 | Wolf 1061 | 4.31 | 1 | single | M3V | 2.9 | quiet | clean | 0 / 0 / 0 | 0.63 | clean | done | Engineering Backbone, Historical Neighbor, Science Interest (tier 2) |
 | van Maanen's Star | 4.31 | 1 | single | DZ7.5 | 3840.0 | unknown | clean | 0 / 0 / 1 | — | clean | done | Compact Lens Wildcard |
-| GJ 687 | 4.55 | 1 | single | M3.0V | 2.4 | quiet | clean | 0 / 1 / 1 | 0.64 | clean | queue | Engineering Backbone, Science Interest (tier 2) |
-| GJ 674 | 4.55 | 1 | single | M3V | 2.6 | active | clean | 0 / 0 / 0 | — | clean | queue | Science Interest (tier 2) |
+| GJ 687 | 4.55 | 1 | single | M3.0V | 2.4 | quiet | clean | 0 / 1 / 1 | 0.64 | clean | done | Engineering Backbone, Science Interest (tier 2) |
+| GJ 674 | 4.55 | 1 | single | M3V | 2.6 | active | clean | 0 / 0 / 0 | — | clean | done | Science Interest (tier 2) |
 | LP 145-141 (WD) | 4.64 | 1 | single | DQ | 3840.0 | unknown | clean | 0 / 1 / 1 | — | clean | done | Compact Lens Wildcard |
-| GJ 876 | 4.67 | 1 | single | M3.5V | 2.7 | quiet | clean | 0 / 0 / 0 | 0.63 | clean | queue | Engineering Backbone, Science Interest |
-| GJ 1002 | 4.85 | 1 | single | — | 5.7 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Science Interest |
-| GJ 832 | 4.97 | 1 | single | M2/3V | 2.2 | quiet | accel detected | 0 / 0 / 0 | — | clean | queue | Science Interest (tier 2) |
-| GJ 682 | 5.01 | 1 | single | M3.5 | 3.1 | quiet | clean | 0 / 0 / 0 | 0.58 | clean | queue | Science Interest (tier 2) |
-| LHS 1723 | 5.37 | 1 | single | — | 4.2 | active | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Science Interest |
-| GJ 526 | 5.43 | 1 | single | M2V | 2.0 | quiet | clean | 0 / 0 / 0 | 0.64 | clean | queue | Engineering Backbone |
-| GJ 251 | 5.58 | 1 | single | M3V | 2.6 | quiet | clean | 0 / 0 / 0 | 0.61 | clean | queue | Engineering Backbone, Science Interest |
-| GJ 229 AB | 5.76 | 2 | close | M1V | 1.8 | active | accel detected | 0 / 0 / 0 | — | orbit_needed | queue | Science Interest (tier 2) |
-| sigma Dra | 5.76 | 1 | single | K0V | 1.2 | quiet | clean | 0 / 0 / 0 | 0.64 | clean | queue | Engineering Backbone |
+| GJ 876 | 4.67 | 1 | single | M3.5V | 2.7 | quiet | clean | 0 / 0 / 0 | 0.63 | clean | done | Engineering Backbone, Science Interest |
+| GJ 1002 | 4.85 | 1 | single | — | 5.7 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Science Interest |
+| GJ 832 | 4.97 | 1 | single | M2/3V | 2.2 | quiet | accel detected | 0 / 0 / 0 | — | clean | done | Science Interest (tier 2) |
+| GJ 682 | 5.01 | 1 | single | M3.5 | 3.1 | quiet | clean | 0 / 0 / 0 | 0.58 | clean | done | Science Interest (tier 2) |
+| LHS 1723 | 5.37 | 1 | single | — | 4.2 | active | clean ruwe only | 0 / 0 / 0 | — | clean | done | Science Interest |
+| GJ 526 | 5.43 | 1 | single | M2V | 2.0 | quiet | clean | 0 / 0 / 0 | 0.64 | clean | done | Engineering Backbone |
+| GJ 251 | 5.58 | 1 | single | M3V | 2.6 | quiet | clean | 0 / 0 / 0 | 0.61 | clean | done | Engineering Backbone, Science Interest |
+| GJ 229 AB | 5.76 | 2 | close | M1V | 1.8 | active | accel detected | 0 / 0 / 0 | — | orbit_needed | done | Science Interest (tier 2) |
+| sigma Dra | 5.76 | 1 | single | K0V | 1.2 | quiet | clean | 0 / 0 / 0 | 0.64 | clean | done | Engineering Backbone |
 | GJ 908 | 5.91 | 1 | single | M1VFe-1 | 2.4 | quiet | clean | 0 / 0 / 0 | 0.62 | clean | done | Engineering Backbone, Historical Neighbor |
-| GJ 588 | 5.92 | 1 | single | M2.5V | 2.2 | quiet | clean | 0 / 0 / 0 | 0.61 | clean | queue | Engineering Backbone |
+| GJ 588 | 5.92 | 1 | single | M2.5V | 2.2 | quiet | clean | 0 / 0 / 0 | 0.61 | clean | done | Engineering Backbone |
 | GJ 783 | 6.01 | 2 | close | K2.5V | 1.5 | quiet | clean | 0 / 0 / 0 | — | orbit_needed | done | Historical Neighbor |
-| 82 Eri | 6.04 | 1 | single | G6V | 1.1 | quiet | clean | 0 / 0 / 0 | 0.64 | clean | queue | Engineering Backbone, Historical Neighbor, Science Interest |
+| 82 Eri | 6.04 | 1 | single | G6V | 1.1 | quiet | clean | 0 / 0 / 0 | 0.64 | clean | done | Engineering Backbone, Historical Neighbor, Science Interest |
 | GJ 784 | 6.16 | 1 | single | M0V | 1.8 | quiet | clean | 0 / 0 / 0 | 0.57 | clean | done | Historical Neighbor |
 | GJ 1221 | 6.21 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
-| GJ 581 | 6.30 | 1 | single | M3V | 2.9 | quiet | clean | 0 / 0 / 0 | 0.54 | clean | queue | Science Interest |
-| GJ 338 AB | 6.33 | 2 | intermediate | K7V | 1.6 | active | accel detected | 0 / 0 / 0 | — | clean | queue | Science Interest (tier 2) |
+| GJ 581 | 6.30 | 1 | single | M3V | 2.9 | quiet | clean | 0 / 0 / 0 | 0.54 | clean | done | Science Interest |
+| GJ 338 AB | 6.33 | 2 | intermediate | K7V | 1.6 | active | accel detected | 0 / 0 / 0 | — | clean | done | Science Interest (tier 2) |
 | GJ 9193 | 6.44 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
-| GJ 625 | 6.48 | 1 | single | M1.5V | 2.8 | quiet | clean | 0 / 0 / 0 | 0.60 | clean | queue | Engineering Backbone, Science Interest (tier 2) |
-| HD 219134 | 6.54 | 1 | single | K3V | 1.4 | quiet | clean | 0 / 0 / 0 | 0.61 | clean | queue | Engineering Backbone, Science Interest |
+| GJ 625 | 6.48 | 1 | single | M1.5V | 2.8 | quiet | clean | 0 / 0 / 0 | 0.60 | clean | done | Engineering Backbone, Science Interest (tier 2) |
+| HD 219134 | 6.54 | 1 | single | K3V | 1.4 | quiet | clean | 0 / 0 / 0 | 0.61 | clean | done | Engineering Backbone, Science Interest |
 | GJ 11068 | 6.80 | 1 | single | — | — | unknown | unknown | 0 / 0 / 0 | — | hard | done | Historical Neighbor |
-| LTT 1445 ABC | 6.86 | 3 | close | M3.5+M3.0 | 3.3 | active | accel detected | 0 / 0 / 0 | — | orbit_needed | queue | Science Interest |
-| GJ 667 ABC | 7.24 | 3 | close | — | 2.8 | active | clean ruwe only | 0 / 0 / 0 | — | orbit_needed | queue | Science Interest |
-| GJ 514 | 7.62 | 1 | single | M1.0Ve | 2.0 | quiet | clean | 0 / 0 / 0 | 0.52 | clean | queue | Science Interest (tier 2) |
-| Fomalhaut | 7.70 | 1 | single | — | — | unknown | unknown | 0 / 0 / 0 | — | clean | queue | Science Interest |
-| Wolf 437 | 8.08 | 1 | single | M3.5Ve | 2.9 | active | clean | 0 / 0 / 0 | — | clean | queue | Science Interest |
-| GJ 1087 (WD) | 8.11 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| GJ 293 (WD) | 8.17 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| GJ 66 | 8.19 | 2 | close | — | 1.4 | quiet | clean ruwe only | 0 / 0 / 0 | — | orbit_needed | queue | Historical Neighbor |
-| GJ 915 | 8.33 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| GJ 518 (WD) | 8.35 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| GJ 13157 | 8.46 | 1 | single | — | 3840.0 | active | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| GJ 318 | 8.51 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| GJ 1276 | 8.53 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| 61 Vir | 8.54 | 1 | single | G6.5V | 1.0 | quiet | clean | 0 / 0 / 0 | 0.53 | clean | queue | Science Interest |
-| GJ 2066 | 8.94 | 1 | single | M2.0V | 2.2 | quiet | clean | 0 / 0 / 0 | — | clean | queue | Historical Neighbor |
-| GJ 2012 | 9.09 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| GJ 3306 | 9.40 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
-| GJ 367 | 9.42 | 1 | single | M1.0 | 2.2 | quiet | clean | 0 / 0 / 0 | — | clean | queue | Historical Neighbor, Science Interest |
-| GJ 3512 | 9.49 | 1 | single | — | 5.2 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Science Interest |
-| Wolf 1069 | 9.57 | 1 | single | — | 4.3 | quiet | accel detected | 0 / 0 / 0 | — | clean | queue | Science Interest |
-| GJ 3112 | 9.71 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | queue | Compact Lens Wildcard |
+| LTT 1445 ABC | 6.86 | 3 | close | M3.5+M3.0 | 3.3 | active | accel detected | 0 / 0 / 0 | — | orbit_needed | done | Science Interest |
+| GJ 667 ABC | 7.24 | 3 | close | — | 2.8 | active | clean ruwe only | 0 / 0 / 0 | — | orbit_needed | done | Science Interest |
+| GJ 514 | 7.62 | 1 | single | M1.0Ve | 2.0 | quiet | clean | 0 / 0 / 0 | 0.52 | clean | done | Science Interest (tier 2) |
+| Fomalhaut | 7.70 | 1 | single | — | — | unknown | unknown | 0 / 0 / 0 | — | clean | done | Science Interest |
+| Wolf 437 | 8.08 | 1 | single | M3.5Ve | 2.9 | active | clean | 0 / 0 / 0 | — | clean | done | Science Interest |
+| GJ 1087 (WD) | 8.11 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| GJ 293 (WD) | 8.17 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| GJ 66 | 8.19 | 2 | close | — | 1.4 | quiet | clean ruwe only | 0 / 0 / 0 | — | orbit_needed | done | Historical Neighbor |
+| GJ 915 | 8.33 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| GJ 518 (WD) | 8.35 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| GJ 13157 | 8.46 | 1 | single | — | 3840.0 | active | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| GJ 318 | 8.51 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| GJ 1276 | 8.53 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| 61 Vir | 8.54 | 1 | single | G6.5V | 1.0 | quiet | clean | 0 / 0 / 0 | 0.53 | clean | done | Science Interest |
+| GJ 2066 | 8.94 | 1 | single | M2.0V | 2.2 | quiet | clean | 0 / 0 / 0 | — | clean | done | Historical Neighbor |
+| GJ 2012 | 9.09 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| GJ 3306 | 9.40 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
+| GJ 367 | 9.42 | 1 | single | M1.0 | 2.2 | quiet | clean | 0 / 0 / 0 | — | clean | done | Historical Neighbor, Science Interest |
+| GJ 3512 | 9.49 | 1 | single | — | 5.2 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Science Interest |
+| Wolf 1069 | 9.57 | 1 | single | — | 4.3 | quiet | accel detected | 0 / 0 / 0 | — | clean | done | Science Interest |
+| GJ 3112 | 9.71 | 1 | single | — | 3840.0 | unknown | clean ruwe only | 0 / 0 / 0 | — | clean | done | Compact Lens Wildcard |
 
 ## Science-interest rationale
 

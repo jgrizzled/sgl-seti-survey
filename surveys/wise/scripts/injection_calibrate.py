@@ -43,7 +43,7 @@ CAL_DIR = REPO / "runs" / "wise" / "calib_v1"
 TENSOR_DIR = CAL_DIR / "tensors"
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "wise" / "hypotheses.md"
-HYPOTHESIS_VERSION = "wise-hypotheses-v1.4"
+HYPOTHESIS_VERSION = "wise-hypotheses-v1.5"
 
 ZP_REF = 20.0
 MIN_GOOD_FRAC = 0.7
@@ -96,6 +96,11 @@ def main() -> None:
 
     config = {
         "pipeline_id": "wise-injection-calibration",
+        # v0.2.1 (2026-08-21): sample tensors rebuilt with the unit-sum
+        # (total-flux) matched-filter kernel; m90 magnitudes are on the
+        # corrected scale (erratum_flux_scale_2026-08-20.md). S, thresholds
+        # and verdicts are invariant.
+        "photometry_convention": "total-flux (unit-sum kernel), sglsurvey.photometry 2026-08-20",
         "threshold_rule": "max of 8 offset-control grid maxima",
         "weight_cap": f"per-cell epoch weights capped at {WEIGHT_CAP_FACTOR}x median positive weight (effective-epoch floor)",
         "n_repeats": N_REPEATS, "duties": DUTIES, "seed": SEED,
@@ -204,7 +209,7 @@ def main() -> None:
             "hypothesis": HYPOTHESIS_VERSION,
             "tensors": sorted(p.name for p in tensor_files)}),
         pipeline_id="wise-injection-calibration",
-        pipeline_version="0.2.0", config=config,
+        pipeline_version="0.2.1", config=config,
         observation_set_hash="see-tensor-manifest",
         intersection_set_hash="see-tensor-manifest",
         registry_source_hash=registry.source_hash,

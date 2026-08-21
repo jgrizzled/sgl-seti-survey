@@ -10,7 +10,7 @@ import numpy as np
 
 REPO = Path(__file__).resolve().parents[3]
 CAL = REPO / "runs" / "ztf" / "calib_v1"
-OUT = REPO / "report" / "figures" / "ztf_pilot_v1_m90.svg"
+OUT = REPO / "report" / "figures" / "ztf_survey_v1_m90.svg"
 COLORS = {"ross-128": "#1f77b4", "proxima-cen": "#d62728",
           "eps-ind-a": "#2ca02c"}
 
@@ -38,7 +38,7 @@ def main() -> None:
         out.append(f'<text x="{L-6}" y="{Y(m)+4:.1f}" text-anchor="end">{m}</text>')
     out.append(f'<text x="{(L+W-R)/2:.0f}" y="{H-B+36}" text-anchor="middle">relay distance z [AU]</text>')
     out.append(f'<text transform="translate(16,{(T+H-B)/2:.0f}) rotate(-90)" text-anchor="middle">m90 [AB mag], 90% recovery, duty ≥ 0.5 (fainter ↑)</text>')
-    out.append(f'<text x="{L}" y="{T-18}" font-size="14" font-weight="bold">ZTF pilot v1.0 — injection-recovery depths (asteroid-control corrected)</text>')
+    out.append(f'<text x="{L}" y="{T-18}" font-size="14" font-weight="bold">ZTF survey v1 — m90 vs z (pilot corridors coloured; all others grey)</text>')
     legend_y = T + 10
     for k in sorted(d.files):
         if not k.endswith("__0.5"):
@@ -58,13 +58,16 @@ def main() -> None:
                 segs.append(cur); cur = []
         if cur:
             segs.append(cur)
-        dash = ' stroke-dasharray="6,4"' if b == "zr" else ""
+        dash = ' stroke-dasharray="6,4"' if b == "zr" else (' stroke-dasharray="2,3"' if b == "zi" else "")
         op = "1.0" if r == "rx" else "0.45"
+        col = COLORS.get(e, "#999999")
+        sw = "2" if e in COLORS else "1"
         for sg in segs:
-            out.append(f'<polyline points="{" ".join(sg)}" fill="none" stroke="{COLORS[e]}" stroke-width="2" opacity="{op}"{dash}/>')
-        out.append(f'<line x1="{W-R-150}" y1="{legend_y}" x2="{W-R-120}" y2="{legend_y}" stroke="{COLORS[e]}" stroke-width="2" opacity="{op}"{dash}/>')
-        out.append(f'<text x="{W-R-114}" y="{legend_y+4}">{e} {r} {b[1]}</text>')
-        legend_y += 16
+            out.append(f'<polyline points="{" ".join(sg)}" fill="none" stroke="{col}" stroke-width="{sw}" opacity="{op if e in COLORS else 0.35}"{dash}/>')
+        if e in COLORS:
+            out.append(f'<line x1="{W-R-150}" y1="{legend_y}" x2="{W-R-120}" y2="{legend_y}" stroke="{col}" stroke-width="2" opacity="{op}"{dash}/>')
+            out.append(f'<text x="{W-R-114}" y="{legend_y+4}">{e} {r} {b[1]}</text>')
+            legend_y += 16
     out.append("</svg>")
     OUT.write_text("\n".join(out))
     print(f"wrote {OUT}")

@@ -1,0 +1,2087 @@
+{
+ "dec_limit": -30.0,
+ "rows": [
+  {
+   "corridor": "barnard",
+   "endpoints": [
+    "barnard-star"
+   ],
+   "antipode_ra_deg": 89.3948,
+   "antipode_dec_deg": -4.7308,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 98,
+   "warps_by_filter": {
+    "g": 15,
+    "i": 31,
+    "r": 15,
+    "y": 20,
+    "z": 17
+   },
+   "skycell": "1165.083",
+   "epoch_span_mjd": [
+    55242.3,
+    57030.4
+   ],
+   "phase_split": [
+    94,
+    4
+   ],
+   "minor_phase_frac": 0.041,
+   "calibrators_r_per_0p05deg": 87,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "ross154",
+   "endpoints": [
+    "ross-154"
+   ],
+   "antipode_ra_deg": 102.4013,
+   "antipode_dec_deg": 23.8416,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 110,
+   "warps_by_filter": {
+    "g": 14,
+    "i": 21,
+    "r": 30,
+    "y": 24,
+    "z": 21
+   },
+   "skycell": "1788.096",
+   "epoch_span_mjd": [
+    55173.6,
+    56994.7
+   ],
+   "phase_split": [
+    106,
+    4
+   ],
+   "minor_phase_frac": 0.036,
+   "calibrators_r_per_0p05deg": 143,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "lalande",
+   "endpoints": [
+    "lalande-21185"
+   ],
+   "antipode_ra_deg": 345.8415,
+   "antipode_dec_deg": -35.9242,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "alphacen",
+   "endpoints": [
+    "alpha-cen-a",
+    "alpha-cen-b"
+   ],
+   "antipode_ra_deg": 39.798,
+   "antipode_dec_deg": 60.7982,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 102,
+   "warps_by_filter": {
+    "g": 15,
+    "i": 22,
+    "r": 22,
+    "y": 21,
+    "z": 22
+   },
+   "skycell": "2459.025",
+   "epoch_span_mjd": [
+    55429.6,
+    56884.6
+   ],
+   "phase_split": [
+    101,
+    1
+   ],
+   "minor_phase_frac": 0.01,
+   "calibrators_r_per_0p05deg": 346,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "sirius",
+   "endpoints": [
+    "sirius-a",
+    "sirius-b"
+   ],
+   "antipode_ra_deg": 281.3388,
+   "antipode_dec_deg": 16.7133,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 141,
+   "warps_by_filter": {
+    "g": 23,
+    "i": 25,
+    "r": 20,
+    "y": 40,
+    "z": 33
+   },
+   "skycell": "1745.012",
+   "epoch_span_mjd": [
+    55000.5,
+    56820.6
+   ],
+   "phase_split": [
+    129,
+    12
+   ],
+   "minor_phase_frac": 0.085,
+   "calibrators_r_per_0p05deg": 616,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "proxima",
+   "endpoints": [
+    "proxima-cen"
+   ],
+   "antipode_ra_deg": 37.3202,
+   "antipode_dec_deg": 62.6405,
+   "ps1_visible": true,
+   "pilot": true,
+   "warps": 91,
+   "warps_by_filter": {
+    "g": 14,
+    "i": 19,
+    "r": 18,
+    "y": 24,
+    "z": 16
+   },
+   "skycell": "2459.068",
+   "epoch_span_mjd": [
+    55076.6,
+    56884.6
+   ],
+   "phase_split": [
+    91,
+    0
+   ],
+   "minor_phase_frac": 0.0,
+   "calibrators_r_per_0p05deg": 331,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "wolf359",
+   "endpoints": [
+    "wolf-359"
+   ],
+   "antipode_ra_deg": 344.1171,
+   "antipode_dec_deg": -7.0015,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 125,
+   "warps_by_filter": {
+    "g": 24,
+    "i": 36,
+    "r": 29,
+    "y": 16,
+    "z": 20
+   },
+   "skycell": "1228.024",
+   "epoch_span_mjd": [
+    55014.6,
+    56941.4
+   ],
+   "phase_split": [
+    125,
+    0
+   ],
+   "minor_phase_frac": 0.0,
+   "calibrators_r_per_0p05deg": 29,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "ross248",
+   "endpoints": [
+    "ross-248"
+   ],
+   "antipode_ra_deg": 175.4816,
+   "antipode_dec_deg": -44.2119,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj65",
+   "endpoints": [
+    "gj65-a",
+    "gj65-b"
+   ],
+   "antipode_ra_deg": 204.7969,
+   "antipode_dec_deg": 17.9611,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 83,
+   "warps_by_filter": {
+    "g": 13,
+    "i": 15,
+    "r": 20,
+    "y": 18,
+    "z": 17
+   },
+   "skycell": "1727.045",
+   "epoch_span_mjd": [
+    54991.4,
+    56783.3
+   ],
+   "phase_split": [
+    79,
+    4
+   ],
+   "minor_phase_frac": 0.048,
+   "calibrators_r_per_0p05deg": 28,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "ross128",
+   "endpoints": [
+    "ross-128"
+   ],
+   "antipode_ra_deg": 356.9344,
+   "antipode_dec_deg": -0.8021,
+   "ps1_visible": true,
+   "pilot": true,
+   "warps": 118,
+   "warps_by_filter": {
+    "g": 20,
+    "i": 30,
+    "r": 24,
+    "y": 22,
+    "z": 22
+   },
+   "skycell": "1321.072",
+   "epoch_span_mjd": [
+    55086.5,
+    56959.2
+   ],
+   "phase_split": [
+    110,
+    8
+   ],
+   "minor_phase_frac": 0.068,
+   "calibrators_r_per_0p05deg": 13,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "epsind",
+   "endpoints": [
+    "eps-ind-a",
+    "eps-ind-b"
+   ],
+   "antipode_ra_deg": 150.8249,
+   "antipode_dec_deg": 56.8351,
+   "ps1_visible": true,
+   "pilot": true,
+   "warps": 132,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 50,
+    "r": 21,
+    "y": 24,
+    "z": 20
+   },
+   "skycell": "2425.025",
+   "epoch_span_mjd": [
+    55230.5,
+    57060.5
+   ],
+   "phase_split": [
+    121,
+    11
+   ],
+   "minor_phase_frac": 0.083,
+   "calibrators_r_per_0p05deg": 21,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "taucet",
+   "endpoints": [
+    "tau-cet"
+   ],
+   "antipode_ra_deg": 206.041,
+   "antipode_dec_deg": 15.945,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 97,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 20,
+    "r": 16,
+    "y": 22,
+    "z": 22
+   },
+   "skycell": "1640.091",
+   "epoch_span_mjd": [
+    55000.4,
+    56757.5
+   ],
+   "phase_split": [
+    87,
+    10
+   ],
+   "minor_phase_frac": 0.103,
+   "calibrators_r_per_0p05deg": 28,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj54",
+   "endpoints": [
+    "gj-54"
+   ],
+   "antipode_ra_deg": 198.1551,
+   "antipode_dec_deg": 17.0091,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 92,
+   "warps_by_filter": {
+    "g": 18,
+    "i": 22,
+    "r": 19,
+    "y": 16,
+    "z": 17
+   },
+   "skycell": "1725.021",
+   "epoch_span_mjd": [
+    54999.4,
+    56783.3
+   ],
+   "phase_split": [
+    87,
+    5
+   ],
+   "minor_phase_frac": 0.054,
+   "calibrators_r_per_0p05deg": 16,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "teegarden",
+   "endpoints": [
+    "teegarden"
+   ],
+   "antipode_ra_deg": 223.3089,
+   "antipode_dec_deg": -16.8812,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 86,
+   "warps_by_filter": {
+    "g": 12,
+    "i": 17,
+    "r": 13,
+    "y": 22,
+    "z": 22
+   },
+   "skycell": "0933.071",
+   "epoch_span_mjd": [
+    55240.6,
+    56812.3
+   ],
+   "phase_split": [
+    80,
+    6
+   ],
+   "minor_phase_frac": 0.07,
+   "calibrators_r_per_0p05deg": 62,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "lacaille8760",
+   "endpoints": [
+    "lacaille-8760"
+   ],
+   "antipode_ra_deg": 139.2595,
+   "antipode_dec_deg": 38.8974,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 173,
+   "warps_by_filter": {
+    "g": 31,
+    "i": 47,
+    "r": 30,
+    "y": 36,
+    "z": 29
+   },
+   "skycell": "2113.076",
+   "epoch_span_mjd": [
+    55248.2,
+    57049.5
+   ],
+   "phase_split": [
+    161,
+    12
+   ],
+   "minor_phase_frac": 0.069,
+   "calibrators_r_per_0p05deg": 25,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "vanmaanen",
+   "endpoints": [
+    "van-maanen"
+   ],
+   "antipode_ra_deg": 192.3125,
+   "antipode_dec_deg": -5.3868,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 81,
+   "warps_by_filter": {
+    "g": 15,
+    "i": 12,
+    "r": 15,
+    "y": 20,
+    "z": 19
+   },
+   "skycell": "1191.069",
+   "epoch_span_mjd": [
+    54997.3,
+    56667.7
+   ],
+   "phase_split": [
+    78,
+    3
+   ],
+   "minor_phase_frac": 0.037,
+   "calibrators_r_per_0p05deg": 34,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj908",
+   "endpoints": [
+    "gj-908"
+   ],
+   "antipode_ra_deg": 177.3085,
+   "antipode_dec_deg": -2.4027,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 82,
+   "warps_by_filter": {
+    "g": 11,
+    "i": 15,
+    "r": 10,
+    "y": 23,
+    "z": 23
+   },
+   "skycell": "1276.031",
+   "epoch_span_mjd": [
+    55213.6,
+    57049.7
+   ],
+   "phase_split": [
+    79,
+    3
+   ],
+   "minor_phase_frac": 0.037,
+   "calibrators_r_per_0p05deg": 36,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj784",
+   "endpoints": [
+    "gj-784"
+   ],
+   "antipode_ra_deg": 123.4162,
+   "antipode_dec_deg": 45.1874,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 127,
+   "warps_by_filter": {
+    "g": 24,
+    "i": 39,
+    "r": 19,
+    "y": 21,
+    "z": 24
+   },
+   "skycell": "2247.025",
+   "epoch_span_mjd": [
+    55232.4,
+    57060.4
+   ],
+   "phase_split": [
+    117,
+    10
+   ],
+   "minor_phase_frac": 0.079,
+   "calibrators_r_per_0p05deg": 26,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "epseri",
+   "endpoints": [
+    "eps-eri"
+   ],
+   "antipode_ra_deg": 233.2769,
+   "antipode_dec_deg": 9.4604,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 94,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 26,
+    "r": 16,
+    "y": 20,
+    "z": 16
+   },
+   "skycell": "1559.038",
+   "epoch_span_mjd": [
+    55239.6,
+    56897.2
+   ],
+   "phase_split": [
+    83,
+    11
+   ],
+   "minor_phase_frac": 0.117,
+   "calibrators_r_per_0p05deg": 56,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "lacaille9352",
+   "endpoints": [
+    "lacaille-9352"
+   ],
+   "antipode_ra_deg": 166.4857,
+   "antipode_dec_deg": 35.8784,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 156,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 69,
+    "r": 24,
+    "y": 25,
+    "z": 22
+   },
+   "skycell": "2044.093",
+   "epoch_span_mjd": [
+    55259.6,
+    57054.6
+   ],
+   "phase_split": [
+    140,
+    16
+   ],
+   "minor_phase_frac": 0.103,
+   "calibrators_r_per_0p05deg": 21,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj1061",
+   "endpoints": [
+    "gj-1061"
+   ],
+   "antipode_ra_deg": 234.0685,
+   "antipode_dec_deg": 44.5314,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 109,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 29,
+    "r": 24,
+    "y": 20,
+    "z": 20
+   },
+   "skycell": "2267.018",
+   "epoch_span_mjd": [
+    55248.7,
+    56904.2
+   ],
+   "phase_split": [
+    99,
+    10
+   ],
+   "minor_phase_frac": 0.092,
+   "calibrators_r_per_0p05deg": 32,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj12724",
+   "endpoints": [
+    "gj-12724"
+   ],
+   "antipode_ra_deg": 101.1726,
+   "antipode_dec_deg": 63.9745,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 112,
+   "warps_by_filter": {
+    "g": 18,
+    "i": 41,
+    "r": 18,
+    "y": 18,
+    "z": 17
+   },
+   "skycell": "2510.005",
+   "epoch_span_mjd": [
+    55246.2,
+    57056.4
+   ],
+   "phase_split": [
+    112,
+    0
+   ],
+   "minor_phase_frac": 0.0,
+   "calibrators_r_per_0p05deg": 57,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "wolf1061",
+   "endpoints": [
+    "wolf-1061"
+   ],
+   "antipode_ra_deg": 67.5213,
+   "antipode_dec_deg": 12.6608,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 111,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 24,
+    "r": 30,
+    "y": 21,
+    "z": 19
+   },
+   "skycell": "1607.019",
+   "epoch_span_mjd": [
+    55163.5,
+    57006.5
+   ],
+   "phase_split": [
+    111,
+    0
+   ],
+   "minor_phase_frac": 0.0,
+   "calibrators_r_per_0p05deg": 45,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "cyg61",
+   "endpoints": [
+    "61-cyg-a",
+    "61-cyg-b"
+   ],
+   "antipode_ra_deg": 136.7,
+   "antipode_dec_deg": -38.7893,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "struve2398",
+   "endpoints": [
+    "struve-2398-a",
+    "struve-2398-b"
+   ],
+   "antipode_ra_deg": 100.5823,
+   "antipode_dec_deg": -59.6509,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "grb34",
+   "endpoints": [
+    "groombridge-34-a",
+    "groombridge-34-b"
+   ],
+   "antipode_ra_deg": 184.6226,
+   "antipode_dec_deg": -44.0634,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj1111",
+   "endpoints": [
+    "gj-1111"
+   ],
+   "antipode_ra_deg": 307.4959,
+   "antipode_dec_deg": -26.7593,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 127,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 50,
+    "r": 21,
+    "y": 17,
+    "z": 22
+   },
+   "skycell": "0784.034",
+   "epoch_span_mjd": [
+    55090.3,
+    56938.3
+   ],
+   "phase_split": [
+    123,
+    4
+   ],
+   "minor_phase_frac": 0.031,
+   "calibrators_r_per_0p05deg": 84,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "luyten",
+   "endpoints": [
+    "luyten-star"
+   ],
+   "antipode_ra_deg": 291.9025,
+   "antipode_dec_deg": -5.2135,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 93,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 21,
+    "r": 26,
+    "y": 13,
+    "z": 16
+   },
+   "skycell": "1215.063",
+   "epoch_span_mjd": [
+    55010.5,
+    56788.6
+   ],
+   "phase_split": [
+    86,
+    7
+   ],
+   "minor_phase_frac": 0.075,
+   "calibrators_r_per_0p05deg": 651,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "kapteyn",
+   "endpoints": [
+    "kapteyn-star"
+   ],
+   "antipode_ra_deg": 258.0266,
+   "antipode_dec_deg": 45.0399,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 96,
+   "warps_by_filter": {
+    "g": 14,
+    "i": 32,
+    "r": 18,
+    "y": 18,
+    "z": 14
+   },
+   "skycell": "2271.026",
+   "epoch_span_mjd": [
+    55276.6,
+    56934.2
+   ],
+   "phase_split": [
+    95,
+    1
+   ],
+   "minor_phase_frac": 0.01,
+   "calibrators_r_per_0p05deg": 54,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "lp145141",
+   "endpoints": [
+    "lp-145-141"
+   ],
+   "antipode_ra_deg": 356.4446,
+   "antipode_dec_deg": 64.7923,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 89,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 22,
+    "r": 18,
+    "y": 17,
+    "z": 16
+   },
+   "skycell": "2499.028",
+   "epoch_span_mjd": [
+    55375.5,
+    56638.3
+   ],
+   "phase_split": [
+    88,
+    1
+   ],
+   "minor_phase_frac": 0.011,
+   "calibrators_r_per_0p05deg": 356,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj1221",
+   "endpoints": [
+    "gj-1221"
+   ],
+   "antipode_ra_deg": 86.8539,
+   "antipode_dec_deg": -70.8836,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj9193",
+   "endpoints": [
+    "gj-9193"
+   ],
+   "antipode_ra_deg": 268.846,
+   "antipode_dec_deg": 4.1736,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 131,
+   "warps_by_filter": {
+    "g": 21,
+    "i": 35,
+    "r": 25,
+    "y": 24,
+    "z": 26
+   },
+   "skycell": "1478.000",
+   "epoch_span_mjd": [
+    55284.5,
+    56825.5
+   ],
+   "phase_split": [
+    119,
+    12
+   ],
+   "minor_phase_frac": 0.092,
+   "calibrators_r_per_0p05deg": 435,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj783",
+   "endpoints": [
+    "gj-783"
+   ],
+   "antipode_ra_deg": 122.7488,
+   "antipode_dec_deg": 36.1246,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 128,
+   "warps_by_filter": {
+    "g": 14,
+    "i": 51,
+    "r": 19,
+    "y": 19,
+    "z": 25
+   },
+   "skycell": "2110.009",
+   "epoch_span_mjd": [
+    55233.4,
+    57051.4
+   ],
+   "phase_split": [
+    120,
+    8
+   ],
+   "minor_phase_frac": 0.062,
+   "calibrators_r_per_0p05deg": 27,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj11068",
+   "endpoints": [
+    "gj-11068"
+   ],
+   "antipode_ra_deg": 290.0631,
+   "antipode_dec_deg": 8.7749,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 129,
+   "warps_by_filter": {
+    "g": 25,
+    "i": 27,
+    "r": 27,
+    "y": 30,
+    "z": 20
+   },
+   "skycell": "1573.017",
+   "epoch_span_mjd": [
+    55002.6,
+    56823.6
+   ],
+   "phase_split": [
+    113,
+    16
+   ],
+   "minor_phase_frac": 0.124,
+   "calibrators_r_per_0p05deg": 1203,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "wise0855",
+   "endpoints": [
+    "wise-0855"
+   ],
+   "antipode_ra_deg": 313.8394,
+   "antipode_dec_deg": 7.2383,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 106,
+   "warps_by_filter": {
+    "g": 15,
+    "i": 37,
+    "r": 17,
+    "y": 20,
+    "z": 17
+   },
+   "skycell": "1490.089",
+   "epoch_span_mjd": [
+    55028.5,
+    56942.3
+   ],
+   "phase_split": [
+    100,
+    6
+   ],
+   "minor_phase_frac": 0.057,
+   "calibrators_r_per_0p05deg": 127,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "ezaqr",
+   "endpoints": [
+    "ez-aqr"
+   ],
+   "antipode_ra_deg": 159.6338,
+   "antipode_dec_deg": 15.3038,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 134,
+   "warps_by_filter": {
+    "g": 22,
+    "i": 32,
+    "r": 28,
+    "y": 23,
+    "z": 29
+   },
+   "skycell": "1629.084",
+   "epoch_span_mjd": [
+    55195.5,
+    57054.5
+   ],
+   "phase_split": [
+    123,
+    11
+   ],
+   "minor_phase_frac": 0.082,
+   "calibrators_r_per_0p05deg": 29,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "luhman16",
+   "endpoints": [
+    "luhman16-a",
+    "luhman16-b"
+   ],
+   "antipode_ra_deg": 342.3384,
+   "antipode_dec_deg": 53.2744,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 122,
+   "warps_by_filter": {
+    "g": 19,
+    "i": 27,
+    "r": 27,
+    "y": 25,
+    "z": 24
+   },
+   "skycell": "2401.032",
+   "epoch_span_mjd": [
+    54999.6,
+    56996.3
+   ],
+   "phase_split": [
+    117,
+    5
+   ],
+   "minor_phase_frac": 0.041,
+   "calibrators_r_per_0p05deg": 481,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "procyon",
+   "endpoints": [
+    "procyon-a",
+    "procyon-b"
+   ],
+   "antipode_ra_deg": 294.8704,
+   "antipode_dec_deg": -5.2214,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 132,
+   "warps_by_filter": {
+    "g": 25,
+    "i": 29,
+    "r": 29,
+    "y": 21,
+    "z": 28
+   },
+   "skycell": "1216.066",
+   "epoch_span_mjd": [
+    55004.5,
+    56787.6
+   ],
+   "phase_split": [
+    132,
+    0
+   ],
+   "minor_phase_frac": 0.0,
+   "calibrators_r_per_0p05deg": 483,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj876",
+   "endpoints": [
+    "gj-876"
+   ],
+   "antipode_ra_deg": 163.3124,
+   "antipode_dec_deg": 14.2768,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 101,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 26,
+    "r": 23,
+    "y": 17,
+    "z": 19
+   },
+   "skycell": "1630.055",
+   "epoch_span_mjd": [
+    55203.7,
+    57054.5
+   ],
+   "phase_split": [
+    91,
+    10
+   ],
+   "minor_phase_frac": 0.099,
+   "calibrators_r_per_0p05deg": 23,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj1002",
+   "endpoints": [
+    "gj-1002"
+   ],
+   "antipode_ra_deg": 181.6845,
+   "antipode_dec_deg": 7.5491,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 80,
+   "warps_by_filter": {
+    "g": 12,
+    "i": 11,
+    "r": 19,
+    "y": 18,
+    "z": 20
+   },
+   "skycell": "1457.085",
+   "epoch_span_mjd": [
+    55225.6,
+    56836.3
+   ],
+   "phase_split": [
+    78,
+    2
+   ],
+   "minor_phase_frac": 0.025,
+   "calibrators_r_per_0p05deg": 22,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj832",
+   "endpoints": [
+    "gj-832"
+   ],
+   "antipode_ra_deg": 143.3487,
+   "antipode_dec_deg": 49.0456,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 124,
+   "warps_by_filter": {
+    "g": 19,
+    "i": 39,
+    "r": 20,
+    "y": 21,
+    "z": 25
+   },
+   "skycell": "2313.026",
+   "epoch_span_mjd": [
+    55257.5,
+    57060.5
+   ],
+   "phase_split": [
+    117,
+    7
+   ],
+   "minor_phase_frac": 0.056,
+   "calibrators_r_per_0p05deg": 33,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj526",
+   "endpoints": [
+    "gj-526"
+   ],
+   "antipode_ra_deg": 26.4084,
+   "antipode_dec_deg": -14.8771,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 119,
+   "warps_by_filter": {
+    "g": 20,
+    "i": 33,
+    "r": 19,
+    "y": 24,
+    "z": 23
+   },
+   "skycell": "0972.020",
+   "epoch_span_mjd": [
+    55077.5,
+    56989.4
+   ],
+   "phase_split": [
+    106,
+    13
+   ],
+   "minor_phase_frac": 0.109,
+   "calibrators_r_per_0p05deg": 16,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj581",
+   "endpoints": [
+    "gj-581"
+   ],
+   "antipode_ra_deg": 49.8122,
+   "antipode_dec_deg": 7.7161,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 95,
+   "warps_by_filter": {
+    "g": 14,
+    "i": 21,
+    "r": 19,
+    "y": 19,
+    "z": 22
+   },
+   "skycell": "1424.091",
+   "epoch_span_mjd": [
+    55433.6,
+    57003.5
+   ],
+   "phase_split": [
+    88,
+    7
+   ],
+   "minor_phase_frac": 0.074,
+   "calibrators_r_per_0p05deg": 15,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj514",
+   "endpoints": [
+    "gj-514"
+   ],
+   "antipode_ra_deg": 22.4766,
+   "antipode_dec_deg": -10.3673,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 102,
+   "warps_by_filter": {
+    "g": 13,
+    "i": 36,
+    "r": 20,
+    "y": 19,
+    "z": 14
+   },
+   "skycell": "1060.049",
+   "epoch_span_mjd": [
+    55411.6,
+    56989.4
+   ],
+   "phase_split": [
+    95,
+    7
+   ],
+   "minor_phase_frac": 0.069,
+   "calibrators_r_per_0p05deg": 22,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "fomalhaut",
+   "endpoints": [
+    "fomalhaut"
+   ],
+   "antipode_ra_deg": 164.4033,
+   "antipode_dec_deg": 29.6473,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 111,
+   "warps_by_filter": {
+    "g": 15,
+    "i": 35,
+    "r": 23,
+    "y": 21,
+    "z": 17
+   },
+   "skycell": "1966.044",
+   "epoch_span_mjd": [
+    55243.4,
+    57043.7
+   ],
+   "phase_split": [
+    100,
+    11
+   ],
+   "minor_phase_frac": 0.099,
+   "calibrators_r_per_0p05deg": 22,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "wolf437",
+   "endpoints": [
+    "wolf-437"
+   ],
+   "antipode_ra_deg": 11.9656,
+   "antipode_dec_deg": -9.7434,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 125,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 28,
+    "r": 38,
+    "y": 17,
+    "z": 25
+   },
+   "skycell": "1057.055",
+   "epoch_span_mjd": [
+    55091.6,
+    56971.3
+   ],
+   "phase_split": [
+    117,
+    8
+   ],
+   "minor_phase_frac": 0.064,
+   "calibrators_r_per_0p05deg": 29,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj915",
+   "endpoints": [
+    "gj-915"
+   ],
+   "antipode_ra_deg": 180.5558,
+   "antipode_dec_deg": 43.2031,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 100,
+   "warps_by_filter": {
+    "g": 12,
+    "i": 34,
+    "r": 18,
+    "y": 17,
+    "z": 19
+   },
+   "skycell": "2191.074",
+   "epoch_span_mjd": [
+    54985.3,
+    57054.6
+   ],
+   "phase_split": [
+    91,
+    9
+   ],
+   "minor_phase_frac": 0.09,
+   "calibrators_r_per_0p05deg": 27,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj518",
+   "endpoints": [
+    "gj-518"
+   ],
+   "antipode_ra_deg": 24.0929,
+   "antipode_dec_deg": -3.6751,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 137,
+   "warps_by_filter": {
+    "g": 21,
+    "i": 38,
+    "r": 33,
+    "y": 22,
+    "z": 23
+   },
+   "skycell": "1238.004",
+   "epoch_span_mjd": [
+    55077.5,
+    56971.4
+   ],
+   "phase_split": [
+    128,
+    9
+   ],
+   "minor_phase_frac": 0.066,
+   "calibrators_r_per_0p05deg": 25,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj1276",
+   "endpoints": [
+    "gj-1276"
+   ],
+   "antipode_ra_deg": 163.4706,
+   "antipode_dec_deg": 6.788,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 104,
+   "warps_by_filter": {
+    "g": 15,
+    "i": 31,
+    "r": 16,
+    "y": 20,
+    "z": 22
+   },
+   "skycell": "1452.060",
+   "epoch_span_mjd": [
+    55241.5,
+    57037.7
+   ],
+   "phase_split": [
+    96,
+    8
+   ],
+   "minor_phase_frac": 0.077,
+   "calibrators_r_per_0p05deg": 19,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "61vir",
+   "endpoints": [
+    "61-vir"
+   ],
+   "antipode_ra_deg": 19.5729,
+   "antipode_dec_deg": 18.297,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 89,
+   "warps_by_filter": {
+    "g": 12,
+    "i": 25,
+    "r": 22,
+    "y": 15,
+    "z": 15
+   },
+   "skycell": "1683.058",
+   "epoch_span_mjd": [
+    55404.6,
+    57000.4
+   ],
+   "phase_split": [
+    79,
+    10
+   ],
+   "minor_phase_frac": 0.112,
+   "calibrators_r_per_0p05deg": 24,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj2012",
+   "endpoints": [
+    "gj-2012"
+   ],
+   "antipode_ra_deg": 190.3733,
+   "antipode_dec_deg": 22.3696,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 107,
+   "warps_by_filter": {
+    "g": 19,
+    "i": 24,
+    "r": 17,
+    "y": 27,
+    "z": 20
+   },
+   "skycell": "1808.050",
+   "epoch_span_mjd": [
+    54991.3,
+    56818.3
+   ],
+   "phase_split": [
+    95,
+    12
+   ],
+   "minor_phase_frac": 0.112,
+   "calibrators_r_per_0p05deg": 14,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj11547",
+   "endpoints": [
+    "gj-11547"
+   ],
+   "antipode_ra_deg": 342.0705,
+   "antipode_dec_deg": 39.9025,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 93,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 33,
+    "r": 16,
+    "y": 13,
+    "z": 15
+   },
+   "skycell": "2153.091",
+   "epoch_span_mjd": [
+    54999.6,
+    56937.3
+   ],
+   "phase_split": [
+    85,
+    8
+   ],
+   "minor_phase_frac": 0.086,
+   "calibrators_r_per_0p05deg": 86,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "lhs1723",
+   "endpoints": [
+    "lhs-1723"
+   ],
+   "antipode_ra_deg": 255.5418,
+   "antipode_dec_deg": 6.9466,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 109,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 28,
+    "r": 27,
+    "y": 21,
+    "z": 17
+   },
+   "skycell": "1475.073",
+   "epoch_span_mjd": [
+    55276.6,
+    56923.2
+   ],
+   "phase_split": [
+    95,
+    14
+   ],
+   "minor_phase_frac": 0.128,
+   "calibrators_r_per_0p05deg": 117,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "82eri",
+   "endpoints": [
+    "82-eri"
+   ],
+   "antipode_ra_deg": 230.0577,
+   "antipode_dec_deg": 43.0865,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 106,
+   "warps_by_filter": {
+    "g": 18,
+    "i": 27,
+    "r": 19,
+    "y": 18,
+    "z": 24
+   },
+   "skycell": "2200.070",
+   "epoch_span_mjd": [
+    54985.4,
+    56902.2
+   ],
+   "phase_split": [
+    95,
+    11
+   ],
+   "minor_phase_frac": 0.104,
+   "calibrators_r_per_0p05deg": 27,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj338",
+   "endpoints": [
+    "gj-338-a",
+    "gj-338-b"
+   ],
+   "antipode_ra_deg": 318.6386,
+   "antipode_dec_deg": -52.6509,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj625",
+   "endpoints": [
+    "gj-625"
+   ],
+   "antipode_ra_deg": 66.2661,
+   "antipode_dec_deg": -54.2913,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj293",
+   "endpoints": [
+    "gj-293"
+   ],
+   "antipode_ra_deg": 298.4161,
+   "antipode_dec_deg": 67.7677,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 132,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 51,
+    "r": 23,
+    "y": 24,
+    "z": 17
+   },
+   "skycell": "2531.092",
+   "epoch_span_mjd": [
+    55344.5,
+    56937.2
+   ],
+   "phase_split": [
+    127,
+    5
+   ],
+   "minor_phase_frac": 0.038,
+   "calibrators_r_per_0p05deg": 96,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj3306",
+   "endpoints": [
+    "gj-3306"
+   ],
+   "antipode_ra_deg": 249.5018,
+   "antipode_dec_deg": 8.8245,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 97,
+   "warps_by_filter": {
+    "g": 12,
+    "i": 27,
+    "r": 22,
+    "y": 19,
+    "z": 17
+   },
+   "skycell": "1563.028",
+   "epoch_span_mjd": [
+    54998.5,
+    56924.2
+   ],
+   "phase_split": [
+    84,
+    13
+   ],
+   "minor_phase_frac": 0.134,
+   "calibrators_r_per_0p05deg": 77,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj3112",
+   "endpoints": [
+    "gj-3112"
+   ],
+   "antipode_ra_deg": 205.8257,
+   "antipode_dec_deg": 67.3538,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 104,
+   "warps_by_filter": {
+    "g": 19,
+    "i": 23,
+    "r": 22,
+    "y": 23,
+    "z": 17
+   },
+   "skycell": "2521.082",
+   "epoch_span_mjd": [
+    55343.4,
+    56868.3
+   ],
+   "phase_split": [
+    99,
+    5
+   ],
+   "minor_phase_frac": 0.048,
+   "calibrators_r_per_0p05deg": 26,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj687",
+   "endpoints": [
+    "gj-687"
+   ],
+   "antipode_ra_deg": 83.9572,
+   "antipode_dec_deg": -68.3356,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj674",
+   "endpoints": [
+    "gj-674"
+   ],
+   "antipode_ra_deg": 82.0894,
+   "antipode_dec_deg": 46.8951,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 115,
+   "warps_by_filter": {
+    "g": 23,
+    "i": 30,
+    "r": 15,
+    "y": 23,
+    "z": 24
+   },
+   "skycell": "2240.078",
+   "epoch_span_mjd": [
+    55239.2,
+    57056.3
+   ],
+   "phase_split": [
+    105,
+    10
+   ],
+   "minor_phase_frac": 0.087,
+   "calibrators_r_per_0p05deg": 208,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj682",
+   "endpoints": [
+    "gj-682"
+   ],
+   "antipode_ra_deg": 84.1857,
+   "antipode_dec_deg": 44.3206,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 74,
+   "warps_by_filter": {
+    "g": 13,
+    "i": 24,
+    "r": 11,
+    "y": 11,
+    "z": 15
+   },
+   "skycell": "2240.005",
+   "epoch_span_mjd": [
+    55192.4,
+    57056.3
+   ],
+   "phase_split": [
+    70,
+    4
+   ],
+   "minor_phase_frac": 0.054,
+   "calibrators_r_per_0p05deg": 196,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj251",
+   "endpoints": [
+    "gj-251"
+   ],
+   "antipode_ra_deg": 283.7626,
+   "antipode_dec_deg": -33.2588,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "sigmadra",
+   "endpoints": [
+    "sigma-dra"
+   ],
+   "antipode_ra_deg": 112.958,
+   "antipode_dec_deg": -69.6809,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "hd219134",
+   "endpoints": [
+    "hd-219134"
+   ],
+   "antipode_ra_deg": 168.3233,
+   "antipode_dec_deg": -57.2163,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj1087",
+   "endpoints": [
+    "gj-1087"
+   ],
+   "antipode_ra_deg": 269.1592,
+   "antipode_dec_deg": -5.3623,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 93,
+   "warps_by_filter": {
+    "g": 14,
+    "i": 20,
+    "r": 17,
+    "y": 21,
+    "z": 21
+   },
+   "skycell": "1210.069",
+   "epoch_span_mjd": [
+    55284.6,
+    56758.6
+   ],
+   "phase_split": [
+    87,
+    6
+   ],
+   "minor_phase_frac": 0.065,
+   "calibrators_r_per_0p05deg": 476,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj318",
+   "endpoints": [
+    "gj-318"
+   ],
+   "antipode_ra_deg": 310.4258,
+   "antipode_dec_deg": 32.9145,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 97,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 20,
+    "r": 17,
+    "y": 25,
+    "z": 18
+   },
+   "skycell": "2075.029",
+   "epoch_span_mjd": [
+    55020.6,
+    56820.6
+   ],
+   "phase_split": [
+    88,
+    9
+   ],
+   "minor_phase_frac": 0.093,
+   "calibrators_r_per_0p05deg": 725,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "wolf1069",
+   "endpoints": [
+    "wolf-1069"
+   ],
+   "antipode_ra_deg": 126.4462,
+   "antipode_dec_deg": -58.6074,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj588",
+   "endpoints": [
+    "gj-588"
+   ],
+   "antipode_ra_deg": 52.9865,
+   "antipode_dec_deg": 41.2586,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 109,
+   "warps_by_filter": {
+    "g": 17,
+    "i": 29,
+    "r": 24,
+    "y": 20,
+    "z": 19
+   },
+   "skycell": "2167.034",
+   "epoch_span_mjd": [
+    55078.5,
+    56999.3
+   ],
+   "phase_split": [
+    101,
+    8
+   ],
+   "minor_phase_frac": 0.073,
+   "calibrators_r_per_0p05deg": 139,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj3512",
+   "endpoints": [
+    "gj-3512"
+   ],
+   "antipode_ra_deg": 310.4064,
+   "antipode_dec_deg": -59.4604,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj13157",
+   "endpoints": [
+    "gj-13157"
+   ],
+   "antipode_ra_deg": 147.8691,
+   "antipode_dec_deg": -59.3363,
+   "ps1_visible": false,
+   "pilot": false
+  },
+  {
+   "corridor": "gj2066",
+   "endpoints": [
+    "gj-2066"
+   ],
+   "antipode_ra_deg": 304.0739,
+   "antipode_dec_deg": -1.3044,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 93,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 23,
+    "r": 20,
+    "y": 18,
+    "z": 16
+   },
+   "skycell": "1308.064",
+   "epoch_span_mjd": [
+    54987.6,
+    56957.2
+   ],
+   "phase_split": [
+    90,
+    3
+   ],
+   "minor_phase_frac": 0.032,
+   "calibrators_r_per_0p05deg": 230,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj367",
+   "endpoints": [
+    "gj-367"
+   ],
+   "antipode_ra_deg": 326.1588,
+   "antipode_dec_deg": 45.7423,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 125,
+   "warps_by_filter": {
+    "g": 25,
+    "i": 23,
+    "r": 22,
+    "y": 29,
+    "z": 26
+   },
+   "skycell": "2283.045",
+   "epoch_span_mjd": [
+    55345.5,
+    56599.2
+   ],
+   "phase_split": [
+    119,
+    6
+   ],
+   "minor_phase_frac": 0.048,
+   "calibrators_r_per_0p05deg": 603,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj229",
+   "endpoints": [
+    "gj-229-a"
+   ],
+   "antipode_ra_deg": 272.7019,
+   "antipode_dec_deg": 21.8618,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 92,
+   "warps_by_filter": {
+    "g": 16,
+    "i": 22,
+    "r": 18,
+    "y": 20,
+    "z": 16
+   },
+   "skycell": "1828.048",
+   "epoch_span_mjd": [
+    54993.5,
+    56938.2
+   ],
+   "phase_split": [
+    89,
+    3
+   ],
+   "minor_phase_frac": 0.033,
+   "calibrators_r_per_0p05deg": 201,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "gj667",
+   "endpoints": [
+    "gj-667-c"
+   ],
+   "antipode_ra_deg": 79.6833,
+   "antipode_dec_deg": 34.9931,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 99,
+   "warps_by_filter": {
+    "g": 19,
+    "i": 15,
+    "r": 16,
+    "y": 27,
+    "z": 22
+   },
+   "skycell": "2026.076",
+   "epoch_span_mjd": [
+    55235.3,
+    57011.4
+   ],
+   "phase_split": [
+    91,
+    8
+   ],
+   "minor_phase_frac": 0.081,
+   "calibrators_r_per_0p05deg": 152,
+   "calibrator_flag": "ok"
+  },
+  {
+   "corridor": "ltt1445",
+   "endpoints": [
+    "ltt-1445-a"
+   ],
+   "antipode_ra_deg": 225.5073,
+   "antipode_dec_deg": 16.6017,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 135,
+   "warps_by_filter": {
+    "g": 26,
+    "i": 36,
+    "r": 25,
+    "y": 22,
+    "z": 26
+   },
+   "skycell": "1732.016",
+   "epoch_span_mjd": [
+    55225.6,
+    56882.2
+   ],
+   "phase_split": [
+    126,
+    9
+   ],
+   "minor_phase_frac": 0.067,
+   "calibrators_r_per_0p05deg": 35,
+   "calibrator_flag": "sparse"
+  },
+  {
+   "corridor": "gj66",
+   "endpoints": [
+    "gj-66-a",
+    "gj-66-b"
+   ],
+   "antipode_ra_deg": 205.0011,
+   "antipode_dec_deg": 56.2309,
+   "ps1_visible": true,
+   "pilot": false,
+   "warps": 85,
+   "warps_by_filter": {
+    "g": 9,
+    "i": 17,
+    "r": 17,
+    "y": 15,
+    "z": 27
+   },
+   "skycell": "2432.000",
+   "epoch_span_mjd": [
+    55215.7,
+    56787.3
+   ],
+   "phase_split": [
+    85,
+    0
+   ],
+   "minor_phase_frac": 0.0,
+   "calibrators_r_per_0p05deg": 18,
+   "calibrator_flag": "sparse"
+  }
+ ],
+ "queue": [
+  "lacaille8760",
+  "lacaille9352",
+  "sirius",
+  "gj518",
+  "ltt1445",
+  "ezaqr",
+  "procyon",
+  "gj293",
+  "gj9193",
+  "gj11068",
+  "gj783",
+  "gj784",
+  "gj1111",
+  "wolf359",
+  "wolf437",
+  "gj367",
+  "gj832",
+  "luhman16",
+  "gj526",
+  "gj674",
+  "gj12724",
+  "wolf1061",
+  "fomalhaut",
+  "ross154",
+  "gj1061",
+  "lhs1723",
+  "gj588",
+  "gj2012",
+  "wise0855",
+  "82eri",
+  "gj1276",
+  "gj3112",
+  "alphacen",
+  "gj514",
+  "gj876",
+  "gj915",
+  "gj667",
+  "barnard",
+  "taucet",
+  "gj3306",
+  "gj318",
+  "kapteyn",
+  "gj581",
+  "epseri",
+  "luyten",
+  "gj11547",
+  "gj1087",
+  "gj2066",
+  "gj54",
+  "gj229",
+  "lp145141",
+  "61vir",
+  "teegarden",
+  "gj66",
+  "gj65",
+  "gj908",
+  "vanmaanen",
+  "gj1002",
+  "gj682"
+ ]
+}

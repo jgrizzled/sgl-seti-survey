@@ -12,7 +12,10 @@ ZTF-specific choices: NZ = 192 nodes uniform in 1/z (1.85" spacing,
 under the ~2" seeing); T0 = MJD 59800 (baseline midpoint); fluxes from
 the difference image (science-image fallback flagged per epoch).
 
-Usage: uv run python surveys/ztf/scripts/sample_tensor.py
+Processes one corridor at a time (memory), writing each endpoint x role
+tensor as soon as its corridor is done.
+
+Usage: uv run python surveys/ztf/scripts/sample_tensor.py [--only-missing]
 """
 
 from __future__ import annotations
@@ -57,6 +60,7 @@ BAND_IDX = {"zg": 1, "zr": 2, "zi": 3}
 
 
 def main() -> None:
+    only_missing = "--only-missing" in sys.argv[1:]
     registry = load_target_registry(REGISTRY_PATH)
     ctx = GeometryContext.ztf_default()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -115,86 +119,92 @@ def main() -> None:
 
     pairs_of_frame = defaultdict(list)
     for p, oids in usable.items():
+        if only_missing and (OUT_DIR / f"{p[0]}__{p[1]}.npz").exists():
+            continue
         for o in oids:
             pairs_of_frame[o].append(p)
-
-    rows = defaultdict(list)
-    frames = sorted(pairs_of_frame,
-                    key=lambda o: obs_by_id[o]["t_mid_mjd_utc"])
+    frames_by_corridor = defaultdict(list)
+    for o, pairs in pairs_of_frame.items():
+        frames_by_corridor[CORRIDOR_OF[pairs[0][0]]].append(o)
     nz, nm, nt = len(Z_GRID), len(MU_GRID), len(OFFSETS)
     t0 = _time.monotonic()
     n = n_diff = 0
-    for oid in frames:
-        row = manifest.get(oid)
-        obs = obs_by_id[oid]
-        if row is None or "sci" not in row.get("files", {}) or not row["msk"]:
-            continue
-        diff = (CUT_DIR / row["files"]["diff"]
-                if "diff" in row["files"] else None)
-        try:
-            fm = build_flux_map_ztf(
-                CUT_DIR / row["files"]["sci"], diff, MSK_DIR / row["msk"],
-                ZtfExactFootprint.FATAL_MASK, obs["band"],
-                obs["t_mid_mjd_utc"])
-        except Exception as exc:
-            print(f"  fluxmap FAIL {oid}: {exc}", flush=True)
-            continue
-        if fm.magzp is None:
-            continue
-        n += 1
-        n_diff += diff is not None
-        mjd = obs["t_mid_mjd_utc"]
-        scale = 10.0 ** ((ZP_REF - fm.magzp) / 2.5)
-        dt_yr = (mjd - T0_MJD) / 365.25
-        for pair in pairs_of_frame[oid]:
-            endpoint, role = pair
-            ph = phase_of(CORRIDOR_OF[endpoint], mjd)
-            base = points_at_zgrid(endpoint, role, mjd)
-            cosd = np.cos(np.deg2rad(base[:, 1]))
-            dmu = MU_GRID * dt_yr / 3600.0
-            ra_all = np.broadcast_to(
-                base[:, 0][:, None, None]
-                + dmu[None, :, None] / cosd[:, None, None], (nz, nm, nm))
-            dec_all = np.broadcast_to(
-                base[:, 1][:, None, None] + dmu[None, None, :], (nz, nm, nm))
-            F = np.empty((nt, nz, nm, nm), dtype=np.float32)
-            V = np.empty_like(F)
-            G = np.empty((nt, nz, nm, nm), dtype=np.float16)
-            D = np.empty((nt, nz, nm, nm), dtype=np.float16)
-            for ti, (dra, ddec) in enumerate(OFFSETS):
-                ra_q = ra_all + dra / 3600.0 / cosd[:, None, None]
-                dec_q = dec_all + ddec / 3600.0
-                f, v, g = fm.sample(ra_q.ravel(), dec_q.ravel())
-                F[ti] = (f.reshape(nz, nm, nm) * scale).astype(np.float32)
-                V[ti] = (v.reshape(nz, nm, nm) * scale * scale
-                         ).astype(np.float32)
-                G[ti] = g.reshape(nz, nm, nm).astype(np.float16)
-                D[ti] = fm.sample_aux(ra_q.ravel(), dec_q.ravel()
-                                      ).reshape(nz, nm, nm).astype(np.float16)
-            rows[pair].append((mjd, BAND_IDX[obs["band"]], ph,
-                               obs["quality_flags"].get("seeing") or 0.0,
-                               diff is not None, F, V, G, D))
-        if n % 100 == 0:
-            print(f"  {n}/{len(frames)} ({n / (_time.monotonic() - t0):.1f}/s)",
-                  flush=True)
+    for corridor, frames in sorted(frames_by_corridor.items()):
+        frames.sort(key=lambda o: obs_by_id[o]["t_mid_mjd_utc"])
+        rows = defaultdict(list)
+        zcache.clear()
+        for oid in frames:
+            row = manifest.get(oid)
+            obs = obs_by_id[oid]
+            if row is None or "sci" not in row.get("files", {}) or not row["msk"]:
+                continue
+            diff = (CUT_DIR / row["files"]["diff"]
+                    if "diff" in row["files"] else None)
+            try:
+                fm = build_flux_map_ztf(
+                    CUT_DIR / row["files"]["sci"], diff, MSK_DIR / row["msk"],
+                    ZtfExactFootprint.FATAL_MASK, obs["band"],
+                    obs["t_mid_mjd_utc"])
+            except Exception as exc:
+                print(f"  fluxmap FAIL {oid}: {exc}", flush=True)
+                continue
+            if fm.magzp is None:
+                continue
+            n += 1
+            n_diff += diff is not None
+            mjd = obs["t_mid_mjd_utc"]
+            scale = 10.0 ** ((ZP_REF - fm.magzp) / 2.5)
+            dt_yr = (mjd - T0_MJD) / 365.25
+            for pair in pairs_of_frame[oid]:
+                endpoint, role = pair
+                ph = phase_of(CORRIDOR_OF[endpoint], mjd)
+                base = points_at_zgrid(endpoint, role, mjd)
+                cosd = np.cos(np.deg2rad(base[:, 1]))
+                dmu = MU_GRID * dt_yr / 3600.0
+                ra_all = np.broadcast_to(
+                    base[:, 0][:, None, None]
+                    + dmu[None, :, None] / cosd[:, None, None], (nz, nm, nm))
+                dec_all = np.broadcast_to(
+                    base[:, 1][:, None, None] + dmu[None, None, :], (nz, nm, nm))
+                F = np.empty((nt, nz, nm, nm), dtype=np.float32)
+                V = np.empty_like(F)
+                G = np.empty((nt, nz, nm, nm), dtype=np.float16)
+                D = np.empty((nt, nz, nm, nm), dtype=np.float16)
+                for ti, (dra, ddec) in enumerate(OFFSETS):
+                    ra_q = ra_all + dra / 3600.0 / cosd[:, None, None]
+                    dec_q = dec_all + ddec / 3600.0
+                    f, v, g = fm.sample(ra_q.ravel(), dec_q.ravel())
+                    F[ti] = (f.reshape(nz, nm, nm) * scale).astype(np.float32)
+                    V[ti] = (v.reshape(nz, nm, nm) * scale * scale
+                             ).astype(np.float32)
+                    G[ti] = g.reshape(nz, nm, nm).astype(np.float16)
+                    D[ti] = fm.sample_aux(ra_q.ravel(), dec_q.ravel()
+                                          ).reshape(nz, nm, nm).astype(np.float16)
+                rows[pair].append((mjd, BAND_IDX[obs["band"]], ph,
+                                   obs["quality_flags"].get("seeing") or 0.0,
+                                   diff is not None, F, V, G, D))
+            if n % 200 == 0:
+                print(f"  {n} maps ({n / (_time.monotonic() - t0):.1f}/s)",
+                      flush=True)
+        for (endpoint, role), rs in rows.items():
+            rs.sort(key=lambda r: r[0])
+            np.savez_compressed(
+                OUT_DIR / f"{endpoint}__{role}.npz",
+                z_grid=Z_GRID, mu_grid=MU_GRID, t0_mjd=T0_MJD, zp_ref=ZP_REF,
+                offsets=np.array(OFFSETS),
+                mjd=np.array([r[0] for r in rs]),
+                band_idx=np.array([r[1] for r in rs], dtype=np.uint8),
+                phase=np.array([r[2] for r in rs], dtype=np.uint8),
+                seeing=np.array([r[3] for r in rs], dtype=np.float32),
+                is_diff=np.array([r[4] for r in rs], dtype=np.uint8),
+                f=np.stack([r[5] for r in rs], axis=1),
+                v=np.stack([r[6] for r in rs], axis=1),
+                g=np.stack([r[7] for r in rs], axis=1),
+                dfrac=np.stack([r[8] for r in rs], axis=1))
+            print(f"wrote {endpoint}__{role}: {len(rs)} epochs "
+                  f"[{corridor}]", flush=True)
+        del rows
     print(f"{n} flux maps built ({n_diff} from difference images)")
-
-    for (endpoint, role), rs in rows.items():
-        rs.sort(key=lambda r: r[0])
-        np.savez_compressed(
-            OUT_DIR / f"{endpoint}__{role}.npz",
-            z_grid=Z_GRID, mu_grid=MU_GRID, t0_mjd=T0_MJD, zp_ref=ZP_REF,
-            offsets=np.array(OFFSETS),
-            mjd=np.array([r[0] for r in rs]),
-            band_idx=np.array([r[1] for r in rs], dtype=np.uint8),
-            phase=np.array([r[2] for r in rs], dtype=np.uint8),
-            seeing=np.array([r[3] for r in rs], dtype=np.float32),
-            is_diff=np.array([r[4] for r in rs], dtype=np.uint8),
-            f=np.stack([r[5] for r in rs], axis=1),
-            v=np.stack([r[6] for r in rs], axis=1),
-            g=np.stack([r[7] for r in rs], axis=1),
-            dfrac=np.stack([r[8] for r in rs], axis=1))
-        print(f"wrote {endpoint}__{role}: {len(rs)} epochs", flush=True)
 
 
 if __name__ == "__main__":
