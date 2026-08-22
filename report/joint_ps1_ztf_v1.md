@@ -1,7 +1,7 @@
 ---
 title: "Joint Pan-STARRS1 + ZTF stage 2 v1 — both parallax phases, 2009–2026, on 62 corridors"
 date: 2026-08-21
-status: "complete; 138 endpoint-roles, 3,312 constraints, 0 candidates; PS1 marginal cells closed"
+status: "v1 (µ = 0) and v2 (full µ grid, common T0) complete; 0 candidates; PS1 retained cells all closed"
 ---
 
 # Joint PS1 + ZTF stage 2 v1
@@ -75,13 +75,34 @@ luminous sources ≲ 2 µJy (r). These remain limits on the reflected /
 self-luminous cell only. The |µ| ≤ 1″/yr nuisance family is constrained
 per archive (PS1 m90 ≈ 21, ZTF per its own calibration), not jointly.
 
-## 4. Next
+## 4. v2 — the full (z, µ) family on a common reference epoch
 
-1. Common µ reference epoch across archives (rebuild tensors with a
-   shared T0, or store per-µ offsets) so the joint µ-grid family can be
-   calibrated, not just µ = 0.
-2. Promote the catalogued-star test from stage 7 to the automatic
-   candidate rules in every adapter's calibration.
-3. Extend the joint stage to WISE (thermal cell) on the same corridors
-   for a three-archive phase/colour test, and to SPHEREx/DECam for the
-   15 southern corridors PS1 and ZTF cannot reach.
+The PS1 tensors were rebuilt with T0 = 59800 (ZTF's) and the joint
+stack run over the 5 × 5 µ grid (AnalysisRun `run-ac08543c5b29`,
+`surveys/joint/results/joint_v1_summary.md` §v2). 43 of 414 cells
+exceed the cube threshold (10.4 %, chance 12.5 %); four pass the
+automatic rules — now including the catalogued-static-source test —
+and all four are vetoed at stage 7: a field-wide systematic (GJ 1111
+rx g, all controls at 17–19σ), faint catalogued stars along the track
+at the signal's own brightness (GJ 229 A tx g), and the GJ 783 i-only
+pair absent in ZTF g+r along the same track. **Still no candidate.**
+On-grid depths are m90 = 23.0 (g), 22.9 (r), 21.1 (i) AB;
+off-grid-marginalised 22.6 / 22.5 / 14.2: with T0 = 59800 the PS1
+epochs are 7–13 yr from the reference and the 0.5″/yr µ step is
+1.7–3.2″ of displacement there, so sources between µ nodes are lost
+from PS1. The v1 µ = 0 result remains the cleanest joint statement; a
+v3 needs a mid-baseline T0 with ≈ 0.1″/yr µ sampling or analytic
+interpolation between nodes.
+
+The catalogued-static-source test now lives in `sglsurvey/vetting.py`
+and runs automatically in the PS1 and ZTF calibrations and both joint
+scripts (WISE's census tool uses its VizieR CatWISE loader). With a
+≥ 3-detection requirement it is conservative; the six PS1 cells it left
+were all closed by direct ZTF forced photometry along their tracks.
+
+## 5. Next
+
+1. v3 joint µ family: mid-baseline T0 and finer µ sampling (or
+   analytic interpolation) so PS1 epochs contribute off-grid.
+2. Extend the joint stage to WISE (thermal cell) on these corridors;
+   DECam/NOIRLab or SPHEREx for the 15 southern corridors (plan §7 TODO).

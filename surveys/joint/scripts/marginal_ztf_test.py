@@ -71,10 +71,15 @@ def retained_ps1_cells() -> dict:
 
 
 def run_marginal_tests(out_dir: Path, analysis_run_id: str | None = None,
-                       all_retained: bool = True) -> None:
-    if all_retained:
+                       all_retained: bool = True, cells: dict | None = None,
+                       t0_mjd: float = PS1_T0, out_name: str = "marginal_tests.json") -> None:
+    """``cells`` may be given directly as {key: {"cell": {"z_au", "mu"},
+    "S_real", "T"}} with their mu reference epoch ``t0_mjd``."""
+    global PS1_T0
+    PS1_T0 = t0_mjd
+    if cells is None and all_retained:
         cells = retained_ps1_cells()
-    else:
+    elif cells is None:
         adj = json.load(open(ADJ))
         cells = {k: v for k, v in adj.items() if v["status"] == "marginal"}
     print(f"\n{len(cells)} automatically-retained PS1 cells to test against ZTF",
@@ -96,6 +101,9 @@ def run_marginal_tests(out_dir: Path, analysis_run_id: str | None = None,
     for key, c in cells.items():
         e, role, band = key.split("/")
         z0 = c["cell"]["z_au"]
+        # other role at the same (z, mu): Rx/Tx loci coincide at the
+        # antipode, so a real source must appear in both (tested below via
+        # the same forced photometry on the other role's frames)
         mu = c["cell"]["mu"]
         # all ZTF bands: a reflector has solar colours (r brighter than y/z
         # by ~0.5 mag) and ZTF has almost no i-band frames, so the full
@@ -172,7 +180,7 @@ def run_marginal_tests(out_dir: Path, analysis_run_id: str | None = None,
         results[key] = res
         print("  -> " + "  ".join(f"{b}: S={d['S_track']:.2f}/T={d['T_controls']:.2f} (n={d['n_valid']})"
                                for b, d in per_band.items()) + f"  => {verdict}", flush=True)
-    out = out_dir / "marginal_tests.json"
+    out = out_dir / out_name
     out.write_text(json.dumps({"analysis_run_id": analysis_run_id, "cells": results}, indent=2))
     print(f"wrote {out}")
 

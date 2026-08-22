@@ -394,7 +394,7 @@ aware variance / ZOGY score images (≈1.5 mag headroom), per-corridor
 references for edge strips, fainter second control. Gap-graded (15) +
 invisible (15) corridors hand off to SPHEREx.
 
-## 6. Third adapter: SPHEREx (pilot + southern scale-up complete)
+## 6. Third adapter: SPHEREx (all 77 corridors surveyed)
 
 SPHEREx quick-release data are served at IRSA (`spherex.obscore` TAP
 view, collections `spherex_qr2` and `spherex_qr2_deep`; QR1 rows are
@@ -462,11 +462,14 @@ plane; 37 exceedances all vetoed under five rules (phase split, single
 season, role coincidence, template coverage, bright static neighbour).
 **v3 estimator 2026-08-21** (`calib_v4`): 16 offset controls (FAR
 < 1/16 at no median depth cost) and a cross-detector season-complement
-phase test; 21 exceedances, all vetoed. **Northern run started
-2026-08-21:** the 62 universal-list corridors (69 endpoints) shared
-with ZTF/WISE, under the frozen v3 rules. Then: re-run as each quick
-release adds a parallax phase; candidate SED discriminator only if
-something survives.
+phase test; 21 exceedances, all vetoed. **All-sky run complete 2026-08-21**
+(`report/spherex_survey_v1.md`, `surveys/spherex/results/allsky_v1_summary.md`):
+77 corridors / 88 endpoints, 60,426 exposures, **9,808 Constraints,
+0 Candidates** (64 exceedances of 1,226 searches, all vetoed); joint
+m90 median 20.75 AB, 21.5–21.8 on clean corridors, 16.9–17.9 in the
+Galactic plane. SPHEREx is now the first archive to cover the full
+universal list. Next: re-run per quick release; candidate SED
+discriminator only if something survives.
 
 Success criteria: those of §4/§5, plus: the adapter interface absorbs
 a multi-extension spectral product and a wavelength-per-sample axis
@@ -549,9 +552,21 @@ too sparse/clustered to carry the phase test; the catalogued-star test
 belongs in the automatic rules; a common µ reference epoch is needed
 for any joint µ-grid analysis.
 
-Next: common-T0 tensors for a joint µ-grid calibration (in progress,
-2026-08-21); catalogued-star test promoted into every adapter's
-automatic candidate rules (`sglsurvey/vetting.py`, 2026-08-21).
+**Stage 2 v2 (2026-08-21, complete):** PS1 tensors rebuilt on the
+common µ reference epoch T0 = 59800 (`run_common_t0.sh`,
+`runs/panstarrs/calib_t0_59800`), joint stack over the full 5 × 5 µ
+grid (`joint_ps1_ztf_mugrid.py`, AnalysisRun `run-ac08543c5b29`):
+3,312 Constraints, on-grid m90 ≈ 23.0 (g) / 22.9 (r) / 21.1 (i), 43
+exceedances (10 %, below chance), 4 retained then vetoed at stage 7
+(field-wide systematic; faint stars along the track; i-only pair
+absent in ZTF g+r) — **still 0 candidates**. Lesson: at T0 = 59800 the
+PS1 epochs are 7–13 yr from the reference, so the 0.5″/yr µ step
+under-samples the family there (off-grid-marginalised i depth
+collapses; g/r lose 0.45 mag) — v3 needs a mid-baseline T0 with
+≈ 0.1″/yr µ sampling or analytic interpolation. The
+catalogued-static-source test is now automatic in every adapter's
+census (`sglsurvey/vetting.py`: PS1 DR2 / ZTF DR24 snapshots offline,
+CatWISE via VizieR for WISE; ≥ 3 catalog detections required).
 
 **TODO — three-archive and southern extension of the joint stage:**
 

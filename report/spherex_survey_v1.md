@@ -1,15 +1,42 @@
 ---
-title: "SPHEREx survey v1 — all ZTF-inaccessible corridors"
+title: "SPHEREx survey v1 — all 77 universal-list corridors"
 date: 2026-08-20
-status: "15 southern corridors / 19 endpoints; v3 estimator (calib_v4): 2,128 constraints, 0 candidates; northern 62 corridors running"
+status: "77 corridors / 88 endpoints; 9,808 constraints, 0 candidates"
 ---
 
 # SPHEREx survey v1
 
-Extends the 3-star pilot (`spherex_pilot_v1.md`) to every universal-
-list system whose SGL corridor lies at Dec < −28° — the sky ZTF cannot
-reach — using the pilot's frozen hypotheses and chain unchanged.
-Details: `surveys/spherex/results/scaleup_v1_summary.md`.
+Extends the 3-star pilot (`spherex_pilot_v1.md`) first to the 15
+southern corridors ZTF cannot reach (2026-08-20,
+`surveys/spherex/results/scaleup_v1_summary.md`, where the estimator
+was developed to v3), then to the whole universal list (2026-08-21,
+`surveys/spherex/results/allsky_v1_summary.md`). The numbers below are
+the all-sky run (`calib_v4`, AnalysisRun `run-ddd97a27faad`); the
+southern-only bullets that follow them are retained as the record of
+how the rule set was reached.
+
+## All-sky result
+
+- **Coverage.** 77 corridors / 88 endpoints; 60,426 Level-2 detector-
+  exposures (2025-05 → 2026-08), 74,762 usable/partial evaluations,
+  33,879 slim cutouts from S3 with none missing.
+- **Controls.** Flux scale within ±0.19 mag in every detector on
+  208,541 star measurements. 1,226 searches × 16 controls: 64
+  exceedances (5.2 %, under the 1/16 FAR), all vetoed (56 phase
+  split, 4 role coincidence, 3 cross-detector complement, 1 template
+  coverage). Layer-1: nothing follows a parallax track. **0
+  Candidates.**
+- **Constraints.** 9,808 records. Joint six-detector m90 (duty ≥ 0.5,
+  |µ| ≤ 1″/yr): median 20.75 AB, 21.5–21.8 on the cleanest corridors
+  (GJ 625, 82 Eri, GJ 1061, GJ 66, GJ 338), 16.9–17.9 on the
+  Galactic-plane ones (α Cen A/B, GJ 11068). On a median corridor at
+  550–720 AU: grey reflectors ≳ 1.3 × 10⁵ km (albedo 0.1), 700 K
+  emitters ≳ 17 km, 1000 K emitters ≳ 5 km.
+- **Next.** Re-run as each quick release adds a parallax phase (the
+  single-season and season-weighted corridors gain a working phase
+  test); candidate SED discriminator only if something survives.
+
+## Southern scale-up (record of the rule set)
 
 - **Coverage.** 24,099 public Level-2 detector-exposures (2025-05 →
   2026-08), 31,962 usable/partial precise evaluations, 14,579 slim

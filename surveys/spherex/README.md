@@ -73,3 +73,12 @@ reduced χ²; `injection_calibrate.py` adds the joint six-detector stack
 vetoes (hypotheses amendment 2). AnalysisRun `run-4fbed2e52668`:
 2,128 Constraints, 37 Candidates all vetoed. `calib_v3/templates` is a
 symlink to `calib_v2/templates`.
+
+## All-sky run (2026-08-21, complete)
+
+v3 estimator (16 controls, cross-detector phase test; amendment 3)
+then the 62 northern corridors (69 endpoints) through the chain with
+`SPHEREX_CALIB_RUN=calib_v4` and `sample_tensor.py --only-missing`.
+Results: `results/allsky_v1_summary.md`, `../../report/spherex_survey_v1.md`
+(AnalysisRun `run-ddd97a27faad`: 9,808 Constraints, 64 Candidates all
+vetoed). 77 corridors / 88 endpoints; 39 GB under `runs/spherex/`.

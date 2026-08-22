@@ -82,9 +82,12 @@ closes with zero candidates.**
 
 ![m90 vs z, selected endpoints](figures/ps1_survey_v1_m90.svg)
 
-AnalysisRun `run-eaa6d89a1ec9`: 5,520 Constraints, 78 Candidates (72
-vetoed, 3 adjudicated-vetoed, 3 marginal → vetoed cross-archive), 0
-detections.
+AnalysisRun `run-c2806acd56a3` (supersedes `run-eaa6d89a1ec9`; the
+catalogued-static-source test is now in the automatic rules): 5,520
+Constraints, 78 Candidates (72 phase-vetoed; 6 retained by the
+automatic rules, all 6 vetoed by direct ZTF forced photometry along
+their PS1-fitted tracks — `runs/joint/ps1_ztf_v1/marginal_tests.json`),
+0 detections.
 
 ## 4. Interpretation
 

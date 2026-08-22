@@ -58,11 +58,22 @@ SEED = 20260822
 DUTY = 0.5
 
 
-def mismatch_factor(fwhm_arcsec, halfcell_arcsec, mean_abs_dt_yr):
+def mismatch_factor(fwhm_arcsec, halfcell_arcsec, abs_dt_yr, with_mu=True):
+    """Matched-filter response loss for a source between grid nodes: the
+    z-grid half-cell (``grid_f``) and, if ``with_mu``, a mu offset of up
+    to a quarter step (0.25"/yr) over THIS epoch's lever arm |t - T0|.
+    With a common T0 = 59800 the PS1 epochs sit 7-13 yr from the
+    reference, so 0.25"/yr x 13 yr = 3.2" >> PSF: the 5x5 mu grid does
+    not sample the trajectory family finely enough at those epochs, and
+    the off-grid-marginalised depth loses PS1 almost entirely. Both
+    variants are recorded; a v3 needs a mid-baseline T0 and ~0.1"/yr mu
+    steps."""
     sigma = fwhm_arcsec / 2.3548
     u = np.linspace(0, halfcell_arcsec, 64)
     grid_f = float(np.mean(np.exp(-u * u / (4 * sigma * sigma))))
-    r_mu = 0.25 * mean_abs_dt_yr * np.sqrt(2)
+    if not with_mu:
+        return grid_f
+    r_mu = 0.25 * abs_dt_yr * np.sqrt(2)
     mu_f = float(np.exp(-r_mu * r_mu / (4 * sigma * sigma)))
     return grid_f * mu_f
 
@@ -177,26 +188,31 @@ def main() -> None:
                 "phase_split_all_epochs": [int((phase == 0).sum()), int((phase == 1).sum())],
             }
             # injections: random mu per repeat, duty 0.5, grid + mu mismatch
-            mean_abs_dt = float(np.mean(np.abs(mjd - t0_common) / 365.25))
-            mf_e = np.array([mismatch_factor(s_, halfcell, mean_abs_dt) for s_ in seeing])
-            m90 = np.full(len(zg), np.nan)
+            abs_dt = np.abs(mjd - t0_common) / 365.25
+            mf_grid = np.array([mismatch_factor(s_, halfcell, 0.0, with_mu=False)
+                                for s_ in seeing])
+            mf_unif = np.array([mismatch_factor(s_, halfcell, dt_)
+                                for s_, dt_ in zip(seeing, abs_dt)])
+            m90 = {"grid": np.full(len(zg), np.nan), "uniform": np.full(len(zg), np.nan)}
             for zi_ in range(len(zg)):
-                fmins = []
+                fmins = {"grid": [], "uniform": []}
                 for r_ in range(N_REPEATS):
                     ci = (int(rng.integers(0, nm)), int(rng.integers(0, nm)))
                     b0, a0 = B[ci][zi_], A[ci][zi_]
                     if b0 <= 0 or nval[0][zi_, ci[0], ci[1]] < MIN_EPOCHS:
                         continue
-                    wg = W[ci][:, zi_] * G[ci][:, zi_] * mf_e
                     need = max(0.0, T * np.sqrt(b0) - a0)
                     keep = rng.random(E) < DUTY
-                    den = float(wg[keep].sum())
-                    if den > 0:
-                        fmins.append(need / den)
-                if len(fmins) >= int(0.8 * N_REPEATS):
-                    f90 = float(np.percentile(fmins, 100 * RECOVERY_P))
-                    if f90 > 0:
-                        m90[zi_] = ZP_REF - 2.5 * np.log10(f90)
+                    base = W[ci][:, zi_] * G[ci][:, zi_]
+                    for name, mf in (("grid", mf_grid), ("uniform", mf_unif)):
+                        den = float((base * mf)[keep].sum())
+                        if den > 0:
+                            fmins[name].append(need / den)
+                for name in m90:
+                    if len(fmins[name]) >= int(0.8 * N_REPEATS):
+                        f90 = float(np.percentile(fmins[name], 100 * RECOVERY_P))
+                        if f90 > 0:
+                            m90[name][zi_] = ZP_REF - 2.5 * np.log10(f90)
             m90_store[key] = m90
             meta[key] = {"z_grid": zg, "n_valid_z": nval[0].max(axis=(1, 2)),
                          "epoch_range": report[key]["epoch_range_mjd"],
@@ -204,7 +220,8 @@ def main() -> None:
             print(f"  {key:24s} N={ep.sum():3d}+{ez.sum():3d} T={T:5.2f} S={S[0][pk]:5.2f} "
                   f"z={zg[zi]:6.0f} mu=({mug[mi]:+.1f},{mug[mj]:+.1f}) phase "
                   f"{ph_S['0']:.1f}/{ph_S['1']:.1f} (n {ph_n['0']}/{ph_n['1']}) "
-                  f"m90 med={np.nanmedian(m90):5.2f}", flush=True)
+                  f"m90 grid={np.nanmedian(m90['grid']):5.2f} "
+                  f"unif={np.nanmedian(m90['uniform']):5.2f}", flush=True)
         dp.close(); dz.close()
 
     config = {
@@ -218,7 +235,9 @@ def main() -> None:
         "band_pairs": {k: f"ps1 {k} + ztf z{k}" for k in BAND_PAIRS},
         "threshold_rule": "max of 8 shared offset-control (z, mu)-cube maxima",
         "weight_cap": WEIGHT_CAP, "min_epochs": MIN_EPOCHS, "clip_sigma": CLIP_SIGMA,
-        "injection_model": "random mu cell per repeat; grid + mu mismatch factors; duty 0.5",
+        "injection_model": ("random mu cell per repeat; duty 0.5; depths recorded for mu ON the grid "
+                            "(z-grid mismatch only) and off-grid-marginalised (per-epoch mu "
+                            "mismatch over |t - T0|)"),
         "n_repeats": N_REPEATS, "recovery_probability": RECOVERY_P, "seed": SEED,
         "candidate_rule": ("cube-maximum exceedance vetoed if either phase has < 3 epochs, "
                            "a phase S < 2, not persistent across early/late halves, absent "
@@ -301,8 +320,9 @@ def main() -> None:
             extra={"band": band, "origin": "joint (z, mu)-cube exceedance census"}))
 
     constraints = []
-    for key, m in m90_store.items():
+    for key, mm in m90_store.items():
         e, role, band = key.split("/")
+        m, m_u = mm["grid"], mm["uniform"]
         zg = meta[key]["z_grid"]
         nz = len(zg)
         edges = np.linspace(0, nz, N_Z_INTERVALS + 1, dtype=int)
@@ -317,8 +337,14 @@ def main() -> None:
                 kind = "recovery_curve"
                 mlim = round(float(np.nanmin(seg)), 2)
                 zmid = float(np.sqrt(zint[0] * zint[1]))
+                seg_u = m_u[lo:hi]
                 limit = {"value": mlim, "unit": "ab_mag_ps1_scale",
                          "band": f"ps1 {band} + ztf z{band}",
+                         "mu_family": "on the 5x5 grid (0.5\"/yr steps, T0 = 59800)",
+                         "value_off_grid_marginalised": (round(float(np.nanmin(seg_u)), 2)
+                                                         if np.isfinite(seg_u).any() else None),
+                         "off_grid_note": ("uniform |mu| <= 1\"/yr recovery; PS1 epochs "
+                                           "7-13 yr from T0 are under-sampled by the mu grid"),
                          "epochs_per_cell_max": int(meta[key]["n_valid_z"][lo:hi].max()),
                          "both_parallax_phases": bool(
                              min(report[key]["phase_split_all_epochs"]) >= MIN_PHASE_EPOCHS),
@@ -350,7 +376,8 @@ def main() -> None:
     append_records(rec / "constraint.jsonl", constraints)
     append_records(rec / "candidate.jsonl", candidates)
     np.savez_compressed(OUT / "m90_curves.npz",
-                        **{k.replace("/", "__"): v for k, v in m90_store.items()})
+                        **{k.replace("/", "__") + "__" + n: v
+                           for k, mm in m90_store.items() for n, v in mm.items()})
     slim = {k: {kk: vv for kk, vv in v.items()} for k, v in report.items()}
     (OUT / "threshold_report.json").write_text(json.dumps(slim, indent=2, default=float))
     print(f"\nanalysis_run: {run.analysis_run_id}")
@@ -362,10 +389,11 @@ def main() -> None:
     both = sum(1 for r in report.values() if min(r["phase_split_all_epochs"]) >= MIN_PHASE_EPOCHS)
     print(f"cells with both phases populated: {both}/{len(report)}")
     for band in BAND_PAIRS:
-        ms = [np.nanmedian(m) for k, m in m90_store.items() if k.endswith("/" + band)
-              and np.isfinite(m).any()]
-        if ms:
-            print(f"  {band}: joint m90 median {np.median(ms):.2f} over {len(ms)} endpoint-roles")
+        for n in ("grid", "uniform"):
+            ms = [np.nanmedian(mm[n]) for k, mm in m90_store.items() if k.endswith("/" + band)
+                  and np.isfinite(mm[n]).any()]
+            if ms:
+                print(f"  {band} ({n}): joint m90 median {np.median(ms):.2f} over {len(ms)} endpoint-roles")
 
 
 if __name__ == "__main__":

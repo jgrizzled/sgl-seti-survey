@@ -75,3 +75,65 @@ S ≫ 10 in these stacks. The PS1 survey closes with **0 candidates**.
 - The µ reference epoch must be common across archives for any future
   joint µ-grid analysis (rebuild tensors with a shared T0 or store
   offsets).
+
+---
+
+# Joint PS1 + ZTF stage 2 **v2** — full (z, µ) family on a common T0 (2026-08-21)
+
+AnalysisRun `run-ac08543c5b29` (`runs/joint/ps1_ztf_v2/`), hypothesis
+`joint-ps1-ztf-v2.0`: relay on the focal line at T0 = 59800 with
+|µ| ≤ 1″/yr on the 5 × 5 grid. PS1 tensors rebuilt on T0 = 59800
+(`runs/panstarrs/calib_t0_59800/tensors`, `run_common_t0.sh`, 3.3 h,
+≈ 180 GB transient); ZTF tensors unchanged. Script
+`joint_ps1_ztf_mugrid.py`; stage 7 `adjudicate_v2.py`.
+
+## Depths (90 % recovery, duty ≥ 0.5, AB on the PS1 scale, median over 138 endpoint-roles)
+
+| band | µ on grid | off-grid marginalised | v1 (µ = 0) | PS1 alone |
+|---|---|---|---|---|
+| g | 23.00 | 22.56 | 23.35 | 21.06 |
+| r | 22.90 | 22.48 | 23.26 | 20.86 |
+| i | 21.09 | 14.17 | 21.48 | 20.72 |
+
+3,312 Constraints (3,298 recovery curves); `flux_limit.value` is the
+on-grid depth, `value_off_grid_marginalised` the uniform-µ one.
+
+**The common-T0 lesson.** With T0 = 59800 the PS1 epochs are 7–13 yr
+from the reference, so the 0.5″/yr µ step is 1.7–3.2″ of displacement
+at PS1 epochs — larger than the PSF. The search on the grid nodes is
+valid, but a source with µ between nodes is lost from PS1 (and
+partially from early ZTF), which is why the off-grid i-band depth
+(PS1-dominated) collapses and g/r lose ~0.45 mag. A mid-baseline T0
+(≈ 58000) halves the lever arm but still needs ≈ 0.1″/yr µ steps —
+≈ 25× the tensor volume — or an analytic µ-interpolation between
+nodes. Recorded as the v3 item; v1 (µ = 0, exact) remains the
+cleanest joint statement.
+
+## Exceedance census
+
+43 of 414 cells exceed the 8-control cube maximum (10.4 %; chance
+12.5 %). Automatic vetoes: 22 single-phase, 13 phase-split
+disagreement, 1 split-half, 3 absent in the other paired bands. Four
+retained, all vetoed at stage 7 (`adjudication.json`,
+`direct_ztf_tests.json`, `records/candidate_adjudicated.jsonl`):
+
+| cell | S / T | verdict |
+|---|---|---|
+| GJ 1111 rx g, z 5,237, µ (−1, +1) | 19.03 / 18.94 | field-wide systematic: all 8 controls at 16.9–18.9σ; 0.5 % margin |
+| GJ 229 A tx g, z 739, µ (−0.5, +0.5) | 6.41 / 5.88 | faint catalogued stars along the track through the ZTF era (DR2 objects with 43/13/34 detections at 2.1″/1.35″/2.4″, Gaia G = 21.0 at 2.1″) at the ≈ 23 AB level of the signal; PS1 1.4σ; 9 % margin |
+| GJ 783 rx i, z 981 | 8.74 / 8.27 | i-only; absent in ZTF g+r along the track (3.3 vs 3.7); crowded field (controls to 8.3) |
+| GJ 783 tx i, z 6,165 | 13.40 / 11.91 | i-only; absent in ZTF g+r along the track (2.8 vs 3.5); controls to 11.9 |
+
+**No candidate survives.**
+
+## PS1 automatic rules (`sglsurvey/vetting.py`, 2026-08-21)
+
+The PS1 calibration was rerun with the catalogued-static-source test in
+its automatic rules (AnalysisRun `run-c2806acd56a3` supersedes
+`run-eaa6d89a1ec9`; same 5,520 constraints and 78 exceedances). With
+the ≥ 3-detection requirement the catalog alone vetoes none of the six
+automatically retained cells — the earlier GJ 783 / LHS 1723 "stars"
+were 1–2-detection DR2 entries — and all six are vetoed by direct ZTF
+forced photometry along their PS1-fitted (z, µ) tracks (S = 0.19,
+1.42, −0.11, 1.87, 2.25, 1.77 vs control maxima 2.8, 1.5, 0.25, 6.7,
+4.2, 2.8 over 897–1,206 frames; `marginal_tests.json`).
