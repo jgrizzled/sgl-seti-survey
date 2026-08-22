@@ -63,3 +63,27 @@ throughput offset is applied to every depth.
 2. SPHEREx adapter for the 30 corridors ZTF cannot constrain well.
 3. Sensitivity step for ZTF v2: residual-aware variance or
    ZOGY score images; a V ≈ 21 second asteroid control.
+
+---
+
+## Status note (2026-08-22) — exploratory, pending v2
+
+The WISE scientific review of 2026-08-21
+(`surveys/wise/scientific_review.md`) applies to this report as well,
+because the same constructions were copied from WISE: the 8-offset
+control maximum is a per-search rank statistic (a noise-only cell
+exceeds it with probability ≈ 1/9), injections were analytic and added
+to sampled tensors rather than to images, vetoes other than the
+catalogued-static-source test are heuristic review rules with
+unmeasured selection functions, and the locus was evaluated at its
+nominal position. Accordingly, without recomputing any number
+(`notes/project_plan.md` §10.1 step 2): "FAR < 1/8" statements are
+to be read as rank statements among 8 exchangeable controls;
+"90 %-recovery" depths are *threshold sensitivity* (`completeness_kind
+= threshold`), not final-candidate completeness, and carry no
+confidence interval; phase-split, split-half, season and other
+non-catalogue vetoes are heuristic; exceedance counts at the 1/9 rank
+rate are the expected chance rate, as `look_elsewhere.py` already
+showed. The defensible conclusion is *no compelling candidate after
+heuristic review*. The calibrated version is the ZTF v2 survey
+(project plan §10.1 step 6), built on the WISE v2 design.

@@ -106,3 +106,25 @@ excluded only where the ZTF/WISE epochs at the other phase say so.
    g/r; marginal cells vetoed).
 2. DECam/NOIRLab (reachable, unprobed) is the optical option for the 15
    southern corridors.
+
+---
+
+## Status note (2026-08-22) — exploratory, pending v2
+
+The WISE scientific review of 2026-08-21
+(`surveys/wise/scientific_review.md`) applies to this report: the
+8-offset control maximum is a per-search rank statistic (≈ 1/9
+crossing probability for a noise-only cell — the "≈ 86 expected at the
+1/8 chance rate" already noted), so "FAR" language is a rank statement;
+injections were analytic and tensor-level, so the quoted depths are
+*threshold sensitivity* (`completeness_kind = threshold`) without
+confidence intervals, and the on-grid vs off-grid depth difference
+recorded for the common-T0 tensors is a symptom of exactly that; the
+split-half, other-band and grid-edge vetoes are heuristic, while the
+DR2-star catalogued-static test and the direct ZTF forced photometry
+are the only rejections resting on independent evidence; the locus was
+evaluated at its nominal position (the 1–2″ optical PSF makes the
+covariance check stricter than for WISE). No number is recomputed
+here. The defensible conclusion is *no compelling candidate after
+heuristic review*. The calibrated version is the PS1 v2 survey
+(project plan §10.1 step 6).

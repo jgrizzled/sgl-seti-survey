@@ -1,7 +1,7 @@
 """Shared corridor configuration for the Pan-STARRS1 scripts.
 
 Corridor keys and endpoint->corridor mapping are the shared WISE ones
-(surveys/wise/scripts/wise_corridors.py); membership for PS1 is the set
+(sglsurvey/corridors.py); membership for PS1 is the set
 of corridors graded visible by the PS1 overlay
 (surveys/panstarrs/targets/overlay_v1.json, Dec > -30). Pilot v1.0 ran
 the first three; the scale-up runs the overlay queue.
@@ -12,8 +12,7 @@ from collections import defaultdict
 from pathlib import Path
 
 _REPO = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(_REPO / "surveys" / "wise" / "scripts"))
-from wise_corridors import CORRIDOR_OF as _WISE_CORRIDOR_OF  # noqa: E402
+from sglsurvey.corridors import CORRIDOR_OF as _WISE_CORRIDOR_OF  # noqa: E402
 
 PILOT_CORRIDORS = ["ross128", "epsind", "proxima"]
 DEC_LIMIT = -30.0

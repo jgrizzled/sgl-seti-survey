@@ -164,3 +164,60 @@ def discovery_cone(ctx: GeometryContext, target: Any, roles: Sequence[Role],
     drift_deg = np.pi * parallax_deg * (sample_days / 365.25)
     inflate = (envelope_tolerance_arcsec + ctx.padding_arcsec) / 3600.0
     return enclosing_cone(all_pts, inflate + drift_deg)
+
+
+# -- v2: per-epoch spacecraft observer (wise v2_plan §1.6, §8.5) ----------
+WISE_OBSERVER_ID = "wise-l1b-spacecraft"
+
+
+def register_wise_spacecraft_observer(table_mjd: np.ndarray,
+                                      table_xyz_au: np.ndarray,
+                                      identity: str,
+                                      max_gap_days: float = 2.0):
+    """Register a programmatic sglseti observer that returns the WISE
+    spacecraft's barycentric ICRS position, interpolated from a table
+    of (MJD UTC, SSB x/y/z AU) built from the L1b frame headers
+    (SUN2SC* + the Sun's barycentric position). Outside the table's
+    coverage by more than ``max_gap_days`` (mission gaps, no frames)
+    the Earth centre is returned — no frame is evaluated there.
+    ``identity`` is the content hash of the table and is part of every
+    calculation identity. Returns the :class:`Observer` spec."""
+    from astropy.coordinates import get_body_barycentric
+
+    from sglseti.models import ObserverKind
+    from sglseti.providers import register_programmatic_observer
+
+    mjd = np.asarray(table_mjd, float)
+    xyz = np.asarray(table_xyz_au, float)
+    order = np.argsort(mjd)
+    mjd, xyz = mjd[order], xyz[order]
+
+    def position(t: Time) -> np.ndarray:
+        m = float(t.utc.mjd)
+        i = int(np.searchsorted(mjd, m))
+        lo, hi = max(i - 1, 0), min(i, len(mjd) - 1)
+        if abs(mjd[lo] - m) > max_gap_days and abs(mjd[hi] - m) > max_gap_days:
+            e = get_body_barycentric("earth", t)
+            return np.array([e.x.to_value("AU"), e.y.to_value("AU"),
+                             e.z.to_value("AU")])
+        if hi == lo or abs(mjd[hi] - mjd[lo]) > max_gap_days:
+            j = lo if abs(mjd[lo] - m) <= abs(mjd[hi] - m) else hi
+            return xyz[j]
+        f = (m - mjd[lo]) / (mjd[hi] - mjd[lo])
+        return xyz[lo] * (1 - f) + xyz[hi] * f
+
+    register_programmatic_observer(WISE_OBSERVER_ID, position)
+    return Observer(observer_id=WISE_OBSERVER_ID, kind=ObserverKind.PROGRAMMATIC,
+                    identity=identity)
+
+
+def wise_v2_context(observer) -> GeometryContext:
+    """WISE v2 geometry: v1 model / ephemeris / relay range, the
+    spacecraft observer from :func:`register_wise_spacecraft_observer`."""
+    from sglseti import Tusay2022Eq57V1
+
+    return GeometryContext(model=Tusay2022Eq57V1(), ephemeris=AstropyEphemeris(),
+                           observer=observer,
+                           relay_range=RelayRange(550.0, 10000.0),
+                           tolerance_arcsec=2.0, padding_arcsec=0.0,
+                           confidence_level=0.99)

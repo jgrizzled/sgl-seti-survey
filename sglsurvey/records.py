@@ -179,6 +179,14 @@ class Constraint:
     false_alarm_rate: float | None = None
     trials_accounting_ref: str | None = None
     extra: Json = field(default_factory=dict)
+    # v2 additions (wise v2_plan §8.5; additive, outside constraint_id):
+    completeness_kind: str | None = None  # "threshold" | "final_candidate"
+    ci_68: tuple[float, float] | None = None  # 68% interval on the limit
+    n_injections: int | None = None
+    prf_model: str | None = None
+    spectrum_model: str | None = None
+    motion_bound_norm: str | None = None  # "linf" | "l2"
+    supersedes: str | None = None  # constraint_id of the superseded record
 
 
 @dataclass(frozen=True)
@@ -199,6 +207,11 @@ class Candidate:
     holdout_test_ref: str | None = None
     veto_reason: str | None = None
     extra: Json = field(default_factory=dict)
+    # v2 additions (wise v2_plan §8.5; additive):
+    annotations: Json = field(default_factory=dict)  # never grounds for rejection
+    global_p_value: float | None = None  # survey-wide P(max null R >= R)
+    rank_statement: Json | None = None  # rank among N exchangeable controls + CI
+    rejection_test: str | None = None  # which calibrated veto fired, if any
 
 
 @dataclass(frozen=True)

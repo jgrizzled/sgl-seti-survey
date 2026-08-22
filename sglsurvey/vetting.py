@@ -22,7 +22,7 @@ import io
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Sequence
+from typing import Mapping, Sequence
 
 import numpy as np
 from astropy.time import Time
@@ -227,3 +227,185 @@ def load_catwise_vizier(ra_deg: float, dec_deg: float, radius_deg: float,
         dec=np.array([f(r, "DE_ICRS") for r in rows]),
         mag=np.array([f(r, "W1mproPM") for r in rows]),
         ndet=np.array([int(f(r, "nW1")) if np.isfinite(f(r, "nW1")) else 0 for r in rows]))
+
+
+# -- v2 additions (wise v2_plan §6, §8.5) ---------------------------------
+def track_position_xt(ctx, target, role: str, z_au: float, mu: Sequence[float],
+                      t0_mjd: float, mjd: float, xt_arcsec: float = 0.0
+                      ) -> tuple[float, float]:
+    """As :func:`track_position` with a cross-track offset ``xt_arcsec``
+    applied perpendicular to the local corridor tangent (the direction
+    of increasing z at this epoch), for the §2.3 cross-track cells."""
+    ra0, dec0 = track_position(ctx, target, role, z_au, mu, t0_mjd, mjd)
+    if xt_arcsec == 0.0:
+        return ra0, dec0
+    q = 1.0 / z_au
+    ra1, dec1 = track_position(ctx, target, role, 1.0 / (q * 1.02), mu, t0_mjd, mjd)
+    cosd = np.cos(np.deg2rad(dec0))
+    tx, ty = (ra1 - ra0) * cosd, dec1 - dec0
+    n = np.hypot(tx, ty) or 1.0
+    nx, ny = -ty / n, tx / n
+    return (ra0 + xt_arcsec * nx / 3600.0 / cosd, dec0 + xt_arcsec * ny / 3600.0)
+
+
+def parallax_phase_test(S_by_phase: Mapping[int, float],
+                        n_by_phase: Mapping[int, int] | None = None,
+                        single_phase_ratio: float = 0.25) -> dict:
+    """Annotation (never a veto): the stack significance split by
+    parallax phase. A persistent in-scope source contributes at both
+    phases; a static star near one phase position gives high S at one
+    phase only; an intermittent in-scope source can legitimately be
+    single-phase, which is why this is an annotation (v2 plan §6)."""
+    vals = {int(k): float(v) for k, v in S_by_phase.items() if np.isfinite(v)}
+    if len(vals) < 2:
+        return {"n_phases_populated": len(vals), "S_by_phase": vals,
+                "signature": "single-phase-data", "ratio": None}
+    hi = max(vals.values())
+    lo = min(vals.values())
+    ratio = (lo / hi) if hi > 0 else None
+    sig = ("single-phase" if (ratio is not None and ratio < single_phase_ratio)
+           or (lo <= 0 < hi) else "both-phases")
+    return {"n_phases_populated": len(vals), "S_by_phase": vals,
+            "n_by_phase": ({int(k): int(v) for k, v in n_by_phase.items()}
+                           if n_by_phase else None),
+            "ratio": None if ratio is None else round(ratio, 3),
+            "signature": sig}
+
+
+def radial_response_table(template: np.ndarray, kernel: np.ndarray,
+                          oversample: int = 8, max_pix: float = 16.0):
+    """Matched-filter response (flux units per unit source flux) of a
+    unit-sum Gaussian ``kernel`` (detector pixels) to a PRF ``template``
+    (oversampled by ``oversample``) as a function of radial offset in
+    detector pixels: r_pix (N,), response (N,). Used by the flux-
+    consistency test for both the core (static star on the track) and
+    the PSF wings (bright-star halo)."""
+    from scipy.signal import fftconvolve
+
+    n = template.shape[0]
+    c = (n - 1) // 2
+    # bin the template to detector sampling at zero sub-pixel phase
+    half = int(max_pix) + kernel.shape[0]
+    ii = np.arange(-half, half + 1)
+    u = c + oversample * ii
+    grid = template[np.ix_(np.clip(u, 0, n - 1), np.clip(u, 0, n - 1))] * oversample ** 2
+    grid = np.where((np.abs(u) < n)[:, None] & (np.abs(u) < n)[None, :], grid, 0.0)
+    num = fftconvolve(grid, kernel[::-1, ::-1], mode="same")
+    resp = num / (kernel ** 2).sum()
+    yy, xx = np.mgrid[-half:half + 1, -half:half + 1]
+    r = np.hypot(xx, yy).ravel()
+    o = np.argsort(r)
+    r, v = r[o], resp.ravel()[o]
+    # radial average in 0.25-pixel bins
+    bins = np.arange(0, max_pix + 0.25, 0.25)
+    idx = np.digitize(r, bins) - 1
+    out_r, out_v = [], []
+    for k in range(len(bins) - 1):
+        sel = idx == k
+        if sel.any():
+            out_r.append(0.5 * (bins[k] + bins[k + 1]))
+            out_v.append(float(np.mean(v[sel])))
+    return np.array(out_r), np.array(out_v)
+
+
+def flux_consistency(catalog: StaticCatalog, track_ra: np.ndarray,
+                     track_dec: np.ndarray, w: np.ndarray, phase: np.ndarray,
+                     zp_ref: float, resp_r_arcsec: np.ndarray,
+                     resp_v: np.ndarray, S_measured: float,
+                     S_by_phase: Mapping[int, float] | None = None,
+                     search_arcsec: float = 30.0, factor: float = 2.0,
+                     min_ndet: int = MIN_CATALOG_DETECTIONS) -> dict:
+    """Can the catalogued static sources near the track account for the
+    measured stack S? For every catalogue source within ``search_arcsec``
+    of any test epoch's track position, the predicted per-epoch matched-
+    filter flux is 10^((zp_ref - mag)/2.5) x response(separation), and
+    the predicted S is sum_e w_e f_e / sqrt(sum_e w_e) over the same
+    capped weights as the real stack. ``consistent`` is True when the
+    prediction accounts for the measurement within ``factor`` (and
+    likewise in the dominant phase when ``S_by_phase`` is given). This,
+    together with proximity, is what makes the static/halo rejection a
+    calibrated veto (v2 plan §6); proximity alone is an annotation."""
+    track_ra = np.asarray(track_ra, float)
+    track_dec = np.asarray(track_dec, float)
+    w = np.asarray(w, float)
+    phase = np.asarray(phase)
+    ok = np.isfinite(track_ra) & np.isfinite(track_dec) & (w > 0)
+    out = {"n_sources_considered": 0, "S_pred": 0.0, "S_measured": float(S_measured),
+           "consistent": False, "sources": [], "by_phase": {}}
+    if not ok.any() or len(catalog.ra) == 0:
+        return out
+    dec0 = float(np.nanmean(track_dec[ok]))
+    cosd = np.cos(np.deg2rad(dec0))
+    # candidate sources: within search radius of the track's bounding box
+    ra_min, ra_max = track_ra[ok].min(), track_ra[ok].max()
+    de_min, de_max = track_dec[ok].min(), track_dec[ok].max()
+    pad = search_arcsec / 3600.0
+    sel = ((catalog.ra >= ra_min - pad / cosd) & (catalog.ra <= ra_max + pad / cosd)
+           & (catalog.dec >= de_min - pad) & (catalog.dec <= de_max + pad))
+    if catalog.ndet is not None:
+        sel &= catalog.ndet >= min_ndet
+    if catalog.mag is not None:
+        sel &= np.isfinite(catalog.mag)
+    idx = np.where(sel)[0]
+    if len(idx) == 0:
+        return out
+    fpred = np.zeros(len(track_ra))
+    contrib = []
+    for k in idx:
+        d = np.hypot((catalog.ra[k] - track_ra) * cosd,
+                     catalog.dec[k] - track_dec) * 3600.0
+        resp = np.interp(d, resp_r_arcsec, resp_v, right=0.0)
+        f = 10 ** (0.4 * (zp_ref - float(catalog.mag[k]))) * resp
+        f = np.where(ok, f, 0.0)
+        fpred += f
+        Sk = float((w * f).sum() / np.sqrt(w[ok].sum()))
+        if Sk > 0.05 * max(abs(S_measured), 1.0):
+            contrib.append({"mag": round(float(catalog.mag[k]), 2),
+                            "min_sep_arcsec": round(float(np.nanmin(d[ok])), 2),
+                            "S_pred": round(Sk, 2),
+                            "ndet": None if catalog.ndet is None else int(catalog.ndet[k])})
+    Bsum = w[ok].sum()
+    S_pred = float((w * fpred).sum() / np.sqrt(Bsum)) if Bsum > 0 else 0.0
+    out.update({"n_sources_considered": int(len(idx)), "S_pred": round(S_pred, 2),
+                "sources": sorted(contrib, key=lambda s: -s["S_pred"])[:5]})
+    consistent = S_pred >= abs(S_measured) / factor and S_measured > 0
+    if S_by_phase:
+        byp = {}
+        for p, Sm in S_by_phase.items():
+            selp = ok & (phase == int(p))
+            Bp = w[selp].sum()
+            Sp = float((w[selp] * fpred[selp]).sum() / np.sqrt(Bp)) if Bp > 0 else 0.0
+            byp[int(p)] = {"S_pred": round(Sp, 2), "S_measured": round(float(Sm), 2)}
+        out["by_phase"] = byp
+        if byp:
+            dom = max(byp, key=lambda p: abs(byp[p]["S_measured"]))
+            consistent &= byp[dom]["S_pred"] >= abs(byp[dom]["S_measured"]) / factor
+    out["consistent"] = bool(consistent)
+    return out
+
+
+def holdout_prediction_test(S_early_node: float, f_early: float,
+                            S_late: float, f_late: float, n_late: int,
+                            min_S_late: float = 3.0, min_flux_ratio: float = 0.3
+                            ) -> dict:
+    """Calibrated post-hoc held-out-epoch prediction test (v2 plan §1.8).
+
+    Given the refit on the early epochs (argmax node, mean flux
+    ``f_early``) and the forced photometry of the late epochs at that
+    node, the test PASSES when the late stack is significant and the
+    late flux is at least ``min_flux_ratio`` of the early flux. Its
+    false-pass rate on null exceedances and true-pass rate on
+    injections are measured, not assumed, and quoted with any result.
+    """
+    if n_late < MIN_EPOCHS_HOLDOUT or not np.isfinite(S_late):
+        return {"applicable": False, "n_late": int(n_late)}
+    ratio = (f_late / f_early) if f_early > 0 else np.nan
+    passed = bool(S_late >= min_S_late and np.isfinite(ratio) and ratio >= min_flux_ratio)
+    return {"applicable": True, "pass": passed, "S_early": round(float(S_early_node), 2),
+            "S_late": round(float(S_late), 2), "f_early": float(f_early),
+            "f_late": float(f_late), "flux_ratio": (None if not np.isfinite(ratio)
+                                                   else round(float(ratio), 3)),
+            "n_late": int(n_late), "rule": f"S_late >= {min_S_late} and f_late/f_early >= {min_flux_ratio}"}
+
+
+MIN_EPOCHS_HOLDOUT = 5

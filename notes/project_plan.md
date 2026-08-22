@@ -1,7 +1,7 @@
 ---
 title: "sgl-seti-survey — Project Plan"
 date: 2026-08-21
-status: "v0.5 — v1 surveys closing (SPHEREx northern run + joint PS1/ZTF µ-grid in flight); scientific review of WISE received; v2 programme defined (§10)"
+status: "v0.6 — v1 surveys closed; v2 programme steps 1–5 done (errata, shared code, WISE v2 with a blind confirmatory run and report v4, retrospective); next: step 6 (other surveys v2)"
 tags:
   - SETI
   - technosignatures
@@ -703,6 +703,8 @@ is `surveys/wise/v2_plan.md`; its §12 is the transfer table.
 | 3 | **Shared-code modifications** (`v2_plan.md` §8.5): `records` fields, `photometry` injection seam, `vetting` flux-consistent static test + parallax-phase test, `geometry` per-epoch observer, new `inject`, `nulls` (promoted from ZTF `look_elsewhere.py`), `manifest`; promote `wise_corridors.py` out of `surveys/wise/` (ZTF/PS1/SPHEREx import it). All additive; v1 scripts keep running. `tests/` with the invariant tests. | tests green against v1 products; v1 pipelines unchanged in output |
 | 4 | **WISE v2 in `surveys/wise-v2/`** per `v2_plan.md` §10 (steps A–I): hypothesis v2.0 freeze with hold-out split → covariance + positive control → null ensemble → image-level injections → frozen rule on the development set → blind confirmatory run → `report/wise_survey_v4.md`. | v4 report built from the ledger; review findings 1–9 each closed or explicitly deferred |
 | 5 | **Retrospective**: update `v2_plan.md` §12 with what actually transferred, what cost more than planned, and any shared-code change forced by the WISE run. | §12 revised |
+
+**Status 2026-08-22:** steps 1–5 done. Errata appended to all five v1 reports (WISE v3.1); shared code in `sglsurvey/` (`nulls`, `inject`, `manifest`, `corridors`, additive changes to `records`, `photometry`, `vetting`, `geometry`) with `tests/test_v2_invariants.py` green; WISE v2 in `surveys/wise-v2/` ran A–I under hypotheses v2.1 — 0 candidates on both the development (216 cells) and the blind confirmatory (488 cells) sets, `report/wise_survey_v4.md`; retrospective in `v2_plan.md` §12.1 (ring-only null, per-cell normalisation with heavy-tail exclusion, held-out test demoted to an annotation, ≈ 1.5 mag depth cost of family-wise error control, W4 pixel-scale erratum). Step 6 next, in the order ZTF → PS1 → joint → SPHEREx with the §12.1 amendments.
 | 6 | **Other surveys v2**, in `surveys/{ztf,panstarrs,spherex,joint}-v2/`, in the order ZTF → PS1 → joint → SPHEREx (ZTF has the richest cadence and an existing positive control, so it validates the transfer fastest; the joint stage needs both optical v2s; SPHEREx last because its next quick release adds a parallax phase anyway). Each is a scaled-down `v2_plan`: reuse v1 discovery/precise/screen and cutouts, rebuild only null, injection, vetting, geometry check, manifests, report. | each v2 report built from its ledger |
 | 7 | **Retire v1.** Delete `surveys/{wise,ztf,panstarrs,spherex,joint}/` and `runs/<survey>/` products no longer referenced; rename each `*-v2` to the plain name; move v1 reports to `report/archive/`; remove stale references (README, this plan, `targets/` overlay builders, memory notes) and dead code paths in `sglsurvey/` kept only for v1 compatibility. v1 stays in git history. | `grep -r "wise-v2\|_v1\|v1_" ` clean except history notes; tests green |
 | 8 | Resume archive-family expansion (DECam south, three-archive joint) on the v2 design. | — |

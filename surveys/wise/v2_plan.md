@@ -491,3 +491,84 @@ partly specific.
 | Observer                                               | Palomar / Haleakalā already topocentric                                                                                                                                          | spacecraft state from the product header                     | —                                                                     |
 | Positive control                                       | `asteroid_control.py` exists (ZTF); add for PS1                                                                                                                                  | add (asteroid through the spectral-image path)               | —                                                                     |
 | Manifests + invariant tests (§8)                       | identical                                                                                                                                                                        | identical                                                    | identical                                                             |
+
+## 12.1 Retrospective (step 5 of project plan §10.1, 2026-08-22)
+
+What the WISE v2 run actually did, what transferred as planned, and
+what the other surveys' v2 must change relative to the table above.
+Implementation: `surveys/wise-v2/` (hypotheses v2.1, `configs/`,
+`scripts/run_v2.sh` stages A–I), shared code in `sglsurvey/` (`nulls`,
+`inject`, `manifest`, `corridors`, the `vetting` / `geometry` /
+`photometry` / `records` additions), `tests/test_v2_invariants.py`.
+
+**Changed from the plan, by evidence on the development set**
+
+1. *Null ensemble → ring only.* The per-epoch time scramble destroys
+   the static-sky coherence of the annual parallax return (scramble
+   maxima ≈ 12 vs spatial controls 26–67 in gj-625/rx/W1) and is kept
+   only as a diagnostic floor. The phase-coherence scramble that
+   replaced it is degenerate in single-phase-contaminated cells (its
+   draws sit at R ≈ R_real), and the trajectory-randomised tracks sample
+   other parts of the corridor (q95 up to 4–18 where a donor crosses a
+   bright source; ring-vs-trajectory KS fails in 55–64 % of cells).
+   The 48-offset ring is the exchangeable ensemble; the other two are
+   per-cell annotations (p_phase, p_trajectory). §3's "three
+   constructions pooled" is withdrawn for every survey.
+2. *Per-cell normalisation and heavy-tail exclusion.* The family
+   statistic is max R̃ = R / q95(ring); cells whose ring maximum exceeds
+   2.5 × q95 (≈ 11 %) or whose inner/outer ring members differ (KS
+   α = 0.01) are void. Without the exclusion the family-wise rule
+   required R ≈ 3.9 × T in a typical cell; with it ≈ 2.4–2.5 × T
+   (R̃_FWER = 2.39 dev / 2.44 confirmatory). That is the price of a
+   controlled α = 0.05 over ~500 heavy-tailed local nulls, and it is
+   ≈ 1.5 mag of depth relative to v1's uncontrolled "R > 1".
+3. *Held-out-epoch prediction test → annotation (v2.0 → v2.1).* It
+   passes 59–63 % of null trajectories above their cell's q95 and
+   rejects 74–76 % of in-scope long-block sources (off during 2022–24)
+   — by §6 it cannot be a veto. Only the flux-consistent static/halo
+   test and the W3/W4 confirmation procedure reject.
+4. *Cross-track dimension* was needed for 3 of 176 cells (ε Ind Ba/Bb
+   photocentre rx/tx, EZ Aqr tx; σ_xt,99 = 4.2–16.8″); all others are
+   ≤ 2.9″. Implemented as extra tensors per offset with the statistic
+   and nulls maximised over offsets.
+
+**Found along the way**
+
+- `photometry.py` used 2.75″/pixel for W4 (5.52″ native): the v1 W4
+  kernel was 2× too wide (erratum v3.1 item 9). v2 reads the header.
+- Gaussian-kernel throughput on the empirical PRF: W1 0.80, W2 0.75,
+  W3 0.46, W4 0.58 (median over injections 0.66); the asteroid control
+  measured −0.42 mag (W2, MAD 0.09, 71 frames) against the NEOWISE
+  pipeline's own photometry of the same frames — consistent with the
+  PRF response plus sub-pixel sampling.
+- The sglseti Rx locus differs from a naive anti-star construction by
+  2µz/c (0.18″ at 550 AU, 3.3″ at 10,000 AU for Barnard's Star); Tx
+  agrees to ≲ 0.05″ once the 2d/c light time is included.
+- The spacecraft observer moves the locus by ≤ 17 mas (geocentric
+  radius 6,726–6,917 km from SUN2SC/ERTH2SC, frame-checked to 3 km
+  against astropy).
+- W3/W4 "block" injections are often entirely off (the cell's epoch
+  span is one or two cryo visits): W3/W4 cannot constrain long-block
+  intermittency at all; `worst-of-four` coverage reports it.
+
+**Cost.** Tensor build 176 pairs + 99 trajectories: ~1.3 h wall on 7
+workers (5 min per corridor); geometry MC 1 h on 2 workers; injections
+400 per cell × 704 cells: ~1.5 h per hold-out set on 7 workers
+(~3 min per pair incl. the flux-map rebuild); completeness fits with
+200 bootstraps ~40 min per set; nulls seconds. Disk: tensors 25 GB
+(9 kept trajectories), injections ~2 GB, PRFs 0.7 GB. The plan's
+estimates (A–B a day, C two days, D–E one CPU-day each) were
+pessimistic by ~3× in compute and optimistic in analysis time.
+
+**Transfer table amendments (apply to ZTF, PS1, joint, SPHEREx v2)**
+
+| Item | Amendment |
+| --- | --- |
+| 1/9 threshold problem | ring-only exchangeable null (48 offsets; 16 for SPHEREx's 6″ pixels is too few — use 48), R̃ = R/q95, heavy-tail and inner/outer-ring stability flags, family-wise pseudo-experiments; `sglsurvey.nulls` does all of it; expect ≈ 1–1.5 mag of depth loss vs the v1 numbers |
+| Time scrambling | drop; report the per-epoch scramble as a diagnostic only; phase scramble as an annotation |
+| Trajectory randomisation | annotation only (not exchangeable with the local sky) |
+| Held-out epochs | ZTF can pre-register a true hold-out (epochs keep arriving), which avoids the post-hoc test's 60 % null pass rate; for PS1 (mission over) it is an annotation as here |
+| Image-level injection | `sglsurvey.inject.stamp_response` is archive-agnostic given a FluxMap built with `keep_inputs`; needs a PRF renderer per archive (ZTF per-quadrant PSF from the sci header, PS1 per-skycell, SPHEREx cube) — `PRFGrid.render`'s bilinear-on-oversampled-template approach transfers |
+| Throughput | measure it against the archive pipeline's own photometry of a known mover (as done here with the NEOWISE source table), not against H/G predictions |
+| Covariance | optical PSFs make the 0.5 × FWHM test ~5× stricter: with σ_xt,99 up to 2.9″ for ordinary Gaia endpoints, expect ~10–20 % of PS1/ZTF cells to need the cross-track dimension |
+| Pixel scale / kernel | take it from the header everywhere (the W4 lesson) |

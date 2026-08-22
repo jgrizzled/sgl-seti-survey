@@ -1,7 +1,7 @@
 """Shared corridor configuration for the SPHEREx scripts.
 
 Corridor keys and endpoint→corridor mapping are the shared WISE ones
-(surveys/wise/scripts/wise_corridors.py). SPHEREx is all-sky, so every
+(sglsurvey/corridors.py). SPHEREx is all-sky, so every
 corridor is in-footprint; the *ordering* puts the ZTF-inaccessible
 corridors (Dec < -28, from the ZTF overlay) first. Pilot v1.0 runs
 three single-star corridors from that set.
@@ -13,8 +13,7 @@ from collections import defaultdict
 from pathlib import Path
 
 _REPO = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(_REPO / "surveys" / "wise" / "scripts"))
-from wise_corridors import CORRIDOR_OF as _WISE_CORRIDOR_OF  # noqa: E402
+from sglsurvey.corridors import CORRIDOR_OF as _WISE_CORRIDOR_OF  # noqa: E402
 
 PILOT_CORRIDORS = ["lalande", "gj687", "sigmadra"]
 PILOT_ENDPOINTS = ["lalande-21185", "gj-687", "sigma-dra"]

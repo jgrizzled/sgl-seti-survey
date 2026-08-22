@@ -1,0 +1,638 @@
+{
+ "freeze_content_hash": "sha256:3c83e91ed3cab058bc28942fee16db42fe575c87d55cc88fb4f93d2ee7a487da",
+ "frozen_at": "2026-08-22",
+ "hypotheses_hash": "sha256:8cdf9374784b127869318427390331b12f5189842babb25f1156a8fc2187a744",
+ "hypothesis_version": "wise-hypotheses-v2.1",
+ "n_corridors": 77,
+ "n_endpoints": 88,
+ "parameters": {
+  "designated_controls": [
+   0,
+   8,
+   16,
+   20,
+   24,
+   28,
+   32,
+   40
+  ],
+  "fwer_alpha": 0.05,
+  "geometry": {
+   "mc_epochs_jyear": [
+    2010.0,
+    2017.0,
+    2024.0
+   ],
+   "mc_samples": 2000,
+   "mc_seed": 20260822,
+   "mc_z_au": [
+    550.0,
+    10000.0
+   ],
+   "observer": "wise-l1b-spacecraft (SUN2SC header table)",
+   "xt_threshold_fwhm": 0.5
+  },
+  "heavy_tail_ratio": 2.5,
+  "holdout": {
+   "is_veto": false,
+   "min_S_late": 3.0,
+   "min_flux_ratio": 0.3,
+   "split_mjd": 59579.0
+  },
+  "hypothesis_version": "wise-hypotheses-v2.1",
+  "injections": {
+   "mag_halfwidth": 2.0,
+   "n_per_cell": 400,
+   "n_z_intervals": 8,
+   "prf": "IRSA pass2 wise-w?-psf-wpro-09x09",
+   "recovery_window": [
+    2,
+    1
+   ],
+   "spectrum": {
+    "W1": "flat_fnu",
+    "W2": "flat_fnu",
+    "W3": "blackbody_300K",
+    "W4": "blackbody_300K"
+   },
+   "stamp_half_pix": 16,
+   "temporal_models": [
+    "persistent",
+    "flicker",
+    "visit",
+    "block"
+   ],
+   "visit_gap_days": 5.0
+  },
+  "ks_alpha": 0.01,
+  "locus_bin_days": 0.5,
+  "min_epochs": 5,
+  "min_good_frac": 0.7,
+  "motion_bound_norm": "linf",
+  "mu_grid_arcsec_yr": [
+   -1.0,
+   -0.5,
+   0.0,
+   0.5,
+   1.0
+  ],
+  "n_epoch_scramble_diagnostic": 50,
+  "n_phase_scramble": 200,
+  "n_pseudo_experiments": 10000,
+  "n_trajectory_donors": 50,
+  "norm_quantile": 0.95,
+  "pooled_null": "ring",
+  "quality_masks": {
+   "loose": {
+    "qual_frame_ne": 0
+   },
+   "primary": {
+    "qual_frame_gt": 0,
+    "qual_scan_ge_if_present": 5,
+    "saa_sep_gt": 0.0
+   },
+   "strict": {
+    "moon_sep_ge": 30.0,
+    "qual_frame_eq": 10,
+    "qual_scan_ge_if_present": 5,
+    "saa_sep_gt": 0.0
+   }
+  },
+  "ring_offsets_arcsec": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    18.477591,
+    7.653669
+   ],
+   [
+    14.142136,
+    14.142136
+   ],
+   [
+    7.653669,
+    18.477591
+   ],
+   [
+    0.0,
+    20.0
+   ],
+   [
+    -7.653669,
+    18.477591
+   ],
+   [
+    -14.142136,
+    14.142136
+   ],
+   [
+    -18.477591,
+    7.653669
+   ],
+   [
+    -20.0,
+    0.0
+   ],
+   [
+    -18.477591,
+    -7.653669
+   ],
+   [
+    -14.142136,
+    -14.142136
+   ],
+   [
+    -7.653669,
+    -18.477591
+   ],
+   [
+    -0.0,
+    -20.0
+   ],
+   [
+    7.653669,
+    -18.477591
+   ],
+   [
+    14.142136,
+    -14.142136
+   ],
+   [
+    18.477591,
+    -7.653669
+   ],
+   [
+    30.0,
+    0.0
+   ],
+   [
+    27.716386,
+    11.480503
+   ],
+   [
+    21.213203,
+    21.213203
+   ],
+   [
+    11.480503,
+    27.716386
+   ],
+   [
+    0.0,
+    30.0
+   ],
+   [
+    -11.480503,
+    27.716386
+   ],
+   [
+    -21.213203,
+    21.213203
+   ],
+   [
+    -27.716386,
+    11.480503
+   ],
+   [
+    -30.0,
+    0.0
+   ],
+   [
+    -27.716386,
+    -11.480503
+   ],
+   [
+    -21.213203,
+    -21.213203
+   ],
+   [
+    -11.480503,
+    -27.716386
+   ],
+   [
+    -0.0,
+    -30.0
+   ],
+   [
+    11.480503,
+    -27.716386
+   ],
+   [
+    21.213203,
+    -21.213203
+   ],
+   [
+    27.716386,
+    -11.480503
+   ],
+   [
+    40.0,
+    0.0
+   ],
+   [
+    36.955181,
+    15.307337
+   ],
+   [
+    28.284271,
+    28.284271
+   ],
+   [
+    15.307337,
+    36.955181
+   ],
+   [
+    0.0,
+    40.0
+   ],
+   [
+    -15.307337,
+    36.955181
+   ],
+   [
+    -28.284271,
+    28.284271
+   ],
+   [
+    -36.955181,
+    15.307337
+   ],
+   [
+    -40.0,
+    0.0
+   ],
+   [
+    -36.955181,
+    -15.307337
+   ],
+   [
+    -28.284271,
+    -28.284271
+   ],
+   [
+    -15.307337,
+    -36.955181
+   ],
+   [
+    -0.0,
+    -40.0
+   ],
+   [
+    15.307337,
+    -36.955181
+   ],
+   [
+    28.284271,
+    -28.284271
+   ],
+   [
+    36.955181,
+    -15.307337
+   ]
+  ],
+  "split": {
+   "dev_fraction": 0.3,
+   "seed": 20260822,
+   "strata": "overlay_v2 confusion class",
+   "unit": "corridor"
+  },
+  "static_veto": {
+   "catalog": "CatWISE2020 (VizieR II/365)",
+   "factor": 2.0,
+   "min_ndet": 3,
+   "search_arcsec": 30.0
+  },
+  "t0_mjd": 57800.0,
+  "weight_cap": 20.0,
+  "z_grid": {
+   "max_au": 10000.0,
+   "min_au": 550.0,
+   "n": 64,
+   "spacing": "uniform in 1/z"
+  },
+  "zp_ref": 20.0
+ },
+ "registry_source_hash": "sha256:03b9ae3af1cfdbb2156b96d66c16a2f8486f37de5572cdeb0631cc3fa74d0fd4",
+ "split": {
+  "confirmatory": {
+   "corridors": [
+    "61vir",
+    "82eri",
+    "barnard",
+    "epseri",
+    "epsind",
+    "ezaqr",
+    "fomalhaut",
+    "gj1002",
+    "gj1061",
+    "gj1087",
+    "gj1111",
+    "gj12724",
+    "gj13157",
+    "gj2066",
+    "gj229",
+    "gj251",
+    "gj293",
+    "gj3112",
+    "gj318",
+    "gj3306",
+    "gj3512",
+    "gj367",
+    "gj514",
+    "gj518",
+    "gj54",
+    "gj581",
+    "gj588",
+    "gj625",
+    "gj65",
+    "gj66",
+    "gj667",
+    "gj674",
+    "gj682",
+    "gj783",
+    "gj784",
+    "gj832",
+    "gj908",
+    "gj9193",
+    "grb34",
+    "hd219134",
+    "lacaille8760",
+    "lacaille9352",
+    "lhs1723",
+    "luhman16",
+    "procyon",
+    "ross154",
+    "ross248",
+    "sigmadra",
+    "sirius",
+    "taucet",
+    "teegarden",
+    "wolf1069",
+    "wolf359",
+    "wolf437"
+   ],
+   "endpoints": [
+    "61-vir",
+    "82-eri",
+    "barnard-star",
+    "eps-eri",
+    "eps-ind-a",
+    "eps-ind-b",
+    "ez-aqr",
+    "fomalhaut",
+    "gj-1002",
+    "gj-1061",
+    "gj-1087",
+    "gj-1111",
+    "gj-12724",
+    "gj-13157",
+    "gj-2066",
+    "gj-229-a",
+    "gj-251",
+    "gj-293",
+    "gj-3112",
+    "gj-318",
+    "gj-3306",
+    "gj-3512",
+    "gj-367",
+    "gj-514",
+    "gj-518",
+    "gj-54",
+    "gj-581",
+    "gj-588",
+    "gj-625",
+    "gj-66-a",
+    "gj-66-b",
+    "gj-667-c",
+    "gj-674",
+    "gj-682",
+    "gj-783",
+    "gj-784",
+    "gj-832",
+    "gj-908",
+    "gj-9193",
+    "gj65-a",
+    "gj65-b",
+    "groombridge-34-a",
+    "groombridge-34-b",
+    "hd-219134",
+    "lacaille-8760",
+    "lacaille-9352",
+    "lhs-1723",
+    "luhman16-a",
+    "luhman16-b",
+    "procyon-a",
+    "procyon-b",
+    "ross-154",
+    "ross-248",
+    "sigma-dra",
+    "sirius-a",
+    "sirius-b",
+    "tau-cet",
+    "teegarden",
+    "wolf-1069",
+    "wolf-359",
+    "wolf-437"
+   ],
+   "n_corridors": 54,
+   "n_endpoints": 61
+  },
+  "confusion_class": {
+   "61vir": "low",
+   "82eri": "mid",
+   "alphacen": "high+bright-star",
+   "barnard": "mid",
+   "cyg61": "high",
+   "epseri": "mid",
+   "epsind": "low",
+   "ezaqr": "mid",
+   "fomalhaut": "low",
+   "gj1002": "low",
+   "gj1061": "mid",
+   "gj1087": "high",
+   "gj11068": "high",
+   "gj1111": "mid+bright-star",
+   "gj11547": "mid",
+   "gj1221": "high",
+   "gj12724": "mid",
+   "gj1276": "low",
+   "gj13157": "high+bright-star",
+   "gj2012": "low",
+   "gj2066": "high+bright-star",
+   "gj229": "high",
+   "gj251": "high",
+   "gj293": "mid",
+   "gj3112": "mid",
+   "gj318": "high",
+   "gj3306": "mid",
+   "gj338": "mid",
+   "gj3512": "mid+bright-star",
+   "gj367": "high+bright-star",
+   "gj514": "low",
+   "gj518": "low",
+   "gj526": "low",
+   "gj54": "low",
+   "gj581": "low",
+   "gj588": "mid+bright-star",
+   "gj625": "mid",
+   "gj65": "low",
+   "gj66": "mid",
+   "gj667": "high+bright-star",
+   "gj674": "high",
+   "gj682": "high",
+   "gj687": "high",
+   "gj783": "low",
+   "gj784": "low",
+   "gj832": "low",
+   "gj876": "low",
+   "gj908": "low",
+   "gj915": "low",
+   "gj9193": "high",
+   "grb34": "high",
+   "hd219134": "high",
+   "kapteyn": "mid+bright-star",
+   "lacaille8760": "low",
+   "lacaille9352": "mid",
+   "lalande": "low",
+   "lhs1723": "mid",
+   "lp145141": "high",
+   "ltt1445": "mid",
+   "luhman16": "high",
+   "luyten": "high",
+   "procyon": "high",
+   "proxima": "high+bright-star",
+   "ross128": "low",
+   "ross154": "mid",
+   "ross248": "mid",
+   "sigmadra": "high",
+   "sirius": "high",
+   "struve2398": "mid",
+   "taucet": "low",
+   "teegarden": "low",
+   "vanmaanen": "low",
+   "wise0855": "mid",
+   "wolf1061": "mid",
+   "wolf1069": "high",
+   "wolf359": "low",
+   "wolf437": "low"
+  },
+  "dev_fraction": 0.3,
+  "development": {
+   "corridors": [
+    "alphacen",
+    "cyg61",
+    "gj11068",
+    "gj11547",
+    "gj1221",
+    "gj1276",
+    "gj2012",
+    "gj338",
+    "gj526",
+    "gj687",
+    "gj876",
+    "gj915",
+    "kapteyn",
+    "lalande",
+    "lp145141",
+    "ltt1445",
+    "luyten",
+    "proxima",
+    "ross128",
+    "struve2398",
+    "vanmaanen",
+    "wise0855",
+    "wolf1061"
+   ],
+   "endpoints": [
+    "61-cyg-a",
+    "61-cyg-b",
+    "alpha-cen-a",
+    "alpha-cen-b",
+    "gj-11068",
+    "gj-11547",
+    "gj-1221",
+    "gj-1276",
+    "gj-2012",
+    "gj-338-a",
+    "gj-338-b",
+    "gj-526",
+    "gj-687",
+    "gj-876",
+    "gj-915",
+    "kapteyn-star",
+    "lalande-21185",
+    "lp-145-141",
+    "ltt-1445-a",
+    "luyten-star",
+    "proxima-cen",
+    "ross-128",
+    "struve-2398-a",
+    "struve-2398-b",
+    "van-maanen",
+    "wise-0855",
+    "wolf-1061"
+   ],
+   "n_corridors": 23,
+   "n_endpoints": 27
+  },
+  "seed": 20260822,
+  "strata": {
+   "high": {
+    "dev": [
+     "cyg61",
+     "gj11068",
+     "gj1221",
+     "gj687",
+     "lp145141",
+     "luyten"
+    ],
+    "n_corridors": 20,
+    "n_dev": 6
+   },
+   "high+bright-star": {
+    "dev": [
+     "alphacen",
+     "proxima"
+    ],
+    "n_corridors": 6,
+    "n_dev": 2
+   },
+   "low": {
+    "dev": [
+     "gj1276",
+     "gj2012",
+     "gj526",
+     "gj876",
+     "gj915",
+     "lalande",
+     "ross128",
+     "vanmaanen"
+    ],
+    "n_corridors": 26,
+    "n_dev": 8
+   },
+   "mid": {
+    "dev": [
+     "gj11547",
+     "gj338",
+     "ltt1445",
+     "struve2398",
+     "wise0855",
+     "wolf1061"
+    ],
+    "n_corridors": 21,
+    "n_dev": 6
+   },
+   "mid+bright-star": {
+    "dev": [
+     "kapteyn"
+    ],
+    "n_corridors": 4,
+    "n_dev": 1
+   }
+  }
+ },
+ "v1_hypotheses_hash": "sha256:6dfb57e42a38a54d1fd6f27985c2ac45a4a27b00816714c29c651c8f5ed83494"
+}

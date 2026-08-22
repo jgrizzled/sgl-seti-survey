@@ -31,8 +31,7 @@ from sglsurvey.geometry import GeometryContext, locus_radec
 from sglsurvey.snapshots import SnapshotStore
 
 REPO = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(REPO / "surveys" / "wise" / "scripts"))
-from wise_corridors import MEMBERS  # noqa: E402
+from sglsurvey.corridors import MEMBERS  # noqa: E402
 
 OUT_JSON = REPO / "surveys" / "panstarrs" / "targets" / "overlay_v1.json"
 OUT_MD = REPO / "surveys" / "panstarrs" / "targets" / "overlay_v1.md"

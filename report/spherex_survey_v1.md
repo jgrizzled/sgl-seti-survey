@@ -86,3 +86,23 @@ how the rule set was reached.
 AnalysisRuns `run-4f8c9fd41ce9` (v1 estimator, `calib_v2`),
 `run-4fbed2e52668` (v2, `calib_v3`) and the `calib_v4` run (v3; re-issued
 when the northern corridors complete); records under `runs/spherex/`.
+
+---
+
+## Status note (2026-08-22) — exploratory, pending v2
+
+The WISE scientific review of 2026-08-21
+(`surveys/wise/scientific_review.md`) applies to this report: the
+16-offset control maximum is a per-search rank statistic (a noise-only
+cell exceeds it with probability ≈ 1/17, so "FAR < 1/16" is a rank
+statement, not a survey-wide false-alarm rate); injections were
+analytic and tensor-level, so the quoted "90 %-recovery" depths are
+*threshold sensitivity* (`completeness_kind = threshold`) without
+confidence intervals; the phase / cross-detector season, template-
+coverage, bright-static-neighbour and role-coincidence vetoes are
+heuristic review rules with unmeasured selection functions; the locus
+was evaluated at its nominal position. No number is recomputed here.
+The defensible conclusion is *no compelling candidate after heuristic
+review*. The calibrated version is the SPHEREx v2 survey (project plan
+§10.1 step 6, last in the order because the next quick release adds a
+parallax phase).

@@ -106,3 +106,21 @@ were all closed by direct ZTF forced photometry along their tracks.
    analytic interpolation) so PS1 epochs contribute off-grid.
 2. Extend the joint stage to WISE (thermal cell) on these corridors;
    DECam/NOIRLab or SPHEREx for the 15 southern corridors (plan §7 TODO).
+
+---
+
+## Status note (2026-08-22) — exploratory, pending v2
+
+The WISE scientific review of 2026-08-21
+(`surveys/wise/scientific_review.md`) applies to the joint stage: the
+per-archive 8-control thresholds are per-search rank statistics and
+the joint stage multiplies the family (one family-wise error rate
+across archives is needed); injections were tensor-level, so the joint
+depths are *threshold sensitivity* (`completeness_kind = threshold`)
+without confidence intervals and the same source was never injected
+into both archives' images; the phase, split-half and role rules are
+heuristic, the catalogued-star and direct forced-photometry tests the
+only calibrated-in-principle rejections; loci nominal. No number is
+recomputed here. The defensible conclusion is *no compelling candidate
+after heuristic review*. The calibrated version is the joint v2 stage
+(project plan §10.1 step 6, after ZTF v2 and PS1 v2).

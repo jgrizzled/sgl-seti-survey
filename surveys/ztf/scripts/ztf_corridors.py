@@ -1,7 +1,7 @@
 """Shared corridor configuration for the ZTF scripts.
 
 Corridor keys and endpoint→corridor mapping are the shared WISE ones
-(surveys/wise/scripts/wise_corridors.py); membership for ZTF is the set
+(sglsurvey/corridors.py); membership for ZTF is the set
 of corridors graded visible by the ZTF overlay
 (surveys/ztf/targets/overlay_v1.json, Dec > -28). Pilot v1.0 ran the
 first three; the scale-up runs the overlay queue.
@@ -13,8 +13,7 @@ from collections import defaultdict
 from pathlib import Path
 
 _REPO = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(_REPO / "surveys" / "wise" / "scripts"))
-from wise_corridors import CORRIDOR_OF as _WISE_CORRIDOR_OF  # noqa: E402
+from sglsurvey.corridors import CORRIDOR_OF as _WISE_CORRIDOR_OF  # noqa: E402
 
 PILOT_CORRIDORS = ["ross128", "epsind", "proxima"]
 _overlay_path = _REPO / "surveys" / "ztf" / "targets" / "overlay_v1.json"

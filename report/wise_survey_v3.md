@@ -1,6 +1,6 @@
 # WISE/NEOWISE SGL Survey — Report v3
 
-**Date:** 2026-08-21 · **Status:** **complete over the universal target portfolio v2 (10 pc, picky-network baskets)** — 88 endpoints / 77 corridors / 176 endpoint-role hypotheses searched, no surviving candidate, 5,632 injection-calibrated constraints on the corrected (total-flux) depth scale · **Supersedes:** `wise_survey_v2.md`, whose depth labels were optimistic by 1.9–3.3 mag (see §5 erratum)
+**Date:** 2026-08-21 · **Erratum v3.1 (2026-08-22):** see the final section — the exclusion, FAR, W3/W4 and provenance claims below are withdrawn pending `wise_survey_v4.md`; read this report as an exploratory search with no compelling candidate after heuristic review · **Status:** **complete over the universal target portfolio v2 (10 pc, picky-network baskets)** — 88 endpoints / 77 corridors / 176 endpoint-role hypotheses searched, no surviving candidate, 5,632 injection-calibrated constraints on the corrected (total-flux) depth scale · **Supersedes:** `wise_survey_v2.md`, whose depth labels were optimistic by 1.9–3.3 mag (see §5 erratum)
 
 **Pins:** registry v1.5 `sha256:794d9f90…` · hypotheses v1.5 (physics parameters frozen at v1.0, endpoint set expanded v1.1–v1.5) · sglseti `21f6f3d` / `tusay2022_eq5_7_v1` v1.1.0 · calibration v0.2.1 AnalysisRun `run-1b2e86e9219e` (total-flux photometry convention)
 
@@ -265,3 +265,98 @@ Stage summaries: `surveys/wise/results/` (batch 5:
 `batch5_summary.md`); target-selection method:
 `notes/sgl_seti_star_ranking_methods.md`,
 `notes/picky_network_hypothesis_sgl_seti.md`, `targets/`.
+
+---
+
+## Erratum v3.1 (2026-08-22) — claims withdrawn pending the v2 re-analysis
+
+This erratum responds to the scientific review of 2026-08-21
+(`surveys/wise/scientific_review.md`) and is the first step of the v2
+programme (`surveys/wise/v2_plan.md` §0, §9.1; `notes/project_plan.md`
+§10). **No number in this report has been recomputed.** The search,
+its data products, and its records stand; what changes is what they
+are claimed to establish. The status line of this report should be
+read as: *exploratory search, no compelling candidate after the
+survey's heuristic review rules; calibrated exclusion pending v2
+(`report/wise_survey_v4.md`).*
+
+Withdrawn:
+
+1. **"90 %-complete exclusion" across the stated cell.** The §5
+   recovery curves are *threshold-crossing* sensitivity for analytic
+   Gaussian injections added to sampled tensors at grid nodes, under
+   the independent-flicker duty model only. They do not include the
+   candidate vetoes of §4, do not cover the space between grid nodes
+   except through an analytic mismatch factor, and carry no
+   confidence interval (32 repeats per node). The 5,632 Constraint
+   records under `run-1b2e86e9219e` are to be read with
+   `completeness_kind = threshold` (a field added to the schema for
+   v2; v1 records carry it by supersession link, not by rewrite), and
+   their `z_interval_au` blocks leave 9.2 % of the log-uniform prior
+   mass uncovered between blocks.
+2. **"Empirical FAR < 1/8 per grid search".** The 8-control maximum
+   is a per-search rank statistic: a noise-only cell exceeds it with
+   probability ≈ 1/9, so ≈ 78 of the 704 searches were expected to
+   cross and 70 did. The threshold therefore controlled no survey-wide
+   false-alarm rate, and the §4 sentence "empirical FAR < 1/8 per grid
+   search" and the `far_note` on every Constraint are withdrawn. The
+   replacement statement, per cell, is the *rank statement*: the real
+   trajectory's rank among its 8 exchangeable controls, which for a
+   "70 of 704 exceed" census is consistent with the null at the
+   per-search level and says nothing about the survey-wide level
+   (calibrated in v2 with a ~300-trial null ensemble per cell and a
+   family-wise error rate).
+3. **End-to-end W3/W4 exclusions (§6: "~99 km, 300 K at 550 AU").**
+   326 of 352 W3/W4 cells are single-visit cryo cells (< 60
+   exposures), which the adjudicator vetoed automatically; a real
+   source in such a cell would have been vetoed too. The §6 table is
+   relabelled **raw threshold sensitivity for a monochromatic Gaussian
+   source**; no exclusion of warm structures follows from it.
+4. **"99 % confidence locus" and "every stage content-addressed".**
+   The production precise pass evaluated the *nominal* locus and
+   recorded `confidence_level = 0.99` as metadata; the seeded
+   Monte-Carlo propagation was never called in production. AnalysisRun
+   identities hashed tensor *filenames*, not contents, and
+   `observation_set_hash` / `intersection_set_hash` on the calibration
+   runs are the literal string `see-tensor-manifest`. §9's "every
+   stage emits immutable content-addressed records" is true of the
+   Observation / IntersectionEvaluation / ScreenMatch streams and
+   overstated for the calibration products.
+
+Corrected:
+
+5. **Observer arithmetic (§1).** WISE's ~525 km *altitude* is not its
+   geocentric radius; the Earth-centre approximation is bounded by
+   ≈ 6,900 km / 550 AU ≈ **17 mas**, not 2.5 mas. Still negligible
+   against the 6″ PSF; v2 uses the spacecraft state from the L1b
+   headers anyway.
+6. **Vetoes (§4).** Phase split, single-epoch dominance, W1:W2
+   significance ratio, single-visit cryo, "+< 10 % marginal" and
+   bare CatWISE proximity are **heuristic review rules** whose
+   selection functions were never measured; the 70 "vetoed" cells are
+   *closed by heuristic review*, not rejected by calibrated tests. In
+   particular the W1:W2 significance ratio is not a colour and the
+   single-visit cryo rule rejects the expected signature of a real
+   source.
+7. **Motion bound.** The search grid is component-wise
+   (|µ*α|, |µ*δ| ≤ 1″/yr, an L∞ box); §1's "|µ| ≤ 1″/yr" should be
+   read that way. v2 declares it explicitly.
+8. **Scope.** The survey is targeted coverage of a frozen 88-endpoint
+   portfolio; nothing here constrains the prevalence of SGL relays or
+   the Picky-Network hypothesis.
+9. **W4 kernel width (found 2026-08-22 while building v2).**
+   `sglsurvey.photometry` assumed 2.75″ pixels for every band, but W4
+   L1b frames are 508 × 508 at 5.52″/pixel, so the v1 W4 matched
+   filter was twice too wide in pixels (8.7 px ≈ 24″ FWHM instead of
+   12″). Thresholds, controls and the analytic injections used the same
+   kernel, so S/N-based verdicts are self-consistent; the W4 depths are
+   less sensitive than the PSF allows. v2 takes the pixel scale from
+   the frame header; v1's default is kept unchanged for reproducibility.
+
+What remains established: the frozen trajectories of 88 endpoints ×
+2 roles were searched in all four bands with the implemented
+nominal-locus, L∞-motion, Gaussian matched-filter stack; 70 cells
+exceeded the 8-control maximum, consistent with the rank expectation
+(≈ 78); none remained compelling after heuristic review. The v2
+re-analysis (`surveys/wise-v2/`) re-uses every frame, cutout and
+record of this survey and replaces the statistical experiment.

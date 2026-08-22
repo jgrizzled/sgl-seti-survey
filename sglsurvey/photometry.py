@@ -89,6 +89,14 @@ class FluxMap:
     aux: np.ndarray | None = None  # optional per-pixel auxiliary map
     sip: bool = False  # use the iterative SIP inverse (SPHEREx)
     upsample: int = 1  # maps evaluated at 1/upsample-pixel phases
+    # v2 (wise v2_plan §4.5 stamp-response trick): the estimator's
+    # denominator map sum_i p_i^2 g_i, the (flipped, unit-sum) kernel,
+    # the usable-pixel mask and the background level, so that the
+    # response to an added source can be computed locally and exactly.
+    denom: np.ndarray | None = None
+    kernel: np.ndarray | None = None
+    good: np.ndarray | None = None
+    bg: float | None = None
 
     def world2pix(self, ra, dec):
         """Sky -> map pixel coordinates (image pixels x ``upsample``)."""
@@ -156,14 +164,26 @@ class FluxMap:
         return out_f, out_v, out_g
 
 
-def build_flux_map(int_path: Path, unc_path: Path, msk_full_path: Path,
-                   band: str, mjd: float, fatal_mask: int,
-                   magzp: float | None = None) -> FluxMap:
-    """Build the matched-filter maps for one cutout.
+@dataclass
+class WiseCutout:
+    """Calibrated WISE L1b cutout arrays, before any estimator runs —
+    the seam at which image-level injection happens (v2 plan §4.1)."""
 
-    The full-frame -msk is aligned to the cutout by the integer CRPIX
-    offset (IBE cutouts preserve the native pixel grid).
-    """
+    img: np.ndarray       # DN
+    var_pix: np.ndarray   # DN^2
+    good: np.ndarray      # usable pixels (finite, unc > 0, no fatal bit)
+    header: object
+    wcs: object
+    mask_bits: np.ndarray  # aligned -msk bitplanes
+    frame_origin: tuple[int, int]  # (x, y) full-frame pixel of cutout (0, 0)
+
+
+def read_wise_cutout(int_path: Path, unc_path: Path, msk_full_path: Path,
+                     fatal_mask: int) -> WiseCutout:
+    """Read an int/unc cutout pair and align the full-frame -msk to it
+    by the integer CRPIX offset (IBE cutouts preserve the native grid).
+    ``frame_origin`` is the full-frame pixel position of cutout pixel
+    (0, 0), so injection code can pick the focal-plane PRF element."""
     img, hdr, wcs = _read_fits(int_path)
     unc, _, _ = _read_fits(unc_path)
     msk, mhdr, _ = _read_fits(msk_full_path)
@@ -178,10 +198,62 @@ def build_flux_map(int_path: Path, unc_path: Path, msk_full_path: Path,
 
     good = (np.isfinite(img) & np.isfinite(unc) & (unc > 0)
             & ((mcut & fatal_mask) == 0))
-    fwhm_pix = PSF_FWHM_ARCSEC[band] / PIX_ARCSEC
-    flux, var, good_frac = matched_filter(img, unc * unc, good, fwhm_pix)
-    return FluxMap(flux=flux, var=var, good_frac=good_frac, wcs=wcs,
-                   band=band, magzp=magzp, mjd=mjd)
+    return WiseCutout(img=img, var_pix=unc * unc, good=good, header=hdr,
+                      wcs=wcs, mask_bits=mcut, frame_origin=(dx, dy))
+
+
+def flux_map_from_arrays(img: np.ndarray, var_pix: np.ndarray,
+                         good: np.ndarray, wcs, band: str, mjd: float,
+                         magzp: float | None = None,
+                         kernel: np.ndarray | None = None,
+                         keep_inputs: bool = False,
+                         pix_arcsec: float = PIX_ARCSEC) -> FluxMap:
+    """Matched-filter maps from already-read arrays (second half of the
+    seam). ``kernel`` overrides the per-band Gaussian. With
+    ``keep_inputs`` the map also carries ``denom``, ``kernel``, ``good``
+    and ``bg`` for local re-evaluation after an injection.
+
+    ``pix_arcsec`` sets the Gaussian kernel width in pixels. v1 used the
+    W1-W3 scale (2.75") for every band; W4 L1b frames are 5.52"/pixel
+    (508 x 508 native), so the v1 W4 kernel was twice too wide in
+    pixels — a sensitivity loss, recorded in the v3.1 erratum. v2
+    callers pass the header scale (``pix_scale_from_header``)."""
+    fwhm_pix = PSF_FWHM_ARCSEC[band] / pix_arcsec
+    flux, var, good_frac, denom, kern, bg = _matched_filter_full(
+        img, var_pix, good, fwhm_pix, True, kernel)
+    fm = FluxMap(flux=flux, var=var, good_frac=good_frac, wcs=wcs,
+                 band=band, magzp=magzp, mjd=mjd)
+    if keep_inputs:
+        fm.denom, fm.kernel, fm.good, fm.bg = denom, kern, good, bg
+    return fm
+
+
+def build_flux_map(int_path: Path, unc_path: Path, msk_full_path: Path,
+                   band: str, mjd: float, fatal_mask: int,
+                   magzp: float | None = None, inject=None,
+                   keep_inputs: bool = False,
+                   pix_scale_from_header: bool = False) -> FluxMap:
+    """Build the matched-filter maps for one cutout.
+
+    ``inject``, if given, is called as ``inject(cutout)`` with the
+    :class:`WiseCutout` BEFORE the estimator runs and must return the
+    image array to search (typically ``cutout.img + source``); masks and
+    variances are untouched, so an injected source on a fatal pixel is
+    lost as it would be in reality (v2 plan §4.1).
+    """
+    cut = read_wise_cutout(int_path, unc_path, msk_full_path, fatal_mask)
+    img = cut.img if inject is None else np.asarray(inject(cut), dtype=float)
+    pix = PIX_ARCSEC
+    if pix_scale_from_header and "PXSCAL2" in cut.header:
+        pix = abs(float(cut.header["PXSCAL2"]))
+    fm = flux_map_from_arrays(img, cut.var_pix, cut.good, cut.wcs, band,
+                              mjd, magzp, keep_inputs=keep_inputs,
+                              pix_arcsec=pix)
+    fm.pix_arcsec = pix
+    if keep_inputs:
+        fm.frame_origin = cut.frame_origin
+        fm.header = cut.header
+    return fm
 
 
 def matched_filter(img: np.ndarray, var_pix: np.ndarray, good: np.ndarray,
@@ -193,6 +265,13 @@ def matched_filter(img: np.ndarray, var_pix: np.ndarray, good: np.ndarray,
     PSF (odd-sized, centred); it is flipped internally so that the FFT
     product computes a cross-correlation for asymmetric profiles.
     """
+    return _matched_filter_full(img, var_pix, good, fwhm_pix,
+                                subtract_background, kernel)[:3]
+
+
+def _matched_filter_full(img, var_pix, good, fwhm_pix,
+                         subtract_background=True, kernel=None):
+    """As :func:`matched_filter` plus (denom, flipped kernel, bg)."""
     if subtract_background:
         bgpix = img[good]
         if bgpix.size:
@@ -223,7 +302,7 @@ def matched_filter(img: np.ndarray, var_pix: np.ndarray, good: np.ndarray,
     bad = (denom <= 0) | ~np.isfinite(flux)
     flux[bad] = np.nan
     var[bad] = np.nan
-    return flux, var, good_frac
+    return flux, var, good_frac, denom, kernel, bg
 
 
 def _read_fits_any(path: Path):
