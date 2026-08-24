@@ -572,3 +572,79 @@ pessimistic by ~3× in compute and optimistic in analysis time.
 | Throughput | measure it against the archive pipeline's own photometry of a known mover (as done here with the NEOWISE source table), not against H/G predictions |
 | Covariance | optical PSFs make the 0.5 × FWHM test ~5× stricter: with σ_xt,99 up to 2.9″ for ordinary Gaia endpoints, expect ~10–20 % of PS1/ZTF cells to need the cross-track dimension |
 | Pixel scale / kernel | take it from the header everywhere (the W4 lesson) |
+
+## 12.2 Step 6 retrospective (2026-08-23): ZTF, PS1, joint, SPHEREx v2
+
+All four were run by one survey-agnostic engine (`sglsurvey/v2/`:
+build, nulls, inject, completeness, adjudicate, geometry, report, with
+per-survey `profile.py` bindings in `surveys/{ztf,panstarrs,spherex}-v2/`
+and the joint stage in `surveys/joint-v2/joint.py`). Engine
+differences from the WISE scripts: a per-FRAME weight cap (20 × the
+band's median frame weight) accumulated streaming, so that the 99
+trajectories are never held in memory (ZTF 192 × 25 and PS1 360 × 25
+grids); the PSF is a hook (Moffat β = 3 at the frame seeing for
+ZTF/PS1, the exposure's PSF plane for SPHEREx); full (SIP) WCS
+sampling where the cutout spans arcminutes of distortion (SPHEREx).
+
+Results (blind confirmatory sets, family-wise α = 0.05):
+
+| survey | cells | void | R̃_FWER | R > 1 (exp.) | candidates | persistent m90 | worst-of-four |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| ZTF | 228 | 4 | 1.66 | 19 (26) | 0 | zg 23.2 / zr 23.1 / zi 20.9 | 22.3 / 22.1 / 19.4 |
+| PS1 | 450 | 8 | 1.47 | 49 (55) | 0 | g 21.1 / r 20.7 / i 20.4 / z 19.9 / y 19.0 | within ~0.3 |
+| joint | 230 | 5 | 1.78 | 14 (25) | 0 | g 23.0 / r 22.9 / i 20.9 | 22.1 / 22.0 / 20.6 |
+| SPHEREx | (dev 323 cells, R̃_FWER 2.35, 0 candidates; confirmatory in the report) | | | | | | |
+
+Lessons that changed the design during step 6 (each found on a
+development set or a test cell, before the confirmatory completeness):
+
+1. *Double counting of static sources.* Wherever the search image has
+   the static sky removed, a catalogue flux-consistency veto is wrong:
+   ZTF's difference-image regime (fixed by scaling the predicted
+   static flux by the science-image fraction 1 − dfrac at each epoch;
+   without it the veto "explained" injected sources and final m90
+   collapsed by 3 mag) and SPHEREx's static template (no catalogue veto
+   at all; the template is the calibrated static treatment).
+2. *The single-epoch clip bounds the stack's completeness from the
+   bright side.* With PS1's ~20 warps an injected source bright enough
+   for a single-warp 5σ detection is clipped out (the layered-search
+   rule), recovery is non-monotonic and a logistic fit is meaningless;
+   curves are fitted fainter than each cell's single-epoch limit, and
+   every constraint carries that bright limit (the catalogue layer
+   covers brighter sources). The same clip makes the v1 ZTF asteroid
+   control (single-frame S/N ≈ 9) a catalogue-layer object, not a
+   stack control: the stack-regime control needs a fainter mover.
+3. *Local-linear WCS is not enough for SPHEREx* (20′ cutouts with SIP
+   distortion): pixel-level mis-sampling at the edges defeated the
+   template (D2–D4 contamination 30× v1) until the full WCS was used.
+4. *Sentinel magnitudes* (PS1 DR2 −999) must be filtered before any
+   10^(−0.4 m).
+5. *Joint static rule:* OR-ing the per-archive flags rejects sources
+   whose ZTF share alone is explained; the catalogued predictions of
+   both archives must be summed against the joint peak.
+6. *Optical PSFs and the cross-track dimension:* 16 / 18 of 138 cells
+   for ZTF / PS1 (thresholds 0.95″ / 0.5″) vs 3 of 176 for WISE and
+   SPHEREx — as predicted in §12.1.
+7. *The family-wise price scales with the heaviness of the local
+   nulls:* R̃_FWER 1.47 (PS1, 0 heavy-tail cells) → 1.66 (ZTF) → 1.78
+   (joint) → 2.35 (SPHEREx dev) → 2.44 (WISE). PS1 and ZTF lose only
+   0.3–0.6 mag relative to their v1 claims; WISE lost 1–1.5.
+8. *Engineering:* BLAS thread oversubscription (set OMP/OPENBLAS
+   threads to 1 under multiprocessing); the terrestrial-site observer
+   is 10× slower per locus evaluation (the covariance MC uses the
+   Earth centre — the envelope is observer-independent to 0.02″); a
+   locus-cache eviction bug cost one ZTF rebuild; pipelines that hide
+   a stage's exit status behind `| grep` purge inputs after a failed
+   stage — `set -o pipefail`.
+
+Cost: ZTF build ~5 h wall (6 workers, two passes over 66k cutouts for
+the per-frame cap) + injections ~6 h (Galactic-plane corridors up to
+2 h each); PS1 16 fetch/build/inject/purge batches ~7.5 h; SPHEREx
+build ~2.5 h; joint minutes; geometry checks ~40 min each with the
+Earth-centre MC. Disk: ZTF tensors ~60 GB, PS1 ~20 GB, SPHEREx ~10 GB
+(products re-purged for PS1).
+
+Open for the next cycle: a stack-regime asteroid control for ZTF and
+PS1; the SPHEREx template refit with injections (absorption of slow
+real sources is not modelled); a six-detector SPHEREx joint cell from
+the stored accumulators; the WISE-joint stage on the common T0.

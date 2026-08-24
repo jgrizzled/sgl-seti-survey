@@ -1,0 +1,874 @@
+{
+ "alpha": {
+  "fwer_alpha": 0.05,
+  "ks_alpha": 0.01
+ },
+ "completeness": {
+  "injections": "per search unit, 100 per event-window cell on the difference-image substrate, v2 recovery window [2,1]",
+  "spectrum": {
+   "g": "line_532nm",
+   "r": "line_650nm"
+  },
+  "temporal_model": "chord profile of the unit's (b, v_perp, radius)"
+ },
+ "controls": {
+  "A": {
+   "designated_offsets_days": [
+    -97,
+    -71,
+    -47,
+    -23,
+    23,
+    47,
+    71,
+    97
+   ],
+   "kind": "temporal pseudo-windows",
+   "n": 8,
+   "notes": "same window durations/counts as the real set; offsets avoid lunation multiples (29.5k) and the semiannual crossing spacing; any pseudo-window overlapping a real window of either rung is re-drawn to the next offset in a frozen sequence (+/-113, +/-127 d)"
+  },
+  "B": {
+   "designated": "identical designated_indices construction as ztf-v2 (perpendicular offsets follow the track)",
+   "kind": "spatial ring trajectories",
+   "n": 8,
+   "ring_radii_arcsec": [
+    20.0,
+    30.0,
+    40.0
+   ]
+  }
+ },
+ "freeze_content_hash": "sha256:45e51b4624872e401f03e270792cdc3c5f52b4e3cd78643715be8363976fa8de",
+ "freeze_version": "ztf-crossings-thresholds-v1.0",
+ "frozen_at": "2026-08-23",
+ "hypothesis_version": "ztf-crossings-hypotheses-v1.0",
+ "input_hashes": {
+  "coverage": "sha256:7388afd18f617985af9421cf4df205a90d91b4a946db4ba4535585b52132615f",
+  "hypotheses": "sha256:b081cc5476e299f24d3ddb721bebd48c3e95f5070e6e77258b93e4400cfb7d67",
+  "saturation": "sha256:910837bde1e9a5b9587fcdc9e306fd065bd61d186d27e8017748492105121eed"
+ },
+ "quality": {
+  "mask": "primary (bad_quality false, seeing <= 4 arcsec)",
+  "reference_check": "any ZTF reference built from >= 1 in-window epoch is flagged and the node masked (frozen before search)",
+  "robustness": "strict mask re-run reported for any exceedance"
+ },
+ "search_units": {
+  "A": {
+   "n_single_window": 9,
+   "n_units": 29,
+   "single_window": [
+    {
+     "band": "i",
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "i",
+     "radius_au": 1.0,
+     "target_id": "gj-11068"
+    },
+    {
+     "band": "g",
+     "radius_au": 1.0,
+     "target_id": "gj-1221"
+    },
+    {
+     "band": "g",
+     "radius_au": 1.0,
+     "target_id": "gj-2012"
+    },
+    {
+     "band": "r",
+     "radius_au": 1.0,
+     "target_id": "gj-2012"
+    },
+    {
+     "band": "r",
+     "radius_au": 1.0,
+     "target_id": "gj-3512"
+    },
+    {
+     "band": "g",
+     "radius_au": 1.0,
+     "target_id": "gj-518"
+    },
+    {
+     "band": "r",
+     "radius_au": 1.0,
+     "target_id": "gj-518"
+    },
+    {
+     "band": "i",
+     "radius_au": 1.0,
+     "target_id": "wise-0855"
+    }
+   ],
+   "units": [
+    {
+     "band": "g",
+     "n_windows": 7,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "n_windows": 7,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "n_windows": 7,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "n_windows": 7,
+     "radius_au": 0.1,
+     "target_id": "wolf-359"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "ez-aqr"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-1002"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-1087"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-1087"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-11068"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-11068"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-1111"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "i",
+     "n_windows": 2,
+     "radius_au": 1.0,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-13157"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-13157"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-3306"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-3306"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-9193"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "gj-9193"
+    },
+    {
+     "band": "g",
+     "n_windows": 7,
+     "radius_au": 1.0,
+     "target_id": "gj65-b"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "wise-0855"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "wise-0855"
+    },
+    {
+     "band": "g",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "wolf-1069"
+    },
+    {
+     "band": "r",
+     "n_windows": 8,
+     "radius_au": 1.0,
+     "target_id": "wolf-1069"
+    },
+    {
+     "band": "g",
+     "n_windows": 9,
+     "radius_au": 1.0,
+     "target_id": "wolf-359"
+    }
+   ]
+  },
+  "B": {
+   "n_single_epoch": 23,
+   "n_units": 48,
+   "single_epoch": [
+    {
+     "band": "r",
+     "event_id": "evt-14efb12a5dfb",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-24912cfb2980",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-24912cfb2980",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-57e0c494a587",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0056,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-57e0c494a587",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0056,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-57e0c494a587",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-57e0c494a587",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-64fbc0c53c7e",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-942dca4c6bc1",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-942dca4c6bc1",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-967947b04481",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "van-maanen"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-9e66aca585d5",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-a317de8d931c",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-bb683d4cb6a4",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-bb683d4cb6a4",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-bd8fc47e99f2",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-bd8fc47e99f2",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-c6d788f0bf73",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-c6d788f0bf73",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-d6a207b21d89",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-d6a207b21d89",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.0116,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-ed0d233e1163",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "van-maanen"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-f3d9fc10fe38",
+     "n_epochs_max_z": 1,
+     "radius_au": 0.1,
+     "target_id": "van-maanen"
+    }
+   ],
+   "units": [
+    {
+     "band": "g",
+     "event_id": "evt-14efb12a5dfb",
+     "n_epochs_max_z": 3,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-1a3d62092d33",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-1a3d62092d33",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-1aebdfada76b",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-1aebdfada76b",
+     "n_epochs_max_z": 4,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-1ff54c0eec27",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-24912cfb2980",
+     "n_epochs_max_z": 3,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-24912cfb2980",
+     "n_epochs_max_z": 4,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-27f78476fe86",
+     "n_epochs_max_z": 5,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-27f78476fe86",
+     "n_epochs_max_z": 6,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-2936c5c542ab",
+     "n_epochs_max_z": 3,
+     "radius_au": 0.1,
+     "target_id": "ross-128"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-2936c5c542ab",
+     "n_epochs_max_z": 4,
+     "radius_au": 0.1,
+     "target_id": "ross-128"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-3a24ec02ed72",
+     "n_epochs_max_z": 6,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-3a24ec02ed72",
+     "n_epochs_max_z": 8,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-57e0c494a587",
+     "n_epochs_max_z": 3,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-57e0c494a587",
+     "n_epochs_max_z": 3,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-64a2465e6b55",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-64a2465e6b55",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-64fbc0c53c7e",
+     "n_epochs_max_z": 3,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-64fbc0c53c7e",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-69bc6d911334",
+     "n_epochs_max_z": 4,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-69bc6d911334",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-8078ac7feb17",
+     "n_epochs_max_z": 6,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-8078ac7feb17",
+     "n_epochs_max_z": 4,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-889c3c94eebc",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-889c3c94eebc",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-95fce41e507b",
+     "n_epochs_max_z": 3,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-95fce41e507b",
+     "n_epochs_max_z": 4,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-9c6a08c6df77",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-9e66aca585d5",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-a31104250324",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-a31104250324",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-a4de2496af88",
+     "n_epochs_max_z": 4,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-a4de2496af88",
+     "n_epochs_max_z": 8,
+     "radius_au": 0.1,
+     "target_id": "ross-154"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-bb683d4cb6a4",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-bb683d4cb6a4",
+     "n_epochs_max_z": 3,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-ca2a82a2d41e",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-ca2a82a2d41e",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-1276"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-ccb92e30c897",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-ccb92e30c897",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-d6a207b21d89",
+     "n_epochs_max_z": 5,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-d6a207b21d89",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-dc1c51df25a2",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-dc367a0529c3",
+     "n_epochs_max_z": 7,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-dc367a0529c3",
+     "n_epochs_max_z": 7,
+     "radius_au": 0.1,
+     "target_id": "gj-908"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-e78db045804b",
+     "n_epochs_max_z": 4,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "r",
+     "event_id": "evt-e78db045804b",
+     "n_epochs_max_z": 6,
+     "radius_au": 0.1,
+     "target_id": "teegarden"
+    },
+    {
+     "band": "g",
+     "event_id": "evt-f3d9fc10fe38",
+     "n_epochs_max_z": 2,
+     "radius_au": 0.1,
+     "target_id": "van-maanen"
+    }
+   ]
+  }
+ },
+ "split": {
+  "A": {
+   "confirmatory": [
+    "gj-1002",
+    "gj-1221",
+    "gj-1276",
+    "gj-13157",
+    "gj-2012",
+    "gj-3306",
+    "gj-3512",
+    "gj65-b",
+    "teegarden",
+    "wise-0855",
+    "wolf-1069",
+    "wolf-359"
+   ],
+   "dev": [
+    "ez-aqr",
+    "gj-1111",
+    "gj-1087",
+    "gj-11068",
+    "gj-518",
+    "gj-9193"
+   ],
+   "strata": "band-searchability class (gr/g/r)"
+  },
+  "B_grazing": {
+   "dev": [],
+   "note": "no dev set (5 covered events); procedures locked from A + B-wide dev experience; fully confirmatory",
+   "targets": [
+    "gj-1276",
+    "teegarden"
+   ]
+  },
+  "B_wide": {
+   "confirmatory": [
+    "gj-1276",
+    "gj-908",
+    "ross-128",
+    "teegarden",
+    "van-maanen"
+   ],
+   "dev": [
+    "ross-154"
+   ],
+   "dev_eligible": [
+    "gj-908",
+    "ross-128",
+    "ross-154",
+    "van-maanen"
+   ],
+   "targets": [
+    "gj-1276",
+    "gj-908",
+    "ross-128",
+    "ross-154",
+    "teegarden",
+    "van-maanen"
+   ]
+  },
+  "dev_fraction": 0.3,
+  "seed": 20260822,
+  "unit": "target"
+ },
+ "statistics": {
+  "A": {
+   "annulus": "<=10 arcsec station annulus searched with the channel-B construction minus the z-track",
+   "per_window": "inverse-variance weighted mean in-window excess S_w with N_eff (WEIGHT_CAP 20x median epoch weight)",
+   "primary": "S_A = weighted stack of S_w over covered windows; requires >= 2 covered windows; one-sided positive",
+   "single_window_units": "constraint-only, never candidates",
+   "substrate": "PSF forced photometry on ZTF difference images at the star position (star lives in the reference; difference flux is excess by construction)"
+  },
+  "B": {
+   "single_epoch_units": "reportable 'single-epoch exceedance' class; promotion to candidate requires recurrence at a second covered window",
+   "statistic": "S = max over the nested z family of the weighted in-window stack along the (event, z) track; controls take the same max; one-sided positive",
+   "substrate": "PSF forced photometry on ZTF difference images along the per-(event,z) apparent relay track"
+  }
+ },
+ "threshold_rule": {
+  "T": "max one-sided control statistic over the 8 designated controls",
+  "disposition": "every exceedance individually adjudicated by the frozen veto ladder (census, chromatic, rate, recurrence); no silent drops",
+  "exceedance": "R = S / T > 1",
+  "expected_control_crossings": 8.6,
+  "per_search_crossing_probability": "1/9"
+ }
+}

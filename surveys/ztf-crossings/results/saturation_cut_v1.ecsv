@@ -1,0 +1,103 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: target_id, datatype: string}
+# - {name: source, datatype: string}
+# - {name: g_est, datatype: float64}
+# - {name: r_est, datatype: float64}
+# - {name: i_est, datatype: float64}
+# - {name: status_g, datatype: string}
+# - {name: status_r, datatype: string}
+# - {name: status_i, datatype: string}
+# - {name: optically_dark, datatype: bool}
+# - {name: cov_rows_g, datatype: int64}
+# - {name: cov_rows_r, datatype: int64}
+# - {name: cov_rows_i, datatype: int64}
+# schema: astropy-2.0
+target_id source g_est r_est i_est status_g status_r status_i optically_dark cov_rows_g cov_rows_r cov_rows_i
+61-cyg-a gaia_join 6.17 5.02 4.56 excluded excluded excluded False 0 0 0
+61-cyg-b gaia_join 7.12 5.78 5.15 excluded excluded excluded False 0 0 0
+61-vir gaia_join 5.17 4.62 4.46 excluded excluded excluded False 0 0 0
+82-eri gaia_join 4.78 4.17 3.99 excluded excluded excluded False 0 0 0
+alpha-cen-a hand_table 0.4 -0.2 -0.4 excluded excluded excluded False 0 0 0
+alpha-cen-b hand_table 2.0 1.0 0.7 excluded excluded excluded False 0 0 0
+barnard-star gaia_join 10.28 8.78 7.32 excluded excluded excluded False 0 0 0
+eps-eri gaia_join 4.35 3.6 3.37 excluded excluded excluded False 0 0 0
+eps-ind-a gaia_join 5.48 4.52 4.18 excluded excluded excluded False 0 0 0
+eps-ind-b gaia_join 20.56 18.86 16.66 ok ok ok False 0 0 0
+ez-aqr hand_table 13.4 11.1 9.4 marginal excluded excluded False 8 0 0
+fomalhaut hand_table 1.2 1.2 1.3 excluded excluded excluded False 0 0 0
+gj-1002 gaia_join 14.08 12.47 10.62 ok excluded excluded False 8 0 0
+gj-1061 gaia_join 13.3 11.7 9.84 marginal excluded excluded False 0 0 0
+gj-1087 gaia_join 14.55 14.05 13.91 ok ok ok False 8 8 0
+gj-11068 hand_table 16.9 15.4 13.2 ok ok marginal False 8 8 1
+gj-1111 gaia_join 14.61 12.94 10.84 ok excluded excluded False 8 0 0
+gj-11547 gaia_join 16.51 14.81 12.61 ok ok excluded False 0 0 0
+gj-1221 gaia_join 14.61 13.9 13.69 ok ok ok False 1 0 0
+gj-12724 gaia_join 16.52 14.82 12.62 ok ok excluded False 0 0 0
+gj-1276 gaia_join 16.73 15.65 15.24 ok ok ok False 15 16 3
+gj-13157 gaia_join 15.22 14.5 14.28 ok ok ok False 8 8 0
+gj-2012 gaia_join 14.98 14.39 14.22 ok ok ok False 1 1 0
+gj-2066 gaia_join 11.08 9.62 8.55 excluded excluded excluded False 0 0 0
+gj-229-a gaia_join 9.17 7.74 6.85 excluded excluded excluded False 0 0 0
+gj-251 gaia_join 10.88 9.4 8.13 excluded excluded excluded False 0 0 0
+gj-293 gaia_join 14.39 13.86 13.71 ok ok ok False 0 0 0
+gj-3112 gaia_join 14.09 13.74 13.66 ok ok ok False 0 0 0
+gj-318 gaia_join 12.02 11.82 11.82 excluded excluded excluded False 0 0 0
+gj-3306 gaia_join 13.94 13.63 13.57 ok ok ok False 8 8 0
+gj-338-a gaia_join 8.7 7.34 6.63 excluded excluded excluded False 0 0 0
+gj-338-b gaia_join 8.79 7.42 6.69 excluded excluded excluded False 0 0 0
+gj-3512 gaia_join 15.37 13.78 11.94 ok ok excluded False 0 1 0
+gj-367 gaia_join 11.11 9.65 8.56 excluded excluded excluded False 0 0 0
+gj-514 gaia_join 10.07 8.64 7.73 excluded excluded excluded False 0 0 0
+gj-518 gaia_join 15.34 14.53 14.27 ok ok ok False 1 1 0
+gj-526 gaia_join 9.5 8.05 7.12 excluded excluded excluded False 0 0 0
+gj-54 gaia_join 12.62 11.08 9.43 excluded excluded excluded False 0 0 0
+gj-581 gaia_join 11.44 9.96 8.68 excluded excluded excluded False 0 0 0
+gj-588 gaia_join 10.26 8.79 7.6 excluded excluded excluded False 0 0 0
+gj-625 gaia_join 11.08 9.62 8.56 excluded excluded excluded False 0 0 0
+gj-66-a gaia_join 6.39 5.64 5.42 excluded excluded excluded False 0 0 0
+gj-66-b gaia_join 6.52 5.77 5.53 excluded excluded excluded False 0 0 0
+gj-667-c gaia_join 11.33 9.87 8.8 excluded excluded excluded False 0 0 0
+gj-674 gaia_join 10.33 8.86 7.65 excluded excluded excluded False 0 0 0
+gj-682 gaia_join 11.72 10.21 8.68 excluded excluded excluded False 0 0 0
+gj-687 gaia_join 10.04 8.56 7.31 excluded excluded excluded False 0 0 0
+gj-783 gaia_join 5.93 5.17 4.94 excluded excluded excluded False 0 0 0
+gj-784 gaia_join 9.01 7.63 6.85 excluded excluded excluded False 0 0 0
+gj-832 gaia_join 9.67 8.21 7.19 excluded excluded excluded False 0 0 0
+gj-876 gaia_join 10.96 9.46 8.01 excluded excluded excluded False 0 0 0
+gj-908 gaia_join 10.03 8.59 7.68 excluded excluded excluded False 0 0 0
+gj-915 gaia_join 13.1 12.9 12.9 marginal excluded excluded False 0 0 0
+gj-9193 gaia_join 15.17 14.38 14.14 ok ok ok False 8 8 0
+gj65-a gaia_join 12.91 11.26 9.23 excluded excluded excluded False 0 0 0
+gj65-b gaia_join 13.15 11.53 9.63 marginal excluded excluded False 7 0 0
+groombridge-34-a gaia_join 9.12 7.67 6.72 excluded excluded excluded False 0 0 0
+groombridge-34-b gaia_join 11.77 10.27 8.82 excluded excluded excluded False 0 0 0
+hd-219134 gaia_join 6.28 5.41 5.11 excluded excluded excluded False 0 0 0
+kapteyn-star gaia_join 9.89 8.48 7.62 excluded excluded excluded False 0 0 0
+lacaille-8760 gaia_join 7.73 6.36 5.62 excluded excluded excluded False 0 0 0
+lacaille-9352 gaia_join 8.39 6.96 6.05 excluded excluded excluded False 0 0 0
+lalande-21185 gaia_join 8.48 7.02 6.0 excluded excluded excluded False 0 0 0
+lhs-1723 gaia_join 12.78 11.26 9.71 excluded excluded excluded False 0 0 0
+lp-145-141 gaia_join 11.62 11.42 11.42 excluded excluded excluded False 0 0 0
+ltt-1445-a gaia_join 12.08 10.6 9.31 excluded excluded excluded False 0 0 0
+luhman16-a optically_dark nan nan nan ok ok ok True 0 0 0
+luhman16-b optically_dark nan nan nan ok ok ok True 0 0 0
+luyten-star gaia_join 10.65 9.16 7.73 excluded excluded excluded False 0 0 0
+procyon-a hand_table 0.7 0.2 0.1 excluded excluded excluded False 0 0 0
+procyon-b hand_table 11.2 10.8 10.7 excluded excluded excluded False 0 0 0
+proxima-cen gaia_join 11.35 9.72 7.75 excluded excluded excluded False 0 0 0
+ross-128 gaia_join 11.74 10.22 8.65 excluded excluded excluded False 0 0 0
+ross-154 gaia_join 11.2 9.71 8.27 excluded excluded excluded False 0 0 0
+ross-248 gaia_join 12.66 11.07 9.25 excluded excluded excluded False 0 0 0
+sigma-dra gaia_join 5.23 4.57 4.37 excluded excluded excluded False 0 0 0
+sirius-a hand_table -1.3 -1.4 -1.4 excluded excluded excluded False 0 0 0
+sirius-b hand_table 8.3 8.6 8.8 excluded excluded excluded False 0 0 0
+tau-cet gaia_join 4.01 3.4 3.22 excluded excluded excluded False 0 0 0
+teegarden gaia_join 14.72 13.04 10.92 ok marginal excluded False 15 15 0
+van-maanen gaia_join 12.64 12.33 12.27 excluded excluded excluded False 0 0 0
+wise-0855 optically_dark nan nan nan ok ok ok True 8 8 1
+wolf-1061 gaia_join 10.86 9.37 7.98 excluded excluded excluded False 0 0 0
+wolf-1069 gaia_join 14.57 13.01 11.3 ok marginal excluded False 8 8 0
+wolf-359 gaia_join 13.46 11.8 9.73 marginal excluded excluded False 16 0 0
+wolf-437 gaia_join 12.17 10.68 9.27 excluded excluded excluded False 0 0 0

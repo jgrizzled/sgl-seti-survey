@@ -1,0 +1,55 @@
+{
+  "era_mjd": [
+    58178.0,
+    61275.0
+  ],
+  "z_grid_au": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+  ],
+  "ladder": {
+    "A": [
+      0.1,
+      1.0
+    ],
+    "B": [
+      0.0056,
+      0.0116,
+      0.1
+    ]
+  },
+  "summary": {
+    "A": {
+      "0.1": {
+        "n_events": 59,
+        "n_covered_primary": 44,
+        "median_primary_epochs": 3.0
+      },
+      "1.0": {
+        "n_events": 720,
+        "n_covered_primary": 402,
+        "median_primary_epochs": 12.0
+      }
+    },
+    "B": {
+      "0.0056": {
+        "n_events": 35,
+        "n_covered_primary": 1,
+        "median_primary_epochs": 0.0
+      },
+      "0.0116": {
+        "n_events": 43,
+        "n_covered_primary": 5,
+        "median_primary_epochs": 0.0
+      },
+      "0.1": {
+        "n_events": 60,
+        "n_covered_primary": 33,
+        "median_primary_epochs": 1.5
+      }
+    }
+  }
+}

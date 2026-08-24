@@ -1,0 +1,34 @@
+{
+ "a_systematics_template": {
+  "fit_epochs": "off-window only (outside every real window of either rung), deterministic uniform-in-time subsample of <= 150 epochs per (target, band)",
+  "fit_method": "least squares with 3 iterations of 3-sigma clipping",
+  "model": "f_model(t) = c0 + c1*dt_yr + cx*P_ra(t) + cy*P_dec(t) + cs*(seeing - median_seeing)",
+  "parallax_basis": "P_ra, P_dec are the standard parallax factors computed from the astropy Earth barycentric position and the registry (ra, dec, parallax) - phase and shape fully fixed by astrometry; only the two linear couplings cx, cy are fitted (no free-phase sinusoid)",
+  "quality_gate": "unit is searchable only if >= 30 off-window fit epochs survive clipping AND |median of control window statistics| <= 1; otherwise constraint-only",
+  "statistic_input": "per-epoch forced flux minus f_model; window statistic construction unchanged"
+ },
+ "amends": "sha256:45e51b4624872e401f03e270792cdc3c5f52b4e3cd78643715be8363976fa8de",
+ "b_pseudo_window_exclusion": {
+  "rationale": "wide-beam signal leakage into narrow-rung controls inflates T - conservative direction only; rung verdicts on one target declared correlated in trials accounting",
+  "rule": "pseudo-windows must avoid real windows of the SAME rung only (was: either rung)",
+  "undefined_disposition": "units that still lack 8 valid offsets are constraint-only (S and completeness reported; no exceedance test, no candidate claims)"
+ },
+ "c_exceedance_rule": {
+  "replaces": "R = S/T > 1 (ratio unstable for T -> 0+ and sign-invalid for T <= 0)",
+  "rule": "exceedance iff S > max(T, 0); report margin S - T"
+ },
+ "dev_report_hash": "sha256:9c08e49e668b683e1f6a182c0e605a12ab6acd59b110fbb1bcabd6947a69edf9",
+ "freeze_content_hash": "sha256:2474c9c1a42b9d8f7085c8bc6d1f950caaf73eb9a895dd68b64ad6d099534193",
+ "freeze_version": "ztf-crossings-thresholds-v1.1",
+ "frozen_at": "2026-08-23",
+ "scope": "channel A only; channel B constructions unchanged (validated clean on dev)",
+ "unchanged": [
+  "controls count (8) and designated offsets/redraw sequence",
+  "ring construction (channel B)",
+  "WEIGHT_CAP",
+  "masks",
+  "split (dev/confirmatory)",
+  "search-unit definitions",
+  "per-search crossing probability 1/9 (for defined units)"
+ ]
+}

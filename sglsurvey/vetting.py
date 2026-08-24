@@ -314,7 +314,8 @@ def flux_consistency(catalog: StaticCatalog, track_ra: np.ndarray,
                      resp_v: np.ndarray, S_measured: float,
                      S_by_phase: Mapping[int, float] | None = None,
                      search_arcsec: float = 30.0, factor: float = 2.0,
-                     min_ndet: int = MIN_CATALOG_DETECTIONS) -> dict:
+                     min_ndet: int = MIN_CATALOG_DETECTIONS,
+                     epoch_scale: np.ndarray | None = None) -> dict:
     """Can the catalogued static sources near the track account for the
     measured stack S? For every catalogue source within ``search_arcsec``
     of any test epoch's track position, the predicted per-epoch matched-
@@ -328,6 +329,10 @@ def flux_consistency(catalog: StaticCatalog, track_ra: np.ndarray,
     track_ra = np.asarray(track_ra, float)
     track_dec = np.asarray(track_dec, float)
     w = np.asarray(w, float)
+    # per-epoch multiplier on the predicted static flux: the fraction of
+    # the search image that still CONTAINS static sources (ZTF: 1 - the
+    # difference-image weight fraction; 1 for direct images)
+    escale = np.ones(len(w)) if epoch_scale is None else np.nan_to_num(np.asarray(epoch_scale, float), nan=1.0)
     phase = np.asarray(phase)
     ok = np.isfinite(track_ra) & np.isfinite(track_dec) & (w > 0)
     out = {"n_sources_considered": 0, "S_pred": 0.0, "S_measured": float(S_measured),
@@ -345,7 +350,7 @@ def flux_consistency(catalog: StaticCatalog, track_ra: np.ndarray,
     if catalog.ndet is not None:
         sel &= catalog.ndet >= min_ndet
     if catalog.mag is not None:
-        sel &= np.isfinite(catalog.mag)
+        sel &= np.isfinite(catalog.mag) & (catalog.mag > 0) & (catalog.mag < 40)   # sentinels (-999)
     idx = np.where(sel)[0]
     if len(idx) == 0:
         return out
@@ -355,7 +360,7 @@ def flux_consistency(catalog: StaticCatalog, track_ra: np.ndarray,
         d = np.hypot((catalog.ra[k] - track_ra) * cosd,
                      catalog.dec[k] - track_dec) * 3600.0
         resp = np.interp(d, resp_r_arcsec, resp_v, right=0.0)
-        f = 10 ** (0.4 * (zp_ref - float(catalog.mag[k]))) * resp
+        f = 10 ** (0.4 * (zp_ref - float(catalog.mag[k]))) * resp * escale
         f = np.where(ok, f, 0.0)
         fpred += f
         Sk = float((w * f).sum() / np.sqrt(w[ok].sum()))
@@ -409,3 +414,47 @@ def holdout_prediction_test(S_early_node: float, f_early: float,
 
 
 MIN_EPOCHS_HOLDOUT = 5
+
+
+def load_2mass_vizier(ra_deg: float, dec_deg: float, radius_deg: float,
+                      cache_dir: Path, band: str = "J", timeout_s: float = 120.0
+                      ) -> StaticCatalog:
+    """2MASS PSC (VizieR II/246) cone cached under ``cache_dir``; ``mag``
+    is the requested band's Vega magnitude. ``ndet`` is set to 3 for
+    every entry with a good photometric flag in that band (2MASS has no
+    detection count; PSC entries are confirmed point sources)."""
+    import hashlib
+
+    import requests
+
+    col = {"J": "Jmag", "H": "Hmag", "K": "Kmag"}[band]
+    params = {"-source": "II/246/out", "-c": f"{ra_deg:.6f} {dec_deg:.6f}",
+              "-c.rs": f"{radius_deg * 3600:.1f}", "-out.max": "unlimited",
+              "-out": "RAJ2000,DEJ2000,Jmag,Hmag,Kmag,Qflg"}
+    key = hashlib.sha256(json.dumps(params, sort_keys=True).encode()).hexdigest()[:16]
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    p = cache_dir / f"2mass_{key}.tsv"
+    if not p.exists():
+        r = requests.get("https://vizier.cds.unistra.fr/viz-bin/asu-tsv", params=params, timeout=timeout_s)
+        r.raise_for_status()
+        p.write_text("# " + json.dumps(params) + "\n" + r.text)
+    lines = [l for l in p.read_text().splitlines() if l and not l.startswith("#")]
+    rows = []
+    if lines:
+        hdr = lines[0].split("\t")
+        for l in lines[3:]:
+            v = l.split("\t")
+            if len(v) == len(hdr):
+                rows.append(dict(zip(hdr, [x.strip() for x in v])))
+
+    def f(r, k):
+        try:
+            return float(r[k])
+        except (KeyError, ValueError):
+            return np.nan
+    qi = {"J": 0, "H": 1, "K": 2}[band]
+    return StaticCatalog(
+        label=f"2mass-psc-vizier-{band}",
+        ra=np.array([f(r, "RAJ2000") for r in rows]), dec=np.array([f(r, "DEJ2000") for r in rows]),
+        mag=np.array([f(r, col) for r in rows]),
+        ndet=np.array([3 if (r.get("Qflg", "XXX") + "XXX")[qi] in "ABC" else 0 for r in rows]))

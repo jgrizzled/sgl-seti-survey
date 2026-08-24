@@ -326,7 +326,8 @@ ZTF_PIX_ARCSEC = 1.012
 
 def build_flux_map_ztf(sci_path: Path, diff_path: Path | None,
                        msk_path: Path, fatal_mask: int, band: str,
-                       mjd: float) -> FluxMap:
+                       mjd: float, keep_inputs: bool = False,
+                       inject=None) -> FluxMap:
     """ZTF variant. The search image is a pixelwise hybrid: the
     PSF-matched difference image wherever the reference image exists
     (static field removed), and the sky-subtracted science image in the
@@ -366,6 +367,11 @@ def build_flux_map_ztf(sci_path: Path, diff_path: Path | None,
                 is_diff &= np.abs(diff - fill) > 2.0
         img = np.where(is_diff, diff, img)
     good = unmasked & np.isfinite(img)
+    if inject is not None:
+        # v2 image-level injection: the source is added to the search
+        # image (difference image where it exists, sky-subtracted science
+        # image elsewhere) BEFORE the estimator; masks/variances untouched
+        img = np.asarray(inject(img, hdr, wcs), dtype=float)
 
     def robust_var(pix):
         if pix.size < 50:
@@ -384,16 +390,22 @@ def build_flux_map_ztf(sci_path: Path, diff_path: Path | None,
     fwhm_arcsec = float(hdr.get("SEEING", 2.0)) or 2.0
     fwhm_pix = fwhm_arcsec / ZTF_PIX_ARCSEC
     # background already removed in both regimes
-    flux, var, good_frac = matched_filter(img, var_pix, good, fwhm_pix,
-                                          subtract_background=False)
+    flux, var, good_frac, denom, kern, bg = _matched_filter_full(
+        img, var_pix, good, fwhm_pix, subtract_background=False)
     kernel = _gaussian_kernel(fwhm_pix, int(np.ceil(2.5 * fwhm_pix)))
     with np.errstate(divide="ignore", invalid="ignore"):
         dfrac = _xcorr((good & is_diff).astype(float), kernel) / np.maximum(
             _xcorr(good.astype(float), kernel), 1e-9)
-    return FluxMap(flux=flux, var=var, good_frac=good_frac, wcs=wcs,
-                   band=band, magzp=(float(hdr["MAGZP"])
-                                     if "MAGZP" in hdr else None),
-                   mjd=mjd, aux=np.clip(dfrac, 0.0, 1.0))
+    fm = FluxMap(flux=flux, var=var, good_frac=good_frac, wcs=wcs,
+                 band=band, magzp=(float(hdr["MAGZP"])
+                                   if "MAGZP" in hdr else None),
+                 mjd=mjd, aux=np.clip(dfrac, 0.0, 1.0))
+    fm.fwhm_arcsec = fwhm_arcsec
+    fm.pix_arcsec = ZTF_PIX_ARCSEC
+    fm.header = hdr
+    if keep_inputs:
+        fm.denom, fm.kernel, fm.good, fm.bg = denom, kern, good, bg
+    return fm
 
 
 SPHEREX_PIX_ARCSEC = 6.15
@@ -436,7 +448,8 @@ def spherex_kernel(psf_plane: np.ndarray, oversamp: int = 10,
 
 def build_flux_map_spherex(cut_path: Path, fatal_mask: int, band: str,
                            mjd: float, use_psf: bool = True,
-                           upsample: int = 2) -> FluxMap:
+                           upsample: int = 2, keep_inputs: bool = False,
+                           inject=None) -> FluxMap:
     """SPHEREx variant on a slim cutout (adapter ``irsa_spherex``).
 
     Search image = IMAGE - ZODI (model) with a robust constant residual
@@ -473,6 +486,10 @@ def build_flux_map_spherex(cut_path: Path, fatal_mask: int, band: str,
     to_ujy = omega_sr * 1e12  # MJy/sr * sr -> MJy -> uJy
     fwhm_pix = float(hdr.get("PSF_FWHM", 5.3)) / SPHEREX_PIX_ARCSEC
     resid = img - zodi
+    if inject is not None:
+        # v2 image-level injection (MJy/sr surface brightness added to
+        # the zodi-subtracted image; masks/variance untouched)
+        resid = np.asarray(inject(resid, hdr, wcs, psf, omega_sr), dtype=float)
     # Empirical variance: the pipeline VARIANCE plane omits confusion /
     # zodi-model residuals in sparse fields and is conservative by up to
     # ~3x in the deep fields (template reduced chi2 0.12 before this
@@ -496,6 +513,7 @@ def build_flux_map_spherex(cut_path: Path, fatal_mask: int, band: str,
     v = np.empty_like(flux)
     good_frac = np.empty_like(flux)
     kernel0 = None
+    phase_parts = []
     for dy in range(UP):
         for dx in range(UP):
             if UP == 1 and not (use_psf and psf.ndim == 2):
@@ -503,18 +521,28 @@ def build_flux_map_spherex(cut_path: Path, fatal_mask: int, band: str,
             else:
                 kern = spherex_kernel(psf, shift_pix=(dx / UP, dy / UP))
                 kernel0 = kern if (dx == 0 and dy == 0) else kernel0
-            f_, v_, g_ = matched_filter(resid, var * var_scale, good,
-                                        fwhm_pix, subtract_background=True,
-                                        kernel=kern)
+            f_, v_, g_, den_, kf_, bg_ = _matched_filter_full(
+                resid, var * var_scale, good, fwhm_pix, True, kern)
             flux[dy::UP, dx::UP] = f_
             v[dy::UP, dx::UP] = v_
             good_frac[dy::UP, dx::UP] = g_
+            if keep_inputs:
+                phase_parts.append((dy, dx, kf_, den_))
     fm = FluxMap(flux=flux * to_ujy, var=v * to_ujy * to_ujy,
                  good_frac=good_frac, wcs=wcs, band=band, magzp=23.9,
                  mjd=mjd, sip=True, upsample=UP)
     fm.var_scale = var_scale
     fm.kernel = kernel0
     fm.omega_sr = omega_sr
+    fm.to_ujy = to_ujy
+    fm.psf_plane = psf
+    fm.pix_arcsec = SPHEREX_PIX_ARCSEC
+    fm.fwhm_arcsec = float(hdr.get("PSF_FWHM", 5.3))
+    fm.header = hdr
+    if keep_inputs:
+        fm.phase_parts = phase_parts   # (dy, dx, flipped kernel, denom) per sub-pixel phase
+        fm.good = good
+        fm.denom = phase_parts[0][3] if phase_parts else None
     return fm
 
 
@@ -523,7 +551,8 @@ PS1_PIX_ARCSEC = 0.25
 
 def build_flux_map_ps1(img_path: Path, wt_path: Path | None,
                        msk_full_path: Path, fatal_mask: int, band: str,
-                       mjd: float, magzp: float | None = None) -> FluxMap:
+                       mjd: float, magzp: float | None = None,
+                       keep_inputs: bool = False, inject=None) -> FluxMap:
     """Pan-STARRS1 warp variant (adapter ``mast_ps1``).
 
     Inputs are a fitscut image cutout (full skycell WCS with shifted
@@ -584,9 +613,10 @@ def build_flux_map_ps1(img_path: Path, wt_path: Path | None,
     see = float(hdr.get("CHIP.SEEING", hdr.get("HIERARCH CHIP.SEEING", 5.0))
                 or 5.0)
     fwhm_pix = float(np.clip(see, 2.0, 16.0))
-    flux, var, good_frac = matched_filter(img, np.nan_to_num(var_pix, nan=1e30),
-                                          good, fwhm_pix,
-                                          subtract_background=True)
+    if inject is not None:
+        img = np.asarray(inject(img, hdr, wcs), dtype=float)
+    flux, var, good_frac, denom, kern, bg = _matched_filter_full(
+        img, np.nan_to_num(var_pix, nan=1e30), good, fwhm_pix, True)
     if magzp is None:
         zp = hdr.get("FPA.ZP", hdr.get("HIERARCH FPA.ZP"))
         magzp = float(zp) if zp is not None else None
@@ -598,4 +628,9 @@ def build_flux_map_ps1(img_path: Path, wt_path: Path | None,
     fm.bg_sigma = mad
     fm.exptime = float(hdr.get("EXPTIME", 0.0) or 0.0)
     fm.mjd_obs = float(hdr.get("MJD-OBS", mjd))
+    fm.pix_arcsec = PS1_PIX_ARCSEC
+    fm.fwhm_arcsec = fwhm_pix * PS1_PIX_ARCSEC
+    fm.header = hdr
+    if keep_inputs:
+        fm.denom, fm.kernel, fm.good, fm.bg = denom, kern, good, bg
     return fm

@@ -1,0 +1,12 @@
+{
+ "amends": "sha256:2474c9c1a42b9d8f7085c8bc6d1f950caaf73eb9a895dd68b64ad6d099534193",
+ "d_variance_rescale": {
+  "effect": "window statistics and controls are standardized by the empirical residual scatter, so S is O(1) under the null and the v1.1 quality gate |median control| <= 1 is meaningful; the exceedance comparison S > max(T, 0) is unchanged (scale cancels between S and T)",
+  "rationale": "dev v1.1 showed matched-filter variances understate bright-star residual scatter by ~10^2-10^4 - the WISE v1 lesson (confusion, not noise, sets depth) applied to blended-star difference photometry",
+  "rule": "per (target, band): after the v1.1 template fit, per-epoch variances are scaled by k = median(r_i^2 / v_i) / 0.4549 over the sigma-clipped off-window fit epochs (robust chi-square-per-dof; 0.4549 = median of chi^2_1), floored at k = 1 (never below the matched-filter background variance)"
+ },
+ "freeze_content_hash": "sha256:9b51e02482aa52a069aa5edbcad5feabc477ec5529819d7bcd8c2a803e80318b",
+ "freeze_version": "ztf-crossings-thresholds-v1.2",
+ "frozen_at": "2026-08-23",
+ "scope": "channel A only; adds one element on top of v1.1, which is otherwise unchanged (as is channel B under v1.0)"
+}

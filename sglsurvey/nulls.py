@@ -40,7 +40,8 @@ MIN_EPOCHS = 5
 
 # -- stacking -----------------------------------------------------------
 def stack_weights(v: np.ndarray, g: np.ndarray, epoch_ok=None,
-                  f: np.ndarray | None = None, clip_sigma: float | None = None):
+                  f: np.ndarray | None = None, clip_sigma: float | None = None,
+                  frame_cap: np.ndarray | None = None):
     """Capped inverse-variance weights (E, *grid) and the validity mask.
 
     ``epoch_ok`` (E,) boolean drops whole epochs (quality masks, phase
@@ -62,6 +63,11 @@ def stack_weights(v: np.ndarray, g: np.ndarray, epoch_ok=None,
         valid &= np.asarray(epoch_ok, dtype=bool).reshape(
             (-1,) + (1,) * (valid.ndim - 1))
     w = np.where(valid, 1.0 / np.where(valid, v, 1.0), 0.0).astype(np.float32)
+    if frame_cap is not None:
+        # per-frame cap (the v2 engine for ZTF/PS1/SPHEREx): one cap per
+        # epoch, precomputed as WEIGHT_CAP x the band's median frame weight
+        cap = np.asarray(frame_cap, dtype=np.float32).reshape((-1,) + (1,) * (w.ndim - 1))
+        return np.minimum(w, cap).astype(np.float32), valid
     with np.errstate(all="ignore"):
         wmed = np.nanmedian(np.where(w > 0, w, np.nan), axis=0)
     cap = WEIGHT_CAP * np.nan_to_num(wmed, nan=np.inf, posinf=np.inf)
@@ -71,14 +77,14 @@ def stack_weights(v: np.ndarray, g: np.ndarray, epoch_ok=None,
 
 def stack_S(f: np.ndarray, v: np.ndarray, g: np.ndarray, epoch_ok=None,
             return_parts: bool = False, clip_sigma: float | None = None,
-            min_epochs: int = MIN_EPOCHS):
+            min_epochs: int = MIN_EPOCHS, frame_cap: np.ndarray | None = None):
     """Stack significance S over epochs (axis 0) for one trajectory.
 
     ``f, v, g`` have shape (E, *grid). Nodes with fewer than
     ``min_epochs`` contributing epochs are NaN. With ``return_parts``
     also returns (A, B, n_epochs, w) for downstream diagnostics.
     """
-    w, valid = stack_weights(v, g, epoch_ok, f=f, clip_sigma=clip_sigma)
+    w, valid = stack_weights(v, g, epoch_ok, f=f, clip_sigma=clip_sigma, frame_cap=frame_cap)
     f = np.where(valid, np.nan_to_num(np.asarray(f, dtype=np.float32)), 0.0)
     A = (f * w).sum(axis=0)
     B = w.sum(axis=0)
@@ -135,11 +141,11 @@ def exceedance_ratios(maxima: np.ndarray, designated: np.ndarray):
 
 
 # -- time scrambling ----------------------------------------------------
-def phase_parts(f0, v0, g0, phase, epoch_ok=None):
+def phase_parts(f0, v0, g0, phase, epoch_ok=None, frame_cap=None, clip_sigma=None):
     """Per-parallax-phase stack numerators/denominators (A_p, B_p, n_p)
     of the real trajectory, each (nz, nm, nm); the weight cap is the
     whole-cell one so that sum_p A_p / sqrt(sum_p B_p) == stack_S."""
-    w, valid = stack_weights(v0, g0, epoch_ok, f=f0)
+    w, valid = stack_weights(v0, g0, epoch_ok, f=f0, frame_cap=frame_cap, clip_sigma=clip_sigma)
     fw = np.where(valid, np.nan_to_num(np.asarray(f0, dtype=np.float32)), 0.0) * w
     phase = np.asarray(phase)
     parts = {}
@@ -186,7 +192,7 @@ def phase_scrambled_maxima(parts: dict, n_scramble: int,
 
 def epoch_scrambled_maxima(f0: np.ndarray, v0: np.ndarray, g0: np.ndarray,
                            n_scramble: int, rng: np.random.Generator,
-                           epoch_ok=None) -> np.ndarray:
+                           epoch_ok=None, frame_cap=None, clip_sigma=None) -> np.ndarray:
     """Grid maxima of ``n_scramble`` per-epoch scrambles of the real
     trajectory (E, nz, nm, nm): per epoch the z index is cyclically
     shifted by a random amount and the mu nodes are randomly permuted,
@@ -197,7 +203,7 @@ def epoch_scrambled_maxima(f0: np.ndarray, v0: np.ndarray, g0: np.ndarray,
     cells (measured 2026-08-22 on gj-625/rx/W1: scramble maxima ~12 vs
     spatial controls 26-67); reported as a diagnostic, never pooled.
     """
-    w, valid = stack_weights(v0, g0, epoch_ok, f=f0)
+    w, valid = stack_weights(v0, g0, epoch_ok, f=f0, frame_cap=frame_cap, clip_sigma=clip_sigma)
     fw = np.where(valid, np.nan_to_num(np.asarray(f0, dtype=np.float32)), 0.0) * w
     E, nz, nm, _ = fw.shape
     fw = fw.reshape(E, nz, nm * nm)

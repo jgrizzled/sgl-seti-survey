@@ -1,0 +1,302 @@
+{
+ "A": [
+  {
+   "target_id": "ez-aqr",
+   "band": "g",
+   "radius_au": 1.0,
+   "control_defined": false,
+   "n_valid_offsets": 2,
+   "S": -54873.896,
+   "n_windows_with_data": 8,
+   "controls_partial": [
+    -13178.187,
+    -21436.217
+   ],
+   "T_partial": -13178.187,
+   "R_partial": null,
+   "status": "control_undefined (diagnostic only)"
+  },
+  {
+   "target_id": "gj-1087",
+   "band": "g",
+   "radius_au": 1.0,
+   "control_defined": false,
+   "n_valid_offsets": 4,
+   "S": -10762.267,
+   "n_windows_with_data": 8,
+   "controls_partial": [
+    -8889.122,
+    -10144.65,
+    -6618.262,
+    -5207.191
+   ],
+   "T_partial": -5207.191,
+   "R_partial": null,
+   "status": "control_undefined (diagnostic only)"
+  },
+  {
+   "target_id": "gj-1087",
+   "band": "r",
+   "radius_au": 1.0,
+   "control_defined": false,
+   "n_valid_offsets": 4,
+   "S": -15972.561,
+   "n_windows_with_data": 8,
+   "controls_partial": [
+    -12898.649,
+    -15302.065,
+    -9837.445,
+    -7021.367
+   ],
+   "T_partial": -7021.367,
+   "R_partial": null,
+   "status": "control_undefined (diagnostic only)"
+  },
+  {
+   "target_id": "gj-11068",
+   "band": "g",
+   "radius_au": 1.0,
+   "control_defined": false,
+   "n_valid_offsets": 4,
+   "S": 95.915,
+   "n_windows_with_data": 8,
+   "controls_partial": [
+    68.435,
+    85.636,
+    51.548,
+    41.182
+   ],
+   "T_partial": 85.636,
+   "R_partial": 1.12,
+   "status": "control_undefined (diagnostic only)"
+  },
+  {
+   "target_id": "gj-11068",
+   "band": "r",
+   "radius_au": 1.0,
+   "control_defined": false,
+   "n_valid_offsets": 4,
+   "S": 595.524,
+   "n_windows_with_data": 8,
+   "controls_partial": [
+    457.003,
+    542.893,
+    346.61,
+    279.152
+   ],
+   "T_partial": 542.893,
+   "R_partial": 1.097,
+   "status": "control_undefined (diagnostic only)"
+  },
+  {
+   "target_id": "gj-1111",
+   "band": "g",
+   "radius_au": 1.0,
+   "control_defined": false,
+   "n_valid_offsets": 2,
+   "S": -4266.926,
+   "n_windows_with_data": 8,
+   "controls_partial": [
+    -3328.908,
+    -2996.945
+   ],
+   "T_partial": -2996.945,
+   "R_partial": null,
+   "status": "control_undefined (diagnostic only)"
+  },
+  {
+   "target_id": "gj-9193",
+   "band": "g",
+   "radius_au": 1.0,
+   "control_defined": false,
+   "n_valid_offsets": 4,
+   "S": -200.858,
+   "n_windows_with_data": 2,
+   "controls_partial": [
+    -1040.845,
+    -1003.312,
+    -942.569,
+    -327.163
+   ],
+   "T_partial": -327.163,
+   "R_partial": null,
+   "status": "control_undefined (diagnostic only)"
+  },
+  {
+   "target_id": "gj-9193",
+   "band": "r",
+   "radius_au": 1.0,
+   "control_defined": false,
+   "n_valid_offsets": 4,
+   "S": -738.393,
+   "n_windows_with_data": 2,
+   "controls_partial": [
+    -1561.84,
+    -1524.028,
+    -2771.823,
+    -1845.264
+   ],
+   "T_partial": -1524.028,
+   "R_partial": null,
+   "status": "control_undefined (diagnostic only)"
+  }
+ ],
+ "B": [
+  {
+   "target_id": "ross-154",
+   "band": "g",
+   "event_id": "evt-3a24ec02ed72",
+   "t_ca_mjd": 59215.87355927083,
+   "n_epochs": 6,
+   "S": 0.923,
+   "n_controls": 8,
+   "T": 1.717,
+   "R": 0.538,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "r",
+   "event_id": "evt-3a24ec02ed72",
+   "t_ca_mjd": 59215.87355927083,
+   "n_epochs": 8,
+   "S": 0.332,
+   "n_controls": 8,
+   "T": 2.402,
+   "R": 0.138,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "g",
+   "event_id": "evt-69bc6d911334",
+   "t_ca_mjd": 58850.61487012731,
+   "n_epochs": 4,
+   "S": 1.01,
+   "n_controls": 8,
+   "T": 2.148,
+   "R": 0.47,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "r",
+   "event_id": "evt-69bc6d911334",
+   "t_ca_mjd": 58850.61487012731,
+   "n_epochs": 2,
+   "S": 1.834,
+   "n_controls": 8,
+   "T": 2.513,
+   "R": 0.73,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "g",
+   "event_id": "evt-8078ac7feb17",
+   "t_ca_mjd": 60676.89983246528,
+   "n_epochs": 6,
+   "S": 1.065,
+   "n_controls": 8,
+   "T": 2.648,
+   "R": 0.402,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "r",
+   "event_id": "evt-8078ac7feb17",
+   "t_ca_mjd": 60676.89983246528,
+   "n_epochs": 4,
+   "S": 1.812,
+   "n_controls": 8,
+   "T": 4.152,
+   "R": 0.436,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "g",
+   "event_id": "evt-95fce41e507b",
+   "t_ca_mjd": 60311.644916840276,
+   "n_epochs": 1,
+   "S": 1.202,
+   "n_controls": 8,
+   "T": 1.99,
+   "R": 0.604,
+   "class": "single_epoch",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "r",
+   "event_id": "evt-95fce41e507b",
+   "t_ca_mjd": 60311.644916840276,
+   "n_epochs": 2,
+   "S": 0.132,
+   "n_controls": 8,
+   "T": 1.099,
+   "R": 0.12,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "r",
+   "event_id": "evt-9e66aca585d5",
+   "t_ca_mjd": 61042.15616667824,
+   "n_epochs": 2,
+   "S": -0.444,
+   "n_controls": 8,
+   "T": 8.764,
+   "R": -0.051,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "g",
+   "event_id": "evt-a4de2496af88",
+   "t_ca_mjd": 58485.35872881945,
+   "n_epochs": 4,
+   "S": 1.107,
+   "n_controls": 8,
+   "T": 2.931,
+   "R": 0.378,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "r",
+   "event_id": "evt-a4de2496af88",
+   "t_ca_mjd": 58485.35872881945,
+   "n_epochs": 8,
+   "S": 1.352,
+   "n_controls": 8,
+   "T": 3.576,
+   "R": 0.378,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "ross-154",
+   "band": "g",
+   "event_id": "evt-9e66aca585d5",
+   "t_ca_mjd": 61042.15616667824,
+   "n_epochs": 1,
+   "S": 1.303,
+   "n_controls": 8,
+   "T": 2.461,
+   "R": 0.53,
+   "class": "single_epoch",
+   "exceedance": false
+  }
+ ]
+}

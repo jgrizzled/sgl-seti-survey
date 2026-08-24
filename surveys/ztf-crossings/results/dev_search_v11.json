@@ -1,0 +1,206 @@
+{
+ "A": [
+  {
+   "target_id": "ez-aqr",
+   "band": "g",
+   "radius_au": 1.0,
+   "n_valid_offsets": 2,
+   "control_defined": false,
+   "gate": {
+    "n_fit": 109,
+    "n_fit_kept": 92,
+    "fit_rms_before": 43211.74694473385,
+    "fit_rms_after": 9935.740618482001
+   },
+   "median_control": 632.957,
+   "S": 7825.367,
+   "n_windows_with_data": 8,
+   "controls": [
+    811.49,
+    454.425
+   ],
+   "T": 811.49,
+   "margin": 7013.877,
+   "status": "constraint_only",
+   "exceedance": false
+  },
+  {
+   "target_id": "gj-1087",
+   "band": "g",
+   "radius_au": 1.0,
+   "n_valid_offsets": 4,
+   "control_defined": false,
+   "gate": {
+    "n_fit": 186,
+    "n_fit_kept": 186,
+    "fit_rms_before": 16237.888431527204,
+    "fit_rms_after": 8833.79656592041
+   },
+   "median_control": -308.151,
+   "S": 1202.341,
+   "n_windows_with_data": 8,
+   "controls": [
+    -399.06,
+    -366.679,
+    -249.623,
+    -172.376
+   ],
+   "T": -172.376,
+   "margin": 1202.341,
+   "status": "constraint_only",
+   "exceedance": false
+  },
+  {
+   "target_id": "gj-1087",
+   "band": "r",
+   "radius_au": 1.0,
+   "n_valid_offsets": 4,
+   "control_defined": false,
+   "gate": {
+    "n_fit": 173,
+    "n_fit_kept": 172,
+    "fit_rms_before": 20990.15415873538,
+    "fit_rms_after": 13068.439164621574
+   },
+   "median_control": -312.087,
+   "S": 2113.105,
+   "n_windows_with_data": 8,
+   "controls": [
+    -686.263,
+    -203.685,
+    -224.571,
+    -399.604
+   ],
+   "T": -203.685,
+   "margin": 2113.105,
+   "status": "constraint_only",
+   "exceedance": false
+  },
+  {
+   "target_id": "gj-11068",
+   "band": "g",
+   "radius_au": 1.0,
+   "n_valid_offsets": 4,
+   "control_defined": false,
+   "gate": {
+    "n_fit": 167,
+    "n_fit_kept": 164,
+    "fit_rms_before": 227.36449049986703,
+    "fit_rms_after": 94.1459401534415
+   },
+   "median_control": 1.493,
+   "S": -1.411,
+   "n_windows_with_data": 8,
+   "controls": [
+    2.128,
+    0.857,
+    -0.259,
+    4.062
+   ],
+   "T": 4.062,
+   "margin": -5.473,
+   "status": "constraint_only",
+   "exceedance": false
+  },
+  {
+   "target_id": "gj-11068",
+   "band": "r",
+   "radius_au": 1.0,
+   "n_valid_offsets": 4,
+   "control_defined": false,
+   "gate": {
+    "n_fit": 144,
+    "n_fit_kept": 144,
+    "fit_rms_before": 1623.695950013596,
+    "fit_rms_after": 1286.4516452044966
+   },
+   "median_control": 37.552,
+   "S": 47.492,
+   "n_windows_with_data": 8,
+   "controls": [
+    33.092,
+    42.013,
+    -0.804,
+    47.241
+   ],
+   "T": 47.241,
+   "margin": 0.251,
+   "status": "constraint_only",
+   "exceedance": false
+  },
+  {
+   "target_id": "gj-1111",
+   "band": "g",
+   "radius_au": 1.0,
+   "n_valid_offsets": 2,
+   "control_defined": false,
+   "gate": {
+    "n_fit": 210,
+    "n_fit_kept": 209,
+    "fit_rms_before": 7155.935008237303,
+    "fit_rms_after": 3138.1664411811416
+   },
+   "median_control": -117.991,
+   "S": -326.298,
+   "n_windows_with_data": 8,
+   "controls": [
+    -159.596,
+    -76.386
+   ],
+   "T": -76.386,
+   "margin": -326.298,
+   "status": "constraint_only",
+   "exceedance": false
+  },
+  {
+   "target_id": "gj-9193",
+   "band": "g",
+   "radius_au": 1.0,
+   "n_valid_offsets": 4,
+   "control_defined": false,
+   "gate": {
+    "n_fit": 32,
+    "n_fit_kept": 31,
+    "fit_rms_before": 11404.521725372053,
+    "fit_rms_after": 4758.767824828306
+   },
+   "median_control": 63.505,
+   "S": 781.082,
+   "n_windows_with_data": 2,
+   "controls": [
+    90.459,
+    165.051,
+    4.102,
+    36.552
+   ],
+   "T": 165.051,
+   "margin": 616.031,
+   "status": "constraint_only",
+   "exceedance": false
+  },
+  {
+   "target_id": "gj-9193",
+   "band": "r",
+   "radius_au": 1.0,
+   "n_valid_offsets": 4,
+   "control_defined": false,
+   "gate": {
+    "n_fit": 29,
+    "n_fit_kept": 29
+   },
+   "median_control": -1703.552,
+   "S": -738.393,
+   "n_windows_with_data": 2,
+   "controls": [
+    -1561.84,
+    -1524.028,
+    -2771.823,
+    -1845.264
+   ],
+   "T": -1524.028,
+   "margin": -738.393,
+   "status": "constraint_only",
+   "exceedance": false
+  }
+ ]
+}

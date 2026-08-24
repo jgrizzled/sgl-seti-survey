@@ -1,0 +1,18 @@
+{
+  "crossings_id": "xng-a09e2db7681d",
+  "generated_utc": "2026-08-23T19:30:15+00:00",
+  "observer_id": "earth-center",
+  "n_targets": 88,
+  "n_events": 16586,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:205"
+  ],
+  "files": {
+    "events_ecsv": "crossings/universal_v1/events.ecsv",
+    "windows_ecsv": "crossings/universal_v1/windows.ecsv",
+    "result_json": "crossings/universal_v1/result.json",
+    "manifest_json": "crossings/universal_v1/manifest.json"
+  }
+}

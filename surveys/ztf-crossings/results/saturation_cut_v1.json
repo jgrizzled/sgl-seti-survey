@@ -1,0 +1,29 @@
+{
+  "rule": {
+    "excluded_below": 13.0,
+    "marginal_below": 13.5,
+    "transform_accuracy_mag": 0.3
+  },
+  "n_targets": 86,
+  "g": {
+    "excluded": 59,
+    "marginal": 5,
+    "ok": 22,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 136
+  },
+  "r": {
+    "excluded": 66,
+    "marginal": 2,
+    "ok": 18,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 90
+  },
+  "i": {
+    "excluded": 71,
+    "marginal": 1,
+    "ok": 14,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 5
+  }
+}

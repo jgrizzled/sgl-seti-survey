@@ -259,3 +259,100 @@ def stamp_response(fm, stamp: np.ndarray, ox: int, oy: int) -> ResponseWindow:
     with np.errstate(divide="ignore", invalid="ignore"):
         delta = np.where(den > floor, num / den, 0.0)
     return ResponseWindow(delta.astype(np.float64), fx0, fy0)
+
+
+# -- analytic PSF renderer (ZTF / PS1, which ship no per-frame PRF) ----------
+@dataclass
+class MoffatPSF:
+    """Circular Moffat profile I(r) ∝ (1 + (r/α)²)^(−β) with the frame's
+    seeing FWHM (pixels) and β = 3 (a ground-based default), integrated
+    over pixels by 4 x 4 sub-sampling. Used where the archive ships no
+    empirical PRF; the chain's throughput on it is what the asteroid
+    positive control measures against the archive's own photometry."""
+
+    fwhm_pix: float
+    beta: float = 3.0
+    band: str = ""
+    sub: int = 4
+
+    @property
+    def alpha(self) -> float:
+        return self.fwhm_pix / (2.0 * math.sqrt(2.0 ** (1.0 / self.beta) - 1.0))
+
+    def render(self, x: float, y: float, half: int = 16, element=None):
+        ox, oy = int(round(x)) - half, int(round(y)) - half
+        n = 2 * half + 1
+        s = self.sub
+        off = (np.arange(s) + 0.5) / s - 0.5
+        xx = (ox + np.arange(n))[:, None] + off[None, :]          # (n, s) sub-pixel x
+        yy = (oy + np.arange(n))[:, None] + off[None, :]
+        dx2 = ((xx - x) ** 2).reshape(n * s)
+        dy2 = ((yy - y) ** 2).reshape(n * s)
+        r2 = dy2[:, None] + dx2[None, :]
+        prof = (1.0 + r2 / self.alpha ** 2) ** (-self.beta)
+        stamp = prof.reshape(n, s, n, s).sum(axis=(1, 3))
+        # normalise to the total Moffat flux (analytic), so the stamp sum
+        # is the enclosed fraction
+        total = math.pi * self.alpha ** 2 / (self.beta - 1.0) * s * s
+        return (stamp / total).astype(np.float32), ox, oy
+
+
+def stamp_response_multiphase(fm, stamp: np.ndarray, ox: int, oy: int,
+                              flux_scale: float = 1.0) -> ResponseWindow:
+    """Exact flux-map change for a stamp added to the image of a FluxMap
+    whose maps are interleaved over ``upsample`` x ``upsample`` sub-pixel
+    kernel phases (SPHEREx): one local response per phase, interleaved
+    into a window on the upsampled grid (the coordinate system of
+    ``FluxMap.world2pix``). ``flux_scale`` converts the map's native
+    amplitude units to the stored units (SPHEREx: MJy/sr-sum -> uJy)."""
+    from scipy.signal import fftconvolve
+
+    UP = fm.upsample
+    ny, nx = fm.good.shape
+    h, w = stamp.shape
+    y0, y1 = max(0, oy), min(ny, oy + h)
+    x0, x1 = max(0, ox), min(nx, ox + w)
+    if y1 <= y0 or x1 <= x0:
+        return ResponseWindow(np.zeros((1, 1)), 0, 0)
+    s = stamp[y0 - oy:y1 - oy, x0 - ox:x1 - ox] * fm.good[y0:y1, x0:x1]
+    wins = {}
+    for dy, dx, k, den in fm.phase_parts:
+        ky, kx = k.shape
+        full = fftconvolve(s, k, mode="full")
+        wy0 = y0 - (ky - 1) // 2; wx0 = x0 - (kx - 1) // 2
+        fy0, fy1 = max(0, wy0), min(ny, wy0 + full.shape[0])
+        fx0, fx1 = max(0, wx0), min(nx, wx0 + full.shape[1])
+        num = full[fy0 - wy0:fy1 - wy0, fx0 - wx0:fx1 - wx0]
+        d = den[fy0:fy1, fx0:fx1]
+        floor = 0.25 * float(np.nanmax(den))
+        with np.errstate(divide="ignore", invalid="ignore"):
+            wins[(dy, dx)] = (np.where(d > floor, num / d, 0.0) * flux_scale, fx0, fy0)
+    (_, fx0, fy0) = next(iter(wins.values()))
+    hh, ww = next(iter(wins.values()))[0].shape
+    delta = np.zeros((hh * UP, ww * UP))
+    for (dy, dx), (win, _, _) in wins.items():
+        delta[dy::UP, dx::UP] = win[:hh, :ww]
+    return ResponseWindow(delta, fx0 * UP, fy0 * UP)
+
+
+@dataclass
+class OversampledPSF:
+    """Renderer for a PSF plane oversampled by ``oversample`` with the
+    centre at ``centre`` (SPHEREx: 101 x 101 at 0.615", centre 50)."""
+
+    plane: np.ndarray
+    oversample: int = 10
+    centre: int = 50
+    band: str = ""
+
+    def render(self, x: float, y: float, half: int = 8, element=None):
+        t = self.plane / self.plane.sum()
+        ox, oy = int(round(x)) - half, int(round(y)) - half
+        n = 2 * half + 1
+        ii = ox + np.arange(n); jj = oy + np.arange(n)
+        u = self.centre + self.oversample * (ii - x)
+        w = self.centre + self.oversample * (jj - y)
+        return (_bilinear_grid(t, u, w) * self.oversample ** 2).astype(np.float32), ox, oy
+
+    def mean_template(self):
+        return self.plane / self.plane.sum()
