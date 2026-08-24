@@ -6,20 +6,68 @@ date: 2026-08-22
 
 # Hypothesis freeze v2.0
 
-A new version, not an edit: the v1.0–v1.5 freeze (`hypotheses_v1.md`)
-(the physics cell) stands unchanged and is incorporated by reference —
-targets and registry v1.5 (88 endpoints / 77 corridors), Rx and Tx as
-separate hypotheses, relay distance 550–10,000 AU with a log-uniform
-prior, unresolved point source, duty cycle ≥ 0.5, station-kept relay
-with bounded residual motion. v2.0 fixes everything v1 §9 left to "the
-run config once the pipeline exists": the decision rule, the null
-model, the completeness definition, the geometry specification and the
-hold-out. It responds to `surveys/wise/scientific_review.md` through
-`surveys/wise/v2_plan.md`, whose section numbers are cited below.
+A new decision-rule version, not a new physical-source hypothesis: the
+v1.0–v1.5 physics cell is reproduced directly in §0 below. v2.0 fixes
+the decision rule, null model, completeness definition, geometry
+specification and hold-out that had previously been left to the run
+configuration.
+
+> **Documentation restoration (2026-08-24).** The v1 files were retired
+> after the v2 programme, so the still-active physics text formerly
+> incorporated by reference is now included here. This changes no search
+> parameter, data product, candidate decision or result. The
+> `hypotheses_hash` in `configs/v2_0_freeze.json` remains the historical
+> pre-run hash and is not a hash of this post-run documentation copy.
 
 Principle: **one frozen decision rule, applied blind to one end-to-end
 injection set, one exchangeable null ensemble, and the real data — in
 that order.**
+
+## 0. Physical-source hypothesis carried forward from v1
+
+1. **Targets and endpoint models.** The frozen registry v1.5 portfolio
+   contains 88 endpoint hypotheses in 77 sky corridors. An endpoint is
+   the registry-defined stellar component or explicitly modelled
+   photocentre, with its target-state solution, covariance and
+   provenance fixed by the registry. A system barycentre, planet or
+   other acquisition region is a different endpoint hypothesis and is
+   not silently substituted for a component.
+2. **Relay and role.** The source is a compact, actively station-kept
+   artifact on or near the Sun's focal line for the endpoint. Receive
+   (`Rx`) and transmit (`Tx`) light-time geometries are evaluated as
+   separate hypotheses for every endpoint.
+3. **Distance.** Heliocentric relay distance is 550–10,000 AU. The
+   physical prior used for injection placement and completeness is
+   log-uniform in distance; the numerical grid described below is only
+   a search tabulation and does not change that prior.
+4. **Morphology and emission.** The source is unresolved at WISE
+   resolution. W1/W2 (3.4/4.6 µm) test reflected sunlight, unusually
+   hot components, or self-luminous/nonthermal emission. W3/W4
+   (12/22 µm, cryogenic mission only) carry sensitivity to actively
+   heated warm structures; the v2 injection spectrum for that
+   interpretation is a 300 K blackbody. A passive solar-equilibrium
+   body at 550 AU is about 12 K, peaks near 240 µm, and is invisible in
+   all four WISE bands, so these results are not generic thermal or
+   waste-heat coverage. W3/W4 remain threshold-sensitivity statements,
+   not physical exclusions, under §4 and the confirmation rule in §3.
+5. **Visibility in time.** The in-scope duty cycle is at least 0.5,
+   including a fully persistent source. Section 2 makes that assumption
+   concrete with persistent, exposure-flicker, visit and long-block
+   temporal families; rarer flashes are a different hypothesis cell.
+6. **Stationkeeping freedom.** Residual motion is bounded component-wise
+   by |µ*α| ≤ 1″/yr and |µ*δ| ≤ 1″/yr and is fitted jointly with relay
+   distance. The geometry uncertainty treatment is specified in §1.
+7. **Spectral meaning of a null.** Detection is of photons following the
+   assumed point-source spectrum and trajectory; it does not by itself
+   distinguish reflection, a hot surface, a beacon or communication
+   leakage. Any physical translation must use the corresponding spectrum
+   and distance rather than treating all WISE bands as equivalent.
+8. **Outside this cell.** Barycentric or planetary endpoints, relay
+   swarms, extended or trailed sources, off-axis infrastructure,
+   inactive or cold dark relics, distance outside 550–10,000 AU,
+   residual motion outside the stated box and duty cycle < 0.5 require
+   separate searches. This targeted null does not infer the prevalence
+   of relays or of any network architecture.
 
 ## 1. Geometry and observer (plan §1.1, §1.6, §2)
 

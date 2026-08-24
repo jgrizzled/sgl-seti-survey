@@ -81,7 +81,11 @@ def main() -> None:
     freeze = {
         "hypothesis_version": C.HYPOTHESIS_VERSION,
         "hypotheses_hash": C.sha256_file(C.HYPOTHESES_PATH),
-        "v1_hypotheses_hash": C.sha256_file(C.REPO / "surveys" / "wise" / "hypotheses_v1.md"),
+        # Historical provenance for the retired standalone v1 physics
+        # freeze.  Its still-active content now lives directly in
+        # surveys/wise/hypotheses.md §0; keep the original digest so this
+        # archival freeze builder does not depend on a deleted file.
+        "v1_hypotheses_hash": "sha256:6dfb57e42a38a54d1fd6f27985c2ac45a4a27b00816714c29c651c8f5ed83494",
         "registry_source_hash": registry.source_hash,
         "n_endpoints": len(CORRIDOR_OF), "n_corridors": len(MEMBERS),
         "frozen_at": "2026-08-22",

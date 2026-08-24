@@ -6,13 +6,72 @@ date: 2026-08-22
 
 # PS1 hypothesis freeze v2.0
 
-The physics cell of the v1.0 freeze (`hypotheses_v1.md`) is unchanged
-(69 endpoints / 62 corridors with v1 tensors; Rx and Tx; 550–10,000 AU
-log-uniform; unresolved point source; duty ≥ 0.5; component-wise
-|µ| ≤ 1″/yr; Haleakalā observer). The decision rule, null model,
-completeness definition and hold-out are those of the WISE freeze
-**v2.1** (`surveys/wise/hypotheses.md` §3–§5, §8) through the
-engine `sglsurvey/v2/` with the PS1 bindings in `profile.py`:
+The carried-forward physical-source hypothesis is reproduced directly
+in §0. The decision rule, null model, completeness definition and
+hold-out are those of the WISE freeze **v2.1**
+(`surveys/wise/hypotheses.md` §3–§5, §8) through the engine
+`sglsurvey/v2/` with the PS1 bindings in `profile.py`.
+
+> **Documentation restoration (2026-08-24).** This section restores the
+> still-active v1 physics text after the v1 file was retired. It changes
+> no search parameter, data product, candidate decision or result. The
+> `hypotheses_hash` in `configs/v2_freeze.json` remains the historical
+> pre-run hash and is not a hash of this post-run documentation copy.
+
+## 0. Physical-source hypothesis carried forward from v1
+
+1. **Targets and endpoint models.** This archive searches the PS1-visible
+   subset of registry v1.5: 69 endpoint hypotheses in 62 corridors.
+   Each endpoint is the registry-defined stellar component or explicitly
+   modelled photocentre with fixed target-state provenance and covariance;
+   barycentric and planetary endpoints are separate, out-of-scope
+   hypotheses.
+2. **Relay and role.** The source is a compact, actively station-kept
+   artifact on or near the Sun's focal line for the endpoint. Receive
+   (`Rx`) and transmit (`Tx`) geometries are searched separately.
+3. **Distance and motion.** Heliocentric distance is 550–10,000 AU with
+   a log-uniform physical prior. Residual motion is bounded
+   component-wise by |µ*α| ≤ 1″/yr and |µ*δ| ≤ 1″/yr and is fitted with
+   distance. The source is unresolved at the approximately 1.0–1.3″
+   PS1 warp seeing; extended or visibly trailed sources are different
+   cells.
+4. **Observer and timing.** The observer is the Haleakalā PS1 site
+   (longitude −156.2559°, latitude +20.7071°, height 3048 m). Loci are
+   evaluated at exposure midpoint using each warp's timing; the
+   topocentric displacement and sub-minute timing convention are
+   negligible relative to the searched PSF but remain in the geometry
+   provenance.
+5. **Bands and physical interpretation.** The searched bands are g, r,
+   i, z and y (approximately 0.48–0.96 µm), with constraints reported
+   per filter. The primary interpretation is reflected sunlight. For a
+   Lambertian sphere of geometric albedo p and diameter D at
+   heliocentric distance z, observed near opposition with Δ ≈ z, the
+   full-phase flux ratio is approximately
+
+       F_object / F_sun ≈ p Φ(α) (D / 2 AU)^2 / (z^2 Δ^2),
+
+   where z and Δ are in AU and Φ(α) is the phase function. A
+   reflected-light limit therefore constrains p^(1/2) D only after an
+   albedo and phase law are stated. The same search is sensitive to
+   self-luminous optical emission such as a beacon, sufficiently broad
+   or recurrent leakage, or a component hotter than roughly 2000 K;
+   those cases are reported as flux, not reflector size. The v2
+   injections use a flat-Fν spectrum. A passive solar-equilibrium body
+   at 550 AU is about 12 K and invisible in grizy, so this is not thermal
+   coverage.
+6. **Visibility in time.** Duty cycle is at least 0.5, instantiated by
+   persistent, exposure-flicker, visit and long-block injections. PS1's
+   single-parallax-phase cadence makes some of those families nearly
+   degenerate, but does not broaden the hypothesis to rare glints or
+   low-duty pulses.
+7. **Outside this cell.** Relay swarms, off-axis infrastructure,
+   inactive or dark relics, distance or residual motion outside the
+   stated bounds, extended/trailed morphologies and duty < 0.5 are not
+   constrained. A detection would establish an SGL-consistent moving
+   point source, not its emission mechanism; a null makes no population
+   or network-architecture inference.
+
+The executed decision rule was:
 
 1. **Statistic and null.** S(z, µ) over 360 × 5 × 5 nodes (uniform in
    1/z, 1.0″ spacing, T0 = MJD 59800 — the joint-stage common epoch),

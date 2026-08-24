@@ -6,14 +6,71 @@ date: 2026-08-22
 
 # ZTF hypothesis freeze v2.0
 
-The physics cell of the v1.0 freeze (`hypotheses_v1.md`) is unchanged
-(registry v1.5 endpoints with v1 tensors — 69 endpoints / 62
-corridors; Rx and Tx; 550–10,000 AU log-uniform; unresolved point
-source; duty ≥ 0.5; component-wise |µ| ≤ 1″/yr; Palomar P48 observer).
-The decision rule, null model, completeness definition and hold-out
-are those of the WISE freeze **v2.1** (`surveys/wise/hypotheses.md`
-§3–§5 with its §8 amendment), applied through the survey-agnostic
-engine `sglsurvey/v2/` with the ZTF bindings in `profile.py`:
+The carried-forward physical-source hypothesis is reproduced directly
+in §0. The decision rule, null model, completeness definition and
+hold-out are those of the WISE freeze **v2.1**
+(`surveys/wise/hypotheses.md` §3–§5 with its §8 amendment), applied
+through the survey-agnostic engine `sglsurvey/v2/` with the ZTF
+bindings in `profile.py`.
+
+> **Documentation restoration (2026-08-24).** This section restores the
+> still-active v1 physics text after the v1 file was retired. It changes
+> no search parameter, data product, candidate decision or result. The
+> `hypotheses_hash` in `configs/v2_freeze.json` remains the historical
+> pre-run hash and is not a hash of this post-run documentation copy.
+
+## 0. Physical-source hypothesis carried forward from v1
+
+1. **Targets and endpoint models.** This archive searches the
+   ZTF-visible subset of registry v1.5: 69 endpoint hypotheses in 62
+   corridors. Each endpoint is the registry-defined stellar component
+   or explicitly modelled photocentre with fixed target-state provenance
+   and covariance; barycentric and planetary endpoints are separate,
+   out-of-scope hypotheses.
+2. **Relay and role.** The source is a compact, actively station-kept
+   artifact on or near the Sun's focal line for the endpoint. Receive
+   (`Rx`) and transmit (`Tx`) geometries are searched separately.
+3. **Distance and motion.** Heliocentric distance is 550–10,000 AU with
+   a log-uniform physical prior. Residual motion is bounded
+   component-wise by |µ*α| ≤ 1″/yr and |µ*δ| ≤ 1″/yr and is fitted with
+   distance. The source is unresolved at ZTF's roughly 2″ seeing;
+   extended or visibly trailed sources are different cells.
+4. **Observer and timing.** The observer is the Palomar P48 site
+   (longitude −116.8650°, latitude +33.3563°, height 1712 m). Loci are
+   evaluated at exposure midpoint; topocentric displacement and motion
+   during a 30 s exposure are negligible relative to the searched PSF
+   but remain part of the geometry provenance.
+5. **Bands and physical interpretation.** The searched bands are ZTF
+   g, r and i (approximately 0.47, 0.64 and 0.79 µm), with constraints
+   reported per filter. The primary optical interpretation is reflected
+   sunlight. For a Lambertian sphere of geometric albedo p and diameter
+   D at heliocentric distance z, observed near opposition with observer
+   distance Δ ≈ z, the full-phase flux ratio is approximately
+
+       F_object / F_sun ≈ p Φ(α) (D / 2 AU)^2 / (z^2 Δ^2),
+
+   where z and Δ are in AU and Φ(α) is the phase function. A
+   reflected-light limit therefore constrains p^(1/2) D only after an
+   albedo and phase law are stated. The same flux search is also
+   sensitive to self-luminous optical emission such as a beacon,
+   sufficiently broad or recurrent leakage, or a component hotter than
+   roughly 2000 K;
+   those cases are reported as flux, not reflector size. The v2
+   injections use a flat-Fν spectrum. A passive solar-equilibrium body
+   at 550 AU is about 12 K and invisible in g/r/i, so this is not thermal
+   coverage.
+6. **Visibility in time.** Duty cycle is at least 0.5, instantiated by
+   the persistent, exposure-flicker, visit and long-block injection
+   families in item 5 below. Rare glints, low-duty pulses and emission
+   deliberately directed away from Earth are separate cells.
+7. **Outside this cell.** Relay swarms, off-axis infrastructure,
+   inactive or dark relics, distance or residual motion outside the
+   stated bounds, extended/trailed morphologies and duty < 0.5 are not
+   constrained. A detection would establish an SGL-consistent moving
+   point source, not its emission mechanism; a null makes no population
+   or network-architecture inference.
+
+The executed decision rule was:
 
 1. **Statistic and null.** S(z, µ) over 192 × 5 × 5 nodes (uniform in
    1/z, 1.85″ spacing, T0 = MJD 59800), single-epoch clip |S_e| ≤ 5
