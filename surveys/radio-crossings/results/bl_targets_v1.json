@@ -1,0 +1,746 @@
+[
+ {
+  "channel": "A",
+  "target_id": "61-cyg-a",
+  "status": "ok",
+  "n_files": 35,
+  "n_obs": 13,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "61-cyg-b",
+  "status": "ok",
+  "n_files": 35,
+  "n_obs": 13,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "61-vir",
+  "status": "ok",
+  "n_files": 15,
+  "n_obs": 6,
+  "n_inwindow_rows": 6
+ },
+ {
+  "channel": "A",
+  "target_id": "82-eri",
+  "status": "ok",
+  "n_files": 210,
+  "n_obs": 72,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "alpha-cen-a",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "alpha-cen-b",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "barnard-star",
+  "status": "ok",
+  "n_files": 21,
+  "n_obs": 7,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "eps-eri",
+  "status": "ok",
+  "n_files": 9,
+  "n_obs": 3,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "eps-ind-a",
+  "status": "ok",
+  "n_files": 31,
+  "n_obs": 7,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "eps-ind-b",
+  "status": "ok",
+  "n_files": 31,
+  "n_obs": 7,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "ez-aqr",
+  "status": "ok",
+  "n_files": 21,
+  "n_obs": 7,
+  "n_inwindow_rows": 7
+ },
+ {
+  "channel": "A",
+  "target_id": "fomalhaut",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1002",
+  "status": "ok",
+  "n_files": 18,
+  "n_obs": 6,
+  "n_inwindow_rows": 3
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1061",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1087",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-11068",
+  "status": "ok",
+  "n_files": 72,
+  "n_obs": 4,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1111",
+  "status": "ok",
+  "n_files": 18,
+  "n_obs": 6,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-11547",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1221",
+  "status": "ok",
+  "n_files": 15,
+  "n_obs": 4,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-12724",
+  "status": "ok",
+  "n_files": 154,
+  "n_obs": 13,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1276",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-13157",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-2012",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-2066",
+  "status": "ok",
+  "n_files": 15,
+  "n_obs": 6,
+  "n_inwindow_rows": 6
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-229-a",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-251",
+  "status": "ok",
+  "n_files": 27,
+  "n_obs": 9,
+  "n_inwindow_rows": 5
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-293",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-3112",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-318",
+  "status": "ok",
+  "n_files": 122,
+  "n_obs": 6,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-3306",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-338-a",
+  "status": "ok",
+  "n_files": 323,
+  "n_obs": 34,
+  "n_inwindow_rows": 10
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-338-b",
+  "status": "ok",
+  "n_files": 323,
+  "n_obs": 34,
+  "n_inwindow_rows": 10
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-3512",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-367",
+  "status": "ok",
+  "n_files": 40,
+  "n_obs": 2,
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-514",
+  "status": "ok",
+  "n_files": 24,
+  "n_obs": 9,
+  "n_inwindow_rows": 6
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-518",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-526",
+  "status": "ok",
+  "n_files": 24,
+  "n_obs": 8,
+  "n_inwindow_rows": 7
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-54",
+  "status": "ok",
+  "n_files": 9,
+  "n_obs": 3,
+  "n_inwindow_rows": 3
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-581",
+  "status": "ok",
+  "n_files": 12,
+  "n_obs": 4,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-588",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-625",
+  "status": "ok",
+  "n_files": 25,
+  "n_obs": 10,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-66-a",
+  "status": "ok",
+  "n_files": 138,
+  "n_obs": 46,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-66-b",
+  "status": "ok",
+  "n_files": 138,
+  "n_obs": 46,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-667-c",
+  "status": "ok",
+  "n_files": 176,
+  "n_obs": 9,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-674",
+  "status": "ok",
+  "n_files": 98,
+  "n_obs": 8,
+  "n_inwindow_rows": 8
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-682",
+  "status": "ok",
+  "n_files": 233,
+  "n_obs": 11,
+  "n_inwindow_rows": 11
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-687",
+  "status": "ok",
+  "n_files": 68,
+  "n_obs": 26,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-783",
+  "status": "ok",
+  "n_files": 159,
+  "n_obs": 30,
+  "n_inwindow_rows": 12
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-784",
+  "status": "ok",
+  "n_files": 154,
+  "n_obs": 29,
+  "n_inwindow_rows": 12
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-832",
+  "status": "ok",
+  "n_files": 212,
+  "n_obs": 76,
+  "n_inwindow_rows": 33
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-876",
+  "status": "ok",
+  "n_files": 9,
+  "n_obs": 3,
+  "n_inwindow_rows": 3
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-908",
+  "status": "ok",
+  "n_files": 184,
+  "n_obs": 14,
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-915",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-9193",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj65-a",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj65-b",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "groombridge-34-a",
+  "status": "ok",
+  "n_files": 15,
+  "n_obs": 5,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "groombridge-34-b",
+  "status": "ok",
+  "n_files": 15,
+  "n_obs": 5,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "hd-219134",
+  "status": "ok",
+  "n_files": 85,
+  "n_obs": 29,
+  "n_inwindow_rows": 6
+ },
+ {
+  "channel": "A",
+  "target_id": "kapteyn-star",
+  "status": "ok",
+  "n_files": 307,
+  "n_obs": 105,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "lacaille-8760",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "lacaille-9352",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "lalande-21185",
+  "status": "ok",
+  "n_files": 18,
+  "n_obs": 6,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "lhs-1723",
+  "status": "ok",
+  "n_files": 3,
+  "n_obs": 1,
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "A",
+  "target_id": "lp-145-141",
+  "status": "ok",
+  "n_files": 159,
+  "n_obs": 13,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "ltt-1445-a",
+  "status": "ok",
+  "n_files": 3,
+  "n_obs": 3,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "luhman16-a",
+  "status": "ok",
+  "n_files": 8,
+  "n_obs": 1,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "luhman16-b",
+  "status": "ok",
+  "n_files": 8,
+  "n_obs": 1,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "luyten-star",
+  "status": "ok",
+  "n_files": 30,
+  "n_obs": 10,
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "A",
+  "target_id": "procyon-a",
+  "status": "ok",
+  "n_files": 19,
+  "n_obs": 7,
+  "n_inwindow_rows": 4
+ },
+ {
+  "channel": "A",
+  "target_id": "procyon-b",
+  "status": "ok",
+  "n_files": 19,
+  "n_obs": 7,
+  "n_inwindow_rows": 4
+ },
+ {
+  "channel": "A",
+  "target_id": "proxima-cen",
+  "status": "ok",
+  "n_files": 3432,
+  "n_obs": 44,
+  "n_inwindow_rows": 44
+ },
+ {
+  "channel": "A",
+  "target_id": "ross-128",
+  "status": "ok",
+  "n_files": 18,
+  "n_obs": 6,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "ross-154",
+  "status": "ok",
+  "n_files": 75,
+  "n_obs": 3,
+  "n_inwindow_rows": 3
+ },
+ {
+  "channel": "A",
+  "target_id": "ross-248",
+  "status": "ok",
+  "n_files": 27,
+  "n_obs": 12,
+  "n_inwindow_rows": 6
+ },
+ {
+  "channel": "A",
+  "target_id": "sigma-dra",
+  "status": "ok",
+  "n_files": 12,
+  "n_obs": 4,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "sirius-a",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "sirius-b",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "tau-cet",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "teegarden",
+  "status": "ok",
+  "n_files": 12,
+  "n_obs": 6,
+  "n_inwindow_rows": 6
+ },
+ {
+  "channel": "A",
+  "target_id": "van-maanen",
+  "status": "ok",
+  "n_files": 31,
+  "n_obs": 11,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "wise-0855",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "wolf-1061",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "wolf-1069",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "wolf-359",
+  "status": "ok",
+  "n_files": 39,
+  "n_obs": 15,
+  "n_inwindow_rows": 3
+ },
+ {
+  "channel": "A",
+  "target_id": "wolf-437",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "B",
+  "target_id": "gj-1276",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "B",
+  "target_id": "gj-908",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "B",
+  "target_id": "ross-128",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "B",
+  "target_id": "ross-154",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "B",
+  "target_id": "teegarden",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "B",
+  "target_id": "van-maanen",
+  "status": "ok",
+  "n_files": 3,
+  "n_obs": 1,
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "B",
+  "target_id": "wolf-359",
+  "status": "ok",
+  "n_files": 0,
+  "n_obs": 0,
+  "n_inwindow_rows": 0
+ }
+]

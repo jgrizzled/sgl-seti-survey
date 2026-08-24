@@ -1,12 +1,12 @@
 # decam
 
-DECam/NOIRLab southern survey (project plan §10 step 8, first
+DECam/NOIRLab southern survey (project plan §4.6, first
 archive-family expansion on the v2 design): the 15 southern corridors
 (antipode Dec < −30°) that PS1 and ZTF cannot reach, including the
 engineering-backbone picks σ Dra, HD 219134 and Lalande 21185.
 
 Recon facts (service probes, coverage sweep, `astro-datalab` client
-assessment): `notes/decam_recon_2026-08-24.md` at repo level.
+assessment): `surveys/decam/notes/decam_recon_2026-08-24.md` at repo level.
 
 - Adapter: `sglsurvey/adapters/noirlab_decam.py` (Astro Archive
   adv_search discovery, EXPNUM-joined instcal image/dqmask/wtmap,
@@ -18,11 +18,16 @@ assessment): `notes/decam_recon_2026-08-24.md` at repo level.
   per-exposure download.
 - Corridors: `scripts/decam_corridors.py` (15 southern; pilot =
   lalande, sigmadra, hd219134).
-- Hypotheses: `hypotheses.md` is a **draft** (v0.1). The geometric
-  stages below are hypothesis-light and reusable; the freeze (v1.0,
-  with dev/confirmatory split) must happen before any screening
-  threshold, stack, injection or candidate rule runs. This survey is
-  the first with no v1 exploratory phase: v2 discipline from day one.
+- Hypotheses: `hypotheses.md` **v1.0 frozen 2026-08-24**
+  (`configs/v2_freeze.json`, seed 20260824): dev = lalande + sigmadra
+  + hd219134 (forced pilots) + struve2398 (drawn); confirmatory = 11
+  corridors / 14 endpoints. First survey with no v1 exploratory
+  phase: v2 discipline from day one.
+- Positive control: (60000) Miminko
+  (`configs/asteroid_control_v1.json`,
+  `scripts/asteroid_control_v2.py`).
+- Per-frame star ZP: `scripts/calibrate_zeropoints.py` →
+  `runs/decam/zeropoints.jsonl` (header MAGZERO never used).
 
 Stages (Pipeline A):
 
@@ -37,12 +42,18 @@ Stages (Pipeline A):
    `scripts/screen_recurrence.py` (bin occupancy + fixed-z point
    filter triage).
 4. `scripts/fetch_cutouts.py` → `runs/decam/products/cut/` (single-CCD
-   image + wtmap HDUs per usable exposure; unit of retrieval is the
-   CCD containing the locus centre — multi-CCD loci lose the off-CCD
-   arc, to revisit at freeze).
-5. Stacking / injection / candidate rules: not yet built — freeze
-   `hypotheses.md` v1.0 first (v2 engine profile).
+   image + wtmap HDUs per usable exposure; CCDs selected by the
+   covered locus — multi-CCD arcs fetch every crossing CCD, and the
+   flux-map builder mosaics them per hypotheses §8.7).
+5. v2 engine (`profile.py` + `run.py`):
+   `uv run python surveys/decam/run.py
+   {freeze,geometry,build,nulls,inject,completeness,adjudicate,report}`
+   — development set first, blind confirmatory only after the rule is
+   frozen on dev.
 
-Pilot Pipeline A state (2026-08-24): 306 Observations, 612 coarse /
-412 precise evaluations (222 hit exposures, ~all usable), 11,430
-ScreenMatch records, recurrence triage clean.
+Survey state (2026-08-24): **complete** — development (30 cells) and
+blind confirmatory (86 cells) both 0 candidates at FWER α = 0.05;
+1,904 Constraints; canonical report `report/decam_survey.md`, tables
+in `results/report_tables.md`. Confirmatory Pipeline A driver:
+`scripts/run_confirmatory.sh`. Yearly archive refresh re-runs
+discovery with an extended TIME_RANGE stop.

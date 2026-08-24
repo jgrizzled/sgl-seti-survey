@@ -405,3 +405,46 @@ def load_2mass_vizier(ra_deg: float, dec_deg: float, radius_deg: float,
         ra=np.array([f(r, "RAJ2000") for r in rows]), dec=np.array([f(r, "DEJ2000") for r in rows]),
         mag=np.array([f(r, col) for r in rows]),
         ndet=np.array([3 if (r.get("Qflg", "XXX") + "XXX")[qi] in "ABC" else 0 for r in rows]))
+
+
+def load_nsc_objects(screen_dir: Path, ra_deg: float, dec_deg: float
+                     ) -> StaticCatalog | None:
+    """NSC DR2 object cones snapshotted per corridor by surveys/decam
+    catalog_screen (Data Lab queryClient CSV); picks the snapshot whose
+    q3c cone centre is nearest (ra, dec). ndet is the NSC detection
+    count; mag is rmag (99.99 = missing -> NaN)."""
+    import re
+
+    from sglsurvey.records import read_records
+
+    best, bdist = None, 1e9
+    for s in read_records(screen_dir / "records" / "query_snapshot.jsonl"):
+        q = s["query"]
+        if "nsc_dr2.object" not in q or "COUNT" in q.upper():
+            continue
+        m = re.search(r"q3c_radial_query\(ra,dec,([-\d.]+),([-\d.]+),", q)
+        if not m:
+            continue
+        d = np.hypot((float(m.group(1)) - ra_deg)
+                     * np.cos(np.deg2rad(dec_deg)),
+                     float(m.group(2)) - dec_deg)
+        if d < bdist:
+            best, bdist = s, d
+    if best is None or bdist > 0.3:
+        return None
+    rows = list(csv.DictReader(io.StringIO(
+        (screen_dir / best["response_path"]).read_text())))
+
+    def f(r, k, mag=False):
+        try:
+            v = float(r[k])
+            return np.nan if mag and v > 99.98 else v
+        except (KeyError, TypeError, ValueError):
+            return np.nan
+
+    return StaticCatalog(
+        label="nsc-dr2-object",
+        ra=np.array([f(r, "ra") for r in rows]),
+        dec=np.array([f(r, "dec") for r in rows]),
+        mag=np.array([f(r, "rmag", mag=True) for r in rows]),
+        ndet=np.array([int(float(r.get("ndet") or 0)) for r in rows]))

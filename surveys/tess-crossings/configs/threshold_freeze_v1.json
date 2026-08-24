@@ -1,0 +1,323 @@
+{
+ "a_reference_rows": {
+  "n": 2,
+  "note": "constraint-only: resolved on-star crossing light curves + injection-calibrated reference depths (threshold-free, labeled); zero trials",
+  "rows": [
+   {
+    "b_rsun": 1.114,
+    "cadence_s": 200.0,
+    "channel": "A",
+    "event_id": "evt-2215379de80c",
+    "n_inwindow_primary": 3424,
+    "n_offwindow_primary": 6600,
+    "radius_au": 0.1,
+    "sector": 71,
+    "t_ca_mjd": 60256.78228258102,
+    "target_id": "teegarden",
+    "tic_status": "ok",
+    "usable": true,
+    "window_days": 11.460602284500382
+   },
+   {
+    "b_rsun": 0.519,
+    "cadence_s": 600.0,
+    "channel": "A",
+    "event_id": "evt-74fd54a743a0",
+    "n_inwindow_primary": 1475,
+    "n_offwindow_primary": 1319,
+    "radius_au": 0.1,
+    "sector": 43,
+    "t_ca_mjd": 59493.61781866898,
+    "target_id": "van-maanen",
+    "tic_status": "ok",
+    "usable": true,
+    "window_days": 11.606869075342694
+   }
+  ]
+ },
+ "alpha": {
+  "fwer_alpha": 0.05,
+  "ks_alpha": 0.01
+ },
+ "amendment_v1_1": "science-array usability screen added pre-search (results/usability_v1.json): TESScut serves collateral (non-science) CCD pixels with aperture=1 and ~zero flux; three cutouts sat on/across the science edge (cols 45-2092). ross-128 B (the v1.0 dev unit), teegarden A s44 and gj-1276 A s42 are reclassified off_science_array (nominal-covered/unusable). With no searchable non-grazing unit left, machinery validation is reassigned to the ZERO-TRIAL channel-A reference rows (teegarden s71, van-maanen s43) before any confirmatory unit is touched; all 6 B units are confirmatory. No signal statistic existed when this amendment was made.",
+ "completeness": {
+  "injections": ">= 100 draws per unit per temporal model via the SPOC per-camera/CCD PRF through the identical kernel (stamp response); temporal models: d = 1 chord and d = 0.1 boxcar at the frozen per-unit period grids; magnitude grid T 10-18 (0.5 steps); recovery against each statistic's frozen threshold"
+ },
+ "controls": {
+  "kind": "spatial ring trajectories (window-length independent \u2014 the reason channel B keeps discovery power)",
+  "n": 8,
+  "note": "offsets are 6/9/12 px at the 21 arcsec pixel; each control carries both statistics",
+  "offsets_arcsec": [
+   [
+    126.0,
+    0.0
+   ],
+   [
+    -126.0,
+    0.0
+   ],
+   [
+    189.0,
+    0.0
+   ],
+   [
+    -189.0,
+    0.0
+   ],
+   [
+    252.0,
+    0.0
+   ],
+   [
+    -252.0,
+    0.0
+   ],
+   [
+    0.0,
+    189.0
+   ],
+   [
+    0.0,
+    -189.0
+   ]
+  ]
+ },
+ "freeze_content_hash": "sha256:5bc0197e9d2783c307c6cec7cac0277ea15f486127311e2ec652a0d4b3d6c16f",
+ "freeze_version": "tess-crossings-thresholds-v1.1",
+ "frozen_at": "2026-08-24",
+ "hypothesis_version": "tess-crossings-hypotheses-v1.0",
+ "input_hashes": {
+  "coverage_gate": "sha256:5357558c8316209cb79040924e882b12e16555d1096f10327879f70afc632454",
+  "coverage_refined": "sha256:1105c98b91b2e4d5d778db01936ff65af096443032e267f9c31ad914740e8256",
+  "hypotheses": "sha256:c4df451c4f02722ad81a72a0b13ae7fa4476ea7d4caa568f8d1833314e60fa17",
+  "recon": "sha256:5b09c6cbf9cb749990fab3181789be298abe74b9b9056e4ac683566144706a2d",
+  "tic_cut": "sha256:ed9b8841d1ddd652cf26df596ae59ea8d1ce8ff2d4aed494d634648a297aa89e",
+  "usability": "sha256:c38b7d356a230cbbb3b94dd04f243bc7cc917c556fa31968115c5d7863ab97de"
+ },
+ "off_science_array": {
+  "n": 3,
+  "rows": [
+   {
+    "b_rsun": 0.972,
+    "cadence_s": 600.0,
+    "channel": "A",
+    "class": "off_science_array",
+    "event_id": "evt-b3eb38c057cd",
+    "n_inwindow_primary": 1084,
+    "n_offwindow_primary": 953,
+    "radius_au": 0.1,
+    "sector": 42,
+    "t_ca_mjd": 59461.757403055555,
+    "target_id": "gj-1276",
+    "tic_status": "ok",
+    "usable": false,
+    "window_days": 11.228865453534663
+   },
+   {
+    "b_rsun": 1.233,
+    "cadence_s": 600.0,
+    "channel": "A",
+    "class": "off_science_array",
+    "event_id": "evt-a0efd7e7dac7",
+    "n_inwindow_primary": 460,
+    "n_offwindow_primary": 2619,
+    "radius_au": 0.1,
+    "sector": 44,
+    "t_ca_mjd": 59526.350764282404,
+    "target_id": "teegarden",
+    "tic_status": "ok",
+    "usable": false,
+    "window_days": 11.219766527107806
+   },
+   {
+    "b_rsun": 2.068,
+    "cadence_s": 600.0,
+    "channel": "B",
+    "class": "off_science_array",
+    "event_id": "evt-72b3ddd1ed4f",
+    "n_inwindow_primary": 48,
+    "n_offwindow_primary": 2527,
+    "radius_au": 0.1,
+    "sector": 42,
+    "t_ca_mjd": 59476.816198726854,
+    "target_id": "ross-128",
+    "usable": false,
+    "window_days": 11.346876798070772
+   }
+  ]
+ },
+ "quality": {
+  "primary": "QUALITY == 0",
+  "strict": "additionally drop cadences within 0.05 d of any straylight-flagged block and cadences with |POS_CORR| > 0.5 px; strict re-run reported for any exceedance"
+ },
+ "scope": "channel B searchable (spatial controls); channel A constraint-only light-curve products (temporal 8-control family unreachable, hypotheses v1.0); A 1.0 AU rung programme-wide constraint-only, gate-level coverage only",
+ "search_units": {
+  "n_units": 6,
+  "units": [
+   {
+    "b_rsun": 1.037,
+    "cadence_s": 200.0,
+    "channel": "B",
+    "event_id": "evt-59dd98fa8d3d",
+    "n_inwindow_primary": 147,
+    "n_offwindow_primary": 7843,
+    "pulse_periods_s": [
+     400.0,
+     944.8,
+     2231.6,
+     5271.0,
+     12450.1,
+     29407.0
+    ],
+    "radius_au": 0.0056,
+    "sector": 91,
+    "t_ca_mjd": 60801.51210270834,
+    "target_id": "teegarden",
+    "usable": true,
+    "window_days": 0.3403591950544522
+   },
+   {
+    "b_rsun": 1.037,
+    "cadence_s": 200.0,
+    "channel": "B",
+    "event_id": "evt-59dd98fa8d3d",
+    "n_inwindow_primary": 405,
+    "n_offwindow_primary": 7585,
+    "pulse_periods_s": [
+     400.0,
+     1227.7,
+     3768.1,
+     11565.1,
+     35496.2,
+     108946.1
+    ],
+    "radius_au": 0.0116,
+    "sector": 91,
+    "t_ca_mjd": 60801.51210270834,
+    "target_id": "teegarden",
+    "usable": true,
+    "window_days": 1.2609499069766188
+   },
+   {
+    "b_rsun": 1.037,
+    "cadence_s": 200.0,
+    "channel": "B",
+    "event_id": "evt-59dd98fa8d3d",
+    "n_inwindow_primary": 1925,
+    "n_offwindow_primary": 6065,
+    "pulse_periods_s": [
+     400.0,
+     1924.6,
+     9260.0,
+     44554.1,
+     214369.7,
+     1031428.9
+    ],
+    "radius_au": 0.1,
+    "sector": 91,
+    "t_ca_mjd": 60801.51210270834,
+    "target_id": "teegarden",
+    "usable": true,
+    "window_days": 11.937835043259922
+   },
+   {
+    "b_rsun": 0.552,
+    "cadence_s": 600.0,
+    "channel": "B",
+    "event_id": "evt-e316050714db",
+    "n_inwindow_primary": 81,
+    "n_offwindow_primary": 1956,
+    "pulse_periods_s": [
+     1200.0,
+     2515.3,
+     5272.4,
+     11051.6,
+     23165.4,
+     48557.3
+    ],
+    "radius_au": 0.0056,
+    "sector": 42,
+    "t_ca_mjd": 59462.22812605324,
+    "target_id": "wolf-359",
+    "usable": true,
+    "window_days": 0.5620057629460654
+   },
+   {
+    "b_rsun": 0.552,
+    "cadence_s": 600.0,
+    "channel": "B",
+    "event_id": "evt-e316050714db",
+    "n_inwindow_primary": 184,
+    "n_offwindow_primary": 1853,
+    "pulse_periods_s": [
+     1200.0,
+     2964.2,
+     7321.9,
+     18086.0,
+     44674.9,
+     110353.0
+    ],
+    "radius_au": 0.0116,
+    "sector": 42,
+    "t_ca_mjd": 59462.22812605324,
+    "target_id": "wolf-359",
+    "usable": true,
+    "window_days": 1.277233849922014
+   },
+   {
+    "b_rsun": 0.552,
+    "cadence_s": 600.0,
+    "channel": "B",
+    "event_id": "evt-e316050714db",
+    "n_inwindow_primary": 1116,
+    "n_offwindow_primary": 921,
+    "pulse_periods_s": [
+     1200.0,
+     4583.1,
+     17504.0,
+     66852.2,
+     255325.5,
+     975152.1
+    ],
+    "radius_au": 0.1,
+    "sector": 42,
+    "t_ca_mjd": 59462.22812605324,
+    "target_id": "wolf-359",
+    "usable": true,
+    "window_days": 11.28648293952674
+   }
+  ]
+ },
+ "split": {
+  "confirmatory": [
+   "teegarden",
+   "wolf-359"
+  ],
+  "dev": [],
+  "note": "v1.1: no searchable dev unit exists (ross-128 off-science). Machinery validation runs on the zero-trial A reference rows; every searchable B unit is confirmatory, entered only after that validation is clean.",
+  "seed": 20260827,
+  "unit": "target"
+ },
+ "statistics": {
+  "chord": "S_c = weighted least-squares amplitude of the frozen chord top-hat over the window on the per-cadence series; baseline = off-window in-sector cadences (robust mean, 3x3sigma clip); empirical variance rescale k = median(r^2/v)/0.4549 (floor 1) from off-window residuals; WEIGHT_CAP 20x; one-sided positive",
+  "gates": "unit requires >= 20 in-window and >= 200 off-window primary cadences (all 7 gate rows pass)",
+  "pulse": "S_p = max over in-window cadences of the per-cadence S/N (same baseline, k, mask); sensitive to pulses >= 1 cadence; the frozen per-unit period grids parameterize the *injection* models, not a search grid \u2014 S_p itself is grid-free",
+  "substrate": "per-cadence matched-filter forced photometry on TESScut FFI cubes (SPOC FLUX with FLUX_BKG subtracted; Gaussian kernel at the effective PSF FWHM, sub-pixel phase via stamp response); track position per cadence (Earth-center apparent relay, <= 0.04 px budget); flux scale = per-cutout TIC star calibration through the identical kernel, fallback T = 20.44 - 2.5 log10(e-/s), verified to <= 0.2 mag before any depth is quoted"
+ },
+ "threshold_rule": {
+  "T": "per statistic: max one-sided control value over the 8 designated rings",
+  "disposition": "every exceedance individually adjudicated; no silent drops",
+  "exceedance": "S > max(T, 0); margin reported",
+  "expected_control_crossings": 1.3,
+  "n_statistics_per_unit": 2,
+  "n_trials": 12,
+  "n_units": 6,
+  "per_search_crossing_probability": "1/9 per statistic"
+ },
+ "veto_ladder": [
+  "1. SkyBoT known-object census at the exceedance cadence (mandatory for every pulse-statistic exceedance: 21-arcsec pixels in the near-ecliptic asteroid stream)",
+  "2. chord-shape/timing test: amplitude consistency with the predicted ingress/egress times; flare morphology (fast-rise-exponential-decay) and asteroid transit (hours-scale bump) both fail it",
+  "3. straylight/scattered-light: QUALITY-block adjacency and background-correlation (annotation unless the strict mask removes the exceedance)",
+  "4. recurrence at a second covered window where one exists; none does in-archive for the grazing units, so surviving exceedances are retained-ambiguous with a light-curve morphology report \u2014 promotion to candidate requires independent recurrence (a future ecliptic sector or another archive), never in-window evidence alone"
+ ]
+}

@@ -1,0 +1,50 @@
+{
+ "a_reference": [
+  {
+   "target_id": "teegarden",
+   "sector": 71,
+   "fwhm_pix": 2.38,
+   "n_in": 3424,
+   "n_off": 6600,
+   "star_flux_e_s": 9489.2,
+   "implied_T_nominal_zp": 10.5,
+   "k_rescale": 6.73,
+   "S_c_reference": 39.45,
+   "S_p_reference": 3.13,
+   "n_inwindow_gt5sigma": 0
+  },
+  {
+   "target_id": "van-maanen",
+   "sector": 43,
+   "fwhm_pix": 3.0,
+   "n_in": 1475,
+   "n_off": 1319,
+   "star_flux_e_s": 3185.8,
+   "implied_T_nominal_zp": 11.68,
+   "k_rescale": 292.54,
+   "S_c_reference": 82.33,
+   "S_p_reference": 13.82,
+   "n_inwindow_gt5sigma": 24
+  }
+ ],
+ "zp_checks": {
+  "A-teegarden-s71": {
+   "n_stars": 1,
+   "status": "sparse"
+  },
+  "A-van-maanen-s43": {
+   "n_stars": 3,
+   "zp_median": 15.733,
+   "zp_scatter_mad": 0.564,
+   "offset_vs_nominal": -4.707,
+   "status": "FAIL"
+  },
+  "B-wolf-359-s42": {
+   "n_stars": 10,
+   "zp_median": 20.251,
+   "zp_scatter_mad": 0.066,
+   "offset_vs_nominal": -0.189,
+   "status": "pass"
+  }
+ }
+}

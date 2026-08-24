@@ -1,0 +1,64 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: target_id, datatype: string}
+# - {name: source, datatype: string}
+# - {name: W1_est, datatype: float64}
+# - {name: status_W1, datatype: string}
+# - {name: cov_rows_W1, datatype: int64}
+# - {name: W2_est, datatype: float64}
+# - {name: status_W2, datatype: string}
+# - {name: cov_rows_W2, datatype: int64}
+# - {name: W3_est, datatype: float64}
+# - {name: status_W3, datatype: string}
+# - {name: cov_rows_W3, datatype: int64}
+# - {name: W4_est, datatype: float64}
+# - {name: status_W4, datatype: string}
+# - {name: cov_rows_W4, datatype: int64}
+# schema: astropy-2.0
+target_id source W1_est status_W1 cov_rows_W1 W2_est status_W2 cov_rows_W2 W3_est status_W3 cov_rows_W3 W4_est status_W4 cov_rows_W4
+barnard-star hand_table 4.2 excluded 0 3.6 excluded 0 3.3 excluded 0 3.2 ok 0
+eps-ind-a gaia_join_ks 2.14 excluded 0 1.94 excluded 0 1.84 excluded 0 1.79 ok 0
+eps-ind-b gaia_join_w1 10.72 ok 3 10.52 ok 3 10.42 ok 0 10.37 ok 0
+ez-aqr hand_table 5.4 excluded 0 5.2 excluded 0 5.0 ok 0 4.9 ok 0
+fomalhaut hand_table 0.9 excluded 0 0.9 excluded 0 0.9 excluded 0 0.2 marginal 0
+gj-1002 gaia_join_ks 7.34 excluded 0 7.14 excluded 0 7.04 ok 0 6.99 ok 0
+gj-1087 gaia_join_w1 12.57 ok 1 12.37 ok 1 12.27 ok 0 12.22 ok 0
+gj-11068 hand_table 9.3 ok 3 9.1 ok 3 8.8 ok 1 8.7 ok 1
+gj-1111 gaia_join_w1 6.95 excluded 0 6.75 excluded 0 6.65 ok 0 6.6 ok 0
+gj-1276 gaia_join_w1 13.32 ok 2 13.12 ok 2 13.02 ok 0 12.97 ok 0
+gj-2012 gaia_join_w1 13.79 ok 1 13.59 ok 1 13.49 ok 0 13.44 ok 0
+gj-2066 gaia_join_ks 5.67 excluded 0 5.47 excluded 0 5.37 ok 0 5.32 ok 0
+gj-229-a gaia_join_ks 4.07 excluded 0 3.87 excluded 0 3.77 excluded 0 3.72 ok 0
+gj-338-a gaia_join_ks 3.89 excluded 0 3.69 excluded 0 3.59 excluded 0 3.54 ok 0
+gj-338-b gaia_join_ks 4.04 excluded 0 3.84 excluded 0 3.74 excluded 0 3.69 ok 0
+gj-3512 gaia_join_w1 8.43 excluded 0 8.23 ok 1 8.13 ok 0 8.08 ok 0
+gj-518 gaia_join_w1 12.62 ok 2 12.42 ok 2 12.31 ok 0 12.27 ok 0
+gj-54 gaia_join_w1 6.16 excluded 0 5.96 excluded 0 5.86 ok 0 5.81 ok 0
+gj-667-c gaia_join_w1 5.89 excluded 0 5.69 excluded 0 5.59 ok 1 5.54 ok 1
+gj-674 gaia_join_ks 4.76 excluded 0 4.56 excluded 0 4.46 marginal 0 4.41 ok 0
+gj-682 gaia_join_ks 5.51 excluded 0 5.31 excluded 0 5.21 ok 0 5.16 ok 0
+gj-687 gaia_join_w1 4.4 excluded 0 4.2 excluded 0 4.1 excluded 0 4.05 ok 0
+gj-783 hand_table 3.5 excluded 0 3.4 excluded 0 3.3 excluded 0 3.2 ok 0
+gj-784 gaia_join_ks 4.18 excluded 0 3.98 excluded 0 3.88 excluded 0 3.83 ok 0
+gj-832 gaia_join_ks 4.4 excluded 0 4.2 excluded 0 4.1 excluded 0 4.05 ok 0
+gj-876 gaia_join_w1 4.86 excluded 0 4.66 excluded 0 4.56 marginal 0 4.51 ok 0
+gj-908 gaia_join_w1 4.97 excluded 0 4.77 excluded 0 4.67 marginal 0 4.62 ok 0
+gj-915 gaia_join_w1 12.47 ok 2 12.27 ok 2 12.17 ok 0 12.12 ok 0
+gj-9193 gaia_join_w1 12.54 ok 1 12.34 ok 1 12.24 ok 0 12.19 ok 0
+gj65-a gaia_join_w1 5.12 excluded 0 4.92 excluded 0 4.82 ok 0 4.77 ok 0
+gj65-b hand_table 5.0 excluded 0 4.7 excluded 0 4.4 marginal 0 4.3 ok 0
+lacaille-8760 gaia_join_w1 2.09 excluded 0 1.89 excluded 0 1.79 excluded 0 1.74 ok 0
+lacaille-9352 gaia_join_ks 3.36 excluded 0 3.16 excluded 0 3.06 excluded 0 3.01 ok 0
+lhs-1723 gaia_join_w1 6.55 excluded 0 6.35 excluded 0 6.25 ok 1 6.2 ok 0
+luyten-star gaia_join_w1 4.79 excluded 0 4.59 excluded 0 4.49 marginal 1 4.44 ok 1
+procyon-a hand_table 0.0 excluded 0 -0.1 excluded 0 -0.2 excluded 0 -0.2 excluded 0
+procyon-b hand_table 0.0 excluded 0 -0.1 excluded 0 -0.2 excluded 0 -0.2 excluded 0
+ross-128 gaia_join_w1 5.44 excluded 0 5.24 excluded 0 5.14 ok 1 5.09 ok 1
+ross-154 gaia_join_w1 5.19 excluded 0 4.99 excluded 0 4.89 ok 0 4.84 ok 0
+ross-248 gaia_join_w1 5.69 excluded 0 5.49 excluded 0 5.39 ok 0 5.34 ok 0
+tau-cet gaia_join_w1 -0.55 excluded 0 -0.75 excluded 0 -0.85 excluded 0 -0.9 excluded 0
+van-maanen gaia_join_w1 11.41 ok 3 11.21 ok 3 11.11 ok 0 11.06 ok 0
+wise-0855 hand_table 16.6 ok 1 13.9 ok 1 12.0 ok 0 11.0 ok 0
+wolf-359 gaia_join_w1 5.84 excluded 0 5.64 excluded 0 5.54 ok 0 5.49 ok 0
+wolf-437 gaia_join_w1 6.21 excluded 0 6.01 excluded 0 5.91 ok 0 5.86 ok 0

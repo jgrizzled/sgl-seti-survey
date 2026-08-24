@@ -1,0 +1,33 @@
+{
+ "A_0.1": {
+  "rows": 5,
+  "events": 5,
+  "targets": 4,
+  "full_window_events": 2
+ },
+ "A_1.0": {
+  "rows": 366,
+  "events": 292,
+  "targets": 86,
+  "full_window_events": 19
+ },
+ "B_0.0056": {
+  "rows": 2,
+  "events": 2,
+  "targets": 2,
+  "full_window_events": 2
+ },
+ "B_0.0116": {
+  "rows": 2,
+  "events": 2,
+  "targets": 2,
+  "full_window_events": 2
+ },
+ "B_0.1": {
+  "rows": 3,
+  "events": 3,
+  "targets": 3,
+  "full_window_events": 1
+ },
+ "scheduled_future_rows": 5
+}

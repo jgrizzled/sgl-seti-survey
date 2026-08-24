@@ -1,0 +1,408 @@
+{
+ "alpha": {
+  "fwer_alpha": 0.05,
+  "ks_alpha": 0.01
+ },
+ "completeness": {
+  "injections": ">= 100 per event-window cell, image-level via the WISE PRFGrid stamp response through the identical kernel, chord temporal profile, line spectra at band effective wavelengths, v2 recovery window [2,1]"
+ },
+ "controls": {
+  "amendment_v1_1": "offset pool rescaled to the rung's ~116 d windows (see script header); v1.0 pool yielded 0 units pre-pixel",
+  "kind": "temporal pseudo-windows",
+  "n": 8,
+  "offset_scan_days": [
+   130,
+   -130,
+   135,
+   -135,
+   140,
+   -140,
+   145,
+   -145,
+   150,
+   -150,
+   155,
+   -155,
+   160,
+   -160,
+   165,
+   -165,
+   170,
+   -170,
+   175,
+   -175,
+   180,
+   -180,
+   185,
+   -185,
+   190,
+   -190,
+   195,
+   -195,
+   200,
+   -200,
+   205,
+   -205,
+   210,
+   -210,
+   215,
+   -215,
+   220,
+   -220,
+   225,
+   -225,
+   230,
+   -230,
+   235,
+   -235,
+   240,
+   -240,
+   245,
+   -245
+  ],
+  "validity": "same-rung-only overlap exclusion (trivially satisfied: one rung); an offset is valid iff its shifted windows contain >= 2 windows with >= 1 primary epoch"
+ },
+ "freeze_content_hash": "sha256:620beeeac5ba68a9a9898410946681bf4e296b723696c49234c4b1b6b5025abb",
+ "freeze_version": "wise-crossings-thresholds-v1.1",
+ "frozen_at": "2026-08-24",
+ "hypothesis_version": "wise-crossings-hypotheses-v1.0",
+ "input_hashes": {
+  "coverage": "sha256:bc1d1cc3ff8f3ff93c59bdbae6a8823840017e94cf585de101f6f5884557102d",
+  "elongation_gate": "sha256:7f3b2e53e2d9e6d06fdde445915f69b9cb80391def0fedd20239e7941b06f84f",
+  "epochs": "sha256:58fd04609d34ddbc2686414806bde8825c9b98248827f95c504f888c37fe6fd6",
+  "hypotheses": "sha256:f1b95d312643240b8c8ee9947c263228f4b0dd14b987e60f9b047b32504bb126",
+  "saturation": "sha256:c6dfa8bd0e694efce6b6d0fbf61b0c670dd137b74b1ad75920207b69b1088872"
+ },
+ "quality": {
+  "primary": "qual_frame > 0, qa_status A, moon_sep >= 15 deg + exact fatal-mask template at the star",
+  "strict": "adds saa_sep >= 5 deg, qual_frame >= 10; re-run reported for any exceedance"
+ },
+ "scope": "channel A, 1.0 AU rung only (elongation gate); channels B and A-0.1 are geometrically null and carry zero trials",
+ "search_units": {
+  "gate_blocked": [
+   {
+    "band": "W1",
+    "n_off_epochs": 263,
+    "n_valid_offsets": 2,
+    "n_windows": 3,
+    "target_id": "eps-ind-b",
+    "valid_offsets": [
+     -180,
+     185
+    ]
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 266,
+    "n_valid_offsets": 2,
+    "n_windows": 3,
+    "target_id": "eps-ind-b",
+    "valid_offsets": [
+     -180,
+     185
+    ]
+   },
+   {
+    "band": "W1",
+    "n_off_epochs": 240,
+    "n_valid_offsets": 6,
+    "n_windows": 3,
+    "target_id": "gj-11068",
+    "valid_offsets": [
+     205,
+     -205,
+     210,
+     -210,
+     215,
+     -215
+    ]
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 243,
+    "n_valid_offsets": 6,
+    "n_windows": 3,
+    "target_id": "gj-11068",
+    "valid_offsets": [
+     205,
+     -205,
+     210,
+     -210,
+     215,
+     -215
+    ]
+   },
+   {
+    "band": "W1",
+    "n_off_epochs": 247,
+    "n_valid_offsets": 0,
+    "n_windows": 2,
+    "target_id": "gj-1276",
+    "valid_offsets": []
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 248,
+    "n_valid_offsets": 0,
+    "n_windows": 2,
+    "target_id": "gj-1276",
+    "valid_offsets": []
+   },
+   {
+    "band": "W1",
+    "n_off_epochs": 276,
+    "n_valid_offsets": 0,
+    "n_windows": 2,
+    "target_id": "gj-518",
+    "valid_offsets": []
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 280,
+    "n_valid_offsets": 0,
+    "n_windows": 2,
+    "target_id": "gj-518",
+    "valid_offsets": []
+   },
+   {
+    "band": "W1",
+    "n_off_epochs": 340,
+    "n_valid_offsets": 4,
+    "n_windows": 2,
+    "target_id": "gj-915",
+    "valid_offsets": [
+     185,
+     -185,
+     190,
+     195
+    ]
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 343,
+    "n_valid_offsets": 4,
+    "n_windows": 2,
+    "target_id": "gj-915",
+    "valid_offsets": [
+     185,
+     -185,
+     190,
+     195
+    ]
+   },
+   {
+    "band": "W1",
+    "n_off_epochs": 211,
+    "n_valid_offsets": 0,
+    "n_windows": 3,
+    "target_id": "van-maanen",
+    "valid_offsets": []
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 213,
+    "n_valid_offsets": 0,
+    "n_windows": 3,
+    "target_id": "van-maanen",
+    "valid_offsets": []
+   }
+  ],
+  "n_gate_blocked": 12,
+  "n_single_window": 18,
+  "n_units": 0,
+  "single_window": [
+   {
+    "band": "W1",
+    "n_off_epochs": 304,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "gj-1087",
+    "valid_offsets": []
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 305,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "gj-1087",
+    "valid_offsets": []
+   },
+   {
+    "band": "W3",
+    "n_off_epochs": 0,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "gj-11068",
+    "valid_offsets": []
+   },
+   {
+    "band": "W4",
+    "n_off_epochs": 0,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "gj-11068",
+    "valid_offsets": []
+   },
+   {
+    "band": "W1",
+    "n_off_epochs": 344,
+    "n_valid_offsets": 7,
+    "n_windows": 1,
+    "target_id": "gj-2012",
+    "valid_offsets": [
+     130,
+     -130,
+     135,
+     -135,
+     140,
+     -140,
+     -145
+    ]
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 347,
+    "n_valid_offsets": 7,
+    "n_windows": 1,
+    "target_id": "gj-2012",
+    "valid_offsets": [
+     130,
+     -130,
+     135,
+     -135,
+     140,
+     -140,
+     -145
+    ]
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 330,
+    "n_valid_offsets": 1,
+    "n_windows": 1,
+    "target_id": "gj-3512",
+    "valid_offsets": [
+     230
+    ]
+   },
+   {
+    "band": "W3",
+    "n_off_epochs": 0,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "gj-667-c",
+    "valid_offsets": []
+   },
+   {
+    "band": "W4",
+    "n_off_epochs": 0,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "gj-667-c",
+    "valid_offsets": []
+   },
+   {
+    "band": "W1",
+    "n_off_epochs": 325,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "gj-9193",
+    "valid_offsets": []
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 326,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "gj-9193",
+    "valid_offsets": []
+   },
+   {
+    "band": "W3",
+    "n_off_epochs": 16,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "lhs-1723",
+    "valid_offsets": []
+   },
+   {
+    "band": "W3",
+    "n_off_epochs": 0,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "luyten-star",
+    "valid_offsets": []
+   },
+   {
+    "band": "W4",
+    "n_off_epochs": 0,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "luyten-star",
+    "valid_offsets": []
+   },
+   {
+    "band": "W3",
+    "n_off_epochs": 0,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "ross-128",
+    "valid_offsets": []
+   },
+   {
+    "band": "W4",
+    "n_off_epochs": 0,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "ross-128",
+    "valid_offsets": []
+   },
+   {
+    "band": "W1",
+    "n_off_epochs": 322,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "wise-0855",
+    "valid_offsets": []
+   },
+   {
+    "band": "W2",
+    "n_off_epochs": 325,
+    "n_valid_offsets": 0,
+    "n_windows": 1,
+    "target_id": "wise-0855",
+    "valid_offsets": []
+   }
+  ],
+  "units": []
+ },
+ "split": {
+  "confirmatory": [],
+  "dev": [],
+  "dev_fraction": 0.3,
+  "seed": 20260825,
+  "strata": "searchable-band class",
+  "unit": "target"
+ },
+ "statistics": {
+  "gates": ">= 2 covered windows AND >= 8 primary off-window epochs AND >= 8 valid pseudo-window offsets (evaluated above from the frozen coverage epoch lists); any failure -> constraint-only",
+  "primary": "S_A = weighted stack over covered windows of the per-window mean excess vs the same star's off-window baseline (robust mean, 3x3sigma clip, deterministic <= 120-epoch uniform-in-time subsample); one-sided positive; WEIGHT_CAP 20x",
+  "single_window_units": "constraint-only, never candidates",
+  "substrate": "matched-filter forced photometry on L1b int cutouts (v2 total-flux kernel, exact fatal-mask template) at the per-epoch propagated star position; per-frame magzp flux scale; fluxes rescaled to a common Vega ZP",
+  "variance": "per-epoch variances rescaled by k = median(r^2/v)/0.4549 over the clipped off-window epochs (floor 1)"
+ },
+ "threshold_rule": {
+  "T": "max one-sided control statistic over the 8 designated offsets",
+  "disposition": "every exceedance individually adjudicated; no silent drops",
+  "exceedance": "S > max(T, 0); margin reported",
+  "expected_control_crossings": 0.0,
+  "per_search_crossing_probability": "1/9"
+ },
+ "veto_ladder": [
+  "1. SkyBoT/known-object census per in-window visit (formality: blended-star channel)",
+  "2. rate test: within a 1-10 d visit an ordinary mover displaces arcmin-scale; the star (and any station within the 6-arcsec-PSF blend) is static",
+  "3. W1:W2 same-visit color test (calibrated where both bands are searchable): a laser line is single-band, stellar variability is broadband-correlated",
+  "4. recurrence at a second covered window",
+  "annotations: phase-lock structure; single-visit windows"
+ ]
+}

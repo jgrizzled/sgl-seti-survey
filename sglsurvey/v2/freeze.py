@@ -23,13 +23,20 @@ def run(P) -> dict:
     for c in corridors:
         strata[P.confusion_class(c)].append(c)
     rng = np.random.default_rng(P.split_seed)
+    forced = set(getattr(P, "forced_dev", ()) or ())
     dev, conf, per = [], [], {}
     for cls in sorted(strata):
         cs = sorted(strata[cls])
         n_dev = max(1, int(round(P.dev_fraction * len(cs)))) if len(cs) > 1 else 0
-        pick = sorted(rng.choice(cs, size=n_dev, replace=False).tolist()) if n_dev else []
+        pre = sorted(c for c in cs if c in forced)
+        pool = [c for c in cs if c not in forced]
+        n_draw = max(n_dev - len(pre), 0)
+        drawn = (sorted(rng.choice(pool, size=n_draw, replace=False).tolist())
+                 if n_draw and pool else [])
+        pick = sorted(pre + drawn)
         dev.extend(pick); conf.extend(c for c in cs if c not in pick)
-        per[cls] = {"n_corridors": len(cs), "n_dev": n_dev, "dev": pick}
+        per[cls] = {"n_corridors": len(cs), "n_dev": len(pick), "dev": pick,
+                    **({"forced": pre} if pre else {})}
     dev, conf = sorted(dev), sorted(conf)
     dev_e = sorted(e for c in dev for e in P.members(c))
     conf_e = sorted(e for c in conf for e in P.members(c))
@@ -38,7 +45,8 @@ def run(P) -> dict:
         "hypotheses_hash": ("sha256:" + hashlib.sha256(P.hypotheses_path.read_bytes()).hexdigest()
                             if P.hypotheses_path.exists() else None),
         "registry_source_hash": registry.source_hash,
-        "n_endpoints": len(P.endpoints), "n_corridors": len(corridors), "frozen_at": "2026-08-22",
+        "n_endpoints": len(P.endpoints), "n_corridors": len(corridors),
+        "frozen_at": getattr(P, "frozen_at", "2026-08-22"),
         "parameters": P.frozen_params(),
         "split": {"seed": P.split_seed, "dev_fraction": P.dev_fraction, "strata": per,
                   "confusion_class": {c: P.confusion_class(c) for c in corridors},

@@ -186,16 +186,15 @@ def discovery_cone(ctx: GeometryContext, target: Any, roles: Sequence[Role],
 WISE_OBSERVER_ID = "wise-l1b-spacecraft"
 
 
-def register_wise_spacecraft_observer(table_mjd: np.ndarray,
-                                      table_xyz_au: np.ndarray,
-                                      identity: str,
-                                      max_gap_days: float = 2.0):
-    """Register a programmatic sglseti observer that returns the WISE
+def register_spacecraft_table_observer(observer_id: str,
+                                       table_mjd: np.ndarray,
+                                       table_xyz_au: np.ndarray,
+                                       identity: str,
+                                       max_gap_days: float = 2.0):
+    """Register a programmatic sglseti observer that returns a
     spacecraft's barycentric ICRS position, interpolated from a table
-    of (MJD UTC, SSB x/y/z AU) built from the L1b frame headers
-    (SUN2SC* + the Sun's barycentric position). Outside the table's
-    coverage by more than ``max_gap_days`` (mission gaps, no frames)
-    the Earth centre is returned — no frame is evaluated there.
+    of (MJD UTC, SSB x/y/z AU). Outside the table's coverage by more
+    than ``max_gap_days`` (mission gaps) the Earth centre is returned.
     ``identity`` is the content hash of the table and is part of every
     calculation identity. Returns the :class:`Observer` spec."""
     from astropy.coordinates import get_body_barycentric
@@ -222,9 +221,20 @@ def register_wise_spacecraft_observer(table_mjd: np.ndarray,
         f = (m - mjd[lo]) / (mjd[hi] - mjd[lo])
         return xyz[lo] * (1 - f) + xyz[hi] * f
 
-    register_programmatic_observer(WISE_OBSERVER_ID, position)
-    return Observer(observer_id=WISE_OBSERVER_ID, kind=ObserverKind.PROGRAMMATIC,
+    register_programmatic_observer(observer_id, position)
+    return Observer(observer_id=observer_id, kind=ObserverKind.PROGRAMMATIC,
                     identity=identity)
+
+
+def register_wise_spacecraft_observer(table_mjd: np.ndarray,
+                                      table_xyz_au: np.ndarray,
+                                      identity: str,
+                                      max_gap_days: float = 2.0):
+    """WISE-specific wrapper of :func:`register_spacecraft_table_observer`
+    (table built from the L1b frame headers: SUN2SC* + the Sun's
+    barycentric position)."""
+    return register_spacecraft_table_observer(
+        WISE_OBSERVER_ID, table_mjd, table_xyz_au, identity, max_gap_days)
 
 
 def wise_v2_context(observer) -> GeometryContext:

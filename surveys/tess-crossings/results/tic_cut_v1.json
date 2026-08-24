@@ -1,0 +1,40 @@
+{
+ "rule": {
+  "excluded_below": 7.3,
+  "marginal_below": 7.8
+ },
+ "targets": [
+  {
+   "target_id": "gj-1276",
+   "tic_id": 36694741,
+   "tmag": 14.723,
+   "match_sep_arcsec": 0.0,
+   "status": "ok",
+   "n_refined_rows": 1
+  },
+  {
+   "target_id": "gj-908",
+   "tic_id": 267255253,
+   "tmag": 7.10284,
+   "match_sep_arcsec": 0.01,
+   "status": "excluded",
+   "n_refined_rows": 1
+  },
+  {
+   "target_id": "teegarden",
+   "tic_id": 257870150,
+   "tmag": 10.565,
+   "match_sep_arcsec": 0.03,
+   "status": "ok",
+   "n_refined_rows": 2
+  },
+  {
+   "target_id": "van-maanen",
+   "tic_id": 257219223,
+   "tmag": 11.9897,
+   "match_sep_arcsec": 0.01,
+   "status": "ok",
+   "n_refined_rows": 1
+  }
+ ]
+}

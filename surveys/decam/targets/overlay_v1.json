@@ -1,0 +1,455 @@
+{
+  "version": "overlay_v1",
+  "built_utc": "2026-08-24T16:00:31.884732+00:00",
+  "quality_cut": {
+    "min_exptime_s": 30.0,
+    "bands": [
+      "g",
+      "r",
+      "i",
+      "z",
+      "Y"
+    ],
+    "obs_type": "object-or-null"
+  },
+  "rows": [
+    {
+      "corridor": "cyg61",
+      "members": [
+        "61-cyg-a",
+        "61-cyg-b"
+      ],
+      "cone": {
+        "ra_deg": 136.7698,
+        "dec_deg": -38.7765,
+        "radius_deg": 0.1948
+      },
+      "n_exposures_raw": 80,
+      "n_exposures_quality": 49,
+      "bands": {
+        "g": 10,
+        "r": 10,
+        "i": 11,
+        "z": 11,
+        "Y": 7
+      },
+      "date_range": [
+        "2018-02-25",
+        "2019-01-18"
+      ],
+      "n_calendar_months": 3,
+      "nsc_objects_per_sqdeg": 161399,
+      "grade": "ok",
+      "pilot": false
+    },
+    {
+      "corridor": "gj1221",
+      "members": [
+        "gj-1221"
+      ],
+      "cone": {
+        "ra_deg": 86.9898,
+        "dec_deg": -70.8868,
+        "radius_deg": 0.1817
+      },
+      "n_exposures_raw": 14050,
+      "n_exposures_quality": 2033,
+      "bands": {
+        "g": 804,
+        "r": 609,
+        "i": 436,
+        "z": 184,
+        "Y": 0
+      },
+      "date_range": [
+        "2014-02-14",
+        "2026-01-18"
+      ],
+      "n_calendar_months": 11,
+      "nsc_objects_per_sqdeg": 1179950,
+      "grade": "crowded",
+      "pilot": false
+    },
+    {
+      "corridor": "gj13157",
+      "members": [
+        "gj-13157"
+      ],
+      "cone": {
+        "ra_deg": 147.9112,
+        "dec_deg": -59.2914,
+        "radius_deg": 0.1702
+      },
+      "n_exposures_raw": 164,
+      "n_exposures_quality": 102,
+      "bands": {
+        "g": 29,
+        "r": 31,
+        "i": 34,
+        "z": 4,
+        "Y": 4
+      },
+      "date_range": [
+        "2014-02-15",
+        "2026-03-25"
+      ],
+      "n_calendar_months": 7,
+      "nsc_objects_per_sqdeg": 362960,
+      "grade": "crowded",
+      "pilot": false
+    },
+    {
+      "corridor": "gj251",
+      "members": [
+        "gj-251"
+      ],
+      "cone": {
+        "ra_deg": 283.6954,
+        "dec_deg": -33.2643,
+        "radius_deg": 0.173
+      },
+      "n_exposures_raw": 55,
+      "n_exposures_quality": 51,
+      "bands": {
+        "g": 14,
+        "r": 8,
+        "i": 14,
+        "z": 15,
+        "Y": 0
+      },
+      "date_range": [
+        "2017-08-07",
+        "2025-02-12"
+      ],
+      "n_calendar_months": 7,
+      "nsc_objects_per_sqdeg": 352448,
+      "grade": "crowded",
+      "pilot": false
+    },
+    {
+      "corridor": "gj338",
+      "members": [
+        "gj-338-a",
+        "gj-338-b"
+      ],
+      "cone": {
+        "ra_deg": 318.5686,
+        "dec_deg": -52.6807,
+        "radius_deg": 0.1794
+      },
+      "n_exposures_raw": 285,
+      "n_exposures_quality": 283,
+      "bands": {
+        "g": 74,
+        "r": 61,
+        "i": 49,
+        "z": 58,
+        "Y": 41
+      },
+      "date_range": [
+        "2013-08-15",
+        "2018-11-08"
+      ],
+      "n_calendar_months": 4,
+      "nsc_objects_per_sqdeg": 67919,
+      "grade": "ok",
+      "pilot": false
+    },
+    {
+      "corridor": "gj3512",
+      "members": [
+        "gj-3512"
+      ],
+      "cone": {
+        "ra_deg": 310.3294,
+        "dec_deg": -59.48,
+        "radius_deg": 0.1724
+      },
+      "n_exposures_raw": 256,
+      "n_exposures_quality": 254,
+      "bands": {
+        "g": 81,
+        "r": 61,
+        "i": 36,
+        "z": 47,
+        "Y": 29
+      },
+      "date_range": [
+        "2013-08-31",
+        "2023-08-11"
+      ],
+      "n_calendar_months": 5,
+      "nsc_objects_per_sqdeg": 76895,
+      "grade": "ok",
+      "pilot": false
+    },
+    {
+      "corridor": "gj625",
+      "members": [
+        "gj-625"
+      ],
+      "cone": {
+        "ra_deg": 66.3625,
+        "dec_deg": -54.3,
+        "radius_deg": 0.1724
+      },
+      "n_exposures_raw": 832,
+      "n_exposures_quality": 254,
+      "bands": {
+        "g": 59,
+        "r": 68,
+        "i": 59,
+        "z": 45,
+        "Y": 23
+      },
+      "date_range": [
+        "2012-12-03",
+        "2026-02-05"
+      ],
+      "n_calendar_months": 6,
+      "nsc_objects_per_sqdeg": 65738,
+      "grade": "ok",
+      "pilot": false
+    },
+    {
+      "corridor": "gj687",
+      "members": [
+        "gj-687"
+      ],
+      "cone": {
+        "ra_deg": 84.0998,
+        "dec_deg": -68.3244,
+        "radius_deg": 0.1774
+      },
+      "n_exposures_raw": 1242,
+      "n_exposures_quality": 714,
+      "bands": {
+        "g": 185,
+        "r": 410,
+        "i": 74,
+        "z": 45,
+        "Y": 0
+      },
+      "date_range": [
+        "2013-03-06",
+        "2025-11-02"
+      ],
+      "n_calendar_months": 12,
+      "nsc_objects_per_sqdeg": 1067826,
+      "grade": "crowded",
+      "pilot": false
+    },
+    {
+      "corridor": "grb34",
+      "members": [
+        "groombridge-34-a",
+        "groombridge-34-b"
+      ],
+      "cone": {
+        "ra_deg": 184.6281,
+        "dec_deg": -44.0261,
+        "radius_deg": 0.1834
+      },
+      "n_exposures_raw": 109,
+      "n_exposures_quality": 83,
+      "bands": {
+        "g": 16,
+        "r": 19,
+        "i": 24,
+        "z": 16,
+        "Y": 8
+      },
+      "date_range": [
+        "2013-04-19",
+        "2026-01-14"
+      ],
+      "n_calendar_months": 8,
+      "nsc_objects_per_sqdeg": 92469,
+      "grade": "ok",
+      "pilot": false
+    },
+    {
+      "corridor": "hd219134",
+      "members": [
+        "hd-219134"
+      ],
+      "cone": {
+        "ra_deg": 168.3611,
+        "dec_deg": -57.171,
+        "radius_deg": 0.1834
+      },
+      "n_exposures_raw": 94,
+      "n_exposures_quality": 92,
+      "bands": {
+        "g": 14,
+        "r": 12,
+        "i": 50,
+        "z": 8,
+        "Y": 8
+      },
+      "date_range": [
+        "2013-02-17",
+        "2026-03-25"
+      ],
+      "n_calendar_months": 8,
+      "nsc_objects_per_sqdeg": 509988,
+      "grade": "crowded",
+      "pilot": true
+    },
+    {
+      "corridor": "lalande",
+      "members": [
+        "lalande-21185"
+      ],
+      "cone": {
+        "ra_deg": 345.831,
+        "dec_deg": -35.9314,
+        "radius_deg": 0.178
+      },
+      "n_exposures_raw": 69,
+      "n_exposures_quality": 69,
+      "bands": {
+        "g": 22,
+        "r": 12,
+        "i": 20,
+        "z": 15,
+        "Y": 0
+      },
+      "date_range": [
+        "2015-08-29",
+        "2024-09-04"
+      ],
+      "n_calendar_months": 5,
+      "nsc_objects_per_sqdeg": 39223,
+      "grade": "ok",
+      "pilot": true
+    },
+    {
+      "corridor": "ross248",
+      "members": [
+        "ross-248"
+      ],
+      "cone": {
+        "ra_deg": 175.4777,
+        "dec_deg": -44.1632,
+        "radius_deg": 0.1734
+      },
+      "n_exposures_raw": 194,
+      "n_exposures_quality": 139,
+      "bands": {
+        "g": 58,
+        "r": 37,
+        "i": 23,
+        "z": 19,
+        "Y": 2
+      },
+      "date_range": [
+        "2013-03-18",
+        "2023-04-15"
+      ],
+      "n_calendar_months": 8,
+      "nsc_objects_per_sqdeg": 89238,
+      "grade": "ok",
+      "pilot": false
+    },
+    {
+      "corridor": "sigmadra",
+      "members": [
+        "sigma-dra"
+      ],
+      "cone": {
+        "ra_deg": 113.106,
+        "dec_deg": -69.6401,
+        "radius_deg": 0.1823
+      },
+      "n_exposures_raw": 222,
+      "n_exposures_quality": 172,
+      "bands": {
+        "g": 31,
+        "r": 31,
+        "i": 60,
+        "z": 50,
+        "Y": 0
+      },
+      "date_range": [
+        "2012-11-01",
+        "2024-01-26"
+      ],
+      "n_calendar_months": 8,
+      "nsc_objects_per_sqdeg": 101079,
+      "grade": "ok",
+      "pilot": true
+    },
+    {
+      "corridor": "struve2398",
+      "members": [
+        "struve-2398-a",
+        "struve-2398-b"
+      ],
+      "cone": {
+        "ra_deg": 100.6707,
+        "dec_deg": -59.644,
+        "radius_deg": 0.1796
+      },
+      "n_exposures_raw": 317,
+      "n_exposures_quality": 287,
+      "bands": {
+        "g": 94,
+        "r": 98,
+        "i": 62,
+        "z": 22,
+        "Y": 11
+      },
+      "date_range": [
+        "2013-12-21",
+        "2025-02-13"
+      ],
+      "n_calendar_months": 7,
+      "nsc_objects_per_sqdeg": 61974,
+      "grade": "ok",
+      "pilot": false
+    },
+    {
+      "corridor": "wolf1069",
+      "members": [
+        "wolf-1069"
+      ],
+      "cone": {
+        "ra_deg": 126.5267,
+        "dec_deg": -58.5788,
+        "radius_deg": 0.1761
+      },
+      "n_exposures_raw": 48,
+      "n_exposures_quality": 48,
+      "bands": {
+        "g": 15,
+        "r": 16,
+        "i": 9,
+        "z": 8,
+        "Y": 0
+      },
+      "date_range": [
+        "2016-02-10",
+        "2023-01-21"
+      ],
+      "n_calendar_months": 6,
+      "nsc_objects_per_sqdeg": 127013,
+      "grade": "ok",
+      "pilot": false
+    }
+  ],
+  "queue": [
+    "struve2398",
+    "gj338",
+    "gj3512",
+    "gj625",
+    "ross248",
+    "grb34",
+    "cyg61",
+    "wolf1069",
+    "gj1221",
+    "gj687",
+    "gj13157",
+    "gj251"
+  ]
+}

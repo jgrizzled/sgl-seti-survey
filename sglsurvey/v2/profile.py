@@ -102,6 +102,10 @@ class ArchiveProfile:
     psf_fwhm_nominal: dict = field(default_factory=dict)   # band -> arcsec (for the xt threshold)
     split_seed: int = 20260822
     dev_fraction: float = 0.30
+    #: corridors forced into the development set before the stratified
+    #: draw (e.g. pilot corridors whose data shaped the pipeline);
+    #: additive — empty tuple reproduces the original draw exactly.
+    forced_dev: tuple = ()
     endpoints: list = field(default_factory=list)          # endpoints with v1 tensors
     extra_params: dict = field(default_factory=dict)
     # hooks (set by the concrete profile)
@@ -221,7 +225,7 @@ class ArchiveProfile:
                          "xt_threshold_fwhm": self.xt_threshold_fwhm, "psf_fwhm_nominal": self.psf_fwhm_nominal,
                          "observer": self.observer_identity},
             "split": {"seed": self.split_seed, "dev_fraction": self.dev_fraction, "unit": "corridor",
-                      "strata": "confusion class"},
+                      "strata": "confusion class", "forced_dev": list(self.forced_dev)},
             "extra": self.extra_params,
         }
 

@@ -1,7 +1,7 @@
 # ztf v2
 
 v2 re-analysis of the v1 ztf survey under the frozen rule in
-`hypotheses.md` (WISE v2.1 design, project plan §10.1 step 6), run by
+`hypotheses.md` (WISE v2.1 design; v2 programme step 6, `notes/project_history.md` §5), run by
 the survey-agnostic engine `sglsurvey/v2/` with this directory's
 `profile.py` bindings. `configs/v2_freeze.json` holds the hashed freeze
 and the stratified development / confirmatory split;

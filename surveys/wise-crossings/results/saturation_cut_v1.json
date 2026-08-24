@@ -1,0 +1,41 @@
+{
+  "rule": {
+    "excluded_below": {
+      "W1": 8.6,
+      "W2": 7.5,
+      "W3": 4.3,
+      "W4": 0.1
+    },
+    "marginal_width": 0.5,
+    "transform_accuracy_mag": 0.3
+  },
+  "n_targets": 45,
+  "W1": {
+    "excluded": 35,
+    "marginal": 0,
+    "ok": 10,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 19
+  },
+  "W2": {
+    "excluded": 34,
+    "marginal": 0,
+    "ok": 11,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 20
+  },
+  "W3": {
+    "excluded": 15,
+    "marginal": 5,
+    "ok": 25,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 5
+  },
+  "W4": {
+    "excluded": 3,
+    "marginal": 1,
+    "ok": 41,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 4
+  }
+}

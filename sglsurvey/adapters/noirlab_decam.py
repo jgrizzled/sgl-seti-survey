@@ -386,21 +386,25 @@ class DecamInstcalAdapter:
     # -- fetch -------------------------------------------------------------
     def fetch(self, obs: Observation, kinds: Sequence[str], dest: Path,
               *, cutout: CutoutSpec | None = None,
-              dqmask_dir: Path | None = None) -> ProductSet:
+              dqmask_dir: Path | None = None,
+              extname: str | None = None) -> ProductSet:
         """Download products. ``dqmask`` is always the full file (needed
         for the exact footprint and the per-exposure HDU map) and its
-        archive md5 is verified. For ``image``/``wtmap`` a ``cutout``
-        selects the single CCD HDU containing (ra, dec) via ``?hdus=``
-        (size_pix is ignored — the unit of retrieval is the CCD); the
-        EXTNAME of the received HDU is asserted, and the checksum is a
-        local sha256 (the archive md5 covers only the full file)."""
+        archive md5 is verified. For ``image``/``wtmap`` a single CCD
+        HDU is fetched via ``?hdus=``, selected either by ``extname``
+        directly or by ``cutout`` (the CCD containing (ra, dec);
+        size_pix is ignored — the unit of retrieval is the CCD; the
+        centre may sit in a chip gap, so callers that know the covered
+        locus should pass ``extname`` instead). The EXTNAME of the
+        received HDU is asserted, and the checksum is a local sha256
+        (the archive md5 covers only the full file)."""
         dest.mkdir(parents=True, exist_ok=True)
         expnum = obs.native_key["expnum"]
         products = []
         exact = None
         for kind in list(kinds):
             info = obs.products[kind]
-            if kind == "dqmask" or cutout is None:
+            if kind == "dqmask" or (cutout is None and extname is None):
                 path = dest / f"exp{expnum}_{kind}.fits.fz"
                 if not path.exists():
                     resp = self._session.get(info["url"],
@@ -429,24 +433,22 @@ class DecamInstcalAdapter:
                     dq_set = self.fetch(obs, ["dqmask"],
                                         dqmask_dir or dest)
                     exact = DecamExactFootprint(dq_set.products[0].path)
-            extname, hdu = exact.ccd_of(cutout.ra_deg, cutout.dec_deg)
-            if extname is None:
-                raise FileNotFoundError(
-                    f"({cutout.ra_deg}, {cutout.dec_deg}) is off every "
-                    f"CCD of exposure {expnum}")
-            path = dest / f"exp{expnum}_{kind}_{extname}.fits"
+            if extname is not None:
+                if extname not in exact.hdu_index:
+                    raise FileNotFoundError(
+                        f"no CCD {extname} in exposure {expnum}")
+                ccd_name, hdu = extname, exact.hdu_index[extname]
+            else:
+                ccd_name, hdu = exact.ccd_of(cutout.ra_deg,
+                                             cutout.dec_deg)
+                if ccd_name is None:
+                    raise FileNotFoundError(
+                        f"({cutout.ra_deg}, {cutout.dec_deg}) is off "
+                        f"every CCD of exposure {expnum}")
+            path = dest / f"exp{expnum}_{kind}_{ccd_name}.fits"
             if not path.exists():
-                resp = self._session.get(info["url"],
-                                         params={"hdus": f"0,{hdu}"},
-                                         timeout=self._timeout)
-                if resp.status_code == 404:
-                    raise FileNotFoundError(info["url"])
-                resp.raise_for_status()
-                if not resp.content.startswith(b"SIMPLE"):
-                    raise IOError(f"non-FITS response for {info['url']}: "
-                                  f"{resp.content[:80]!r}")
-                self._assert_extname(resp.content, extname, info["url"])
-                path.write_bytes(resp.content)
+                content = self._fetch_hdu(info, hdu, ccd_name, expnum)
+                path.write_bytes(content)
             digest = hashlib.sha256(path.read_bytes()).hexdigest()
             products.append(LocalProduct(
                 kind=kind, path=path, checksum=f"sha256:{digest}"))
@@ -454,6 +456,119 @@ class DecamInstcalAdapter:
             exact.close()
         return ProductSet(observation_id=obs.observation_id,
                           products=tuple(products), cutout=cutout)
+
+    def _fetch_hdu(self, info: dict, hdu: int, ccd_name: str,
+                   expnum: int) -> bytes:
+        """Fetch one CCD HDU with two recovery paths for known archive
+        failure modes (~1% of files, recon addendum):
+
+        - the target file's HDU order can differ from its dqmask
+          sibling's (seen on a corrupt wtmap): on EXTNAME mismatch the
+          per-file order is read from the api/header page and the
+          fetch retried at the right index;
+        - ``?hdus=`` can 500 for specific files: fall back to the full
+          file (md5-verified) and extract the HDU locally.
+        """
+        url = info["url"]
+        resp = self._session.get(url, params={"hdus": f"0,{hdu}"},
+                                 timeout=self._timeout)
+        if resp.status_code == 404:
+            raise FileNotFoundError(url)
+        if resp.status_code >= 500:
+            return self._fetch_hdu_via_full_file(info, ccd_name, expnum)
+        resp.raise_for_status()
+        if not resp.content.startswith(b"SIMPLE"):
+            raise IOError(f"non-FITS response for {url}: "
+                          f"{resp.content[:80]!r}")
+        got = self._extname_of(resp.content)
+        if got == ccd_name:
+            return resp.content
+        order = self._hdu_order_from_header_page(info["md5"])
+        if order and ccd_name in order:
+            idx = order.index(ccd_name) + 1  # order excludes primary
+            resp = self._session.get(url, params={"hdus": f"0,{idx}"},
+                                     timeout=self._timeout)
+            resp.raise_for_status()
+            if resp.content.startswith(b"SIMPLE") and \
+                    self._extname_of(resp.content) == ccd_name:
+                return resp.content
+        return self._fetch_hdu_via_full_file(info, ccd_name, expnum)
+
+    def _fetch_hdu_via_full_file(self, info: dict, ccd_name: str,
+                                 expnum: int) -> bytes:
+        """Fallback full-file fetch. The served bytes are md5-verified
+        against the archive metadata; on mismatch the file is still
+        accepted IF it parses as FITS and its EXPNUM matches — the
+        archive serves repaired versions of some damaged files under
+        the original md5sum (recon addendum; 1 wtmap of 214 pilot
+        exposures). Unparsable served bytes raise (1 image of 214 is
+        corrupt server-side with no recovery)."""
+        import io
+        import tempfile
+
+        from astropy.io import fits
+        resp = self._session.get(info["url"], timeout=self._timeout)
+        resp.raise_for_status()
+        md5 = hashlib.md5(resp.content).hexdigest()
+        md5_mismatch = md5 != info["md5"]
+        with tempfile.NamedTemporaryFile(suffix=".fits.fz") as tmp:
+            tmp.write(resp.content)
+            tmp.flush()
+            try:
+                hdul = fits.open(tmp.name, output_verify="silentfix")
+            except Exception as exc:
+                raise IOError(
+                    f"unusable archive file {info['url']}: "
+                    f"{'md5 mismatch and ' if md5_mismatch else ''}"
+                    f"unparsable ({exc})") from exc
+            with hdul:
+                if md5_mismatch:
+                    got_exp = hdul[0].header.get("EXPNUM")
+                    if got_exp != expnum:
+                        raise IOError(
+                            f"md5 mismatch AND EXPNUM {got_exp} != "
+                            f"{expnum} for {info['url']}")
+                    print(f"  note: served bytes for {info['md5']} "
+                          f"(EXPNUM {expnum}) differ from archive md5 "
+                          f"(served {md5}); content-verified, accepted",
+                          flush=True)
+                target = None
+                for h in hdul[1:]:
+                    if h.header.get("EXTNAME") == ccd_name:
+                        target = h
+                        break
+                if target is None:
+                    raise FileNotFoundError(
+                        f"no CCD {ccd_name} in {info['url']}")
+                buf = io.BytesIO()
+                fits.HDUList([fits.PrimaryHDU(header=hdul[0].header),
+                              target]).writeto(buf,
+                                               output_verify="silentfix")
+                return buf.getvalue()
+
+    def _hdu_order_from_header_page(self, md5: str) -> list[str] | None:
+        """EXTNAME order from the api/header HTML page; None when the
+        page fails (e.g. BADFFILE for corrupt files)."""
+        import re
+        try:
+            resp = self._session.get(
+                f"https://astroarchive.noirlab.edu/api/header/{md5}/",
+                timeout=self._timeout)
+            if resp.status_code != 200:
+                return None
+            names = re.findall(
+                r"EXTNAME</b></th>\s*<td>([A-Za-z0-9]+)</td>", resp.text)
+            return names or None
+        except Exception:
+            return None
+
+    @staticmethod
+    def _extname_of(content: bytes) -> str | None:
+        import io
+
+        from astropy.io import fits
+        with fits.open(io.BytesIO(content)) as hdul:
+            return hdul[1].header.get("EXTNAME") if len(hdul) > 1 else None
 
     @staticmethod
     def _assert_extname(content: bytes, expected: str, url: str) -> None:

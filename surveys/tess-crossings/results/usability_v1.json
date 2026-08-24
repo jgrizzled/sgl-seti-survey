@@ -1,0 +1,256 @@
+{
+ "rule": {
+  "science_cols": [
+   45,
+   2092
+  ],
+  "science_rows": [
+   1,
+   2048
+  ],
+  "margin_px": 4,
+  "ring_extent_px_channel_B": 12
+ },
+ "rows": [
+  {
+   "channel": "A",
+   "target_id": "gj-1276",
+   "event_id": "evt-b3eb38c057cd",
+   "sector": 42,
+   "cutout_x": [
+    2087,
+    2101
+   ],
+   "cutout_y": [
+    1454,
+    1468
+   ],
+   "source_ccd_xy": [
+    2094,
+    1461
+   ],
+   "source_on_science": false,
+   "status": "off_science_array"
+  },
+  {
+   "channel": "A",
+   "target_id": "gj-908",
+   "event_id": "evt-245b4f5d2661",
+   "sector": 42,
+   "cutout_x": [
+    1705,
+    1719
+   ],
+   "cutout_y": [
+    1428,
+    1442
+   ],
+   "source_ccd_xy": [
+    1712,
+    1435
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  },
+  {
+   "channel": "A",
+   "target_id": "teegarden",
+   "event_id": "evt-a0efd7e7dac7",
+   "sector": 44,
+   "cutout_x": [
+    4,
+    18
+   ],
+   "cutout_y": [
+    754,
+    768
+   ],
+   "source_ccd_xy": [
+    11,
+    761
+   ],
+   "source_on_science": false,
+   "status": "off_science_array"
+  },
+  {
+   "channel": "A",
+   "target_id": "teegarden",
+   "event_id": "evt-2215379de80c",
+   "sector": 71,
+   "cutout_x": [
+    136,
+    150
+   ],
+   "cutout_y": [
+    1490,
+    1504
+   ],
+   "source_ccd_xy": [
+    143,
+    1497
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  },
+  {
+   "channel": "A",
+   "target_id": "van-maanen",
+   "event_id": "evt-74fd54a743a0",
+   "sector": 43,
+   "cutout_x": [
+    48,
+    62
+   ],
+   "cutout_y": [
+    1631,
+    1645
+   ],
+   "source_ccd_xy": [
+    55,
+    1638
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  },
+  {
+   "channel": "B",
+   "target_id": "ross-128",
+   "event_id": "evt-72b3ddd1ed4f",
+   "sector": 42,
+   "cutout_x": [
+    6,
+    36
+   ],
+   "cutout_y": [
+    1145,
+    1175
+   ],
+   "source_ccd_xy": [
+    21,
+    1160
+   ],
+   "source_on_science": false,
+   "status": "off_science_array"
+  },
+  {
+   "channel": "B",
+   "target_id": "teegarden",
+   "event_id": "evt-59dd98fa8d3d",
+   "sector": 91,
+   "cutout_x": [
+    1971,
+    2001
+   ],
+   "cutout_y": [
+    606,
+    636
+   ],
+   "source_ccd_xy": [
+    1986,
+    621
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  },
+  {
+   "channel": "B",
+   "target_id": "teegarden",
+   "event_id": "evt-59dd98fa8d3d",
+   "sector": 91,
+   "cutout_x": [
+    1971,
+    2001
+   ],
+   "cutout_y": [
+    606,
+    636
+   ],
+   "source_ccd_xy": [
+    1986,
+    621
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  },
+  {
+   "channel": "B",
+   "target_id": "teegarden",
+   "event_id": "evt-59dd98fa8d3d",
+   "sector": 91,
+   "cutout_x": [
+    1971,
+    2001
+   ],
+   "cutout_y": [
+    606,
+    636
+   ],
+   "source_ccd_xy": [
+    1986,
+    621
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  },
+  {
+   "channel": "B",
+   "target_id": "wolf-359",
+   "event_id": "evt-e316050714db",
+   "sector": 42,
+   "cutout_x": [
+    2008,
+    2038
+   ],
+   "cutout_y": [
+    1366,
+    1396
+   ],
+   "source_ccd_xy": [
+    2023,
+    1381
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  },
+  {
+   "channel": "B",
+   "target_id": "wolf-359",
+   "event_id": "evt-e316050714db",
+   "sector": 42,
+   "cutout_x": [
+    2008,
+    2038
+   ],
+   "cutout_y": [
+    1366,
+    1396
+   ],
+   "source_ccd_xy": [
+    2023,
+    1381
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  },
+  {
+   "channel": "B",
+   "target_id": "wolf-359",
+   "event_id": "evt-e316050714db",
+   "sector": 42,
+   "cutout_x": [
+    2008,
+    2038
+   ],
+   "cutout_y": [
+    1366,
+    1396
+   ],
+   "source_ccd_xy": [
+    2023,
+    1381
+   ],
+   "source_on_science": true,
+   "status": "usable"
+  }
+ ]
+}

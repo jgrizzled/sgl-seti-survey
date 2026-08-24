@@ -4,7 +4,7 @@ date: 2026-08-24
 status: "recon complete — service probes + coverage sweep; pilot not started"
 ---
 
-# DECam recon (plan §7 TODO / §10 step 8)
+# DECam recon (for the survey now at plan §4.6; complete — `report/decam_survey.md`)
 
 Goal: assess what a DECam adapter + 3-corridor pilot (Lalande 21185,
 σ Dra, HD 219134) on the ZTF/PS1 pattern needs, for the 15 southern
@@ -158,3 +158,45 @@ second day (connection-level timeout, http 000).
   Jupyter — compute near data, but against this project's local
   snapshot/reproducibility model. Decision: start anonymous; register
   a free account at scale-up if sync limits bite.
+
+## Addendum 2026-08-24 (build day) — archive failure modes + validations
+
+Found while fetching all 214 pilot usable exposures (each mode ~0.5-1%
+of files; both recoveries now in the adapter):
+
+- **`?hdus=` can 500** for specific files. Fallback: full-file fetch +
+  local HDU extraction.
+- **HDU order can differ between siblings** of one exposure (seen on a
+  wtmap vs its dqmask). The fetch-time EXTNAME assertion catches it;
+  recovery reads the per-file EXTNAME order from the `api/header/<md5>/`
+  page (HTML, parseable; returns `BADFFILE` JSON for corrupt files).
+- **Served bytes can mismatch the archive's own md5sum** (repaired
+  files served under the original md5 record). The fallback accepts
+  them only after parsing as FITS with matching EXPNUM
+  (content-verified), with a printed note.
+- **One pilot image file is unrecoverably corrupt server-side**
+  (`de55324b…`, EXPNUM-file at hd219134): served bytes are not FITS at
+  all (no fpack/gzip magic). The exposure is recorded missing —
+  archive-side data loss, 1 of 214.
+- Threading note: astropy's warning logger crashes
+  (`dictionary changed size during iteration`) with concurrent imports
+  in ThreadPoolExecutor workers — first fetch pass should warm imports
+  or run `--workers 1` on retries.
+
+**Validations (pre-freeze, `surveys/decam/results/`):**
+
+- `observer_validation.json`: sglseti CTIO site vs independent astropy
+  computation at z = 550 AU: site effect 7–16 mas, residual ≤ 1.7 mas
+  (typical 0.3 mas) over 3 endpoints × 5 epochs — PASS (target 20 mas).
+- `flux_scale_check.json`: 24 frames, 6 bands, NSC stars 16–19.5.
+  Star-ZP MAD 0.014–0.10 mag per frame (crowded fields at the high
+  end) → per-frame star calibration is well-fed. **MAGZERO convention
+  = counts (not counts/s)**; header MAGZERO is per-frame unreliable
+  (most within ±0.2 mag of star ZP; outliers +3.3 (i), −1.2 (r); u
+  systematically +2.7) → star calibration mandatory, header ZP only a
+  cross-check.
+- `surveys/decam/targets/overlay_v1.{json,md}`: all 15 southern
+  corridors graded — 10 ok / 5 crowded / 0 sparse after the draft
+  quality cut (EXPTIME ≥ 30 s, grizY, obs_type object): quality-exposure
+  counts 48 (wolf1069) – 2,033 (gj1221); non-pilot queue ordered
+  ok-by-depth first.

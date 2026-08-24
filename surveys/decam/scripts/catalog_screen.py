@@ -60,7 +60,7 @@ PRECISE_DIR = REPO / "runs" / "decam" / "precise_v1"
 RUN_DIR = REPO / "runs" / "decam" / "screen_v1"
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "decam" / "hypotheses.md"
-HYPOTHESIS_VERSION = "decam-hypotheses-v0.1-draft"
+HYPOTHESIS_VERSION = "decam-hypotheses-v1.0"
 
 SCREEN_RADIUS_ARCSEC = 10.0
 LOCUS_TOLERANCE_ARCSEC = 1.0

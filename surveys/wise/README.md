@@ -23,5 +23,7 @@ content-hashed products.
 - Bulk products under `runs/wise/v2/` (tensors ~25 GB, injections,
   nulls, PRFs, observer table, control, records), all regenerable.
 
-Order of work and gates: `v2_plan.md` §10. The confirmatory set is
+Order of work and gates: `v2_plan.md` §10 (git history —
+`git show 8fb226f:surveys/wise/v2_plan.md`; see also
+`notes/project_history.md` §5). The confirmatory set is
 analysed once (`run_v2.sh G`); `null_ensemble.py` refuses a second run.

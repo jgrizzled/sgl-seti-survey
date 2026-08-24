@@ -50,7 +50,7 @@ LAYOUT_PATH = (REPO / "surveys" / "decam" / "configs"
                / "decam_focal_plane_v1.json")
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "decam" / "hypotheses.md"
-HYPOTHESIS_VERSION = "decam-hypotheses-v0.1-draft"
+HYPOTHESIS_VERSION = "decam-hypotheses-v1.0"
 
 PRECISE_TOLERANCE_ARCSEC = 1.0
 SEED_STEP_ARCSEC = 10.0  # usable stretches narrower than this may be missed
@@ -68,6 +68,21 @@ def cutout_size_pix(radius_deg: float) -> int:
 
 ROLE_BY_NAME = {r.value: r for r in Role}
 
+#: Frozen exposure selection (hypotheses v1.0 §8.1), applied before the
+#: dqmask fetch for every post-freeze run: precise records exist only
+#: for exposures the survey can use. (The pilot corridors ran before
+#: the freeze; their extra short/non-object/narrowband records are
+#: harmless audit rows.) The deepest-per-night cap (§8.4) stays at
+#: tensor build, where usable fractions exist.
+FROZEN_BANDS = ("g", "r", "i", "z", "Y")
+FROZEN_MIN_EXPTIME_S = 30.0
+
+
+def frozen_ok(obs) -> bool:
+    return (obs.band in FROZEN_BANDS
+            and (obs.exptime_s or 0) >= FROZEN_MIN_EXPTIME_S
+            and obs.quality_flags.get("obs_type") in (None, "object"))
+
 
 def load_coarse(endpoints: set[str] | None):
     obs_by_id = {}
@@ -80,6 +95,8 @@ def load_coarse(endpoints: set[str] | None):
         if r["stage"] != "coarse" or not r["hit"]:
             continue
         if endpoints and r["endpoint_id"] not in endpoints:
+            continue
+        if not frozen_ok(obs_by_id[r["observation_id"]]):
             continue
         hits_by_obs[r["observation_id"]].append(
             (r["endpoint_id"], r["role"]))

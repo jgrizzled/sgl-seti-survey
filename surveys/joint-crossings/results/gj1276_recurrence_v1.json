@@ -1,0 +1,279 @@
+{
+ "plan": "surveys/joint-crossings/plan.md section 2 (frozen; amendment v1.1 single-epoch clip applied)",
+ "pre_amendment_v1_0": {
+  "J": -13.45,
+  "T_J": 1.116,
+  "exceedance": false,
+  "joint_recovery_at_22p8": 0.535,
+  "note": "bad-epoch anomaly units included; see plan amendment"
+ },
+ "z_fixed_au": 550.0,
+ "reference_mag_ab": 22.8,
+ "n_event_bands": 11,
+ "units": [
+  {
+   "event_id": "evt-24912cfb2980",
+   "band": "g",
+   "t_ca_mjd": 59275.87771857639,
+   "n_epochs": 3,
+   "S550": -1.747,
+   "controls": [
+    -0.649,
+    -0.788,
+    -1.319,
+    0.913,
+    0.721,
+    0.68,
+    1.603,
+    0.219
+   ],
+   "n_clipped_samples": 0
+  },
+  {
+   "event_id": "evt-24912cfb2980",
+   "band": "r",
+   "t_ca_mjd": 59275.87771857639,
+   "n_epochs": 4,
+   "S550": 0.811,
+   "controls": [
+    -0.709,
+    0.318,
+    -3.279,
+    -0.479,
+    -0.722,
+    0.166,
+    -0.044,
+    -1.138
+   ],
+   "n_clipped_samples": 0
+  },
+  {
+   "event_id": "evt-27f78476fe86",
+   "band": "g",
+   "t_ca_mjd": 61102.16799223379,
+   "n_epochs": 5,
+   "S550": -0.038,
+   "controls": [
+    0.013,
+    0.528,
+    -0.715,
+    0.969,
+    0.527,
+    -0.723,
+    1.285,
+    -3.126
+   ],
+   "n_clipped_samples": 0
+  },
+  {
+   "event_id": "evt-27f78476fe86",
+   "band": "r",
+   "t_ca_mjd": 61102.16799223379,
+   "n_epochs": 6,
+   "S550": -0.929,
+   "controls": [
+    0.995,
+    -0.957,
+    0.612,
+    -3.101,
+    -0.035,
+    -0.077,
+    -3.259,
+    -0.244
+   ],
+   "n_clipped_samples": 3
+  },
+  {
+   "event_id": "evt-57e0c494a587",
+   "band": "g",
+   "t_ca_mjd": 59641.13763341435,
+   "n_epochs": 3,
+   "S550": -0.517,
+   "controls": [
+    0.12,
+    -0.494,
+    -0.104,
+    0.121,
+    -0.256,
+    -0.726,
+    -1.346,
+    -0.501
+   ],
+   "n_clipped_samples": 0
+  },
+  {
+   "event_id": "evt-57e0c494a587",
+   "band": "r",
+   "t_ca_mjd": 59641.13763341435,
+   "n_epochs": 3,
+   "S550": 0.865,
+   "controls": [
+    -0.063,
+    1.826,
+    -1.983,
+    -0.038,
+    1.148,
+    -0.357,
+    -0.717,
+    0.802
+   ],
+   "n_clipped_samples": 2
+  },
+  {
+   "event_id": "evt-64fbc0c53c7e",
+   "band": "g",
+   "t_ca_mjd": 58910.615375127316,
+   "n_epochs": 3,
+   "S550": -0.796,
+   "controls": [
+    -0.017,
+    -0.443,
+    0.247,
+    -0.787,
+    0.218,
+    0.375,
+    1.075,
+    1.214
+   ],
+   "n_clipped_samples": 0
+  },
+  {
+   "event_id": "evt-64fbc0c53c7e",
+   "band": "r",
+   "t_ca_mjd": 58910.615375127316,
+   "n_epochs": 2,
+   "S550": -0.619,
+   "controls": [
+    0.282,
+    0.001,
+    -0.805,
+    0.563,
+    -0.064,
+    -1.173,
+    0.658,
+    -0.277
+   ],
+   "n_clipped_samples": 0
+  },
+  {
+   "event_id": "evt-9c6a08c6df77",
+   "band": "g",
+   "t_ca_mjd": 60736.90920664352,
+   "n_epochs": 2,
+   "S550": 2.23,
+   "controls": [
+    1.397,
+    -0.507,
+    -0.622,
+    0.511,
+    -0.942,
+    -1.042,
+    2.048,
+    -0.338
+   ],
+   "n_clipped_samples": 0
+  },
+  {
+   "event_id": "evt-a31104250324",
+   "band": "g",
+   "t_ca_mjd": 58545.361373078704,
+   "n_epochs": 2,
+   "S550": 0.654,
+   "controls": [
+    1.462,
+    -1.36,
+    0.789,
+    -0.449,
+    0.061,
+    0.081,
+    0.849,
+    0.249
+   ],
+   "n_clipped_samples": 0
+  },
+  {
+   "event_id": "evt-a31104250324",
+   "band": "r",
+   "t_ca_mjd": 58545.361373078704,
+   "n_epochs": 2,
+   "S550": 0.597,
+   "controls": [
+    0.87,
+    0.459,
+    0.376,
+    1.07,
+    -1.728,
+    0.287,
+    -0.672,
+    -0.549
+   ],
+   "n_clipped_samples": 0
+  }
+ ],
+ "J": 0.154,
+ "J_controls": [
+  1.116,
+  -0.427,
+  -2.051,
+  -0.213,
+  -0.323,
+  -0.756,
+  0.446,
+  -1.112
+ ],
+ "T_J": 1.116,
+ "exceedance": false,
+ "joint_recovery_at_22p8": 0.94,
+ "joint_m90": 22.93,
+ "recovery_curve": {
+  "mags": [
+   20.0,
+   20.2,
+   20.4,
+   20.599999999999998,
+   20.799999999999997,
+   20.999999999999996,
+   21.199999999999996,
+   21.399999999999995,
+   21.599999999999994,
+   21.799999999999994,
+   21.999999999999993,
+   22.199999999999992,
+   22.39999999999999,
+   22.59999999999999,
+   22.79999999999999,
+   22.99999999999999,
+   23.19999999999999,
+   23.399999999999988,
+   23.599999999999987,
+   23.799999999999986,
+   23.999999999999986
+  ],
+  "recovery": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.99,
+   0.94,
+   0.88,
+   0.765,
+   0.67,
+   0.545,
+   0.445,
+   0.37
+  ]
+ },
+ "verdict": "flat_SED_recurrence_refuted_90pct",
+ "arm_R2_i_band": "untestable: 2 in-window i epochs archive-wide, 2-epoch depth ~21.1 vs required 22.8 (plan.md, decided by arithmetic)",
+ "static_arm": "settled by the PS1 DR2 stack catalog: no counterpart within 6 arcsec to ~23+ depth"
+}

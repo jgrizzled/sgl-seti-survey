@@ -1,0 +1,31 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: channel, datatype: string}
+# - {name: target_id, datatype: string}
+# - {name: event_id, datatype: string}
+# - {name: radius_au, datatype: float64}
+# - {name: b_rsun, datatype: float64}
+# - {name: t_ca_mjd, datatype: float64}
+# - {name: window_days, datatype: float64}
+# - {name: sector, datatype: int64}
+# - {name: cadence_s, datatype: float64}
+# - {name: n_inwindow_primary, datatype: int64}
+# - {name: n_inwindow_all, datatype: int64}
+# - {name: n_offwindow_primary, datatype: int64}
+# - {name: inwindow_primary_fraction, datatype: float64}
+# - {name: full_window, datatype: bool}
+# schema: astropy-2.0
+channel target_id event_id radius_au b_rsun t_ca_mjd window_days sector cadence_s n_inwindow_primary n_inwindow_all n_offwindow_primary inwindow_primary_fraction full_window
+A gj-1276 evt-b3eb38c057cd 0.1 0.972 59461.757403055555 11.228865453534663 42 600.0 1084 1483 953 0.731 True
+A gj-908 evt-245b4f5d2661 0.1 12.536 59478.442731041665 9.371400020263593 42 600.0 0 0 2575 0.0 False
+A teegarden evt-a0efd7e7dac7 0.1 1.233 59526.350764282404 11.219766527107806 44 600.0 460 460 2619 1.0 False
+A teegarden evt-2215379de80c 0.1 1.114 60256.78228258102 11.460602284500382 71 200.0 3424 3544 6600 0.966 False
+A van-maanen evt-74fd54a743a0 0.1 0.519 59493.61781866898 11.606869075342694 43 600.0 1475 1523 1319 0.968 False
+B ross-128 evt-72b3ddd1ed4f 0.1 2.068 59476.816198726854 11.346876798070772 42 600.0 48 218 2527 0.22 False
+B teegarden evt-59dd98fa8d3d 0.0056 1.037 60801.51210270834 0.3403591950544522 91 200.0 147 147 7843 1.0 True
+B teegarden evt-59dd98fa8d3d 0.0116 1.037 60801.51210270834 1.2609499069766188 91 200.0 405 545 7585 0.743 True
+B teegarden evt-59dd98fa8d3d 0.1 1.037 60801.51210270834 11.937835043259922 91 200.0 1925 2809 6065 0.685 False
+B wolf-359 evt-e316050714db 0.0056 0.552 59462.22812605324 0.5620057629460654 42 600.0 81 81 1956 1.0 True
+B wolf-359 evt-e316050714db 0.0116 0.552 59462.22812605324 1.277233849922014 42 600.0 184 184 1853 1.0 True
+B wolf-359 evt-e316050714db 0.1 0.552 59462.22812605324 11.28648293952674 42 600.0 1116 1492 921 0.748 True

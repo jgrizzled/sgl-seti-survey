@@ -1,0 +1,97 @@
+{
+ "bl": {
+  "A_0.1": {
+   "in_beam": {
+    "rows": 3,
+    "events": 1,
+    "targets": 1
+   },
+   "in_cone_0p5deg": {
+    "rows": 3,
+    "events": 1,
+    "targets": 1
+   }
+  },
+  "A_1.0": {
+   "in_beam": {
+    "rows": 143,
+    "events": 22,
+    "targets": 18
+   },
+   "in_cone_0p5deg": {
+    "rows": 221,
+    "events": 39,
+    "targets": 28
+   }
+  },
+  "B_0.0056": {
+   "in_beam": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_cone_0p5deg": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   }
+  },
+  "B_0.0116": {
+   "in_beam": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_cone_0p5deg": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   }
+  },
+  "B_0.1": {
+   "in_beam": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_cone_0p5deg": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   }
+  }
+ },
+ "vlass": {
+  "A_0.1": {
+   "rows": 5,
+   "events": 5,
+   "targets": 4
+  },
+  "A_1.0": {
+   "rows": 69,
+   "events": 69,
+   "targets": 48
+  },
+  "B_0.0056": {
+   "rows": 0,
+   "events": 0,
+   "targets": 0
+  },
+  "B_0.0116": {
+   "rows": 0,
+   "events": 0,
+   "targets": 0
+  },
+  "B_0.1": {
+   "rows": 1,
+   "events": 1,
+   "targets": 1
+  }
+ },
+ "notes": {
+  "bl_narrow_rung": "3 in-beam rows = APF optical spectra of teegarden (SO0253), 2016-11-13; ZERO radio (GBT/Parkes/MeerKAT) pointings in any narrow-rung window",
+  "bl_antipode": "zero BL pointings within 0.5 deg of any antipode in-window (93 cones, 0 query failures)",
+  "vlass_tolerance": "gj-1276 A and wolf-359 B rows sit in the +/-3 d tile-date tolerance beyond the strict window edge",
+  "archive_scope": "BL public open-data archive as snapshotted 2026-08-24; not all BL data (MeerKAT largely absent)"
+ }
+}

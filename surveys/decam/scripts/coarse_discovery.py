@@ -47,7 +47,7 @@ LAYOUT_PATH = (REPO / "surveys" / "decam" / "configs"
                / "decam_focal_plane_v1.json")
 REGISTRY_PATH = REPO / "registries" / "pilot_wise_2026.yaml"
 HYPOTHESES_PATH = REPO / "surveys" / "decam" / "hypotheses.md"
-HYPOTHESIS_VERSION = "decam-hypotheses-v0.1-draft"
+HYPOTHESIS_VERSION = "decam-hypotheses-v1.0"
 
 # DECam science operations: 2012-09 (commissioning/SV) through today;
 # generous on both ends. Yearly refresh extends the stop epoch.

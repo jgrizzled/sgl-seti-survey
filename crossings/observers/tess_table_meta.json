@@ -1,0 +1,17 @@
+{
+ "observer": "tess",
+ "horizons_command": "-95",
+ "center": "500@0 (SSB)",
+ "ref_plane": "FRAME (ICRF)",
+ "start": "2018-07-04",
+ "stop": "2026-08-24",
+ "step": "6h",
+ "n_rows": 11893,
+ "mjd_utc_range": [
+  58302.999199259095,
+  61275.999199273356
+ ],
+ "raw_response": "tess_horizons_response.txt",
+ "raw_sha256": "sha256:aef9234bae50057e64e81f255bec7a1a0cf5b36ca55b5a05384324cbfeec8050",
+ "table_sha256": "sha256:dea666c72b9e1ac441e39dd32fb03be4063ca31295bea64b648c1c06c9407c36"
+}

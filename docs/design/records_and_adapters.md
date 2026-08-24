@@ -6,7 +6,7 @@ status: "Draft v0.1 — 2026-08-18"
 # Core records and archive adapter interfaces
 
 Design for the shared `sglsurvey` package: the five core record types
-(plan §3.2, §6) and the adapter boundary that keeps archive-specific
+(plan §3.2, §8) and the adapter boundary that keeps archive-specific
 logic out of the pipeline. Grounded in the sglseti v1.1 API
 (`../sglseti`, pinned `21f6f3d`).
 
@@ -23,7 +23,7 @@ logic out of the pipeline. Grounded in the sglseti v1.1 API
    other by ID only.
 3. **Raw alongside normalized.** Every discovery response is stored
    verbatim as a snapshot; normalized records point at the snapshot they
-   were derived from (plan §6 "archive adapters").
+   were derived from (plan §8 "archive adapters").
 4. **The pipeline sees protocols, not archives.** Discovery, product
    download, and valid-pixel logic live behind `ArchiveAdapter`; sglseti
    sees footprints only as an opaque `contains(ra_deg, dec_deg) -> bool`
@@ -179,7 +179,7 @@ class ArchiveAdapter(Protocol):
 from sglseti loci: adaptive/swept loci per endpoint × role × epoch chunk,
 MC-propagated to the frozen 99% confidence radius, padded +10", then
 converted to the adapter's preferred query form (cone/polygon per epoch
-chunk now; MOC later, plan §5 "footprint representation"). The geometry
+chunk now; MOC later, plan §7 "footprint representation"). The geometry
 layer records every sglseti identity (`model_id`/`version`,
 `ephemeris_id`, provider triples, `target_source_hash`, seeds) for
 inclusion in IntersectionEvaluation records.

@@ -1,0 +1,458 @@
+{
+ "freeze_content_hash": "sha256:c3c7ece419c20067353d0a727b08d43f71768493e9b1921fb159883a54adaa2d",
+ "frozen_at": "2026-08-24",
+ "hypotheses_hash": "sha256:3c269b7b9bc3947118fd3f803a48e66425b959c1cc73e4936541165fc88318a3",
+ "hypothesis_version": "decam-hypotheses-v1.0",
+ "n_corridors": 15,
+ "n_endpoints": 19,
+ "parameters": {
+  "bands": [
+   "g",
+   "r",
+   "i",
+   "z",
+   "Y"
+  ],
+  "clip_sigma": 5.0,
+  "designated_controls": [
+   0,
+   8,
+   16,
+   20,
+   24,
+   28,
+   32,
+   40
+  ],
+  "extra": {
+   "catalog": "nsc-dr2-object (screen_v1 snapshots)",
+   "exposure_selection": "EXPTIME>=30 grizY object; deepest per night per band (hypotheses v1.0 8.1/8.4)",
+   "loose_mask_note": "loose == primary (the exposure cut is part of the frozen selection, not a mask)",
+   "multi_ccd": "per-CCD matched filter pasted on TAN canvas (8.7)",
+   "positive_control": "(60000) Miminko, configs/asteroid_control_v1.json",
+   "psf": "moffat beta=3 at fitted frame FWHM",
+   "zeropoint": "NSC-star calibration per frame (zp_star); header MAGZERO never used"
+  },
+  "fwer_alpha": 0.05,
+  "geometry": {
+   "mc_epochs_jyear": [
+    2014.0,
+    2019.0,
+    2024.0
+   ],
+   "mc_samples": 2000,
+   "mc_seed": 20260822,
+   "mc_z_au": [
+    550.0,
+    10000.0
+   ],
+   "observer": "ctio-blanco-decam W84 (terrestrial site, validated <= 1.7 mas)",
+   "psf_fwhm_nominal": {
+    "Y": 1.0,
+    "g": 1.2,
+    "i": 1.0,
+    "r": 1.1,
+    "z": 1.0
+   },
+   "xt_threshold_fwhm": 0.5
+  },
+  "heavy_tail_ratio": 2.5,
+  "holdout": {
+   "is_veto": false,
+   "min_S_late": 3.0,
+   "min_flux_ratio": 0.3,
+   "split_mjd": 60400.0
+  },
+  "hypothesis_version": "decam-hypotheses-v1.0",
+  "injections": {
+   "mag_halfwidth": 2.0,
+   "n_per_cell": 400,
+   "n_z_intervals": 8,
+   "recovery_window": [
+    2,
+    1
+   ],
+   "spectrum": {
+    "Y": "flat_fnu_ab",
+    "g": "flat_fnu_ab",
+    "i": "flat_fnu_ab",
+    "r": "flat_fnu_ab",
+    "z": "flat_fnu_ab"
+   },
+   "stamp_half_pix": 16,
+   "temporal_models": [
+    "persistent",
+    "flicker",
+    "visit",
+    "block"
+   ],
+   "visit_gap_days": 5.0
+  },
+  "ks_alpha": 0.01,
+  "locus_bin_days": 0.05,
+  "locus_tol_arcsec": 0.5,
+  "mag_system": "ab",
+  "min_epochs": 5,
+  "min_good_frac": 0.7,
+  "motion_bound_norm": "linf",
+  "mu_grid_arcsec_yr": [
+   -1.0,
+   -0.5,
+   0.0,
+   0.5,
+   1.0
+  ],
+  "n_epoch_scramble_diagnostic": 50,
+  "n_phase_scramble": 200,
+  "n_pseudo_experiments": 10000,
+  "n_trajectory_donors": 50,
+  "norm_quantile": 0.95,
+  "pooled_null": "ring",
+  "quality_masks": {
+   "loose": {},
+   "primary": {},
+   "strict": {
+    "seeing_arcsec": [
+     "<=",
+     1.2
+    ]
+   }
+  },
+  "ring_offsets_arcsec": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    18.477591,
+    7.653669
+   ],
+   [
+    14.142136,
+    14.142136
+   ],
+   [
+    7.653669,
+    18.477591
+   ],
+   [
+    0.0,
+    20.0
+   ],
+   [
+    -7.653669,
+    18.477591
+   ],
+   [
+    -14.142136,
+    14.142136
+   ],
+   [
+    -18.477591,
+    7.653669
+   ],
+   [
+    -20.0,
+    0.0
+   ],
+   [
+    -18.477591,
+    -7.653669
+   ],
+   [
+    -14.142136,
+    -14.142136
+   ],
+   [
+    -7.653669,
+    -18.477591
+   ],
+   [
+    -0.0,
+    -20.0
+   ],
+   [
+    7.653669,
+    -18.477591
+   ],
+   [
+    14.142136,
+    -14.142136
+   ],
+   [
+    18.477591,
+    -7.653669
+   ],
+   [
+    30.0,
+    0.0
+   ],
+   [
+    27.716386,
+    11.480503
+   ],
+   [
+    21.213203,
+    21.213203
+   ],
+   [
+    11.480503,
+    27.716386
+   ],
+   [
+    0.0,
+    30.0
+   ],
+   [
+    -11.480503,
+    27.716386
+   ],
+   [
+    -21.213203,
+    21.213203
+   ],
+   [
+    -27.716386,
+    11.480503
+   ],
+   [
+    -30.0,
+    0.0
+   ],
+   [
+    -27.716386,
+    -11.480503
+   ],
+   [
+    -21.213203,
+    -21.213203
+   ],
+   [
+    -11.480503,
+    -27.716386
+   ],
+   [
+    -0.0,
+    -30.0
+   ],
+   [
+    11.480503,
+    -27.716386
+   ],
+   [
+    21.213203,
+    -21.213203
+   ],
+   [
+    27.716386,
+    -11.480503
+   ],
+   [
+    40.0,
+    0.0
+   ],
+   [
+    36.955181,
+    15.307337
+   ],
+   [
+    28.284271,
+    28.284271
+   ],
+   [
+    15.307337,
+    36.955181
+   ],
+   [
+    0.0,
+    40.0
+   ],
+   [
+    -15.307337,
+    36.955181
+   ],
+   [
+    -28.284271,
+    28.284271
+   ],
+   [
+    -36.955181,
+    15.307337
+   ],
+   [
+    -40.0,
+    0.0
+   ],
+   [
+    -36.955181,
+    -15.307337
+   ],
+   [
+    -28.284271,
+    -28.284271
+   ],
+   [
+    -15.307337,
+    -36.955181
+   ],
+   [
+    -0.0,
+    -40.0
+   ],
+   [
+    15.307337,
+    -36.955181
+   ],
+   [
+    28.284271,
+    -28.284271
+   ],
+   [
+    36.955181,
+    -15.307337
+   ]
+  ],
+  "split": {
+   "dev_fraction": 0.3,
+   "forced_dev": [
+    "lalande",
+    "sigmadra",
+    "hd219134"
+   ],
+   "seed": 20260824,
+   "strata": "confusion class",
+   "unit": "corridor"
+  },
+  "static_veto": {
+   "factor": 2.0,
+   "min_ndet": 3,
+   "search_arcsec": 30.0
+  },
+  "t0_mjd": 58500.0,
+  "weight_cap": {
+   "factor": 20.0,
+   "kind": "per-frame (band median frame weight)"
+  },
+  "z_grid": {
+   "max_au": 550.0,
+   "min_au": 10000.0,
+   "n": 360,
+   "spacing": "uniform in 1/z"
+  },
+  "zp_ref": 25.0
+ },
+ "registry_source_hash": "sha256:03b9ae3af1cfdbb2156b96d66c16a2f8486f37de5572cdeb0631cc3fa74d0fd4",
+ "split": {
+  "confirmatory": {
+   "corridors": [
+    "cyg61",
+    "gj1221",
+    "gj13157",
+    "gj251",
+    "gj338",
+    "gj3512",
+    "gj625",
+    "gj687",
+    "grb34",
+    "ross248",
+    "wolf1069"
+   ],
+   "endpoints": [
+    "61-cyg-a",
+    "61-cyg-b",
+    "gj-1221",
+    "gj-13157",
+    "gj-251",
+    "gj-338-a",
+    "gj-338-b",
+    "gj-3512",
+    "gj-625",
+    "gj-687",
+    "groombridge-34-a",
+    "groombridge-34-b",
+    "ross-248",
+    "wolf-1069"
+   ],
+   "n_corridors": 11,
+   "n_endpoints": 14
+  },
+  "confusion_class": {
+   "cyg61": "high",
+   "gj1221": "high",
+   "gj13157": "high+bright-star",
+   "gj251": "high",
+   "gj338": "mid",
+   "gj3512": "mid+bright-star",
+   "gj625": "mid",
+   "gj687": "high",
+   "grb34": "high",
+   "hd219134": "high",
+   "lalande": "low",
+   "ross248": "mid",
+   "sigmadra": "high",
+   "struve2398": "mid",
+   "wolf1069": "high"
+  },
+  "dev_fraction": 0.3,
+  "development": {
+   "corridors": [
+    "hd219134",
+    "lalande",
+    "sigmadra",
+    "struve2398"
+   ],
+   "endpoints": [
+    "hd-219134",
+    "lalande-21185",
+    "sigma-dra",
+    "struve-2398-a",
+    "struve-2398-b"
+   ],
+   "n_corridors": 4,
+   "n_endpoints": 5
+  },
+  "seed": 20260824,
+  "strata": {
+   "high": {
+    "dev": [
+     "hd219134",
+     "sigmadra"
+    ],
+    "forced": [
+     "hd219134",
+     "sigmadra"
+    ],
+    "n_corridors": 8,
+    "n_dev": 2
+   },
+   "high+bright-star": {
+    "dev": [],
+    "n_corridors": 1,
+    "n_dev": 0
+   },
+   "low": {
+    "dev": [
+     "lalande"
+    ],
+    "forced": [
+     "lalande"
+    ],
+    "n_corridors": 1,
+    "n_dev": 1
+   },
+   "mid": {
+    "dev": [
+     "struve2398"
+    ],
+    "n_corridors": 4,
+    "n_dev": 1
+   },
+   "mid+bright-star": {
+    "dev": [],
+    "n_corridors": 1,
+    "n_dev": 0
+   }
+  }
+ },
+ "survey": "decam"
+}

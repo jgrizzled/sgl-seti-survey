@@ -1,0 +1,21 @@
+{
+  "crossings_id": "xng-a943f0f3dbe4",
+  "generated_utc": "2026-08-24T16:04:07+00:00",
+  "observer_id": "tess-spacecraft",
+  "n_targets": 88,
+  "n_events": 3390,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:212"
+  ],
+  "files": {
+    "events_ecsv": "/Users/jgreene/code/sgl-seti-survey/crossings/tess_v1/events.ecsv",
+    "windows_ecsv": "/Users/jgreene/code/sgl-seti-survey/crossings/tess_v1/windows.ecsv",
+    "result_json": "/Users/jgreene/code/sgl-seti-survey/crossings/tess_v1/result.json",
+    "manifest_json": "/Users/jgreene/code/sgl-seti-survey/crossings/tess_v1/manifest.json"
+  },
+  "observer_table": "crossings/observers/tess_sc_ephemeris.npz",
+  "observer_table_sha256": "sha256:dea666c72b9e1ac441e39dd32fb03be4063ca31295bea64b648c1c06c9407c36",
+  "observer_accuracy": "JPL Horizons -95 SSB vectors at 6 h sampling; linear-interpolation error <= ~1,400 km near perigee (0.002 R_sun), smaller elsewhere. TESS HEO apogee ~376,000 km = 0.54 R_sun: the Earth-center list is invalid for TESS at grazing impact parameters, which this run corrects"
+}

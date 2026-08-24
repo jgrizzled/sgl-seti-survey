@@ -634,3 +634,190 @@ def build_flux_map_ps1(img_path: Path, wt_path: Path | None,
     if keep_inputs:
         fm.denom, fm.kernel, fm.good, fm.bg = denom, kern, good, bg
     return fm
+
+
+DECAM_PIX_ARCSEC = 0.2637
+
+
+def _coarse_inverse_map(canvas_wcs, x0, x1, y0, y1, ccd_wcs, step=64):
+    """Map every canvas pixel in [x0:x1, y0:y1] to CCD pixel coords via
+    a coarse grid of exact transforms (TAN -> sky -> TPV inverse) and
+    bilinear upsampling — the distortion is smooth, so node spacing of
+    ``step`` px keeps the interpolation error << 0.05 px."""
+    gx = np.arange(x0, x1 + step, step, dtype=float)
+    gy = np.arange(y0, y1 + step, step, dtype=float)
+    GX, GY = np.meshgrid(gx, gy)
+    sky = canvas_wcs.wcs_pix2world(
+        np.stack([GX.ravel(), GY.ravel()], axis=1), 0)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        pix = ccd_wcs.all_world2pix(sky, 0, quiet=True)
+    NX = pix[:, 0].reshape(GX.shape)
+    NY = pix[:, 1].reshape(GX.shape)
+    xs = np.arange(x0, x1 + 1, dtype=float)
+    ys = np.arange(y0, y1 + 1, dtype=float)
+    fx = (xs - gx[0]) / step
+    fy = (ys - gy[0]) / step
+    ix = np.clip(fx.astype(int), 0, len(gx) - 2)
+    iy = np.clip(fy.astype(int), 0, len(gy) - 2)
+    tx = (fx - ix)[None, :]
+    ty = (fy - iy)[:, None]
+
+    def up(a):
+        a00 = a[np.ix_(iy, ix)]
+        a01 = a[np.ix_(iy, ix + 1)]
+        a10 = a[np.ix_(iy + 1, ix)]
+        a11 = a[np.ix_(iy + 1, ix + 1)]
+        return (a00 * (1 - tx) * (1 - ty) + a01 * tx * (1 - ty)
+                + a10 * (1 - tx) * ty + a11 * tx * ty)
+
+    return up(NX), up(NY)
+
+
+def build_flux_map_decam(ccd_files, dqmask_path: Path, fatal_mask: int,
+                         band: str, mjd: float, centre_radec,
+                         size_pix: int, magzp: float | None = None,
+                         keep_inputs: bool = False, inject=None
+                         ) -> FluxMap | None:
+    """DECam instcal variant (adapter ``noirlab_decam``).
+
+    ``ccd_files`` is a list of (image_path, wtmap_path|None, extname)
+    single-CCD HDU files of ONE exposure; ``dqmask_path`` is the full
+    dqmask. Each CCD is matched-filtered in its own TPV frame (an
+    ``inject`` callback also runs per CCD, in the image domain, before
+    the filter), then flux/var/good/denom are pasted onto a common TAN
+    canvas at the native pixel scale by exact-inverse nearest-neighbour
+    mapping (hypotheses v1.0 §8.7; placement error <~ 0.15").
+
+    Variance follows the PS1 empirical convention check (wt as variance
+    vs inverse variance vs robust background+Poisson). The kernel is a
+    Gaussian at the per-CCD header FWHM (pixels); ``magzp`` should be
+    the per-frame star calibration — header MAGZERO is unreliable
+    (flux_scale_check.json) and is only the fallback.
+    """
+    from astropy.io import fits
+    from astropy.wcs import WCS
+
+    n = int(size_pix)
+    cw = WCS(naxis=2)
+    cw.wcs.crpix = [n / 2.0 + 0.5, n / 2.0 + 0.5]
+    cw.wcs.crval = [float(centre_radec[0]), float(centre_radec[1])]
+    cw.wcs.cdelt = [-DECAM_PIX_ARCSEC / 3600.0, DECAM_PIX_ARCSEC / 3600.0]
+    cw.wcs.ctype = ["RA---TAN", "DEC--TAN"]
+    C_flux = np.full((n, n), np.nan)
+    C_var = np.full((n, n), np.nan)
+    C_good = np.zeros((n, n))
+    C_denom = np.full((n, n), np.nan) if keep_inputs else None
+    C_goodpix = np.zeros((n, n), dtype=bool) if keep_inputs else None
+
+    dq = fits.open(dqmask_path)
+    dq_index = {h.header.get("EXTNAME"): i
+                for i, h in enumerate(dq[1:], start=1)}
+    prim = dict(dq[0].header)
+    kern = None
+    fwhm_pix_used, sky_used, mad_used, vsrc_used = [], [], [], []
+    n_pasted = 0
+    try:
+        for img_path, wt_path, extname in ccd_files:
+            if extname not in dq_index:
+                continue
+            with fits.open(img_path) as ih:
+                img = np.asarray(ih[1].data, dtype=float)
+                hdr = ih[1].header
+                phdr = ih[0].header
+                wcs = WCS(hdr)
+            msk = np.asarray(dq[dq_index[extname]].data)
+            if msk.shape != img.shape:
+                # CP version trims can differ by a few rows; crop both
+                ny = min(msk.shape[0], img.shape[0])
+                nx = min(msk.shape[1], img.shape[1])
+                msk, img = msk[:ny, :nx], img[:ny, :nx]
+            unmasked = np.isfinite(img) & ((msk.astype(np.int64)
+                                            & fatal_mask) == 0)
+            pix = img[unmasked]
+            if pix.size < 1000:
+                continue
+            sky = float(np.median(pix))
+            mad = 1.4826 * float(np.median(np.abs(pix - sky))) or 1.0
+            bgvar = mad * mad
+            var_pix = bgvar + np.clip(img - sky, 0.0, None)
+            var_source = "robust"
+            if wt_path is not None and Path(wt_path).exists():
+                with fits.open(wt_path) as wh:
+                    wt = np.asarray(wh[1].data, dtype=float)
+                wt = wt[:img.shape[0], :img.shape[1]]
+                wok = unmasked & np.isfinite(wt) & (wt > 0)
+                if wok.sum() > 1000:
+                    w_med = float(np.median(wt[wok]))
+                    with np.errstate(divide="ignore"):
+                        if 1 / 3 < w_med / bgvar < 3:
+                            var_pix = np.where(wok, wt, np.nan)
+                            var_source = "wt"
+                        elif 1 / 3 < (1.0 / w_med) / bgvar < 3:
+                            var_pix = np.where(wok, 1.0 / wt, np.nan)
+                            var_source = "1/wt"
+            good = unmasked & np.isfinite(var_pix) & (var_pix > 0)
+            fwhm = (hdr.get("FWHM") or phdr.get("FWHM") or 4.0)
+            fwhm_pix = float(np.clip(float(fwhm), 2.0, 16.0))
+            if inject is not None:
+                img = np.asarray(inject(img, phdr, wcs), dtype=float)
+            flux, var, good_frac, denom, k, bg = _matched_filter_full(
+                img, np.nan_to_num(var_pix, nan=1e30), good, fwhm_pix,
+                True)
+            if kern is None:
+                kern = k
+            # paste: canvas bbox of this CCD -> nearest CCD pixel
+            ny, nx = img.shape
+            corners = wcs.all_pix2world(
+                np.array([[0.5, 0.5], [nx - 0.5, 0.5],
+                          [nx - 0.5, ny - 0.5], [0.5, ny - 0.5]]), 0)
+            cpix = cw.wcs_world2pix(corners, 0)
+            x0 = int(np.clip(np.floor(cpix[:, 0].min()) - 2, 0, n - 1))
+            x1 = int(np.clip(np.ceil(cpix[:, 0].max()) + 2, 0, n - 1))
+            y0 = int(np.clip(np.floor(cpix[:, 1].min()) - 2, 0, n - 1))
+            y1 = int(np.clip(np.ceil(cpix[:, 1].max()) + 2, 0, n - 1))
+            if x1 <= x0 or y1 <= y0:
+                continue
+            CX, CY = _coarse_inverse_map(cw, x0, x1, y0, y1, wcs)
+            sx = np.rint(CX).astype(int)
+            sy = np.rint(CY).astype(int)
+            inb = (sx >= 0) & (sx < nx) & (sy >= 0) & (sy < ny)
+            tgt_empty = ~np.isfinite(C_flux[y0:y1 + 1, x0:x1 + 1])
+            sel = inb & tgt_empty
+            if not sel.any():
+                continue
+            view = np.s_[y0:y1 + 1, x0:x1 + 1]
+            C_flux[view][sel] = flux[sy[sel], sx[sel]]
+            C_var[view][sel] = var[sy[sel], sx[sel]]
+            C_good[view][sel] = good_frac[sy[sel], sx[sel]]
+            if keep_inputs:
+                C_denom[view][sel] = denom[sy[sel], sx[sel]]
+                C_goodpix[view][sel] = good[sy[sel], sx[sel]]
+            n_pasted += 1
+            fwhm_pix_used.append(fwhm_pix)
+            sky_used.append(sky)
+            mad_used.append(mad)
+            vsrc_used.append(var_source)
+    finally:
+        dq.close()
+    if n_pasted == 0 or kern is None:
+        return None
+    if magzp is None:
+        mz = prim.get("MAGZERO")
+        magzp = float(mz) if mz is not None else None
+    fm = FluxMap(flux=C_flux, var=C_var, good_frac=C_good, wcs=cw,
+                 band=band, magzp=magzp, mjd=mjd)
+    fm.var_source = vsrc_used[0]
+    fm.fwhm_pix = float(np.mean(fwhm_pix_used))
+    fm.sky = float(np.mean(sky_used))
+    fm.bg_sigma = float(np.mean(mad_used))
+    fm.exptime = float(prim.get("EXPTIME", 0.0) or 0.0)
+    fm.mjd_obs = float(prim.get("MJD-OBS", mjd))
+    fm.pix_arcsec = DECAM_PIX_ARCSEC
+    fm.fwhm_arcsec = fm.fwhm_pix * DECAM_PIX_ARCSEC
+    fm.header = prim
+    fm.n_ccds = n_pasted
+    if keep_inputs:
+        fm.denom, fm.kernel, fm.good, fm.bg = (C_denom, kern, C_goodpix,
+                                               float(np.mean(sky_used)))
+    return fm

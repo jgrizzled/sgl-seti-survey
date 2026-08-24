@@ -1,0 +1,24 @@
+{
+  "era_mjd": [
+    55203.0,
+    60524.0
+  ],
+  "rung_au": 1.0,
+  "n_events_total": 1272,
+  "n_events_elongation_null": 602,
+  "n_events_queried": 670,
+  "n_covered_any_primary": 91,
+  "n_covered_ge2_visits": 91,
+  "per_band_covered": {
+    "W1": 91,
+    "W2": 91,
+    "W3": 5,
+    "W4": 4
+  },
+  "qa_status_distribution": {
+    "Prelim": 49876,
+    "Reviewed": 13138,
+    "Final": 6357
+  },
+  "quality_amendment": "primary drops qa_status (frozen value 'A' does not exist in the merge table; archive uses 'Reviewed'); numeric gates unchanged"
+}

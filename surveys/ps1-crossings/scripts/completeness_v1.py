@@ -127,8 +127,7 @@ def complete_b(plan_row, res_row, base_dir, adapter, store):
         med = np.median(pool)
         sd = 1.4826 * np.median(np.abs(pool - med)) or 1.0
         pool = pool[np.abs(pool - med) <= 3 * sd]
-    if pool.size < 4:
-        return {"status": "no_off_pool"}
+    pool_source = "off_antipode"
 
     # per-epoch: base samples, variances, responses R[z_inj][z'] --
     # duplicates collapsed by best good_frac exactly as the search
@@ -154,10 +153,32 @@ def complete_b(plan_row, res_row, base_dir, adapter, store):
             rw = stamp_response(fm, stamp, ox, oy)
             R[zi] = rw.sample(pix[:, 0], pix[:, 1])
         gz = np.where(np.isfinite(g), g, -1.0)
+        # ring samples double as the fallback background pool where the
+        # antipode off-window pool is too small (crowded/masked fields)
+        ring_f = []
+        for dx, dy in ds.RING:
+            rra = pos[:, 0] + dx / 3600.0 / np.maximum(
+                np.cos(np.radians(pos[:, 1])), 0.05)
+            rde = pos[:, 1] + dy / 3600.0
+            rf, rv, rg = fm.sample(rra, rde)
+            okr = np.isfinite(rg) & (rg >= ds.GOOD_FRAC_MIN)
+            ring_f.extend((rf[okr] * s).tolist())
         ep.append({"tbin": round(o.t_mid_mjd_utc / ds.DUP_BIN_DAYS),
-                   "g": gz, "v": v * s * s * k, "R": R})
+                   "g": gz, "v": v * s * s * k, "R": R,
+                   "ring_f": ring_f})
     if not ep:
         return {"status": "no_usable_epochs"}
+    if pool.size < 4:
+        pool = np.asarray(sum((e["ring_f"] for e in ep), []))
+        for _ in range(3):
+            if not pool.size:
+                break
+            med = np.median(pool)
+            sd = 1.4826 * np.median(np.abs(pool - med)) or 1.0
+            pool = pool[np.abs(pool - med) <= 3 * sd]
+        pool_source = "rings_inwindow"
+        if pool.size < 4:
+            return {"status": "no_background_pool"}
 
     # dedup per z' by best good_frac (matches the search's selection)
     nz = len(Z_GRID)
@@ -174,9 +195,18 @@ def complete_b(plan_row, res_row, base_dir, adapter, store):
     if not any(sel.values()):
         return {"status": "no_usable_epochs"}
 
+    # a z_inj whose stamp lands on masked pixels in every usable epoch
+    # (R = 0 into every z' node) is unrecoverable at any flux: report
+    # completeness conditional on the recoverable z set, dead z declared
+    alive = [zi for zi in range(nz)
+             if any(ep[i]["R"][zi, zj] > 1e-6
+                    for zj in range(nz) for i in sel[zj])]
+    if not alive:
+        return {"status": "all_z_masked"}
+
     rec = np.zeros(len(MAGS))
     for _ in range(NDRAW):
-        zi = int(RNG.integers(nz))
+        zi = alive[int(RNG.integers(len(alive)))]
         bg = {i: RNG.choice(pool) for i in range(len(ep))}
         for mi, m in enumerate(MAGS):
             F = 10 ** (0.4 * (ds.ZP_REF - m))
@@ -195,6 +225,10 @@ def complete_b(plan_row, res_row, base_dir, adapter, store):
     return {"status": "ok", "m90": m90, "grid_censored": cens,
             "recovery": [round(float(r), 3) for r in rec],
             "threshold": round(thresh, 3),
+            "z_alive": [float(Z_GRID[z]) for z in alive],
+            "z_dead": [float(Z_GRID[z]) for z in range(nz)
+                       if z not in alive],
+            "pool_source": pool_source,
             "n_epochs_used": len(ep), "n_off_pool": int(pool.size)}
 
 

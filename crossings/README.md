@@ -8,19 +8,22 @@ both link directions (`inbound` = star→relay uplink, apparent axis at
 `tusay2022_eq5_7_v1` / axis `sun_star_axis_v1`, astropy built-in
 ephemeris.
 
-| product | observer | window | notes |
-| --- | --- | --- | --- |
-| `universal_v1/` | Earth center | 1980-01-01 → 2028-01-01 UTC | canonical; ground surveys and LEO |
+| product | observer | window | events | notes |
+| --- | --- | --- | --- | --- |
+| `universal_v1/` (`xng-a09e2db7681d`) | Earth center | 1980-01-01 → 2028-01-01 | 16,586 | canonical; ground surveys and LEO |
+| `wise_v1/` (`xng-ffc922f7bbca`) | WISE spacecraft (L1b-header table, `runs/wise/v2/observer/`, sha-pinned) | 2010-01-01 → 2024-08-01 | 5,170 | exact at frame epochs; Earth-center fallback in gaps > 2 d (incl. the 2011–2013 hibernation); bounded by the ~7,000 km LEO radius = 0.010 R☉ |
+| `tess_v1/` (`xng-a943f0f3dbe4`) | TESS spacecraft (Horizons −95 SSB vectors, 6 h, `observers/`, sha-pinned) | 2018-07-04 → 2026-08-24 | 3,390 | HEO apogee 0.54 R☉ — Earth-center **invalid** at grazing b: matched events shift by \|Δb\| up to 0.33 R☉ (median 0.18) and \|Δt_ca\| up to 3.2 h (van-maanen validation); the 13.7-d wobble adds shallow extra minima for the ecliptic-pole b ≈ 1 AU family (sigma-dra 16 → 98 in-era events) — physical, kept by the every-minimum rule |
+| `spherex_v1/` (`xng-a2773287b29d`) | Earth center (SPHEREx budget) | 2025-03-15 → 2028-01-01 | 1,130 | LEO ~650 km carried as a declared budget: \|Δb\| ≤ 0.010 R☉, \|Δt_ca\| ≤ ~4 min — the pipeline-A observer convention; refresh with the era as quick releases extend |
 
-Survey-independent by construction: no beam radius, no `report_max_b_au`
-cut, ephemeris-coverage failures kept as `invalid` rows, window-boundary
-minima flagged `degraded`. Each `surveys/<name>-crossings/` sub-project
-intersects `events.ecsv` with that archive's exposure coverage and
-applies beam-radius / wavelength / duty-cycle hypotheses there. Spacecraft
-observers (WISE, SPHEREx, TESS…) get derivative runs keyed by
-`observer_id`; the impact parameter at the interesting (≲ R☉) events is
-sensitive to ~0.01 AU observer offsets, so do not reuse the Earth-center
-list for them without checking.
+All four share the product schema (events/windows ecsv, result.json,
+manifest.json, summary.json) and the survey-independent construction: no
+beam radius, no `report_max_b_au` cut, ephemeris-coverage failures kept
+as `invalid` rows (0 in all four), window-boundary minima flagged
+`degraded`. Each `surveys/<name>-crossings/` sub-project intersects the
+matching `events.ecsv` with that archive's exposure coverage and applies
+beam-radius / wavelength / duty-cycle hypotheses there. Spacecraft
+tables and raw Horizons responses live under `observers/` with content
+hashes recorded in each run's manifest inputs.
 
 Impact-parameter uncertainty is **not** propagated (`uncertainty_not_propagated`
 warning); `sglseti.crossing_uncertainty` exists for per-event follow-up.

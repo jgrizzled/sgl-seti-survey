@@ -1,0 +1,19 @@
+{
+  "crossings_id": "xng-a2773287b29d",
+  "generated_utc": "2026-08-24T16:00:22+00:00",
+  "observer_id": "earth-center",
+  "n_targets": 88,
+  "n_events": 1130,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:198"
+  ],
+  "files": {
+    "events_ecsv": "/Users/jgreene/code/sgl-seti-survey/crossings/spherex_v1/events.ecsv",
+    "windows_ecsv": "/Users/jgreene/code/sgl-seti-survey/crossings/spherex_v1/windows.ecsv",
+    "result_json": "/Users/jgreene/code/sgl-seti-survey/crossings/spherex_v1/result.json",
+    "manifest_json": "/Users/jgreene/code/sgl-seti-survey/crossings/spherex_v1/manifest.json"
+  },
+  "observer_applicability": "SPHEREx (LEO ~650 km): Earth-center geometry with the spacecraft offset carried as a budget \u2014 |\u0394b| <= ~7,100 km = 0.010 R_sun = 4.7e-5 AU, |\u0394t_ca| <= ~4 min at v_perp = 30 km/s. Matches the SPHEREx pipeline-A observer convention."
+}

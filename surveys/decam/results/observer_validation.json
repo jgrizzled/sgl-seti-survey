@@ -1,0 +1,118 @@
+{
+  "z_test_au": 550.0,
+  "site": {
+    "name": "ctio-blanco-decam",
+    "longitude_deg": -70.80655,
+    "latitude_deg": -30.16928,
+    "height_m": 2207.0,
+    "mpc_code": "W84"
+  },
+  "worst_residual_arcsec": 0.0017,
+  "rows": [
+    {
+      "endpoint": "lalande-21185",
+      "mjd": 56300.1,
+      "measured_shift_arcsec": 0.0151,
+      "astropy_expected_arcsec": 0.0154,
+      "residual_arcsec": 0.0003
+    },
+    {
+      "endpoint": "lalande-21185",
+      "mjd": 56300.35,
+      "measured_shift_arcsec": 0.0146,
+      "astropy_expected_arcsec": 0.0144,
+      "residual_arcsec": 0.0002
+    },
+    {
+      "endpoint": "lalande-21185",
+      "mjd": 58000.2,
+      "measured_shift_arcsec": 0.0017,
+      "astropy_expected_arcsec": 0.0,
+      "residual_arcsec": 0.0017
+    },
+    {
+      "endpoint": "lalande-21185",
+      "mjd": 60000.05,
+      "measured_shift_arcsec": 0.016,
+      "astropy_expected_arcsec": 0.0157,
+      "residual_arcsec": 0.0003
+    },
+    {
+      "endpoint": "lalande-21185",
+      "mjd": 60700.3,
+      "measured_shift_arcsec": 0.0146,
+      "astropy_expected_arcsec": 0.0144,
+      "residual_arcsec": 0.0002
+    },
+    {
+      "endpoint": "sigma-dra",
+      "mjd": 56300.1,
+      "measured_shift_arcsec": 0.0114,
+      "astropy_expected_arcsec": 0.0115,
+      "residual_arcsec": 0.0001
+    },
+    {
+      "endpoint": "sigma-dra",
+      "mjd": 56300.35,
+      "measured_shift_arcsec": 0.012,
+      "astropy_expected_arcsec": 0.0119,
+      "residual_arcsec": 0.0001
+    },
+    {
+      "endpoint": "sigma-dra",
+      "mjd": 58000.2,
+      "measured_shift_arcsec": 0.0153,
+      "astropy_expected_arcsec": 0.0151,
+      "residual_arcsec": 0.0003
+    },
+    {
+      "endpoint": "sigma-dra",
+      "mjd": 60000.05,
+      "measured_shift_arcsec": 0.0103,
+      "astropy_expected_arcsec": 0.0097,
+      "residual_arcsec": 0.0006
+    },
+    {
+      "endpoint": "sigma-dra",
+      "mjd": 60700.3,
+      "measured_shift_arcsec": 0.0119,
+      "astropy_expected_arcsec": 0.0123,
+      "residual_arcsec": 0.0004
+    },
+    {
+      "endpoint": "hd-219134",
+      "mjd": 56300.1,
+      "measured_shift_arcsec": 0.0148,
+      "astropy_expected_arcsec": 0.0144,
+      "residual_arcsec": 0.0004
+    },
+    {
+      "endpoint": "hd-219134",
+      "mjd": 56300.35,
+      "measured_shift_arcsec": 0.0074,
+      "astropy_expected_arcsec": 0.0075,
+      "residual_arcsec": 0.0001
+    },
+    {
+      "endpoint": "hd-219134",
+      "mjd": 58000.2,
+      "measured_shift_arcsec": 0.016,
+      "astropy_expected_arcsec": 0.0157,
+      "residual_arcsec": 0.0003
+    },
+    {
+      "endpoint": "hd-219134",
+      "mjd": 60000.05,
+      "measured_shift_arcsec": 0.0127,
+      "astropy_expected_arcsec": 0.0127,
+      "residual_arcsec": 0.0001
+    },
+    {
+      "endpoint": "hd-219134",
+      "mjd": 60700.3,
+      "measured_shift_arcsec": 0.0074,
+      "astropy_expected_arcsec": 0.0081,
+      "residual_arcsec": 0.0007
+    }
+  ]
+}

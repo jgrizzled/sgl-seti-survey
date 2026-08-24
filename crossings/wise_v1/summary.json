@@ -1,0 +1,21 @@
+{
+  "crossings_id": "xng-ffc922f7bbca",
+  "generated_utc": "2026-08-24T16:07:26+00:00",
+  "observer_id": "wise-l1b-spacecraft",
+  "n_targets": 88,
+  "n_events": 5170,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:207"
+  ],
+  "files": {
+    "events_ecsv": "/Users/jgreene/code/sgl-seti-survey/crossings/wise_v1/events.ecsv",
+    "windows_ecsv": "/Users/jgreene/code/sgl-seti-survey/crossings/wise_v1/windows.ecsv",
+    "result_json": "/Users/jgreene/code/sgl-seti-survey/crossings/wise_v1/result.json",
+    "manifest_json": "/Users/jgreene/code/sgl-seti-survey/crossings/wise_v1/manifest.json"
+  },
+  "observer_table": "runs/wise/v2/observer/wise_sc_ephemeris.npz",
+  "observer_table_sha256": "sha256:5afe2681bf416a237aaedca3ce8d33e30898d9c91d5b6e9c4aa4fbf16acaaa8e",
+  "observer_accuracy": "exact at L1b frame epochs; linear interpolation between frames <= 2 d apart; Earth-center fallback in larger gaps (incl. the 2011-02..2013-12 hibernation) \u2014 bounded everywhere by the geocentric radius ~7,000 km = 0.010 R_sun"
+}
