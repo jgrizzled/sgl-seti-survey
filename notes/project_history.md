@@ -525,3 +525,23 @@ units (all confirmatory), 12 trials, 1.3 expected crossings;
 machinery validated on the zero-trial A rows (teegarden star
 recovered to +0.07 mag; wolf-359 B field ZP scatter 0.066; blended-A
 systematics k up to 292 confirm the zero-trial A design).
+
+Confirmatory run 2026-08-24
+(`surveys/tess-crossings/results/confirmatory_v1.{json,md}` +
+`adjudication_v1.json`): 6 B units × 2 statistics, nested z family
+explicit. **No candidates.** The pulse statistic — the survey's new
+cell — is null in all six units (first pulse constraint, 200 s →
+window, on fully resolved grazing crossings). The chord statistic is
+systematics-dominated (sector-scale scattered-light drift; S, T in
+the tens; one star-contaminated control at 927): 3 exceedances vs 1.3
+expected — teegarden 2.5 R☉ vetoed by the frozen chord-shape test
+(split-half ratio 0.31, background anti-correlation −0.785);
+wolf-359 2.5 R☉ adjudicated control-crossing (margin +0.46, nested
+windows contradict a real source: 0.1 AU superset S = −19); teegarden
+0.1 AU retained-ambiguous, non-promotable (truncated window weakens
+the shape test; same sector-end cadences as its vetoed sibling;
+recurrence requires a future ecliptic sector — the designated
+follow-up). Design lesson recorded: an undetrended chord statistic
+saturates its error budget with drift — a v2 needs a differential/
+detrending layer. Remaining: completeness (both temporal models) +
+`report/tess_crossings.md`.

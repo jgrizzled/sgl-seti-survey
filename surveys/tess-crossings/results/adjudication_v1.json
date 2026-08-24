@@ -1,0 +1,62 @@
+[
+ {
+  "target_id": "wolf-359",
+  "radius_au": 0.0116,
+  "S_c": 21.365,
+  "T_c": 20.908,
+  "margin_c": 0.457,
+  "S_c_z": 550.0,
+  "split_half": {
+   "first": 16.62,
+   "second": 13.59,
+   "ratio": 0.818
+  },
+  "background_corr_inwindow": 0.097,
+  "strict": {
+   "S_c": 21.731,
+   "T_c": 18.723,
+   "exceedance": true,
+   "n_in": 184
+  }
+ },
+ {
+  "target_id": "teegarden",
+  "radius_au": 0.0116,
+  "S_c": 48.343,
+  "T_c": 24.933,
+  "margin_c": 23.41,
+  "S_c_z": 1000.0,
+  "split_half": {
+   "first": 15.07,
+   "second": 48.19,
+   "ratio": 0.313
+  },
+  "background_corr_inwindow": -0.785,
+  "strict": {
+   "S_c": 49.812,
+   "T_c": 3.862,
+   "exceedance": true,
+   "n_in": 384
+  }
+ },
+ {
+  "target_id": "teegarden",
+  "radius_au": 0.1,
+  "S_c": 79.687,
+  "T_c": 52.124,
+  "margin_c": 27.563,
+  "S_c_z": 2500.0,
+  "split_half": {
+   "first": 65.43,
+   "second": 49.75,
+   "ratio": 0.76
+  },
+  "background_corr_inwindow": -0.218,
+  "strict": {
+   "S_c": 79.484,
+   "T_c": 38.952,
+   "exceedance": true,
+   "n_in": 1862
+  }
+ }
+]
