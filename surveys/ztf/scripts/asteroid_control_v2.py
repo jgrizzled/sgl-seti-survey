@@ -20,7 +20,7 @@ from profile import PROFILE as P  # noqa: E402
 
 from sglsurvey.adapters.irsa_ztf import ZtfExactFootprint  # noqa: E402
 from sglsurvey.photometry import build_flux_map_ztf  # noqa: E402
-from sglsurvey.v2.control import rescore  # noqa: E402
+from sglsurvey.control import rescore  # noqa: E402
 
 V1 = P.v1_run_dir / "control_v1"
 COLOUR = {"zg": 0.25, "zr": -0.19, "zi": -0.35}

@@ -257,7 +257,7 @@ review (findings condensed in `notes/learnings.md` §1) found their
 shared statistical constructions could not support exclusion claims,
 and the **v2 program** (2026-08-21 → 24) rebuilt the experiment once
 on WISE, applied it to every survey through the survey-agnostic engine
-`sglsurvey/v2/`, and retired v1 (reports and scripts to git history).
+`sglsurvey/v2/` (since flattened to `sglsurvey/`), and retired v1 (reports and scripts to git history).
 Sequence, retirement inventory, and execution record:
 `notes/project_history.md` §5; design rules and transfer amendments:
 `notes/learnings.md` §§1–3. Standing rules: no v1 result is cited as

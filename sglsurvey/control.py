@@ -15,7 +15,7 @@ import json
 import numpy as np
 
 from sglsurvey import nulls
-from sglsurvey.v2.build import sample_pix
+from sglsurvey.build import sample_pix
 
 RESID_GRID = np.array([-2.0, -1.0, 0.0, 1.0, 2.0])
 

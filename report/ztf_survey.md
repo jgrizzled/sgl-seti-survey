@@ -8,7 +8,7 @@ status: "complete — confirmatory 45 endpoints / 228 cells: 0 candidates at fam
 
 **Pins:** registry v1.5 · hypotheses `surveys/ztf/hypotheses.md` v2.0
 (freeze `configs/v2_freeze.json` `sha256:9daed5f2…`) · physics cell as
-v1.0 · engine `sglsurvey/v2/` · AnalysisRuns `run-ab66811d2d93`
+v1.0 · engine `sglsurvey/` · AnalysisRuns `run-ab66811d2d93`
 (confirmatory) / `run-d8f0905483fb` (development) · all numbers from
 `surveys/ztf/results/report_tables.md` (ledger-generated).
 

@@ -2,10 +2,10 @@
 # Generic v2 chain for a survey directory with run.py: waits for its
 # geometry check, then build -> dev (nulls, inject, completeness,
 # adjudicate) -> confirmatory (once) -> report.
-# Usage: bash sglsurvey/v2/chain.sh surveys/ztf [workers] [skip-build]
+# Usage: bash sglsurvey/chain.sh surveys/ztf [workers] [skip-build]
 set -u
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
-cd "$(dirname "$0")/../.."
+cd "$(dirname "$0")/.."
 D=$1; W=${2:-7}; SKIP=${3:-}
 R=$D/run.py
 until [ -f "$D/configs/cross_track_cells.json" ]; do sleep 60; done

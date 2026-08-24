@@ -348,7 +348,7 @@ confirmatory (488 cells) sets, `report/wise_survey_v4.md` (now
 `notes/learnings.md` §2.
 
 **Step 6 done 2026-08-23** via the survey-agnostic engine
-`sglsurvey/v2/` (profiles in `surveys/{ztf,panstarrs,spherex}-v2/`,
+`sglsurvey/v2/` (now `sglsurvey/`; profiles in `surveys/{ztf,panstarrs,spherex}-v2/`,
 joint in `surveys/joint/`): blind confirmatory runs ZTF 228 cells /
 PS1 450 / joint 230 / SPHEREx — 0 candidates everywhere; reports
 `report/{ztf,ps1,joint_ps1_ztf,spherex}_survey_v2.md` (now the plain

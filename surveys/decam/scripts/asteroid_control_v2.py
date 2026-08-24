@@ -1,7 +1,7 @@
 """DECam v2 positive control (hypotheses v1.0 §6/§8.6): recover
 (60000) Miminko through the full v2 chain — adapter fetch, per-CCD
 matched filter + canvas paste, in-frame NSC star calibration, and the
-v2 ring-48 rule (sglsurvey.v2.control.rescore).
+v2 ring-48 rule (sglsurvey.control.rescore).
 
 For each exposure in configs/asteroid_control_v1.json: fetch the
 dqmask + the CCD containing the Horizons position, build the flux map
@@ -31,7 +31,7 @@ from sglsurvey.adapters.noirlab_decam import (DQ_FATAL_DEFAULT,  # noqa: E402
 from sglsurvey.photometry import build_flux_map_decam  # noqa: E402
 from sglsurvey.records import Observation  # noqa: E402
 from sglsurvey.snapshots import SnapshotStore  # noqa: E402
-from sglsurvey.v2.control import rescore  # noqa: E402
+from sglsurvey.control import rescore  # noqa: E402
 
 REPO = Path(__file__).resolve().parents[3]
 CFG = REPO / "surveys" / "decam" / "configs" / "asteroid_control_v1.json"

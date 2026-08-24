@@ -7,7 +7,7 @@ status: "complete for QR2 — confirmatory 61 endpoints / 732 detector cells: 0 
 # SPHEREx survey
 
 **Pins:** registry v1.5 · hypotheses `surveys/spherex/hypotheses.md`
-v2.0 (freeze `sha256:96fbfadb…`) · QR2 only · engine `sglsurvey/v2/` ·
+v2.0 (freeze `sha256:96fbfadb…`) · QR2 only · engine `sglsurvey/` ·
 v3 static templates (`runs/spherex/calib_v4/templates`) · numbers from
 `surveys/spherex/results/report_tables.md` (ledger-generated).
 

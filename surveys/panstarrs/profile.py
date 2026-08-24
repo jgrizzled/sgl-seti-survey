@@ -33,7 +33,7 @@ from sglsurvey.geometry import GeometryContext
 from sglsurvey.inject import MoffatPSF
 from sglsurvey.photometry import PS1_PIX_ARCSEC, build_flux_map_ps1
 from sglsurvey.records import read_records
-from sglsurvey.v2.profile import ArchiveProfile, default_quality_ok
+from sglsurvey.profile import ArchiveProfile, default_quality_ok
 from sglsurvey.vetting import load_ps1_mean
 
 REPO = Path(__file__).resolve().parents[2]

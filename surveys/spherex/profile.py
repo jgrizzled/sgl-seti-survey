@@ -47,7 +47,7 @@ from sglsurvey.geometry import GeometryContext
 from sglsurvey.inject import OversampledPSF, stamp_response_multiphase
 from sglsurvey.photometry import build_flux_map_spherex
 from sglsurvey.records import read_records
-from sglsurvey.v2.profile import ArchiveProfile, default_quality_ok
+from sglsurvey.profile import ArchiveProfile, default_quality_ok
 from sglsurvey.vetting import StaticCatalog, load_2mass_vizier, load_catwise_vizier
 
 REPO = Path(__file__).resolve().parents[2]

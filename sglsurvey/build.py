@@ -30,7 +30,7 @@ from sglseti import Role, adaptive_locus, load_target_registry
 
 from sglsurvey import nulls
 from sglsurvey.manifest import HashCache, combined_hash
-from sglsurvey.v2.profile import ArchiveProfile
+from sglsurvey.profile import ArchiveProfile
 
 warnings.filterwarnings("ignore", message="All-NaN slice")
 MASKS = ("primary", "strict", "loose")

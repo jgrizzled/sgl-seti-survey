@@ -2,7 +2,7 @@
 
 v2 re-analysis of the v1 spherex survey under the frozen rule in
 `hypotheses.md` (WISE v2.1 design; v2 programme step 6, `notes/project_history.md` §5), run by
-the survey-agnostic engine `sglsurvey/v2/` with this directory's
+the survey-agnostic engine `sglsurvey/` with this directory's
 `profile.py` bindings. `configs/v2_freeze.json` holds the hashed freeze
 and the stratified development / confirmatory split;
 `configs/cross_track_cells.json` the cells with a cross-track

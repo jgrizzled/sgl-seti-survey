@@ -10,7 +10,7 @@ The carried-forward physical-source hypothesis is reproduced directly
 in §0. The decision rule, null model, completeness definition and
 hold-out are those of the WISE freeze **v2.1**
 (`surveys/wise/hypotheses.md` §3–§5 with its §8 amendment), applied
-through the survey-agnostic engine `sglsurvey/v2/` with the ZTF
+through the survey-agnostic engine `sglsurvey/` with the ZTF
 bindings in `profile.py`.
 
 > **Documentation restoration (2026-08-24).** This section restores the

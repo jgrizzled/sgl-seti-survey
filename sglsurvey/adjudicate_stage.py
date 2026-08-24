@@ -16,7 +16,7 @@ from sglseti import stable_id
 from sglsurvey import nulls
 from sglsurvey.photometry import _gaussian_kernel
 from sglsurvey.records import Candidate, append_records
-from sglsurvey.v2.inject_stage import oversampled_template
+from sglsurvey.inject_stage import oversampled_template
 from sglsurvey.vetting import (flux_consistency, holdout_prediction_test, parallax_phase_test,
                                radial_response_table)
 

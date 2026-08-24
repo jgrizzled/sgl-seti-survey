@@ -10,7 +10,7 @@ The carried-forward physical-source hypothesis is reproduced directly
 in §0. The decision rule, null model, completeness definition and
 hold-out are those of the WISE freeze **v2.1**
 (`surveys/wise/hypotheses.md` §3–§5, §8) through the engine
-`sglsurvey/v2/` with the PS1 bindings in `profile.py`.
+`sglsurvey/` with the PS1 bindings in `profile.py`.
 
 > **Documentation restoration (2026-08-24).** This section restores the
 > still-active v1 physics text after the v1 file was retired. It changes

@@ -24,29 +24,29 @@ def main(P, argv=None):
     ap.add_argument("--force", action="store_true")
     a = ap.parse_args(argv)
     if a.stage == "freeze":
-        from sglsurvey.v2 import freeze
+        from sglsurvey import freeze
         freeze.run(P)
     elif a.stage == "build":
-        from sglsurvey.v2 import build
+        from sglsurvey import build
         build.run(P, corridors=a.corridors, workers=a.workers, only_missing=not a.no_only_missing)
     elif a.stage == "geometry":
-        from sglsurvey.v2 import geometry_stage
+        from sglsurvey import geometry_stage
         geometry_stage.run(P, workers=a.workers, endpoints=a.endpoints)
     elif a.stage == "nulls":
-        from sglsurvey.v2 import nulls_stage
+        from sglsurvey import nulls_stage
         nulls_stage.run(P, a.set or "dev", force=a.force)
     elif a.stage == "inject":
-        from sglsurvey.v2 import inject_stage
+        from sglsurvey import inject_stage
         inject_stage.run(P, a.set or "dev", workers=a.workers, corridors=a.corridors,
                          only_missing=not a.no_only_missing, n_per_cell=a.n_per_cell)
     elif a.stage == "completeness":
-        from sglsurvey.v2 import completeness_stage
+        from sglsurvey import completeness_stage
         completeness_stage.run(P, a.set or "dev")
     elif a.stage == "adjudicate":
-        from sglsurvey.v2 import adjudicate_stage
+        from sglsurvey import adjudicate_stage
         adjudicate_stage.run(P, a.set or "dev")
     elif a.stage == "report":
-        from sglsurvey.v2 import report_stage
+        from sglsurvey import report_stage
         raise SystemExit(report_stage.run(P))
     elif a.stage == "control":
         raise SystemExit("the positive control is a survey script (scripts/asteroid_control_v2.py)")

@@ -8,7 +8,7 @@ status: "complete — confirmatory 14 endpoints / 86 cells: 0 candidates at fami
 
 **Pins:** registry v1.5 · hypotheses `surveys/decam/hypotheses.md` v1.0
 (freeze `sha256:c3c7ece419c20067…`, seed 20260824) · T0 = 58500 ·
-engine `sglsurvey/v2/` · adapter `sglsurvey/adapters/noirlab_decam.py`
+engine `sglsurvey/` · adapter `sglsurvey/adapters/noirlab_decam.py`
 · AnalysisRuns `run-7565b9349301` (development) / `run-3d3cf9840678`
 (confirmatory, blind) in `runs/decam/v2/records/` · numbers from
 `surveys/decam/results/report_tables.md` · recon

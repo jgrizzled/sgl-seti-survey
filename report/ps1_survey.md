@@ -8,7 +8,7 @@ status: "complete — confirmatory 45 endpoints / 450 cells: 0 candidates at fam
 
 **Pins:** registry v1.5 · hypotheses `surveys/panstarrs/hypotheses.md`
 v2.0 (freeze `sha256:be6f3a1c…`) · common T0 = 59800 · engine
-`sglsurvey/v2/` · AnalysisRuns in `runs/panstarrs/v2/records/` · numbers
+`sglsurvey/` · AnalysisRuns in `runs/panstarrs/v2/records/` · numbers
 from `surveys/panstarrs/results/report_tables.md`.
 
 ## Summary

@@ -37,7 +37,7 @@ from sglsurvey.geometry import GeometryContext
 from sglsurvey.inject import MoffatPSF
 from sglsurvey.photometry import DECAM_PIX_ARCSEC, build_flux_map_decam
 from sglsurvey.records import read_records
-from sglsurvey.v2.profile import ArchiveProfile, default_quality_ok
+from sglsurvey.profile import ArchiveProfile, default_quality_ok
 from sglsurvey.vetting import load_nsc_objects
 
 import sys

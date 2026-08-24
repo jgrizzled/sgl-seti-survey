@@ -5,9 +5,9 @@ archives; inject the same physical source into all archives").
 Inputs are the two archives' v2 products on the common µ reference
 epoch T0 = 59800 and AB zero point 25: the per-trajectory accumulated
 stack sums (A, B, n per mask x trajectory x band x grid) that
-`sglsurvey.v2.build` stores in every tensor, the real trajectory's
+`sglsurvey.build` stores in every tensor, the real trajectory's
 per-phase parts, and the per-injection window sums written by
-`sglsurvey.v2.inject_stage` (the j-th injection of a cell is the same
+`sglsurvey.inject_stage` (the j-th injection of a cell is the same
 physical source in both archives: per-injection seeded draws on the
 union magnitude window).
 
@@ -57,8 +57,8 @@ from sglseti import canonical_json, load_target_registry, stable_id  # noqa: E40
 from sglsurvey import nulls  # noqa: E402
 from sglsurvey.manifest import combined_hash  # noqa: E402
 from sglsurvey.records import AnalysisRun, Candidate, Constraint, append_records  # noqa: E402
-from sglsurvey.v2 import completeness_stage as CS  # noqa: E402
-from sglsurvey.v2.adjudicate_stage import response_table, _FmLike  # noqa: E402
+from sglsurvey import completeness_stage as CS  # noqa: E402
+from sglsurvey.adjudicate_stage import response_table, _FmLike  # noqa: E402
 from sglsurvey.vetting import flux_consistency, parallax_phase_test  # noqa: E402
 
 OUT = REPO / "runs" / "joint" / "v2"
@@ -484,7 +484,7 @@ def main():
     elif a.stage == "adjudicate":
         adjudicate_stage(a.set)
     elif a.stage == "report":
-        from sglsurvey.v2 import report_stage
+        from sglsurvey import report_stage
         JP.results_dir = SURVEY_DIR / "results"
         JP.null_dir = OUT / "nulls"
         JP.v1_run_dir = REPO / "runs" / "joint"
