@@ -1,0 +1,210 @@
+{
+ "A": [],
+ "A_note": "dev split empty (freeze v1.0); constructions imported from ZTF chain; saturation gate runs via --satgate",
+ "B": [
+  {
+   "target_id": "wolf-359",
+   "band": "g",
+   "event_id": "evt-0639d9d72c4b",
+   "t_ca_mjd": 55444.48063288195,
+   "status": "ok",
+   "n_in_epochs_raw": 2,
+   "n_in_epochs_fetched": 2,
+   "n_in_exposures_dedup": 2,
+   "n_off_samples": 17,
+   "k_rescale": 3.864,
+   "k_status": "ok_n16",
+   "zp_sources": {
+    "star": 18,
+    "fallback": 6
+   },
+   "S": 0.287,
+   "n_controls": 8,
+   "controls": [
+    0.09,
+    1.076,
+    1.004,
+    -0.148,
+    0.348,
+    1.187,
+    1.651,
+    0.264
+   ],
+   "T": 1.651,
+   "margin": -1.364,
+   "static_min_arcsec": 16.78,
+   "static_annotated": false,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "wolf-359",
+   "band": "i",
+   "event_id": "evt-0639d9d72c4b",
+   "t_ca_mjd": 55444.48063288195,
+   "status": "ok",
+   "n_in_epochs_raw": 2,
+   "n_in_epochs_fetched": 2,
+   "n_in_exposures_dedup": 2,
+   "n_off_samples": 21,
+   "k_rescale": 1.989,
+   "k_status": "ok_n20",
+   "zp_sources": {
+    "star": 26,
+    "fallback": 10
+   },
+   "S": 1.127,
+   "n_controls": 8,
+   "controls": [
+    0.586,
+    -0.052,
+    -0.385,
+    1.28,
+    -0.385,
+    0.698,
+    1.909,
+    1.896
+   ],
+   "T": 1.909,
+   "margin": -0.782,
+   "static_min_arcsec": 17.33,
+   "static_annotated": false,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "wolf-359",
+   "band": "r",
+   "event_id": "evt-0639d9d72c4b",
+   "t_ca_mjd": 55444.48063288195,
+   "status": "ok",
+   "n_in_epochs_raw": 2,
+   "n_in_epochs_fetched": 2,
+   "n_in_exposures_dedup": 2,
+   "n_off_samples": 20,
+   "k_rescale": 1.0,
+   "k_status": "ok_n17",
+   "zp_sources": {
+    "star": 26,
+    "fallback": 3
+   },
+   "S": 1.114,
+   "n_controls": 8,
+   "controls": [
+    1.22,
+    -0.217,
+    0.801,
+    0.94,
+    -1.276,
+    2.065,
+    4.801,
+    5.21
+   ],
+   "T": 5.21,
+   "margin": -4.096,
+   "static_min_arcsec": 17.47,
+   "static_annotated": false,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "wolf-359",
+   "band": "i",
+   "event_id": "evt-a2c4ffdd0d1d",
+   "t_ca_mjd": 55809.735764178244,
+   "status": "controls_partial_7of8",
+   "n_in_epochs_raw": 2,
+   "n_in_epochs_fetched": 2,
+   "n_in_exposures_dedup": 2,
+   "n_off_samples": 20,
+   "k_rescale": 1.0,
+   "k_status": "ok_n20",
+   "zp_sources": {
+    "star": 26,
+    "fallback": 10
+   },
+   "S": 0.427,
+   "n_controls": 7,
+   "controls": [
+    1.112,
+    1.306,
+    0.928,
+    0.476,
+    0.51,
+    1.055,
+    2.344
+   ],
+   "T": 2.344,
+   "margin": -1.917,
+   "static_min_arcsec": 19.36,
+   "static_annotated": false,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "teegarden",
+   "band": "r",
+   "event_id": "evt-c349f1a1e62c",
+   "t_ca_mjd": 56783.65412234954,
+   "status": "track_masked",
+   "n_in_epochs_raw": 3,
+   "n_in_epochs_fetched": 3,
+   "n_in_exposures_dedup": 3,
+   "n_off_samples": 6,
+   "k_rescale": 2.408,
+   "k_status": "ok_n6",
+   "zp_sources": {
+    "star": 11,
+    "fallback": 2
+   },
+   "S": null,
+   "n_controls": 3,
+   "controls": [
+    0.297,
+    1.073,
+    1.052
+   ],
+   "T": 1.073,
+   "margin": null,
+   "static_min_arcsec": 3.1,
+   "static_annotated": false,
+   "class": "search_unit",
+   "exceedance": false
+  },
+  {
+   "target_id": "wolf-359",
+   "band": "i",
+   "event_id": "evt-f80401623d4d",
+   "t_ca_mjd": 55079.22357799768,
+   "status": "ok",
+   "n_in_epochs_raw": 2,
+   "n_in_epochs_fetched": 2,
+   "n_in_exposures_dedup": 2,
+   "n_off_samples": 21,
+   "k_rescale": 1.0,
+   "k_status": "ok_n21",
+   "zp_sources": {
+    "star": 26,
+    "fallback": 10
+   },
+   "S": 1.145,
+   "n_controls": 8,
+   "controls": [
+    1.836,
+    0.43,
+    0.477,
+    1.346,
+    0.505,
+    0.51,
+    1.034,
+    0.046
+   ],
+   "T": 1.836,
+   "margin": -0.691,
+   "static_min_arcsec": 10.81,
+   "static_annotated": false,
+   "class": "search_unit",
+   "exceedance": false
+  }
+ ]
+}

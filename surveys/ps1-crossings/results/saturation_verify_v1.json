@@ -1,0 +1,931 @@
+{
+ "frozen_exclude": {
+  "g": 14.0,
+  "r": 14.0,
+  "i": 14.0,
+  "z": 13.0,
+  "y": 12.0
+ },
+ "bands": {
+  "g": {
+   "stars": [
+    {
+     "corridor": "teegarden",
+     "mag": 13.48,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 5.816053,
+     "m_sat_header": 12.42,
+     "warp": "55304_48991"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.46,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 5.816053,
+     "m_sat_header": 12.42,
+     "warp": "55304_48991"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.42,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.209359,
+     "m_sat_header": 12.3,
+     "warp": "55304_48991"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.39,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 5.816053,
+     "m_sat_header": 12.42,
+     "warp": "55304_48991"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.75,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.209359,
+     "m_sat_header": 12.3,
+     "warp": "55304_48991"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.83,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.209359,
+     "m_sat_header": 12.3,
+     "warp": "55304_48991"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.86,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 5.816053,
+     "m_sat_header": 12.42,
+     "warp": "55304_48991"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.62,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.209359,
+     "m_sat_header": 12.3,
+     "warp": "55304_48991"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.5,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 53500.0,
+     "seeing_pix": 5.192131,
+     "m_sat_header": 12.5,
+     "warp": "55446_42383"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.49,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 53500.0,
+     "seeing_pix": 5.192131,
+     "m_sat_header": 12.5,
+     "warp": "55446_42383"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.48,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 53500.0,
+     "seeing_pix": 5.192131,
+     "m_sat_header": 12.5,
+     "warp": "55446_42383"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.46,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 53500.0,
+     "seeing_pix": 5.192131,
+     "m_sat_header": 12.5,
+     "warp": "55446_42383"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.73,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53500.0,
+     "seeing_pix": 5.192131,
+     "m_sat_header": 12.5,
+     "warp": "55446_42383"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.68,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53500.0,
+     "seeing_pix": 5.192131,
+     "m_sat_header": 12.5,
+     "warp": "55446_42383"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.66,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52000.0,
+     "seeing_pix": 5.34184,
+     "m_sat_header": 12.47,
+     "warp": "55446_42383"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.86,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53500.0,
+     "seeing_pix": 5.192131,
+     "m_sat_header": 12.5,
+     "warp": "55446_42383"
+    }
+   ],
+   "faintest_with_sat_bits": 14.86,
+   "brightest_clean": 14.62,
+   "median_m_sat_header": 12.445,
+   "verdict": "see_stars"
+  },
+  "r": {
+   "stars": [
+    {
+     "corridor": "teegarden",
+     "mag": 13.5,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.322949,
+     "m_sat_header": 12.1,
+     "warp": "55306_51671"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.51,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.322949,
+     "m_sat_header": 12.1,
+     "warp": "55306_51671"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.51,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.322949,
+     "m_sat_header": 12.1,
+     "warp": "55306_51671"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.44,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.322949,
+     "m_sat_header": 12.1,
+     "warp": "55306_51671"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.75,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.322949,
+     "m_sat_header": 12.1,
+     "warp": "55306_51671"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.76,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.322949,
+     "m_sat_header": 12.1,
+     "warp": "55306_51671"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.74,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.322949,
+     "m_sat_header": 12.1,
+     "warp": "55306_51671"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.79,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 6.322949,
+     "m_sat_header": 12.1,
+     "warp": "55306_51671"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.58,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 8.394217,
+     "m_sat_header": 12.03,
+     "warp": "55086_47889"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.58,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 8.394217,
+     "m_sat_header": 12.03,
+     "warp": "55086_47889"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.42,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 8.394217,
+     "m_sat_header": 12.03,
+     "warp": "55086_47889"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.59,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 8.394217,
+     "m_sat_header": 12.03,
+     "warp": "55086_47889"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.74,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 8.394217,
+     "m_sat_header": 12.03,
+     "warp": "55086_47889"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.76,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 8.394217,
+     "m_sat_header": 12.03,
+     "warp": "55086_47889"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.78,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53500.0,
+     "seeing_pix": 8.200189,
+     "m_sat_header": 12.08,
+     "warp": "55086_47889"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.7,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 8.394217,
+     "m_sat_header": 12.03,
+     "warp": "55086_47889"
+    }
+   ],
+   "faintest_with_sat_bits": 14.76,
+   "brightest_clean": 13.42,
+   "median_m_sat_header": 12.09,
+   "verdict": "see_stars"
+  },
+  "i": {
+   "stars": [
+    {
+     "corridor": "teegarden",
+     "mag": 13.52,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 5.165912,
+     "m_sat_header": 12.64,
+     "warp": "55340_40728"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.52,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 5.165912,
+     "m_sat_header": 12.64,
+     "warp": "55340_40728"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.52,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 5.165912,
+     "m_sat_header": 12.64,
+     "warp": "55340_40728"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.54,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 5.165912,
+     "m_sat_header": 12.64,
+     "warp": "55340_40728"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.76,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 5.165912,
+     "m_sat_header": 12.64,
+     "warp": "55340_40728"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.72,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55375.0,
+     "seeing_pix": 5.185808,
+     "m_sat_header": 12.63,
+     "warp": "55340_40728"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.78,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 5.165912,
+     "m_sat_header": 12.64,
+     "warp": "55340_40728"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.79,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": false,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 5.165912,
+     "m_sat_header": 12.64,
+     "warp": "55340_40728"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.46,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 54500.0,
+     "seeing_pix": 4.422261,
+     "m_sat_header": 13.34,
+     "warp": "55082_32788"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.57,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54500.0,
+     "seeing_pix": 4.698174,
+     "m_sat_header": 13.21,
+     "warp": "55082_32788"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.42,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 54500.0,
+     "seeing_pix": 4.422261,
+     "m_sat_header": 13.34,
+     "warp": "55082_32788"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.59,
+     "sat_core_bits": true,
+     "sat_bit": false,
+     "starcore_bit": true,
+     "cell_saturation": 54500.0,
+     "seeing_pix": 4.698174,
+     "m_sat_header": 13.21,
+     "warp": "55082_32788"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.75,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54500.0,
+     "seeing_pix": 4.422261,
+     "m_sat_header": 13.34,
+     "warp": "55082_32788"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.74,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 54500.0,
+     "seeing_pix": 4.422261,
+     "m_sat_header": 13.34,
+     "warp": "55082_32788"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.77,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 54500.0,
+     "seeing_pix": 4.422261,
+     "m_sat_header": 13.34,
+     "warp": "55082_32788"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.82,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": true,
+     "cell_saturation": 54500.0,
+     "seeing_pix": 4.422261,
+     "m_sat_header": 13.34,
+     "warp": "55082_32788"
+    }
+   ],
+   "faintest_with_sat_bits": 14.82,
+   "brightest_clean": 13.57,
+   "median_m_sat_header": 12.925,
+   "verdict": "see_stars"
+  },
+  "z": {
+   "stars": [
+    {
+     "corridor": "teegarden",
+     "mag": 13.47,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.085078,
+     "m_sat_header": 12.41,
+     "warp": "55253_61053"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.56,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.085078,
+     "m_sat_header": 12.41,
+     "warp": "55253_61053"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.42,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.085078,
+     "m_sat_header": 12.41,
+     "warp": "55253_61053"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.41,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.085078,
+     "m_sat_header": 12.41,
+     "warp": "55253_61053"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.73,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.085078,
+     "m_sat_header": 12.41,
+     "warp": "55253_61053"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.78,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.085078,
+     "m_sat_header": 12.41,
+     "warp": "55253_61053"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.72,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.085078,
+     "m_sat_header": 12.41,
+     "warp": "55253_61053"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.79,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.085078,
+     "m_sat_header": 12.41,
+     "warp": "55253_61053"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.52,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55250.0,
+     "seeing_pix": 6.433319,
+     "m_sat_header": 11.42,
+     "warp": "55014_61619"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.56,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 6.223814,
+     "m_sat_header": 11.49,
+     "warp": "55014_61619"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.56,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55125.0,
+     "seeing_pix": 6.223814,
+     "m_sat_header": 11.49,
+     "warp": "55014_61619"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.43,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55250.0,
+     "seeing_pix": 6.433319,
+     "m_sat_header": 11.42,
+     "warp": "55014_61619"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.67,
+     "sat_core_bits": true,
+     "sat_bit": true,
+     "starcore_bit": false,
+     "cell_saturation": 55250.0,
+     "seeing_pix": 6.433319,
+     "m_sat_header": 11.42,
+     "warp": "55014_61619"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.67,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55250.0,
+     "seeing_pix": 6.433319,
+     "m_sat_header": 11.42,
+     "warp": "55014_61619"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.65,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55250.0,
+     "seeing_pix": 6.433319,
+     "m_sat_header": 11.42,
+     "warp": "55014_61619"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.86,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 55250.0,
+     "seeing_pix": 6.433319,
+     "m_sat_header": 11.42,
+     "warp": "55014_61619"
+    }
+   ],
+   "faintest_with_sat_bits": 14.67,
+   "brightest_clean": 13.41,
+   "median_m_sat_header": 11.95,
+   "verdict": "see_stars"
+  },
+  "y": {
+   "stars": [
+    {
+     "corridor": "teegarden",
+     "mag": 13.52,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.762939,
+     "m_sat_header": 11.1,
+     "warp": "55240_62935"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.53,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.762939,
+     "m_sat_header": 11.1,
+     "warp": "55240_62935"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.54,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.762939,
+     "m_sat_header": 11.1,
+     "warp": "55240_62935"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 13.41,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.762939,
+     "m_sat_header": 11.1,
+     "warp": "55240_62935"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.75,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.762939,
+     "m_sat_header": 11.1,
+     "warp": "55240_62935"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.73,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 52750.0,
+     "seeing_pix": 4.629486,
+     "m_sat_header": 11.19,
+     "warp": "55240_62935"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.73,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.762939,
+     "m_sat_header": 11.1,
+     "warp": "55240_62935"
+    },
+    {
+     "corridor": "teegarden",
+     "mag": 14.72,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 54000.0,
+     "seeing_pix": 4.762939,
+     "m_sat_header": 11.1,
+     "warp": "55240_62935"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.52,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 29500.0,
+     "seeing_pix": 3.632178,
+     "m_sat_header": 12.25,
+     "warp": "55363_60668"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.53,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 29500.0,
+     "seeing_pix": 3.632178,
+     "m_sat_header": 12.25,
+     "warp": "55363_60668"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.46,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 3.682124,
+     "m_sat_header": 11.59,
+     "warp": "55363_60718"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 13.41,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 3.682124,
+     "m_sat_header": 11.59,
+     "warp": "55363_60718"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.73,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 3.682124,
+     "m_sat_header": 11.59,
+     "warp": "55363_60718"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.64,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 3.682124,
+     "m_sat_header": 11.59,
+     "warp": "55363_60718"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.6,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 53250.0,
+     "seeing_pix": 3.682124,
+     "m_sat_header": 11.59,
+     "warp": "55363_60718"
+    },
+    {
+     "corridor": "wolf359",
+     "mag": 14.6,
+     "sat_core_bits": false,
+     "sat_bit": false,
+     "starcore_bit": false,
+     "cell_saturation": 29500.0,
+     "seeing_pix": 3.632178,
+     "m_sat_header": 12.25,
+     "warp": "55363_60668"
+    }
+   ],
+   "faintest_with_sat_bits": null,
+   "brightest_clean": 13.41,
+   "median_m_sat_header": 11.39,
+   "verdict": "see_stars"
+  }
+ }
+}

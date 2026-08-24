@@ -94,6 +94,22 @@ class GeometryContext:
                    tolerance_arcsec=5.0, padding_arcsec=10.0,
                    confidence_level=0.99)
 
+    @classmethod
+    def decam_default(cls) -> "GeometryContext":
+        """DECam southern-survey draft configuration (hypotheses not yet
+        frozen): WISE v1.0 physics, relay range, 99% confidence and
+        +10" padding; observer is the CTIO Blanco 4-m site (MPC W84,
+        the DECam station)."""
+        from sglseti import Tusay2022Eq57V1
+
+        ctio = Observer.from_geodetic("ctio-blanco-decam", -70.80655,
+                                      -30.16928, 2207.0)
+        return cls(model=Tusay2022Eq57V1(), ephemeris=AstropyEphemeris(),
+                   observer=ctio,
+                   relay_range=RelayRange(550.0, 10000.0),
+                   tolerance_arcsec=5.0, padding_arcsec=10.0,
+                   confidence_level=0.99)
+
     def identities(self) -> dict[str, Any]:
         return {
             "model_id": self.model.model_id,

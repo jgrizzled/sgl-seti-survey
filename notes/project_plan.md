@@ -720,6 +720,32 @@ is `surveys/wise/v2_plan.md`; its §12 is the transfer table.
 - _Provenance note:_ the freeze files (`surveys/*/configs/v2_*freeze.json`) are kept byte-identical to the pre-registered versions — every AnalysisRun pins their hashes. The path-rename sweep and the 2026-08-24 documentation restoration edited the hypothesis documents after those freezes, so the `hypotheses_hash` values recorded in the freezes refer to the documents as of freeze time (git history), not the current self-contained files; future freezes hash the complete active hypothesis document.
   | 8 | Resume archive-family expansion (DECam south, three-archive joint) on the v2 design. | — |
 
+**Step 8 started 2026-08-24 — DECam south.** Recon
+(`notes/decam_recon_2026-08-24.md`): all 15 southern corridors have
+instcal coverage (~15.6k exposures 2012–2026, 4–12 calendar months →
+both parallax phases single-archive, unlike PS1); Astro Archive API +
+`?hdus=` single-CCD fetches verified; `astro-datalab` (pinned 2.22.1;
+2.24.0 has undeclared imports) queryClient works anonymously for
+NSC DR2 (async/MyDB need an account — deferred to scale-up); Data Lab
+TAP unusable both probe days; Data Lab cutout service strips TPV → not
+used for astrometry. Built: adapter
+`sglsurvey/adapters/noirlab_decam.py` (EXPNUM-joined triplets, dqmask
+md5-verified, per-exposure EXTNAME→HDU map with fetch-time assert),
+`GeometryContext.decam_default()` (CTIO W84), static focal-plane
+layout `surveys/decam/configs/decam_focal_plane_v1.json` (validated vs
+2012/2024 exposures, worst corner 10.2"), `surveys/decam/` with draft
+hypotheses v0.1 (freeze pending — first survey with no v1 exploratory
+phase, v2 discipline from day one). Pilot Pipeline A run (lalande /
+sigmadra / hd219134): coarse 306 exposures / 612 evaluations; precise
+222 hit exposures, 412 evaluations, ~all usable (5 i-band 404s);
+screen 11,430 ScreenMatch (NSC DR2 confirmed time-partial: catalogued
+epochs end 2017–2019 per corridor — recorded in
+`runs/decam/screen_v1/catalog_stats.json`); recurrence triage clean
+(dense hd219134 corridor is Galactic-plane, b ≈ +2.5°); single-CCD
+image+wtmap products fetched for stage 2. Next: hypothesis freeze
+v1.0 (user), positive-control asteroid, star flux-scale check, then
+the v2 chain and the southern overlay.
+
 Rules during the programme: no v1 result is cited as an exclusion;
 nothing in a `-v2` directory may import from a v1 survey directory
 (shared code goes through `sglsurvey/`); every v2 hypothesis freeze is
@@ -817,7 +843,7 @@ designed.
 
 | Step | What | Exit condition |
 | ---- | ---- | -------------- |
-| 3 | **PS1 crossings.** Intersect the universal list with the PS1 era (2010–2014: windows disjoint from ZTF's, extending the covered-window record backwards); reuse the MAST adapter and the ztf-crossings channel constructions; expect no i-band-only complications since PS1 grizy spans the same hypothesis range. | Frozen hypotheses + thresholds, confirmatory run, completeness, report |
+| 3 | **PS1 crossings.** Intersect the universal list with the PS1 era (2010–2014: windows disjoint from ZTF's, extending the covered-window record backwards); reuse the MAST adapter and the ztf-crossings channel constructions; expect no i-band-only complications since PS1 grizy spans the same hypothesis range. _In progress 2026-08-24 (`surveys/ps1-crossings/`): hypotheses v1.0, coverage intersect (B wide 14/47 events on all 7 targets; grazing 1/27+1/34 but the covered event is van-maanen at b = 0.28 R☉ with a TTI i-band pair — deepest graze in the programme), grizy saturation cut, threshold freeze v1.0 (19 units, 2.1 expected control crossings, warp-direct substrate, ZTF v1.1/v1.2 rules adopted at freeze, A 1.0 AU rung constraint-only by declaration, TTI-pair mover veto; B-wide dev = teegarden + wolf-359) all frozen. Dev search complete: 0 exceedances, no amendment (5 wolf-359 units clean; teegarden unit `track_masked` — correlated CONV.BAD chip-gap attrition, finding P1; saturation gate PASS, frozen levels stand). Next: confirmatory run._ | Frozen hypotheses + thresholds, confirmatory run, completeness, report |
 | 4 | **Spacecraft-observer crossing lists.** Derivative `crossings/` products with per-epoch spacecraft observers (WISE, SPHEREx, TESS; observer code already in `sglsurvey/geometry.py`) — the Earth-center list is invalid at b ≲ R☉ for L2/Earth-trailing observers. | Per-observer events tables with manifest parity to `universal_v1` |
 | 5 | **WISE crossings survey** on the derivative list: IR bands dodge the 532 nm-only constraint; NEOWISE cadence (~6-month visits) vs window durations decides which rungs are viable — check before freezing. | Same chain as step 2 |
 | 6 | **Joint crossings stage.** Cross-archive coincidence on shared covered windows (ZTF × PS1 × WISE), colour consistency as a calibrated veto, one ledger of covered windows per target per rung across all archives. | Unified covered-window ledger + joint report |
