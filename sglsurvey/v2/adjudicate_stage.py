@@ -1,6 +1,6 @@
 """v2 engine: candidates under the frozen rule, calibrated vetoes and
 annotations (profile-parameterised port of
-surveys/wise-v2/scripts/adjudicate_v2.py). The W3/W4 confirmation
+surveys/wise/scripts/adjudicate_v2.py). The W3/W4 confirmation
 procedure is WISE-specific and stays in the WISE script; a profile may
 declare a cross-band consistency hook later."""
 

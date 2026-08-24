@@ -1,116 +1,59 @@
 ---
-title: "ZTF pilot — baseline hypothesis freeze"
-status: "v1.0 — frozen 2026-08-20 (3-corridor pilot)"
-date: 2026-08-20
+title: "ZTF survey — hypothesis freeze v2.0 (decision rule and geometry specification)"
+status: "v2.0 — frozen 2026-08-22 before any v2 script ran on the ZTF confirmatory set; hash in configs/v2_freeze.json"
+date: 2026-08-22
 ---
 
-# Baseline hypothesis freeze — ZTF v1.0
+# ZTF hypothesis freeze v2.0
 
-Second-adapter pilot (plan §5). Parameters were inherited from the WISE
-freeze (`surveys/wise/hypotheses.md` v1.0) wherever the physics is
-archive-independent, so that a ZTF null and a WISE null on the same
-endpoint close the *same* cell of the §3.1 grid in different bands.
-Only the items marked **ZTF-specific** are new. Run configs record this
-file's version and content hash; any change creates a new version.
+The physics cell of the v1.0 freeze (`hypotheses_v1.md`) is unchanged
+(registry v1.5 endpoints with v1 tensors — 69 endpoints / 62
+corridors; Rx and Tx; 550–10,000 AU log-uniform; unresolved point
+source; duty ≥ 0.5; component-wise |µ| ≤ 1″/yr; Palomar P48 observer).
+The decision rule, null model, completeness definition and hold-out
+are those of the WISE freeze **v2.1** (`surveys/wise/hypotheses.md`
+§3–§5 with its §8 amendment), applied through the survey-agnostic
+engine `sglsurvey/v2/` with the ZTF bindings in `profile.py`:
 
-## 1. Target endpoints and target-state models
-
-Pilot corridors (3), reusing registry `registries/pilot_wise_2026.yaml`
-entries **unchanged** (the registry is survey-agnostic):
-
-| endpoint | why it is in the pilot |
-|---|---|
-| `ross-128` | corridor on the ecliptic (β ≈ +0.5°): maximal parallax excursion along one axis; high Galactic latitude (b −60°), clean field; Dec −0.8° |
-| `eps-ind-a` | southern star whose corridor is at Dec +57°, β +41°: near-circular parallax ellipse; demonstrates that ZTF reaches southern-hemisphere endpoints; mid-latitude field (b +48°) |
-| `proxima-cen` | flagship target; corridor at b +1.9°, Dec +63°: the crowded Galactic-plane stress case for a 1" survey |
-
-Endpoint hypotheses are stellar components under their registry
-providers (all three are linear-astrometry endpoints). Component
-endpoints of the multiple systems follow in the scale-up, as in WISE.
-
-## 2. Role
-
-Rx and Tx as separate hypotheses, both evaluated (unchanged).
-
-## 3. Relay-distance prior and sampling
-
-550–10,000 AU, log-uniform prior, sglseti adaptive-locus sampling with
-exact covered-interval reporting (unchanged).
-
-## 4. Geometry model and observer-state versions — ZTF-specific observer
-
-- Geometry: sglseti `tusay2022_eq5_7_v1` (unchanged).
-- Observer: **Palomar P48 terrestrial site** (lon −116.8650°, lat
-  +33.3563°, h 1712 m) via `Observer.from_geodetic`. Measured
-  topocentric-vs-geocentric locus shift ≤ 0.016" at 550 AU; carried in
-  the accuracy budget, negligible against padding.
-- Epoch: `obsjd` is exposure start; loci are evaluated at mid-exposure
-  (start + 15 s). Corridor drift over a 30 s exposure ≤ 0.003" — the
-  midpoint model is adequate (plan §3.3).
-
-## 5. Uncertainty confidence level and search padding
-
-99% propagated locus confidence + **10" fixed padding** (unchanged).
-At 1"/pix this is 10 pixels; revisit downward as a new version once
-the pilot measures ZTF astrometric residuals along the track.
-
-## 6. Source morphology and spectral model — ZTF-specific interpretation
-
-- Morphology: unresolved point source at ZTF resolution (median seeing
-  ~2"). Extended or trailed morphologies are separate cells.
-- Bands: ZTF g (0.47 µm), r (0.64 µm), i (0.79 µm); all public frames
-  used, constraints reported per filter.
-- Physical interpretation of an optical flux limit:
-  1. **Reflected sunlight** — the primary cell. For a Lambertian
-     sphere of geometric albedo p and diameter D at heliocentric
-     distance z (AU), observed near opposition at Δ ≈ z:
-     m ≈ m_⊙ − 2.5 log10[ p (D/2)² / (4 z⁴ AU²) ] with m_⊙,r = −26.93.
-     A 5σ stack depth m_r converts directly to an upper limit on
-     p^{1/2} D at each z. Limits must quote p explicitly.
-  2. **Self-luminous optical emission** (beacons, leakage, thermal
-     > 2000 K) — reported as a flux limit in Jy without a size
-     conversion.
-  A 550 AU solar-equilibrium body (12 K) is invisible in g/r/i; these
-  limits are never to be described as thermal coverage.
-
-## 7. Persistence / duty-cycle assumption
-
-Duty cycle ≥ 0.5; injections sample [0.5, 1] (unchanged).
-
-## 8. Stationkeeping / residual-motion bounds
-
-|µ_resid| ≤ 1"/yr, fit jointly with relay distance (unchanged). Note
-that at ZTF resolution this bound spans ±8 pixels over the 8-year
-baseline, so residual motion is a *resolved* nuisance parameter here,
-unlike in WISE.
-
-## 9. Detection pipeline and decision threshold — ZTF-specific inputs
-
-Layered per plan §3.4. Frozen data-quality inputs:
-
-- Frame selection: `ipac_gid = 1` (public), `infobits` bit 25 clear
-  (ZSDS bad-quality flag), `imgtype = object`. Airmass, seeing, moon
-  illumination and `maglimit` are recorded per frame and enter the
-  stack as weights, not as hard cuts.
-- Usable pixels: mask template 6141 — bits {0,2,3,4,5,6,7,8,9,10,12}
-  fatal; bits 1 and 11 (source present) **not** fatal.
-- Primary search image: `scimrefdiffimg` (PSF-matched difference),
-  which removes the static field; `sciimg` fallback where no
-  difference image exists, with a local background model and the
-  static-field veto delegated to the parallax-phase test.
-- Screening catalogs: per-frame `psfcat`, DR24 objects table. Catalog
-  absence is neither detection nor null (plan §3.4).
-- Parallax-phase test, offset-trajectory controls (8), effective-epoch
-  weight cap (20× median) and 1/z-uniform z-grid carried over from WISE
-  calibration v0.2.0.
-- Positive control: a numbered main-belt asteroid recovered through the
-  shift-and-stack code along its JPL ephemeris — new in this pilot.
-
-Specific thresholds are frozen in the run config when each stage is
-first executed.
-
-## Out of scope for this freeze
-
-Barycenter/planetary endpoints, swarms, off-axis infrastructure,
-inactive relics, duty cycle < 0.5, trailed sources, proprietary
-(gid 2/3) frames.
+1. **Statistic and null.** S(z, µ) over 192 × 5 × 5 nodes (uniform in
+   1/z, 1.85″ spacing, T0 = MJD 59800), single-epoch clip |S_e| ≤ 5
+   (the v1 layered-search rule), per-frame weight cap at 20 × the
+   band's median frame weight, nodes with < 5 epochs undefined. Local
+   threshold T from the 8 designated controls of a 48-offset ring
+   (20/30/40″ × 16 angles), R = S_max/T, R̃ = R/q95(ring); the ring is
+   the exchangeable null; the phase-coherence scramble and the
+   trajectory randomisation are per-cell annotations; cells with a
+   heavy-tailed (max > 2.5 q95) or radius-dependent ring are void.
+2. **Candidate rule.** R̃ ≥ R̃_FWER, the 95th percentile of 10,000
+   pseudo-experiment maxima over the family (α = 0.05), computed from
+   the family's null before any real R̃ is examined. BH q-values and
+   rank statements (48 controls, Wilson intervals) are reported.
+3. **Calibrated veto.** The flux-consistent catalogued static-source
+   / halo test against the ZTF DR objects snapshotted by v1 screening
+   (≥ 3 good observations, Moffat-vs-Gaussian radial response, factor 2
+   overall and in the dominant phase). The held-out-epoch prediction
+   test (refit on epochs ≤ MJD 60554 = 2024-09-01, forced photometry on
+   the last observing year) is an annotation with its measured rates,
+   not a veto (WISE v2.1 §8). All other rules are annotations.
+4. **Quality masks.** Primary: not `bad_quality` (infobits bit 25),
+   seeing ≤ 4″; strict: seeing ≤ 2.5″, maglimit ≥ 19.5, Moon
+   illumination ≤ 0.8; loose: v1 (all usable).
+5. **Completeness.** 400 image-level injections per cell (100 per
+   temporal model: persistent, flicker, visit-scale with a 5-day gap,
+   long block), Moffat(β = 3) at the frame's seeing added to the v1
+   hybrid search image before the matched filter (the science PSF in
+   the difference image is an approximation to injecting before
+   differencing; the asteroid control measures the chain on a real
+   mover), continuous z (log-uniform), µ on the L∞ box, cross-track
+   offsets from the propagated 99 % envelope, AB magnitude uniform on
+   [m90_v1 − 2, m90_v1 + 2], flat-Fν spectrum. Threshold and
+   final-candidate completeness with bootstrap 68 % intervals on 8
+   gap-free reciprocal-distance intervals; worst-of-four coverage.
+6. **Geometry.** sglseti Monte Carlo envelopes (N = 2,000, seed
+   20260822, 2018.5 / 2022.0 / 2025.5, z = 550 / 10,000 AU); the
+   cross-track dimension (3 or 5 offsets) where σ_xt,99 > 0.5 × 1.9″.
+7. **Hold-out.** Random corridor split stratified by the WISE
+   confusion class, seed 20260822, ≈ 30 % development / 70 %
+   confirmatory; the confirmatory set is analysed once.
+8. **Scope.** Targeted coverage of the 69-endpoint ZTF-visible subset
+   of the frozen portfolio; no population inference.

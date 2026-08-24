@@ -1,6 +1,6 @@
 """v2 engine: covariance envelopes and the cross-track decision
 (hypotheses §1.4 of each survey; WISE v2_plan §2). Same Monte Carlo as
-surveys/wise-v2/scripts/geometry_check.py with the profile's observer,
+surveys/wise/scripts/geometry_check.py with the profile's observer,
 epochs and per-band nominal PSF (threshold = xt_threshold_fwhm x the
 smallest band FWHM)."""
 

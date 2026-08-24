@@ -1,7 +1,7 @@
 ---
 title: "sgl-seti-survey — Project Plan"
 date: 2026-08-21
-status: "v0.7 — v2 programme steps 1–6 done: WISE, ZTF, PS1, joint and SPHEREx v2 under the frozen rule, all blind confirmatory runs with 0 candidates; next: step 7 (retire v1)"
+status: "v0.8 — v2 programme steps 1–7 done: all five surveys under the frozen rule (0 candidates in every blind confirmatory run); v1 retired 2026-08-24; next: step 8 (archive-family expansion on the v2 design)"
 tags:
   - SETI
   - technosignatures
@@ -202,6 +202,8 @@ distance, residual-motion, and signal-shape trials.
 
 ### 3.5 Pipeline B — beam-axis proximity
 
+Execution status and sequence: §11.
+
 Run `sglseti` crossing searches over each archive's actual temporal
 coverage rather than imposing a universal 1990 start. For every potentially
 relevant observation, record the minimum impact parameter during the
@@ -232,7 +234,7 @@ an observation constraining.
 | 9        | GALEX; Chandra/XMM/eROSITA/Swift; Fermi-LAT event products                                                                         | Opportunistic UV and high-energy coincidence and persistent-source tests                                                                             |
 | 10       | ESO/Keck and other spectral archives                                                                                               | Continuous or pulsed laser-line searches at the target and local corridor                                                                            |
 
-## 4. WISE/NEOWISE — shakedown and first survey (v1 complete; under revision, see §10)
+## 4. WISE/NEOWISE — shakedown and first survey (v1 — retired 2026-08-24, see §10 step 7; reports and scripts in git history)
 
 The first milestone — a completeness-calibrated end-to-end run of
 Pipeline A against the WISE merged L1b products — was executed
@@ -327,7 +329,7 @@ computation. **These findings apply, with the substitutions listed in
 `v2_plan.md` §12, to every v1 survey** — which is why §10 redoes them
 all.
 
-## 5. Second adapter: ZTF (active)
+## 5. Second adapter: ZTF (v1 — retired 2026-08-24, see §10 step 7)
 
 **Why ZTF second.** The plan's second adapter exists to stress the
 interfaces with a genuinely different archive and to open a physical
@@ -394,7 +396,7 @@ aware variance / ZOGY score images (≈1.5 mag headroom), per-corridor
 references for edge strips, fainter second control. Gap-graded (15) +
 invisible (15) corridors hand off to SPHEREx.
 
-## 6. Third adapter: SPHEREx (all 77 corridors surveyed)
+## 6. Third adapter: SPHEREx (v1 — retired 2026-08-24, see §10 step 7)
 
 SPHEREx quick-release data are served at IRSA (`spherex.obscore` TAP
 view, collections `spherex_qr2` and `spherex_qr2_deep`; QR1 rows are
@@ -476,7 +478,7 @@ a multi-extension spectral product and a wavelength-per-sample axis
 without changes to `base.py`; the flux scale is verified against
 catalogued stars to ≤ 0.2 mag before any depth is quoted.
 
-## 7. Fourth adapter: Pan-STARRS1 (pilot + 62-corridor survey complete — first non-IRSA archive)
+## 7. Fourth adapter: Pan-STARRS1 (v1 — retired 2026-08-24, see §10 step 7; first non-IRSA archive)
 
 Started 2026-08-20 while IRSA throughput was saturated by the ZTF
 scale-up and the SPHEREx pilot: PS1 DR2 warps (2009–2014, grizy,
@@ -570,7 +572,7 @@ CatWISE via VizieR for WISE; ≥ 3 catalog detections required).
 
 **TODO — three-archive and southern extension of the joint stage:**
 
-- *WISE into the joint stage.* PS1 + ZTF close only the reflected /
+- _WISE into the joint stage._ PS1 + ZTF close only the reflected /
   self-luminous optical cell; the thermal cell is WISE's, and the WISE
   batches already cover these corridors at both parallax phases
   (NEOWISE 6-month cadence). Adding WISE to `surveys/joint` gives a
@@ -579,7 +581,7 @@ CatWISE via VizieR for WISE; ≥ 3 catalog detections required).
   W1:W2 static-source veto act on the same records. Needs: WISE
   tensors on a common µ reference epoch (see above), Vega→AB and
   surface-brightness conventions reconciled in `vetting`/`joint`.
-- *Southern corridors.* 15 of 77 universal-list corridors lie below
+- _Southern corridors._ 15 of 77 universal-list corridors lie below
   δ = −30° (Lalande 21185, Ross 248, 61 Cyg, Struve 2398, Groombridge
   34, GJ 1221, GJ 338, GJ 625, GJ 687, GJ 251, σ Dra, HD 219134,
   Wolf 1069, GJ 3512, GJ 13157), unreachable by PS1 and ZTF, so the
@@ -676,7 +678,7 @@ CatWISE via VizieR for WISE; ≥ 3 catalog detections required).
   pilot through injection recovery and reporting~~ (done, §4); ~~ZTF as the
   second adapter via a 3-corridor pilot~~ (done, §5; scale-up running);
   ~~SPHEREx third via a 3-star pilot~~ (done, §6; all 15
-  ZTF-inaccessible corridors surveyed — `report/spherex_survey_v1.md`); ~~Pan-STARRS1 fourth via
+  ZTF-inaccessible corridors surveyed); ~~Pan-STARRS1 fourth via
   the ZTF pilot corridors, off MAST~~ (done, §7; started early because
   IRSA was saturated); ~~expand archive families only after the interfaces
   survive all four~~ → superseded by the v2 programme (§10): finish the
@@ -696,18 +698,27 @@ is `surveys/wise/v2_plan.md`; its §12 is the transfer table.
 
 ### 10.1 Sequence
 
-| Step | What | Exit condition |
-|---|---|---|
-| 1 | **Let the in-flight v1 runs finish**: SPHEREx northern run (62 corridors, frozen v3 rules, §6) and the joint PS1+ZTF common-T0 µ-grid calibration (§7). No new v1 rules or batches start. | both runs summarised under `surveys/{spherex,joint}/results/` and the v1 reports closed with their own "exploratory, pending v2" status note |
-| 2 | **Errata for the v1 reports.** WISE v3.1 (withdraws the four claims in `v2_plan.md` §0); the same relabelling — "FAR < 1/N" → rank statement, "90 %-complete exclusion" → threshold sensitivity, vetoes → heuristic review — for the ZTF, SPHEREx, PS1, and joint reports. | errata committed; no numbers recomputed |
-| 3 | **Shared-code modifications** (`v2_plan.md` §8.5): `records` fields, `photometry` injection seam, `vetting` flux-consistent static test + parallax-phase test, `geometry` per-epoch observer, new `inject`, `nulls` (promoted from ZTF `look_elsewhere.py`), `manifest`; promote `wise_corridors.py` out of `surveys/wise/` (ZTF/PS1/SPHEREx import it). All additive; v1 scripts keep running. `tests/` with the invariant tests. | tests green against v1 products; v1 pipelines unchanged in output |
-| 4 | **WISE v2 in `surveys/wise-v2/`** per `v2_plan.md` §10 (steps A–I): hypothesis v2.0 freeze with hold-out split → covariance + positive control → null ensemble → image-level injections → frozen rule on the development set → blind confirmatory run → `report/wise_survey_v4.md`. | v4 report built from the ledger; review findings 1–9 each closed or explicitly deferred |
-| 5 | **Retrospective**: update `v2_plan.md` §12 with what actually transferred, what cost more than planned, and any shared-code change forced by the WISE run. | §12 revised |
+| Step | What                                                                                                                                                                                                                                                                                                                                                                                                                               | Exit condition                                                                                                                               |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | **Let the in-flight v1 runs finish**: SPHEREx northern run (62 corridors, frozen v3 rules, §6) and the joint PS1+ZTF common-T0 µ-grid calibration (§7). No new v1 rules or batches start.                                                                                                                                                                                                                                          | both runs summarised under `surveys/{spherex,joint}/results/` and the v1 reports closed with their own "exploratory, pending v2" status note |
+| 2    | **Errata for the v1 reports.** WISE v3.1 (withdraws the four claims in `v2_plan.md` §0); the same relabelling — "FAR < 1/N" → rank statement, "90 %-complete exclusion" → threshold sensitivity, vetoes → heuristic review — for the ZTF, SPHEREx, PS1, and joint reports.                                                                                                                                                         | errata committed; no numbers recomputed                                                                                                      |
+| 3    | **Shared-code modifications** (`v2_plan.md` §8.5): `records` fields, `photometry` injection seam, `vetting` flux-consistent static test + parallax-phase test, `geometry` per-epoch observer, new `inject`, `nulls` (promoted from ZTF `look_elsewhere.py`), `manifest`; promote `wise_corridors.py` out of `surveys/wise/` (ZTF/PS1/SPHEREx import it). All additive; v1 scripts keep running. `tests/` with the invariant tests. | tests green against v1 products; v1 pipelines unchanged in output                                                                            |
+| 4    | **WISE v2 in `surveys/wise/`** per `v2_plan.md` §10 (steps A–I): hypothesis v2.0 freeze with hold-out split → covariance + positive control → null ensemble → image-level injections → frozen rule on the development set → blind confirmatory run → `report/wise_survey_v4.md`.                                                                                                                                                   | v4 report built from the ledger; review findings 1–9 each closed or explicitly deferred                                                      |
+| 5    | **Retrospective**: update `v2_plan.md` §12 with what actually transferred, what cost more than planned, and any shared-code change forced by the WISE run.                                                                                                                                                                                                                                                                         | §12 revised                                                                                                                                  |
 
-**Status 2026-08-22:** steps 1–5 done. Errata appended to all five v1 reports (WISE v3.1); shared code in `sglsurvey/` (`nulls`, `inject`, `manifest`, `corridors`, additive changes to `records`, `photometry`, `vetting`, `geometry`) with `tests/test_v2_invariants.py` green; WISE v2 in `surveys/wise-v2/` ran A–I under hypotheses v2.1 — 0 candidates on both the development (216 cells) and the blind confirmatory (488 cells) sets, `report/wise_survey_v4.md`; retrospective in `v2_plan.md` §12.1 (ring-only null, per-cell normalisation with heavy-tail exclusion, held-out test demoted to an annotation, ≈ 1.5 mag depth cost of family-wise error control, W4 pixel-scale erratum). Step 6 done 2026-08-23 via the survey-agnostic engine `sglsurvey/v2/` (profiles in `surveys/{ztf,panstarrs,spherex}-v2/`, joint in `surveys/joint-v2/`): blind confirmatory runs ZTF 228 cells / PS1 450 / joint 230 / SPHEREx (see `report/spherex_survey_v2.md`) — 0 candidates everywhere; reports `report/{ztf,ps1,joint_ps1_ztf,spherex}_survey_v2.md`; lessons in `v2_plan.md` §12.2 (static-source double counting in difference/template images, the single-epoch clip as a bright completeness limit, full-WCS sampling for SPHEREx). Step 7 next.
+**Status 2026-08-22:** steps 1–5 done. Errata appended to all five v1 reports (WISE v3.1); shared code in `sglsurvey/` (`nulls`, `inject`, `manifest`, `corridors`, additive changes to `records`, `photometry`, `vetting`, `geometry`) with `tests/test_v2_invariants.py` green; WISE v2 in `surveys/wise/` ran A–I under hypotheses v2.1 — 0 candidates on both the development (216 cells) and the blind confirmatory (488 cells) sets, `report/wise_survey_v4.md`; retrospective in `v2_plan.md` §12.1 (ring-only null, per-cell normalisation with heavy-tail exclusion, held-out test demoted to an annotation, ≈ 1.5 mag depth cost of family-wise error control, W4 pixel-scale erratum). Step 6 done 2026-08-23 via the survey-agnostic engine `sglsurvey/v2/` (profiles in `surveys/{ztf,panstarrs,spherex}-v2/`, joint in `surveys/joint/`): blind confirmatory runs ZTF 228 cells / PS1 450 / joint 230 / SPHEREx (see `report/spherex_survey_v2.md`) — 0 candidates everywhere; reports `report/{ztf,ps1,joint_ps1_ztf,spherex}_survey_v2.md`; lessons in `v2_plan.md` §12.2 (static-source double counting in difference/template images, the single-epoch clip as a bright completeness limit, full-WCS sampling for SPHEREx). Step 7 next.
 | 6 | **Other surveys v2**, in `surveys/{ztf,panstarrs,spherex,joint}-v2/`, in the order ZTF → PS1 → joint → SPHEREx (ZTF has the richest cadence and an existing positive control, so it validates the transfer fastest; the joint stage needs both optical v2s; SPHEREx last because its next quick release adds a parallax phase anyway). Each is a scaled-down `v2_plan`: reuse v1 discovery/precise/screen and cutouts, rebuild only null, injection, vetting, geometry check, manifests, report. | each v2 report built from its ledger |
 | 7 | **Retire v1.** Delete `surveys/{wise,ztf,panstarrs,spherex,joint}/` and `runs/<survey>/` products no longer referenced; rename each `*-v2` to the plain name; move v1 reports to `report/archive/`; remove stale references (README, this plan, `targets/` overlay builders, memory notes) and dead code paths in `sglsurvey/` kept only for v1 compatibility. v1 stays in git history. | `grep -r "wise-v2\|_v1\|v1_" ` clean except history notes; tests green |
-| 8 | Resume archive-family expansion (DECam south, three-archive joint) on the v2 design. | — |
+
+**Step 7 done 2026-08-24** (user amendment: v1 reports deleted rather than archived, and the final reports renamed to plain names — `wise_survey_v4.md` → `wise_survey.md`, etc.). What was done, and the deliberate deviations from the row above:
+
+- _Reports:_ only the five canonical reports remain (`report/README.md`); all pilots/v1–v3 reports and `report/figures/` deleted (git history).
+- _Surveys:_ each `*-v2` renamed to the plain name. Kept inside the renamed dirs, because they are still current or incorporated by reference: the discovery/precise/screen/fetch scripts (Pipeline A stages that v2 reuses and step 8 needs), corridor/targets overlay builders, per-archive `notes/`, the v1 hypotheses (as `hypotheses_v1.md`; the v2 freezes incorporate the physics cell by reference), `surveys/wise/{v2_plan.md,scientific_review.md}`, PS1's `purge_products.py` and SPHEREx's `static_template.py` (generators of kept products). Deleted: all v1 analysis scripts (sample_tensor, injection/forced-stack calibration, adjudicators, look_elsewhere, figures) and v1 `results/` summaries.
+- _Runs:_ v1 tensor products and superseded calibration runs deleted (~73 GB: all `calib_*/tensors`, `stack_v1`, SPHEREx `calib_v1–v3`); kept because still referenced — coarse/precise records, cutout products (rebuild inputs), screening records/snapshots (catalogue loaders + the ScreenMatch ledger), `m90_curves.npz` + `records/` of the final v1 calibrations (injection windows + supersession targets), PS1 `zeropoints.jsonl`, SPHEREx `calib_v4/templates`, ZTF `control_v1`. v2 products moved to `runs/<survey>/v2/`. SPHEREx supersession links re-derived against `calib_v4` (they had pointed at the deleted pilot-era `calib_v1` ledger; `supersedes` is outside the constraint identity hash).
+- _Code:_ v1-only vetting retired (`static_source_test` proximity veto and helpers); all path constants updated; every survey's ledger-driven report tables rebuild cleanly; tests green (the one v1-tensor regression test now skips, its input being deleted).
+- _Exit-criterion note:_ the stage directories keep their `coarse_v1` / `precise_v1` / `screen_v1` names — they are the still-current first versions of live stages that v2 reuses by design, not superseded analyses.
+- _Provenance note:_ the freeze files (`surveys/*/configs/v2_*freeze.json`) are kept byte-identical to the pre-registered versions — every AnalysisRun pins their hashes. The path-rename sweep edited the hypotheses documents after those freezes, so the `hypotheses_hash` values recorded in the freezes refer to the documents as of freeze time (git history), not the current files; future freezes hash `hypotheses_v1.md` for the v1 physics cell.
+  | 8 | Resume archive-family expansion (DECam south, three-archive joint) on the v2 design. | — |
 
 Rules during the programme: no v1 result is cited as an exclusion;
 nothing in a `-v2` directory may import from a v1 survey directory
@@ -740,7 +751,7 @@ Common to all (the review's findings 1, 2, 4, 5, 6, 9):
   `retained-ambiguous`, not vetoed by discretion.
 - **Covariance propagation** with an empirical envelope-vs-PSF check; a
   cross-track tensor dimension where the 99 % envelope exceeds half a
-  PSF. Optical PSFs (1–2″) make this test *stricter* than for WISE —
+  PSF. Optical PSFs (1–2″) make this test _stricter_ than for WISE —
   expect more PS1/ZTF endpoints to need the extra dimension.
 - **Hypothesis freeze with hold-out**: a random endpoint split
   stratified by confusion class (development vs confirmatory), seed in
@@ -758,21 +769,61 @@ Common to all (the review's findings 1, 2, 4, 5, 6, 9):
 
 Survey-specific:
 
-- *ZTF*: `look_elsewhere.py` becomes the shared `nulls` module; nightly
+- _ZTF_: `look_elsewhere.py` becomes the shared `nulls` module; nightly
   cadence supports all four temporal models; hold out the last
   observing year for the prediction test; per-quadrant PSF from the
-  sci header; diff-image injections must go into the *science* image
+  sci header; diff-image injections must go into the _science_ image
   before differencing, not into the diff.
-- *PS1*: cutouts are purged after tensoring (`purge_products.py`), so
+- _PS1_: cutouts are purged after tensoring (`purge_products.py`), so
   image-level injection re-fetches per batch as `run_common_t0.sh`
   does; single-phase cadence means visit-scale ≈ persistent and the
   phase test cannot carry weight — the joint stage supplies phases;
   per-skycell PSF; star-calibrated ZP already in place.
-- *SPHEREx*: 16 controls → same 1/17 problem; PSF cube already in the
+- _SPHEREx_: 16 controls → same 1/17 problem; PSF cube already in the
   product; inject an SED, not a magnitude (per-pixel wavelength);
   template-coverage and bright-static-neighbour rules become
   annotations / flux-consistent vetoes; northern-vs-southern run is the
   natural hold-out split; re-run when QR3 adds a phase.
-- *Joint*: inject the same physical source into all archives; colour
+- _Joint_: inject the same physical source into all archives; colour
   consistency 0.5–22 µm becomes a calibrated veto; WISE v2 tensors on
   the common T0 make the three-archive stage possible.
+
+## 11. Pipeline B — crossings surveys (started 2026-08-23)
+
+Execution of §3.5. The survey-independent geometry is computed once per
+observer class and each archive intersects it; hypotheses (beam radius,
+wavelength, duty cycle) are frozen per survey before any data are
+touched, with the v2 statistical discipline (frozen thresholds,
+dev/confirmatory splits, control-based exceedance budgets, injection
+completeness) inherited from §10.
+
+### 11.1 Completed
+
+| Step | What | Outcome |
+| ---- | ---- | ------- |
+| 1 | **Universal crossing list** (`sglsurvey/crossings.py` → `crossings/universal_v1/`, `xng-a09e2db7681d`). Every b(t) minimum for the 88-endpoint registry × both link directions, Earth-center observer, 1980→2028; no beam radii, no b cut; boundary minima flagged. | 16,586 events, 0 invalid; 960 with b < 0.01 AU; ~semiannual minima (annual, b ≈ 1 AU for the 5 ecliptic-pole targets) |
+| 2 | **ZTF crossings survey** (`surveys/ztf-crossings/`, report `report/ztf_crossings.md`). Channels: A = uplink interception at the star near opposition; B = downlink pre-lens interception at the antipode (z-track 550–10,000 AU); sunward combinations out of scope. Coverage intersect, saturation cut, threshold freeze v1.0 + dev-driven amendments v1.1 (parallax-factor systematics template, same-rung pseudo-windows) and v1.2 (empirical variance rescale), confirmatory run, stamp-response injection completeness. | **0 candidates.** 36 searchable units, 3 exceedances vs 4.0 expected control crossings, all adjudicated. Depths: B median m90 ≈ 21.8 (relay power ≳ ~130 W through the 2.5 R☉ solar cone during covered windows); A contrast-limited m90 ≈ 15.8–17.6 (10-m uplink ≳ 56–400 kW), wise-0855 empty field ≥ 22 |
+
+Lessons carried forward (details in the report): the crossing geometry
+phase-locks to the sidereal year, so wide-beam rungs have window ≈
+observing season and are constraint-only by construction — design
+narrow-rung-first for optical archives; blended on-star channels are
+systematics-dominated (PM dipole vs multi-year references, k factors
+10²–10⁴) and the template + rescale recipe is reusable; the antipode
+channel is the workhorse; the 1/9 exceedance budget behaved exactly as
+designed.
+
+### 11.2 Next steps
+
+| Step | What | Exit condition |
+| ---- | ---- | -------------- |
+| 3 | **PS1 crossings.** Intersect the universal list with the PS1 era (2010–2014: windows disjoint from ZTF's, extending the covered-window record backwards); reuse the MAST adapter and the ztf-crossings channel constructions; expect no i-band-only complications since PS1 grizy spans the same hypothesis range. | Frozen hypotheses + thresholds, confirmatory run, completeness, report |
+| 4 | **Spacecraft-observer crossing lists.** Derivative `crossings/` products with per-epoch spacecraft observers (WISE, SPHEREx, TESS; observer code already in `sglsurvey/geometry.py`) — the Earth-center list is invalid at b ≲ R☉ for L2/Earth-trailing observers. | Per-observer events tables with manifest parity to `universal_v1` |
+| 5 | **WISE crossings survey** on the derivative list: IR bands dodge the 532 nm-only constraint; NEOWISE cadence (~6-month visits) vs window durations decides which rungs are viable — check before freezing. | Same chain as step 2 |
+| 6 | **Joint crossings stage.** Cross-archive coincidence on shared covered windows (ZTF × PS1 × WISE), colour consistency as a calibrated veto, one ledger of covered windows per target per rung across all archives. | Unified covered-window ledger + joint report |
+| 7 | **Radio-scope decision** (§2 goals): whether corridor/crossing geometry products feed Breakthrough Listen / VLASS-class searches directly or stay geometry-only. | Decision recorded here |
+
+Universal-list caveats that gate later steps: impact-parameter
+uncertainty is not propagated (`sglseti.crossing_uncertainty` exists
+for per-event follow-up); the 2028 window end means yearly refresh runs
+as archives extend.

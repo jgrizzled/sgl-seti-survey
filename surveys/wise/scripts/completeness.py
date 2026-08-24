@@ -1,30 +1,64 @@
-"""v2 engine: completeness curves and Constraint records (profile-
-parameterised port of surveys/wise/scripts/completeness.py)."""
+"""Step E / G: completeness curves and Constraint records from the
+image-level injections (hypotheses v2.0 §4).
+
+Per cell and temporal model, each injection is classified with the
+set's frozen rule:
+
+  threshold-recovered   R~_peak = (S_peak / T) / q95_cell >= R~_FWER, where
+                        S_peak is the maximum within 2 z-nodes and 1
+                        mu-node of the injection;
+  final-candidate       threshold-recovered AND not rejected by a
+                        calibrated veto run blind on it: the flux-
+                        consistent static-source test (a catalogued
+                        star accounts for the injected peak) or the
+                        held-out-epoch prediction test (applicable
+                        when >= 5 late epochs exist).
+
+A logistic completeness model P(m, z) = 1 / (1 + exp((m - m50(z)) / w)),
+m50(z) = a + b (ln z - ln z_mid), is fitted per cell x model x kind by
+maximum likelihood; m90 and m50 per z-interval (8 reciprocal-distance
+intervals tiling 550-10,000 AU with no gap) come from the fit at the
+interval's log-midpoint with bootstrap 68 % intervals; the worst of
+the four temporal models defines the duty >= 0.5 coverage. Cells whose
+null is unstable, or with fewer than 20 usable injections per model,
+are `not_constrainable`. W3/W4 records carry completeness_kind =
+threshold only and exclusion_claim = false (hypotheses v2.0 §4).
+
+Writes runs/wise/v2/records/{analysis_run,constraint}.jsonl (append),
+runs/wise/v2/completeness/<set>_completeness.json, and the v1
+supersession links.
+
+Usage: uv run python surveys/wise/scripts/completeness.py --set dev|confirmatory
+"""
 
 from __future__ import annotations
 
+import argparse
 import json
 import subprocess
+import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
 import numpy as np
 
-from sglseti import canonical_json, load_target_registry, stable_id
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import v2common as C  # noqa: E402
 
-from sglsurvey.manifest import combined_hash
-from sglsurvey.records import AnalysisRun, Constraint, append_records, read_records
-from sglsurvey.vetting import holdout_prediction_test
+from sglseti import canonical_json, load_target_registry, stable_hash, stable_id  # noqa: E402
+from sglsurvey import inject, nulls  # noqa: E402
+from sglsurvey.manifest import combined_hash  # noqa: E402
+from sglsurvey.records import AnalysisRun, Constraint, append_records, read_records  # noqa: E402
+from sglsurvey.vetting import holdout_prediction_test  # noqa: E402
 
 MIN_INJ_PER_MODEL = 20
 N_BOOT = 200
 PIPELINE_VERSION = "2.0.0"
 
 
-
-def interval_edges(P) -> np.ndarray:
+def interval_edges(n_intervals: int = C.N_Z_INTERVALS) -> np.ndarray:
     """Reciprocal-distance midpoint edges tiling [550, 10000] (ascending z)."""
-    n_intervals = P.n_z_intervals
-    q = np.sort(1.0 / P.z_grid)           # ascending q = descending z
+    q = np.sort(1.0 / C.Z_GRID)           # ascending q = descending z
     blocks = np.array_split(np.arange(len(q)), n_intervals)
     edges_q = [q[0]] + [0.5 * (q[b[-1]] + q[b[-1] + 1]) for b in blocks[:-1]] + [q[-1]]
     z = np.sort(1.0 / np.array(edges_q))
@@ -32,7 +66,7 @@ def interval_edges(P) -> np.ndarray:
     return z
 
 
-def classify(P, inj: dict, mask: str, q95: float, r_fwer: float) -> dict:
+def classify(inj: dict, mask: str, q95: float, r_fwer: float) -> dict:
     r = inj["masks"].get(mask)
     out = {"threshold": False, "final": False, "veto": None, "usable": False}
     if not r or r.get("R_peak") is None or q95 is None or not np.isfinite(q95) or q95 <= 0:
@@ -52,7 +86,7 @@ def classify(P, inj: dict, mask: str, q95: float, r_fwer: float) -> dict:
     if h and h.get("S_late") is not None and h.get("f_late") is not None:
         res = holdout_prediction_test(h["S_early"], h["f_early"] if h["f_early"] is not None else np.nan,
                                       h["S_late"], h["f_late"], int(h["n_late"]),
-                                      P.holdout_min_s_late, P.holdout_min_flux_ratio)
+                                      C.HOLDOUT_MIN_S_LATE, C.HOLDOUT_MIN_FLUX_RATIO)
         if res.get("applicable"):
             out["holdout_pass"] = bool(res["pass"])   # annotation (v2.1): measured, not a veto
     out["veto"] = veto
@@ -100,34 +134,13 @@ def m_at(fit, lnz, lnz_mid, p):
     return a + b * (lnz - lnz_mid) - w * np.log(p / (1 - p))
 
 
-def single_epoch_clip_mag(P, d, band):
-    """Magnitude at which a source is clipped from the stack as a
-    single-epoch detection (|S_e| > clip_sigma) in a typical epoch of the
-    cell: ZP_REF - 2.5 log10(clip_sigma x median sigma_e at the mu = 0
-    nodes). None when the profile has no clip."""
-    if P.clip_sigma is None:
-        return None
-    b = P.band_idx[band]
-    eb = d["band_idx"] == b
-    v = d["v"][0, eb][:, :, len(P.mu_grid) // 2, len(P.mu_grid) // 2].astype(float)
-    sig = np.sqrt(v[np.isfinite(v) & (v > 0)])
-    if sig.size == 0:
-        return None
-    return float(P.zp_ref - 2.5 * np.log10(P.clip_sigma * np.median(sig)))
-
-
-def curves_for(P, injs: list[dict], cls: list[dict], kind: str, rng: np.random.Generator,
-               mag_min: float | None = None):
-    """m90/m50 per z-interval with bootstrap 68 % CIs, per temporal model.
-    ``mag_min``: the single-epoch clip limit — brighter injections are
-    clipped out of the stack by the layered-search rule (they belong to
-    the catalogue layer) and are excluded from the logistic fit."""
-    edges = interval_edges(P)
+def curves_for(injs: list[dict], cls: list[dict], kind: str, rng: np.random.Generator):
+    """m90/m50 per z-interval with bootstrap 68 % CIs, per temporal model."""
+    edges = interval_edges()
     lnz_mid = 0.5 * (np.log(550.0) + np.log(10000.0))
     out = {}
-    for model in P.temporal_models:
-        idx = [i for i, (j, c) in enumerate(zip(injs, cls)) if j["model"] == model and c["usable"]
-               and (mag_min is None or j["mag"] >= mag_min - 0.5)]
+    for model in C.TEMPORAL_MODELS:
+        idx = [i for i, (j, c) in enumerate(zip(injs, cls)) if j["model"] == model and c["usable"]]
         m = np.array([injs[i]["mag"] for i in idx])
         lnz = np.log(np.array([injs[i]["z_au"] for i in idx]))
         y = np.array([cls[i][kind] for i in idx], dtype=float)
@@ -149,11 +162,6 @@ def curves_for(P, injs: list[dict], cls: list[dict], kind: str, rng: np.random.G
             # a fit extrapolated outside the injected magnitude range is
             # not a measurement: report it as unconstrained
             lo_m, hi_m = m.min() - 3.0, m.max() + 3.0
-            if mag_min is not None:
-                # the stack cannot be 90 % complete brighter than the
-                # single-epoch clip: such a fit is an extrapolation into
-                # the catalogue layer's regime
-                lo_m = max(lo_m, mag_min - 0.5)
             if not (lo_m <= m90 <= hi_m):
                 m90 = np.nan
             if not (lo_m <= m50 <= hi_m):
@@ -184,36 +192,37 @@ def curves_for(P, injs: list[dict], cls: list[dict], kind: str, rng: np.random.G
     return out
 
 
-def run(P, set_name: str, mask: str = "primary") -> None:
-    freeze = P.load_freeze()
-    key = "development" if set_name == "dev" else "confirmatory"
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--set", choices=["dev", "confirmatory"], required=True)
+    ap.add_argument("--mask", default="primary")
+    a = ap.parse_args()
+    freeze = C.load_freeze()
+    key = "development" if a.set == "dev" else "confirmatory"
     endpoints = freeze["split"][key]["endpoints"]
-    ne = json.loads((P.null_dir / f"{set_name}_null_ensemble.json").read_text())[mask]
+    ne = json.loads((C.NULL_DIR / f"{a.set}_null_ensemble.json").read_text())[a.mask]
     r_fwer = ne["fwer"]["R_fwer"]
-    registry = load_target_registry(P.registry_path)
-    rng = np.random.default_rng(P.split_seed + 7)
+    registry = load_target_registry(C.REGISTRY_PATH)
+    rng = np.random.default_rng(C.SPLIT_SEED + 7)
     started = datetime.now(timezone.utc).isoformat()
-    # v1 constraints (latest run in the v1 ledger) for supersession links
+    # v1 constraints for supersession links
     v1 = {}
-    v1_path = P.v1_run_dir / P.extra_params.get("v1_calib", "calib_v1") / "records" / "constraint.jsonl"
+    v1_path = C.V1_CAL / "records" / "constraint.jsonl"
     if v1_path.exists():
-        recs = read_records(v1_path)
-        if recs:
-            last_run = recs[-1]["analysis_run_id"]
-            for r in recs:
-                if r["analysis_run_id"] == last_run:
-                    v1.setdefault((r["endpoint_id"], r["role"], r["band"]), []).append(r)
+        for r in read_records(v1_path):
+            if r["analysis_run_id"] == "run-1b2e86e9219e":
+                v1.setdefault((r["endpoint_id"], r["role"], r["band"]), []).append(r)
     results, input_hashes, constraints = {}, [], []
-    edges = interval_edges(P)
-    threshold_only = set(P.extra_params.get("threshold_only_bands", ()))
+    edges = interval_edges()
     for e in endpoints:
         for role in ("rx", "tx"):
-            p = P.inj_dir / f"{e}__{role}.json"
+            p = C.INJ_DIR / f"{e}__{role}.json"
             if not p.exists():
                 continue
             inj = json.loads(p.read_text())
             input_hashes.append(inj["tensor_input_hash"])
-            for vp in sorted(P.inj_dir.glob(f"{e}__{role}__xt*.json")):
+            # cross-track variants: the statistic is the max over offsets
+            for vp in sorted(C.INJ_DIR.glob(f"{e}__{role}__xt*.json")):
                 v = json.loads(vp.read_text())
                 for band, cell in v["cells"].items():
                     base = inj["cells"].get(band)
@@ -232,11 +241,9 @@ def run(P, set_name: str, mask: str = "primary") -> None:
                 cinfo = ne["cells"].get(ck)
                 q95 = cinfo["q95"] if cinfo else None
                 unstable = bool(cinfo and cinfo["null_unstable"])
-                cls = [classify(P, j, mask, q95, r_fwer) for j in cell["injections"]]
-                with np.load(P.tensor_dir / f"{e}__{role}.npz") as dten:
-                    m_clip = single_epoch_clip_mag(P, dten, band)
-                thr = curves_for(P, cell["injections"], cls, "threshold", rng, mag_min=m_clip)
-                fin = curves_for(P, cell["injections"], cls, "final", rng, mag_min=m_clip)
+                cls = [classify(j, a.mask, q95, r_fwer) for j in cell["injections"]]
+                thr = curves_for(cell["injections"], cls, "threshold", rng)
+                fin = curves_for(cell["injections"], cls, "final", rng)
                 n_us = sum(c["usable"] for c in cls)
                 vetoes = {}
                 hold_n = hold_pass = 0
@@ -246,12 +253,11 @@ def run(P, set_name: str, mask: str = "primary") -> None:
                     if c["threshold"] and c.get("holdout_pass") is not None:
                         hold_n += 1; hold_pass += c["holdout_pass"]
                 hold_by_model = {}
-                for model in P.temporal_models:
+                for model in C.TEMPORAL_MODELS:
                     sel = [c for j, c in zip(cell["injections"], cls) if j["model"] == model and c["threshold"] and c.get("holdout_pass") is not None]
                     hold_by_model[model] = {"n": len(sel), "pass": sum(c["holdout_pass"] for c in sel)}
                 results[ck] = {
-                    "n_injections": len(cls), "n_usable": n_us, "q95": q95, "T": cell["T"].get(mask),
-                    "bright_limit_mag": m_clip,
+                    "n_injections": len(cls), "n_usable": n_us, "q95": q95, "T": cell["T"].get(a.mask),
                     "null_unstable": unstable, "m90_v1": cell["m90_v1"],
                     "n_threshold": int(sum(c["threshold"] for c in cls)),
                     "n_final": int(sum(c["final"] for c in cls)), "vetoes_fired": vetoes,
@@ -259,8 +265,10 @@ def run(P, set_name: str, mask: str = "primary") -> None:
                     "resp_median": float(np.nanmedian([j["resp_median"] or np.nan for j in cell["injections"]])),
                     "threshold": thr, "final_candidate": fin,
                 }
+                # ---- Constraint records ------------------------------------
+                ep_range = None
                 for kind, curves in (("threshold", thr), ("final_candidate", fin)):
-                    if band in threshold_only and kind == "final_candidate":
+                    if band in ("W3", "W4") and kind == "final_candidate":
                         continue
                     for i in range(len(edges) - 1):
                         zint = (round(float(edges[i]), 1), round(float(edges[i + 1]), 1))
@@ -268,88 +276,96 @@ def run(P, set_name: str, mask: str = "primary") -> None:
                         for model, res in curves.items():
                             if res.get("status") == "ok" and res["intervals"][i]["m90"] is not None:
                                 per_model[model] = res["intervals"][i]
-                        worst = min(per_model, key=lambda k: per_model[k]["m90"]) if (per_model and not unstable) else None
+                        worst = None
+                        if per_model and not unstable:
+                            worst = min(per_model, key=lambda k: per_model[k]["m90"])
                         if worst is None:
-                            ckind, limit, ci = "not_constrainable", None, None
-                            n_inj = int(sum(res["intervals"][i]["n_injections"] for res in curves.values() if res.get("intervals")))
+                            ckind, limit, ci, n_inj = "not_constrainable", None, None, int(sum(
+                                res["intervals"][i]["n_injections"] for res in curves.values() if res.get("intervals")))
                             reason = "null_unstable" if unstable else "insufficient_recovery_fit"
                         else:
                             w = per_model[worst]
-                            ckind, reason = "recovery_curve", None
-                            limit = {"value": w["m90"], "unit": f"{P.mag_system}_mag", "band": band, "m50": w["m50"],
-                                     "fnu_jy_at_m90": P.fnu_from_mag(band, w["m90"]),
+                            ckind = "recovery_curve"
+                            limit = {"value": w["m90"], "unit": "wise_vega_mag", "band": band,
+                                     "m50": w["m50"],
+                                     "fnu_jy_at_m90": inject.fnu_from_vega_mag(band, w["m90"], C.SPECTRUM[band]),
                                      "worst_temporal_model": worst,
                                      "per_model_m90": {k: v["m90"] for k, v in per_model.items()}}
                             ci = w["m90_ci68"]
                             n_inj = int(sum(per_model[k]["n_injections"] for k in per_model))
+                            reason = None
                         sup = None
                         for r in v1.get((e, role, band), []):
                             lo, hi = r["z_interval_au"]
                             if lo < zint[1] and hi > zint[0]:
                                 sup = r["constraint_id"]; break
                         constraints.append(Constraint(
-                            constraint_id=stable_id("con", {"endpoint": e, "role": role, "band": band,
-                                                            "z_interval": list(zint), "kind": kind,
-                                                            "hypothesis": P.hypothesis_version,
-                                                            "freeze": freeze["freeze_content_hash"], "set": set_name}),
+                            constraint_id=stable_id("con", {
+                                "endpoint": e, "role": role, "band": band, "z_interval": list(zint),
+                                "kind": kind, "hypothesis": C.HYPOTHESIS_VERSION,
+                                "freeze": freeze["freeze_content_hash"], "set": a.set}),
                             analysis_run_id="pending", endpoint_id=e, role=role,
-                            hypothesis_version=P.hypothesis_version, z_interval_au=zint, band=band,
+                            hypothesis_version=C.HYPOTHESIS_VERSION, z_interval_au=zint, band=band,
                             epoch_range_mjd=(0.0, 0.0), duty_cycle_range=(0.5, 1.0),
                             residual_motion_bound_arcsec_per_yr=1.0,
-                            morphology=P.extra_params.get("psf", "point source"), kind=ckind,
+                            morphology="wise-empirical-prf-point-source", kind=ckind,
                             recovery_probability=0.9 if ckind == "recovery_curve" else None,
                             flux_limit=limit, false_alarm_rate=None,
-                            trials_accounting_ref=f"nulls/{set_name}_null_ensemble.json",
-                            extra={"set": set_name, "mask": mask, "R_fwer_norm": r_fwer, "q95": q95,
+                            trials_accounting_ref=f"nulls/{a.set}_null_ensemble.json",
+                            extra={"set": a.set, "mask": a.mask, "R_fwer_norm": r_fwer, "q95": q95,
                                    "exclusion_claim": bool(kind == "final_candidate" and ckind == "recovery_curve"),
                                    "not_constrainable_reason": reason,
-                                   "bright_limit_mag": m_clip,
-                                   "bright_limit_note": (None if m_clip is None else
-                                                         "sources brighter than this are single-epoch detections "
-                                                         "clipped from the stack (catalogue-screening layer)")},
+                                   "w34_note": ("raw threshold sensitivity, 300 K blackbody, empirical PRF; "
+                                                "no exclusion claim") if band in ("W3", "W4") else None},
                             completeness_kind=kind, ci_68=tuple(ci) if ci else None, n_injections=n_inj,
-                            prf_model=P.extra_params.get("psf", "unknown"), spectrum_model=P.spectrum.get(band),
+                            prf_model="irsa-pass2-psf-wpro-09x09", spectrum_model=C.SPECTRUM[band],
                             motion_bound_norm="linf", supersedes=sup))
+    # ---- AnalysisRun with real content hashes --------------------------------
     obs_hash = combined_hash(input_hashes)
-    config = {"pipeline_id": f"{P.name}-v2-completeness", "set": set_name, "mask": mask,
-              "freeze_hash": P.freeze_hash(), "freeze_content_hash": freeze["freeze_content_hash"],
+    config = {"pipeline_id": "wise-v2-completeness", "set": a.set, "mask": a.mask,
+              "freeze_hash": C.freeze_hash(), "freeze_content_hash": freeze["freeze_content_hash"],
               "R_fwer_norm": r_fwer, "parameters": freeze["parameters"]["injections"],
-              "recovery_rule": "R~_peak >= R~_FWER within the recovery window; final = and no calibrated veto",
+              "recovery_rule": "R~_peak >= R~_FWER within 2 z / 1 mu nodes; final = and no calibrated veto",
               "logistic_model": "P = 1/(1+exp((m - a - b(ln z - ln z_mid))/w)), MLE, bootstrap 200"}
     try:
-        commit = subprocess.run(["git", "-C", str(P.registry_path.parents[1].parent / "sglseti"), "rev-parse", "--short", "HEAD"],
+        commit = subprocess.run(["git", "-C", str(C.REPO.parent / "sglseti"), "rev-parse", "--short", "HEAD"],
                                 capture_output=True, text=True, timeout=10).stdout.strip()
     except Exception:
         commit = "unknown"
-    run_rec = AnalysisRun(
-        analysis_run_id=stable_id("run", {"config": json.loads(canonical_json(config)), "inputs": obs_hash,
-                                          "registry": registry.source_hash}),
-        pipeline_id=f"{P.name}-v2-completeness", pipeline_version=PIPELINE_VERSION, config=config,
+    run = AnalysisRun(
+        analysis_run_id=stable_id("run", {"config": json.loads(canonical_json(config)),
+                                          "inputs": obs_hash, "registry": registry.source_hash}),
+        pipeline_id="wise-v2-completeness", pipeline_version=PIPELINE_VERSION, config=config,
         observation_set_hash=obs_hash, intersection_set_hash=obs_hash,
-        registry_source_hash=registry.source_hash, hypothesis_version=P.hypothesis_version,
-        environment={"sglseti_commit": commit, "hypotheses_hash": freeze.get("hypotheses_hash")},
-        random_seeds={"bootstrap": P.split_seed + 7, "injections": "sha256(inj/endpoint/role/seed)"},
+        registry_source_hash=registry.source_hash, hypothesis_version=C.HYPOTHESIS_VERSION,
+        environment={"sglseti_commit": commit, "hypotheses_hash": freeze["hypotheses_hash"]},
+        random_seeds={"bootstrap": C.SPLIT_SEED + 7, "injections": "sha256(inj/endpoint/role/seed)"},
         started_utc=started, finished_utc=datetime.now(timezone.utc).isoformat(),
-        output_files={"completeness": f"completeness/{set_name}_completeness.json"})
-    constraints = [Constraint(**{**c.__dict__, "analysis_run_id": run_rec.analysis_run_id}) for c in constraints]
-    rec_dir = P.run_dir / "records"
-    append_records(rec_dir / "analysis_run.jsonl", [run_rec])
+        output_files={"completeness": f"completeness/{a.set}_completeness.json"})
+    constraints = [Constraint(**{**c.__dict__, "analysis_run_id": run.analysis_run_id}) for c in constraints]
+    rec_dir = C.RUN_DIR / "records"
+    append_records(rec_dir / "analysis_run.jsonl", [run])
     append_records(rec_dir / "constraint.jsonl", constraints)
-    (P.run_dir / "completeness").mkdir(parents=True, exist_ok=True)
+    (C.RUN_DIR / "completeness").mkdir(parents=True, exist_ok=True)
     summary = {
-        "set": set_name, "mask": mask, "analysis_run_id": run_rec.analysis_run_id, "R_fwer_norm": r_fwer,
+        "set": a.set, "mask": a.mask, "analysis_run_id": run.analysis_run_id, "R_fwer_norm": r_fwer,
         "n_cells": len(results), "n_constraints": len(constraints),
         "n_recovery_curve": sum(1 for c in constraints if c.kind == "recovery_curve"),
-        "median_m90": {b: {kind: (float(np.nanmedian([c.flux_limit["value"] for c in constraints
-                                                      if c.band == b and c.completeness_kind == kind and c.flux_limit]))
-                                  if any(c.band == b and c.completeness_kind == kind and c.flux_limit for c in constraints) else None)
-                           for kind in ("threshold", "final_candidate")} for b in P.bands},
+        "median_m90": {
+            b: {kind: (float(np.nanmedian([c.flux_limit["value"] for c in constraints
+                                           if c.band == b and c.completeness_kind == kind and c.flux_limit]))
+                       if any(c.band == b and c.completeness_kind == kind and c.flux_limit for c in constraints) else None)
+                for kind in ("threshold", "final_candidate")} for b in ("W1", "W2", "W3", "W4")},
         "vetoes_fired_total": {},
-        "median_prf_throughput": float(np.nanmedian([r["resp_median"] for r in results.values()])) if results else None,
+        "median_prf_throughput": float(np.nanmedian([r["resp_median"] for r in results.values()])),
     }
     for r in results.values():
         for k, v in r["vetoes_fired"].items():
             summary["vetoes_fired_total"][k] = summary["vetoes_fired_total"].get(k, 0) + v
-    (P.run_dir / "completeness" / f"{set_name}_completeness.json").write_text(
+    (C.RUN_DIR / "completeness" / f"{a.set}_completeness.json").write_text(
         json.dumps({"summary": summary, "cells": results}, indent=1, default=float))
     print(json.dumps(summary, indent=1, default=float))
+
+
+if __name__ == "__main__":
+    main()

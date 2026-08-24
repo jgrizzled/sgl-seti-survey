@@ -1,18 +1,12 @@
-"""Shared candidate-vetting helpers (plan §3.4 layer-1 screening applied
-to stack-layer exceedances).
+"""Shared vetting: the calibrated flux-consistent static-source / halo
+test, the parallax-phase and held-out-epoch annotations, catalogue
+loaders, and track-position utilities (v2 design; the v1 proximity-only
+``static_source_test`` was retired with the v1 surveys, 2026-08-24 —
+proximity alone is an annotation, see the survey hypotheses §3.7).
 
-The catalogued-static-source test: a background star sitting within a
-PSF width of the predicted track at the epochs that dominate a stack
-reproduces a high real-track S with a chance minor-phase S, and passed
-the automatic phase rules in 2 of 6 PS1 and 2 of 2 joint PS1+ZTF
-retained cells (2026-08-21). It is cheap (catalog cones are already
-snapshotted by each adapter's screening stage), deterministic, and
-belongs in every adapter's automatic candidate rules rather than in a
-manual stage-7 pass.
-
-Catalog loaders read the screening snapshots offline where they exist
-(PS1 DR2 ``mean``, ZTF DR24 ``objects``) and otherwise query CatWISE2020
-through VizieR (CDS, not IRSA), caching the response under the run dir.
+Catalog loaders read the v1 screening snapshots offline where they
+exist (PS1 DR2 ``mean``, ZTF DR objects) and otherwise query VizieR
+(CDS — CatWISE2020, 2MASS), caching responses under the run dir.
 """
 
 from __future__ import annotations
@@ -29,9 +23,6 @@ from astropy.time import Time
 
 from sglseti import Role, adaptive_locus
 
-#: Default test radius per archive, ~1 PSF FWHM.
-STATIC_RADIUS_ARCSEC = {"ps1": 2.0, "ztf": 2.5, "wise": 6.0, "spherex": 6.0}
-TEST_QUANTILES = (10, 50, 90)
 #: A catalog entry counts as a static source only with this many
 #: detections: single-detection "objects" are transients, artefacts or
 #: the very excess under test.
@@ -83,50 +74,6 @@ def track_position(ctx, target, role: str, z_au: float, mu: Sequence[float],
     return (ra0 + mu[0] * dt / 3600.0 / np.cos(np.deg2rad(dec0)),
             dec0 + mu[1] * dt / 3600.0)
 
-
-def static_source_test(ctx, target, role: str, z_au: float, mu: Sequence[float],
-                       t0_mjd: float, mjd: np.ndarray, phase: np.ndarray,
-                       catalog: StaticCatalog, radius_arcsec: float,
-                       quantiles: Sequence[int] = TEST_QUANTILES) -> dict:
-    """Nearest catalogued source to the track at the epoch quantiles of
-    each populated parallax phase. ``static`` is True when, at the phase
-    that carries the most epochs, a source lies within ``radius_arcsec``
-    at a majority of the test epochs — the signature of a background
-    star driving the stack."""
-    mjd, phase = np.asarray(mjd, float), np.asarray(phase)
-    per_phase = {}
-    for p in sorted(set(phase.tolist())):
-        sel = mjd[phase == p]
-        if len(sel) == 0:
-            continue
-        tests = []
-        for q in quantiles:
-            t = float(np.percentile(sel, q))
-            ra, dec = track_position(ctx, target, role, z_au, mu, t0_mjd, t)
-            near = catalog.nearest(ra, dec)
-            tests.append({"mjd": round(t, 2), "ra": ra, "dec": dec, "nearest": near})
-        per_phase[str(p)] = {"n_epochs": int(len(sel)), "tests": tests}
-    if not per_phase:
-        return {"static": False, "per_phase": {}, "radius_arcsec": radius_arcsec}
-    major = max(per_phase, key=lambda k: per_phase[k]["n_epochs"])
-    hits = [t["nearest"] for t in per_phase[major]["tests"]
-            if t["nearest"] and t["nearest"]["sep_arcsec"] < radius_arcsec]
-    static = len(hits) * 2 > len(per_phase[major]["tests"])
-    closest = min((t["nearest"]["sep_arcsec"] for t in per_phase[major]["tests"]
-                   if t["nearest"]), default=None)
-    return {"static": bool(static), "major_phase": major,
-            "closest_major_phase_arcsec": closest,
-            "hit": hits[0] if hits else None,
-            "radius_arcsec": radius_arcsec, "per_phase": per_phase}
-
-
-def static_reason(res: dict) -> str:
-    h = res["hit"] or {}
-    return (f"catalogued static source ({h.get('catalog')}) {h.get('sep_arcsec')}\" "
-            f"from the track at the major parallax phase"
-            + (f", mag {h['mag']}" if h.get("mag") is not None else "")
-            + (f", {h['ndet']} detections" if h.get("ndet") is not None else "")
-            + f" (< {res['radius_arcsec']}\" test radius)")
 
 
 # -- catalog loaders -----------------------------------------------------

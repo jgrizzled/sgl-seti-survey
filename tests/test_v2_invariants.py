@@ -17,7 +17,7 @@ from sglsurvey.photometry import (_gaussian_kernel, flux_map_from_arrays,
                                   matched_filter)
 
 REPO = Path(__file__).resolve().parents[1]
-PRF_DIR = REPO / "runs" / "wise-v2" / "prf"
+PRF_DIR = REPO / "runs" / "wise" / "v2" / "prf"
 V1_TENSORS = REPO / "runs" / "wise" / "calib_v1" / "tensors"
 
 

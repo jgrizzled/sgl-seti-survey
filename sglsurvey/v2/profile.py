@@ -9,7 +9,7 @@ FluxMap, what PSF to inject, which catalogue the static test uses,
 which observer, grids and zero points. Every numerical parameter of
 the decision rule lives on the profile and is hashed into the freeze.
 
-Differences from the WISE v2 scripts (surveys/wise-v2/scripts), which
+Differences from the WISE v2 scripts (surveys/wise/scripts), which
 remain the reference implementation for WISE:
 
 * the effective-epoch weight cap is per FRAME (WEIGHT_CAP x the band's

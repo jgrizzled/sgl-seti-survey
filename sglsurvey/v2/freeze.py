@@ -1,5 +1,5 @@
 """v2 engine: hypothesis freeze with the stratified corridor hold-out
-(same construction as surveys/wise-v2/scripts/freeze_v2.py). The split
+(same construction as surveys/wise/scripts/freeze_v2.py). The split
 is drawn per survey with the profile's seed over the corridors that
 have v1 tensors, stratified by the WISE confusion class (sky density
 is archive-independent), so that every survey's confirmatory set is

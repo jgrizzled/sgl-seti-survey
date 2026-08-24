@@ -1,28 +1,55 @@
-"""v2 engine: per-cell null ensembles, exchangeability, FWER threshold,
-rank statements, mask sensitivity (profile-parameterised port of
-surveys/wise/scripts/null_ensemble.py; same rule: ring-only pooled
-null, R~ = R/q95, heavy-tail and inner/outer-ring void flags)."""
+"""Step D (part 2) / step G: per-cell null ensembles, exchangeability,
+survey-wide FWER threshold, rank statements, mask sensitivity.
+
+Reads the per-trajectory summaries written by build_tensors.py for the
+cells of one hold-out set and, per cell (endpoint x role x band) under
+the primary quality mask:
+
+  R for the real trajectory and for every null trajectory (ring 48 with
+  leave-one-out for the designated controls, 50 trajectory-randomised,
+  200 phase-coherence scrambles where two phases are populated);
+  KS exchangeability between constructions; the pooled null; the
+  normaliser q95; the rank statement of the real R.
+
+Then the family-wide pseudo-experiment null of max R~ = R / q95 over
+the set's cells, R~_FWER at alpha = 0.05, the global p-value of every
+cell, BH q-values (informational), the list of candidate cells
+(R~ >= R~_FWER), and the held-out-epoch test's false-pass rate on null
+trajectories. The strict / loose masks are re-analysed the same way
+for the systematic spread (development set).
+
+The confirmatory set is analysed ONCE, blind: this script computes the
+threshold from the nulls before it looks at any real R, and writes
+both in one pass; it refuses to run on the confirmatory set if a
+previous confirmatory output exists (--force to override, which the
+report must then disclose).
+
+Usage: uv run python surveys/wise/scripts/null_ensemble.py --set dev|confirmatory
+"""
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
 
 import numpy as np
 
-from sglsurvey import nulls
-from sglsurvey.vetting import holdout_prediction_test
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import v2common as C  # noqa: E402
+
+from sglsurvey import nulls  # noqa: E402
+from sglsurvey.vetting import holdout_prediction_test  # noqa: E402
 
 MASKS = ("primary", "strict", "loose")
-
 F = {"S_max": 0, "iz": 1, "imu": 2, "S_phase0": 3, "S_phase1": 4, "n_epochs": 5, "top_share": 6}
 H = {"S_early": 0, "f_early": 1, "S_late": 2, "f_late": 3, "n_late": 4, "iz_early": 5, "imu_early": 6}
 
 
-def xt_variants(P, endpoint: str, role: str) -> list[Path]:
+def xt_variants(endpoint: str, role: str) -> list[Path]:
     """Cross-track tensor variants of a pair (hypotheses v2.0 §1.4)."""
-    return sorted(P.tensor_dir.glob(f"{endpoint}__{role}__xt*.npz"))
+    return sorted(C.TENSOR_DIR.glob(f"{endpoint}__{role}__xt*.npz"))
 
 
 def combine_xt(d, variants: list[Path]):
@@ -43,13 +70,13 @@ def combine_xt(d, variants: list[Path]):
     return out
 
 
-def cell_nulls(P, d, mi: int, bi: int, key: str, variants=()) -> nulls.CellNull | None:
+def cell_nulls(d, mi: int, bi: int, key: str, variants=()) -> nulls.CellNull | None:
     """Build the CellNull of one (mask, band) from a tensor file (and
     its cross-track variants, if any)."""
     dd = combine_xt(d, list(variants)) if variants else d
     summ = dd["summary"][mi, :, bi]          # (99, 7)
     smax = summ[:, F["S_max"]].astype(float)
-    if not np.isfinite(smax[0]) or d["n_epochs_ok"][mi, bi] < P.min_epochs:
+    if not np.isfinite(smax[0]) or d["n_epochs_ok"][mi, bi] < C.MIN_EPOCHS:
         return None
     designated = 1 + np.asarray(d["designated"])
     R, T = nulls.exceedance_ratios(smax, designated)
@@ -63,15 +90,15 @@ def cell_nulls(P, d, mi: int, bi: int, key: str, variants=()) -> nulls.CellNull 
     by = {"ring": ring[np.isfinite(ring)], "trajectory": donors[np.isfinite(donors)]}
     if two_phase:
         by["phase_scramble"] = scr[np.isfinite(scr)]
-    ks = nulls.ks_exchangeability(by, alpha=P.ks_alpha)
+    ks = nulls.ks_exchangeability(by, alpha=C.KS_ALPHA)
     # Stability (hypotheses v2.0 §3.5): the local null must not depend on
     # the offset radius — inner (20") vs outer (40") ring members.
-    n_ang = 16
+    n_ang = len(C.RING_ANGLES)
     inner, outer = ring[:n_ang], ring[2 * n_ang:3 * n_ang]
-    ks_ring = nulls.ks_exchangeability({"inner": inner, "outer": outer}, alpha=P.ks_alpha)
+    ks_ring = nulls.ks_exchangeability({"inner": inner, "outer": outer}, alpha=C.KS_ALPHA)
     ks["pairs"]["ring_inner|ring_outer"] = ks_ring["pairs"].get("inner|outer", {"D": None, "p": None})
-    q95 = float(np.quantile(by["ring"], P.norm_quantile)) if len(by["ring"]) else np.nan
-    heavy = bool(len(by["ring"]) and by["ring"].max() / q95 > P.heavy_tail_ratio)
+    q95 = float(np.quantile(by["ring"], C.NORM_QUANTILE)) if len(by["ring"]) else np.nan
+    heavy = bool(len(by["ring"]) and by["ring"].max() / q95 > C.HEAVY_TAIL_RATIO)
     unstable = bool(ks_ring["unstable"]) or heavy
     # The pooled (exchangeable) null is the spatial ring; the other two
     # constructions are reported as per-cell annotations (p_trajectory,
@@ -95,19 +122,19 @@ def cell_nulls(P, d, mi: int, bi: int, key: str, variants=()) -> nulls.CellNull 
     return cn
 
 
-def holdout_rates(P, cells: list) -> dict:
+def holdout_rates(cells: list) -> dict:
     """False-pass rate of the held-out-epoch test on null trajectories
     (all, and those above their cell's q95)."""
     n_all = n_pass = n_hi = n_hi_pass = 0
     for c in cells:
-        q = c.scale(P.norm_quantile)
+        q = c.scale(C.NORM_QUANTILE)
         for t in range(1, len(c.R_all)):
             h = c.hold[t]
             if not np.isfinite(h[H["S_late"]]):
                 continue
             res = holdout_prediction_test(h[H["S_early"]], h[H["f_early"]], h[H["S_late"]],
                                           h[H["f_late"]], int(h[H["n_late"]]),
-                                          P.holdout_min_s_late, P.holdout_min_flux_ratio)
+                                          C.HOLDOUT_MIN_S_LATE, C.HOLDOUT_MIN_FLUX_RATIO)
             if not res.get("applicable"):
                 continue
             n_all += 1
@@ -120,26 +147,26 @@ def holdout_rates(P, cells: list) -> dict:
             "n_above_q95": n_hi, "false_pass_rate_above_q95": n_hi_pass / n_hi if n_hi else None}
 
 
-def analyse(P, set_name: str, mask: str, endpoints: list[str], verbose: bool = True) -> dict:
+def analyse(set_name: str, mask: str, endpoints: list[str], verbose: bool = True) -> dict:
     mi = MASKS.index(mask)
     cells, missing = [], []
     for e in endpoints:
         for role in ("rx", "tx"):
-            p = P.tensor_dir / f"{e}__{role}.npz"
+            p = C.TENSOR_DIR / f"{e}__{role}.npz"
             if not p.exists():
                 missing.append(f"{e}__{role}")
                 continue
             d = np.load(p)
-            variants = xt_variants(P, e, role)
-            for bi in range(len(P.bands)):
-                key = f"{e}/{role}/{P.band_name[bi + 1]}"
-                cn = cell_nulls(P, d, mi, bi, key, variants)
+            variants = xt_variants(e, role)
+            for bi in range(4):
+                key = f"{e}/{role}/{C.BAND_NAME[bi + 1]}"
+                cn = cell_nulls(d, mi, bi, key, variants)
                 if cn is not None:
                     cells.append(cn)
             d.close()
     # family-wide threshold from the nulls alone (before any real R is used)
-    fw = nulls.fwer_threshold(cells, alpha=P.fwer_alpha, n_draws=P.n_pseudo,
-                              seed=P.split_seed, norm_quantile=P.norm_quantile)
+    fw = nulls.fwer_threshold(cells, alpha=C.FWER_ALPHA, n_draws=C.N_PSEUDO,
+                              seed=C.SPLIT_SEED, norm_quantile=C.NORM_QUANTILE)
     per_cell = {}
     pvals = {}
     for c in cells:
@@ -170,8 +197,8 @@ def analyse(P, set_name: str, mask: str, endpoints: list[str], verbose: bool = T
     n_unstable = sum(1 for c in cells if c.unstable)
     n_heavy = sum(1 for c in cells if c.heavy_tail)
     ks_phase_fail = sum(1 for c in cells if c.two_phase and any(
-        v["p"] is not None and v["p"] < P.ks_alpha for kk, v in c.ks["pairs"].items() if "phase" in kk))
-    ks_traj_fail = sum(1 for c in cells if (c.ks["pairs"].get("ring|trajectory") or {}).get("p", 1) < P.ks_alpha)
+        v["p"] is not None and v["p"] < C.KS_ALPHA for kk, v in c.ks["pairs"].items() if "phase" in kk))
+    ks_traj_fail = sum(1 for c in cells if (c.ks["pairs"].get("ring|trajectory") or {}).get("p", 1) < C.KS_ALPHA)
     out = {
         "set": set_name, "mask": mask, "n_endpoints": len(endpoints),
         "n_cells": len(cells), "missing_tensors": missing,
@@ -186,7 +213,7 @@ def analyse(P, set_name: str, mask: str, endpoints: list[str], verbose: bool = T
         "n_real_R_gt_1": int(sum(1 for c in cells if c.R_real > 1)),
         "expected_R_gt_1_from_ring": float(np.mean([
             (c.by_construction["ring"] > 1).mean() for c in cells]) * len(cells)),
-        "holdout_null_calibration": holdout_rates(P, cells),
+        "holdout_null_calibration": holdout_rates(cells),
         "cells": per_cell,
     }
     if verbose:
@@ -199,20 +226,25 @@ def analyse(P, set_name: str, mask: str, endpoints: list[str], verbose: bool = T
     return out
 
 
-def run(P, set_name: str, force: bool = False) -> None:
-    freeze = P.load_freeze()
-    key = "development" if set_name == "dev" else "confirmatory"
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--set", choices=["dev", "confirmatory"], required=True)
+    ap.add_argument("--force", action="store_true")
+    a = ap.parse_args()
+    freeze = C.load_freeze()
+    key = "development" if a.set == "dev" else "confirmatory"
     endpoints = freeze["split"][key]["endpoints"]
-    P.null_dir.mkdir(parents=True, exist_ok=True)
-    out_path = P.null_dir / f"{set_name}_null_ensemble.json"
-    if set_name == "confirmatory" and out_path.exists() and not force:
+    C.NULL_DIR.mkdir(parents=True, exist_ok=True)
+    out_path = C.NULL_DIR / f"{a.set}_null_ensemble.json"
+    if a.set == "confirmatory" and out_path.exists() and not a.force:
         raise SystemExit("confirmatory analysis already exists; it is run once (use --force "
                          "only with disclosure in the report)")
-    results = {"freeze_hash": P.freeze_hash(), "freeze_content_hash": freeze["freeze_content_hash"]}
-    masks = MASKS if set_name == "dev" else ("primary",)
+    results = {"freeze_hash": C.freeze_hash(), "freeze_content_hash": freeze["freeze_content_hash"]}
+    masks = MASKS if a.set == "dev" else ("primary",)
     for mask in masks:
-        results[mask] = analyse(P, set_name, mask, endpoints)
-    if set_name == "dev":
+        results[mask] = analyse(a.set, mask, endpoints)
+    if a.set == "dev":
+        # systematic spread between masks
         prim, strict, loose = (results[m]["cells"] for m in MASKS)
         common = set(prim) & set(strict) & set(loose)
         dR = {m: [results[m]["cells"][k]["R"] - prim[k]["R"] for k in common] for m in ("strict", "loose")}
@@ -220,9 +252,13 @@ def run(P, set_name: str, force: bool = False) -> None:
             "n_common_cells": len(common),
             "R_fwer": {m: results[m]["fwer"]["R_fwer"] for m in MASKS},
             "n_candidates": {m: results[m]["n_candidates"] for m in MASKS},
-            "delta_R_vs_primary": {m: ({"median": float(np.median(v)), "p16": float(np.percentile(v, 16)),
-                                        "p84": float(np.percentile(v, 84))} if v else None) for m, v in dR.items()},
+            "delta_R_vs_primary": {m: {"median": float(np.median(v)), "p16": float(np.percentile(v, 16)),
+                                       "p84": float(np.percentile(v, 84))} for m, v in dR.items()},
             "n_cells": {m: results[m]["n_cells"] for m in MASKS},
         }
     out_path.write_text(json.dumps(results, indent=1, default=float))
     print(f"wrote {out_path}")
+
+
+if __name__ == "__main__":
+    main()
