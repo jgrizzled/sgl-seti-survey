@@ -1,7 +1,7 @@
 # SGL SETI Survey
 
 Archival search for SGL SETI signals with the [sglseti](../sglseti) geometry
-engine. See `notes/project_plan.md` for the full plan.
+engine.
 
 ## Layout
 
@@ -25,8 +25,6 @@ both pipelines for a given archive.
 
 ## Current status
 
-Status (2026-08-24): the v2 programme is complete — WISE, ZTF,
-Pan-STARRS1, the joint PS1+ZTF stage and SPHEREx each searched under a
-frozen decision rule with a blind confirmatory hold-out (family-wise
-α = 0.05); **0 candidates** in every survey. Canonical reports:
-`report/{wise,ztf,ps1,spherex}_survey.md`, `report/joint_ps1_ztf.md`.
+Several archival searches are complete with zero candidates.
+
+See `notes/project_plan.md` for the survey status.

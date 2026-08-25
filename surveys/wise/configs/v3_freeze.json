@@ -1,0 +1,615 @@
+{
+ "freeze_content_hash": "sha256:14f681a3066567198b064ea810a5d551013b8411254d839d7693e65b1e030ec7",
+ "frozen_at": "2026-08-24",
+ "hypotheses_hash": "sha256:aa143692469c682d71c9538ef05fe8580565f3ec000ee728c96d63bd0133ac7c",
+ "hypothesis_version": "wise-v3.0-joint-conventions",
+ "joint_v2_freeze": "sha256:9bb5791ffe92b6afb095742b997503b18edf3cd919ac3bc856402f53b9e3c718",
+ "parameters": {
+  "bands": [
+   "W1",
+   "W2"
+  ],
+  "clip_sigma": null,
+  "designated_controls": [
+   0,
+   8,
+   16,
+   20,
+   24,
+   28,
+   32,
+   40
+  ],
+  "extra": {
+   "mu_grid_note": "9 nodes at 0.25\"/yr; PS1 5-node grid = [::2] subgrid",
+   "psf": "IRSA pass2 wise-w?-psf-wpro-09x09 (empirical PRF grid)",
+   "purpose": "joint v3 colour axis \u2014 not a standalone search",
+   "reused_v2_products": [
+    "observer",
+    "prf",
+    "geometry/covariance_envelopes.json"
+   ],
+   "vega_to_ab": {
+    "W1": 2.699,
+    "W2": 3.339
+   }
+  },
+  "fwer_alpha": 0.05,
+  "geometry": {
+   "mc_epochs_jyear": [
+    2010.0,
+    2017.0,
+    2024.0
+   ],
+   "mc_samples": 2000,
+   "mc_seed": 20260822,
+   "mc_z_au": [
+    550.0,
+    10000.0
+   ],
+   "observer": "wise-l1b-spacecraft (SUN2SC header table, runs/wise/v2/observer)",
+   "psf_fwhm_nominal": {
+    "W1": 6.1,
+    "W2": 6.4
+   },
+   "xt_threshold_fwhm": 0.5
+  },
+  "heavy_tail_ratio": 2.5,
+  "holdout": {
+   "is_veto": false,
+   "min_S_late": 3.0,
+   "min_flux_ratio": 0.3,
+   "split_mjd": 59579.0
+  },
+  "hypothesis_version": "wise-v3.0-joint-conventions",
+  "injections": {
+   "mag_halfwidth": 2.0,
+   "n_per_cell": 400,
+   "n_z_intervals": 8,
+   "recovery_window": [
+    2,
+    1
+   ],
+   "spectrum": {
+    "W1": "flat_fnu_ab",
+    "W2": "flat_fnu_ab"
+   },
+   "stamp_half_pix": 16,
+   "temporal_models": [
+    "persistent",
+    "flicker",
+    "visit",
+    "block"
+   ],
+   "visit_gap_days": 5.0
+  },
+  "ks_alpha": 0.01,
+  "locus_bin_days": 0.5,
+  "locus_tol_arcsec": 2.0,
+  "mag_system": "ab",
+  "min_epochs": 5,
+  "min_good_frac": 0.7,
+  "motion_bound_norm": "linf",
+  "mu_grid_arcsec_yr": [
+   -1.0,
+   -0.75,
+   -0.5,
+   -0.25,
+   0.0,
+   0.25,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "n_epoch_scramble_diagnostic": 50,
+  "n_phase_scramble": 200,
+  "n_pseudo_experiments": 10000,
+  "n_trajectory_donors": 50,
+  "norm_quantile": 0.95,
+  "pooled_null": "ring",
+  "quality_masks": {
+   "loose": {
+    "qual_frame_ne": 0
+   },
+   "primary": {
+    "qual_frame_gt": 0,
+    "qual_scan_ge_if_present": 5,
+    "saa_sep_gt": 0.0
+   },
+   "strict": {
+    "moon_sep_ge": 30.0,
+    "qual_frame_eq": 10,
+    "qual_scan_ge_if_present": 5,
+    "saa_sep_gt": 0.0
+   }
+  },
+  "ring_offsets_arcsec": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    18.477591,
+    7.653669
+   ],
+   [
+    14.142136,
+    14.142136
+   ],
+   [
+    7.653669,
+    18.477591
+   ],
+   [
+    0.0,
+    20.0
+   ],
+   [
+    -7.653669,
+    18.477591
+   ],
+   [
+    -14.142136,
+    14.142136
+   ],
+   [
+    -18.477591,
+    7.653669
+   ],
+   [
+    -20.0,
+    0.0
+   ],
+   [
+    -18.477591,
+    -7.653669
+   ],
+   [
+    -14.142136,
+    -14.142136
+   ],
+   [
+    -7.653669,
+    -18.477591
+   ],
+   [
+    -0.0,
+    -20.0
+   ],
+   [
+    7.653669,
+    -18.477591
+   ],
+   [
+    14.142136,
+    -14.142136
+   ],
+   [
+    18.477591,
+    -7.653669
+   ],
+   [
+    30.0,
+    0.0
+   ],
+   [
+    27.716386,
+    11.480503
+   ],
+   [
+    21.213203,
+    21.213203
+   ],
+   [
+    11.480503,
+    27.716386
+   ],
+   [
+    0.0,
+    30.0
+   ],
+   [
+    -11.480503,
+    27.716386
+   ],
+   [
+    -21.213203,
+    21.213203
+   ],
+   [
+    -27.716386,
+    11.480503
+   ],
+   [
+    -30.0,
+    0.0
+   ],
+   [
+    -27.716386,
+    -11.480503
+   ],
+   [
+    -21.213203,
+    -21.213203
+   ],
+   [
+    -11.480503,
+    -27.716386
+   ],
+   [
+    -0.0,
+    -30.0
+   ],
+   [
+    11.480503,
+    -27.716386
+   ],
+   [
+    21.213203,
+    -21.213203
+   ],
+   [
+    27.716386,
+    -11.480503
+   ],
+   [
+    40.0,
+    0.0
+   ],
+   [
+    36.955181,
+    15.307337
+   ],
+   [
+    28.284271,
+    28.284271
+   ],
+   [
+    15.307337,
+    36.955181
+   ],
+   [
+    0.0,
+    40.0
+   ],
+   [
+    -15.307337,
+    36.955181
+   ],
+   [
+    -28.284271,
+    28.284271
+   ],
+   [
+    -36.955181,
+    15.307337
+   ],
+   [
+    -40.0,
+    0.0
+   ],
+   [
+    -36.955181,
+    -15.307337
+   ],
+   [
+    -28.284271,
+    -28.284271
+   ],
+   [
+    -15.307337,
+    -36.955181
+   ],
+   [
+    -0.0,
+    -40.0
+   ],
+   [
+    15.307337,
+    -36.955181
+   ],
+   [
+    28.284271,
+    -28.284271
+   ],
+   [
+    36.955181,
+    -15.307337
+   ]
+  ],
+  "split": {
+   "dev_fraction": 0.3,
+   "forced_dev": [],
+   "seed": 20260822,
+   "strata": "confusion class",
+   "unit": "corridor"
+  },
+  "static_veto": {
+   "factor": 2.0,
+   "min_ndet": 3,
+   "search_arcsec": 30.0
+  },
+  "t0_mjd": 59800.0,
+  "weight_cap": {
+   "factor": 20.0,
+   "kind": "per-frame (band median frame weight)"
+  },
+  "z_grid": {
+   "max_au": 550.0,
+   "min_au": 10000.0,
+   "n": 64,
+   "spacing": "uniform in 1/z"
+  },
+  "zp_ref": 25.0
+ },
+ "purpose": "joint v3.0 conventions rebuild (T0 59800, AB ZP 25, W1/W2): tensor and injection inputs for surveys/joint/joint.py; no standalone WISE search or decision rule is defined by this freeze",
+ "split": {
+  "confirmatory": {
+   "corridors": [
+    "61vir",
+    "82eri",
+    "barnard",
+    "epseri",
+    "ezaqr",
+    "gj1002",
+    "gj1061",
+    "gj1087",
+    "gj1111",
+    "gj11547",
+    "gj2012",
+    "gj2066",
+    "gj293",
+    "gj318",
+    "gj367",
+    "gj514",
+    "gj518",
+    "gj526",
+    "gj54",
+    "gj581",
+    "gj588",
+    "gj66",
+    "gj667",
+    "gj674",
+    "gj783",
+    "gj784",
+    "gj832",
+    "gj876",
+    "gj908",
+    "gj915",
+    "gj9193",
+    "lacaille8760",
+    "lhs1723",
+    "lp145141",
+    "ltt1445",
+    "luyten",
+    "procyon",
+    "ross128",
+    "ross154",
+    "sirius",
+    "vanmaanen",
+    "wise0855"
+   ],
+   "endpoints": [
+    "61-vir",
+    "82-eri",
+    "barnard-star",
+    "eps-eri",
+    "ez-aqr",
+    "gj-1002",
+    "gj-1061",
+    "gj-1087",
+    "gj-1111",
+    "gj-11547",
+    "gj-2012",
+    "gj-2066",
+    "gj-293",
+    "gj-318",
+    "gj-367",
+    "gj-514",
+    "gj-518",
+    "gj-526",
+    "gj-54",
+    "gj-581",
+    "gj-588",
+    "gj-66-a",
+    "gj-66-b",
+    "gj-667-c",
+    "gj-674",
+    "gj-783",
+    "gj-784",
+    "gj-832",
+    "gj-876",
+    "gj-908",
+    "gj-915",
+    "gj-9193",
+    "lacaille-8760",
+    "lhs-1723",
+    "lp-145-141",
+    "ltt-1445-a",
+    "luyten-star",
+    "procyon-a",
+    "procyon-b",
+    "ross-128",
+    "ross-154",
+    "sirius-a",
+    "sirius-b",
+    "van-maanen",
+    "wise-0855"
+   ],
+   "n_corridors": 42,
+   "n_endpoints": 45
+  },
+  "confusion_class": {
+   "61vir": "low",
+   "82eri": "mid",
+   "alphacen": "high+bright-star",
+   "barnard": "mid",
+   "epseri": "mid",
+   "epsind": "low",
+   "ezaqr": "mid",
+   "fomalhaut": "low",
+   "gj1002": "low",
+   "gj1061": "mid",
+   "gj1087": "high",
+   "gj11068": "high",
+   "gj1111": "mid+bright-star",
+   "gj11547": "mid",
+   "gj12724": "mid",
+   "gj1276": "low",
+   "gj2012": "low",
+   "gj2066": "high+bright-star",
+   "gj229": "high",
+   "gj293": "mid",
+   "gj3112": "mid",
+   "gj318": "high",
+   "gj3306": "mid",
+   "gj367": "high+bright-star",
+   "gj514": "low",
+   "gj518": "low",
+   "gj526": "low",
+   "gj54": "low",
+   "gj581": "low",
+   "gj588": "mid+bright-star",
+   "gj65": "low",
+   "gj66": "mid",
+   "gj667": "high+bright-star",
+   "gj674": "high",
+   "gj682": "high",
+   "gj783": "low",
+   "gj784": "low",
+   "gj832": "low",
+   "gj876": "low",
+   "gj908": "low",
+   "gj915": "low",
+   "gj9193": "high",
+   "kapteyn": "mid+bright-star",
+   "lacaille8760": "low",
+   "lacaille9352": "mid",
+   "lhs1723": "mid",
+   "lp145141": "high",
+   "ltt1445": "mid",
+   "luhman16": "high",
+   "luyten": "high",
+   "procyon": "high",
+   "proxima": "high+bright-star",
+   "ross128": "low",
+   "ross154": "mid",
+   "sirius": "high",
+   "taucet": "low",
+   "teegarden": "low",
+   "vanmaanen": "low",
+   "wise0855": "mid",
+   "wolf1061": "mid",
+   "wolf359": "low",
+   "wolf437": "low"
+  },
+  "dev_fraction": 0.3,
+  "development": {
+   "corridors": [
+    "alphacen",
+    "epsind",
+    "fomalhaut",
+    "gj11068",
+    "gj12724",
+    "gj1276",
+    "gj229",
+    "gj3112",
+    "gj3306",
+    "gj65",
+    "gj682",
+    "kapteyn",
+    "lacaille9352",
+    "luhman16",
+    "proxima",
+    "taucet",
+    "teegarden",
+    "wolf1061",
+    "wolf359",
+    "wolf437"
+   ],
+   "endpoints": [
+    "alpha-cen-a",
+    "alpha-cen-b",
+    "eps-ind-a",
+    "eps-ind-b",
+    "fomalhaut",
+    "gj-11068",
+    "gj-12724",
+    "gj-1276",
+    "gj-229-a",
+    "gj-3112",
+    "gj-3306",
+    "gj-682",
+    "gj65-a",
+    "gj65-b",
+    "kapteyn-star",
+    "lacaille-9352",
+    "luhman16-a",
+    "luhman16-b",
+    "proxima-cen",
+    "tau-cet",
+    "teegarden",
+    "wolf-1061",
+    "wolf-359",
+    "wolf-437"
+   ],
+   "n_corridors": 20,
+   "n_endpoints": 24
+  },
+  "seed": 20260822,
+  "strata": {
+   "high": {
+    "dev": [
+     "gj11068",
+     "gj229",
+     "gj682",
+     "luhman16"
+    ],
+    "n_corridors": 12,
+    "n_dev": 4
+   },
+   "high+bright-star": {
+    "dev": [
+     "alphacen",
+     "proxima"
+    ],
+    "n_corridors": 5,
+    "n_dev": 2
+   },
+   "low": {
+    "dev": [
+     "epsind",
+     "fomalhaut",
+     "gj1276",
+     "gj65",
+     "taucet",
+     "teegarden",
+     "wolf359",
+     "wolf437"
+    ],
+    "n_corridors": 25,
+    "n_dev": 8
+   },
+   "mid": {
+    "dev": [
+     "gj12724",
+     "gj3112",
+     "gj3306",
+     "lacaille9352",
+     "wolf1061"
+    ],
+    "n_corridors": 17,
+    "n_dev": 5
+   },
+   "mid+bright-star": {
+    "dev": [
+     "kapteyn"
+    ],
+    "n_corridors": 3,
+    "n_dev": 1
+   }
+  }
+ },
+ "standalone_wise_v2_freeze": "sha256:468014e258dd185f449a10a318ab0a681484d4a55806ca3fd3ed89ea4d07bbf2",
+ "survey": "wise"
+}

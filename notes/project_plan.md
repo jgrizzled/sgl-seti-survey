@@ -1,7 +1,7 @@
 ---
 title: "sgl-seti-survey — Project Plan"
 date: 2026-08-21
-status: "v1.1 — Pipeline A (§4): all six surveys complete on the v2 design (WISE, ZTF, SPHEREx, PS1, joint, DECam), 0 candidates everywhere; Pipeline B (§5): programme closed 0 candidates, TESS in flight (§5.6), expansion queue §5.8. Execution record: notes/project_history.md; lessons: notes/learnings.md"
+status: "v1.2 — Pipeline A (§4): all six surveys complete on the v2 design (WISE, ZTF, SPHEREx, PS1, joint, DECam), 0 candidates everywhere; Pipeline B (§5): programme closed 0 candidates incl. TESS (§5.6, complete 2026-08-24); expansion queue §5.8 next item: ATLAS/ASAS-SN. Execution record: notes/project_history.md; lessons: notes/learnings.md"
 tags:
   - SETI
   - technosignatures
@@ -234,7 +234,7 @@ an observation constraining.
 | 4        | Rubin/LSST, Pan-STARRS, DECam/NOIRLab, ATLAS, Catalina, SkyMapper, HSC/CFHT                                                        | **PS1 (§4.4) and DECam (§4.6) done.** Multi-epoch optical detections and image-level shift-and-stack; Rubin is now a current source (§6)       |
 | 5        | IRAS, AKARI, Herschel, Planck, Spitzer; 2MASS and photographic plates such as POSS/DASCH                                           | Longer-wavelength thermal tests and long time baselines; some require spacecraft observers or older target solutions                           |
 | 6        | Breakthrough Listen; VLA/VLASS/COSMIC; RACS/EMU, LoTSS, GLEAM, NVSS/SUMSS; suitable ALMA/MeerKAT data                              | **Geometry-only decision (§5.5).** Local traffic, narrowband or broadband signals, and wide-field radio coverage of antipodal corridors |
-| 7        | TESS FFIs, Kepler/K2, and other high-cadence imaging                                                                               | **TESS crossings in flight (§5.6).** Time-domain searches of corridors and crossing events, with interval-aware spacecraft geometry            |
+| 7        | TESS FFIs, Kepler/K2, and other high-cadence imaging                                                                               | **TESS crossings done (§5.6).** Time-domain searches of corridors and crossing events, with interval-aware spacecraft geometry                 |
 | 8        | MPC isolated observations and tracklets, JPL/MPC known-object ephemerides, survey reject tables                                    | Candidate and veto inputs; not a complete search because 550–10,000 AU reflex rates may fall below ordinary intra-night tracklet thresholds    |
 | 9        | GALEX; Chandra/XMM/eROSITA/Swift; Fermi-LAT event products                                                                         | Opportunistic UV and high-energy coincidence and persistent-source tests                                                                       |
 | 10       | ESO/Keck and other spectral archives                                                                                               | Continuous or pulsed laser-line searches at the target and local corridor                                                                      |
@@ -265,9 +265,9 @@ an exclusion; every hypothesis freeze is a new version with a declared
 hold-out before any script touches its confirmatory set; each survey's
 frozen decision rule lives in its own `hypotheses.md`.
 
-**Open items:** the three-archive joint stage (WISE tensors on the
-common µ reference epoch; Vega→AB and surface-brightness conventions
-reconciled; 0.5–22 µm colour consistency as a calibrated veto);
+**Open items:** ~~the three-archive joint stage~~ — **done 2026-08-25
+as joint v3.0** (§4.5: 0 candidates blind; the stack-regime asteroid
+control also closed, `notes/learnings.md` §10 item 1);
 SPHEREx re-run per quick release (QR3 adds a true parallax-phase
 hold-out); the stack-regime positive controls and template refits
 listed in `notes/learnings.md` §10; Rubin and Gaia DR4 (§6).
@@ -343,10 +343,22 @@ the common trajectory and µ reference epoch (`surveys/joint/`),
 supplying the parallax phases PS1 alone lacks (321 of 414 cells
 both-phase) and a cross-archive persistence test over 2009–2026.
 
-**Status.** Complete — v1 2026-08-21, v2 rerun 2026-08-23. Report
-`report/joint_ps1_ztf.md`; narrative
-`notes/project_history.md` §4. Extension to three archives (adding
-WISE) is the leading open item (§4 lead).
+**Status.** Complete — v1 2026-08-21, v2 rerun 2026-08-23, **v3
+(three archives, adding the WISE W1/W2 colour axis) 2026-08-24 → 25**:
+freeze v3.0 with the optical statistic unchanged; WISE
+joint-conventions tensor rebuild (T0 59800, AB ZP 25,
+`surveys/wise/profile.py` → `runs/wise/v3/`); three-archive
+same-source injections; the colour-consistency test as a calibrated
+veto; plus the stack-regime asteroid positive control (220000) through
+the per-archive and joint chains. Report `report/joint_ps1_ztf.md`;
+narrative `notes/project_history.md` §§4, 8.
+
+**Result (v3).** **0 candidates** (blind confirmatory 45 endpoints /
+230 cells, R̃_FWER 1.778) — optical numbers bit-identical to v2; all
+230 cells W1/W2-annotated, 0 would-fire colour vetoes, measured
+false-veto rate 0 in the fitted population (5/46,302 raw, all above
+the optical bright limit); control recovered in all three joint
+families (R̃ 2.21/3.04/1.77 vs threshold 1.54).
 
 **Result.** **0 candidates** (v2 confirmatory 230 cells), including
 the PS1 marginal cells vetoed by direct ZTF forced photometry.
@@ -480,17 +492,28 @@ b = 1.04 R☉; two complete near-grazing channel-A windows). The era's
 two deepest grazes (van-maanen 0.078 R☉, gj-1276 0.49 R☉) fell
 between sectors and stay open.
 
-**Status.** **In flight** — coverage gate passed, threshold freeze
-v1.1 and dev stage done (channel A constraint-only; 6 confirmatory B
-units, 12 trials); next: confirmatory B → completeness (SPOC PRF, two
-temporal models) → report. Execution log
+**Status.** Complete — coverage gate through blind confirmatory,
+completeness (SPOC PRF, both temporal models) and report, 2026-08-24.
+Report `report/tess_crossings.md`; execution log
 `notes/project_history.md` §7.
 
-**Result.** Pending the blind confirmatory run.
+**Result.** **0 candidates** (6 confirmatory B units × 2 statistics).
+The pulse-period cell closes clean on both resolved grazing crossings
+— the first constraint of its kind (≥1-cadence pulses ≳ 2 kW through
+the 1.2 R☉ cone); persistent chord limits ~0.6–4 kW through the
+grazing cones. Chord statistic systematics-dominated (design lesson:
+v2 needs a detrending layer); 1 vetoed exceedance, 1 budget-absorbed,
+1 retained-ambiguous (teegarden 0.1 AU — recurrence at a future
+ecliptic sector is the designated follow-up).
 
 ### 5.7 Standing maintenance
 
 Yearly crossing-list refresh (the 2028 window end) as archives extend;
+fold the TESS rows into the covered-window ledger at that refresh
+(report `tess_crossings.md` §6 enumerates them; the joint-stage v1
+ledger predates TESS and stays as pre-registered) and re-run the
+teegarden 0.1 AU recurrence test when a future ecliptic sector covers
+the target;
 revisit SPHEREx crossings when 3+ annual windows exist per target
 (decision 2026-08-24: Gates I+II apply and the 1.5-yr archive is too
 thin); re-run the radio intersection if BL's MeerKAT holdings reach
@@ -504,14 +527,15 @@ for per-event follow-up).
 
 Datasets adopted from the 2026-08-24 archive brainstorm, ordered by
 which structurally open cell (`report/joint_crossings.md` §3) each
-opens and by adapter cost. TESS (§5.6) is the queue's first item and
-is in flight. Access details below marked _unprobed_ are from general
+opens and by adapter cost. TESS (§5.6) — the queue's first item — is
+complete; item 2 (ATLAS + ASAS-SN) is next. Access details below
+marked _unprobed_ are from general
 knowledge, not verified endpoints — each item starts with a
 DECam-style reachability recon before any freeze.
 
 | #   | Dataset                                                           | Open cell / rationale                                                                                                                                                                                                                                                                          | Access route (status)                                                                          |
 | --- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| 1   | **TESS FFIs**                                                     | Pulse periods between exposure and window length; first resolved crossing light curves                                                                                                                                                                                                         | In flight (§5.6), consuming `crossings/tess_v1`                                                |
+| 1   | **TESS FFIs**                                                     | Pulse periods between exposure and window length; first resolved crossing light curves                                                                                                                                                                                                         | **Done (§5.6)** — 0 candidates, pulse cell closed clean                                        |
 | 2   | **ATLAS forced photometry + ASAS-SN Sky Patrol**                  | Window _coverage fraction_ — nightly/quad-nightly all-sky cadence (ATLAS δ > −50°, o/c ~19.5, 2015–; ASAS-SN all-sky, g/V ~18, 2012–) incl. southern targets ZTF never sees; duty-cycle/flare-beacon rung, not depth                                                                           | Public forced-photometry APIs at arbitrary positions — no image handling (_unprobed_)          |
 | 3   | **PTF/iPTF (2009–2016)**                                          | Fills the PS1-era → ZTF-era temporal gap in the north with difference-imaging-era data (R ~20.5–21)                                                                                                                                                                                            | IRSA IBE `ptf/products/` — same machinery as `irsa_ztf.py`, adapter mostly config (_unprobed_) |
 | 4   | **GALEX time-tagged photons (gPhoton, 2003–2013)**                | Pulse-period cell in the UV, in an era predating everything but PS1; 5 ms photon time-stamps, light curves at arbitrary positions                                                                                                                                                              | gPhoton photon database via MAST (_unprobed_)                                                  |

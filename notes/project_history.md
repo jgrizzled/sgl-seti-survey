@@ -494,7 +494,7 @@ live in `report/`.
 
 Lessons carried forward: `notes/learnings.md` §8.
 
-## 7. TESS crossings survey — execution log (2026-08-24; in flight)
+## 7. TESS crossings survey — execution log (2026-08-24; complete)
 
 Reopened 2026-08-24 as the first item of the crossings
 archive-expansion queue (plan §5.8). The coverage gate
@@ -543,5 +543,119 @@ the shape test; same sector-end cadences as its vetoed sibling;
 recurrence requires a future ecliptic sector — the designated
 follow-up). Design lesson recorded: an undetrended chord statistic
 saturates its error budget with drift — a v2 needs a differential/
-detrending layer. Remaining: completeness (both temporal models) +
-`report/tess_crossings.md`.
+detrending layer.
+
+Completeness 2026-08-24 (`results/completeness_v1.json`,
+`scripts/completeness_v1.py`): exact stamp-response injections with
+the SPOC per-camera/CCD PRF (4 files fetched from
+archive.stsci.edu/missions/tess/models/prf_fitsfiles, nearest grid
+point to each cutout's CCD position, sha-recorded under
+`runs/tess-crossings/products/prf/`) through the identical kernel
+chain; 200 draws per unit per temporal model (d = 1 chord and
+d = 0.1 boxcar on the frozen per-unit period grids), magnitude grid
+T 10–18, recovery against each unit's actual frozen thresholds, full
+2 × 2 model × statistic recovery matrices. Finding C1 (flux scale
+only, no statistic touched): the dev-stage zp_check used a hardcoded
+1.5 px kernel where the freeze requires the identical per-cube
+kernel — re-measured through the unit kernel with injection
+responses normalized at the calibration reference. Wolf-359
+unit-kernel ZP 20.80 (scatter 0.112, pass); teegarden s91 20.03
+(scatter 0.493, FAILs the 0.2 gate → declared ±0.5 mag scale caveat).
+Depths (natural pairing): wolf-359 chord ≥ 18.0 grid-censored at
+1.2/2.5 R☉ (0.1 AU 15.2, star-contaminated control), pulse
+16.5/16.3/12.1; teegarden chord 17.5/17.6/≥ 18.0, pulse
+14.8/14.7/14.9; A reference rows (S = 5, threshold-free) chord
+≥ 18.0, pulse 14.1 (teegarden) / 13.2 (van-maanen, ±0.3). Pulse
+recovery plateaus 0.93–0.98 at all brightnesses — real duty-cycle
+miss probability (a d = 0.1 train can land entirely in
+straylight-masked cadences), included in the curves. Physics:
+persistent downlink through the grazing cones excluded above
+~0.6–4 kW during the resolved crossings; first pulse-cell limits
+~2 kW / 1.3 MJ per ≥ 1-cadence pulse (wolf-359 1.2 R☉).
+
+Survey report `report/tess_crossings.md` written 2026-08-24 —
+**TESS crossings survey COMPLETE, 0 candidates**; the teegarden
+0.1 AU retained-ambiguous row awaits future-ecliptic-sector
+recurrence (plan §5.7 maintenance, alongside folding the TESS rows
+into the covered-window ledger at the next refresh). Queue item 2
+(ATLAS + ASAS-SN) is next.
+
+## 8. Joint Pipeline A v3 — WISE colour axis (2026-08-24; frozen, in flight)
+
+The plan §4 leading open item executed up to its freeze, in place in
+`surveys/joint/`. (a) **WISE engine port**: `surveys/wise/profile.py`
++ `run.py` bind the flattened engine to the v1 WISE inputs under the
+joint conventions — T0 = 59800 (v2 tensors at 57800 cannot be
+relabelled), AB on ZP 25 via frame Vega MAGZP + Vega→AB offsets (W1
++2.699 / W2 +3.339; a flat-Fν source now has equal tensor flux in
+every band of every archive), 9-node µ grid (0.25″/yr; PS1 grid =
+[::2] subgrid — the PS1 T0 under-sampling lesson applied), W1/W2
+only; v2 observer table, PRF grids and covariance envelopes reused.
+Full rebuild: 146 tensors / 69 endpoints / 62 corridors in ~1.3 h on
+7 workers, zero failures. (b) **`joint.py` generalised in place** (v3,
+`runs/joint/v3/`): optical statistic and family byte-unchanged from
+v2; added per-cell W1/W2 annotations at the joint node, the
+colour-consistency veto — deficit D_b = (f_pred − f_w)/√(σ_w²+σ_pred²)
+≥ 5 in every usable W band, σ_w = max(1/√B, ring MAD) so the empirical
+confusion floor caps the significance — charged to the final-candidate
+curve, and a `wise-inject` stage running the WISE injection chain once
+per optical band family with the family's exact PS1/ZTF union window.
+Verified on wolf-359: all 400 W1 draws pair bit-exactly (z, mag, µ,
+model) with the frozen ZTF zg injection products — the j-th injection
+is one physical source in all three archives with no change to the
+frozen optical products. (c) **Freezes before any confirmatory
+product**: `surveys/joint/hypotheses.md` v3.0 (self-contained) +
+`configs/v3_freeze.json` (sha256:bb68869c…, superseding v2
+9bb5791f…); WISE operational freeze `surveys/wise/configs/
+v3_freeze.json` (joint split pinned; `hypotheses.md` §9 records the
+rebuild as operational-only). Next: three-family injections (running),
+then dev nulls (false-veto-rate check) → confirmatory once.
+
+**Stack-regime positive control (2026-08-25, §8 continued).** The
+learnings §10 item-1 control executed and passed: asteroid (220000) on
+nights with predicted V 21.9–23.05 — below the single-frame limits, so
+the frozen |S_e| ≤ 5 clip removes (almost) nothing and only the
+ephemeris-weighted stack can recover it. ZTF (35 frames, all sub-clip):
+zr S 9.6 / R̃ 2.90, zg S 5.3 / R̃ 1.95, throughput +0.23/+0.29 mag vs
+Horizons + solar colours. PS1 (25 warps; the one 5.6σ frame clipped by
+the rule): i S 5.8 / R̃ 1.77 at −0.14 mag; z an honest non-detection
+(median single-frame S/N 0.34 × √8); g/r/y too few epochs standalone.
+Joint g/r/i families through the exact v3 statistic: R̃ 2.21 / 3.04 /
+1.77 — every family above the dev threshold 1.54, i.e. the control
+would be promoted by the family rule. Scripts
+`surveys/{ztf,panstarrs}/scripts/asteroid_stack_fetch.py` +
+`surveys/joint/scripts/asteroid_control_stack.py`; summaries under
+`runs/{ztf/v2,panstarrs/v2,joint/v3}/control/220000_stack/`.
+
+**v3 development pass (2026-08-25, §8 continued).** Full dev chain run
+(nulls all three masks → completeness → adjudicate): **0 candidates**;
+the optical machinery reproduces v2 bit-identically (102 cells, 1 void,
+R̃_FWER 1.5401, 1,632 constraints, median m90 g 22.11 / r 22.05 /
+i 21.33 threshold — equal to the v2 dev files to the digit). Colour
+axis validated: all 102 cells W1+W2-usable; on real (null) peaks the
+deficit statistic spans median −0.49 to max 2.53 (no would-fire vetoes,
+ν = 5); on injections the measured false-veto rate is 1/23,117
+(4×10⁻⁵) — the one firing a mag 16.8 long-block source whose WISE
+on-window under-overlaps (× PRF throughput), a regime already above the
+optical single-epoch clip limit and hence excluded from the fitted
+constraints (0/23,116 in the fitted population). Ring confusion floor
+dominates σ_w in bright corridors as intended (alpha-cen σ_ring ≈ 164
+vs σ_pix ≈ 5 flux units). Records under runs/joint/v3/. Next: the
+confirmatory set, once.
+
+**v3 confirmatory run and report (2026-08-25, §8 closed).** The blind
+confirmatory set analysed once (nulls → completeness → adjudicate):
+**0 candidates** — 45 endpoints / 230 cells, 5 void, R̃_FWER 1.778,
+14 R > 1 vs 25.2 expected, 3,648 constraints; every optical number
+bit-identical to the v2 confirmatory run (medians to the digit), as
+the freeze declared. Colour axis on the confirmatory set: 230/230
+cells W1+W2-usable, real-peak deficit D median −0.33 / max 3.73, zero
+would-fire vetoes; injections 5/46,302 vetoed, all at mag 16.8–18.8 —
+above each cell's optical bright limit, so **0 false vetoes in the
+fitted population** (mechanism: PRF throughput × on-window overlap,
+confined to the catalogue-layer regime). Ledger-generated tables
+`surveys/joint/results/report_tables.md` (report stage extended with
+guarded colour lines); survey report `report/joint_ps1_ztf.md`
+rewritten in place as the v3 three-archive report, superseding the v2
+text (git history). Plan §4 updated; the §4 three-archive open item
+and learnings §10 items 1 and 3 are closed.

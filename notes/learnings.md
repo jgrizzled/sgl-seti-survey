@@ -278,6 +278,27 @@ Amendments forced by evidence on development sets (the retrospectives):
 - The pre-registration ordering discipline works: two WISE-crossings
   freeze defects (nonexistent qa_status value; mis-scaled control pool)
   were caught and amended before any pixel was touched.
+- **An undetrended chord/stack statistic saturates its error budget
+  with low-frequency drift** (TESS sector-scale scattered light: S and
+  T in the tens, 3 exceedances vs 1.3 expected, all
+  systematics-adjudicated): the empirical variance rescale k fixes the
+  *variance*, not low-frequency structure, so the 1/9 control-crossing
+  budget is only approximate for such statistics. Per-cadence /
+  differential statistics (the pulse max) behave exactly to budget —
+  any high-cadence crossings v2 needs a detrending layer under the
+  chord filter.
+- **Injection flux calibration through a star-measured ZP must
+  normalize the stamp response at the calibration reference** (TESS
+  finding C1): the chain-measured ZP already absorbs the kernel↔PRF
+  throughput, so applying the raw stamp response to a ZP-converted
+  flux double-counts it (×R error — 1.3× optimistic on one cube, 2×
+  conservative on another). Also measure the ZP through the *unit's*
+  fitted kernel, not a default one.
+- Sector/tile boundary truncation is a structural weakness for
+  short-window archives: both TESS chord exceedances needing
+  adjudication and the retained-ambiguous row sat in a sector's final
+  day (no egress to shape-test), and the era's two deepest grazes fell
+  between sectors entirely.
 
 ## 9. Reproducibility and engineering
 
@@ -300,11 +321,31 @@ Amendments forced by evidence on development sets (the retrospectives):
 
 ## 10. Open items carried forward (from the v2 retrospectives)
 
-- A stack-regime (fainter-than-single-frame) asteroid control for ZTF
-  and PS1.
+- ~~A stack-regime (fainter-than-single-frame) asteroid control for ZTF
+  and PS1.~~ Done 2026-08-25: asteroid (220000) at V 21.9–23.05 (every
+  ZTF frame below the clip; PS1's one >5σ frame clipped by the frozen
+  rule) recovered by the v2 rule — ZTF zr R̃ 2.90 / zg 1.95, PS1 i
+  1.77 (z an honest non-detection at its depth), and all three joint
+  g/r/i families above the family threshold (R̃ 2.21/3.04/1.77 vs
+  1.54); throughput −0.14…+0.29 mag vs Horizons+solar colours.
+  Fetch: `surveys/{ztf,panstarrs}/scripts/asteroid_stack_fetch.py`;
+  scoring `surveys/joint/scripts/asteroid_control_stack.py`; products
+  `runs/{ztf/v2,panstarrs/v2,joint/v3}/control/220000_stack/`.
 - SPHEREx template refit with injections (slow-source absorption
   unmodelled); a six-detector SPHEREx joint cell from the stored
   accumulators.
-- The WISE-joint (three-archive) stage on the common µ reference epoch,
-  with Vega→AB and surface-brightness conventions reconciled — the
-  0.5–22 µm colour-consistency test then becomes a calibrated veto.
+- ~~The WISE-joint (three-archive) stage on the common µ reference
+  epoch, with Vega→AB and surface-brightness conventions reconciled —
+  the 0.5–22 µm colour-consistency test then becomes a calibrated
+  veto.~~ Done 2026-08-24 → 25 as joint v3.0 (`report/joint_ps1_ztf.md`;
+  history §8): 0 candidates blind, optical bit-identical to v2, colour
+  veto's measured false-veto rate 0 in the fitted population. Lessons:
+  a µ-reference-epoch change is a rebuild, never a relabel; report the
+  frame zero point in the target system (Vega MAGZP + AB offset)
+  and the engine's zp_ref scaling does the rest; floor a
+  confusion-limited archive's per-node σ with the empirical ring
+  scatter or the veto over-fires; the colour veto's only firings live
+  above the optical bright limit (PRF throughput × temporal-window
+  overlap), so charge it to the final-candidate curve and it costs the
+  fitted constraints nothing; 0.5–22 µm remains 0.5–4.6 µm in practice
+  (W3/W4 stay excluded by the review rule).

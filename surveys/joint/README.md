@@ -1,13 +1,19 @@
-# joint v2
+# joint v3 — PS1 + ZTF stack, WISE colour axis
 
-v2 re-analysis of the v1 joint survey under the frozen rule in
-`hypotheses.md` (WISE v2.1 design; v2 programme step 6, `notes/project_history.md` §5), run by
-the survey-agnostic engine `sglsurvey/` with this directory's
-`profile.py` bindings. `configs/v2_freeze.json` holds the hashed freeze
-and the stratified development / confirmatory split;
-`configs/cross_track_cells.json` the cells with a cross-track
-dimension; `results/` the ledger-generated tables. Bulk products under
-`runs/joint/v2/`.
+v3 extension of the joint stage under the frozen rule in
+`hypotheses.md` (v3.0, 2026-08-24): the v2 optical candidate statistic
+unchanged (PS1 + ZTF stack sums on the PS1 grid, one FWER across
+archives), plus the WISE W1/W2 colour axis — per-cell annotations and
+the calibrated colour-consistency veto — from the joint-conventions
+WISE tensors (`surveys/wise/profile.py`, `runs/wise/v3/`).
+`configs/v3_freeze.json` holds the hashed freeze (split = the PS1/ZTF
+corridor split); `configs/v2_freeze.json` is the superseded v2 record
+(report `report/joint_ps1_ztf.md`, products `runs/joint/v2/`). Bulk v3
+products under `runs/joint/v3/`.
 
-Stages: `uv run python surveys/joint/run.py {freeze,geometry,build,nulls,inject,completeness,adjudicate,report}`
-(joint: `surveys/joint/joint.py {freeze,nulls,completeness,adjudicate,report}`).
+Stages (`surveys/joint/joint.py`):
+
+    uv run python surveys/wise/run.py build            # WISE v3 tensors (once)
+    uv run python surveys/joint/joint.py freeze
+    uv run python surveys/joint/joint.py wise-inject --set dev|confirmatory
+    uv run python surveys/joint/joint.py {nulls,completeness,adjudicate,report} --set dev|confirmatory

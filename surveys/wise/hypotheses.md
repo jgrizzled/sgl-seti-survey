@@ -1,6 +1,6 @@
 ---
 title: "WISE/NEOWISE survey — hypothesis freeze v2.0 (decision rule and geometry specification)"
-status: "v2.1 — frozen 2026-08-22 after the development-set rule check (step F); v2.0 → v2.1 change recorded in §8; no v2 script has run on the confirmatory set; hash in configs/v2_0_freeze.json"
+status: "v2.1 — frozen 2026-08-22 after the development-set rule check (step F); v2.0 → v2.1 change recorded in §8; no v2 script has run on the confirmatory set; hash in configs/v2_0_freeze.json. §9 (2026-08-24): v3 joint-conventions tensor rebuild for the joint stage — operational only, no WISE parameter changed"
 date: 2026-08-22
 ---
 
@@ -289,3 +289,35 @@ completeness minus the static-test loss. No other parameter changed;
 the hold-out split is unchanged and the confirmatory set has not been
 touched. The freeze file is re-hashed (`configs/v2_0_freeze.json`,
 version field `wise-hypotheses-v2.1`).
+
+## 9. v3 joint-conventions tensor rebuild (2026-08-24, operational)
+
+Not a new WISE search and not a change to any parameter above: the
+v2.1 survey, its freeze (`configs/v2_0_freeze.json`), products
+(`runs/wise/v2/`) and report stand unchanged. For the joint Pipeline A
+stage v3.0 (`surveys/joint/hypotheses.md`), the W1/W2 tensors and
+injections are rebuilt through the survey-agnostic engine
+(`surveys/wise/profile.py`, outputs `runs/wise/v3/`) under the joint
+stage's conventions:
+
+- common µ reference epoch T0 = MJD 59800 (v2: 57800 — trajectories at
+  different reference epochs do not correspond on the grid, so this is
+  a rebuild, not a relabel);
+- AB magnitudes on the common flux scale ZP 25 via the frame Vega
+  MAGZP plus the Vega→AB offsets W1 +2.699, W2 +3.339 (WISE All-Sky
+  Explanatory Supplement §IV.4.h);
+- µ grid of 9 nodes at 0.25″/yr (|µ| ≤ 1″/yr unchanged): T0 = 59800
+  sits ~5 yr off the WISE mid-baseline, so the 0.5″/yr step would
+  quantise tracks by up to ~0.5×FWHM at the earliest epochs (the PS1
+  T0 lesson); the PS1 5-node grid is the exact [::2] subgrid;
+- W1/W2 only — W3/W4 remain threshold-only with this survey (§3.7c)
+  and take no part in the joint family;
+- everything else (v1 inputs, quality masks §3.8, weight cap, no
+  single-epoch clip, spacecraft observer, PRF grids, covariance
+  envelopes) identical to v2.
+
+No standalone decision rule is defined on these products; the decision
+rule, veto construction and hold-out are the joint v3.0 freeze
+(`surveys/joint/configs/v3_freeze.json`). The operational freeze
+pinning these conventions and the joint corridor split is
+`configs/v3_freeze.json` (version `wise-v3.0-joint-conventions`).
