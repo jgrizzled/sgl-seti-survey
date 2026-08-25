@@ -1,7 +1,7 @@
 ---
 title: "sgl-seti-survey — Project Plan"
 date: 2026-08-21
-status: "v1.2 — Pipeline A (§4): all six surveys complete on the v2 design (WISE, ZTF, SPHEREx, PS1, joint, DECam), 0 candidates everywhere; Pipeline B (§5): programme closed 0 candidates incl. TESS (§5.6, complete 2026-08-24); expansion queue §5.8 next item: ATLAS/ASAS-SN. Execution record: notes/project_history.md; lessons: notes/learnings.md"
+status: "v1.3 — Pipeline A (§4): all six surveys complete on the v2 design (WISE, ZTF, SPHEREx, PS1, joint, DECam), 0 candidates everywhere; Pipeline B (§5): programme closed 0 candidates incl. TESS (§5.6, complete 2026-08-24); §5.8 item 2 (ATLAS/ASAS-SN): recon + hypothesis freeze v1.0 done 2026-08-25, coverage stage PAUSED pending migration to a server (resume: surveys/atlas-asassn-crossings/notes/server_migration_resume.md). Execution record: notes/project_history.md; lessons: notes/learnings.md"
 tags:
   - SETI
   - technosignatures
@@ -528,15 +528,30 @@ for per-event follow-up).
 Datasets adopted from the 2026-08-24 archive brainstorm, ordered by
 which structurally open cell (`report/joint_crossings.md` §3) each
 opens and by adapter cost. TESS (§5.6) — the queue's first item — is
-complete; item 2 (ATLAS + ASAS-SN) is next. Access details below
-marked _unprobed_ are from general
-knowledge, not verified endpoints — each item starts with a
-DECam-style reachability recon before any freeze.
+complete. Item 2 (ATLAS + ASAS-SN) is **in progress, paused
+2026-08-25**: reachability recon done
+(`surveys/atlas-asassn-crossings/notes/atlas_asassn_recon_2026-08-25.md`
+— ATLAS is all-sky with an authenticated arbitrary-position forced-
+photometry API and is the workhorse for both channels; ASAS-SN Sky
+Patrol v2 is anonymous but catalogued-sources-only, so its role
+narrows to on-star channel A + a coverage-fraction ledger; v1 is
+reCaptcha-gated, manual-only) and **hypothesis freeze v1.0 done**
+(`surveys/atlas-asassn-crossings/hypotheses.md`; headline cell: 22
+recurring in-era windows per grazing-rung target incl. the
+van-maanen b = 0.24 R☉ family lost by PS1 masks and TESS sector
+gaps — recurrence-stacked statistic primary). The **coverage stage
+is deferred until project execution moves to a server** (a days-long
+serial ATLAS queue drain needs better uptime than the dev macbook);
+resume checklist:
+`surveys/atlas-asassn-crossings/notes/server_migration_resume.md`.
+Access details below marked _unprobed_ are from general knowledge,
+not verified endpoints — each item starts with a DECam-style
+reachability recon before any freeze.
 
 | #   | Dataset                                                           | Open cell / rationale                                                                                                                                                                                                                                                                          | Access route (status)                                                                          |
 | --- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | 1   | **TESS FFIs**                                                     | Pulse periods between exposure and window length; first resolved crossing light curves                                                                                                                                                                                                         | **Done (§5.6)** — 0 candidates, pulse cell closed clean                                        |
-| 2   | **ATLAS forced photometry + ASAS-SN Sky Patrol**                  | Window _coverage fraction_ — nightly/quad-nightly all-sky cadence (ATLAS δ > −50°, o/c ~19.5, 2015–; ASAS-SN all-sky, g/V ~18, 2012–) incl. southern targets ZTF never sees; duty-cycle/flare-beacon rung, not depth                                                                           | Public forced-photometry APIs at arbitrary positions — no image handling (_unprobed_)          |
+| 2   | **ATLAS forced photometry + ASAS-SN Sky Patrol**                  | Window _coverage fraction_ — nightly/quad-nightly all-sky cadence (ATLAS all-sky since 2022, δ > −50° since 2015, o/c ~19.5; ASAS-SN all-sky, g/V ~18, 2013–) incl. southern targets ZTF never sees; duty-cycle/flare-beacon rung + 22-window recurrence stacks, not depth                     | **Recon + hypotheses v1.0 done 2026-08-25; coverage stage paused for server migration** — ATLAS token API probed live; SP v2 anonymous (catalogued-only); v1 captcha manual-only |
 | 3   | **PTF/iPTF (2009–2016)**                                          | Fills the PS1-era → ZTF-era temporal gap in the north with difference-imaging-era data (R ~20.5–21)                                                                                                                                                                                            | IRSA IBE `ptf/products/` — same machinery as `irsa_ztf.py`, adapter mostly config (_unprobed_) |
 | 4   | **GALEX time-tagged photons (gPhoton, 2003–2013)**                | Pulse-period cell in the UV, in an era predating everything but PS1; 5 ms photon time-stamps, light curves at arbitrary positions                                                                                                                                                              | gPhoton photon database via MAST (_unprobed_)                                                  |
 | 5   | **DASCH scanned plates (1885–1992, DR7)**                         | A century of annually-recurring windows before the 1980 list start (B ~15–17). Prerequisite: extend `sglsurvey.crossings` window backward — cheap, and exercises the §7 model-accuracy budget at old epochs                                                                                    | DASCH lightcurve + cutout services at Harvard (_unprobed_)                                     |
