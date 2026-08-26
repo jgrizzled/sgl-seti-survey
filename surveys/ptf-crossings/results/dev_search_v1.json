@@ -1,0 +1,78 @@
+{
+ "B": {
+  "target_id": "wolf-359",
+  "band": "R",
+  "event_id": "evt-86fd5e8fad87",
+  "t_ca_mjd": 56905.50059592593,
+  "class": "single_epoch",
+  "n_trials": 0,
+  "n_in_epochs": 1,
+  "n_off_usable": 27,
+  "calibration_gate_failures": {
+   "gate_ncal": 3
+  },
+  "k_rescale": 1.0,
+  "k_status": "ok_n26",
+  "S": 0.101,
+  "n_controls": 8,
+  "controls": [
+   2.099,
+   0.504,
+   0.553,
+   0.815,
+   1.268,
+   0.754,
+   1.607,
+   0.584
+  ],
+  "T": 2.099,
+  "margin": -1.998,
+  "static_min_arcsec": 8.23,
+  "exceedance_reportable": false
+ },
+ "A": {
+  "target_id": "gj-1276",
+  "band": "R",
+  "event_id": "evt-4b29abd25d25",
+  "t_ca_mjd": 55443.984454363424,
+  "class": "search_unit",
+  "n_trials": 1,
+  "n_epochs_usable": 40,
+  "n_in_window_usable": 2,
+  "n_baseline": 38,
+  "calibration_gate_failures": {
+   "gate_ncal": 8,
+   "gate_scatter": 27
+  },
+  "status": "constraint_only_gates",
+  "S": -3.844,
+  "n_valid_offsets": 1,
+  "controls": [
+   [
+    -23,
+    0.219
+   ]
+  ],
+  "invalid_offsets": [
+   -97,
+   -71,
+   -47,
+   23,
+   47,
+   71,
+   97,
+   -127,
+   -113,
+   113,
+   127
+  ],
+  "T": 0.219,
+  "margin": -4.063,
+  "exceedance": false
+ },
+ "calibration": {
+  "n_frames_calibrated": 72,
+  "median_zp_scatter": 0.085,
+  "median_n_calibrators": 6
+ }
+}

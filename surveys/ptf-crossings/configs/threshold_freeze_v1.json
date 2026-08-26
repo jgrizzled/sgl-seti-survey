@@ -1,0 +1,353 @@
+{
+ "alpha": {
+  "fwer_alpha": 0.05,
+  "ks_alpha": 0.01
+ },
+ "completeness": {
+  "injections": "per searched unit, >= 100 per event-window cell, stamp-response (Moffat beta=3 at the header SEEING) on the scie substrate through the identical star-calibrated chain (C1 rule: no depth statement without the injection-measured response), v2 recovery window [2,1]",
+  "positive_control": "one numbered main-belt asteroid crossing a scoped antipode field (SkyBoT-selected at dev) through the identical chain, recovered to <= 0.1 mag against predicted magnitudes",
+  "spectrum": {
+   "R": "line_658nm (generic leakage)",
+   "g": "line_532nm"
+  },
+  "temporal_model": "chord profile of the unit's (b, v_perp, radius) per event"
+ },
+ "controls": {
+  "A": {
+   "designated_offsets_days": [
+    -97,
+    -71,
+    -47,
+    -23,
+    23,
+    47,
+    71,
+    97
+   ],
+   "kind": "temporal pseudo-windows",
+   "n": 8,
+   "redraw_offsets_days": [
+    -127,
+    -113,
+    113,
+    127
+   ],
+   "validity": "an offset is valid iff its pseudo-window set mirrors the real gate (>= 1 pseudo-window with >= 2 usable epochs for S_event); same-rung-only overlap exclusion (ZTF v1.1); < 8 valid offsets -> constraint-only (freeze D7: assessed per unit, not assumed)"
+  },
+  "B": {
+   "designated": "identical designated_indices construction as ztf-v2/ps1-v2 (perpendicular offsets follow the track)",
+   "kind": "spatial ring trajectories",
+   "n": 8,
+   "ring_radii_arcsec": [
+    20.0,
+    30.0,
+    40.0
+   ]
+  }
+ },
+ "freeze_content_hash": "sha256:26e235ee21639259dfc759e81b8cae8c1639c4e95ae6f4af5207273fa7ef53ae",
+ "freeze_version": "ptf-crossings-thresholds-v1.0",
+ "frozen_at": "2026-08-26",
+ "hypothesis_version": "ptf-crossings-hypotheses-v1.0",
+ "input_hashes": {
+  "coverage": "sha256:c742a0240b42b2e3476f729032e6c4ed47a9239725e79214ccc01a1bc4e51c6e",
+  "hypotheses": "sha256:40f187a483c33cb4cdd85e32bab62b3f9fef8d86e668b260cab6f29715b6893f",
+  "saturation": "sha256:654befd45bcd695589fdb086442367217c1418329e9cf374e61d0c4cc4e0d1d6"
+ },
+ "quality": {
+  "coverage_mask": "none (freeze D5): imgtype='object', fid<=2 only",
+  "saturation_gate": "before any confirmatory search, the dev stage verifies the frozen exclusion levels (E_R 14.5 / E_g 15.0) against >= 1 bright-star frame (dmask bit-8 extent vs magnitude); amendment required if off by > 0.5 mag",
+  "search_mask": "exact dmask, fatal template 65533 (Laher 2014 Table 15, all bits except 2^1 object)",
+  "strict": "seeing <= 2.5 arcsec (metadata) + fatal template + calibration gate at scatter <= 0.1 mag; strict re-run reported for any exceedance"
+ },
+ "search_units": {
+  "A": [
+   {
+    "band": "R",
+    "channel": "A",
+    "class": "searched",
+    "epochs_per_event": {
+     "evt-4b29abd25d25": 3
+    },
+    "n_covered_events": 1,
+    "n_multi_epoch_events": 1,
+    "n_trials": 1,
+    "pairs_per_event": {
+     "evt-4b29abd25d25": 1
+    },
+    "radius_au": 0.1,
+    "saturation_status": "ok",
+    "split": "dev",
+    "statistics": [
+     "S_event"
+    ],
+    "target_id": "gj-1276"
+   },
+   {
+    "band": "R",
+    "channel": "A",
+    "class": "saturation_excluded",
+    "epochs_per_event": {
+     "evt-0fe2dc025a77": 4
+    },
+    "n_covered_events": 1,
+    "n_multi_epoch_events": 1,
+    "n_trials": 0,
+    "pairs_per_event": {
+     "evt-0fe2dc025a77": 3
+    },
+    "radius_au": 0.1,
+    "saturation_status": "excluded",
+    "split": "dev",
+    "statistics": [],
+    "target_id": "ross-128"
+   },
+   {
+    "band": "R",
+    "channel": "A",
+    "class": "saturation_excluded",
+    "epochs_per_event": {
+     "evt-1e4e9102a62d": 24
+    },
+    "n_covered_events": 1,
+    "n_multi_epoch_events": 1,
+    "n_trials": 0,
+    "pairs_per_event": {
+     "evt-1e4e9102a62d": 0
+    },
+    "radius_au": 0.1,
+    "saturation_status": "excluded",
+    "split": "confirmatory",
+    "statistics": [],
+    "target_id": "teegarden"
+   },
+   {
+    "band": "g",
+    "channel": "A",
+    "class": "saturation_excluded",
+    "epochs_per_event": {
+     "evt-9971bcd26bfd": 11
+    },
+    "n_covered_events": 1,
+    "n_multi_epoch_events": 1,
+    "n_trials": 0,
+    "pairs_per_event": {
+     "evt-9971bcd26bfd": 4
+    },
+    "radius_au": 0.1,
+    "saturation_status": "excluded",
+    "split": "confirmatory",
+    "statistics": [],
+    "target_id": "van-maanen"
+   }
+  ],
+  "B": [
+   {
+    "band": "R",
+    "channel": "B",
+    "class": "searched",
+    "epochs_per_event": {
+     "evt-20efe2b70f8a": 7,
+     "evt-3f7ad50e70e1": 2
+    },
+    "n_covered_events": 2,
+    "n_multi_epoch_events": 2,
+    "n_trials": 2,
+    "pairs_per_event": {
+     "evt-20efe2b70f8a": 6,
+     "evt-3f7ad50e70e1": 1
+    },
+    "radius_au": 0.0116,
+    "saturation_status": null,
+    "split": "confirmatory",
+    "statistics": [
+     "S_event",
+     "S_stack"
+    ],
+    "target_id": "ross-128"
+   },
+   {
+    "band": "R",
+    "channel": "B",
+    "class": "searched",
+    "epochs_per_event": {
+     "evt-20efe2b70f8a": 20,
+     "evt-3f7ad50e70e1": 2
+    },
+    "n_covered_events": 2,
+    "n_multi_epoch_events": 2,
+    "n_trials": 2,
+    "pairs_per_event": {
+     "evt-20efe2b70f8a": 13,
+     "evt-3f7ad50e70e1": 1
+    },
+    "radius_au": 0.1,
+    "saturation_status": null,
+    "split": "confirmatory",
+    "statistics": [
+     "S_event",
+     "S_stack"
+    ],
+    "target_id": "ross-128"
+   },
+   {
+    "band": "g",
+    "channel": "B",
+    "class": "searched",
+    "epochs_per_event": {
+     "evt-20efe2b70f8a": 45
+    },
+    "n_covered_events": 1,
+    "n_multi_epoch_events": 1,
+    "n_trials": 1,
+    "pairs_per_event": {
+     "evt-20efe2b70f8a": 26
+    },
+    "radius_au": 0.1,
+    "saturation_status": null,
+    "split": "confirmatory",
+    "statistics": [
+     "S_event"
+    ],
+    "target_id": "ross-128"
+   },
+   {
+    "band": "g",
+    "channel": "B",
+    "class": "searched",
+    "epochs_per_event": {
+     "evt-5c45890fa28c": 2
+    },
+    "n_covered_events": 1,
+    "n_multi_epoch_events": 1,
+    "n_trials": 1,
+    "pairs_per_event": {
+     "evt-5c45890fa28c": 1
+    },
+    "radius_au": 0.0116,
+    "saturation_status": null,
+    "split": "confirmatory",
+    "statistics": [
+     "S_event"
+    ],
+    "target_id": "van-maanen"
+   },
+   {
+    "band": "R",
+    "channel": "B",
+    "class": "searched",
+    "epochs_per_event": {
+     "evt-4c4ea2c39734": 2,
+     "evt-5c45890fa28c": 4,
+     "evt-91843280452f": 3
+    },
+    "n_covered_events": 3,
+    "n_multi_epoch_events": 3,
+    "n_trials": 2,
+    "pairs_per_event": {
+     "evt-4c4ea2c39734": 1,
+     "evt-5c45890fa28c": 2,
+     "evt-91843280452f": 2
+    },
+    "radius_au": 0.1,
+    "saturation_status": null,
+    "split": "confirmatory",
+    "statistics": [
+     "S_event",
+     "S_stack"
+    ],
+    "target_id": "van-maanen"
+   },
+   {
+    "band": "g",
+    "channel": "B",
+    "class": "searched",
+    "epochs_per_event": {
+     "evt-3bd927de6a38": 4,
+     "evt-5c45890fa28c": 12
+    },
+    "n_covered_events": 2,
+    "n_multi_epoch_events": 2,
+    "n_trials": 2,
+    "pairs_per_event": {
+     "evt-3bd927de6a38": 0,
+     "evt-5c45890fa28c": 4
+    },
+    "radius_au": 0.1,
+    "saturation_status": null,
+    "split": "confirmatory",
+    "statistics": [
+     "S_event",
+     "S_stack"
+    ],
+    "target_id": "van-maanen"
+   },
+   {
+    "band": "R",
+    "channel": "B",
+    "class": "single_epoch",
+    "epochs_per_event": {
+     "evt-86fd5e8fad87": 1
+    },
+    "n_covered_events": 1,
+    "n_multi_epoch_events": 0,
+    "n_trials": 0,
+    "pairs_per_event": {
+     "evt-86fd5e8fad87": 0
+    },
+    "radius_au": 0.1,
+    "saturation_status": null,
+    "split": "dev",
+    "statistics": [],
+    "target_id": "wolf-359"
+   }
+  ]
+ },
+ "split": {
+  "dev_positions": [
+   "gj-1276 A 0.1",
+   "ross-128 A 0.1",
+   "wolf-359 B 0.1"
+  ],
+  "note": "dev exercises the machinery (wolf-359 B: single-epoch class; ross-128 A: saturation-excluded class; gj-1276 A: the one searchable A unit) \u2014 confirmatory keeps both headline B families blind",
+  "rule": "frozen verbatim at hypothesis freeze D8 \u2014 no random draw"
+ },
+ "statistics": {
+  "A_constraint_only_rung": {
+   "n_covered_event_rows": 76,
+   "radius_au": 1.0,
+   "reason": "window ~ observing season under the sidereal-year phase-lock (standing theorem, frozen at hypotheses \u00a72); coverage + depth only, zero trials"
+  },
+  "A_gates": "channel-A S_event additionally requires >= 8 usable off-window epochs in band and >= 8 valid pseudo-window offsets; any failure -> constraint-only",
+  "A_saturation_excluded": "excluded-class (target, band) units carry no statistic and no contrast-limit claim; reported as excluded in the ledger",
+  "S_event": "primary: max over the unit's multi-epoch covered events of the weighted in-window mean excess (chord-weighted, one-sided positive) vs the off-window baseline at the same position/track; requires >= 1 covered event with >= 2 in-window epochs",
+  "S_stack": "secondary: recurrence stack \u2014 weighted stack of the per-event in-window excesses over all covered events of the unit; applies only where >= 2 covered events (freeze D4); WEIGHT_CAP 20x median epoch weight",
+  "calibration_gate": {
+   "max_zp_scatter_mag": 0.2,
+   "min_calibrators": 5,
+   "rule": "per-frame field-star ZP from >= 5 unsaturated PS1 DR2 calibrators through the identical-band transform, robust scatter <= 0.2 mag; a frame failing the gate is unusable (never fallback-calibrated) \u2014 freeze D3; header MAGZPT recorded as a cross-check diagnostic only"
+  },
+  "single_epoch_units": "units whose covered events all have 1 in-window epoch: reportable 'single-epoch exceedance' class, zero trials; promotion requires recurrence at a second covered window",
+  "substrate": "star-calibrated forced PSF photometry directly on level-1 science cutouts (no public difference images); per-frame ZP from PS1 DR2 mean stars through the frozen band transform (g: PS1 g direct; R: Jordi 2006 R = r - 0.153(r-i) - 0.117); exact dmask (fatal template 65533) defines usable pixels",
+  "unit": "(target, radius, band); channel B epochs per event are the max over the nested z family (z multiplies nothing; controls take the same max)",
+  "variance": "per-epoch variances from the PSF fit + local background, rescaled by k = median(r^2/v)/0.4549 over clipped off-window epochs (floor 1), per (unit, band) \u2014 the ZTF v1.2 / v1 confusion-floor rule"
+ },
+ "threshold_rule": {
+  "T": "max one-sided control statistic over the 8 designated controls, per statistic",
+  "disposition": "every exceedance individually adjudicated by the frozen veto ladder; no silent drops",
+  "exceedance": "S > max(T, 0); margin S - T reported",
+  "expected_control_crossings": 1.22,
+  "n_trials": 11,
+  "n_trials_confirmatory": 10,
+  "n_trials_dev": 1,
+  "per_trial_crossing_probability": "1/9"
+ },
+ "veto_ladder": [
+  "1. SkyBoT known-object census per in-window epoch (calibrated veto; antipodes sit in the opposition asteroid stream)",
+  "2. rate test: candidate must move at the predicted 0.36-6.5 arcsec/day retrograde rate for its z",
+  "3. same-night repeat test: where same-night exposure pairs exist (11 of 14 covered narrow-rung events), an ordinary mover displaces arcsec-scale between pair members while the relay track moves < 0.2 arcsec; where no pair exists the ladder lacks this rung, recorded per exceedance (hypotheses \u00a75)",
+  "4. flux-consistent catalogued-static test (ptf_objects snapshot, >= 3 detections, 2 arcsec annotation radius)",
+  "5. recurrence at a second covered window on the recomputed track",
+  "annotations (never sole grounds): cross-epoch chromatic consistency (bands not simultaneous); campaign-cadence clustering structure"
+ ]
+}

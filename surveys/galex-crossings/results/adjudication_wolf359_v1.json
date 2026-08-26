@@ -1,0 +1,89 @@
+{
+  "unit": "wolf-359_A_NUV",
+  "event": "2007-03-03",
+  "s_burst": 4.679,
+  "threshold": 4.127,
+  "burst": {
+    "width_s": 0.5,
+    "start_s": 856524112.425,
+    "count": 5,
+    "mu": 0.8041237113402062,
+    "z": 4.679088298064463
+  },
+  "visit_utc": "2007-02-26T11:21:13.995000+00:00",
+  "lc_5s": {
+    "nuv": [
+      7,
+      3,
+      7,
+      10,
+      9,
+      11,
+      5,
+      13,
+      7,
+      5,
+      7,
+      12,
+      8,
+      6,
+      8,
+      13,
+      12,
+      7,
+      6
+    ],
+    "fuv": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      2,
+      0,
+      1,
+      2
+    ]
+  },
+  "two_band": {
+    "fuv_in_window": 0,
+    "fuv_expected": 0.06701030927835051,
+    "fuv_excess_p": 1.0,
+    "fuv_total": 13,
+    "fuv_live_s": 97
+  },
+  "morphology": {
+    "quiescent_cts_s": 1.4,
+    "peak_bin_cts_s": 2.6,
+    "contrast": 1.8571428571428574,
+    "peak_bin_index": 7,
+    "n_bins": 19,
+    "dev_flare_templates": "rise <=10-20 s, decay e-fold 30-40 s, contrast 3-21.6x"
+  },
+  "strict_rerun": {
+    "live_s": 97,
+    "s_burst": 4.679088298064463
+  },
+  "detector_fixed": {
+    "burst_xi_eta_mean": [
+      1783.4956000000002,
+      13343.588
+    ],
+    "other_xi_eta_mean": [
+      1647.1825027322404,
+      13371.54907103825
+    ],
+    "n_in": 5,
+    "n_out": 183
+  }
+}

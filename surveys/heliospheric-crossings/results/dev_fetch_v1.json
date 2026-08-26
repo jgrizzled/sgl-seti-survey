@@ -1,0 +1,90 @@
+{
+ "n_days": 18294,
+ "n_frames_planned": 33081,
+ "n_fetched_ok": 32843,
+ "n_cached": 1411,
+ "n_errors": 238,
+ "errors_sample": [
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/000328/22064598.fts",
+   "error": "bad content 5760B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/020318/22114644.fts",
+   "error": "bad content 5760B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070301/22247480.fts",
+   "error": "bad content 5760B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070313/22248843.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070314/22248976.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070315/22249110.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070316/22249235.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249368.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249370.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249372.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249373.fts",
+   "error": "bad content 5760B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249375.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249377.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249379.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249381.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249383.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249385.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249387.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249389.fts",
+   "error": "bad content 489600B"
+  },
+  {
+   "path": "runs/heliospheric-crossings/frames/c2/070317/22249391.fts",
+   "error": "bad content 489600B"
+  }
+ ],
+ "bytes_total": 63568621440
+}

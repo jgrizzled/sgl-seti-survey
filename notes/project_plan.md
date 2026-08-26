@@ -1,7 +1,7 @@
 ---
 title: "sgl-seti-survey — Project Plan"
 date: 2026-08-21
-status: "v1.3 — Pipeline A (§4): all six surveys complete on the v2 design (WISE, ZTF, SPHEREx, PS1, joint, DECam), 0 candidates everywhere; Pipeline B (§5): programme closed 0 candidates incl. TESS (§5.6, complete 2026-08-24); §5.8 item 2 (ATLAS/ASAS-SN): recon + hypothesis freeze v1.0 done 2026-08-25, coverage stage PAUSED pending migration to a server (resume: surveys/atlas-asassn-crossings/notes/server_migration_resume.md). Execution record: notes/project_history.md; lessons: notes/learnings.md"
+status: "v1.5 — Pipeline A (§4): all six surveys complete on the v2 design (WISE, ZTF, SPHEREx, PS1, joint, DECam), 0 candidates everywhere; Pipeline B (§5): seven surveys complete with 0 candidates (ZTF, PS1, WISE, joint, radio geometry-only, TESS, PTF/iPTF §5.10 — complete 2026-08-26 incl. the first pre-2015 photosphere-grazing constraint); §5.9 ATLAS/ASAS-SN: hypotheses v1.0 frozen, coverage PAUSED pending server migration; §5.11 heliospheric: dev closed 2026-08-26 (0 candidates), blind confirmatory (14 units) next; §5.12 GALEX/gPhoton — COMPLETE 2026-08-26 (0 candidates; 1 retained-ambiguous exceedance vs 1.56 expected; first UV pulse-cell constraints incl. ~6 kW time-averaged coherent trains); queue items 5–8 (§5.8) unstarted. Execution record: notes/project_history.md; lessons: notes/learnings.md"
 tags:
   - SETI
   - technosignatures
@@ -390,13 +390,15 @@ Execution of §3.5, one subproject per archive. Shared geometry
 products feed every survey: the universal crossing list
 (`crossings/universal_v1/`: 16,586 b(t)-minimum events, 88 endpoints ×
 both link directions, 1980→2028) and the spacecraft-observer lists
-(`crossings/{wise,tess,spherex}_v1`: 5,170 / 3,390 / 1,130 events;
-the TESS HEO correction validated at |Δb| ≤ 0.33 R☉). Channels:
-A = uplink interception at the star near opposition; B = downlink
-pre-lens interception at the antipode; sunward combinations out of
-scope (revisited in §5.8 item 9). Hypotheses (beam radius, wavelength,
-duty cycle) are frozen per survey before any data are touched, with
-the v2 statistical discipline inherited from §4.
+(`crossings/{wise,tess,spherex,soho}_v1`: 5,170 / 3,390 / 1,130 /
+10,714 events; the TESS HEO correction validated at |Δb| ≤ 0.33 R☉;
+the SOHO L1 halo offset at 0.93 R☉). Channels: A = uplink
+interception at the star near opposition; B = downlink pre-lens
+interception at the antipode; sunward combinations were out of scope
+until the §5.11 geometry study opened them (S1/S2, coronagraph
+substrate). Hypotheses (beam radius, wavelength, duty cycle) are
+frozen per survey before any data are touched, with the v2
+statistical discipline inherited from §4.
 
 The 2026-08-23 → 24 programme closed with **0 candidates** across all
 archives (tally: 47 searched trials, 5 exceedances vs ~6.1 expected);
@@ -404,7 +406,11 @@ execution record `notes/project_history.md` §6; lessons
 (sidereal-year phase locking, the two structural gate theorems,
 on-star systematics templates, the antipode workhorse, correlated
 exact-mask attrition, the warp-direct substrate) in
-`notes/learnings.md` §8.
+`notes/learnings.md` §8. The §5.8 expansion queue has since added
+TESS (§5.6), PTF/iPTF (§5.10) and GALEX/gPhoton (§5.12), all
+**0 candidates**, with ATLAS/ASAS-SN paused (§5.9) and the
+heliospheric survey through its dev stage (§5.11) — the running
+Pipeline-B tally stands at 0 candidates everywhere.
 
 ### 5.1 ZTF
 
@@ -509,7 +515,10 @@ ecliptic sector is the designated follow-up).
 ### 5.7 Standing maintenance
 
 Yearly crossing-list refresh (the 2028 window end) as archives extend;
-fold the TESS rows into the covered-window ledger at that refresh
+fold the TESS and GALEX rows into the covered-window ledger at that
+refresh (GALEX: 5 searched + grazing/rim/empty ledger entries,
+`report/galex_crossings.md` §5; the wolf-359 A NUV retained-ambiguous
+burst awaits a future UV mission for its recurrence test)
 (report `tess_crossings.md` §6 enumerates them; the joint-stage v1
 ledger predates TESS and stays as pre-registered) and re-run the
 teegarden 0.1 AU recurrence test when a future ecliptic sector covers
@@ -527,38 +536,170 @@ for per-event follow-up).
 
 Datasets adopted from the 2026-08-24 archive brainstorm, ordered by
 which structurally open cell (`report/joint_crossings.md` §3) each
-opens and by adapter cost. TESS (§5.6) — the queue's first item — is
-complete. Item 2 (ATLAS + ASAS-SN) is **in progress, paused
-2026-08-25**: reachability recon done
-(`surveys/atlas-asassn-crossings/notes/atlas_asassn_recon_2026-08-25.md`
-— ATLAS is all-sky with an authenticated arbitrary-position forced-
-photometry API and is the workhorse for both channels; ASAS-SN Sky
-Patrol v2 is anonymous but catalogued-sources-only, so its role
-narrows to on-star channel A + a coverage-fraction ledger; v1 is
-reCaptcha-gated, manual-only) and **hypothesis freeze v1.0 done**
-(`surveys/atlas-asassn-crossings/hypotheses.md`; headline cell: 22
-recurring in-era windows per grazing-rung target incl. the
-van-maanen b = 0.24 R☉ family lost by PS1 masks and TESS sector
-gaps — recurrence-stacked statistic primary). The **coverage stage
-is deferred until project execution moves to a server** (a days-long
-serial ATLAS queue drain needs better uptime than the dev macbook);
-resume checklist:
-`surveys/atlas-asassn-crossings/notes/server_migration_resume.md`.
-Access details below marked _unprobed_ are from general knowledge,
-not verified endpoints — each item starts with a DECam-style
-reachability recon before any freeze.
+opens and by adapter cost. Items that have started have their own
+sections, like the earlier surveys: TESS §5.6 (complete),
+ATLAS + ASAS-SN §5.9 (paused), PTF/iPTF §5.10 (complete),
+heliospheric imagers §5.11 (in progress) — the table keeps one-line
+pointer rows so item numbering stays stable. Access details below
+marked _unprobed_ are from general knowledge, not verified
+endpoints — each item starts with a DECam-style reachability recon
+before any freeze.
 
 | #   | Dataset                                                           | Open cell / rationale                                                                                                                                                                                                                                                                          | Access route (status)                                                                          |
 | --- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | 1   | **TESS FFIs**                                                     | Pulse periods between exposure and window length; first resolved crossing light curves                                                                                                                                                                                                         | **Done (§5.6)** — 0 candidates, pulse cell closed clean                                        |
-| 2   | **ATLAS forced photometry + ASAS-SN Sky Patrol**                  | Window _coverage fraction_ — nightly/quad-nightly all-sky cadence (ATLAS all-sky since 2022, δ > −50° since 2015, o/c ~19.5; ASAS-SN all-sky, g/V ~18, 2013–) incl. southern targets ZTF never sees; duty-cycle/flare-beacon rung + 22-window recurrence stacks, not depth                     | **Recon + hypotheses v1.0 done 2026-08-25; coverage stage paused for server migration** — ATLAS token API probed live; SP v2 anonymous (catalogued-only); v1 captcha manual-only |
-| 3   | **PTF/iPTF (2009–2016)**                                          | Fills the PS1-era → ZTF-era temporal gap in the north with difference-imaging-era data (R ~20.5–21)                                                                                                                                                                                            | IRSA IBE `ptf/products/` — same machinery as `irsa_ztf.py`, adapter mostly config (_unprobed_) |
-| 4   | **GALEX time-tagged photons (gPhoton, 2003–2013)**                | Pulse-period cell in the UV, in an era predating everything but PS1; 5 ms photon time-stamps, light curves at arbitrary positions                                                                                                                                                              | gPhoton photon database via MAST (_unprobed_)                                                  |
+| 2   | **ATLAS forced photometry + ASAS-SN Sky Patrol**                  | Window _coverage fraction_ — nightly all-sky cadence; duty-cycle/flare-beacon rung + 22-window recurrence stacks, not depth | **In progress, paused (§5.9)** — recon + hypotheses v1.0 frozen 2026-08-25; coverage stage awaits server migration |
+| 3   | **PTF/iPTF (2009–2015)**                                          | PS1-era-parallel northern epochal imaging; independent re-observations of PS1-era windows incl. the mask-lost van-maanen deep-graze family | **Complete (§5.10)** — 0 candidates; first pre-2015 photosphere-grazing constraint |
+| 4   | **GALEX time-tagged photons (gPhoton, 2003–2013)**                | Pulse-period cell in the UV, in an era predating everything but PS1; 5 ms photon time-stamps, light curves at arbitrary positions                                                                                                                                                              | **Complete (§5.12)** — 0 candidates; first UV pulse-cell constraints (266 nm ∈ NUV; trains to ~6 kW) |
 | 5   | **DASCH scanned plates (1885–1992, DR7)**                         | A century of annually-recurring windows before the 1980 list start (B ~15–17). Prerequisite: extend `sglsurvey.crossings` window backward — cheap, and exercises the §7 model-accuracy budget at old epochs                                                                                    | DASCH lightcurve + cutout services at Harvard (_unprobed_)                                     |
 | 6   | **Palomar Gattini-IR (J, 2018–, J ~16) + WINTER (Y/J/Hs, 2023–)** | The >900 nm time-domain cell (1064 nm falls in Y); shallow — framed as opening the cell, not deep exclusion. The 1550 nm line hypotheses stay with the spectral-archive family (§3.6 row 10: APOGEE H-band, ESO NIRPS, alongside the APF hand-off)                                             | Archive access uncertain — recon first (_unprobed_)                                            |
 | 7   | **Radio metadata extensions**                                     | Repeat the VLASS geometry-only construction (radio decision unchanged, §5.5) on archives that revisit fields: ASKAP VAST + RACS per-field epoch dates, LoTSS pointing dates; the virgin antipode channel is cheap to keep testing                                                              | CASDA / LoTSS DR services (_unprobed_); BL-MeerKAT re-check stays a §5.7 maintenance item      |
 | 8   | **Kepler/K2 superstamps + FFIs**                                  | One-afternoon footprint intersect: K2 ecliptic campaign fields (2014–2018) + Kepler prime field vs `universal_v1` antipodes; proceed only on a hit (30 min continuous cadence in the pre-ZTF era)                                                                                              | MAST (well-known); intersect needs no adapter                                                  |
-| 9   | **Heliospheric imagers (SOHO/LASCO, STEREO/HI, PSP/WISPR)**       | First a one-page geometry study: are any of the sunward channel combinations (declared out of scope at the ZTF freeze) _only_ visible at small elongation? If yes, these are the unique archival substrate (decades of continuous coverage, V ~8–13); if no, close the question for the record | Geometry study first; archive recon only on a positive answer                                  |
+| 9   | **Heliospheric imagers (SOHO/LASCO, STEREO/HI, PSP/WISPR)**       | Sunward channels (geometry study 2026-08-25: answer YES — coronagraphs are the unique substrate); MW-class power cell; 128 LASCO-era grazing windows on the deep family | **In progress (§5.11)** — LASCO dev stage closed 2026-08-26, 0 candidates; blind confirmatory next |
+
+### 5.9 ATLAS + ASAS-SN (queue item 2)
+
+**Description.** The window coverage-fraction / duty-cycle-beacon
+rung: nightly/quad-nightly all-sky forced photometry (ATLAS o/c
+~19.5, all-sky since 2022, δ > −50° since 2015; ASAS-SN g/V ~18,
+2013–) over the universal crossing windows. The survey's new cell is
+**recurrence** — 22 in-era windows per grazing-rung target, incl. the
+van-maanen b = 0.24 R☉ family lost by PS1 masks and TESS sector
+gaps; recurrence-stacked statistic primary. ATLAS is the workhorse
+for both channels (authenticated arbitrary-position difference-flux
+forced photometry; built-in MPC positive control); ASAS-SN's role is
+narrowed by its access model (Sky Patrol v2 anonymous but
+catalogued-sources-only) to on-star channel A plus a
+coverage-fraction ledger; v1 is reCaptcha-gated — a manual
+instrument for pre-registered follow-ups only.
+
+**Status.** Paused. Reachability recon
+(`surveys/atlas-asassn-crossings/notes/atlas_asassn_recon_2026-08-25.md`)
+and hypothesis freeze v1.0 (D1–D8, incl. the wolf-359 `forced_dev`
+remedy for pre-freeze data contact) done 2026-08-25. The **coverage
+stage is deferred until execution moves to a server** — the ~176
+full-history ATLAS positions are a days-long serial per-account
+queue drain needing better uptime than the dev machine. Resume
+checklist: `surveys/atlas-asassn-crossings/notes/server_migration_resume.md`
+(only non-git item: the `.env` ATLAS token).
+
+**Result.** None yet — no survey-position data searched.
+
+### 5.10 PTF/iPTF (queue item 3)
+
+**Description.** IRSA IBE level-1 epochal images, 2009-03 → 2015-01
+(2.8M CCD exposures; late iPTF was never publicly released), g +
+Mould R, on a scie-direct substrate (no public difference images;
+level-2 reference coadds are annotation inputs only). PS1-era-parallel
+from a different site, cadence and filter set: the covered-window
+record's first **independent re-observations of PS1-era windows**,
+including the van-maanen April deep-graze family (b 0.27–0.37 R☉)
+that PS1 lost to chip-gap masks. Adapter
+`sglsurvey/adapters/irsa_ptf.py`; the archive publishes MD5s and
+served 710/710 cutout fetches with zero 404s — the
+highest-integrity interface in the programme so far.
+
+**Status.** Complete — recon, hypothesis freeze v1.0 (D1–D8),
+coverage, threshold freeze, dev and blind confirmatory + completeness
+all 2026-08-26, entirely on the dev machine. One amendment (v1.1:
+384-px cutout calibrator support — a surface-density fix, statistics
+untouched). Report `report/ptf_crossings.md`; execution log
+`notes/project_history.md` §10; recon
+`surveys/ptf-crossings/notes/ptf_recon_2026-08-26.md`.
+
+**Result.** **0 candidates** (blind confirmatory 6 units / 10
+trials, 0 exceedances vs 1.11 expected control crossings). First
+pre-2015 constraint on the photosphere-grazing cell: relay power
+≳ ≈190 W (van-maanen 2011 b = 0.28 R☉, g) / ≲110 W (ross-128, R)
+through the 2.5 R☉ cone in the covered windows; kW-class (8–30 kW)
+0.1 AU-cone limits across the 2009–2013 recurrences; the
+recurrence-stack cell closes clean on 4 units (m90 20.6–≥22.0 AB);
+the B 1.2 R☉ rung is structurally uncovered (coverage-without-
+statistic ledger). Dev also resolved gj-1276 A constraint-only at
+the frozen offset gate — campaign cadence defeats on-star temporal
+controls (lesson recorded, report §4).
+
+### 5.11 Heliospheric imagers (queue item 9; SOHO/LASCO first)
+
+**Description.** The sunward channel combinations, excluded from
+every prior survey and revisited by the 2026-08-25 geometry study
+(answer **YES**): S1 downlink post-lens (apparent source = the
+solar-limb graze point at 19′–40′) and S2 uplink past the Sun (star
+at ε ≤ 5.7° for the 0.1 AU rung) are confined to ε ≲ 6° for every
+frozen rung except the 1 AU uplink outer skirt — coronagraphs and
+heliospheric imagers are the **unique substrate**; MW-class power
+cell. LASCO C2/C3 first (SDAC/NRL anonymous trees, 1996–2026) with a
+mandatory SOHO observer list — the L1 halo offset is 0.93 R☉, so
+`crossings/soho_v1` was built (10,714 events; grazing-family
+|Δb| ≤ 0.21 R☉ vs Earth-center, membership unchanged; the van-maanen
+October family deepens to b ≈ 0.13 R☉); 128 LASCO-era grazing
+windows on the van-maanen/wolf-359/teegarden/gj-1276 family.
+
+**Status.** In progress — dev closed, blind confirmatory next.
+Chain: geometry study + LASCO recon + `soho_v1` + hypotheses v1.0 +
+coverage 2026-08-25 (S1 1.2 R☉ `not_constrainable` behind the C2
+occulter; S1 2.5 R☉ 148/153 windows covered+visible in the
+[2.2, 2.5] R☉ wings; 0.1 AU rungs 96–98 % covered at ~1,000 C3
+frames/window); threshold freeze v1.0 + amendments v1.1/v1.2 and
+**dev stage closed 2026-08-26**. Next: blind confirmatory (14
+units) under the frozen v1.0+v1.1+v1.2 chain; then STEREO HI-1 (own
+observer list) and WISPR (PSP geometry pass). Survey docs:
+`surveys/heliospheric-crossings/`.
+
+**Result (dev; confirmatory pending).** 0 candidates — 11 trials,
+1 exceedance vs 1.2 expected: ross-154's z = 20–32 events lay on the
+exact 8-year Venus synodic cycle (ephemeris-verified stray light,
+vetoed); ross-128's exceedance was the 2015 St. Patrick's Day CME
+storm window (adjudicated control-crossing, retained). Positive
+control achieved in-situ: gj-908 (V 8.98) detected window-locked at
+the predicted S2 position and nulled by the stellar template.
+
+### 5.12 GALEX/gPhoton (queue item 4)
+
+**Description.** The UV pulse-period cell: GALEX time-tagged
+photons (5 ms stamps) from the gPhoton photon database at MAST,
+2003-06 → 2013-05, queried at arbitrary positions over the
+universal crossing windows. Recon (2026-08-26) found the grazing
+rungs (1.2/2.5 R☉, ±0.35 d windows) **structurally uncovered** by
+GALEX's sparse visit cadence — they enter the ledger as
+coverage-without-statistic — while the **0.1 AU rung** (±5.8 d
+windows) has 5 usable in-window units at 4 target-channels
+(gj-1276 B 2007+2010 incl. a 1.6 ks NUV visit; wolf-359 A,
+gj-1276 A, ross-128 A), 4 with simultaneous FUV — the programme's
+first two-band photon-level units, in the pre-ZTF 2007–2010 era.
+Substrate = direct photon-event counting from the DB (no images);
+photon pull verified in-window (1,695 NUV photons, ms-tick stamps).
+Earth-center `universal_v1` valid (LEO, standing 0.010 R☉ budget).
+
+**Status.** **Complete** — recon, hypothesis freeze v1.0 (D1–D8),
+amendments v1.1 (aspect `flag % 2` gate; restores the 1.6 ks
+gj-1276 B 2010 visit from the pervasive flag-64 state, astrometry
+verified) and v1.2 (S_period tick-jitter — the 5 ms/200 Hz
+quantization artifact), coverage (47 snapshots; 5 units / 2,045
+NUV s confirmed; grazing rungs 0 covered), threshold freeze v1.0,
+dev stage (ZP_eff 19.592 ± 0.088; background 0.209 cts/s/8″;
+segment gate → gj-1276 A both bands + wolf-359 A FUV
+constraint-only, family 5 band-units / 15 trials; wolf-359 flares =
+in-situ positive control + FRED templates), blind confirmatory,
+completeness and report — all 2026-08-26, entirely on the dev
+machine. Report `report/galex_crossings.md`; execution log
+`notes/project_history.md` §11; survey docs
+`surveys/galex-crossings/`.
+
+**Result.** **0 candidates** (15 frozen trials, 14 effective;
+**1 exceedance vs 1.56 expected control crossings** — the wolf-359
+A NUV 5-photon 0.5 s burst, adjudicated retained-ambiguous: flare
+veto cannot positively fire at that fluence, no in-archive
+recurrence window; micro-flare leading, recorded for any future UV
+mission able to re-cover a wolf-359 window). First UV constraints
+of the programme: persistent relays ≳ 20–33 kW through the 0.1 AU
+cone in the covered 2007–2010 windows (NUV m90 21.3–21.9, FUV
+≈ 21.2–21.8; wolf-359 variability-limited at ≈ 415 kW); single UV
+pulses ≳ 1.7 MW (0.5 s) / 17 MW (0.05 s) peak; **coherent pulse
+trains P = 0.5–50 s ≳ ≈ 6 kW time-averaged** on the 1.6 ks gj-1276
+B 2010 window — the programme's first sub-second-cadence crossing
+constraint; 266 nm (quadrupled Nd:YAG) the first in-band harmonic
+of the 1064 nm family covered anywhere in the programme.
 
 ## 6. Future projects (both pipelines)
 

@@ -1,0 +1,58 @@
+{
+  "era_utc": [
+    "2003-06-07T05:02:17.995",
+    "2013-05-01T18:02:22.995"
+  ],
+  "z_grid_au": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+  ],
+  "ladder": {
+    "A": [
+      0.1
+    ],
+    "B": [
+      0.0056,
+      0.0116,
+      0.1
+    ]
+  },
+  "usable_arcmin": 33.0,
+  "discovery_margin_arcmin": 40.0,
+  "gates": "boresight <= 33 arcmin, aspect flag == 0, per-band live seconds by band substring; freeze v1.0 sections 2/7",
+  "summary": {
+    "A": {
+      "0.1": {
+        "n_events": 70,
+        "n_covered": 3,
+        "covered_units": [
+          "gj-1276 2007-09-05",
+          "ross-128 2007-03-17",
+          "wolf-359 2007-03-03"
+        ]
+      }
+    },
+    "B": {
+      "0.0056": {
+        "n_events": 39,
+        "n_covered": 0,
+        "covered_units": []
+      },
+      "0.0116": {
+        "n_events": 49,
+        "n_covered": 0,
+        "covered_units": []
+      },
+      "0.1": {
+        "n_events": 69,
+        "n_covered": 1,
+        "covered_units": [
+          "gj-1276 2007-03-03"
+        ]
+      }
+    }
+  }
+}

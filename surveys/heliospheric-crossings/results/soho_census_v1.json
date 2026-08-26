@@ -1,0 +1,164 @@
+{
+  "study": "soho_census_v1",
+  "soho_input": "crossings/soho_v1/events.ecsv",
+  "soho_crossings_id": "xng-298d55d0ce6b",
+  "earth_input": "crossings/universal_v1/events.ecsv",
+  "n_soho_events": 10714,
+  "sunward_census_soho": {
+    "S1_downlink_postlens": {
+      "full_soho_1996_2026": {
+        "1.2Rsun": {
+          "events": 117,
+          "targets": 4
+        },
+        "2.5Rsun": {
+          "events": 153,
+          "targets": 5
+        },
+        "0.1AU": {
+          "events": 216,
+          "targets": 7
+        }
+      },
+      "level1_era_to_2017-08": {
+        "1.2Rsun": {
+          "events": 80,
+          "targets": 4
+        },
+        "2.5Rsun": {
+          "events": 107,
+          "targets": 5
+        },
+        "0.1AU": {
+          "events": 150,
+          "targets": 7
+        }
+      },
+      "wispr_era_2018_on": {
+        "1.2Rsun": {
+          "events": 31,
+          "targets": 4,
+          "target_ids": [
+            "gj-1276",
+            "teegarden",
+            "van-maanen",
+            "wolf-359"
+          ]
+        },
+        "2.5Rsun": {
+          "events": 39,
+          "targets": 5,
+          "target_ids": [
+            "gj-1276",
+            "ross-128",
+            "teegarden",
+            "van-maanen",
+            "wolf-359"
+          ]
+        },
+        "0.1AU": {
+          "events": 56,
+          "targets": 7,
+          "target_ids": [
+            "gj-1276",
+            "gj-908",
+            "ross-128",
+            "ross-154",
+            "teegarden",
+            "van-maanen",
+            "wolf-359"
+          ]
+        }
+      }
+    },
+    "S2_uplink_pastsun": {
+      "full_soho_1996_2026": {
+        "0.1AU": {
+          "events": 217,
+          "targets": 7
+        },
+        "1AU": {
+          "events": 2670,
+          "targets": 88
+        }
+      },
+      "level1_era_to_2017-08": {
+        "0.1AU": {
+          "events": 152,
+          "targets": 7
+        },
+        "1AU": {
+          "events": 1870,
+          "targets": 86
+        }
+      },
+      "wispr_era_2018_on": {
+        "0.1AU": {
+          "events": 56,
+          "targets": 7,
+          "target_ids": [
+            "gj-1276",
+            "gj-908",
+            "ross-128",
+            "ross-154",
+            "teegarden",
+            "van-maanen",
+            "wolf-359"
+          ]
+        },
+        "1AU": {
+          "events": 704,
+          "targets": 88
+        }
+      }
+    }
+  },
+  "earth_validation": {
+    "matched_events": 5180,
+    "abs_delta_b": {
+      "median_rsun": 1.0195036096722498,
+      "p95_rsun": 1.997197105117817,
+      "max_rsun": 2.689648796176397
+    },
+    "abs_delta_tca_days": {
+      "median": 0.23105156212113798,
+      "max": 4.968373741954565
+    },
+    "grazing_rung_churn": {
+      "1.2Rsun": {
+        "soho_events": 117,
+        "earth_events_same_era": 122,
+        "soho_targets": [
+          "gj-1276",
+          "teegarden",
+          "van-maanen",
+          "wolf-359"
+        ],
+        "earth_targets_same_era": [
+          "gj-1276",
+          "teegarden",
+          "van-maanen",
+          "wolf-359"
+        ]
+      },
+      "2.5Rsun": {
+        "soho_events": 153,
+        "earth_events_same_era": 153,
+        "soho_targets": [
+          "gj-1276",
+          "ross-128",
+          "teegarden",
+          "van-maanen",
+          "wolf-359"
+        ],
+        "earth_targets_same_era": [
+          "gj-1276",
+          "ross-128",
+          "teegarden",
+          "van-maanen",
+          "wolf-359"
+        ]
+      }
+    }
+  }
+}

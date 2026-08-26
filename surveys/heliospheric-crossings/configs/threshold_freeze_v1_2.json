@@ -1,0 +1,23 @@
+{
+ "freeze": "lasco_sunward_threshold_v1.2",
+ "frozen_utc": "2026-08-26",
+ "supersedes": "threshold_freeze_v1_1.json (sha256:4abc6617...)",
+ "rules": {
+  "s2_source_star_mask_exemption": "star-proximity mask exempts (S2, probe 0, in-window); stellar template models the star",
+  "bright_planet_infov_veto": {
+   "bodies": [
+    "venus",
+    "jupiter"
+   ],
+   "elongation_deg": {
+    "c3": 8.5,
+    "c2": 1.7
+   },
+   "applies_to": "window and baseline epochs"
+  }
+ },
+ "adjudications_dev": {
+  "ross-154|S1_0.1AU": "Venus stray light, 8-yr synodic recurrence (2000/2008/2016/2024), vetoed known-object",
+  "ross-128|S1_2.5Rsun S_event": "CME-storm window 2015-03-17 (St. Patrick day storm), adjudicated control-crossing, retained"
+ }
+}

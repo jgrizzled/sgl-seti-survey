@@ -821,3 +821,64 @@ def build_flux_map_decam(ccd_files, dqmask_path: Path, fatal_mask: int,
         fm.denom, fm.kernel, fm.good, fm.bg = (C_denom, kern, C_goodpix,
                                                float(np.mean(sky_used)))
     return fm
+
+
+PTF_PIX_ARCSEC = 1.01
+
+
+def build_flux_map_ptf(sci_path: Path, msk_path: Path, fatal_mask: int,
+                       band: str, mjd: float, keep_inputs: bool = False,
+                       inject=None) -> FluxMap:
+    """PTF level-1 variant (adapter ``irsa_ptf``): scie-direct, no
+    difference image exists. Inputs are the scie and dmask IBE cutouts
+    on one pixel grid (same center/size request; checked via CRPIX).
+    The dmask is signed int16 on disk and is reinterpreted as the
+    16-bit flag word before the fatal-template test (Laher 2014
+    Table 15, template 65533).
+
+    Per-pixel variance = robust background variance + Poisson term
+    (|sci - sky| / GAIN). PSF FWHM from the header SEEING (numerically
+    pixels ~ arcsec at the 1.01"/pix scale; clipped 1.5-16 px). MAGZP
+    from header MAGZPT where present -- the sampling stage replaces it
+    with the in-frame star calibration, which also absorbs the
+    Gaussian-vs-true-PSF throughput of this estimator. The WCS is
+    RA---TAN-SIP, so the map uses the SIP-aware inverse.
+    """
+    sci, hdr, wcs = _read_fits_any(sci_path)
+    msk, mhdr, _ = _read_fits_any(msk_path)
+    if (abs(mhdr["CRPIX1"] - hdr["CRPIX1"]) > 0.01
+            or abs(mhdr["CRPIX2"] - hdr["CRPIX2"]) > 0.01
+            or mhdr["NAXIS1"] != hdr["NAXIS1"]):
+        raise ValueError("mask cutout grid differs from scie")
+    mcut = (np.asarray(msk).astype(np.int64) & 0xFFFF)
+    unmasked = np.isfinite(sci) & ((mcut & fatal_mask) == 0)
+    gain = float(hdr.get("GAIN", 1.6) or 1.6)
+    pix = sci[unmasked]
+    sky = float(np.median(pix)) if pix.size else 0.0
+    mad = 1.4826 * float(np.median(np.abs(pix - sky))) if pix.size else 1.0
+    bgvar = mad * mad if mad > 0 else 1.0
+    var_pix = bgvar + np.clip(sci - sky, 0.0, None) / gain
+    img = sci
+    if inject is not None:
+        img = np.asarray(inject(img, hdr, wcs), dtype=float)
+    see = float(hdr.get("SEEING", 2.0) or 2.0)
+    fwhm_pix = float(np.clip(see, 1.5, 16.0))
+    flux, var, good_frac, denom, kern, bg = _matched_filter_full(
+        img, var_pix, unmasked, fwhm_pix, True)
+    # MAGZPT can be present-but-blank on non-photometric frames
+    zpt = hdr.get("MAGZPT")
+    fm = FluxMap(flux=flux, var=var, good_frac=good_frac, wcs=wcs,
+                 band=band,
+                 magzp=(float(zpt) if isinstance(zpt, (int, float))
+                        else None),
+                 mjd=mjd, sip=True)
+    fm.fwhm_pix = fwhm_pix
+    fm.fwhm_arcsec = fwhm_pix * PTF_PIX_ARCSEC
+    fm.pix_arcsec = PTF_PIX_ARCSEC
+    fm.sky = sky
+    fm.bg_sigma = mad
+    fm.exptime = float(hdr.get("AEXPTIME", hdr.get("EXPTIME", 60.0)) or 60.0)
+    fm.header = hdr
+    if keep_inputs:
+        fm.denom, fm.kernel, fm.good, fm.bg = denom, kern, unmasked, bg
+    return fm

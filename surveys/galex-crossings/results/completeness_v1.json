@@ -1,0 +1,1260 @@
+{
+  "gj-1276_B_NUV": {
+    "event": "2007-03-03",
+    "live_s": 109,
+    "persistent": [
+      {
+        "rate_cts_s": 0.02,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.04,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.07,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.12,
+        "recovered": 3,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.2,
+        "recovered": 23,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.35,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 1.0,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "pulse": [
+      {
+        "width_s": 0.05,
+        "n_photons": 2,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 3,
+        "recovered": 2,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 4,
+        "recovered": 16,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 2,
+        "recovered": 1,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 3,
+        "recovered": 3,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 4,
+        "recovered": 4,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 5,
+        "recovered": 23,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "train": [
+      {
+        "period_s": 0.05,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 30,
+        "recovered": 4,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 15,
+        "recovered": 4,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 30,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 30,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      }
+    ]
+  },
+  "gj-1276_B_FUV": {
+    "event": "2007-03-03",
+    "live_s": 109,
+    "persistent": [
+      {
+        "rate_cts_s": 0.02,
+        "recovered": 4,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.04,
+        "recovered": 12,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.07,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.12,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.35,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 1.0,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "pulse": [
+      {
+        "width_s": 0.05,
+        "n_photons": 2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 3,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 4,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 3,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 4,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "train": [
+      {
+        "period_s": 0.05,
+        "n_injected": 15,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 30,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 15,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 30,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 15,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 30,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      }
+    ]
+  },
+  "wolf-359_A_NUV": {
+    "event": "2007-03-03",
+    "live_s": 97,
+    "persistent": [
+      {
+        "rate_cts_s": 0.02,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.04,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.07,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.12,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.2,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.35,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.6,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 1.0,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 1.5,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 2.0,
+        "recovered": 1,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 2.5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 3.0,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 4.0,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "pulse": [
+      {
+        "width_s": 0.05,
+        "n_photons": 2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 3,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 4,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 3,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 4,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "train": [
+      {
+        "period_s": 0.05,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 30,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 15,
+        "recovered": 2,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 30,
+        "recovered": 1,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 15,
+        "recovered": 1,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 30,
+        "recovered": 2,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      }
+    ]
+  },
+  "ross-128_A_NUV": {
+    "event": "2007-03-17",
+    "live_s": 110,
+    "persistent": [
+      {
+        "rate_cts_s": 0.02,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.04,
+        "recovered": 2,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.07,
+        "recovered": 17,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.12,
+        "recovered": 24,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.35,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 1.0,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "pulse": [
+      {
+        "width_s": 0.05,
+        "n_photons": 2,
+        "recovered": 1,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 3,
+        "recovered": 18,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 4,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 2,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 3,
+        "recovered": 4,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 4,
+        "recovered": 22,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "train": [
+      {
+        "period_s": 0.05,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 30,
+        "recovered": 3,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 15,
+        "recovered": 3,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 30,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 15,
+        "recovered": 2,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 30,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      }
+    ]
+  },
+  "ross-128_A_FUV": {
+    "event": "2007-03-17",
+    "live_s": 110,
+    "persistent": [
+      {
+        "rate_cts_s": 0.02,
+        "recovered": 18,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.04,
+        "recovered": 23,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.07,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.12,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.35,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 1.0,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "pulse": [
+      {
+        "width_s": 0.05,
+        "n_photons": 2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 3,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 4,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 2,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 3,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 4,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "train": [
+      {
+        "period_s": 0.05,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 30,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 60,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 120,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 30,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 60,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 120,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 30,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 60,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 120,
+        "recovered": 0,
+        "of": 5
+      }
+    ]
+  },
+  "gj-1276_B_NUV_2010_supplement": {
+    "event": "2010-03-03",
+    "live_s": 1637,
+    "persistent_reference_d1a": [
+      {
+        "rate_cts_s": 0.02,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.04,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.07,
+        "recovered": 0,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.12,
+        "recovered": 16,
+        "of": 25
+      },
+      {
+        "rate_cts_s": 0.2,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "pulse": [
+      {
+        "width_s": 0.05,
+        "n_photons": 3,
+        "recovered": 3,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 4,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.05,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 3,
+        "recovered": 4,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 4,
+        "recovered": 24,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 5,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 6,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 8,
+        "recovered": 25,
+        "of": 25
+      },
+      {
+        "width_s": 0.5,
+        "n_photons": 12,
+        "recovered": 25,
+        "of": 25
+      }
+    ],
+    "train": [
+      {
+        "period_s": 0.05,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 30,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 60,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.05,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 30,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 60,
+        "recovered": 4,
+        "of": 5
+      },
+      {
+        "period_s": 0.5,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 15,
+        "recovered": 1,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 30,
+        "recovered": 1,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 5.0,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 50.0,
+        "n_injected": 15,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 50.0,
+        "n_injected": 30,
+        "recovered": 0,
+        "of": 5
+      },
+      {
+        "period_s": 50.0,
+        "n_injected": 60,
+        "recovered": 5,
+        "of": 5
+      },
+      {
+        "period_s": 50.0,
+        "n_injected": 120,
+        "recovered": 5,
+        "of": 5
+      }
+    ]
+  }
+}

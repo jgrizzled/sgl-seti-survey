@@ -659,3 +659,492 @@ guarded colour lines); survey report `report/joint_ps1_ztf.md`
 rewritten in place as the v3 three-archive report, superseding the v2
 text (git history). Plan §4 updated; the §4 three-archive open item
 and learnings §10 items 1 and 3 are closed.
+
+## 9. Heliospheric sunward-channel geometry study (2026-08-25; plan §5.8 item 9 — answer YES)
+
+One-page geometry study answering the question frozen at the ZTF
+crossings freeze: are the two sunward (direction × side) combinations
+*only* visible at small solar elongation? Executed with ATLAS (§5.8
+item 2) paused for the server migration. Script
+`surveys/heliospheric-crossings/scripts/sunward_geometry.py` over
+`crossings/universal_v1` (16,586 events); products
+`results/sunward_geometry_v1.json` + study note
+`notes/sunward_geometry_study_2026-08-25.md` (same subproject).
+
+**Answer: yes — recon justified.** The four combinations partition
+cleanly: searched channels A/B have apparent sources at elongation
+≥ 91.7° (median ~150°); the sunward pair — S1 = downlink post-lens
+(outbound, target side; apparent source = the solar-limb graze point
+at 19′–40′ for the 1.2–2.5 R☉ rungs, independent of Earth's in-beam
+offset) and S2 = uplink past the Sun (inbound, anti-target side;
+source = the star at ε ≈ arcsin(b/1 AU), occulted at b < 1 R☉:
+144 events / 3 targets) — is confined to ε ≲ 6° for every frozen rung
+except the 1 AU uplink outer skirt (ε ≳ 30° twilight-visible, recorded
+as a low-priority channel-A extension). Analytic forms validated
+against the frozen list to ≤ 0.032° on the b ≤ 0.1 AU population
+(673 events, all ε ≤ 3.29° at t_ca). Census: LASCO-era (1996–) S1
+grazing windows 128 (≤ 1.2 R☉) / 160 (≤ 2.5 R☉) on the
+van-maanen/wolf-359/teegarden/gj-1276 (+ross-128) family — ~4× the
+whole ZTF-era channel-B count, minutes cadence, on exactly the family
+lost to PS1 chip-gap masks and TESS sector gaps. Sensitivity framing:
+opens the sunward cell at MW-class power (V ~ 8–13 substrates), not
+deep exclusion. Caveats recorded: L1/SOHO-observer crossing list
+(halo cross-track ~R☉) precedes any grazing freeze; STEREO-A needs its
+own observer list; WISPR needs a PSP-observer geometry pass; S1
+post-lens annulus beam profile is a hypothesis-freeze question.
+Recommended recon order LASCO → STEREO HI-1 → WISPR (deferred). Plan
+§5.8 row 9 updated; recon does not block on the server migration.
+
+**LASCO reachability recon (2026-08-25, same day; recon note
+`surveys/heliospheric-crossings/notes/lasco_recon_2026-08-25.md`,
+star check `scripts/recon_star_check.py` →
+`results/recon_star_check_v1.json`; sample frames
+`runs/heliospheric-crossings/recon/`).** All services anonymous and
+reachable: SDAC `pub/lasco_level05/` (1996-02 → 2025-02, YYMMDD/c2|c3
+plain-HTTP daily trees), NRL `lz/level_05/` mirror (current through
+2026-06; bare top-level listing times out — use dated paths), NRL
+`lz/level_1/` calibrated tree (1996 → 2017-08-31 only: BUNIT MSB,
+derolled solar-north-up, time-corrected), JPL Horizons −21 (SOHO SSB
+vectors at both era ends). Product facts from real frames: level 0.5
+is helioprojective-only WCS, raw DN; C3 Clear 56″/px (contains
+532 nm), C2 synoptic Orange 11.9″/px (532 nm just outside); ~12 min
+modern cadence both cameras; one live silent-truncation fetch failure
+(size+FITS-verify mandatory). Go/no-go validation on a real 19 s L1
+C3 frame: synthetic celestial WCS (Sun RA/Dec + Meeus P-angle +
+CROTA; orientation convention resolved empirically = East left, solar
+north up) pattern-matched 3/3 bright Taurus stars at 0.0/0.4/0.7 px —
+det S/N 1124 (V 1.65) / 759 (V 3.0) / 411 (V 4.3), crude single-frame
+depth ~V 8–9 — and the common translation (−15.6, −2.6) px = 14.6′ ≈
+0.93 R☉ projected is the SOHO halo transverse offset measured
+directly, confirming the observer-list prerequisite. Pre-freeze open
+items in the note (build `crossings/soho_v1` + census re-run; C2
+occulter fate of the 1.2 R☉ rung; coronal-background control design;
+0.1 AU-rung volume policy ~0.5 TB at full cadence → frozen
+subsampling; 2017-09+ star-ZP chain validated against the L1 overlap
+era). Plan §5.8 row 9 updated.
+
+**SOHO-observer crossing list `crossings/soho_v1` (2026-08-25, same
+day; `xng-298d55d0ce6b`).** `sglsurvey/crossings.py` gained
+`--observer soho` / `--fetch-observer soho` on the TESS pattern:
+Horizons −21 SSB vectors, 6 h, 1996-01-01 → 2026-10-01 (stop bounded
+by the Horizons SPK end 2026-10-05, not the universal 2028 window —
+extend at the yearly refresh; table 44,925 rows sha-pinned under
+`crossings/observers/`, SOHO–Earth distance sanity-checked at
+0.008–0.011 AU). 10,714 events, 0 invalid, manifest parity. Census +
+Earth-center validation
+(`surveys/heliospheric-crossings/scripts/soho_census.py` →
+`results/soho_census_v1.json`): sunward grazing pairs shift |Δb|
+median 0.124 / max 0.211 R☉ (TESS-scale, as the recon's measured
+0.93 R☉ halo offset predicted at axis-aligned geometry); large-b
+events shift up to 2.7 R☉ (the 0.01 AU L1 radial offset projected) —
+so wide-rung units must also be defined on this list. Grazing-rung
+membership unchanged (S1 ≤ 1.2 R☉: 117 ev / same 4 targets; ≤ 2.5 R☉:
+153 / same 5); S1 0.1 AU 216 ev / 7 targets. Notable: the van-maanen
+annual October S1 family deepens in the SOHO frame — 2009–2015 events
+drop from b ≈ 0.27 to 0.13–0.23 R☉, strengthening the headline cell.
+Next: hypothesis freeze (remaining pre-freeze items in the recon
+note's addendum).
+
+**Hypothesis freeze v1.0 DRAFTED (2026-08-25, same day;
+`surveys/heliospheric-crossings/hypotheses.md`) — pending user
+approval of decisions D1–D9.** Input pinned to `crossings/soho_v1`;
+channels S1/S2 supersede the universal sunward out-of-scope
+declaration for this survey only. Key frozen-at-draft structure:
+level-0.5 uniform search substrate with level 1 as validation+masks
+(D1); S1 filled-cone windows with the annulus double-passage as an
+adjudication discriminator (D2); radial+temporal detrend layer (D3);
+8 same-radius PA-ring controls primary / temporal pseudo-windows
+secondary (D4); Uranus conjunction passage as positive control (D5);
+full-cadence grazing + 3-hourly 0.1 AU subsampling ≈ 200 GB transient
+(D6); S2 1.0 AU out of scope + S1 1.2 R☉ gated on the measured C2
+inner radius (D7); dev = ross-154/gj-908/ross-128, confirmatory = the
+four grazing-family targets (D8). S2 is an empty-field excess search
+(all seven targets V ≥ 9 > the C3 single-frame limit — no saturation
+cut exists). Pre-freeze data contact verified clean: the three recon
+frames' date lies in zero sunward windows. Declared sensitivity:
+opens the sunward cell at MW-class (0.3–1 MW recurrence-stacked
+downlink through the grazing cones incl. van-maanen 0.13 R☉).
+
+**Hypotheses FROZEN + coverage intersect DONE (2026-08-25, same day;
+freeze v1.0 approved as recommended D1–D9; coverage
+`surveys/heliospheric-crossings/results/coverage_v1.{json,md}`,
+occulter gate `results/occulter_radii_v1.json`, 4,320 listing
+snapshots under `runs/heliospheric-crossings/coverage/`).** Occulter
+annuli measured from level-1 frames across eras: C2 usable
+[2.2, 6.3] R☉ (bright diffraction ring at 1.9–2.0 R☉; occulted core
+NOT zero-filled — the automated valid-pixel metric fails, brightness-
+profile inspection rules), C3 usable [4.4, 29] R☉ (post-1997 core =
+constant fill plateau, MAD 0). Coverage (703 event-rung rows,
+day-granularity from SDAC/NRL dated listings): **S1 1.2 R☉
+not_constrainable (0/117 visible — D7 confirmed, ledgered as
+nominal-covered/occulter-unusable); S1 2.5 R☉ 148/153 covered+visible
+in its [2.2, 2.5] wings (visfrac 0.12–0.25, ~28–60 C2 frames/window,
+29–31 windows/target × 5 targets); 0.1 AU rungs the workhorse —
+S1 208/216, S2 212/217, ~1,000+ C3 frames/window full-cadence,
+visfrac 0.80 (grazing-depth targets, 4.4 R☉ core cut) to 1.00
+(gj-908).** All 23 losses explained: the 1998 attitude-loss gap (one
+full annual generation, family-wide), the 2026-07+ tail past NRL
+currency (refresh-recoverable), 2 isolated day gaps. Next: threshold
+freeze (searchable units 5 C2 + 14 C3; split per D8, seed declared
+there).
+
+**Threshold freeze v1.0 (2026-08-25, same day;
+`surveys/heliospheric-crossings/thresholds.md` +
+`configs/threshold_freeze_v1.json` sha256:919af49c…, seed 20260825).**
+19 searchable units (5 × S1 2.5 R☉ C2 wing-regime + 7 × S1 0.1 AU +
+7 × S2 0.1 AU C3), 43 trials (C2 units 3 statistics, C3 units 2 —
+S_pulse full-cadence-only per D6), expected control crossings 4.8
+(dev 11/1.2, confirmatory 32/3.6). No z-grid exists — both channels'
+predicted positions are z-independent (axis geometry only), z enters
+via the beam-radius rungs alone. Statistics = S_stack (recurrence
+stack, primary) / S_event / S_pulse on detrended series (azimuthal-
+median radial profile subtraction 0.1 R☉ bins → 30 d temporal median
+→ variance rescale k); rule S > max(T,0); T = max over 8 same-radius
+PA-ring controls (ΔPA ±25/50/75/100°), temporal pseudo-windows
+secondary-reported. Gates: ≥ 5-star WCS fit + ZP scatter ≤ 0.2;
+aperture ≥ 90 % valid (catches pylon/edge/telemetry blocks);
+planet-proximity 10 px; ≥ 10 visible epochs/event, ≥ 8 events/stack,
+≥ 200 baseline epochs. Split per D8: dev = ross-154 + gj-908 (S1+S2
+0.1 AU) + ross-128 (S1 2.5 R☉); confirmatory = the four deep-graze
+targets' 12 units + ross-128's two C3 units. Next: dev search.
+
+**Dev stage complete — amendments v1.1 + v1.2 frozen, 0 candidates
+(2026-08-26; `surveys/heliospheric-crossings/results/dev_search_v11.json`,
+engineering log `notes/dev_machinery_log_2026-08-25.md`).** Dev data:
+32,843 frames / 62 GB (keep-alive fetch fix after a 1-connection
+serialization), full measure 0 worker errors, astrometry C2 80.3 %
+(2-star L1 rule) / C3 99.99 %. The frozen v1.0 statistic taken
+literally was numerically invalid (occulted-core fill-plateau epochs
+→ zero formal error); the amended chain (v1.1: astrometry-gated epoch
+validity, ring-differential statistic with night medians +
+baseline-median centring + empirical night σ, measured colour system
+c_C3 = 0.429 mag/(B−V) with per-frame scatter 0.53 → 0.38, S2
+stellar template for V ≤ 12.5 targets, Tycho-2 VT ≤ 11 mask,
+high-background class; v1.2: S2 source-star mask exemption,
+bright-planet in-FOV veto) closed dev at **11 trials, 1 exceedance vs
+1.2 expected**. Adjudications: ross-154 S1's z = 20–32 events lay on
+the exact 8-year Venus synodic cycle (2000/2008/2016/2024, elongation
+5.9–8.0°, ephemeris-verified) — Venus stray light, vetoed; ross-128
+S1 S_event 1.45 vs T 1.20 = the 2015-03-17 St. Patrick's Day CME
+storm window — adjudicated control-crossing, retained. Positive
+control achieved in-situ: gj-908 (V 8.98) detected window-locked at
+the predicted S2 position, modelled by the stellar template, statistic
+null after subtraction. Next: blind confirmatory run (14 units) under
+the frozen v1.0+v1.1+v1.2 chain — fetch, measure, reduce once.
+
+## 10. PTF/iPTF reachability recon (2026-08-26; plan §5.8 item 3)
+
+Live probes from the dev machine, all anonymous
+(`surveys/ptf-crossings/notes/ptf_recon_2026-08-26.md`). The plan
+row's `ptf/products/` path does not exist — the archive is IRSA IBE
+`ptf/images/level1` (epochal CCD exposures; 175 metadata columns
+incl. `pfilename`, MD5 `pchecksum`, full PV WCS + corners, `dmask` +
+`sexcat` ancillaries) and `level2` (reference coadds + uncert +
+depth-of-coverage + PSF per field/filter/chip). Cutout service
+verified (SIP WCS preserved, shifted CRPIX); gid 100 and 101 both
+fetch anonymously; TAP `ptf.ptf_procimg` / `ptf_objects` /
+`ptf_lightcurves` live (per-object variability stats,
+`transient_flag`, sources to R ≈ 21).
+
+Two plan corrections: the public archive spans MJD 54891–57051
+(**2009-03-01 → 2015-01-28**, 2,818,277 CCD exposures — late iPTF
+never released), and there are **no public difference images** →
+warp-direct substrate on the PS1-crossings pattern. Coverage probed
+at all five grazing-family targets (both channels, 0.01° boxes):
+patchy and campaign-driven — teegarden antipode has zero PTF
+coverage; wolf-359/gj-1276 antipodes have epochs but none within
+±3 d of a grazing t_ca. The survey case rests on **van-maanen**
+(346 antipode epochs; the April b 0.27–0.37 R☉ family — deepest of
+the era, destroyed by PS1 chip-gap masks — covered in 2009/2011/2013
+with 9 epochs at closest 0.36 d in 2011) and **ross-128** (254
+antipode epochs, 4 grazing events covered ±3 d), plus 2 on-star
+events each at van-maanen and teegarden. The full in-era window scan
+(24 grazing events per target-channel) closed at recon: 6/10/14
+family events covered at ±1/3/5 d → ~5–7 searched target-channels.
+Timing convention verified from a header (`obsmjd` = shutter-open
+UTC; `t_mid = obsmjd + aexptime/2`). Adapter confirmed mostly-config
+on `irsa_ztf.py`; no server dependency (cutout-scale pulls). Next:
+hypothesis freeze (remaining open items: dmask bit definitions,
+in-window LIMITMAG distribution, photometry chain).
+
+**Freeze prep + hypotheses draft (2026-08-26, later).** Pre-freeze
+homework closed: dmask bits pinned from Laher et al. 2014 Table 15
+(fatal template 65533 — every bit except 2¹ object-detected;
+ancillaries must be selected by `anciltype`, slot order varies);
+off-window depth sampled at 3 fields (30 offset header stamps —
+R LIMITMAG median 21.1, range 19.8–21.7, keyword present in only
+~1/3 of frames → the survey computes its own 5σ depths);
+`photcalflag` measured ≈ 0 at 6/8 scoped positions → field-star ZP
+primary for all frames. Definitive flat-chord era scope
+(`surveys/ptf-crossings/results/era_scope_v0.json`): **the 1.2 R☉
+rung has zero in-window epochs** (closest 0.36 d vs ±0.3 d edge);
+the van-maanen deep-graze family is covered at the 2.5 R☉ rung
+(2011 b = 0.278 R☉, 2 epochs); 9 units with coverage, led by
+van-maanen B 0.1 AU (4 ev / 25 ep) and ross-128 B (2 ev / 67 ep +
+2 ev / 9 ep at 2.5 R☉); teegarden/gj-908/ross-154 antipodes have
+zero PTF epochs. `surveys/ptf-crossings/hypotheses.md` v1.0 DRAFTED
+(PS1-crossings construction, scie-direct substrate, decisions D1–D8
+incl. dev = wolf-359 B + gj-1276 A + ross-128 A, confirmatory = both
+headline B families + van-maanen/teegarden A) — **FROZEN 2026-08-26,
+all D1–D8 approved as recommended**. Next: coverage stage (fresh
+snapshot-disciplined pulls; adapter build on the irsa_ztf pattern).
+
+**Coverage stage complete (2026-08-26, later).** Adapter
+`sglsurvey/adapters/irsa_ptf.py` built and validated (explicit-column
+IBE discovery — the default column set omits fid/WCS/checksums;
+MD5 verification incl. the archive's truncated-achecksum quirk,
+prefix-verified; dmask int16→uint16 reinterpretation; exact-footprint
+smoke test usable at the survey position). Coverage run
+`surveys/ptf-crossings/scripts/coverage_intersect.py` (93 snapshot-
+disciplined discovery boxes, ~12 min): **covered events match the era
+scope exactly** under the full frozen channel definition (the scoping
+scan had omitted the side-of-axis cut — denominators halve, covered
+sets unchanged). B: 1.2 R☉ 0/24 (structurally uncovered, as frozen);
+2.5 R☉ 3/30 — **van-maanen 2011 b = 0.28 R☉ with a same-night g pair
+in-window** + ross-128 ×2; 0.1 AU 7/42 — the full van-maanen April
+recurrence family 2009/2010/2011/2013 incl. `evt-4c4ea2c397` (2010),
+the exact event PS1's chip-gap masks destroyed, now with 2
+independent PTF epochs; ross-128 2012-09 carries 65 epochs / 39
+same-night pairs. A: 0.1 AU 4/42; 1.0 AU 76/513 constraint-only.
+photcalflag≈0 throughout confirms field-star calibration as the only
+chain. Results `surveys/ptf-crossings/results/coverage_v1*`;
+snapshots `runs/ptf-crossings/`. Next: threshold freeze (searched-
+unit population, saturation cut, statistic thresholds), then dev.
+
+**Threshold freeze v1.0 (2026-08-26, later).** Saturation cut
+(`saturation_cut_v1.*`, 86 era targets, frozen rule E_R 14.5 /
+E_g 15.0, Mould-R via Jordi 2006): of the four covered A 0.1 AU
+units **only gj-1276 R survives** — teegarden R 13.73, van-maanen g
+12.40 and ross-128 R 9.86 all excluded-class, as the frozen rule
+anticipated. Threshold freeze
+(`surveys/ptf-crossings/thresholds.md`,
+`configs/threshold_freeze_v1.json` sha256:26e235ee…ef53ae, bound to
+hypotheses + coverage + saturation hashes): **7 searched units, 11
+trials (dev 1 / confirmatory 10), expected control crossings 1.22**.
+Units: van-maanen B 2.5 g (the b = 0.28 R☉ same-night pair, S_event)
++ B 0.1 g/R (2 and 3 events, S_event+S_stack); ross-128 B 2.5 R +
+B 0.1 R (2 events each, S_event+S_stack) + B 0.1 g (45-epoch single
+event); gj-1276 A R (dev). wolf-359 B = single-epoch class (dev);
+substrate = scie-direct with PS1-DR2 field-star ZP gate (≥ 5
+calibrators, scatter ≤ 0.2); controls = 8 ring trajectories (B) / 8
+pseudo-windows (A); veto ladder incl. the same-night repeat test.
+Both headline B families fully confirmatory-blind. Next: dev stage
+(machinery on wolf-359 B + gj-1276 A + ross-128 A, bright-star
+saturation gate, asteroid positive control), then blind confirmatory.
+
+**Dev stage complete (2026-08-26, later;
+`surveys/ptf-crossings/results/dev_search_v1.md`).** Machinery
+validated end-to-end on real data (110/110 cutouts, zero 404s;
+`build_flux_map_ptf` added to `sglsurvey/photometry.py`). Dev-fixed
+realizations: dwarf-locus calibrator restriction (unrestricted PS1
+set inflated ZP scatter to ~0.25; restricted 0.047 on the test
+frame), 256-px cutouts everywhere (128 px held ~2 calibrators at
+these latitudes), asteroid-local calibrator cones. Results: wolf-359
+B single-epoch class clean (S 0.101 vs T 2.099, 8/8 ring controls,
+k chain live); **gj-1276 A resolved constraint-only under the frozen
+offset-validity gate** (1/12 valid offsets — campaign cadence) →
+0 searched dev trials, confirmatory = 10 trials / 1.11 expected
+control crossings, all channel B. Saturation gate: R boundary
+bracketed 12.98(sat)–14.06(clean) vs frozen 14.0 — no amendment;
+g one-sided (no searchable consequence); ross-128 exclusion
+confirmed (bits 8+6 fire at core). Positive control: (8971)
+Leucocephala position-locked in 3/3 exposures, internal RMS
+0.025 mag; +0.24 absolute vs Horizons V + assumed V−R within
+prediction systematics (Horizons response snapshotted); flux scale
+pinned by the PS1-DR2 calibration. Next: blind confirmatory run
+(6 B units / 10 trials) — fetch, measure, reduce once, with
+completeness injections.
+
+**Confirmatory run + completeness + report — SURVEY COMPLETE
+(2026-08-26, later; `report/ptf_crossings.md`).** Blind confirmatory
+(600/600 cutout pairs, zero 404s): **10 trials, 0 exceedances** vs
+1.11 expected control crossings — **0 candidates**; every
+coverage-stage event retained its epochs at measure, k 1.00–1.10.
+One amendment (v1.1, frozen before re-reduction): confirmatory
+cutouts 256 → 384 px — the 256-px support was inoperable at the
+ross-128 antipode (142/144 frames < 5 in-frame calibrators, a
+surface-density failure; calibrator rule and statistics untouched;
+superseded pass kept, van-maanen statistics moved ≤ 0.13). One
+mechanical fix mid-measure: blank in-header MAGZPT on
+non-photometric frames crashed `build_flux_map_ptf` (guarded).
+Completeness (Moffat-β3 stamp-response, 200 draws × 15 mags, no dead
+z): m90 = 21.37 (van-maanen B 2.5 g — the b = 0.28 R☉ unit),
+≥ 22.0 ×3 (censored), 21.61 / 20.58 elsewhere. Physical: the
+photosphere-grazing cell's first pre-2015 constraint — ≈ 190 W
+(van-maanen 2011) / ≲ 110 W (ross-128) through the 2.5 R☉ cone;
+kW-class (8–30 kW) through the 0.1 AU cone across the 2009–2013
+recurrences; recurrence stacks close clean on 4 units. Lessons
+(report §4): calibrator support is a field property; dwarf-locus
+restriction load-bearing; PTF = highest-integrity archive interface
+so far (710/710 fetches, published MD5s); campaign cadence defeats
+on-star temporal controls; side-of-axis matters at scoping.
+
+## 11. GALEX/gPhoton reachability recon (2026-08-26; plan §5.8 item 4)
+
+Queue item 4 started as `surveys/galex-crossings/`: the UV
+pulse-period cell via MAST's gPhoton photon database (recon note
+`surveys/galex-crossings/notes/galex_recon_2026-08-26.md`, era scope
+`results/era_scope_v0.json`). All routes probed live and anonymous
+from the dev machine: the Mashup SQL service
+(`mastcomp.stsci.edu/.../GalexPhotonListQueryTest` — the `mast.`
+host 404s; `fGetTimeRanges` from the old docs does not exist),
+`fGetNearbyAspectEq` (per-second aspect with band + boresight
+distance; `band` is `'FUV/NUV'` when both detectors are on —
+substring-match), the `NUVPhotonsV`/`FUVPhotonsV` photon views
+(ra/dec/time box queries; 5 ms-tick stamps verified), the GR6+7
+MCAT, and MAST CAOM. Photon-DB era measured 2003-06-07 →
+2013-05-01. Era scope: the grazing rungs (1.2/2.5 R☉, ±0.35 d
+windows) are **structurally uncovered** at all 10 grazing-family
+positions — coverage-without-statistic, incl. the van-maanen
+deep-graze family (visits in 2004/2008, none in-window); the
+**0.1 AU rung carries the survey**: 5 usable in-window units at 4
+target-channels (gj-1276 B 2007 + 2010 — the latter a 1,637 s NUV
+visit, photon pull verified: 1,695 photons / 30″ box ≈ 1.0 ct/s
+background; wolf-359 A, gj-1276 A, ross-128 A 2007, each ~100 s
+AIS-length with simultaneous FUV), plus one rim edge case
+(gj-908 A at 36.3′ boresight vs the adopted 33′ cut). Earth-center
+`universal_v1` valid (LEO, the standing 0.010 R☉ budget). Next:
+hypothesis freeze — pre-freeze items are photon-flag semantics, the
+boresight cut, the pulse-statistic calibration route (relative
+Poisson counting vs gAperture/gPhoton2 absolute chain), and an
+M-dwarf flare veto for the three on-star units.
+
+**Hypothesis freeze v1.0 (2026-08-26, same day).** Pre-freeze probes
+(off-window only): `aspect` and `imgrun` schemas pinned; photon flag
+census (100 % flag 0 in 8,621 off-window photons at the gj-1276
+antipode); aspect-correction sanity on an MCAT field star (20,243
+photons, centroid 0.63″ from catalog, RMS 4.2″ ≈ PSF) — with a ×2.6
+raw-rate vs naive-ZP discrepancy recorded as a dev-stage
+live-time/aperture gate. `surveys/galex-crossings/hypotheses.md`
+**FROZEN** (D1–D8 approved as recommended): photon-event substrate
+(flag 0, boresight ≤ 33′, MCAT-star in-visit calibration at the
+≤ 0.2 mag gate); three statistics per unit — S_rate (d = 1),
+S_burst ({0.05, 0.5, 5, 50 s}), S_period (H-test, 20 ms → T_visit/3,
+LEO orbital phase smear carried by the injections, not corrected);
+FUV a search band on the 4 FUV-live units (≤ 27 trials, FWER
+α = 0.05); controls = ≥ 8 same-visit pseudo-positions (z-family
+mirrored) + off-window same-position visits; A-channel M-dwarf
+flare veto (FRED morphology + two-band discriminator; NUV contains
+266 nm = quadrupled Nd:YAG — the programme's first in-band harmonic
+of the 1064 nm family). Pre-freeze contact declared in full,
+remedy D1: the recon's in-window reachability pull at gj-1276 B
+2010 demotes **S_rate only** on that unit to `forced_dev`
+(burst/period stay blind); ross-128 A retained with declaration.
+D8: dev = off-window pseudo-units only; **confirmatory = all 5
+units, blind**. gj-908 A rim-excluded (36.3′ > 33′); A 1.0 AU
+deferred programme-wide. Next: coverage stage under snapshot
+discipline (fresh pulls, exact per-event per-epoch positions).
+
+**Coverage stage + amendment v1.1 (2026-08-26, same day).** Adapter
+`sglsurvey/adapters/mast_gphoton.py` (snapshot-disciplined Mashup SQL
+client) + `surveys/galex-crossings/scripts/coverage_intersect.py`:
+one era-wide aspect discovery query per (channel, target), then exact
+per-event windows with per-second boresight distances to the
+per-event predicted positions (B: apparent relay per z-grid point at
+the visit epoch). 47 snapshots under `runs/galex-crossings/`.
+Population after the side-of-axis filter: A 70 / B 69 events, 7
+targets each. First pass (v1.0 gates) zeroed gj-1276 B 2010: all
+1,637 in-window seconds carry aspect flag 64 — pervasive at that
+field in 2009–2010, while the recon's flag-0 observation was a 2007
+visit. gPhoton's own convention (`PhotonPipe.py` L534–536: usable
+aspect ⇔ `flag % 2 == 0`; the `flagDiv2` column; the recon's 0.63″
+astrometry check ran on flag-64 seconds) established bit 0 as the
+only bad-aspect bit → **amendment v1.1** (user-approved):
+aspect gate `flag % 2 == 0`; v1.0-gate outputs preserved as
+`coverage_v1_flag0_superseded.*`; formal flag-64 astrometric
+verification queued for dev. Result: **the 5 frozen units confirmed
+exactly** (gj-1276 B 2010 1,637 NUV s dmin 23.7′; gj-1276 B 2007
+109 s NUV+FUV at 32.4′; gj-1276 A 92 s; wolf-359 A 97 s; ross-128 A
+110 s — totals 2,045 NUV / 408 FUV s); live seconds z-independent at
+coverage (2–30″ spread ≪ 33′ gate); grazing rungs 0/39 and 0/49
+covered; gj-908 A rim-limited (110 s at 36.3′); teegarden antipode
+archive-empty. Record `results/coverage_v1.md`. Next: threshold
+freeze (trials tally, control-ensemble sizes, dev pseudo-unit
+thresholds), then the blind confirmatory run.
+
+**Threshold freeze v1.0 (2026-08-26, same day).**
+`scripts/freeze_thresholds.py` → `configs/threshold_freeze_v1.json`
+(`sha256:18346431…017e47`), bound to hypotheses v1.0+v1.1 and the
+coverage products; no photon touched. The frozen section-6
+nonlinearity cut ran as its declared MCAT input (snapshotted):
+wolf-359 NUV 19.28 ok, ross-128 21.18 ok, gj-1276 no MCAT source
+within 15″ → ok by construction (per-visit high-PM identification a
+dev item) — no unit lost. Family: **8 searched units (4 NUV + 4
+FUV) × 3 statistics = 24 trials**; unit statistic = max over
+eligible events (S_rate on gj-1276 B 2010 stays forced_dev per
+D1a); statistics made numeric (S_rate cts/s in 8″ apertures with
+the B z-family max; S_burst boxcar z over {0.05,0.5,5,50 s};
+S_period H-test m ≤ 20 on the 5×-oversampled geometric grid
+0.02 s → t_span/3, ≥ 10-photon gate); controls 8 per trial —
+B pseudo-positions at the locus boresight radius (40° spacing, +5°
+MCAT/locus-exclusion rotation rule), A same-duration off-window
+segments (seed 20260826) — threshold T = max over controls,
+exceedance S > max(T, 0), **expected control crossings 2.67**.
+Veto ladder order frozen (flare veto with two-band discriminator
+first; SkyBoT at burst exceedances; detector-fixed clustering;
+recurrence). Next: dev stage on off-window pseudo-units (flag-64
+astrometry, live-time/×2.6 closure + ≤ 0.2 mag MCAT gate, control
+census, flare census, statistic machinery + injections), then the
+blind confirmatory run.
+
+**Dev stage — CLOSED (2026-08-26, same day; `results/dev_v1.md`).**
+Pseudo-units only, off-window guarded (`scripts/dev_stage.py`,
+`galexlib.py`). (i) Flag-64 astrometry PASS — 16 source-blocks,
+median centroid 0.37″, RMS ≈ PSF: the v1.1 premise formally
+verified. (ii) Calibration PASS — ZP_eff 19.592 ± 0.088 over 15
+deduped MCAT calibrators (the catalog carries per-visit duplicate
+rows; dedup at 3″); the recon ×2.6 fully explained (duplicates +
+crude live-time + 0.49 mag aperture/dead-time term); blank sky
+0.209 cts/s per 8″ aperture. (iii) B pseudo-position rule valid
+(0 rotations × 3 blocks); A segment gate assessed → gj-1276 A
+NUV/FUV (4/3 segments; its long visit rim-only) and wolf-359 A FUV
+(0; long visits NUV-only) constraint-only — confirmatory family
+**5 band-units / 15 trials / 1.67 expected control crossings**.
+(iv) Flare census: wolf-359 flared in all 3 long visits (S_burst
+105.7/62.0/14.4; FRED templates rise ≤ 10–20 s, decay 30–40 s,
+contrast to 21.6×; one slow-rise non-FRED event → the two-band
+prong is load-bearing); gj-1276/ross-128 quiet. (v) B pseudo-unit
+(1,381 s flag-64 segment) null-clean on all three statistics; the
+A pseudo-unit drew the 2009-03-25 flare segment and **all three
+statistics fired through the full chain — the conditional positive
+control satisfied in-situ**; injections: persistent m90 ≈ NUV 22.3
+(1.4 ks class), 0.5 s pulse fluence ~5 photons, trains to P = 10 s.
+Dev's structural find: the 5 ms tick (200 Hz) corrupts the H-test
+grid at commensurate harmonics (null H 2,700–3,800 vs ~32) →
+**amendment v1.2** (user-approved, validated first): S_period on
+U(0,5 ms)-jittered times, seed 20260826 — null restored to H 29–38,
+P = 10 s recovery 6/6 at the previously-dead amplitude
+(`results/jitter_validation_v0.json`). Cleared for the blind
+confirmatory run under v1.0+v1.1+v1.2.
+
+**Blind confirmatory + completeness + report — SURVEY COMPLETE
+(2026-08-26, later; `report/galex_crossings.md`).** The first
+sanctioned in-window contact (`scripts/confirmatory_search.py`;
+statistics locked to `results/confirmatory_v1.json` before any
+injection): 5 band-units / 15 frozen trials, 14 effective (ross-128
+A FUV S_period degraded at the frozen 10-photon control gate; its
+S_rate was an exact tie with the control max — strict inequality
+holds). **1 exceedance vs 1.56 expected control crossings — 0
+candidates.** The exceedance (wolf-359 A NUV S_burst 4.68 vs 4.13)
+adjudicated retained-ambiguous: a 5-photon 0.5 s cluster (0.80
+expected) — FRED test unresolved at that fluence, two-band
+discriminator powerless (0.067 FUV expected), strict ≤ 25′ re-run
+unchanged, asteroid excluded by timescale, no in-archive recurrence
+window; leading interpretation an ordinary CN Leo micro-flare
+(within the star's measured off-window burst activity). D1a lane
+reported: 0.235 cts/s at the 2010 locus ≈ background. Completeness
+(photon-level injections vs locked thresholds; supplement for the
+1,637 s 2010 event + wolf-359's variability-inflated grid):
+persistent m90 NUV 21.3–21.9 (wolf-359 18.6, variability-limited),
+FUV ≈ 21.2–21.8 (nominal-ZP budget) → **20–33 kW through the 0.1 AU
+cone** (415 kW at wolf-359); pulses 90 % at 4–5 photons →
+≳ 1.7 MW (0.5 s) / 17 MW (0.05 s) peak; **coherent trains
+P = 0.5–50 s at 60 photons / 0.037 cts/s ≈ 6 kW time-averaged on
+the 2010 window — the programme's first sub-second-cadence
+crossing constraint** (120 photons at P = 0.05 s, drift smear
+carried). Lessons (report §4): read flag conventions from pipeline
+source; jitter discretized time stamps; dedupe the MCAT; control
+supply is per-band; on-star flare-star units want a design-time
+two-band fluence gate. The wolf-359 burst is recorded for any
+future UV mission able to re-cover a window; ledger rows queued for
+the §5.7 refresh.

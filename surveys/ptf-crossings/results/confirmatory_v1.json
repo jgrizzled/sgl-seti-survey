@@ -1,0 +1,314 @@
+{
+ "n_trials_run": 10,
+ "n_exceedances": 0,
+ "expected_control_crossings": 1.11,
+ "units": [
+  {
+   "target_id": "ross-128",
+   "band": "R",
+   "radius_au": 0.0116,
+   "n_off_usable": 129,
+   "k_rescale": 1.0,
+   "k_status": "ok_n115",
+   "calibration_gate_failures": {
+    "gate_scatter": 4
+   },
+   "events_usable_epochs": {
+    "evt-20efe2b70f8a": 7,
+    "evt-3f7ad50e70e1": 2
+   },
+   "multi_epoch_events": [
+    "evt-20efe2b70f8a",
+    "evt-3f7ad50e70e1"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 1.581,
+     "n_controls": 8,
+     "controls": [
+      2.252,
+      2.251,
+      1.902,
+      2.61,
+      1.821,
+      1.944,
+      -0.205,
+      0.072
+     ],
+     "T": 2.61,
+     "margin": -1.029,
+     "exceedance": false
+    },
+    "S_stack": {
+     "status": "ok",
+     "S": 1.252,
+     "n_controls": 8,
+     "controls": [
+      1.796,
+      1.822,
+      1.817,
+      2.243,
+      1.703,
+      2.176,
+      -0.205,
+      -0.33
+     ],
+     "T": 2.243,
+     "margin": -0.991,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 46.38
+  },
+  {
+   "target_id": "ross-128",
+   "band": "R",
+   "radius_au": 0.1,
+   "n_off_usable": 129,
+   "k_rescale": 1.0,
+   "k_status": "ok_n115",
+   "calibration_gate_failures": {
+    "gate_scatter": 4,
+    "gate_ncal": 2
+   },
+   "events_usable_epochs": {
+    "evt-20efe2b70f8a": 18,
+    "evt-3f7ad50e70e1": 2
+   },
+   "multi_epoch_events": [
+    "evt-20efe2b70f8a",
+    "evt-3f7ad50e70e1"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 2.757,
+     "n_controls": 8,
+     "controls": [
+      2.54,
+      5.112,
+      3.795,
+      5.484,
+      2.935,
+      3.735,
+      -0.205,
+      1.584
+     ],
+     "T": 5.484,
+     "margin": -2.728,
+     "exceedance": false
+    },
+    "S_stack": {
+     "status": "ok",
+     "S": 2.559,
+     "n_controls": 8,
+     "controls": [
+      2.273,
+      4.864,
+      3.571,
+      5.261,
+      2.694,
+      3.87,
+      -0.205,
+      1.403
+     ],
+     "T": 5.261,
+     "margin": -2.702,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 46.38
+  },
+  {
+   "target_id": "ross-128",
+   "band": "g",
+   "radius_au": 0.1,
+   "n_off_usable": 49,
+   "k_rescale": 1.099,
+   "k_status": "ok_n48",
+   "calibration_gate_failures": {
+    "gate_ncal": 6
+   },
+   "events_usable_epochs": {
+    "evt-20efe2b70f8a": 44
+   },
+   "multi_epoch_events": [
+    "evt-20efe2b70f8a"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 3.862,
+     "n_controls": 8,
+     "controls": [
+      3.352,
+      4.12,
+      4.515,
+      5.121,
+      2.765,
+      5.095,
+      1.841,
+      0.914
+     ],
+     "T": 5.121,
+     "margin": -1.258,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 14.35
+  },
+  {
+   "target_id": "van-maanen",
+   "band": "g",
+   "radius_au": 0.0116,
+   "n_off_usable": 39,
+   "k_rescale": 1.074,
+   "k_status": "ok_n38",
+   "calibration_gate_failures": {},
+   "events_usable_epochs": {
+    "evt-5c45890fa28c": 2
+   },
+   "multi_epoch_events": [
+    "evt-5c45890fa28c"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 1.446,
+     "n_controls": 8,
+     "controls": [
+      -0.596,
+      1.07,
+      1.372,
+      0.427,
+      2.156,
+      0.352,
+      0.834,
+      -0.284
+     ],
+     "T": 2.156,
+     "margin": -0.71,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 8.23
+  },
+  {
+   "target_id": "van-maanen",
+   "band": "R",
+   "radius_au": 0.1,
+   "n_off_usable": 280,
+   "k_rescale": 1.0,
+   "k_status": "ok_n257",
+   "calibration_gate_failures": {
+    "gate_ncal": 1
+   },
+   "events_usable_epochs": {
+    "evt-4c4ea2c39734": 2,
+    "evt-5c45890fa28c": 4,
+    "evt-91843280452f": 3
+   },
+   "multi_epoch_events": [
+    "evt-4c4ea2c39734",
+    "evt-5c45890fa28c",
+    "evt-91843280452f"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 2.019,
+     "n_controls": 8,
+     "controls": [
+      1.562,
+      2.25,
+      3.61,
+      0.599,
+      1.359,
+      1.0,
+      1.471,
+      17.807
+     ],
+     "T": 17.807,
+     "margin": -15.788,
+     "exceedance": false
+    },
+    "S_stack": {
+     "status": "ok",
+     "S": 1.505,
+     "n_controls": 8,
+     "controls": [
+      1.639,
+      1.646,
+      0.825,
+      -0.323,
+      0.714,
+      0.444,
+      1.335,
+      8.135
+     ],
+     "T": 8.135,
+     "margin": -6.63,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 3.01
+  },
+  {
+   "target_id": "van-maanen",
+   "band": "g",
+   "radius_au": 0.1,
+   "n_off_usable": 39,
+   "k_rescale": 1.0,
+   "k_status": "ok_n38",
+   "calibration_gate_failures": {},
+   "events_usable_epochs": {
+    "evt-3bd927de6a38": 4,
+    "evt-5c45890fa28c": 12
+   },
+   "multi_epoch_events": [
+    "evt-3bd927de6a38",
+    "evt-5c45890fa28c"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 1.192,
+     "n_controls": 8,
+     "controls": [
+      0.963,
+      3.155,
+      1.677,
+      0.96,
+      1.399,
+      0.579,
+      1.888,
+      0.626
+     ],
+     "T": 3.155,
+     "margin": -1.963,
+     "exceedance": false
+    },
+    "S_stack": {
+     "status": "ok",
+     "S": 0.947,
+     "n_controls": 8,
+     "controls": [
+      -0.189,
+      2.978,
+      1.472,
+      0.963,
+      1.005,
+      0.42,
+      1.155,
+      0.04
+     ],
+     "T": 2.978,
+     "margin": -2.031,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 3.18
+  }
+ ]
+}

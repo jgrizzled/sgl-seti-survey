@@ -1,0 +1,359 @@
+{
+ "product": "ptf-crossings era scope v0",
+ "date": "2026-08-26",
+ "inputs": {
+  "crossings": "crossings/universal_v1 (xng-a09e2db7681d)",
+  "era_mjd": [
+   54891.0,
+   57051.0
+  ],
+  "era_note": "measured global span of IRSA ptf.ptf_procimg (2,818,277 rows): 2009-03-01 to 2015-01-28",
+  "epoch_lists": "IBE level1 POS/SIZE=0.02 deg OVERLAPS queries at per-era representative star/antipode positions, 2026-08-26 (recon scratchpad; coverage stage re-pulls under snapshot discipline)"
+ },
+ "window_model": "flat-chord t_ca +- sqrt(r^2-b_min^2)/v_perp per event (ZTF freeze construction)",
+ "no_coverage_positions": [
+  "teegarden antipode",
+  "gj-908 antipode",
+  "ross-154 antipode",
+  "ross-154 star"
+ ],
+ "units": [
+  {
+   "target_id": "van-maanen",
+   "channel": "B",
+   "rung": "B_1.2Rsun",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 346,
+   "covered_events": []
+  },
+  {
+   "target_id": "van-maanen",
+   "channel": "B",
+   "rung": "B_2.5Rsun",
+   "events_in_era": 12,
+   "events_covered": 1,
+   "in_window_epochs_total": 2,
+   "position_epochs_total": 346,
+   "covered_events": [
+    {
+     "event_id": "evt-5c45890fa28c",
+     "t_ca_mjd": 55654.6738,
+     "b_min_rsun": 0.278,
+     "window_full_d": 1.34,
+     "in_window_epochs": 2
+    }
+   ]
+  },
+  {
+   "target_id": "van-maanen",
+   "channel": "B",
+   "rung": "B_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 4,
+   "in_window_epochs_total": 25,
+   "position_epochs_total": 346,
+   "covered_events": [
+    {
+     "event_id": "evt-3bd927de6a38",
+     "t_ca_mjd": 54924.1588,
+     "b_min_rsun": 0.285,
+     "window_full_d": 11.63,
+     "in_window_epochs": 4
+    },
+    {
+     "event_id": "evt-4c4ea2c39734",
+     "t_ca_mjd": 55289.4214,
+     "b_min_rsun": 0.282,
+     "window_full_d": 11.63,
+     "in_window_epochs": 2
+    },
+    {
+     "event_id": "evt-5c45890fa28c",
+     "t_ca_mjd": 55654.6738,
+     "b_min_rsun": 0.278,
+     "window_full_d": 11.62,
+     "in_window_epochs": 16
+    },
+    {
+     "event_id": "evt-91843280452f",
+     "t_ca_mjd": 56385.194,
+     "b_min_rsun": 0.272,
+     "window_full_d": 11.63,
+     "in_window_epochs": 3
+    }
+   ]
+  },
+  {
+   "target_id": "van-maanen",
+   "channel": "A",
+   "rung": "A_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 1,
+   "in_window_epochs_total": 11,
+   "position_epochs_total": 133,
+   "covered_events": [
+    {
+     "event_id": "evt-9971bcd26bfd",
+     "t_ca_mjd": 56936.9534,
+     "b_min_rsun": 0.356,
+     "window_full_d": 11.63,
+     "in_window_epochs": 11
+    }
+   ]
+  },
+  {
+   "target_id": "wolf-359",
+   "channel": "B",
+   "rung": "B_1.2Rsun",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 55,
+   "covered_events": []
+  },
+  {
+   "target_id": "wolf-359",
+   "channel": "B",
+   "rung": "B_2.5Rsun",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 55,
+   "covered_events": []
+  },
+  {
+   "target_id": "wolf-359",
+   "channel": "B",
+   "rung": "B_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 1,
+   "in_window_epochs_total": 1,
+   "position_epochs_total": 55,
+   "covered_events": [
+    {
+     "event_id": "evt-86fd5e8fad87",
+     "t_ca_mjd": 56905.5014,
+     "b_min_rsun": 0.746,
+     "window_full_d": 11.72,
+     "in_window_epochs": 1
+    }
+   ]
+  },
+  {
+   "target_id": "wolf-359",
+   "channel": "A",
+   "rung": "A_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 28,
+   "covered_events": []
+  },
+  {
+   "target_id": "teegarden",
+   "channel": "B",
+   "rung": "B_1.2Rsun",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 0,
+   "covered_events": []
+  },
+  {
+   "target_id": "teegarden",
+   "channel": "B",
+   "rung": "B_2.5Rsun",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 0,
+   "covered_events": []
+  },
+  {
+   "target_id": "teegarden",
+   "channel": "B",
+   "rung": "B_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 0,
+   "covered_events": []
+  },
+  {
+   "target_id": "teegarden",
+   "channel": "A",
+   "rung": "A_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 1,
+   "in_window_epochs_total": 24,
+   "position_epochs_total": 44,
+   "covered_events": [
+    {
+     "event_id": "evt-1e4e9102a62d",
+     "t_ca_mjd": 55508.5001,
+     "b_min_rsun": 1.146,
+     "window_full_d": 11.5,
+     "in_window_epochs": 24
+    }
+   ]
+  },
+  {
+   "target_id": "gj-1276",
+   "channel": "B",
+   "rung": "B_1.2Rsun",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 28,
+   "covered_events": []
+  },
+  {
+   "target_id": "gj-1276",
+   "channel": "B",
+   "rung": "B_2.5Rsun",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 28,
+   "covered_events": []
+  },
+  {
+   "target_id": "gj-1276",
+   "channel": "B",
+   "rung": "B_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 28,
+   "covered_events": []
+  },
+  {
+   "target_id": "gj-1276",
+   "channel": "A",
+   "rung": "A_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 1,
+   "in_window_epochs_total": 3,
+   "position_epochs_total": 95,
+   "covered_events": [
+    {
+     "event_id": "evt-4b29abd25d25",
+     "t_ca_mjd": 55443.9852,
+     "b_min_rsun": 0.854,
+     "window_full_d": 11.71,
+     "in_window_epochs": 3
+    }
+   ]
+  },
+  {
+   "target_id": "ross-128",
+   "channel": "B",
+   "rung": "B_2.5Rsun",
+   "events_in_era": 12,
+   "events_covered": 2,
+   "in_window_epochs_total": 9,
+   "position_epochs_total": 254,
+   "covered_events": [
+    {
+     "event_id": "evt-3f7ad50e70e1",
+     "t_ca_mjd": 55459.0895,
+     "b_min_rsun": 1.842,
+     "window_full_d": 0.92,
+     "in_window_epochs": 2
+    },
+    {
+     "event_id": "evt-20efe2b70f8a",
+     "t_ca_mjd": 56189.6056,
+     "b_min_rsun": 1.843,
+     "window_full_d": 0.92,
+     "in_window_epochs": 7
+    }
+   ]
+  },
+  {
+   "target_id": "ross-128",
+   "channel": "B",
+   "rung": "B_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 2,
+   "in_window_epochs_total": 67,
+   "position_epochs_total": 254,
+   "covered_events": [
+    {
+     "event_id": "evt-3f7ad50e70e1",
+     "t_ca_mjd": 55459.0895,
+     "b_min_rsun": 1.842,
+     "window_full_d": 11.64,
+     "in_window_epochs": 2
+    },
+    {
+     "event_id": "evt-20efe2b70f8a",
+     "t_ca_mjd": 56189.6056,
+     "b_min_rsun": 1.843,
+     "window_full_d": 11.63,
+     "in_window_epochs": 65
+    }
+   ]
+  },
+  {
+   "target_id": "ross-128",
+   "channel": "A",
+   "rung": "A_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 1,
+   "in_window_epochs_total": 4,
+   "position_epochs_total": 25,
+   "covered_events": [
+    {
+     "event_id": "evt-0fe2dc025a77",
+     "t_ca_mjd": 56368.4979,
+     "b_min_rsun": 1.806,
+     "window_full_d": 11.53,
+     "in_window_epochs": 4
+    }
+   ]
+  },
+  {
+   "target_id": "gj-908",
+   "channel": "B",
+   "rung": "B_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 0,
+   "covered_events": []
+  },
+  {
+   "target_id": "gj-908",
+   "channel": "A",
+   "rung": "A_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 60,
+   "covered_events": []
+  },
+  {
+   "target_id": "ross-154",
+   "channel": "B",
+   "rung": "B_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 0,
+   "covered_events": []
+  },
+  {
+   "target_id": "ross-154",
+   "channel": "A",
+   "rung": "A_0.1AU",
+   "events_in_era": 12,
+   "events_covered": 0,
+   "in_window_epochs_total": 0,
+   "position_epochs_total": 0,
+   "covered_events": []
+  }
+ ]
+}

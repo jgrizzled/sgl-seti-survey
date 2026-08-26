@@ -1,0 +1,180 @@
+{
+  "study": "sunward_geometry_v1",
+  "events_input": "crossings/universal_v1/events.ecsv",
+  "crossings_id": "xng-a09e2db7681d",
+  "combo_counts": {
+    "A": 4169,
+    "B": 4124,
+    "S1_downlink_postlens": 4169,
+    "S2_uplink_pastsun": 4124
+  },
+  "elongation_validation": {
+    "A": {
+      "n": 4169,
+      "elongation_deg": {
+        "min": 92.2069502275824,
+        "median": 150.44728593833997,
+        "max": 179.91474309053243
+      },
+      "residual_vs_analytic_deg": {
+        "median_abs": 0.316448356722006,
+        "max_abs": 8.488568415691972
+      }
+    },
+    "B": {
+      "n": 4124,
+      "elongation_deg": {
+        "min": 91.68494751585216,
+        "median": 151.72649423334687,
+        "max": 179.9371408106515
+      },
+      "residual_vs_analytic_deg": {
+        "median_abs": 0.28846622571369096,
+        "max_abs": 8.957318056465922
+      }
+    },
+    "S1_downlink_postlens": {
+      "n": 4169,
+      "elongation_deg": {
+        "min": 0.06236563476622695,
+        "median": 29.506679190780243,
+        "max": 87.7000298546883
+      },
+      "residual_vs_analytic_deg": {
+        "median_abs": 0.3014908523262889,
+        "max_abs": 8.39362978338562
+      }
+    },
+    "S2_uplink_pastsun": {
+      "n": 4124,
+      "elongation_deg": {
+        "min": 0.08644486488543116,
+        "median": 28.190539191542516,
+        "max": 88.23987427933257
+      },
+      "residual_vs_analytic_deg": {
+        "median_abs": 0.2969733552764495,
+        "max_abs": 8.877662107038077
+      }
+    }
+  },
+  "sunward_census": {
+    "S1_downlink_postlens": {
+      "full_list_1980_2028": {
+        "1.2Rsun": {
+          "events": 192,
+          "targets": 4
+        },
+        "2.5Rsun": {
+          "events": 240,
+          "targets": 5
+        },
+        "0.1AU": {
+          "events": 336,
+          "targets": 7
+        }
+      },
+      "lasco_1996_on": {
+        "1.2Rsun": {
+          "events": 128,
+          "targets": 4
+        },
+        "2.5Rsun": {
+          "events": 160,
+          "targets": 5
+        },
+        "0.1AU": {
+          "events": 224,
+          "targets": 7
+        }
+      },
+      "stereo_hi_2007_on": {
+        "1.2Rsun": {
+          "events": 83,
+          "targets": 4
+        },
+        "2.5Rsun": {
+          "events": 103,
+          "targets": 5
+        },
+        "0.1AU": {
+          "events": 145,
+          "targets": 7
+        }
+      },
+      "wispr_2018_on": {
+        "1.2Rsun": {
+          "events": 37,
+          "targets": 4,
+          "target_ids": [
+            "gj-1276",
+            "teegarden",
+            "van-maanen",
+            "wolf-359"
+          ]
+        },
+        "2.5Rsun": {
+          "events": 46,
+          "targets": 5,
+          "target_ids": [
+            "gj-1276",
+            "ross-128",
+            "teegarden",
+            "van-maanen",
+            "wolf-359"
+          ]
+        },
+        "0.1AU": {
+          "events": 64,
+          "targets": 7
+        }
+      }
+    },
+    "S2_uplink_pastsun": {
+      "full_list_1980_2028": {
+        "0.1AU": {
+          "events": 337,
+          "targets": 7
+        },
+        "1AU": {
+          "events": 4124,
+          "targets": 85
+        }
+      },
+      "lasco_1996_on": {
+        "0.1AU": {
+          "events": 224,
+          "targets": 7
+        },
+        "1AU": {
+          "events": 2743,
+          "targets": 85
+        }
+      },
+      "stereo_hi_2007_on": {
+        "0.1AU": {
+          "events": 145,
+          "targets": 7
+        },
+        "1AU": {
+          "events": 1783,
+          "targets": 85
+        }
+      },
+      "wispr_2018_on": {
+        "0.1AU": {
+          "events": 64,
+          "targets": 7
+        },
+        "1AU": {
+          "events": 803,
+          "targets": 85
+        }
+      },
+      "occulted_at_tca_full_list": {
+        "criterion_b_lt_1Rsun": 144,
+        "targets": 3
+      }
+    }
+  }
+}

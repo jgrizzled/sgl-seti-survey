@@ -1,0 +1,21 @@
+{
+  "crossings_id": "xng-298d55d0ce6b",
+  "generated_utc": "2026-08-25T19:57:42+00:00",
+  "observer_id": "soho-spacecraft",
+  "n_targets": 88,
+  "n_events": 10714,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:196"
+  ],
+  "files": {
+    "events_ecsv": "crossings/soho_v1/events.ecsv",
+    "windows_ecsv": "crossings/soho_v1/windows.ecsv",
+    "result_json": "crossings/soho_v1/result.json",
+    "manifest_json": "crossings/soho_v1/manifest.json"
+  },
+  "observer_table": "crossings/observers/soho_sc_ephemeris.npz",
+  "observer_table_sha256": "sha256:4115c06b293559e209af241a7b52cb64d83b1d5f8f89e4325976b022cb2029af",
+  "observer_accuracy": "JPL Horizons -21 SSB vectors at 6 h sampling; the ~178 d L1 halo period makes linear-interpolation error negligible (<< 0.001 R_sun). SOHO's halo cross-track amplitude ~0.9 R_sun (measured in the LASCO recon star check) invalidates the Earth-center list at grazing impact parameters, which this run corrects"
+}

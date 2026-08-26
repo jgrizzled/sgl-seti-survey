@@ -1,0 +1,343 @@
+{
+  "survey": "galex-crossings",
+  "version": "threshold_freeze_v1.0",
+  "date": "2026-08-26",
+  "bound_hashes": {
+    "hypotheses.md": "sha256:8c7b412945b5253539375d2fe644c48040172ae72edc5bd869824b70d9b69312",
+    "results/coverage_v1_events.ecsv": "sha256:ac563d05dddc55dc74966b260e8e3d9cc50e15d1ded3a526dade1760824a21ff",
+    "results/coverage_v1_summary.json": "sha256:7249e08f837de826905358aa74c572da3c15fd22153b88194e7053ff5ffa4921",
+    "results/coverage_v1.md": "sha256:36265042ec2d7011f6ee91f19bba7397668f073b3bd6737cceb5956e6442752d"
+  },
+  "statistics": {
+    "aperture_arcsec": 8.0,
+    "S_rate": "in-aperture photons / usable live seconds; B: max over deduplicated z-grid apertures; unit statistic = max over eligible events",
+    "S_burst": {
+      "widths_s": [
+        0.05,
+        0.5,
+        5.0,
+        50.0
+      ],
+      "step": "width/2",
+      "z": "(C_max - lam*w)/sqrt(max(lam*w, 0.5)), lam = N_tot/t_live",
+      "statistic": "max over widths, then events"
+    },
+    "S_period": {
+      "grid": "geometric, P_min 0.02 s to t_span/3, delta(1/P) = 1/(5*t_span)",
+      "test": "H-test (de Jager), m <= 20",
+      "min_photons": 10,
+      "orbital_smear": "not corrected; carried by injections (freeze s4)"
+    }
+  },
+  "controls": {
+    "n": 8,
+    "rule": "T = max over controls; exceedance S > max(T, 0)",
+    "B": {
+      "construction": "pseudo-positions, same visit, locus boresight radius, angles locus + k*40 deg",
+      "rotate_step_deg": 5.0,
+      "mcat_exclusion": [
+        30.0,
+        21.0
+      ],
+      "locus_exclusion_arcsec": 60.0,
+      "apertures": "full z-family pattern, translated"
+    },
+    "A": {
+      "construction": "8 same-duration contiguous usable segments from the star's off-window visits; time-ordered, equally spaced, non-overlapping",
+      "off_window": "outside every in-era 0.1 AU window of the target-channel",
+      "seed": 20260826,
+      "insufficient": "constraint-only"
+    }
+  },
+  "forced_dev_rate_events": [
+    [
+      "gj-1276",
+      "B",
+      "2010-03-03"
+    ]
+  ],
+  "nonlinearity_cut": "results/nonlinearity_cut_v1.json",
+  "units": [
+    {
+      "target_id": "gj-1276",
+      "channel": "A",
+      "band": "NUV",
+      "events": [
+        [
+          "2007-09-05",
+          92
+        ]
+      ],
+      "statistics": [
+        {
+          "name": "S_rate",
+          "events": [
+            "2007-09-05"
+          ]
+        },
+        {
+          "name": "S_burst",
+          "events": [
+            "2007-09-05"
+          ]
+        },
+        {
+          "name": "S_period",
+          "events": [
+            "2007-09-05"
+          ],
+          "gate": "min 10 photons"
+        }
+      ],
+      "status": "confirmatory",
+      "trials": 3
+    },
+    {
+      "target_id": "gj-1276",
+      "channel": "A",
+      "band": "FUV",
+      "events": [
+        [
+          "2007-09-05",
+          92
+        ]
+      ],
+      "statistics": [
+        {
+          "name": "S_rate",
+          "events": [
+            "2007-09-05"
+          ]
+        },
+        {
+          "name": "S_burst",
+          "events": [
+            "2007-09-05"
+          ]
+        },
+        {
+          "name": "S_period",
+          "events": [
+            "2007-09-05"
+          ],
+          "gate": "min 10 photons"
+        }
+      ],
+      "status": "confirmatory",
+      "trials": 3
+    },
+    {
+      "target_id": "gj-1276",
+      "channel": "B",
+      "band": "NUV",
+      "events": [
+        [
+          "2007-03-03",
+          109
+        ],
+        [
+          "2010-03-03",
+          1637
+        ]
+      ],
+      "statistics": [
+        {
+          "name": "S_rate",
+          "events": [
+            "2007-03-03"
+          ]
+        },
+        {
+          "name": "S_burst",
+          "events": [
+            "2007-03-03",
+            "2010-03-03"
+          ]
+        },
+        {
+          "name": "S_period",
+          "events": [
+            "2007-03-03",
+            "2010-03-03"
+          ],
+          "gate": "min 10 photons"
+        }
+      ],
+      "status": "confirmatory",
+      "trials": 3
+    },
+    {
+      "target_id": "gj-1276",
+      "channel": "B",
+      "band": "FUV",
+      "events": [
+        [
+          "2007-03-03",
+          109
+        ]
+      ],
+      "statistics": [
+        {
+          "name": "S_rate",
+          "events": [
+            "2007-03-03"
+          ]
+        },
+        {
+          "name": "S_burst",
+          "events": [
+            "2007-03-03"
+          ]
+        },
+        {
+          "name": "S_period",
+          "events": [
+            "2007-03-03"
+          ],
+          "gate": "min 10 photons"
+        }
+      ],
+      "status": "confirmatory",
+      "trials": 3
+    },
+    {
+      "target_id": "ross-128",
+      "channel": "A",
+      "band": "NUV",
+      "events": [
+        [
+          "2007-03-17",
+          110
+        ]
+      ],
+      "statistics": [
+        {
+          "name": "S_rate",
+          "events": [
+            "2007-03-17"
+          ]
+        },
+        {
+          "name": "S_burst",
+          "events": [
+            "2007-03-17"
+          ]
+        },
+        {
+          "name": "S_period",
+          "events": [
+            "2007-03-17"
+          ],
+          "gate": "min 10 photons"
+        }
+      ],
+      "status": "confirmatory",
+      "trials": 3
+    },
+    {
+      "target_id": "ross-128",
+      "channel": "A",
+      "band": "FUV",
+      "events": [
+        [
+          "2007-03-17",
+          110
+        ]
+      ],
+      "statistics": [
+        {
+          "name": "S_rate",
+          "events": [
+            "2007-03-17"
+          ]
+        },
+        {
+          "name": "S_burst",
+          "events": [
+            "2007-03-17"
+          ]
+        },
+        {
+          "name": "S_period",
+          "events": [
+            "2007-03-17"
+          ],
+          "gate": "min 10 photons"
+        }
+      ],
+      "status": "confirmatory",
+      "trials": 3
+    },
+    {
+      "target_id": "wolf-359",
+      "channel": "A",
+      "band": "NUV",
+      "events": [
+        [
+          "2007-03-03",
+          97
+        ]
+      ],
+      "statistics": [
+        {
+          "name": "S_rate",
+          "events": [
+            "2007-03-03"
+          ]
+        },
+        {
+          "name": "S_burst",
+          "events": [
+            "2007-03-03"
+          ]
+        },
+        {
+          "name": "S_period",
+          "events": [
+            "2007-03-03"
+          ],
+          "gate": "min 10 photons"
+        }
+      ],
+      "status": "confirmatory",
+      "trials": 3
+    },
+    {
+      "target_id": "wolf-359",
+      "channel": "A",
+      "band": "FUV",
+      "events": [
+        [
+          "2007-03-03",
+          97
+        ]
+      ],
+      "statistics": [
+        {
+          "name": "S_rate",
+          "events": [
+            "2007-03-03"
+          ]
+        },
+        {
+          "name": "S_burst",
+          "events": [
+            "2007-03-03"
+          ]
+        },
+        {
+          "name": "S_period",
+          "events": [
+            "2007-03-03"
+          ],
+          "gate": "min 10 photons"
+        }
+      ],
+      "status": "confirmatory",
+      "trials": 3
+    }
+  ],
+  "n_trials": 24,
+  "expected_control_crossings": 2.667,
+  "split": "D8: dev = off-window pseudo-units only; confirmatory = all listed units, blind"
+}

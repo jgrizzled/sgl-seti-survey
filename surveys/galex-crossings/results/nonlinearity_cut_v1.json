@@ -1,0 +1,42 @@
+{
+  "rule": {
+    "excluded_brighter_than": 14.5,
+    "marginal_brighter_than": 15.5,
+    "match_arcsec": 15.0
+  },
+  "stars": [
+    {
+      "target_id": "gj-1276",
+      "ra_deg": 343.475,
+      "dec_deg": -6.7825,
+      "mcat_objid": null,
+      "match_arcsec": null,
+      "nuv_mag": null,
+      "fuv_mag": null,
+      "class": "ok",
+      "note": "no MCAT NUV source within 15.0\" (high-PM M dwarf; per-visit positions verified at dev)"
+    },
+    {
+      "target_id": "wolf-359",
+      "ra_deg": 164.1165,
+      "dec_deg": 7.012,
+      "mcat_objid": "6381893378366243403",
+      "match_arcsec": 13.06116367772556,
+      "nuv_mag": 19.27609,
+      "fuv_mag": 20.65438,
+      "class": "ok",
+      "note": ""
+    },
+    {
+      "target_id": "ross-128",
+      "ra_deg": 176.9356,
+      "dec_deg": 0.8033,
+      "mcat_objid": "6379113779683135353",
+      "match_arcsec": 1.8257667900609964,
+      "nuv_mag": 21.17987,
+      "fuv_mag": null,
+      "class": "ok",
+      "note": ""
+    }
+  ]
+}

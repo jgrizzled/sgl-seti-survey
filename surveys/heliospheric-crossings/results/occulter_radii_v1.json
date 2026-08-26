@@ -1,0 +1,81 @@
+{
+  "samples": {
+    "c2_970601": {
+      "inner_rsun_valid_gt50": 0.0,
+      "ring_peak_rsun": 2.0,
+      "inner_rsun_usable": 2.2,
+      "outer_rsun_usable": 1.5420387390729584,
+      "rsun_px": 80.41302521008403,
+      "frame": "25014355.fts.gz"
+    },
+    "c2_040601": {
+      "inner_rsun_valid_gt50": 0.0,
+      "ring_peak_rsun": 2.0,
+      "inner_rsun_usable": 2.2,
+      "outer_rsun_usable": 6.3239183604175215,
+      "rsun_px": 80.32994277403361,
+      "frame": "25171670.fts.gz"
+    },
+    "c2_100615": {
+      "inner_rsun_valid_gt50": 0.0,
+      "ring_peak_rsun": 2.0,
+      "inner_rsun_usable": 2.2,
+      "outer_rsun_usable": 6.334175405680589,
+      "rsun_px": 80.19986303890757,
+      "frame": "25335598.fts.gz"
+    },
+    "c2_150101": {
+      "inner_rsun_valid_gt50": 0.0,
+      "ring_peak_rsun": 1.9000000000000001,
+      "inner_rsun_usable": 2.1,
+      "outer_rsun_usable": 6.131502741537396,
+      "rsun_px": 82.85081511235295,
+      "frame": "25531586.fts"
+    },
+    "c3_970601": {
+      "inner_rsun_valid_gt50": 4.2,
+      "ring_peak_rsun": 4.2,
+      "inner_rsun_usable": 4.4,
+      "outer_rsun_usable": 16.61998913179785,
+      "rsun_px": 17.087857142857143,
+      "frame": "35015286.fts.gz"
+    },
+    "c3_100615": {
+      "inner_rsun_valid_gt50": 0.0,
+      "ring_peak_rsun": 0.0,
+      "inner_rsun_usable": 0.2,
+      "outer_rsun_usable": 29.807884262026302,
+      "rsun_px": 17.042470895767856,
+      "frame": "35227531.fts.gz"
+    },
+    "c3_150101": {
+      "inner_rsun_valid_gt50": 0.0,
+      "ring_peak_rsun": 0.0,
+      "inner_rsun_usable": 0.2,
+      "outer_rsun_usable": 28.854130548411277,
+      "rsun_px": 17.605798211375,
+      "frame": "35405550.fts"
+    }
+  },
+  "c2": {
+    "inner_rsun_adopted_max": 2.2,
+    "outer_rsun_adopted_min": 1.5420387390729584,
+    "n_samples": 4
+  },
+  "c3": {
+    "inner_rsun_adopted_max": 4.4,
+    "outer_rsun_adopted_min": 16.61998913179785,
+    "n_samples": 3
+  },
+  "adopted": {
+    "c2_rsun": [
+      2.2,
+      6.3
+    ],
+    "c3_rsun": [
+      4.4,
+      29.0
+    ]
+  },
+  "note": "valid = finite & nonzero on L1 frames; automated metrics are era-heterogeneous (fill conventions differ) \u2014 the 'adopted' block is the freeze gate input, rationale in comments here"
+}

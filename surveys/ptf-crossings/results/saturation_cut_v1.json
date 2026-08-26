@@ -1,0 +1,26 @@
+{
+  "rule": {
+    "excluded_below": {
+      "R": 14.5,
+      "g": 15.0
+    },
+    "marginal_width": 0.5,
+    "transform_accuracy_mag": 0.3,
+    "R_transform": "Jordi 2006: R = r - 0.153(r-i) - 0.117"
+  },
+  "n_targets": 86,
+  "g": {
+    "excluded": 73,
+    "marginal": 4,
+    "ok": 9,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 2
+  },
+  "R": {
+    "excluded": 80,
+    "marginal": 1,
+    "ok": 5,
+    "no_photometry": 0,
+    "surviving_covered_event_rows": 6
+  }
+}

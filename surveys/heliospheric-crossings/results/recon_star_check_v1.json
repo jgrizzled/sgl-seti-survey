@@ -1,0 +1,74 @@
+{
+  "frame": "c3_L1_35227512.fts.gz",
+  "date_obs": "2010-06-15T00:18:05.165",
+  "sun_radec_geocentric": [
+    83.1127,
+    23.2868
+  ],
+  "p_angle_deg": -9.853,
+  "crota_deg": -0.225998,
+  "platescale_arcsec": 56.0,
+  "search_halfwidth_px": 30,
+  "orientations": {
+    "rot+1_x+1": {
+      "n_matched_lt_4px": 3,
+      "translation_px": [
+        -15.6,
+        -2.6
+      ],
+      "stars": [
+        {
+          "star": "bet-tau",
+          "V": 1.65,
+          "resid_px": 0.0,
+          "det_snr": 1123.8
+        },
+        {
+          "star": "zet-tau",
+          "V": 3.01,
+          "resid_px": 0.4,
+          "det_snr": 758.8
+        },
+        {
+          "star": "119-tau",
+          "V": 4.32,
+          "resid_px": 0.7,
+          "det_snr": 410.9
+        }
+      ]
+    },
+    "rot+1_x-1": {
+      "n_matched_lt_4px": 1,
+      "translation_px": [
+        -2.2,
+        17.4
+      ],
+      "stars": [
+        {
+          "star": "bet-tau",
+          "V": 1.65,
+          "resid_px": 0.0,
+          "det_snr": 62.8
+        },
+        {
+          "star": "zet-tau",
+          "V": 3.01,
+          "resid_px": 48.3,
+          "det_snr": 36.8
+        },
+        {
+          "star": "119-tau",
+          "V": 4.32,
+          "resid_px": 85.0,
+          "det_snr": 61.1
+        }
+      ]
+    },
+    "rot-1_x+1": {
+      "n_matched": 0
+    },
+    "rot-1_x-1": {
+      "n_matched": 0
+    }
+  }
+}

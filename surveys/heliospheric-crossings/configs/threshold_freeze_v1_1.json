@@ -1,0 +1,383 @@
+{
+ "freeze": "lasco_sunward_threshold_v1.1",
+ "frozen_utc": "2026-08-26",
+ "supersedes": "threshold_freeze_v1.json (sha256:919af49c...)",
+ "amendment_basis": "dev findings L1-L4, notes/dev_machinery_log_2026-08-25.md",
+ "epoch_validity": {
+  "astrom_min_stars": {
+   "c2": 2,
+   "c3": 5
+  },
+  "aperture_valid_min": 0.9,
+  "err_floor_rel": 0.05,
+  "planet_exclusion_px": 10,
+  "star_mask": {
+   "catalog": "tyc2_v11.npz VT<=11",
+   "npz_sha256": "48c1f62897ec335e4a2877f432215439f59aec9d821e8039bf09f96b2703fdbb",
+   "radius_px": 3
+  },
+  "per_frame_zp_gate": "retired for search inclusion (L2)"
+ },
+ "statistic": {
+  "construction": "ring-differential, night medians, baseline-median centring, empirical night sigma",
+  "ref": "thresholds.md Amendment v1.1 item 2",
+  "rule": "S > max(T, 0); T = max over 8 PA rings; S/ring-MAD reported"
+ },
+ "color_system": {
+  "c_c3_mag_per_bv": 0.429,
+  "c_c2_mag_per_bv": 0.2858,
+  "c3_scatter_after": 0.384,
+  "depths": "per-window ensemble ZP + colour correction + declared scale systematic"
+ },
+ "s2_stellar_template": {
+  "v_max": 12.5,
+  "targets_v_bv": {
+   "gj-908": [
+    8.98,
+    1.49
+   ],
+   "ross-154": [
+    10.44,
+    1.7
+   ],
+   "ross-128": [
+    11.15,
+    1.75
+   ],
+   "van-maanen": [
+    12.37,
+    0.55
+   ],
+   "wolf-359": [
+    13.53,
+    2.03
+   ],
+   "teegarden": [
+    15.1,
+    2.0
+   ],
+   "gj-1276": [
+    16.0,
+    2.0
+   ]
+  },
+  "note": "V/B-V catalog values; verified at completeness"
+ },
+ "high_background_units": [
+  "ross-154|S1_0.1AU",
+  "ross-154|S2_0.1AU"
+ ],
+ "inherited": {
+  "seed": 20260825,
+  "controls": {
+   "primary": "pa_ring",
+   "ring_dpa_deg": [
+    -100,
+    -75,
+    -50,
+    -25,
+    25,
+    50,
+    75,
+    100
+   ],
+   "secondary": "temporal_pseudo_windows",
+   "pseudo_offsets_days": [
+    -97,
+    -71,
+    -47,
+    -23,
+    23,
+    47,
+    71,
+    97
+   ],
+   "expected_control_crossings_per_trial": 0.1111111111111111
+  },
+  "gates": {
+   "min_stars_wcs_fit": 5,
+   "zp_scatter_max_mag": 0.2,
+   "exptime_max_factor": 2.0,
+   "aperture_valid_min": 0.9,
+   "planet_exclusion_px": 10,
+   "min_visible_epochs_per_event": 10,
+   "min_events_for_stack": 8,
+   "min_offwindow_epochs": 200
+  },
+  "subsampling": {
+   "c2": "full_cadence",
+   "c3": "3h_first_frame_per_bin",
+   "offwindow": "1_per_day_pm110d"
+  },
+  "units": [
+   {
+    "target_id": "gj-1276",
+    "unit": "S1_2.5Rsun",
+    "camera": "c2",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 242.0,
+    "visible_fraction": 0.134,
+    "statistics": [
+     "S_stack",
+     "S_event",
+     "S_pulse"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "ross-128",
+    "unit": "S1_2.5Rsun",
+    "camera": "c2",
+    "n_events_covered_visible": 31,
+    "median_frames_per_window": 228.0,
+    "visible_fraction": 0.247,
+    "statistics": [
+     "S_stack",
+     "S_event",
+     "S_pulse"
+    ],
+    "role": "dev"
+   },
+   {
+    "target_id": "teegarden",
+    "unit": "S1_2.5Rsun",
+    "camera": "c2",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 227.0,
+    "visible_fraction": 0.15,
+    "statistics": [
+     "S_stack",
+     "S_event",
+     "S_pulse"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "van-maanen",
+    "unit": "S1_2.5Rsun",
+    "camera": "c2",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 243.5,
+    "visible_fraction": 0.123,
+    "statistics": [
+     "S_stack",
+     "S_event",
+     "S_pulse"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "wolf-359",
+    "unit": "S1_2.5Rsun",
+    "camera": "c2",
+    "n_events_covered_visible": 30,
+    "median_frames_per_window": 239.0,
+    "visible_fraction": 0.133,
+    "statistics": [
+     "S_stack",
+     "S_event",
+     "S_pulse"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "gj-1276",
+    "unit": "S1_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 1127.0,
+    "visible_fraction": 0.799,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "gj-908",
+    "unit": "S1_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 1028.0,
+    "visible_fraction": 1.0,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "dev"
+   },
+   {
+    "target_id": "ross-128",
+    "unit": "S1_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 31,
+    "median_frames_per_window": 1232.0,
+    "visible_fraction": 0.811,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "ross-154",
+    "unit": "S1_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 651.0,
+    "visible_fraction": 0.867,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "dev"
+   },
+   {
+    "target_id": "teegarden",
+    "unit": "S1_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 30,
+    "median_frames_per_window": 1300.0,
+    "visible_fraction": 0.801,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "van-maanen",
+    "unit": "S1_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 1250.0,
+    "visible_fraction": 0.796,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "wolf-359",
+    "unit": "S1_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 31,
+    "median_frames_per_window": 1253.0,
+    "visible_fraction": 0.798,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "gj-1276",
+    "unit": "S2_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 31,
+    "median_frames_per_window": 1140.0,
+    "visible_fraction": 0.799,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "gj-908",
+    "unit": "S2_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 31,
+    "median_frames_per_window": 919.0,
+    "visible_fraction": 1.0,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "dev"
+   },
+   {
+    "target_id": "ross-128",
+    "unit": "S2_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 1272.0,
+    "visible_fraction": 0.814,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "ross-154",
+    "unit": "S2_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 30,
+    "median_frames_per_window": 1205.0,
+    "visible_fraction": 0.86,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "dev"
+   },
+   {
+    "target_id": "teegarden",
+    "unit": "S2_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 31,
+    "median_frames_per_window": 919.0,
+    "visible_fraction": 0.801,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "van-maanen",
+    "unit": "S2_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 31,
+    "median_frames_per_window": 1215.0,
+    "visible_fraction": 0.796,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   },
+   {
+    "target_id": "wolf-359",
+    "unit": "S2_0.1AU",
+    "camera": "c3",
+    "n_events_covered_visible": 29,
+    "median_frames_per_window": 1192.0,
+    "visible_fraction": 0.798,
+    "statistics": [
+     "S_stack",
+     "S_event"
+    ],
+    "role": "confirmatory"
+   }
+  ],
+  "trials": {
+   "total": 43,
+   "dev": 11,
+   "confirmatory": 32,
+   "expected_control_crossings_total": 4.78
+  },
+  "occulter_annuli_rsun": {
+   "c2_rsun": [
+    2.2,
+    6.3
+   ],
+   "c3_rsun": [
+    4.4,
+    29.0
+   ]
+  }
+ }
+}

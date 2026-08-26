@@ -1,0 +1,231 @@
+{
+ "n_trials_run": 5,
+ "n_exceedances": 0,
+ "expected_control_crossings": 0.56,
+ "units": [
+  {
+   "target_id": "ross-128",
+   "band": "R",
+   "radius_au": 0.0116,
+   "n_off_usable": 0,
+   "k_rescale": 1.0,
+   "k_status": "undefined_n0",
+   "calibration_gate_failures": {
+    "gate_ncal": 142
+   },
+   "events_usable_epochs": {
+    "evt-20efe2b70f8a": 0,
+    "evt-3f7ad50e70e1": 0
+   },
+   "multi_epoch_events": [],
+   "statistics": {
+    "S_event": {
+     "status": "constraint_only_gate_failed_at_measure"
+    },
+    "S_stack": {
+     "status": "constraint_only_gate_failed_at_measure"
+    }
+   },
+   "static_min_arcsec": 46.38
+  },
+  {
+   "target_id": "ross-128",
+   "band": "R",
+   "radius_au": 0.1,
+   "n_off_usable": 0,
+   "k_rescale": 1.0,
+   "k_status": "undefined_n0",
+   "calibration_gate_failures": {
+    "gate_ncal": 155
+   },
+   "events_usable_epochs": {
+    "evt-20efe2b70f8a": 0,
+    "evt-3f7ad50e70e1": 0
+   },
+   "multi_epoch_events": [],
+   "statistics": {
+    "S_event": {
+     "status": "constraint_only_gate_failed_at_measure"
+    },
+    "S_stack": {
+     "status": "constraint_only_gate_failed_at_measure"
+    }
+   },
+   "static_min_arcsec": 46.38
+  },
+  {
+   "target_id": "ross-128",
+   "band": "g",
+   "radius_au": 0.1,
+   "n_off_usable": 0,
+   "k_rescale": 1.0,
+   "k_status": "undefined_n0",
+   "calibration_gate_failures": {
+    "gate_ncal": 99
+   },
+   "events_usable_epochs": {
+    "evt-20efe2b70f8a": 0
+   },
+   "multi_epoch_events": [],
+   "statistics": {
+    "S_event": {
+     "status": "constraint_only_gate_failed_at_measure"
+    }
+   },
+   "static_min_arcsec": 14.35
+  },
+  {
+   "target_id": "van-maanen",
+   "band": "g",
+   "radius_au": 0.0116,
+   "n_off_usable": 39,
+   "k_rescale": 1.079,
+   "k_status": "ok_n38",
+   "calibration_gate_failures": {},
+   "events_usable_epochs": {
+    "evt-5c45890fa28c": 2
+   },
+   "multi_epoch_events": [
+    "evt-5c45890fa28c"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 1.331,
+     "n_controls": 8,
+     "controls": [
+      -0.705,
+      0.957,
+      1.259,
+      0.316,
+      2.041,
+      0.237,
+      0.722,
+      -0.395
+     ],
+     "T": 2.041,
+     "margin": -0.71,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 8.23
+  },
+  {
+   "target_id": "van-maanen",
+   "band": "R",
+   "radius_au": 0.1,
+   "n_off_usable": 256,
+   "k_rescale": 1.0,
+   "k_status": "ok_n245",
+   "calibration_gate_failures": {
+    "gate_ncal": 16,
+    "gate_scatter": 9
+   },
+   "events_usable_epochs": {
+    "evt-4c4ea2c39734": 2,
+    "evt-5c45890fa28c": 4,
+    "evt-91843280452f": 3
+   },
+   "multi_epoch_events": [
+    "evt-4c4ea2c39734",
+    "evt-5c45890fa28c",
+    "evt-91843280452f"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 2.0,
+     "n_controls": 8,
+     "controls": [
+      1.543,
+      2.21,
+      3.567,
+      0.565,
+      1.347,
+      0.97,
+      1.441,
+      17.689
+     ],
+     "T": 17.689,
+     "margin": -15.689,
+     "exceedance": false
+    },
+    "S_stack": {
+     "status": "ok",
+     "S": 1.46,
+     "n_controls": 8,
+     "controls": [
+      1.585,
+      1.626,
+      0.797,
+      -0.349,
+      0.68,
+      0.427,
+      1.309,
+      8.011
+     ],
+     "T": 8.011,
+     "margin": -6.551,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 3.01
+  },
+  {
+   "target_id": "van-maanen",
+   "band": "g",
+   "radius_au": 0.1,
+   "n_off_usable": 39,
+   "k_rescale": 1.0,
+   "k_status": "ok_n38",
+   "calibration_gate_failures": {},
+   "events_usable_epochs": {
+    "evt-3bd927de6a38": 4,
+    "evt-5c45890fa28c": 12
+   },
+   "multi_epoch_events": [
+    "evt-3bd927de6a38",
+    "evt-5c45890fa28c"
+   ],
+   "statistics": {
+    "S_event": {
+     "status": "ok",
+     "S": 1.138,
+     "n_controls": 8,
+     "controls": [
+      0.909,
+      3.036,
+      1.561,
+      0.831,
+      1.267,
+      0.523,
+      1.761,
+      0.568
+     ],
+     "T": 3.036,
+     "margin": -1.898,
+     "exceedance": false
+    },
+    "S_stack": {
+     "status": "ok",
+     "S": 0.816,
+     "n_controls": 8,
+     "controls": [
+      -0.323,
+      2.847,
+      1.346,
+      0.825,
+      0.863,
+      0.308,
+      1.019,
+      -0.103
+     ],
+     "T": 2.847,
+     "margin": -2.03,
+     "exceedance": false
+    }
+   },
+   "static_min_arcsec": 3.18
+  }
+ ]
+}

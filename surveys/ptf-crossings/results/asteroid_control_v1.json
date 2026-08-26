@@ -1,0 +1,53 @@
+{
+ "asteroid": {
+  "number": 8971,
+  "name": "Leucocephala"
+ },
+ "vr_assumed": 0.4,
+ "vr_class_scatter": 0.1,
+ "n_epochs": 3,
+ "epochs": [
+  {
+   "mjd": 55866.17107,
+   "expid": 207320,
+   "V_pred": 18.8,
+   "R_pred": 18.4,
+   "R_meas": 18.736,
+   "resid": 0.336,
+   "n_cal": 8,
+   "V_horizons": 18.893,
+   "resid_vs_horizons": 0.243
+  },
+  {
+   "mjd": 55866.11285,
+   "expid": 207224,
+   "V_pred": 18.8,
+   "R_pred": 18.4,
+   "R_meas": 18.768,
+   "resid": 0.368,
+   "n_cal": 8,
+   "V_horizons": 18.893,
+   "resid_vs_horizons": 0.275
+  },
+  {
+   "mjd": 55866.21396,
+   "expid": 207328,
+   "V_pred": 18.8,
+   "R_pred": 18.4,
+   "R_meas": 18.706,
+   "resid": 0.306,
+   "n_cal": 8,
+   "V_horizons": 18.893,
+   "resid_vs_horizons": 0.213
+  }
+ ],
+ "median_resid": 0.336,
+ "resid_rms": 0.025,
+ "horizons_check": {
+  "V_apparent": 18.893,
+  "source": "JPL Horizons API, site 675, snapshotted",
+  "median_resid_vs_horizons": 0.243,
+  "internal_rms": 0.025,
+  "verdict": "chain validated: position-locked recovery at S/N >> 10, internal RMS 0.025 mag across independently calibrated exposures (<= 0.1 gate); absolute offset +0.24 vs Horizons V + assumed V-R 0.4 is within the combined prediction systematics (H +/-0.2, color class +/-0.1, rotation phase) and the flux scale is independently pinned by the PS1-DR2 star calibration (median ZP scatter 0.085, 72 frames); no chain defect. Recommendation for any stricter absolute control: an asteroid with known taxonomy/rotation or comparison to PS1 catalog photometry of the same object."
+ }
+}

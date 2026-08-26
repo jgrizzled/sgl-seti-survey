@@ -28,6 +28,12 @@ same request with a per-epoch observer (plan §11.2 step 4):
   LEO offset declared as a budget (a coarse-sampled table of a 95-min
   orbit would be no more accurate than Earth center; the per-frame
   route via L2 headers is a survey-stage task).
+* ``--observer soho`` — a JPL Horizons SSB vector table (spacecraft
+  -21) fetched by ``--fetch-observer soho``. SOHO's L1 halo orbit has
+  ~0.9 R_sun transverse amplitude (measured directly in the LASCO
+  recon star check), so the Earth-center list is invalid at grazing
+  impact parameters, as for TESS. Era stop 2026-10-01 is limited by
+  the Horizons SPK end (2026-10-05); extend at the yearly refresh.
 
 Usage::
 
@@ -68,8 +74,11 @@ OBSERVER_DEFAULTS = {
     # launch 2025-03-11; era extends to the universal window end so the
     # list survives quick-release growth
     "spherex": ("2025-03-15", "2028-01-01", "spherex_v1"),
+    # LASCO science era; stop bounded by the Horizons -21 SPK end
+    # (2026-10-05), not the universal 2028 window — extend at refresh
+    "soho": ("1996-01-01", "2026-10-01", "soho_v1"),
 }
-HORIZONS_IDS = {"tess": "-95"}
+HORIZONS_IDS = {"tess": "-95", "soho": "-21"}
 
 
 def _sha256(path: Path) -> str:
@@ -171,6 +180,24 @@ def resolve_observer(name: str):
             "~376,000 km = 0.54 R_sun: the Earth-center list is invalid "
             "for TESS at grazing impact parameters, which this run "
             "corrects"}
+    if name == "soho":
+        npz = OBSERVER_TABLE_DIR / "soho_sc_ephemeris.npz"
+        if not npz.exists():
+            raise SystemExit("no SOHO table; run --fetch-observer soho first")
+        tab = np.load(npz)
+        ident = _sha256(npz)
+        obs = register_spacecraft_table_observer(
+            "soho-spacecraft", tab["mjd_utc"], tab["xyz_au"], ident,
+            max_gap_days=1.0)
+        return obs, {
+            "observer_table": str(npz.relative_to(REPO)),
+            "observer_table_sha256": ident,
+            "observer_accuracy": "JPL Horizons -21 SSB vectors at 6 h "
+            "sampling; the ~178 d L1 halo period makes linear-"
+            "interpolation error negligible (<< 0.001 R_sun). SOHO's "
+            "halo cross-track amplitude ~0.9 R_sun (measured in the "
+            "LASCO recon star check) invalidates the Earth-center list "
+            "at grazing impact parameters, which this run corrects"}
     raise ValueError(name)
 
 

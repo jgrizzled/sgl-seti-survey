@@ -1,0 +1,324 @@
+{
+ "freeze": "lasco_sunward_threshold_v1.0",
+ "frozen_utc": "2026-08-25",
+ "hypotheses": "surveys/heliospheric-crossings/hypotheses.md v1.0 (D1-D9)",
+ "events_input": "crossings/soho_v1 (xng-298d55d0ce6b)",
+ "coverage_input": "surveys/heliospheric-crossings/results/coverage_v1.json",
+ "occulter_annuli_rsun": {
+  "c2_rsun": [
+   2.2,
+   6.3
+  ],
+  "c3_rsun": [
+   4.4,
+   29.0
+  ]
+ },
+ "seed": 20260825,
+ "rule": "S > max(T, 0)",
+ "controls": {
+  "primary": "pa_ring",
+  "ring_dpa_deg": [
+   -100,
+   -75,
+   -50,
+   -25,
+   25,
+   50,
+   75,
+   100
+  ],
+  "secondary": "temporal_pseudo_windows",
+  "pseudo_offsets_days": [
+   -97,
+   -71,
+   -47,
+   -23,
+   23,
+   47,
+   71,
+   97
+  ],
+  "expected_control_crossings_per_trial": 0.1111111111111111
+ },
+ "detrend": {
+  "radial_profile_bins_rsun": 0.1,
+  "temporal_median_days": 30,
+  "variance_rescale": "k = median(r^2/v)/0.4549, floor 1"
+ },
+ "gates": {
+  "min_stars_wcs_fit": 5,
+  "zp_scatter_max_mag": 0.2,
+  "exptime_max_factor": 2.0,
+  "aperture_valid_min": 0.9,
+  "planet_exclusion_px": 10,
+  "min_visible_epochs_per_event": 10,
+  "min_events_for_stack": 8,
+  "min_offwindow_epochs": 200
+ },
+ "subsampling": {
+  "c2": "full_cadence",
+  "c3": "3h_first_frame_per_bin",
+  "offwindow": "1_per_day_pm110d"
+ },
+ "trials": {
+  "total": 43,
+  "dev": 11,
+  "confirmatory": 32,
+  "expected_control_crossings_total": 4.78
+ },
+ "units": [
+  {
+   "target_id": "gj-1276",
+   "unit": "S1_2.5Rsun",
+   "camera": "c2",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 242.0,
+   "visible_fraction": 0.134,
+   "statistics": [
+    "S_stack",
+    "S_event",
+    "S_pulse"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "ross-128",
+   "unit": "S1_2.5Rsun",
+   "camera": "c2",
+   "n_events_covered_visible": 31,
+   "median_frames_per_window": 228.0,
+   "visible_fraction": 0.247,
+   "statistics": [
+    "S_stack",
+    "S_event",
+    "S_pulse"
+   ],
+   "role": "dev"
+  },
+  {
+   "target_id": "teegarden",
+   "unit": "S1_2.5Rsun",
+   "camera": "c2",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 227.0,
+   "visible_fraction": 0.15,
+   "statistics": [
+    "S_stack",
+    "S_event",
+    "S_pulse"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "van-maanen",
+   "unit": "S1_2.5Rsun",
+   "camera": "c2",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 243.5,
+   "visible_fraction": 0.123,
+   "statistics": [
+    "S_stack",
+    "S_event",
+    "S_pulse"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "wolf-359",
+   "unit": "S1_2.5Rsun",
+   "camera": "c2",
+   "n_events_covered_visible": 30,
+   "median_frames_per_window": 239.0,
+   "visible_fraction": 0.133,
+   "statistics": [
+    "S_stack",
+    "S_event",
+    "S_pulse"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "gj-1276",
+   "unit": "S1_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 1127.0,
+   "visible_fraction": 0.799,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "gj-908",
+   "unit": "S1_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 1028.0,
+   "visible_fraction": 1.0,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "dev"
+  },
+  {
+   "target_id": "ross-128",
+   "unit": "S1_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 31,
+   "median_frames_per_window": 1232.0,
+   "visible_fraction": 0.811,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "ross-154",
+   "unit": "S1_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 651.0,
+   "visible_fraction": 0.867,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "dev"
+  },
+  {
+   "target_id": "teegarden",
+   "unit": "S1_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 30,
+   "median_frames_per_window": 1300.0,
+   "visible_fraction": 0.801,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "van-maanen",
+   "unit": "S1_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 1250.0,
+   "visible_fraction": 0.796,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "wolf-359",
+   "unit": "S1_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 31,
+   "median_frames_per_window": 1253.0,
+   "visible_fraction": 0.798,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "gj-1276",
+   "unit": "S2_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 31,
+   "median_frames_per_window": 1140.0,
+   "visible_fraction": 0.799,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "gj-908",
+   "unit": "S2_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 31,
+   "median_frames_per_window": 919.0,
+   "visible_fraction": 1.0,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "dev"
+  },
+  {
+   "target_id": "ross-128",
+   "unit": "S2_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 1272.0,
+   "visible_fraction": 0.814,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "ross-154",
+   "unit": "S2_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 30,
+   "median_frames_per_window": 1205.0,
+   "visible_fraction": 0.86,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "dev"
+  },
+  {
+   "target_id": "teegarden",
+   "unit": "S2_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 31,
+   "median_frames_per_window": 919.0,
+   "visible_fraction": 0.801,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "van-maanen",
+   "unit": "S2_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 31,
+   "median_frames_per_window": 1215.0,
+   "visible_fraction": 0.796,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  },
+  {
+   "target_id": "wolf-359",
+   "unit": "S2_0.1AU",
+   "camera": "c3",
+   "n_events_covered_visible": 29,
+   "median_frames_per_window": 1192.0,
+   "visible_fraction": 0.798,
+   "statistics": [
+    "S_stack",
+    "S_event"
+   ],
+   "role": "confirmatory"
+  }
+ ]
+}

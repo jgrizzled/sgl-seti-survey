@@ -1,0 +1,266 @@
+{
+ "mags": [
+  15.0,
+  15.5,
+  16.0,
+  16.5,
+  17.0,
+  17.5,
+  18.0,
+  18.5,
+  19.0,
+  19.5,
+  20.0,
+  20.5,
+  21.0,
+  21.5,
+  22.0
+ ],
+ "ndraw": 200,
+ "units": [
+  {
+   "status": "ok",
+   "m90": 22.0,
+   "grid_censored": true,
+   "recovery": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.94
+   ],
+   "thresholds": {
+    "S_event": 2.61,
+    "S_stack": 2.243
+   },
+   "z_alive": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+   ],
+   "z_dead": [],
+   "n_events_multi": 2,
+   "n_events_covered": 2,
+   "n_epochs_used": 9,
+   "n_off_pool": 115,
+   "target_id": "ross-128",
+   "band": "R",
+   "radius_au": 0.0116
+  },
+  {
+   "status": "ok",
+   "m90": 21.61,
+   "grid_censored": false,
+   "recovery": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.55
+   ],
+   "thresholds": {
+    "S_event": 5.484,
+    "S_stack": 5.261
+   },
+   "z_alive": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+   ],
+   "z_dead": [],
+   "n_events_multi": 2,
+   "n_events_covered": 2,
+   "n_epochs_used": 20,
+   "n_off_pool": 115,
+   "target_id": "ross-128",
+   "band": "R",
+   "radius_au": 0.1
+  },
+  {
+   "status": "ok",
+   "m90": 22.0,
+   "grid_censored": true,
+   "recovery": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "thresholds": {
+    "S_event": 5.121
+   },
+   "z_alive": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+   ],
+   "z_dead": [],
+   "n_events_multi": 1,
+   "n_events_covered": 1,
+   "n_epochs_used": 44,
+   "n_off_pool": 48,
+   "target_id": "ross-128",
+   "band": "g",
+   "radius_au": 0.1
+  },
+  {
+   "status": "ok",
+   "m90": 21.37,
+   "grid_censored": false,
+   "recovery": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.865,
+    0.5
+   ],
+   "thresholds": {
+    "S_event": 2.156
+   },
+   "z_alive": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+   ],
+   "z_dead": [],
+   "n_events_multi": 1,
+   "n_events_covered": 1,
+   "n_epochs_used": 2,
+   "n_off_pool": 38,
+   "target_id": "van-maanen",
+   "band": "g",
+   "radius_au": 0.0116
+  },
+  {
+   "status": "ok",
+   "m90": 20.58,
+   "grid_censored": false,
+   "recovery": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.38,
+    0.0,
+    0.0
+   ],
+   "thresholds": {
+    "S_event": 17.807,
+    "S_stack": 8.135
+   },
+   "z_alive": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+   ],
+   "z_dead": [],
+   "n_events_multi": 3,
+   "n_events_covered": 3,
+   "n_epochs_used": 9,
+   "n_off_pool": 257,
+   "target_id": "van-maanen",
+   "band": "R",
+   "radius_au": 0.1
+  },
+  {
+   "status": "ok",
+   "m90": 22.0,
+   "grid_censored": true,
+   "recovery": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.995
+   ],
+   "thresholds": {
+    "S_event": 3.155,
+    "S_stack": 2.978
+   },
+   "z_alive": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+   ],
+   "z_dead": [],
+   "n_events_multi": 2,
+   "n_events_covered": 2,
+   "n_epochs_used": 16,
+   "n_off_pool": 38,
+   "target_id": "van-maanen",
+   "band": "g",
+   "radius_au": 0.1
+  }
+ ]
+}

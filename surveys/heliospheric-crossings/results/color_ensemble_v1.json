@@ -1,0 +1,17 @@
+{
+ "n_records": 8414,
+ "c2": {
+  "n": 224,
+  "n_used": 209,
+  "color_coeff_mag_per_bv": 0.2858,
+  "scatter_before_mad": 1.031,
+  "scatter_after_mad": 0.921
+ },
+ "c3": {
+  "n": 8190,
+  "n_used": 7529,
+  "color_coeff_mag_per_bv": 0.429,
+  "scatter_before_mad": 0.529,
+  "scatter_after_mad": 0.384
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "frozen_sat_estimate": {
+  "R": 14.0,
+  "g": 14.5
+ },
+ "frozen_exclude": {
+  "R": 14.5,
+  "g": 15.0
+ },
+ "bands": {
+  "R": {
+   "stars": [
+    {
+     "field": "wolf359-anti",
+     "mag_pred": 12.98,
+     "sat_bit8": true,
+     "bleed_bit6": true,
+     "sat_or_bleed": true,
+     "expid": 30474
+    },
+    {
+     "field": "wolf359-anti",
+     "mag_pred": 14.06,
+     "sat_bit8": false,
+     "bleed_bit6": false,
+     "sat_or_bleed": false,
+     "expid": 30474
+    },
+    {
+     "field": "wolf359-anti",
+     "mag_pred": 14.55,
+     "sat_bit8": false,
+     "bleed_bit6": false,
+     "sat_or_bleed": false,
+     "expid": 30474
+    },
+    {
+     "field": "gj1276-star",
+     "mag_pred": 12.89,
+     "sat_bit8": true,
+     "bleed_bit6": false,
+     "sat_or_bleed": true,
+     "expid": 286532
+    },
+    {
+     "field": "gj1276-star",
+     "mag_pred": 14.09,
+     "sat_bit8": false,
+     "bleed_bit6": false,
+     "sat_or_bleed": false,
+     "expid": 285817
+    },
+    {
+     "field": "gj1276-star",
+     "mag_pred": 14.83,
+     "sat_bit8": false,
+     "bleed_bit6": false,
+     "sat_or_bleed": false,
+     "expid": 286532
+    }
+   ],
+   "faintest_with_sat_bits": 12.98,
+   "brightest_clean": 14.06
+  },
+  "g": {
+   "stars": [
+    {
+     "field": "wolf359-anti",
+     "mag_pred": 13.76,
+     "sat_bit8": false,
+     "bleed_bit6": false,
+     "sat_or_bleed": false,
+     "expid": 470741
+    },
+    {
+     "field": "wolf359-anti",
+     "mag_pred": 14.73,
+     "sat_bit8": false,
+     "bleed_bit6": false,
+     "sat_or_bleed": false,
+     "expid": 470741
+    },
+    {
+     "field": "wolf359-anti",
+     "mag_pred": 15.22,
+     "sat_bit8": false,
+     "bleed_bit6": false,
+     "sat_or_bleed": false,
+     "expid": 470741
+    }
+   ],
+   "faintest_with_sat_bits": null,
+   "brightest_clean": 13.76
+  }
+ },
+ "ross128_excluded_class_exercise": {
+  "expid": 313139,
+  "R_est": 9.86,
+  "sat_bit8": true,
+  "bleed_bit6": true,
+  "verdict": "exclusion_confirmed"
+ }
+}

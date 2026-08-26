@@ -1,0 +1,17 @@
+{
+ "observer": "soho",
+ "horizons_command": "-21",
+ "center": "500@0 (SSB)",
+ "ref_plane": "FRAME (ICRF)",
+ "start": "1996-01-01",
+ "stop": "2026-10-01",
+ "step": "6h",
+ "n_rows": 44925,
+ "mjd_utc_range": [
+  50082.9992802872,
+  61313.99919927812
+ ],
+ "raw_response": "soho_horizons_response.txt",
+ "raw_sha256": "sha256:902becf034a968284c91e550c8db25b9fee8ddb9b35eb2fb091f2739ecf1b06a",
+ "table_sha256": "sha256:4115c06b293559e209af241a7b52cb64d83b1d5f8f89e4325976b022cb2029af"
+}
