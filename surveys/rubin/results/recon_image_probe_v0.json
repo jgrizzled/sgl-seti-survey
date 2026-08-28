@@ -1,0 +1,96 @@
+{
+ "pos": [
+  356.943,
+  -0.788
+ ],
+ "sia": {
+  "elapsed_s": 0.3,
+  "n_rows": 6,
+  "bands": [
+   "g",
+   "i",
+   "r",
+   "u",
+   "y",
+   "z"
+  ],
+  "colnames_sample": [
+   "dataproduct_type",
+   "dataproduct_subtype",
+   "facility_name",
+   "calib_level",
+   "target_name",
+   "obs_id",
+   "obs_collection",
+   "obs_publisher_did",
+   "access_url",
+   "access_format",
+   "s_resolution",
+   "s_xel1",
+   "s_xel2",
+   "t_xel",
+   "t_min",
+   "t_max",
+   "t_exptime",
+   "t_resolution",
+   "em_xel",
+   "em_min",
+   "em_max",
+   "em_res_power",
+   "em_filter_name",
+   "o_ucd",
+   "pol_xel"
+  ]
+ },
+ "datalink_url": "https://data.lsst.cloud/api/datalink/links?ID=ivo%3A%2F%2Forg.rubinobs%2Flsst-dp2%3Frepo%3Ddp2%26id%3D019ed8bf-e840-74bc-b897-c4069a86c3e1",
+ "datalink": {
+  "elapsed_s": 0.3,
+  "rows": [
+   {
+    "id_or_service": "",
+    "semantics": "#this",
+    "content_type": "application/fits"
+   },
+   {
+    "id_or_service": "cutout-sync",
+    "semantics": "#cutout",
+    "content_type": "application/fits"
+   },
+   {
+    "id_or_service": "cutout-sync-maskedimage",
+    "semantics": "https://rsp.lsst.io/guides/api/soda.html#MaskedImage",
+    "content_type": "application/fits"
+   },
+   {
+    "id_or_service": "cutout-sync-exposure",
+    "semantics": "https://rsp.lsst.io/guides/api/soda.html#Exposure",
+    "content_type": "application/fits"
+   }
+  ]
+ },
+ "direct_fits_url": "https://storage.googleapis.com/butler-us-central1-dp2/dp2/LSSTCam/runs/DRP/DP2/v30_0_8/DM-55060/deep_coadd_rewrite/20260618T031503Z/deep_coadd/9467/45/r/deep_coadd_9467_45_r_lsst_cells_v2_LSSTCam_runs_DRP_DP2_v30_0_8_DM-55060_deep_coadd_rewrite_20260618T031503Z.fits?AWSAccessKeyId=GOOG1E5Z55TDYI4OC5D7EK2DCLVELD77MINPTREQTFDM2ARHBFX2F25RO5DGW&Signature=0i2M1Ash7z1tguZJo4qOMzij%2B1M%3D&Expires=1787784943",
+ "soda_url": "https://data.lsst.cloud/api/cutout/sync",
+ "soda": {
+  "status": 200,
+  "content_type": "application/fits",
+  "bytes": 1445760,
+  "elapsed_s": 2.0
+ },
+ "cutout": {
+  "n_hdus": 4,
+  "shape": [
+   613,
+   613
+  ],
+  "wcs_type": [
+   "RA---TAN",
+   "DEC--TAN"
+  ],
+  "hdu_names": [
+   "PRIMARY",
+   "IMAGE",
+   "JSON",
+   "INDEX"
+  ]
+ }
+}

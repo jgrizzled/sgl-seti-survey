@@ -1,0 +1,71 @@
+{
+  "frozen_utc": "2026-08-26",
+  "inputs": {
+    "hypotheses_md": "sha256:9336aad21ddfccf17852b3832cc8ab7e39ed8bc14995dcb57de211147e77356f",
+    "coverage_events": "sha256:bd9ed7354abe2a5b417f2a67f4907e1d2e85a767895e80531b42807b8b240440",
+    "coverage_summary": "sha256:7fe2f558995082919386aacd60022123d1530d074ece98465abae969c7b72e28",
+    "coverage_md": "sha256:897f8843286730b1a5f297a665692f60f70d89fbbebac4e4ad254113ba130aaa",
+    "universal_targets": "sha256:769e63f62bd27b35b1fa892b7e79d743ad593eb913d0f5fb645f175e6318eb6a",
+    "universal_events": "sha256:fd5c038cf0084dba5b3fa6aa8f2071eadb165965d5278d78d204773008ff5a76"
+  },
+  "saturation_cut": {
+    "rule": "hypotheses.md section 6 (G 16.5/17.5 bands)",
+    "ross-154": {
+      "gmag": 9.126414,
+      "class": "excluded",
+      "source": "targets/universal_v2.json (frozen input; no new archive query)"
+    },
+    "consequence": "A 0.1 AU closes coverage-without-statistic (saturation-limited, 16 on-detector visits)"
+  },
+  "search_family": {
+    "units": [
+      {
+        "unit_id": "ross-128_B_0.1AU_r",
+        "target_id": "ross-128",
+        "event_id": "evt-5197f21cd67b",
+        "channel": "B",
+        "radius_au": 0.1,
+        "band": "r",
+        "t_ca_mjd": 60937.9414,
+        "b_min_rsun": 1.855,
+        "visit": 2025091300612,
+        "visit_mjd": 60932.2843,
+        "detector": 102,
+        "maglim": 23.3661,
+        "b_at_visit_rsun": 20.921,
+        "statistics": [
+          "S_det"
+        ]
+      }
+    ],
+    "n_trials": 1,
+    "expected_control_crossings": 0.1111111111111111,
+    "fwer_alpha": 0.05
+  },
+  "statistic": {
+    "S_det": "max over gate-passing associated DiaSources of psfFlux/psfFluxErr; 0 if none. Association: within r_assoc of any deduplicated z-grid position (positions closer than r_assoc merge).",
+    "r_assoc_arcsec": 1.0,
+    "z_grid_au": [
+      550.0,
+      1000.0,
+      2500.0,
+      5500.0,
+      10000.0
+    ],
+    "gates": "hypotheses.md section 7 (footprint; pixelFlags exclusion set incl. archive injections; psfFlux_flag; centroid_flag)",
+    "static_exclusion_arcsec": 2.0,
+    "static_exclusion_mag": "any-band Object psfMag < maglim(band) + 0.5"
+  },
+  "controls": {
+    "n_per_unit": 8,
+    "rule": "z-family offset pattern about the axis point, rotated k*40 deg (k=1..8) about the axis point at the visit epoch; a control failing the static exclusion, the footprint gate, or the >= 2.5 arcsec locus-avoidance (amendment v1.1) rotates +5 deg until valid; threshold T = max control S_det; exceedance S > max(T, 0)",
+    "locus_avoid_arcsec": 2.5,
+    "amendment": "v1.1 (hypotheses.md; was 10 arcsec in v1.0 \u2014 geometrically impossible for inner-z positions, found at dev)"
+  },
+  "dev_gates": [
+    "association-rate null on off-window pseudo-units (all off-window visits at the ross-128 antipode field)",
+    "control-rule census (rotation resolutions, static exclusions)",
+    "positive control: SkyBoT-predicted known-object position on an off-window visit must associate a gate-passing DiaSource through the identical chain",
+    "archive-injection census: pixelFlags_injected DiaSource population near the unit field (completeness route section 8; decides calibrated vs threshold-statement)"
+  ]
+}

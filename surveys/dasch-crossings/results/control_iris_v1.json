@@ -1,0 +1,22 @@
+{
+ "generated_utc": "2026-08-26T23:30:22+00:00",
+ "object": "(7) Iris",
+ "plate": "me00943",
+ "plate_date": "1911-03-01T00:38:41",
+ "exptime_min": 30,
+ "vmag_pred": 9.91,
+ "lim_mag_apass": 13.17,
+ "amendment": "v1.2",
+ "match": "trail segment +/- 1h x 23 arcsec/hr (plate-timing class)",
+ "hits": [
+  {
+   "dist_arcsec": 0.2,
+   "mag": "10.347441",
+   "aflags": 33554560,
+   "suspected_defect": true,
+   "fwhm_pix": "6.32",
+   "ellipticity": "0.38"
+  }
+ ],
+ "passed": true
+}

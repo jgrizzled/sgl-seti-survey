@@ -1,0 +1,20 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: window_id, datatype: float64}
+# - {name: event_id, datatype: float64}
+# - {name: beam_radius_au, datatype: float64}
+# - {name: ingress_utc, datatype: float64}
+# - {name: egress_utc, datatype: float64}
+# - {name: ingress_tdb_jd, datatype: float64}
+# - {name: egress_tdb_jd, datatype: float64}
+# - {name: duration_days, datatype: float64}
+# - {name: truncated_ingress, datatype: float64}
+# - {name: truncated_egress, datatype: float64}
+# meta: !!omap
+# - {crossings_result_schema_version: 2}
+# - {crossings_id: xng-e2d1063af9d0}
+# - {model_id: tusay2022_eq5_7_v1}
+# - warnings: [uncertainty_not_propagated, 'degraded_event_count:13053']
+# schema: astropy-2.0
+window_id event_id beam_radius_au ingress_utc egress_utc ingress_tdb_jd egress_tdb_jd duration_days truncated_ingress truncated_egress

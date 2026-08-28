@@ -1,0 +1,34 @@
+{
+ "unit": "wolf-359/A_0.1AU",
+ "exceedances": ["S_event 1 > T 0", "S_stack 2 > T 0"],
+ "expected_control_crossings_confirmatory": 3.33,
+ "adjudicated_utc": "2026-08-26",
+ "quiescent_context": "12/12 deep off-window plates detect the star (uncatalogued, APASS-PM-less refcat); measured quiescent B = 15.66 (range 15.45-16.07); gate = hit <= 14.66",
+ "hits": [
+  {
+   "window_t_ca": "1943-03-03", "plate": "ac37753",
+   "plate_date": "1943-03-08T03:31:51Z", "exptime_min": 149,
+   "lim_mag": 14.93, "hit_mag": 14.58, "dist_from_star_arcsec": 7.4,
+   "fwhm_pix": 10.06, "ellipticity": 0.526,
+   "margin_above_limit_mag": 0.35,
+   "cutout": "center 3.1 sigma, local max 3.8 sigma diffuse; field stars reach 19.6 sigma on the same cutout; no point source",
+   "verdict": "vetoed defect-class (cutout-inspection rung; at-limit non-PSF extraction)"
+  },
+  {
+   "window_t_ca": "1982-03-03", "plate": "dny00425",
+   "plate_date": "1982-02-26T05:23:30Z", "exptime_min": 37,
+   "lim_mag": 13.52, "hit_mag": 13.02, "dist_from_star_arcsec": 7.1,
+   "fwhm_pix": 8.91, "ellipticity": 0.403,
+   "margin_above_limit_mag": 0.5,
+   "cutout": "center 3.6 sigma, local max 4.2 sigma diffuse; field stars reach 16.3 sigma; star itself (B 15.66) correctly invisible on this lim-13.5 plate",
+   "verdict": "vetoed defect-class (cutout-inspection rung; at-limit non-PSF extraction)"
+  }
+ ],
+ "supporting": [
+  "Genuine star extractions in the same unit sit at 1.4-2.4 arcsec; both hits sit at ~7 arcsec",
+  "No recurrence across the unit's 56 covered windows (rung 6); the d=1 persistent hypothesis is independently refuted by the unit's own coverage",
+  "Cutout-inspection selection function anchored at dev: the real transient control ((7) Iris) shows a compact trailed point source at 0.2 arcsec; the defect class shows <=4 sigma diffuse structure",
+  "CN Leo flare interpretation not needed: the pixel evidence shows no astrophysical source at either epoch"
+ ],
+ "verdict": "0 candidates; both exceedances closed as archival-extraction defects (2 vs 3.33 expected control crossings)"
+}

@@ -1,0 +1,7 @@
+{
+ "population": "refcat-matched platephot rows, confirmatory snapshots",
+ "n_rows": 8714,
+ "fatal_template_cost": 0.0122,
+ "strict_template_cost": 0.2202,
+ "suspected_defect_prevalence": 0.1394
+}

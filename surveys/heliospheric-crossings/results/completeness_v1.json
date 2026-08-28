@@ -1,0 +1,173 @@
+{
+ "stage": "completeness_v1",
+ "seed": 20260825,
+ "psf_sigma_px": {
+  "c2": 2.6262712252163385,
+  "c3": 2.4276694553773455
+ },
+ "stamp_response": {
+  "c2": {
+   "R": 0.2696642806329212,
+   "n": 32
+  },
+  "c3": {
+   "R": 0.3203420392303218,
+   "n": 40
+  }
+ },
+ "flux_grid": [
+  2.0,
+  5.0,
+  10.0,
+  20.0,
+  40.0,
+  80.0,
+  160.0,
+  320.0,
+  640.0,
+  1280.0,
+  2560.0
+ ],
+ "n_draws": 100,
+ "thresholds_source": "confirmatory_search_v1.json (fixed)",
+ "units": {
+  "gj-1276|S1_2.5Rsun": {
+   "n_events_series": 28,
+   "response": 0.2696642806329212,
+   "m90_flux_S_stack": 80.0,
+   "m90_flux_S_event": 320.0,
+   "m90_flux_S_pulse": 8.0,
+   "zp_med": 15.040265788079116,
+   "exptime_med": 25.0972,
+   "m90_V_S_stack": 6.78,
+   "m90_V_S_event": 5.28,
+   "m90_V_S_pulse": 9.28
+  },
+  "teegarden|S1_2.5Rsun": {
+   "n_events_series": 28,
+   "response": 0.2696642806329212,
+   "m90_flux_S_stack": 320.0,
+   "m90_flux_S_event": 1280.0,
+   "m90_flux_S_pulse": null,
+   "zp_med": 14.939045050578647,
+   "exptime_med": 25.0972,
+   "m90_V_S_stack": 5.18,
+   "m90_V_S_event": 3.67
+  },
+  "van-maanen|S1_2.5Rsun": {
+   "n_events_series": 28,
+   "response": 0.2696642806329212,
+   "m90_flux_S_stack": 640.0,
+   "m90_flux_S_event": 320.0,
+   "m90_flux_S_pulse": null,
+   "zp_med": 15.045714788387114,
+   "exptime_med": 25.0972,
+   "m90_V_S_stack": 4.53,
+   "m90_V_S_event": 5.28
+  },
+  "wolf-359|S1_2.5Rsun": {
+   "n_events_series": 28,
+   "response": 0.2696642806329212,
+   "m90_flux_S_stack": 40.0,
+   "m90_flux_S_event": 320.0,
+   "m90_flux_S_pulse": null,
+   "zp_med": 14.822720600833225,
+   "exptime_med": 25.0972,
+   "m90_V_S_stack": 7.32,
+   "m90_V_S_event": 5.06
+  },
+  "gj-1276|S1_0.1AU": {
+   "n_events_series": 28,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 40.0,
+   "m90_flux_S_event": 320.0,
+   "zp_med": 14.131935786555506,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 6.92,
+   "m90_V_S_event": 4.67
+  },
+  "ross-128|S1_0.1AU": {
+   "status": "constraint_only_or_pending"
+  },
+  "teegarden|S1_0.1AU": {
+   "n_events_series": 29,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 80.0,
+   "m90_flux_S_event": 640.0,
+   "zp_med": 14.1178093948404,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 6.16,
+   "m90_V_S_event": 3.9
+  },
+  "van-maanen|S1_0.1AU": {
+   "n_events_series": 28,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 40.0,
+   "m90_flux_S_event": 320.0,
+   "zp_med": 14.123889823016711,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 6.92,
+   "m90_V_S_event": 4.66
+  },
+  "wolf-359|S1_0.1AU": {
+   "n_events_series": 29,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 10.0,
+   "m90_flux_S_event": 160.0,
+   "zp_med": 14.092259938762801,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 8.39,
+   "m90_V_S_event": 5.38
+  },
+  "gj-1276|S2_0.1AU": {
+   "n_events_series": 29,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 20.0,
+   "m90_flux_S_event": 160.0,
+   "zp_med": 14.096225838875483,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 7.64,
+   "m90_V_S_event": 5.38
+  },
+  "ross-128|S2_0.1AU": {
+   "n_events_series": 28,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 40.0,
+   "m90_flux_S_event": 320.0,
+   "zp_med": 14.115382713734753,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 6.91,
+   "m90_V_S_event": 4.65
+  },
+  "teegarden|S2_0.1AU": {
+   "n_events_series": 30,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 40.0,
+   "m90_flux_S_event": 160.0,
+   "zp_med": 14.098511093161445,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 6.89,
+   "m90_V_S_event": 5.39
+  },
+  "van-maanen|S2_0.1AU": {
+   "n_events_series": 30,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 40.0,
+   "m90_flux_S_event": 320.0,
+   "zp_med": 14.186199064255788,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 6.98,
+   "m90_V_S_event": 4.72
+  },
+  "wolf-359|S2_0.1AU": {
+   "n_events_series": 28,
+   "response": 0.3203420392303218,
+   "m90_flux_S_stack": 80.0,
+   "m90_flux_S_event": 320.0,
+   "zp_med": 14.12819897917139,
+   "exptime_med": 19.0928,
+   "m90_V_S_stack": 6.17,
+   "m90_V_S_event": 4.66
+  }
+ }
+}

@@ -349,3 +349,44 @@ Amendments forced by evidence on development sets (the retrospectives):
   overlap), so charge it to the final-candidate curve and it costs the
   fitted constraints nothing; 0.5–22 µm remains 0.5–4.6 µm in practice
   (W3/W4 stay excluded by the review rule).
+
+## 11. Catalogue-level substrates (DASCH; cf. Rubin DP2)
+
+The 2026-08-26 surveys added a substrate class where the primary
+chain never touches pixels — the archive's own calibrated detection
+catalogs. Lessons from DASCH (`report/dasch_crossings.md` §4):
+
+- **Archive quality flags are tuned against the signal.** A
+  catalogue pipeline's defect classifier is trained to suppress
+  single-plate/single-epoch transients — DASCH's `SUSPECTED_DEFECT`
+  killed the real-asteroid positive control 1/1. On this substrate
+  an archive quality bit may gate the statistic only after its
+  selection function against in-scope sources is measured;
+  otherwise it is an annotation feeding pixel-level adjudication.
+  (The v2 calibrated-veto rule, rediscovered at the flag level.)
+- **High-PM stars break refcat-keyed archives silently**: DASCH's
+  APASS refcat carries pm = 0 dummy entries for 2 of 5 grazing
+  stars, yielding confidently wrong lightcurves with no error
+  signal. Standing check: catalogued PM vs registry µ
+  (vector match within max(10 %, 50 mas/yr)) before trusting any
+  archive lightcurve of a nearby star; route to an alternate refcat
+  or a positional (limits-only) search on failure.
+- **A sub-limit star is its own hit background**: marginal at-limit
+  extractions of the quiescent star appear window-independently and
+  are invisible to spatial ring controls — measure the off-window
+  same-locus rate and gate hits to ≥ 1 mag brighter than measured
+  quiescence (cost charged). The measurement doubles as a free
+  photometry validation (teegarden 17.11 vs expected ≈ 17.3 B).
+- **At-limit + non-PSF morphology + ~3× the genuine astrometric
+  scatter is the plate-defect signature**; cutout pixels adjudicate
+  it in minutes, with the positive-control transient (compact,
+  15–20σ) anchoring the discrimination. All 4 adjudicated DASCH
+  hits fit it.
+- Old-epoch geometry is not the hard part: the 1885 model budget
+  measured ≤ 2×10⁻⁴ R☉ (astrometry) + 1×10⁻⁵ R☉ (ephemeris) —
+  plate *timing* (logbook dates, timezone-era conventions; the
+  Iris control implies ~1 h errors) dominates and belongs in
+  coverage gates and control-match windows, not geometry budgets.
+- JPL `sb_ident` 500s on pre-1950 epochs; the workaround is direct
+  Horizons per-asteroid ephemerides × plate-date coincidence
+  scanning (asteroids 1–100, 1-day steps, minutes of wall time).

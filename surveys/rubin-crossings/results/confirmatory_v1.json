@@ -1,0 +1,81 @@
+{
+ "freeze_sha_bound": "threshold_freeze_v1.json at run time",
+ "unit_record": {
+  "visit": 2025091300612,
+  "status": "searched",
+  "t_mjd": 60932.281596688605,
+  "maglim": 23.3661,
+  "n_positions": 5,
+  "n_on_detector": 5,
+  "n_live": 4,
+  "n_diasources_cone": 0,
+  "s_det": 0.0,
+  "association": null,
+  "control_s": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "threshold": 0.0,
+  "exceedance": false,
+  "control_census": [
+   {
+    "k": 1,
+    "extra_rotation_deg": 40.0,
+    "valid": true
+   },
+   {
+    "k": 2,
+    "extra_rotation_deg": 0.0,
+    "valid": true
+   },
+   {
+    "k": 3,
+    "extra_rotation_deg": 45.0,
+    "valid": true
+   },
+   {
+    "k": 4,
+    "extra_rotation_deg": 5.0,
+    "valid": true
+   },
+   {
+    "k": 5,
+    "extra_rotation_deg": 5.0,
+    "valid": true
+   },
+   {
+    "k": 6,
+    "extra_rotation_deg": 30.0,
+    "valid": true
+   },
+   {
+    "k": 7,
+    "extra_rotation_deg": 0.0,
+    "valid": true
+   },
+   {
+    "k": 8,
+    "extra_rotation_deg": 120.0,
+    "valid": true
+   }
+  ],
+  "unit_id": "ross-128_B_0.1AU_r",
+  "band": "r",
+  "dt_days": -5.6598033113987185
+ },
+ "verdict": {
+  "unit": "ross-128_B_0.1AU_r",
+  "status": "searched",
+  "s_det": 0.0,
+  "threshold": 0.0,
+  "exceedance": false,
+  "n_trials": 1,
+  "expected_control_crossings": 0.1111111111111111
+ }
+}

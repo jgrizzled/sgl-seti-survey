@@ -1,0 +1,2191 @@
+{
+ "generated_utc": "2026-08-26T23:36:55+00:00",
+ "freeze_sha256": "sha256:83dae35edc2ad60946e95ecaa67db4dca0a6928712cc93f8dee25b5ee1f7cb0a",
+ "units": {
+  "wolf-359/B_2.5Rs": {
+   "unit": "wolf-359/B_2.5Rs",
+   "statistic": "hits",
+   "S_event": 0,
+   "T_event": 0,
+   "exceed_event": false,
+   "S_stack": 0,
+   "T_stack": 0,
+   "exceed_stack": false,
+   "ring_totals": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "windows": [
+    {
+     "event_id": "evt-bf62a5cac39a",
+     "t_ca": "1900-09-04T08:57:40.306",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am00623/0"
+     ]
+    },
+    {
+     "event_id": "evt-2def4495c409",
+     "t_ca": "1901-09-04T15:11:38.315",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am01023/0"
+     ]
+    },
+    {
+     "event_id": "evt-30a344c14583",
+     "t_ca": "1904-09-04T09:32:33.811",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am03011/0"
+     ]
+    },
+    {
+     "event_id": "evt-55ff3872b31e",
+     "t_ca": "1908-09-04T09:57:31.152",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am05789/0"
+     ]
+    },
+    {
+     "event_id": "evt-46bc1425a4bd",
+     "t_ca": "1924-09-04T12:08:48.539",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ax00791/0"
+     ]
+    },
+    {
+     "event_id": "evt-b2b5984957c5",
+     "t_ca": "1931-09-05T07:02:45.274",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "mb02599/0"
+     ]
+    },
+    {
+     "event_id": "evt-1993dd2bfc7e",
+     "t_ca": "1934-09-05T01:27:47.870",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ax03297/0"
+     ]
+    },
+    {
+     "event_id": "evt-ff1abf38fcf2",
+     "t_ca": "1935-09-05T07:34:08.947",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am17087/0"
+     ]
+    },
+    {
+     "event_id": "evt-8c12a58dfa57",
+     "t_ca": "1940-09-04T14:13:56.262",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai35829/0",
+      "rh09840/0",
+      "ai35833/0",
+      "rl03218/0"
+     ]
+    },
+    {
+     "event_id": "evt-a956879af5cf",
+     "t_ca": "1945-09-04T20:53:51.910",
+     "n_exposures": 5,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai39698/0",
+      "ai39702/0",
+      "ac39180/0",
+      "bi02387/0",
+      "bi02388/0"
+     ]
+    },
+    {
+     "event_id": "evt-13c753a7ec65",
+     "t_ca": "1946-09-05T03:00:12.987",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "fa09789/0",
+      "ac39803/0"
+     ]
+    },
+    {
+     "event_id": "evt-b61256a6e6c7",
+     "t_ca": "1947-09-05T09:14:46.295",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai41180/0"
+     ]
+    },
+    {
+     "event_id": "evt-71bf732cdb42",
+     "t_ca": "1948-09-04T15:21:51.005",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac40852/0"
+     ]
+    },
+    {
+     "event_id": "evt-ec59348c55c6",
+     "t_ca": "1950-09-05T03:33:30.892",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am28032/0"
+     ]
+    },
+    {
+     "event_id": "evt-c1acc31c9cf4",
+     "t_ca": "1980-09-04T19:39:07.715",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb02603/0"
+     ]
+    }
+   ],
+   "platephot_row_counts": [
+    0,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    15,
+    31
+   ],
+   "snapshots": {
+    "am00623_s0_344.212_-7.078.json": "sha256:d5ff8840d890c62d8353f22d3eaac51f0e46dbd8d900454fddda6988b40c3f4f",
+    "am01023_s0_344.211_-7.077.json": "sha256:13f40d0a07f8d2e113875409c72edb3b81e24678e5d17e656ec744a00c1bcc08",
+    "am03011_s0_344.207_-7.075.json": "sha256:555606ad9dd07cc11651fef03363b70d53b9bf1df655d0d52227a64ecda3bcfd",
+    "am05789_s0_344.203_-7.072.json": "sha256:00d5784870df78ac0c3d9b6bb9d234f7575b87ccb40bb4e8e5683731e5443e4f",
+    "ax00791_s0_344.186_-7.060.json": "sha256:e5aae80127e5af7dc72262dfb353c991d130997a6f634f491847d6d6034d5181",
+    "mb02599_s0_344.178_-7.055.json": "sha256:b0cad9edfedd0823dc68182be62a2cd47998b02a4bfe633577fa024f88e775e3",
+    "ax03297_s0_344.175_-7.052.json": "sha256:2c4f33846a633d15a3d392b90af229bc648a231ae8bc7639ecbe07e31d2bd959",
+    "am17087_s0_344.174_-7.051.json": "sha256:3389a754d0ddadc83d007d65bd2b8bf19fa5da2e3e20a42fa8a72bc3c3f443ad",
+    "ai35829_s0_344.169_-7.048.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "rh09840_s0_344.169_-7.048.json": "sha256:2ba052e718dad9e7d165364bce24f80fd649dc9c652d1b11080b4b2030baa668",
+    "ai35833_s0_344.167_-7.048.json": "sha256:bf1692e7ec941ffd51026d097785dc939ea55afbe43c9ff805c6a08754181eb2",
+    "rl03218_s0_344.169_-7.048.json": "sha256:a7c5886c1bbe925fba83301884bb1b8d30ae437638ed3471686217e325bef143",
+    "ai39698_s0_344.164_-7.044.json": "sha256:490cc183f26bf6f13bce80e652783be19658a030433f8b849470f12c2aae8369",
+    "ai39702_s0_344.162_-7.044.json": "sha256:73c0c639138a96e0ba8ea87e17ffc42f7101debe9c6a723afd69558e0c9201f4",
+    "ac39180_s0_344.164_-7.044.json": "sha256:65573c26c1bb4f642b2d8044e63f72c4f66374d15052df5082254f9ad8ab837b",
+    "bi02387_s0_344.163_-7.044.json": "sha256:36435c88ecc6b72fe18c1375380ef35baeab1ffa57500ae633323c06b653ec1d",
+    "bi02388_s0_344.163_-7.044.json": "sha256:8a9b02d7f00c71b04a38f8bf8ae0e7e609aabb580ec9545ae9706f893862a51f",
+    "fa09789_s0_344.161_-7.044.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac39803_s0_344.161_-7.043.json": "sha256:e46c2f39b50b8712e3c352bd92138f8ae501aa03da3dd02a68aa9e3b77084ca3",
+    "ai41180_s0_344.161_-7.042.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac40852_s0_344.158_-7.042.json": "sha256:e1993c5c835a2995053521c9ac04d67fae6581fdd31a8e80eeb2c25c247a99e8",
+    "am28032_s0_344.157_-7.040.json": "sha256:cc9425dfe5b07cb27b3207f92672eab6ae7679d9e68a682795e4cef95bd2e56b",
+    "dnb02603_s0_344.126_-7.017.json": "sha256:144d88d27bed9fa56257899e07b61103a0885f80afc3fcb82292c6657f0e6138"
+   }
+  },
+  "teegarden/A_0.1AU": {
+   "unit": "teegarden/A_0.1AU",
+   "statistic": "hits",
+   "S_event": 1,
+   "T_event": 1,
+   "exceed_event": false,
+   "S_stack": 1,
+   "T_stack": 1,
+   "exceed_stack": false,
+   "ring_totals": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "windows": [
+    {
+     "event_id": "evt-21ababcf660a",
+     "t_ca": "1900-11-07T05:36:15.309",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am00711/0"
+     ]
+    },
+    {
+     "event_id": "evt-2590c2838d0d",
+     "t_ca": "1901-11-07T11:50:48.617",
+     "n_exposures": 3,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "i27949/0",
+      "ac01961/0",
+      "ac01972/0"
+     ]
+    },
+    {
+     "event_id": "evt-34e6895e8fa2",
+     "t_ca": "1903-11-08T00:06:43.936",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac04195/0"
+     ]
+    },
+    {
+     "event_id": "evt-bbc48fc796f5",
+     "t_ca": "1904-11-07T06:17:37.112",
+     "n_exposures": 6,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am03208/0",
+      "am03196/0",
+      "am03185/0",
+      "ac05490/0",
+      "ac05498/0",
+      "am03218/0"
+     ]
+    },
+    {
+     "event_id": "evt-7f4baccb4337",
+     "t_ca": "1905-11-07T12:20:45.023",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac06924/0",
+      "ac06942/0"
+     ]
+    },
+    {
+     "event_id": "evt-4d0571d83077",
+     "t_ca": "1906-11-07T18:37:20.897",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac07996/0"
+     ]
+    },
+    {
+     "event_id": "evt-cce6378fe6c2",
+     "t_ca": "1907-11-08T00:46:46.807",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am05251/0",
+      "am05241/0",
+      "ac08960/0",
+      "ac08970/0"
+     ]
+    },
+    {
+     "event_id": "evt-36e3c4743b7f",
+     "t_ca": "1908-11-07T06:52:32.584",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "i35652/0"
+     ]
+    },
+    {
+     "event_id": "evt-b9421e2bf928",
+     "t_ca": "1909-11-07T13:05:36.658",
+     "n_exposures": 3,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am06770/0",
+      "ac11047/0",
+      "am06758/0"
+     ]
+    },
+    {
+     "event_id": "evt-ab58fbd2d4f8",
+     "t_ca": "1910-11-07T19:08:00.936",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac12096/0",
+      "ac12087/0"
+     ]
+    },
+    {
+     "event_id": "evt-7104044cb1d0",
+     "t_ca": "1911-11-08T01:23:53.178",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac12716/0",
+      "ac12723/0"
+     ]
+    },
+    {
+     "event_id": "evt-237d2a3349f0",
+     "t_ca": "1912-11-07T07:39:10.119",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "am08753/0",
+      "ac13420/0"
+     ]
+    },
+    {
+     "event_id": "evt-f2c8e81c53a3",
+     "t_ca": "1913-11-07T13:40:59.097",
+     "n_exposures": 7,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac14521/0",
+      "ai11881/0",
+      "ai11880/0",
+      "ai11872/0",
+      "ai11859/0",
+      "ac14497/0",
+      "ac14522/0"
+     ]
+    },
+    {
+     "event_id": "evt-ea7964b0a6bc",
+     "t_ca": "1914-11-07T19:57:26.638",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai13071/0"
+     ]
+    },
+    {
+     "event_id": "evt-e08adf67f20c",
+     "t_ca": "1915-11-08T02:06:42.247",
+     "n_exposures": 7,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac16942/0",
+      "ac16968/0",
+      "mc09652/0",
+      "md09652/0",
+      "ai14243/0",
+      "am11434/0",
+      "mc09518/0"
+     ]
+    },
+    {
+     "event_id": "evt-cbcaf7dc151d",
+     "t_ca": "1916-11-07T08:13:11.657",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "md11635/0",
+      "ac18109/0",
+      "ai15246/0",
+      "ac18088/0"
+     ]
+    },
+    {
+     "event_id": "evt-1f577bef68f7",
+     "t_ca": "1917-11-07T14:29:57.831",
+     "n_exposures": 5,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac19383/0",
+      "ac19403/0",
+      "ac19450/0",
+      "ac19416/0",
+      "ac19414/0"
+     ]
+    },
+    {
+     "event_id": "evt-a6e3ae322e07",
+     "t_ca": "1918-11-07T20:32:38.776",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "mf03096/0",
+      "ac20694/0"
+     ]
+    },
+    {
+     "event_id": "evt-7b74e22e51bc",
+     "t_ca": "1921-11-07T14:57:06.071",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai21321/0"
+     ]
+    },
+    {
+     "event_id": "evt-8884382ef1de",
+     "t_ca": "1922-11-07T21:15:11.179",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai22101/0"
+     ]
+    },
+    {
+     "event_id": "evt-88a0c72849d1",
+     "t_ca": "1923-11-08T03:29:09.187",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai22869/0",
+      "ax00305/0",
+      "ai22859/0",
+      "ai22873/0"
+     ]
+    },
+    {
+     "event_id": "evt-1dbc4219a5f0",
+     "t_ca": "1926-11-07T21:54:55.415",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac26519/0"
+     ]
+    },
+    {
+     "event_id": "evt-257406112d1b",
+     "t_ca": "1927-11-08T04:04:37.991",
+     "n_exposures": 3,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ay01815/0",
+      "ay01813/0",
+      "ay01840/0"
+     ]
+    },
+    {
+     "event_id": "evt-813f05977acb",
+     "t_ca": "1928-11-07T10:19:29.933",
+     "n_exposures": 3,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai26770/0",
+      "ac27018/0",
+      "ai26773/0"
+     ]
+    },
+    {
+     "event_id": "evt-0a5eb276bb41",
+     "t_ca": "1929-11-07T16:19:49.678",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "rh01640/0",
+      "ac27892/0",
+      "ac27873/0",
+      "rh01654/0"
+     ]
+    },
+    {
+     "event_id": "evt-50708730371c",
+     "t_ca": "1930-11-07T22:34:58.286",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "rh02595/0",
+      "rh02589/0",
+      "ai28674/0",
+      "ac28774/0"
+     ]
+    },
+    {
+     "event_id": "evt-d379d82cbcc7",
+     "t_ca": "1931-11-08T04:48:04.328",
+     "n_exposures": 7,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac29634/0",
+      "ac29605/0",
+      "rh03586/0",
+      "rh03573/0",
+      "ac29594/0",
+      "ac29619/0",
+      "mb02626/0"
+     ]
+    },
+    {
+     "event_id": "evt-ecf0f3801292",
+     "t_ca": "1932-11-07T10:50:53.605",
+     "n_exposures": 3,
+     "locus_hits": 0,
+     "ring_hits": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac30649/0",
+      "ac30637/0",
+      "rh04648/0"
+     ]
+    },
+    {
+     "event_id": "evt-ab5d2023278b",
+     "t_ca": "1933-11-07T17:07:21.146",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai31236/0",
+      "ac31543/0",
+      "ac31530/0",
+      "rh05527/0"
+     ]
+    },
+    {
+     "event_id": "evt-14599392543f",
+     "t_ca": "1934-11-07T23:13:15.256",
+     "n_exposures": 5,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ir00188/0",
+      "ai31873/0",
+      "ac32442/0",
+      "ac32430/0",
+      "ac32434/0"
+     ]
+    },
+    {
+     "event_id": "evt-f42da0cb9aca",
+     "t_ca": "1935-11-08T05:25:54.331",
+     "n_exposures": 3,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai32404/0",
+      "ac32921/0",
+      "ca00544/0"
+     ]
+    },
+    {
+     "event_id": "evt-4aa82d2ceb58",
+     "t_ca": "1936-11-07T11:44:34.739",
+     "n_exposures": 7,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "rl01094/0",
+      "rl01093/0",
+      "ai32950/0",
+      "rl01099/0",
+      "fa00420/0",
+      "rl01088/0",
+      "ai32940/0"
+     ]
+    },
+    {
+     "event_id": "evt-502bbedb8e9d",
+     "t_ca": "1937-11-07T17:45:38.117",
+     "n_exposures": 15,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac33901/0",
+      "i55684/0",
+      "rh07861/0",
+      "ai33596/0",
+      "ai33574/0",
+      "bm00724/0",
+      "rh07854/0",
+      "ac33880/0",
+      "ir01763/0",
+      "mf24034/0",
+      "mf24058/0",
+      "ac33899/0",
+      "fa01470/0",
+      "mf24020/0",
+      "ma06740/0"
+     ]
+    },
+    {
+     "event_id": "evt-b7975399feec",
+     "t_ca": "1938-11-07T23:58:08.859",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "fa02334/0",
+      "fa02338/0"
+     ]
+    },
+    {
+     "event_id": "evt-52313f0f1924",
+     "t_ca": "1939-11-08T06:12:42.167",
+     "n_exposures": 10,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac35304/0",
+      "fa03616/0",
+      "bm01673/0",
+      "ac35327/0",
+      "ac35312/0",
+      "fa03617/0",
+      "ai35163/0",
+      "i57348/0",
+      "ma07950/0",
+      "ma07949/0"
+     ]
+    },
+    {
+     "event_id": "evt-7905c0d3ff81",
+     "t_ca": "1940-11-07T12:14:20.845",
+     "n_exposures": 7,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "fa04789/0",
+      "ac36028/0",
+      "fa04788/0",
+      "ai36023/0",
+      "ai36036/0",
+      "fa04799/0",
+      "fa04819/0"
+     ]
+    },
+    {
+     "event_id": "evt-8511a85f29fd",
+     "t_ca": "1941-11-07T18:30:04.752",
+     "n_exposures": 4,
+     "locus_hits": 1,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [
+      {
+       "dist_arcsec": 5.4,
+       "mag": "14.635627",
+       "aflags": "33566848",
+       "suspected_defect": true,
+       "fwhm_pix": "7.32",
+       "ellipticity": "0.288",
+       "plate": "ir05302",
+       "quiescent_star": false
+      }
+     ],
+     "plates": [
+      "ir05302/0",
+      "am22152/0",
+      "fa05863/0",
+      "ac36791/0"
+     ]
+    },
+    {
+     "event_id": "evt-0515daa0b0db",
+     "t_ca": "1942-11-08T00:35:58.863",
+     "n_exposures": 11,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "rl04060/0",
+      "ac37572/0",
+      "rl04055/0",
+      "fa07118/0",
+      "ai37897/0",
+      "i58548/0",
+      "rl04054/0",
+      "fa07108/0",
+      "fa07141/0",
+      "rl04061/0",
+      "ax04204/0"
+     ]
+    },
+    {
+     "event_id": "evt-d0c1e8fd62ee",
+     "t_ca": "1943-11-08T06:42:55.239",
+     "n_exposures": 3,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "fa07871/0",
+      "fa07879/0",
+      "ai38461/0"
+     ]
+    },
+    {
+     "event_id": "evt-31e439c50f6d",
+     "t_ca": "1944-11-07T12:58:20.514",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "bi01777/0",
+      "fa08623/0",
+      "ai39199/0",
+      "fa08624/0"
+     ]
+    },
+    {
+     "event_id": "evt-fc966be72819",
+     "t_ca": "1945-11-07T18:58:23.592",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [
+      {
+       "dist_arcsec": 2.2,
+       "mag": "16.825254",
+       "aflags": "33566720",
+       "suspected_defect": true,
+       "fwhm_pix": "13.53",
+       "ellipticity": "0.419",
+       "plate": "mc34305",
+       "quiescent_star": true
+      }
+     ],
+     "plates": [
+      "mc34305/0",
+      "fa09310/0",
+      "ai39855/0",
+      "ai39843/0"
+     ]
+    },
+    {
+     "event_id": "evt-a80ba95a7dd1",
+     "t_ca": "1946-11-08T01:12:21.600",
+     "n_exposures": 5,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai40608/0",
+      "ac39949/0",
+      "fa10019/0",
+      "ai40623/0",
+      "fa10034/0"
+     ]
+    },
+    {
+     "event_id": "evt-77606922c5b8",
+     "t_ca": "1947-11-08T07:32:02.307",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai41349/0",
+      "ac40503/0",
+      "ir10365/0",
+      "am26570/0"
+     ]
+    },
+    {
+     "event_id": "evt-89b2f293df1c",
+     "t_ca": "1948-11-07T13:36:37.484",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac40960/0",
+      "ac40957/0"
+     ]
+    },
+    {
+     "event_id": "evt-045611ee2379",
+     "t_ca": "1949-11-07T19:52:40.026",
+     "n_exposures": 4,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ka01386/0",
+      "ai42372/0",
+      "fa11567/0",
+      "ai42366/0"
+     ]
+    },
+    {
+     "event_id": "evt-babeebf0e8c9",
+     "t_ca": "1950-11-08T01:59:53.069",
+     "n_exposures": 16,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ac41813/0",
+      "kb01736/0",
+      "ir11584/0",
+      "ir11584/1",
+      "kf00371/0",
+      "ir11592/0",
+      "ir11592/1",
+      "ir11577/0",
+      "ir11577/1",
+      "ac41810/0",
+      "ke00450/0",
+      "ka02141/0",
+      "am28093/0",
+      "ac41812/0",
+      "ir11581/0",
+      "ir11581/1"
+     ]
+    },
+    {
+     "event_id": "evt-8d94bc7df198",
+     "t_ca": "1951-11-08T08:05:47.179",
+     "n_exposures": 8,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ka02644/0",
+      "ai43436/0",
+      "ai43442/0",
+      "ka02648/0",
+      "ka02649/0",
+      "ka02654/0",
+      "ai43437/0",
+      "ka02643/0"
+     ]
+    },
+    {
+     "event_id": "evt-1559468a0de7",
+     "t_ca": "1952-11-07T14:23:52.286",
+     "n_exposures": 9,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "mf40372/0",
+      "mf40366/0",
+      "mf40373/0",
+      "mf40362/0",
+      "mf40370/0",
+      "mf40363/0",
+      "mf40375/0",
+      "mf40365/0",
+      "mf40369/0"
+     ]
+    },
+    {
+     "event_id": "evt-d6894023e153",
+     "t_ca": "1953-11-07T20:25:03.997",
+     "n_exposures": 16,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "ai44129/0",
+      "fa13319/0",
+      "ai44115/0",
+      "ai44101/0",
+      "ai44122/0",
+      "ai44131/0",
+      "ai44110/0",
+      "ai44102/0",
+      "ai44124/0",
+      "fa13337/0",
+      "ai44138/0",
+      "ai44139/0",
+      "ai44116/0",
+      "fa13302/0",
+      "fa13297/0",
+      "fa13282/0"
+     ]
+    },
+    {
+     "event_id": "evt-f96594b60bd9",
+     "t_ca": "1972-11-07T17:40:57.171",
+     "n_exposures": 5,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dsy00426/0",
+      "dsb00426/0",
+      "dsr00422/0",
+      "dsy00422/0",
+      "dsb00422/0"
+     ]
+    },
+    {
+     "event_id": "evt-4fe4dc7486af",
+     "t_ca": "1973-11-07T23:50:57.380",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb00516/0"
+     ]
+    },
+    {
+     "event_id": "evt-bbcacb3223a1",
+     "t_ca": "1974-11-08T06:01:49.556",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb00835/0",
+      "dnr00564/0"
+     ]
+    },
+    {
+     "event_id": "evt-4fe900c85414",
+     "t_ca": "1975-11-08T12:06:23.733",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnr00720/0"
+     ]
+    },
+    {
+     "event_id": "evt-ead9ecc6ec22",
+     "t_ca": "1977-11-08T00:27:16.118",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb01901/0",
+      "dnb01899/0"
+     ]
+    },
+    {
+     "event_id": "evt-1cdbc12382d0",
+     "t_ca": "1978-11-08T06:34:19.828",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb02192/0"
+     ]
+    },
+    {
+     "event_id": "evt-f5cdb42839a2",
+     "t_ca": "1980-11-07T18:55:55.846",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb02667/0",
+      "dnb02666/0"
+     ]
+    },
+    {
+     "event_id": "evt-2bf2396bb96a",
+     "t_ca": "1981-11-08T01:06:12.722",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb02886/0"
+     ]
+    },
+    {
+     "event_id": "evt-61d6b3762972",
+     "t_ca": "1983-11-08T13:30:36.906",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dsr00647/0",
+      "dnb03826/0"
+     ]
+    },
+    {
+     "event_id": "evt-29de50dd0550",
+     "t_ca": "1985-11-08T01:52:22.257",
+     "n_exposures": 3,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dsb01839/0",
+      "dnb04970/0",
+      "dnb04968/0"
+     ]
+    },
+    {
+     "event_id": "evt-f4850558742f",
+     "t_ca": "1986-11-08T07:58:51.667",
+     "n_exposures": 1,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb05518/0"
+     ]
+    },
+    {
+     "event_id": "evt-426b55a7c920",
+     "t_ca": "1988-11-07T20:20:55.652",
+     "n_exposures": 2,
+     "locus_hits": 0,
+     "ring_hits": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "hits_detail": [],
+     "plates": [
+      "dnb06422/0",
+      "dnb06397/0"
+     ]
+    }
+   ],
+   "platephot_row_counts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    26,
+    27,
+    28,
+    29,
+    30,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    39,
+    41,
+    44,
+    47,
+    48,
+    53,
+    56,
+    59,
+    60,
+    122
+   ],
+   "snapshots": {
+    "am00711_s0_43.155_16.986.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "i27949_s0_43.156_16.985.json": "sha256:1533b32e20d9bb714e26b6b15b612e1fdd6c24661e27df7b7324a2ca0a4ae7b3",
+    "ac01961_s0_43.156_16.985.json": "sha256:365634a642696022362c1de6bc9dabbe6ff3f6b524271b1a96e46621f791d14a",
+    "ac01972_s0_43.156_16.985.json": "sha256:a82981f94b446a013b50956a0b5671125dea2a9cd1c3eec56d433229e4f491ad",
+    "ac04195_s0_43.158_16.983.json": "sha256:b1f47987d9b7168da2975d4314bf3ee4d66560a2641d0cfc1ed25f84f7bf0296",
+    "am03208_s0_43.159_16.982.json": "sha256:a5a5874201e90372912109da3dc3e142be5644493c6209368f879734106f8d48",
+    "am03196_s0_43.159_16.982.json": "sha256:bfd52debabd08df1f5faf66665f155d4dd1f26b15ff973d5b3870e9deb0cda6e",
+    "am03185_s0_43.159_16.982.json": "sha256:ae886bfe03f3555aad5b7618f5e1ff20b29664a866351ce31999c46cec915ad8",
+    "ac05490_s0_43.159_16.982.json": "sha256:11dd9bcc7faa2156706e1d5cdceac7b101680c25418d156ca9a9e5d9377cc1aa",
+    "ac05498_s0_43.159_16.982.json": "sha256:ca790d5dc38df9284417c3fa99cc3ac4fa7555a736a5d3d0f0808d8e96c8435f",
+    "am03218_s0_43.159_16.982.json": "sha256:953384920820c25fbd2c48fb873f18f7152ae2908bccda10e7c512a5144d1375",
+    "ac06924_s0_43.160_16.981.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac06942_s0_43.160_16.981.json": "sha256:d162918715cf064eb58f52d0dc806fbd8d0dc499197ac2dc5e5a2f4f00030184",
+    "ac07996_s0_43.161_16.980.json": "sha256:dff4d5626cb777b5ebcb18108cc50b72acad52cb99e447dbcc4749058c658980",
+    "am05251_s0_43.162_16.979.json": "sha256:df8a4b14137b2bd543e21cb5e99088e1d893f0ba60138f2dc51177f4dacf3b67",
+    "am05241_s0_43.162_16.979.json": "sha256:726b4899c96da439981c3bbd753e83f570706744d1dd1799af4d6bf002886643",
+    "ac08960_s0_43.162_16.979.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac08970_s0_43.162_16.979.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "i35652_s0_43.163_16.978.json": "sha256:cb8f8fd119f3540d3f47855ab0bcb29b2520a78ab4cce5cf6eda59f6da5db544",
+    "am06770_s0_43.164_16.977.json": "sha256:f484844931ccc36bc60574243453c028e4a4e3b081d680e410b3770c712817d8",
+    "ac11047_s0_43.164_16.977.json": "sha256:306448bc12fa60048b7a265915c00823d16b5fa109ff2837b459e540da5dc7dd",
+    "am06758_s0_43.164_16.977.json": "sha256:c33dfcc3b8762a2ed2725d05b9fcf52b1bfa20ba2a88800eb90dd4fb92c5b849",
+    "ac12096_s0_43.165_16.976.json": "sha256:eaa20d61e0e46eca5f33147df6e1339f9b88daf9ef11f27c414ab40643b4d651",
+    "ac12087_s0_43.165_16.976.json": "sha256:dd0d4582e74630c79842282fd53b1ec56b7d9300f340d4bc0725d460dd49b256",
+    "ac12716_s0_43.166_16.975.json": "sha256:d4c0583a419e424e45c28a1569c5b5d54c03c9d4a40b43f8b98857d0f919b22b",
+    "ac12723_s0_43.166_16.975.json": "sha256:7e78899c83b9350a5a48084ba0149d90a630b1f57ea50abcaf09c85675fb3c0a",
+    "am08753_s0_43.167_16.974.json": "sha256:8444a05cfd1e925c35b09c21be0f179167984852928e921fec8de23684978376",
+    "ac13420_s0_43.167_16.974.json": "sha256:9ae5f1988edbd494f21cbd763f4981b7f39f9880c6ece96ce61110c44a05adba",
+    "ac14521_s0_43.168_16.973.json": "sha256:2b39d39d2dd7e41109f1ffb24d464664bc59a021473ad2d8710f33984fa96c73",
+    "ai11881_s0_43.168_16.973.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai11880_s0_43.168_16.973.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai11872_s0_43.168_16.973.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai11859_s0_43.168_16.973.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac14497_s0_43.168_16.973.json": "sha256:9ca8c2d22b74497827abc85d604cac05132b9f29bc1a9ab355124a0f9fa02df3",
+    "ac14522_s0_43.168_16.973.json": "sha256:44c1ecf398ce2b9568a289c35e29faaf802dc986d09e43f009b4eb83ffb1f1f4",
+    "ai13071_s0_43.169_16.971.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac16942_s0_43.170_16.970.json": "sha256:8b1fd6de42b5d21421cd35bf3e0224f2f99be55a901dc027c5b2439f86f7a986",
+    "ac16968_s0_43.170_16.970.json": "sha256:d9880f5eaae4e3edaa4462743431c92966d54aa0ee7db34d54ab735e68c0c81b",
+    "mc09652_s0_43.170_16.970.json": "sha256:2de98cfc768e7366e927d70576f97a3be62db6edf41121d5d03e4d31ab832fc1",
+    "md09652_s0_43.170_16.970.json": "sha256:3f90af40ea4f6c51548e1dff883dd3dabd3a08a1e25d2c4ad49ed3ebef6e945a",
+    "ai14243_s0_43.170_16.970.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "am11434_s0_43.170_16.970.json": "sha256:e4aac702440f4a7c66ecad569640f7ac5c318608c2d9ba0197ae00e1971d8b04",
+    "mc09518_s0_43.170_16.970.json": "sha256:05b58fcf46f405bf9dffd41208a4fbd842465ce9a18c1f148a9c76433d3d5b21",
+    "md11635_s0_43.171_16.969.json": "sha256:719dbb0869023fd20a8c47eb5d08246586ac428abd1d7e723ae824c21edeacdc",
+    "ac18109_s0_43.171_16.969.json": "sha256:7fdcfbb890f0117ef6c912082cb58712d394cac204cbfd0e57b62abcd57ab686",
+    "ai15246_s0_43.171_16.969.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac18088_s0_43.171_16.969.json": "sha256:323c2f91170933cec644a9623fe2f45b40fb8c861bb9e6a4e9276b2d77658d99",
+    "ac19383_s0_43.172_16.968.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac19403_s0_43.172_16.968.json": "sha256:8f8478fafce44256557ae276421f591b18aa2f1870e04b6e8cbc79c459d975ee",
+    "ac19450_s0_43.172_16.968.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac19416_s0_43.172_16.968.json": "sha256:c4a1a3951df6359f93f2c2a1c8cf626b6b6a9d90133b600fb6ebb352a876229d",
+    "ac19414_s0_43.172_16.968.json": "sha256:d4a2dee598540fb2bb0e95fd676f6dfcee41dbdfa9f1441b83c1d42f61feddb1",
+    "mf03096_s0_43.173_16.967.json": "sha256:63ce97bc41095e31687245603261302a9d7515052ef32e19b51de583ea457564",
+    "ac20694_s0_43.173_16.967.json": "sha256:0d679df855728e8dd0da0e8dbd3d190da47391ab58bed544df00e1872939b133",
+    "ai21321_s0_43.176_16.964.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai22101_s0_43.177_16.963.json": "sha256:e9f4614d2c8fb14efb18eb9af9d09f12566913f2369df22163fbef8e57e94210",
+    "ai22869_s0_43.178_16.962.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ax00305_s0_43.178_16.962.json": "sha256:ce4e40aa3cd54b10845ad22dc6febd125eedbe746fcd08a338d97cfb9b737e28",
+    "ai22859_s0_43.178_16.962.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai22873_s0_43.178_16.962.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac26519_s0_43.181_16.959.json": "sha256:286483b3b304e262bf11de4fe11dc8db95339b5f5b180a60b7eb2950f47214fd",
+    "ay01815_s0_43.182_16.958.json": "sha256:fc0f563c81555c5d125caf286d1551c00df05aeda8ab3460418772e2b7e3a4ca",
+    "ay01813_s0_43.182_16.958.json": "sha256:d0e6ff222588101b02bf5188fad5676845135c616aeb07061796144bbe53444e",
+    "ay01840_s0_43.182_16.958.json": "sha256:faeec539ee102907671ff243e56143b2928ccd28d5a94a774509ceeb6317ab85",
+    "ai26770_s0_43.183_16.957.json": "sha256:3725a5ec2d4afea2ef5124d086756dd4f35d4c3612d1c23414bcf1ed8934e7db",
+    "ac27018_s0_43.183_16.957.json": "sha256:9ef250800daae53cf11b7e703563db3153ebf200c6216fa4fb0d15625d6e4fc3",
+    "ai26773_s0_43.183_16.957.json": "sha256:790eec185e0a80b4650b5e0f826358c92d2d5db0dfd35e218b1d3cc1c5932183",
+    "rh01640_s0_43.184_16.956.json": "sha256:662269b57a97a3af1b6732267cb82553fba8de40f102a75993d413422886bdc5",
+    "ac27892_s0_43.184_16.956.json": "sha256:0f9e1081706178b79104f53f3cf4a73d0c72d3888de4bb293851c3467e874d94",
+    "ac27873_s0_43.184_16.956.json": "sha256:daa6b32b07da0f61bf53334cb417e9eb32845fc2d2e2e2b8e3ba5ef521f30e27",
+    "rh01654_s0_43.184_16.956.json": "sha256:0f438b6a9ca77b30791e1da85eaa357b5f99143f30d1d1dfaeb160d2e8b22f35",
+    "rh02595_s0_43.185_16.954.json": "sha256:4f11371fdf934ecfc894226a5d0ef5628b094c7d300e246e82643604360e027e",
+    "rh02589_s0_43.185_16.954.json": "sha256:0777ab785f474c04ba814d59eed4f94c0438a86f120d8d018f923f988d859a37",
+    "ai28674_s0_43.185_16.954.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac28774_s0_43.185_16.954.json": "sha256:d3a1c879c24f31030ee0db5f8d94803c27903d2faa5866517d2440e52a73e1f4",
+    "ac29634_s0_43.186_16.953.json": "sha256:8022b1f3a364547ac7000d86f45adb241199d5159c18d8eec0e8de55fcdc3a70",
+    "ac29605_s0_43.186_16.953.json": "sha256:a26ee18b3bf6ef4f5dbb719c3019028da8ed8cd4a48ba92ec70d9eb8f1a00f3e",
+    "rh03586_s0_43.186_16.953.json": "sha256:91c2f74547ed342a0e1315bf8fa497c0829a01f487de0d76e8dadc7c3b6395be",
+    "rh03573_s0_43.186_16.953.json": "sha256:27dbdf928f29bdb24b5b5845ddd77139b391bdf873589ed0cfd7836cf02a020b",
+    "ac29594_s0_43.186_16.953.json": "sha256:2640a991f7fcfcaa0b2fb20ece565bfd816aaae3e13172f96e95549d36c34e1a",
+    "ac29619_s0_43.186_16.953.json": "sha256:25423f12c3a5f8c3b70bfbe84983e11cf707fd691d7fbbaa4c01616dcf4b30a9",
+    "mb02626_s0_43.186_16.953.json": "sha256:3c9058fc63e6cac41d3ccdb2ad6d712e2a3ede2f4ca5d0fdcd2aa9a84029f7b3",
+    "ac30649_s0_43.187_16.952.json": "sha256:c8fe4a7d452869993768eaf9a5ae826d8b2af8377fd8054345e7a9f3d32b65cd",
+    "ac30637_s0_43.187_16.952.json": "sha256:486ac49d7df06f67727885fc0bd3d645dc2b5de316c2f5ca407bf649403ce078",
+    "rh04648_s0_43.187_16.952.json": "sha256:5ffd163f5c276d60097b84a3db3aad31af2b2e1de180a7bd7c95b014b8925c46",
+    "ai31236_s0_43.188_16.951.json": "sha256:caa0f9742c928df836b60c16cd98ea1e554b0e0ecd4c85dd9d669565ed8da6c8",
+    "ac31543_s0_43.188_16.951.json": "sha256:a0e6aeffdf58afa433486440ce0a87035854f5239c5eb28face1da7048a0ee0a",
+    "ac31530_s0_43.188_16.951.json": "sha256:85c4f7b7805656b67b1cf7b84b3968377cbea6d8ff17018a26322cc06a7908f7",
+    "rh05527_s0_43.188_16.951.json": "sha256:587042c9f62d4a7a492c6596e92c4d5a3ae823e40d258b59c33ea87ffa73f592",
+    "ir00188_s0_43.189_16.950.json": "sha256:5869948b265b2257443ee870d161206bf69d5ff4d3a38c97b326ef3c00766ac3",
+    "ai31873_s0_43.189_16.950.json": "sha256:831d2f5d8e9ef5e169d5e9c9c3d8236575a1698a0bc7ee17cc92c7dc4cb30e69",
+    "ac32442_s0_43.189_16.950.json": "sha256:98766154b374076bef4bb3be71fab1826e28370e9c04bddae9d6fb232cdd9e26",
+    "ac32430_s0_43.189_16.950.json": "sha256:7544153906e54220ab6ddf84b8cf335f5268072346806e9a383573dcd8fe258c",
+    "ac32434_s0_43.189_16.950.json": "sha256:46473a0aa231581599e3c7fb8d6d04599a97889c1220f2a1bb896ccfa98db531",
+    "ai32404_s0_43.190_16.949.json": "sha256:7a8460dc309f46e988034863e269e5112d0805d669a0880ae40c39a69b2a8f7b",
+    "ac32921_s0_43.190_16.949.json": "sha256:4c2e2e317e7c17e02da16f372540e0bf1f0805d60ee516598a943c07912aa28d",
+    "ca00544_s0_43.190_16.949.json": "sha256:37e0fb99bc0592c35d03b43d038ce5feeb7139b1176c7d75807de7e016fd545f",
+    "rl01094_s0_43.191_16.948.json": "sha256:7b64a859b1a3dbd867b5364b407e742b565c09c94582e8f004fdb8bb55dc79d8",
+    "rl01093_s0_43.191_16.948.json": "sha256:78057ce2c10aae8401fd9af522245f456465b4bf96d76cd0116161bb0ae0a0df",
+    "ai32950_s0_43.191_16.948.json": "sha256:e4aff656112c98839969d7f1bdeb5986fd7e83cc6bbaf50eddd23ba3fcdc923c",
+    "rl01099_s0_43.191_16.948.json": "sha256:91313270b59945e4963b0e07e795d651b107c191d8d8722921d7adc0d8830495",
+    "fa00420_s0_43.191_16.948.json": "sha256:052dcb5bdf1ecf862db5cedfbebabf20d6a08d41ce5c15d81bdacba2449a88b0",
+    "rl01088_s0_43.191_16.948.json": "sha256:af0a31f911e70bb9ec040bbf10ff24e9e94b30ab3d3ee3789f5a3eeab8506823",
+    "ai32940_s0_43.191_16.948.json": "sha256:3b207e48c36bc516e59074334ee33170c55966354434f4f8933444b21b4c7b49",
+    "ac33901_s0_43.192_16.947.json": "sha256:87f6c11b835dc0e2d4cfd65032251fa55360285d7fec0f3a4961adea8da3cd2f",
+    "i55684_s0_43.192_16.947.json": "sha256:00d735f8fe1034447cdf29eb5f14eb1c50cbc009179057dfe0f35ab19bebacff",
+    "rh07861_s0_43.192_16.947.json": "sha256:9806b98b3467e9bafb02bfb15937e9f86ec33d30dcf5c15cdde110013708a09a",
+    "ai33596_s0_43.192_16.947.json": "sha256:ae4f7168a59638cfa51d899582d9ce29fa50cf3956932f4519ba9e33a953d46d",
+    "ai33574_s0_43.192_16.947.json": "sha256:cfce5ccbfa7d3055197a308c20114bc1849120348a0c3ccb5676dae3c88510a1",
+    "bm00724_s0_43.192_16.947.json": "sha256:b6d15d44af46890ba043bed44294a03a4dfa29c0b6342ad68c03ece1ab22e921",
+    "rh07854_s0_43.192_16.947.json": "sha256:8d2aa5e533855e95fed32897dad7555dcfd261bc318051767e0a3cb79c1fe4a5",
+    "ac33880_s0_43.192_16.947.json": "sha256:29290e70d6331a9f289bdbf137dbb614f7dd13683959878eecd031da7cbd1558",
+    "ir01763_s0_43.192_16.947.json": "sha256:2bf0acd6becedddee83a18bd8e036ed43b1342498f11be74de4135b4f5bed41d",
+    "mf24034_s0_43.192_16.947.json": "sha256:a57715e26531ce7acc9acf7b10c8ebdc116e8a2599b010ce63b90e8d0aa4c948",
+    "mf24058_s0_43.192_16.947.json": "sha256:bf6e2dcb2a50fb35dd72f6132d6d6d5f2cf8a17d197f2b37f00e96639d22b5e1",
+    "ac33899_s0_43.192_16.947.json": "sha256:f4227c164b53c57d1f0969e598773029a510c3b9468523bce04e40c171cdc39c",
+    "fa01470_s0_43.192_16.947.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "mf24020_s0_43.192_16.947.json": "sha256:3d18486a605cb2ec651aa48e3be2c3bdc37a0f8b6ace151d71760f7150fe21b7",
+    "ma06740_s0_43.192_16.947.json": "sha256:5cfd5392f675432d9934647a737921ccfcd749f6259d4dd5ed96d6c56eb13ced",
+    "fa02334_s0_43.193_16.946.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "fa02338_s0_43.193_16.946.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac35304_s0_43.194_16.945.json": "sha256:2bf828a814a1c0cab19b1a0d9830af7616067f9edc57406f378bf0fe0bdabc4b",
+    "fa03616_s0_43.194_16.945.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "bm01673_s0_43.194_16.945.json": "sha256:ac2ef0b3d80efc849c53037ca5a05d8d308378303ef966056d54c4dc4111b453",
+    "ac35327_s0_43.194_16.945.json": "sha256:957ab838b8a9029ac58acbcac59a059d572d5a9c430e012c7541b16f8844e167",
+    "ac35312_s0_43.194_16.945.json": "sha256:6dd553baba33e98e6fa5e21af0ced29f6456d833f0ec3d6cacfb7123f1523fb9",
+    "fa03617_s0_43.194_16.945.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai35163_s0_43.194_16.945.json": "sha256:047a4363f8b4eda5633d9784e33b6f8f00ebc28992114534163d0cf76c50906f",
+    "i57348_s0_43.194_16.945.json": "sha256:39a1b295b6a8d48265d0cfe2621c16a3f0d07627394c498d8c07db6a833b6f08",
+    "ma07950_s0_43.194_16.945.json": "sha256:eb1a0b3eb0fe9766fbd06c397fe64dfff1d8cec62bbe25759e55774d57114a09",
+    "ma07949_s0_43.194_16.945.json": "sha256:2dc4397af56ec5361e1b9f20561a1b19cc24749746a28e0f95e54b09412f8c1e",
+    "fa04789_s0_43.195_16.944.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac36028_s0_43.195_16.944.json": "sha256:3fbeb878089e3d2373f1da248339d9383aace2a5d115599e8f859ccc2ebf6b54",
+    "fa04788_s0_43.195_16.944.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai36023_s0_43.195_16.944.json": "sha256:5a557bf6b527e209850ba9b9179695e27e0bbfc2f0306b57bdb3b5c815e58e1a",
+    "ai36036_s0_43.195_16.944.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "fa04799_s0_43.195_16.944.json": "sha256:290de9ceae3c6277ed3a11d41a4a90080dd010171ad210a6cd8045e16bee01fa",
+    "fa04819_s0_43.195_16.944.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ir05302_s0_43.196_16.943.json": "sha256:718c61be5bbd9709ff5ea095237ec589dd88d72d5088951f9c81c4b44a665a07",
+    "am22152_s0_43.196_16.943.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "fa05863_s0_43.196_16.943.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac36791_s0_43.196_16.943.json": "sha256:ab17c6d86169c56f1d8d5e0ab3f91979746781373726e6cc169b0c6aa976189d",
+    "rl04060_s0_43.197_16.942.json": "sha256:25ad9dabdcba694a47ff2631479460fa9b49d786cf56f3b71bae0c2edfa5b015",
+    "ac37572_s0_43.197_16.942.json": "sha256:17d40c9e7d1d20de525b54978b0eaf40977073840db49d7a10ac42c36a66ae91",
+    "rl04055_s0_43.197_16.942.json": "sha256:c4ecb13021026c7888bde4df493d158626f7ebd3793819b71e5c72f6d55f8976",
+    "fa07118_s0_43.197_16.942.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai37897_s0_43.197_16.942.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "i58548_s0_43.197_16.942.json": "sha256:effaa2ad540182fa499307329d0a57053ab0b01e0651d62d9dd0f3fc69169da8",
+    "rl04054_s0_43.197_16.942.json": "sha256:855d518a1a3baea617bcea1e376a38a830b4844172edafcea699f000047a1fa9",
+    "fa07108_s0_43.197_16.942.json": "sha256:6c56879dec7f07eaad685892f5ca2d47004e9a7f6c6764446290be772cd9f615",
+    "fa07141_s0_43.197_16.942.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "rl04061_s0_43.197_16.942.json": "sha256:9a3ea3d83b5155aaa155d8f33f10b00b3980288484a9bdbfc978fb91d91b5ea5",
+    "ax04204_s0_43.197_16.942.json": "sha256:47b208b87eb5e862a3d2bfa48f673ab00ef9e10b21eb184bf53c037b65e939dc",
+    "fa07871_s0_43.198_16.941.json": "sha256:567a11629cba5e72f319e6ec0a427b1f207a0e795376d1c76e18c00ceb296149",
+    "fa07879_s0_43.198_16.941.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai38461_s0_43.198_16.941.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "bi01777_s0_43.199_16.940.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "fa08623_s0_43.199_16.940.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai39199_s0_43.199_16.940.json": "sha256:960f2f3a19807429dc9996c0ed83744f4f532a01e241fea91431e731a5fc42d0",
+    "fa08624_s0_43.199_16.940.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "mc34305_s0_43.200_16.939.json": "sha256:21066dd8d288f9b86f9a1e7c745867a8217289dc22cc437838a9fdb1d3630214",
+    "fa09310_s0_43.200_16.939.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai39855_s0_43.200_16.939.json": "sha256:f150b08b38a6a9de2c632d8c6847deaa6345d0d6adc8dfb3c9edde46a3ed5a78",
+    "ai39843_s0_43.200_16.939.json": "sha256:f63a45f5be9baaee8735f2c0403d97293746d6425fc8a1d05a80fcb55415933c",
+    "ai40608_s0_43.201_16.938.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac39949_s0_43.201_16.938.json": "sha256:a3e1259b0b480002e5da6d477df0856ff36f2758b8ce7ad3754a136cd297a63b",
+    "fa10019_s0_43.201_16.938.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai40623_s0_43.201_16.938.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "fa10034_s0_43.201_16.938.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai41349_s0_43.202_16.936.json": "sha256:56d83b8e696c95f0d7873b2726d5f281d481a67e157869aaa993294649e7381d",
+    "ac40503_s0_43.202_16.936.json": "sha256:009414b99cd694b481b0639c4a91e70e8887b4cea5506f628a776001bd4dde61",
+    "ir10365_s0_43.202_16.936.json": "sha256:84e58b609c223336c9cb2bf0b14a5175fbbd281a5fe77e0994edcb2347da391e",
+    "am26570_s0_43.202_16.936.json": "sha256:14b962e0f6fd7452288a8ffd8ab948d553847dff3fbd2209c006e64a963e491a",
+    "ac40960_s0_43.203_16.935.json": "sha256:ad69b3858ab214949f7fc9960fa44a61530e63191d311b05f0ccfc63da456b9c",
+    "ac40957_s0_43.203_16.935.json": "sha256:4518465042953e7ca5d144772fb388558f1286b17467a0b49635835208f34811",
+    "ka01386_s0_43.204_16.934.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai42372_s0_43.204_16.934.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "fa11567_s0_43.204_16.934.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai42366_s0_43.204_16.934.json": "sha256:90715334b917dca6a60353a9c7d2c164d10f45359dd361b989a2b55bd1bb1be2",
+    "ac41813_s0_43.205_16.933.json": "sha256:0ad7e479ad600f55538ce2c933128c7f838ae1ba32e82f720081a63db73ab92b",
+    "kb01736_s0_43.205_16.933.json": "sha256:1847d10788848949f80ec4a66eb887bf72e0b2b0b7b2ebc61193b2645c78ae14",
+    "ir11584_s0_43.205_16.933.json": "sha256:37023c1a186ab95d6aa35e5964a247ecf974da0150976c46cd891f38940e9931",
+    "ir11584_s1_43.205_16.933.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "kf00371_s0_43.205_16.933.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ir11592_s0_43.205_16.933.json": "sha256:1d4a32439df04ffaa8981fade9d4c43de26734c35ba188af47d2ef5c9e5ef867",
+    "ir11592_s1_43.205_16.933.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ir11577_s0_43.205_16.933.json": "sha256:0f2d328402a273ee8c6ba7bb4f26591e539630bdde02a3010d9182aa048cac4b",
+    "ir11577_s1_43.205_16.933.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ac41810_s0_43.205_16.933.json": "sha256:88631238e2f81390581dd86f0a48e6e5119c1e17e3442aa955f9661ac7679389",
+    "ke00450_s0_43.205_16.933.json": "sha256:e5e5b736a6d2877ec38a2689f9cd4afb93ce6cbe1fb44d02f9f978a7b90af1c8",
+    "ka02141_s0_43.205_16.933.json": "sha256:66f953eabfc54cbcbed9799b3da3cf74fe75a58dfcf05e31556ef943c6d6aa37",
+    "am28093_s0_43.205_16.933.json": "sha256:1ebc5b152a6f1640290f4c9d4722e1f3fbf1225a63b288814faef5f2787f4a68",
+    "ac41812_s0_43.205_16.933.json": "sha256:3f5ba63ddca1cb97b6294386abecd2cb2233c05dc626189c77a51f8f4b23a64e",
+    "ir11581_s0_43.205_16.933.json": "sha256:252110ac864a4e5570a114866b28fdbe69377d1b7ded77c5f041490cbd4edd5e",
+    "ir11581_s1_43.205_16.933.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ka02644_s0_43.206_16.932.json": "sha256:8a5111e9965dfb443ca5711665d2d1370890185113f859f1c3f437c16cb3b578",
+    "ai43436_s0_43.206_16.932.json": "sha256:d334a3003323521d0d5baa64f12147fbf1c6abadc5a456c39abc6746dae0d53f",
+    "ai43442_s0_43.206_16.932.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ka02648_s0_43.206_16.932.json": "sha256:639d149a2070d55266a1bdab8a0bf8c9c3471a2ccf7a68d3538592312e7e87b3",
+    "ka02649_s0_43.206_16.932.json": "sha256:0df6a783dfb1759015366b1cbbcbfc46ceaf4af24fa0546a9f50af43fe699535",
+    "ka02654_s0_43.206_16.932.json": "sha256:d500260f59ab024aa3fefab6d3e5484b2062ae53c2bf17e0f5d4a52674398fd9",
+    "ai43437_s0_43.206_16.932.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ka02643_s0_43.206_16.932.json": "sha256:7cfa46580c6b3fdbf9bb89ff407ef129fa324c5ec5dc24b04bb0f22a88296945",
+    "mf40372_s0_43.207_16.931.json": "sha256:03c7dd01fe23c180e8780fbaae0c0ea1f0ed7d8bc02e317062c2cc790e66665e",
+    "mf40366_s0_43.207_16.931.json": "sha256:21f12b0cb96c4c24868bc32a78abd8a64193cbf11cc70886ecebfdd573db8d7b",
+    "mf40373_s0_43.207_16.931.json": "sha256:5afe91dc7a592b4cb0466a8d0e5cfd5d98f788dd5ef30cc4385b0a193cf9e6c4",
+    "mf40362_s0_43.207_16.931.json": "sha256:333f59f78cae014fa5bdc7192894ed21651ad86a10e09f78d258bcbd83bc888b",
+    "mf40370_s0_43.207_16.931.json": "sha256:c4a4c045dc3ac952fe944b97ef9d95fe601d6f93c922788f415bc68a1a072f42",
+    "mf40363_s0_43.207_16.931.json": "sha256:4bdc01c31942df325e5e6cb0cdd56e0ccd53ad3bcda42c7b30f8c33867a56153",
+    "mf40375_s0_43.207_16.931.json": "sha256:cb0a3352b5f2239712e42e9c69126880722f44b08046883cf0c0d71cb0a661ed",
+    "mf40365_s0_43.207_16.931.json": "sha256:84f04594f73a444d9d4d6461e4c3e7e1d9b36bd63d867c5c35b31d8c27a145bf",
+    "mf40369_s0_43.207_16.931.json": "sha256:a7ae70ed3a7e575ef78449d43bce14869f6423413f5ae775b9143754e94ac578",
+    "ai44129_s0_43.208_16.930.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "fa13319_s0_43.208_16.930.json": "sha256:706fdf8bf305fe251c6d1a360a02546665a8bae4e9408a5d7120543e0edd394c",
+    "ai44115_s0_43.208_16.930.json": "sha256:b35b522156d404aee6dd97d74c0f8c680d8d921aa5faa39c337a1e2bd40a0ad0",
+    "ai44101_s0_43.208_16.930.json": "sha256:030abe2a38009b1d0b57d52c4eb0bc02dc9ad40ca14ca4e898cd718147b1c33e",
+    "ai44122_s0_43.208_16.930.json": "sha256:f0aeb4f4b374adad4a56306568133f2a098a2678dba2f8d5835b5a872f563a9a",
+    "ai44131_s0_43.208_16.930.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai44110_s0_43.208_16.930.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai44102_s0_43.208_16.930.json": "sha256:d344bae7b24afdbaa7a5eb54c741a5e1cf7012d96c652c4c2d2af000ae1a545a",
+    "ai44124_s0_43.208_16.930.json": "sha256:820ea2ab83e64647185b282838f62b6656759000aef7707d41c02d4df3aab833",
+    "fa13337_s0_43.208_16.930.json": "sha256:591404bea82d52cbba28fbfbd77331727735b9639c821561d9e47a01ce83992f",
+    "ai44138_s0_43.208_16.930.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai44139_s0_43.208_16.930.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "ai44116_s0_43.208_16.930.json": "sha256:c6f4c1ae8230eff96fb290a27749da0ba41927af097f21d9b69f71f7272537e0",
+    "fa13302_s0_43.208_16.930.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "fa13297_s0_43.208_16.930.json": "sha256:01cacb260c6e147c6bde2a75ebab729e064342e49c2a1ae194a3f102ec0dff52",
+    "fa13282_s0_43.208_16.930.json": "sha256:ad9d4f19bb78be822650ed07f8a356c5ba67d01297f0489bc118d09ccea12490",
+    "dsy00426_s0_43.227_16.910.json": "sha256:93d56495aa199103fe5d7a8458b2b94b4875d535567732b5561977e4abfb9e53",
+    "dsb00426_s0_43.227_16.910.json": "sha256:401c13252a8a9f5c43c3693c853db96ff6145aab2b29a1543c264fa9692b3934",
+    "dsr00422_s0_43.227_16.910.json": "sha256:21f87e827e62ee52f5319fdca52dc0796194c22d00471c8552cc6b133b5d00de",
+    "dsy00422_s0_43.227_16.910.json": "sha256:9a21ac307b1630eb2ddd7a894081bb434284cd599f7543d17a51f05a0574d9ed",
+    "dsb00422_s0_43.227_16.910.json": "sha256:93cdfc26081edd0892765ee1133a8f82807a96a42defcd8cd5c784e73e46fd9d",
+    "dnb00516_s0_43.228_16.909.json": "sha256:473c06d7d13b6d9d501d8f6e7beb6fe7e9736f9df0c29e041c3366a78cdacd14",
+    "dnb00835_s0_43.229_16.908.json": "sha256:8dbbbea45743a186d8abb4b6fce608f8b9b41b7ef8a3adf2d6ebf840eda0c84b",
+    "dnr00564_s0_43.229_16.908.json": "sha256:c6fa691c05bc0040be19aacd781ab91c271ee24669931b90b473de6ad9955d4a",
+    "dnr00720_s0_43.230_16.907.json": "sha256:faf977dc204a9232bf7fb7e50eac34f80d8cd87d435ef7c44ba997be28fd7eb5",
+    "dnb01901_s0_43.232_16.905.json": "sha256:14372a456d53d806dd1f6a7c76f80a645183af1a188b9d6d860667256984b2f8",
+    "dnb01899_s0_43.232_16.905.json": "sha256:b353dd63a14a939cc7ca3ecd20d7592fc1e801ba97827e6614aa71df10dfdcae",
+    "dnb02192_s0_43.233_16.904.json": "sha256:fd6b1c339c0b19fc128b6f8a52f5997a5258fb2052d0cb7870120dedd3aeed2b",
+    "dnb02667_s0_43.235_16.902.json": "sha256:bd95e4f1917ef4da78c9f8c69b5e08cf037769529c4300d88b8ef24ab4cb632b",
+    "dnb02666_s0_43.235_16.902.json": "sha256:33c7d5a048485fa9a8f595261adf3a2fee41f9c46517d22b943d19ab38761c55",
+    "dnb02886_s0_43.236_16.900.json": "sha256:9755124b70a2a9d15356452971b4260ec3c2808a01a6390afe1b6b46257293a6",
+    "dsr00647_s0_43.238_16.898.json": "sha256:edeec48c888a67ce01f4bb5d723415035a346dc2a7d242befb33300b5f58611a",
+    "dnb03826_s0_43.238_16.898.json": "sha256:e9c1fc9d01090041d543bc97275081e4a21953fcd09499f366d14fafeb956104",
+    "dsb01839_s0_43.240_16.896.json": "sha256:76aa425d34e701cc30d4ae2e237c1d531d231d3dcb347dd2a41094b65ea03bb3",
+    "dnb04970_s0_43.240_16.896.json": "sha256:152a0b0394273506c288f6229595f120fa5bcd82b664775395d64ed694e96fc7",
+    "dnb04968_s0_43.240_16.896.json": "sha256:813d260d1ed6e74f747b40cdd82a7bef5b82dc249dbe616ead1ff8437e9a321f",
+    "dnb05518_s0_43.241_16.895.json": "sha256:82cf8777ad14c7bab0bce9fad4bc6784ca47ac768923e94eddd39c15e6062935",
+    "dnb06422_s0_43.243_16.893.json": "sha256:b929a823af249db9603b4ed1d43fee694c59d07c62afc57d70b95984750f33df",
+    "dnb06397_s0_43.243_16.893.json": "sha256:779bbe622e2f54971ae1237e80a2af407f667a0e4980c594a467e55b0bfe6291"
+   },
+   "regime": "limits_only",
+   "quiescent": {
+    "n_tested": 12,
+    "n_detections": 2,
+    "quiescent_mag": 17.1067285,
+    "mags": [
+     16.89,
+     17.32
+    ]
+   },
+   "querycat_entries": 0
+  },
+  "van-maanen/A_0.1AU": {
+   "unit": "van-maanen/A_0.1AU",
+   "statistic": "lightcurve_z",
+   "n_inwindow_rows": 97,
+   "S_event": 1.9306633586009954,
+   "T_event": 9.649714465578443,
+   "exceed_event": false,
+   "S_stack": -1.0924397873354854,
+   "T_stack": 1.1974051436814614,
+   "exceed_stack": false,
+   "controls": [
+    [
+     0.5498854404709485,
+     -2.3774499623157204
+    ],
+    [
+     2.177566738366243,
+     0.735290968099158
+    ],
+    [
+     3.528211287278985,
+     1.1974051436814614
+    ],
+    [
+     2.969738140183939,
+     0.4673544358516957
+    ],
+    [
+     9.649714465578443,
+     1.1344022043956696
+    ],
+    [
+     2.8286216315622537,
+     0.696905073766066
+    ],
+    [
+     1.3375775566903567,
+     -3.2642927544190745
+    ],
+    [
+     3.251926547451668,
+     -0.6814220253620835
+    ]
+   ],
+   "routing": {
+    "refcat": "atlas",
+    "ref_number": 9717808673,
+    "amendment": "v1.1"
+   },
+   "usable_rows": 1365
+  }
+ }
+}

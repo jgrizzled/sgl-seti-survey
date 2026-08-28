@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>DASCH: DR7 Known Issues</title>
+  <link rel="stylesheet" href='https://dasch.cfa.harvard.edu/style.css'>
+  
+  
+</head>
+
+<body>
+  <div class="frame">
+    <div class="masthead">
+      <p class="banner"><a href="/"><i>DASCH</i>: Digital Access to a Sky Century @ Harvard
+          <br>
+          <span style="font: 25px Georgia, serif;"><i>A New Look at the Temporal Universe</i></span></a>
+      </p>
+
+      <div id="navbar">
+        <ul class="menu" id="nav">
+          <li><a href="/">Home</a><!--$top--></li>
+          <li><a href="/dr7/">Data Release 7</a><!--$top--></li>
+          <li><a href="/data-access/">Search/Download Data</a><!--$top--></li>
+          <li><a href="/sitemap/">Sitemap</a><!--$top--></li>
+        </ul>
+      </div>
+
+      <p style="clear: left; margin: 0;">
+      </p>
+    </div>
+
+    <div class="mainfull">
+      
+<div class="headerclass">DR7: Known Issues</div>
+
+<div class="mainform">
+  <p>As with any survey, the DASCH data display various known issues. This page
+summarizes them, with links below to individual pages that discuss the each item
+in more depth.</p>
+<p>There are surely other gremlins lurking in the DASCH data that have not yet been
+discovered. If you are working with DASCH data and notice anything suspicious,
+please reach out to <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a> to discuss.</p>
+<ul>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/ki/false-atlas-trends/">False long-term trends in ATLAS
+photometry</a>: DASCH’s photometric
+calibration against the <a href="https://archive.stsci.edu/hlsp/atlas-refcat2">ATLAS-refcat2</a> catalog uses <em>g</em>-band magnitudes. The
+<em>g</em> filter profile is not a perfect match to the plates’ chromatic response,
+which can lead to false long-term trends or features in lightcurves. The
+<a href="https://www.aavso.org/apass/">APASS</a> calibration should be used for analyses relying on precise long-term
+photometry.</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/ki/missing-lc-points/">Missing lightcurve points</a>: some DASCH
+lightcurves are missing detections that should, by rights, be present. If you
+have a science application that depends on <em>non</em>-detections of one or more
+targets, you should visually examine relevant plate images to check for missed
+measurements.</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/ki/source-splitting/">Source splitting</a>: the DASCH catalogs may
+contain multiple entries corresponding to a single astronomical source,
+causing lightcurve measurements to be split quasi-randomly across the
+different catalog entries. It is often safe and appropriate to merge the
+detections associated with multiple close catalog entries into a single
+lightcurve.</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/ki/undetected-plate-defects/">Undetected plate defects</a>: although
+the DASCH pipeline contains many checks aimed at detecting and rejecting plate
+defects that masquerade as astronomical sources, some will slip through.
+Science results hinging on a single detection should include detailed vetting
+of the underlying data, potentially up to the level of physical examination of
+the plate in question.</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/ki/undetected-blends/">Undetected blends</a>: plates with low spatial
+resolution may blend multiple sources, causing apparent brightenings that are
+not real. These couple into the long-term lightcurves because different
+observing programs operated over different time periods.</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/ki/incorrect-astrometry/">Incorrect astrometric solutions</a>: the
+automated astrometric solutions for some plates are simply wrong. This problem
+is most likely to affect the “meteor” and “patrol” plates that cover very
+large areas on the sky.</li>
+</ul>
+<h1 id="retired-issues">Retired Issues</h1>
+<p>Some issues have been solved. Their pages are preserved to prevent linkrot.</p>
+<ul>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/ki/unspecified-emulsions/">Unspecified emulsions</a>: Different
+plates used for DASCH photometry used emulsions with different color
+sensitivities. In the past, the DASCH data did not make it easy to tell which
+measurements come from which emulsions, leading to apparent &quot;variability&quot; that
+is actually a color effect. Modern data expose
+<a href="https://dasch.cfa.harvard.edu/dr7/colorterms/">colorterm</a> fields that allow users to address
+this.</li>
+</ul>
+
+</div>
+
+    </div>
+
+    <div id="contact" class="footer">
+      <p style="text-align: center;">
+        <b>Email List for Discussion/Announcements/Support:</b> <a target="_blank"
+          href="https://gaggle.email/join/dasch@gaggle.email"><i>dasch@gaggle.email</i></a>
+        <br>
+        <b>Plate Stacks:</b> <a
+          href="mailto:harvardplatestacks@cfa.harvard.edu"><i>harvardplatestacks@cfa.harvard.edu</i></a>
+        <br>
+        <a style="font-size: smaller;" target="_blank" href="https://hwp.harvard.edu/terms-use">Harvard Terms of
+          Use</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+{
+ "version": "v1.0",
+ "hypotheses": "hypotheses.md v1.0 (FROZEN 2026-08-26)",
+ "substrate": "catalogue-level (D3): lightcurve rows for A, platephot rows for B; APASS refcat; cutouts vetting-only",
+ "b_construction": {
+  "z_grid_au": [
+   550.0,
+   1000.0,
+   2500.0,
+   5500.0,
+   10000.0
+  ],
+  "match_radius_arcsec": 10.0,
+  "match_radius_sensitivity_arcsec": [
+   5.0,
+   15.0
+  ],
+  "candidate_classes": [
+   "uncatalogued (blank ref_number)",
+   "refcat-matched brighter than stdmag by >= flux_anomaly_mag"
+  ],
+  "flux_anomaly_mag": 1.0,
+  "fatal_aflags": [
+   "SUSPECTED_DEFECT",
+   "PICKERING_WEDGE",
+   "MULT_EXP_UNMATCHED",
+   "MULT_EXP_BLEND",
+   "REJECTED_BLEND",
+   "UNCERTAIN_DATE"
+  ],
+  "fatal_aflags_mask": 184551168,
+  "strict_extra_aflags": [
+   "CASE_B_BLEND",
+   "CASE_C_BLEND",
+   "CASE_BC_BLEND",
+   "SXT_BLEND",
+   "BAD_PLATE_QUALITY"
+  ],
+  "strict_extra_mask": 74449024,
+  "ring_offsets_arcsec": [
+   [
+    60,
+    0
+   ],
+   [
+    -60,
+    0
+   ],
+   [
+    90,
+    0
+   ],
+   [
+    -90,
+    0
+   ],
+   [
+    120,
+    0
+   ],
+   [
+    -120,
+    0
+   ],
+   [
+    0,
+    90
+   ],
+   [
+    0,
+    -90
+   ]
+  ]
+ },
+ "a_construction": {
+  "statistic": "robust z: (median in-window magcal_magdep - off-window median) / (MAD_off * 1.4826 / sqrt(n_in)); brightening positive",
+  "baseline": "all usable off-window rows of the unit's lightcurve outside every covered window padded to 2x half-width",
+  "min_offwindow_epochs": 20,
+  "limits_only_regime": "star fainter than the p90 in-window limiting_mag_local: hit-count statistic at the star position (B-construction candidate classes, r_match identical)",
+  "temporal_offsets_days": [
+   -97,
+   -71,
+   -47,
+   -23,
+   23,
+   47,
+   71,
+   97
+  ],
+  "temporal_redraws_days": [
+   -127,
+   -113,
+   113,
+   127
+  ],
+  "mirror_gate": true
+ },
+ "rule": {
+  "exceedance": "S > max(T over the unit's 8 controls, 0); margin reported",
+  "statistics": [
+   "S_event (max single-window)",
+   "S_stack (all covered windows)"
+  ],
+  "expected_control_crossing_rate": "1/9 per trial"
+ },
+ "row_quality": {
+  "reject_flag": "rows with nonzero archive reject_flag excluded",
+  "too_bright": "rows with TOO_BRIGHT (aflags bit 29) or SATURATED (bflags bit 2) unusable (D6)"
+ },
+ "units": {
+  "searched": [
+   "gj-1276/A_0.1AU",
+   "gj-1276/B_0.1AU",
+   "gj-1276/B_1.2Rs",
+   "gj-1276/B_2.5Rs",
+   "ross-128/A_0.1AU",
+   "ross-128/B_0.1AU",
+   "ross-128/B_2.5Rs",
+   "teegarden/A_0.1AU",
+   "teegarden/B_0.1AU",
+   "teegarden/B_2.5Rs",
+   "van-maanen/A_0.1AU",
+   "van-maanen/B_0.1AU",
+   "van-maanen/B_1.2Rs",
+   "van-maanen/B_2.5Rs",
+   "wolf-359/A_0.1AU",
+   "wolf-359/B_0.1AU",
+   "wolf-359/B_1.2Rs",
+   "wolf-359/B_2.5Rs"
+  ],
+  "dev": [
+   "van-maanen/A_0.1AU",
+   "teegarden/A_0.1AU",
+   "wolf-359/B_2.5Rs"
+  ],
+  "confirmatory": [
+   "gj-1276/A_0.1AU",
+   "gj-1276/B_0.1AU",
+   "gj-1276/B_1.2Rs",
+   "gj-1276/B_2.5Rs",
+   "ross-128/A_0.1AU",
+   "ross-128/B_0.1AU",
+   "ross-128/B_2.5Rs",
+   "teegarden/B_0.1AU",
+   "teegarden/B_2.5Rs",
+   "van-maanen/B_0.1AU",
+   "van-maanen/B_1.2Rs",
+   "van-maanen/B_2.5Rs",
+   "wolf-359/A_0.1AU",
+   "wolf-359/B_0.1AU",
+   "wolf-359/B_1.2Rs"
+  ],
+  "coverage_without_statistic": [
+   "ross-128/B_1.2Rs",
+   "teegarden/B_1.2Rs"
+  ],
+  "trials": {
+   "per_unit": 2,
+   "dev": 6,
+   "confirmatory": 30,
+   "total": 36,
+   "expected_control_crossings_dev": 0.67,
+   "expected_control_crossings_confirmatory": 3.33
+  }
+ },
+ "inputs": {
+  "hypotheses_sha256": "sha256:4aa13549341bf0fffab376bdf3532ef52566e3bdd1544e8d8d0a506a5409258d",
+  "coverage_windows_sha256": "sha256:e0268a7528ee0314cb97a2c94c3d4a02276ad9d2b74fffee55947ca151b4aeb6",
+  "coverage_summary_sha256": "sha256:d9cd2f339770d4eda1a505e41268233bd0885b86462178a6db8cf2610a3a5be9",
+  "events_sha256": "sha256:9f0819ec25bf099f8c186f24fa11d84104a7bba310546071e4a2741ae9d0f775"
+ },
+ "frozen_utc": "2026-08-26T23:00:01+00:00"
+}

@@ -1,0 +1,2262 @@
+{
+ "n_measured": 250,
+ "v_stack": 7.814,
+ "v_stack_err_boot": 0.124,
+ "v_pred_med": 5.936,
+ "stack_resid_mag": 1.878,
+ "gate_0.2mag": false,
+ "n_snr5": 4,
+ "median_perframe_snr": 0.5,
+ "rows": [
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120328/32294655.fts",
+   "mjd": 56014.004332,
+   "elong": 3.2,
+   "lin_flux": 0.0007539995858575593,
+   "v_meas": 7.807,
+   "v_pred": 5.94,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/250523/32820295.fts",
+   "mjd": 60818.004345,
+   "elong": 4.63,
+   "lin_flux": 0.0002224453161839784,
+   "v_meas": 9.132,
+   "v_pred": 5.825,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120321/32293915.fts",
+   "mjd": 56007.437664,
+   "elong": 3.03,
+   "lin_flux": 0.0016560057869980244,
+   "v_meas": 6.952,
+   "v_pred": 5.94,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/220509/32700733.fts",
+   "mjd": 59708.004332,
+   "elong": 3.6,
+   "lin_flux": 0.00017470075210619375,
+   "v_meas": 9.394,
+   "v_pred": 5.862,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/200422/32619214.fts",
+   "mjd": 58961.004339,
+   "elong": 4.05,
+   "lin_flux": 0.00010408057724046808,
+   "v_meas": 9.957,
+   "v_pred": 5.883,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/190421/32579340.fts",
+   "mjd": 58594.004331,
+   "elong": 1.96,
+   "lin_flux": 0.001367066054354967,
+   "v_meas": 7.161,
+   "v_pred": 5.893,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100312/32222406.fts",
+   "mjd": 55267.012652,
+   "elong": 4.77,
+   "lin_flux": -0.00010397042429294646,
+   "v_meas": null,
+   "v_pred": 5.944,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110324/32254230.fts",
+   "mjd": 55644.154346,
+   "elong": 2.76,
+   "lin_flux": 0.0006354483012817034,
+   "v_meas": 7.992,
+   "v_pred": 5.943,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/220430/32699737.fts",
+   "mjd": 59699.004333,
+   "elong": 4.68,
+   "lin_flux": 0.0010605444894163036,
+   "v_meas": 7.436,
+   "v_pred": 5.862,
+   "snr": 1.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/260528/32861010.fts",
+   "mjd": 61188.004549,
+   "elong": 4.83,
+   "lin_flux": 0.000357190207840809,
+   "v_meas": 8.618,
+   "v_pred": 5.811,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100319/32222780.fts",
+   "mjd": 55274.987674,
+   "elong": 2.87,
+   "lin_flux": 0.0014960870923618746,
+   "v_meas": 7.063,
+   "v_pred": 5.945,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/200501/32620229.fts",
+   "mjd": 58970.004337,
+   "elong": 4.32,
+   "lin_flux": -5.36464006038348e-05,
+   "v_meas": null,
+   "v_pred": 5.883,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090316/32206138.fts",
+   "mjd": 54906.279318,
+   "elong": 3.35,
+   "lin_flux": 0.0030454698578622655,
+   "v_meas": 6.291,
+   "v_pred": 5.945,
+   "snr": 1.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/060225/32155016.fts",
+   "mjd": 53791.012832,
+   "elong": 4.37,
+   "lin_flux": 0.0023154873318424122,
+   "v_meas": 6.588,
+   "v_pred": 5.94,
+   "snr": 2.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090316/32206164.fts",
+   "mjd": 54906.887824,
+   "elong": 3.91,
+   "lin_flux": 0.0003965791956569165,
+   "v_meas": 8.504,
+   "v_pred": 5.945,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/010213/32065069.fts",
+   "mjd": 51953.012673,
+   "elong": 3.27,
+   "lin_flux": -0.00038086112799669964,
+   "v_meas": null,
+   "v_pred": 5.916,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120322/32294044.fts",
+   "mjd": 56008.587664,
+   "elong": 2.0,
+   "lin_flux": 0.0004061165196460548,
+   "v_meas": 8.478,
+   "v_pred": 5.94,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110324/32254309.fts",
+   "mjd": 55644.862694,
+   "elong": 3.4,
+   "lin_flux": 0.0008567796431067337,
+   "v_meas": 7.668,
+   "v_pred": 5.943,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/980131/32023696.fts",
+   "mjd": 50844.012026,
+   "elong": 2.35,
+   "lin_flux": 0.0002680110464855443,
+   "v_meas": 8.93,
+   "v_pred": 5.891,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120322/32294028.fts",
+   "mjd": 56008.437664,
+   "elong": 2.13,
+   "lin_flux": -0.0001244124543656789,
+   "v_meas": null,
+   "v_pred": 5.94,
+   "snr": -0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/140407/32375476.fts",
+   "mjd": 56754.004352,
+   "elong": 4.26,
+   "lin_flux": -0.00010550604349434502,
+   "v_meas": null,
+   "v_pred": 5.931,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100315/32222561.fts",
+   "mjd": 55270.15434,
+   "elong": 1.9,
+   "lin_flux": 0.0014951004217260758,
+   "v_meas": 7.063,
+   "v_pred": 5.945,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/080312/32189272.fts",
+   "mjd": 54537.012669,
+   "elong": 3.26,
+   "lin_flux": 0.0020635487633132044,
+   "v_meas": 6.713,
+   "v_pred": 5.945,
+   "snr": 2.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/160405/32457083.fts",
+   "mjd": 57483.00433,
+   "elong": 4.81,
+   "lin_flux": 0.0018365598291127118,
+   "v_meas": 6.84,
+   "v_pred": 5.917,
+   "snr": 3.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/040224/32119731.fts",
+   "mjd": 53059.012676,
+   "elong": 1.78,
+   "lin_flux": 0.0014023378172913277,
+   "v_meas": 7.133,
+   "v_pred": 5.933,
+   "snr": 1.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/160412/32457818.fts",
+   "mjd": 57490.004325,
+   "elong": 1.8,
+   "lin_flux": 0.0014270767285566683,
+   "v_meas": 7.114,
+   "v_pred": 5.918,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/020218/32083731.fts",
+   "mjd": 52323.012675,
+   "elong": 3.94,
+   "lin_flux": 0.0007768562012253784,
+   "v_meas": 7.774,
+   "v_pred": 5.922,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/050228/32136829.fts",
+   "mjd": 53429.012674,
+   "elong": 2.58,
+   "lin_flux": -1.3305760645085042e-06,
+   "v_meas": null,
+   "v_pred": 5.937,
+   "snr": -0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110323/32254136.fts",
+   "mjd": 55643.279348,
+   "elong": 1.98,
+   "lin_flux": -0.0001851334495137235,
+   "v_meas": null,
+   "v_pred": 5.943,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/180423/32539454.fts",
+   "mjd": 58231.004331,
+   "elong": 3.95,
+   "lin_flux": 0.00042046073183255283,
+   "v_meas": 8.441,
+   "v_pred": 5.902,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130402/32334569.fts",
+   "mjd": 56384.004345,
+   "elong": 3.73,
+   "lin_flux": -0.00021319033546918537,
+   "v_meas": null,
+   "v_pred": 5.936,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090315/32206087.fts",
+   "mjd": 54905.26265,
+   "elong": 2.42,
+   "lin_flux": 0.0013103902943552017,
+   "v_meas": 7.206,
+   "v_pred": 5.945,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110324/32254325.fts",
+   "mjd": 55644.996014,
+   "elong": 3.52,
+   "lin_flux": 0.0009547432578607811,
+   "v_meas": 7.55,
+   "v_pred": 5.943,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/020210/32083392.fts",
+   "mjd": 52315.905934,
+   "elong": 2.94,
+   "lin_flux": 0.0040360009624619735,
+   "v_meas": 5.985,
+   "v_pred": 5.922,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/010207/32064800.fts",
+   "mjd": 51947.012773,
+   "elong": 2.56,
+   "lin_flux": 0.003937745564241838,
+   "v_meas": 6.012,
+   "v_pred": 5.916,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/200423/32619332.fts",
+   "mjd": 58962.004341,
+   "elong": 3.12,
+   "lin_flux": 0.0003472243145567688,
+   "v_meas": 8.648,
+   "v_pred": 5.883,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130323/32333543.fts",
+   "mjd": 56374.862683,
+   "elong": 4.8,
+   "lin_flux": 0.00029556655690923735,
+   "v_meas": 8.823,
+   "v_pred": 5.936,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/200430/32620118.fts",
+   "mjd": 58969.004334,
+   "elong": 3.41,
+   "lin_flux": 0.0003049003509265751,
+   "v_meas": 8.79,
+   "v_pred": 5.883,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/250516/32819529.fts",
+   "mjd": 60811.004354,
+   "elong": 1.65,
+   "lin_flux": 0.0002456459518590563,
+   "v_meas": 9.024,
+   "v_pred": 5.825,
+   "snr": 0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/240518/32780218.fts",
+   "mjd": 60448.004334,
+   "elong": 4.37,
+   "lin_flux": 0.00022680906502655702,
+   "v_meas": 9.111,
+   "v_pred": 5.838,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/020219/32083778.fts",
+   "mjd": 52324.012675,
+   "elong": 4.89,
+   "lin_flux": -0.00036004223723677534,
+   "v_meas": null,
+   "v_pred": 5.922,
+   "snr": -0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/210429/32659954.fts",
+   "mjd": 59333.004332,
+   "elong": 1.6,
+   "lin_flux": 7.482239409494751e-05,
+   "v_meas": 10.315,
+   "v_pred": 5.873,
+   "snr": 0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/190427/32580014.fts",
+   "mjd": 58600.004339,
+   "elong": 3.69,
+   "lin_flux": 0.001078174298281017,
+   "v_meas": 7.418,
+   "v_pred": 5.893,
+   "snr": 1.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/170418/32498556.fts",
+   "mjd": 57861.004332,
+   "elong": 3.31,
+   "lin_flux": 0.0009518870161526298,
+   "v_meas": 7.554,
+   "v_pred": 5.91,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/000202/32047120.fts",
+   "mjd": 51576.012679,
+   "elong": 4.1,
+   "lin_flux": 0.000476431470412561,
+   "v_meas": 8.305,
+   "v_pred": 5.908,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/160406/32457197.fts",
+   "mjd": 57484.00432,
+   "elong": 3.89,
+   "lin_flux": 0.0005329047674185153,
+   "v_meas": 8.183,
+   "v_pred": 5.918,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/080307/32189019.fts",
+   "mjd": 54532.012662,
+   "elong": 1.76,
+   "lin_flux": 0.002079806077140127,
+   "v_meas": 6.705,
+   "v_pred": 5.945,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120321/32293947.fts",
+   "mjd": 56007.729334,
+   "elong": 2.77,
+   "lin_flux": 0.0006464524844792927,
+   "v_meas": 7.974,
+   "v_pred": 5.94,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/150410/32416452.fts",
+   "mjd": 57122.004344,
+   "elong": 3.01,
+   "lin_flux": 0.0006882190875664012,
+   "v_meas": 7.906,
+   "v_pred": 5.925,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/030223/32102357.fts",
+   "mjd": 52693.012674,
+   "elong": 4.69,
+   "lin_flux": 0.004517057713558725,
+   "v_meas": 5.863,
+   "v_pred": 5.928,
+   "snr": 6.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130331/32334345.fts",
+   "mjd": 56382.004357,
+   "elong": 1.94,
+   "lin_flux": 0.0009646667610165837,
+   "v_meas": 7.539,
+   "v_pred": 5.936,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/220503/32700063.fts",
+   "mjd": 59702.004332,
+   "elong": 1.93,
+   "lin_flux": -0.0018668151557355802,
+   "v_meas": null,
+   "v_pred": 5.863,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120329/32294769.fts",
+   "mjd": 56015.004333,
+   "elong": 4.1,
+   "lin_flux": 0.000263663866323538,
+   "v_meas": 8.947,
+   "v_pred": 5.94,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/060306/32155333.fts",
+   "mjd": 53800.024468,
+   "elong": 4.38,
+   "lin_flux": 0.00018079605320162732,
+   "v_meas": 9.357,
+   "v_pred": 5.94,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110323/32254198.fts",
+   "mjd": 55643.862691,
+   "elong": 2.5,
+   "lin_flux": 0.0009470612180741435,
+   "v_meas": 7.559,
+   "v_pred": 5.943,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/250521/32820075.fts",
+   "mjd": 60816.004335,
+   "elong": 2.85,
+   "lin_flux": 0.0014139171702324056,
+   "v_meas": 7.124,
+   "v_pred": 5.825,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/230513/32740490.fts",
+   "mjd": 60077.004334,
+   "elong": 3.13,
+   "lin_flux": 0.0011427054484839576,
+   "v_meas": 7.355,
+   "v_pred": 5.851,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/170417/32498447.fts",
+   "mjd": 57860.004347,
+   "elong": 2.4,
+   "lin_flux": 0.0018559957401935003,
+   "v_meas": 6.829,
+   "v_pred": 5.91,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/070304/32171926.fts",
+   "mjd": 54163.012661,
+   "elong": 1.7,
+   "lin_flux": 0.0004342254958913035,
+   "v_meas": 8.406,
+   "v_pred": 5.943,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/170419/32498670.fts",
+   "mjd": 57862.004338,
+   "elong": 4.21,
+   "lin_flux": 0.0010613940510941825,
+   "v_meas": 7.435,
+   "v_pred": 5.91,
+   "snr": 1.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/230515/32740715.fts",
+   "mjd": 60079.004334,
+   "elong": 4.93,
+   "lin_flux": 0.0035013666155747814,
+   "v_meas": 6.139,
+   "v_pred": 5.851,
+   "snr": 7.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110322/32254105.fts",
+   "mjd": 55642.996025,
+   "elong": 1.74,
+   "lin_flux": 0.001044180983310778,
+   "v_meas": 7.453,
+   "v_pred": 5.943,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/170416/32498343.fts",
+   "mjd": 57859.075814,
+   "elong": 1.59,
+   "lin_flux": 0.0012478738268617852,
+   "v_meas": 7.26,
+   "v_pred": 5.91,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/170410/32497707.fts",
+   "mjd": 57853.004343,
+   "elong": 4.19,
+   "lin_flux": 0.0005514801261777836,
+   "v_meas": 8.146,
+   "v_pred": 5.91,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/050223/32136617.fts",
+   "mjd": 53424.02491,
+   "elong": 2.43,
+   "lin_flux": 0.0011149569126095449,
+   "v_meas": 7.382,
+   "v_pred": 5.937,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090315/32206080.fts",
+   "mjd": 54905.179317,
+   "elong": 2.35,
+   "lin_flux": 0.003020479806799316,
+   "v_meas": 6.3,
+   "v_pred": 5.945,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110324/32254246.fts",
+   "mjd": 55644.287694,
+   "elong": 2.88,
+   "lin_flux": 0.0009480870171453498,
+   "v_meas": 7.558,
+   "v_pred": 5.943,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/220510/32700843.fts",
+   "mjd": 59709.00434,
+   "elong": 4.51,
+   "lin_flux": 0.0029748744194924457,
+   "v_meas": 6.316,
+   "v_pred": 5.862,
+   "snr": 4.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120321/32293931.fts",
+   "mjd": 56007.587666,
+   "elong": 2.89,
+   "lin_flux": 0.0006613220151206514,
+   "v_meas": 7.949,
+   "v_pred": 5.94,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/980124/32023482.fts",
+   "mjd": 50837.06889,
+   "elong": 4.38,
+   "lin_flux": 0.0002740687609132543,
+   "v_meas": 8.905,
+   "v_pred": 5.891,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/140331/32374724.fts",
+   "mjd": 56747.004342,
+   "elong": 2.31,
+   "lin_flux": 0.0007099021278260735,
+   "v_meas": 7.872,
+   "v_pred": 5.931,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120321/32293883.fts",
+   "mjd": 56007.162666,
+   "elong": 3.28,
+   "lin_flux": 0.0012094765636240456,
+   "v_meas": 7.294,
+   "v_pred": 5.94,
+   "snr": 1.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/190419/32579118.fts",
+   "mjd": 58592.004335,
+   "elong": 3.79,
+   "lin_flux": 0.0005076739470657994,
+   "v_meas": 8.236,
+   "v_pred": 5.893,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100318/32222733.fts",
+   "mjd": 55273.90434,
+   "elong": 1.91,
+   "lin_flux": 0.0012608777761595115,
+   "v_meas": 7.248,
+   "v_pred": 5.945,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100314/32222532.fts",
+   "mjd": 55269.571007,
+   "elong": 2.41,
+   "lin_flux": 0.0009603527995920496,
+   "v_meas": 7.544,
+   "v_pred": 5.945,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110324/32254277.fts",
+   "mjd": 55644.571012,
+   "elong": 3.13,
+   "lin_flux": 0.0012275250606310869,
+   "v_meas": 7.277,
+   "v_pred": 5.943,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/050221/32136536.fts",
+   "mjd": 53422.01268,
+   "elong": 4.29,
+   "lin_flux": 0.0011536706529919867,
+   "v_meas": 7.345,
+   "v_pred": 5.937,
+   "snr": 1.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100318/32222726.fts",
+   "mjd": 55273.737674,
+   "elong": 1.76,
+   "lin_flux": 0.0012007405977629405,
+   "v_meas": 7.301,
+   "v_pred": 5.945,
+   "snr": 1.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100320/32222803.fts",
+   "mjd": 55275.433189,
+   "elong": 3.28,
+   "lin_flux": 0.0018999509358122034,
+   "v_meas": 6.803,
+   "v_pred": 5.945,
+   "snr": 1.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/190418/32579007.fts",
+   "mjd": 58591.004341,
+   "elong": 4.71,
+   "lin_flux": 0.0014299602034019883,
+   "v_meas": 7.112,
+   "v_pred": 5.893,
+   "snr": 2.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/220507/32700508.fts",
+   "mjd": 59706.004348,
+   "elong": 1.81,
+   "lin_flux": -0.0012569112519739399,
+   "v_meas": null,
+   "v_pred": 5.863,
+   "snr": -0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/160413/32457932.fts",
+   "mjd": 57491.004321,
+   "elong": 2.69,
+   "lin_flux": 0.0026643877515121163,
+   "v_meas": 6.436,
+   "v_pred": 5.918,
+   "snr": 1.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/220501/32699850.fts",
+   "mjd": 59700.004332,
+   "elong": 3.76,
+   "lin_flux": 0.00012124032593361029,
+   "v_meas": 9.791,
+   "v_pred": 5.862,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/260525/32860722.fts",
+   "mjd": 61185.00454,
+   "elong": 2.16,
+   "lin_flux": 0.004540073244848561,
+   "v_meas": 5.857,
+   "v_pred": 5.811,
+   "snr": 2.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/180416/32538672.fts",
+   "mjd": 58224.004332,
+   "elong": 2.63,
+   "lin_flux": 0.0015663615604709297,
+   "v_meas": 7.013,
+   "v_pred": 5.902,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/070303/32171904.fts",
+   "mjd": 54162.012664,
+   "elong": 2.58,
+   "lin_flux": 0.003343085116504702,
+   "v_meas": 6.19,
+   "v_pred": 5.943,
+   "snr": 1.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/250522/32820185.fts",
+   "mjd": 60817.004331,
+   "elong": 3.74,
+   "lin_flux": -0.00012151519298474117,
+   "v_meas": null,
+   "v_pred": 5.825,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100319/32222746.fts",
+   "mjd": 55274.137791,
+   "elong": 2.11,
+   "lin_flux": 0.0015615910119824864,
+   "v_meas": 7.016,
+   "v_pred": 5.945,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110322/32254089.fts",
+   "mjd": 55642.862677,
+   "elong": 1.62,
+   "lin_flux": 0.001061429024097133,
+   "v_meas": 7.435,
+   "v_pred": 5.943,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110323/32254167.fts",
+   "mjd": 55643.562881,
+   "elong": 2.23,
+   "lin_flux": 0.0016182994028272701,
+   "v_meas": 6.977,
+   "v_pred": 5.943,
+   "snr": 1.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/180424/32539563.fts",
+   "mjd": 58232.004332,
+   "elong": 4.86,
+   "lin_flux": -0.00016187568985336962,
+   "v_meas": null,
+   "v_pred": 5.902,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/230506/32739709.fts",
+   "mjd": 60070.004332,
+   "elong": 3.26,
+   "lin_flux": 0.00027840637707867273,
+   "v_meas": 8.888,
+   "v_pred": 5.851,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120322/32293996.fts",
+   "mjd": 56008.162664,
+   "elong": 2.38,
+   "lin_flux": 0.0004058539037746214,
+   "v_meas": 8.479,
+   "v_pred": 5.94,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100319/32222768.fts",
+   "mjd": 55274.65434,
+   "elong": 2.57,
+   "lin_flux": 0.0005687409446573378,
+   "v_meas": 8.113,
+   "v_pred": 5.945,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100319/32222774.fts",
+   "mjd": 55274.904346,
+   "elong": 2.8,
+   "lin_flux": 0.002034253359275354,
+   "v_meas": 6.729,
+   "v_pred": 5.945,
+   "snr": 1.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/240510/32779313.fts",
+   "mjd": 60440.004332,
+   "elong": 2.86,
+   "lin_flux": -0.00046726453519404767,
+   "v_meas": null,
+   "v_pred": 5.839,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090315/32206117.fts",
+   "mjd": 54905.887914,
+   "elong": 2.99,
+   "lin_flux": 0.001278294836780257,
+   "v_meas": 7.233,
+   "v_pred": 5.945,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100320/32222794.fts",
+   "mjd": 55275.262674,
+   "elong": 3.12,
+   "lin_flux": 0.0013367473088193237,
+   "v_meas": 7.185,
+   "v_pred": 5.945,
+   "snr": 0.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/040225/32119779.fts",
+   "mjd": 53060.012675,
+   "elong": 2.68,
+   "lin_flux": 0.0017553464729718454,
+   "v_meas": 6.889,
+   "v_pred": 5.933,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090314/32206072.fts",
+   "mjd": 54904.98765,
+   "elong": 2.18,
+   "lin_flux": 0.0001722848717497145,
+   "v_meas": 9.409,
+   "v_pred": 5.945,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/060226/32155066.fts",
+   "mjd": 53792.012837,
+   "elong": 3.44,
+   "lin_flux": 0.00013666282123545062,
+   "v_meas": 9.661,
+   "v_pred": 5.94,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/260527/32860940.fts",
+   "mjd": 61187.004543,
+   "elong": 3.94,
+   "lin_flux": 0.0004014679340335813,
+   "v_meas": 8.491,
+   "v_pred": 5.811,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/240511/32779431.fts",
+   "mjd": 60441.004332,
+   "elong": 1.96,
+   "lin_flux": -0.0015577979763238131,
+   "v_meas": null,
+   "v_pred": 5.839,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/200421/32619100.fts",
+   "mjd": 58960.004336,
+   "elong": 4.97,
+   "lin_flux": 0.0012325979279692789,
+   "v_meas": 7.273,
+   "v_pred": 5.883,
+   "snr": 2.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090314/32206050.fts",
+   "mjd": 54904.570984,
+   "elong": 1.82,
+   "lin_flux": -0.0007731474641206339,
+   "v_meas": null,
+   "v_pred": 5.945,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120321/32293979.fts",
+   "mjd": 56007.996005,
+   "elong": 2.53,
+   "lin_flux": 0.0009049047336963762,
+   "v_meas": 7.608,
+   "v_pred": 5.94,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/070301/32171878.fts",
+   "mjd": 54160.637294,
+   "elong": 3.85,
+   "lin_flux": 0.003856526093779285,
+   "v_meas": 6.035,
+   "v_pred": 5.943,
+   "snr": 3.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/040220/32119535.fts",
+   "mjd": 53055.012673,
+   "elong": 2.33,
+   "lin_flux": 0.0012198790894545773,
+   "v_meas": 7.284,
+   "v_pred": 5.933,
+   "snr": 0.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110323/32254121.fts",
+   "mjd": 55643.154344,
+   "elong": 1.87,
+   "lin_flux": -0.000596054572004535,
+   "v_meas": null,
+   "v_pred": 5.943,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/250520/32819964.fts",
+   "mjd": 60815.00435,
+   "elong": 1.96,
+   "lin_flux": 0.0035519816997234173,
+   "v_meas": 6.124,
+   "v_pred": 5.825,
+   "snr": 1.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090317/32206200.fts",
+   "mjd": 54907.570984,
+   "elong": 4.54,
+   "lin_flux": 0.002082702139526605,
+   "v_meas": 6.703,
+   "v_pred": 5.945,
+   "snr": 5.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/040218/32119446.fts",
+   "mjd": 53053.012675,
+   "elong": 4.17,
+   "lin_flux": 0.0014428664624175497,
+   "v_meas": 7.102,
+   "v_pred": 5.932,
+   "snr": 0.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/140406/32375363.fts",
+   "mjd": 56753.004333,
+   "elong": 3.36,
+   "lin_flux": -0.00016286649645764505,
+   "v_meas": null,
+   "v_pred": 5.931,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090317/32206172.fts",
+   "mjd": 54907.01265,
+   "elong": 4.02,
+   "lin_flux": 0.0005379634636714056,
+   "v_meas": 8.173,
+   "v_pred": 5.945,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/240517/32780109.fts",
+   "mjd": 60447.004344,
+   "elong": 3.48,
+   "lin_flux": -0.00023775425551805443,
+   "v_meas": null,
+   "v_pred": 5.838,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090316/32206132.fts",
+   "mjd": 54906.154317,
+   "elong": 3.23,
+   "lin_flux": 0.002542232320677607,
+   "v_meas": 6.487,
+   "v_pred": 5.945,
+   "snr": 2.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/260520/32860185.fts",
+   "mjd": 61180.00454,
+   "elong": 2.32,
+   "lin_flux": 6.32507195885618e-05,
+   "v_meas": 10.497,
+   "v_pred": 5.812,
+   "snr": 0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/030216/32101363.fts",
+   "mjd": 52686.012691,
+   "elong": 2.16,
+   "lin_flux": -0.0007995626641615316,
+   "v_meas": null,
+   "v_pred": 5.928,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/060228/32155165.fts",
+   "mjd": 53794.07687,
+   "elong": 1.59,
+   "lin_flux": 0.004530488085303556,
+   "v_meas": 5.86,
+   "v_pred": 5.94,
+   "snr": 1.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/060303/32155246.fts",
+   "mjd": 53797.024479,
+   "elong": 1.64,
+   "lin_flux": 0.0009004220004301059,
+   "v_meas": 7.614,
+   "v_pred": 5.94,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090314/32206057.fts",
+   "mjd": 54904.720987,
+   "elong": 1.95,
+   "lin_flux": 0.0008275238296029985,
+   "v_meas": 7.706,
+   "v_pred": 5.945,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120320/32293802.fts",
+   "mjd": 56006.437666,
+   "elong": 3.94,
+   "lin_flux": 0.0007979841234132236,
+   "v_meas": 7.745,
+   "v_pred": 5.94,
+   "snr": 1.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/180415/32538560.fts",
+   "mjd": 58223.004332,
+   "elong": 3.54,
+   "lin_flux": -0.00017211829715331085,
+   "v_meas": null,
+   "v_pred": 5.902,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/140404/32375142.fts",
+   "mjd": 56751.004332,
+   "elong": 1.59,
+   "lin_flux": 0.0020279065577410594,
+   "v_meas": 6.732,
+   "v_pred": 5.931,
+   "snr": 1.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/000210/32047484.fts",
+   "mjd": 51584.012682,
+   "elong": 3.58,
+   "lin_flux": 8.357554153729115e-05,
+   "v_meas": 10.195,
+   "v_pred": 5.909,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130401/32334456.fts",
+   "mjd": 56383.00434,
+   "elong": 2.83,
+   "lin_flux": 0.0012598440204640775,
+   "v_meas": 7.249,
+   "v_pred": 5.936,
+   "snr": 1.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/000211/32047531.fts",
+   "mjd": 51585.012693,
+   "elong": 4.52,
+   "lin_flux": 0.003923778643500332,
+   "v_meas": 6.016,
+   "v_pred": 5.909,
+   "snr": 6.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/150403/32415667.fts",
+   "mjd": 57115.004332,
+   "elong": 3.56,
+   "lin_flux": 0.000410604230319306,
+   "v_meas": 8.466,
+   "v_pred": 5.925,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/070307/32172069.fts",
+   "mjd": 54166.012666,
+   "elong": 1.56,
+   "lin_flux": -0.0008223165510978447,
+   "v_meas": null,
+   "v_pred": 5.943,
+   "snr": -0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120320/32293866.fts",
+   "mjd": 56006.995998,
+   "elong": 3.43,
+   "lin_flux": 0.0004242659105356462,
+   "v_meas": 8.431,
+   "v_pred": 5.94,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/240515/32779893.fts",
+   "mjd": 60445.004338,
+   "elong": 1.69,
+   "lin_flux": 0.002913475826600265,
+   "v_meas": 6.339,
+   "v_pred": 5.839,
+   "snr": 1.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/070308/32172121.fts",
+   "mjd": 54167.012662,
+   "elong": 2.44,
+   "lin_flux": 0.0032391246457627596,
+   "v_meas": 6.224,
+   "v_pred": 5.943,
+   "snr": 1.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100315/32222574.fts",
+   "mjd": 55270.430675,
+   "elong": 1.66,
+   "lin_flux": 4.0990568088125876e-05,
+   "v_meas": 10.968,
+   "v_pred": 5.945,
+   "snr": 0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130403/32334637.fts",
+   "mjd": 56385.354826,
+   "elong": 4.96,
+   "lin_flux": 8.97214802909955e-05,
+   "v_meas": 10.118,
+   "v_pred": 5.936,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/260526/32860831.fts",
+   "mjd": 61186.00456,
+   "elong": 3.05,
+   "lin_flux": 0.0027549014343242187,
+   "v_meas": 6.4,
+   "v_pred": 5.811,
+   "snr": 1.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090314/32206064.fts",
+   "mjd": 54904.887866,
+   "elong": 2.09,
+   "lin_flux": 0.0012498821926413138,
+   "v_meas": 7.258,
+   "v_pred": 5.945,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130323/32333527.fts",
+   "mjd": 56374.729358,
+   "elong": 4.92,
+   "lin_flux": 0.00028928909619695364,
+   "v_meas": 8.847,
+   "v_pred": 5.936,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090314/32206033.fts",
+   "mjd": 54904.237652,
+   "elong": 1.54,
+   "lin_flux": 0.0006408025677054396,
+   "v_meas": 7.983,
+   "v_pred": 5.945,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/080304/32188876.fts",
+   "mjd": 54529.012663,
+   "elong": 4.5,
+   "lin_flux": 0.00150756253926822,
+   "v_meas": 7.054,
+   "v_pred": 5.944,
+   "snr": 2.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/010208/32064847.fts",
+   "mjd": 51948.01268,
+   "elong": 1.67,
+   "lin_flux": -0.00028772895880759566,
+   "v_meas": null,
+   "v_pred": 5.916,
+   "snr": -0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/030221/32102259.fts",
+   "mjd": 52691.012677,
+   "elong": 2.82,
+   "lin_flux": -5.9297964527682744e-05,
+   "v_meas": null,
+   "v_pred": 5.928,
+   "snr": -0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100318/32222719.fts",
+   "mjd": 55273.596008,
+   "elong": 1.64,
+   "lin_flux": 0.001122429207726887,
+   "v_meas": 7.375,
+   "v_pred": 5.945,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/140405/32375250.fts",
+   "mjd": 56752.004364,
+   "elong": 2.46,
+   "lin_flux": -0.00013718178046265102,
+   "v_meas": null,
+   "v_pred": 5.931,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/070310/32172224.fts",
+   "mjd": 54169.012665,
+   "elong": 4.29,
+   "lin_flux": 0.002244958170255713,
+   "v_meas": 6.622,
+   "v_pred": 5.943,
+   "snr": 3.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/150409/32416338.fts",
+   "mjd": 57121.004331,
+   "elong": 2.11,
+   "lin_flux": 0.0005576854082852622,
+   "v_meas": 8.134,
+   "v_pred": 5.925,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130325/32333673.fts",
+   "mjd": 56376.004348,
+   "elong": 3.76,
+   "lin_flux": 0.0007577758278942049,
+   "v_meas": 7.801,
+   "v_pred": 5.936,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/010206/32064754.fts",
+   "mjd": 51946.012674,
+   "elong": 3.49,
+   "lin_flux": -0.0008867489299096683,
+   "v_meas": null,
+   "v_pred": 5.916,
+   "snr": -0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/070302/32171883.fts",
+   "mjd": 54161.012664,
+   "elong": 3.5,
+   "lin_flux": 0.00317982514785611,
+   "v_meas": 6.244,
+   "v_pred": 5.943,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/210427/32659730.fts",
+   "mjd": 59331.004349,
+   "elong": 3.42,
+   "lin_flux": 0.0009855523996116166,
+   "v_meas": 7.516,
+   "v_pred": 5.873,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110323/32254214.fts",
+   "mjd": 55643.996021,
+   "elong": 2.62,
+   "lin_flux": 0.00210450944200486,
+   "v_meas": 6.692,
+   "v_pred": 5.943,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100315/32222555.fts",
+   "mjd": 55270.012673,
+   "elong": 2.02,
+   "lin_flux": -0.0019908469280279914,
+   "v_meas": null,
+   "v_pred": 5.945,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100318/32222713.fts",
+   "mjd": 55273.446012,
+   "elong": 1.52,
+   "lin_flux": 0.0018490206871490385,
+   "v_meas": 6.833,
+   "v_pred": 5.945,
+   "snr": 0.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/160415/32458159.fts",
+   "mjd": 57493.00432,
+   "elong": 4.5,
+   "lin_flux": 0.00047088833711753477,
+   "v_meas": 8.318,
+   "v_pred": 5.918,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/080313/32189356.fts",
+   "mjd": 54538.737662,
+   "elong": 4.86,
+   "lin_flux": 0.0001419345664408816,
+   "v_meas": 9.62,
+   "v_pred": 5.944,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120322/32294012.fts",
+   "mjd": 56008.295999,
+   "elong": 2.26,
+   "lin_flux": -0.0006650119701899296,
+   "v_meas": null,
+   "v_pred": 5.94,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/230514/32740603.fts",
+   "mjd": 60078.004343,
+   "elong": 4.03,
+   "lin_flux": 0.0009842744950436203,
+   "v_meas": 7.517,
+   "v_pred": 5.851,
+   "snr": 1.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/230512/32740382.fts",
+   "mjd": 60076.004331,
+   "elong": 2.24,
+   "lin_flux": 0.0027516403073769144,
+   "v_meas": 6.401,
+   "v_pred": 5.851,
+   "snr": 1.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/200428/32619916.fts",
+   "mjd": 58967.004343,
+   "elong": 1.62,
+   "lin_flux": 0.002271454157258968,
+   "v_meas": 6.609,
+   "v_pred": 5.884,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100314/32222539.fts",
+   "mjd": 55269.721007,
+   "elong": 2.28,
+   "lin_flux": -0.0016082463737685782,
+   "v_meas": null,
+   "v_pred": 5.945,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130327/32333894.fts",
+   "mjd": 56378.004344,
+   "elong": 1.96,
+   "lin_flux": -0.0005754823067704819,
+   "v_meas": null,
+   "v_pred": 5.936,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/140330/32374611.fts",
+   "mjd": 56746.004332,
+   "elong": 3.21,
+   "lin_flux": -0.0003203088231135208,
+   "v_meas": null,
+   "v_pred": 5.931,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/190420/32579227.fts",
+   "mjd": 58593.004333,
+   "elong": 2.87,
+   "lin_flux": 0.0005931006688900861,
+   "v_meas": 8.067,
+   "v_pred": 5.893,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/000204/32047214.fts",
+   "mjd": 51578.01269,
+   "elong": 2.25,
+   "lin_flux": 0.0025965711729706536,
+   "v_meas": 6.464,
+   "v_pred": 5.909,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090309/32205780.fts",
+   "mjd": 54899.012652,
+   "elong": 3.68,
+   "lin_flux": 0.00010672573940072694,
+   "v_meas": 9.929,
+   "v_pred": 5.945,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120321/32293867.fts",
+   "mjd": 56007.004333,
+   "elong": 3.42,
+   "lin_flux": 0.0010167691455221048,
+   "v_meas": 7.482,
+   "v_pred": 5.94,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130324/32333560.fts",
+   "mjd": 56375.004341,
+   "elong": 4.67,
+   "lin_flux": 9.110063043058711e-05,
+   "v_meas": 10.101,
+   "v_pred": 5.936,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090316/32206126.fts",
+   "mjd": 54906.01265,
+   "elong": 3.1,
+   "lin_flux": 0.0002401659591624283,
+   "v_meas": 9.049,
+   "v_pred": 5.945,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/080306/32188971.fts",
+   "mjd": 54531.012662,
+   "elong": 2.65,
+   "lin_flux": 0.001759767252139255,
+   "v_meas": 6.886,
+   "v_pred": 5.944,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090318/32206223.fts",
+   "mjd": 54908.012652,
+   "elong": 4.95,
+   "lin_flux": 0.0014325218349327932,
+   "v_meas": 7.11,
+   "v_pred": 5.945,
+   "snr": 3.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/210504/32660475.fts",
+   "mjd": 59338.004349,
+   "elong": 3.09,
+   "lin_flux": 0.0014274017352158355,
+   "v_meas": 7.114,
+   "v_pred": 5.873,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120322/32294060.fts",
+   "mjd": 56008.729338,
+   "elong": 1.88,
+   "lin_flux": 0.0024037689191026743,
+   "v_meas": 6.548,
+   "v_pred": 5.94,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120323/32294094.fts",
+   "mjd": 56009.004349,
+   "elong": 1.64,
+   "lin_flux": -0.00017784350943309633,
+   "v_meas": null,
+   "v_pred": 5.94,
+   "snr": -0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/180414/32538447.fts",
+   "mjd": 58222.004332,
+   "elong": 4.46,
+   "lin_flux": 0.0006972929669886088,
+   "v_meas": 7.891,
+   "v_pred": 5.902,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/240509/32779215.fts",
+   "mjd": 60439.004333,
+   "elong": 3.77,
+   "lin_flux": 9.890271411410037e-05,
+   "v_meas": 10.012,
+   "v_pred": 5.839,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130326/32333781.fts",
+   "mjd": 56377.004341,
+   "elong": 2.85,
+   "lin_flux": 0.0006408002126778797,
+   "v_meas": 7.983,
+   "v_pred": 5.936,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/000203/32047167.fts",
+   "mjd": 51577.012662,
+   "elong": 3.17,
+   "lin_flux": 1.664085850078316e-05,
+   "v_meas": 11.947,
+   "v_pred": 5.908,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/060304/32155275.fts",
+   "mjd": 53798.024498,
+   "elong": 2.52,
+   "lin_flux": 0.0006958588675272294,
+   "v_meas": 7.894,
+   "v_pred": 5.94,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/210505/32660582.fts",
+   "mjd": 59339.004332,
+   "elong": 3.99,
+   "lin_flux": 0.0002953210567569258,
+   "v_meas": 8.824,
+   "v_pred": 5.873,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090311/32205876.fts",
+   "mjd": 54901.01265,
+   "elong": 1.87,
+   "lin_flux": 0.0021743246187122043,
+   "v_meas": 6.657,
+   "v_pred": 5.945,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/250515/32819416.fts",
+   "mjd": 60810.004332,
+   "elong": 2.55,
+   "lin_flux": 0.00015936470214521434,
+   "v_meas": 9.494,
+   "v_pred": 5.825,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/160407/32457310.fts",
+   "mjd": 57485.004326,
+   "elong": 2.98,
+   "lin_flux": 0.0004941117866251866,
+   "v_meas": 8.265,
+   "v_pred": 5.918,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/170412/32497931.fts",
+   "mjd": 57855.004335,
+   "elong": 2.37,
+   "lin_flux": 0.0016291851531795199,
+   "v_meas": 6.97,
+   "v_pred": 5.91,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/150404/32415774.fts",
+   "mjd": 57116.004335,
+   "elong": 2.65,
+   "lin_flux": 0.0017845700970866212,
+   "v_meas": 6.871,
+   "v_pred": 5.925,
+   "snr": 0.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/080305/32188924.fts",
+   "mjd": 54530.012663,
+   "elong": 3.57,
+   "lin_flux": 0.005282121889900897,
+   "v_meas": 5.693,
+   "v_pred": 5.944,
+   "snr": 2.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090317/32206179.fts",
+   "mjd": 54907.179322,
+   "elong": 4.18,
+   "lin_flux": 0.002668790864150314,
+   "v_meas": 6.434,
+   "v_pred": 5.945,
+   "snr": 3.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/030214/32101255.fts",
+   "mjd": 52684.012674,
+   "elong": 4.0,
+   "lin_flux": 0.002336303441242062,
+   "v_meas": 6.579,
+   "v_pred": 5.928,
+   "snr": 2.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090308/32205728.fts",
+   "mjd": 54898.01265,
+   "elong": 4.61,
+   "lin_flux": -3.097978877538717e-05,
+   "v_meas": null,
+   "v_pred": 5.945,
+   "snr": -0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120321/32293899.fts",
+   "mjd": 56007.296009,
+   "elong": 3.16,
+   "lin_flux": 0.001282345480714629,
+   "v_meas": 7.23,
+   "v_pred": 5.94,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/250514/32819303.fts",
+   "mjd": 60809.004343,
+   "elong": 3.45,
+   "lin_flux": 0.0021391392619430055,
+   "v_meas": 6.674,
+   "v_pred": 5.825,
+   "snr": 1.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/980201/32023726.fts",
+   "mjd": 50845.012783,
+   "elong": 3.28,
+   "lin_flux": 5.409001554243486e-06,
+   "v_meas": 13.167,
+   "v_pred": 5.891,
+   "snr": 0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/150405/32415887.fts",
+   "mjd": 57117.004346,
+   "elong": 1.77,
+   "lin_flux": 0.0009289676050911591,
+   "v_meas": 7.58,
+   "v_pred": 5.925,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/030222/32102304.fts",
+   "mjd": 52692.012681,
+   "elong": 3.75,
+   "lin_flux": 0.0017003136465585712,
+   "v_meas": 6.924,
+   "v_pred": 5.928,
+   "snr": 2.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110323/32254106.fts",
+   "mjd": 55643.004345,
+   "elong": 1.74,
+   "lin_flux": 0.0017108371655567718,
+   "v_meas": 6.917,
+   "v_pred": 5.943,
+   "snr": 1.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110324/32254262.fts",
+   "mjd": 55644.429346,
+   "elong": 3.01,
+   "lin_flux": 0.0012077704614149342,
+   "v_meas": 7.295,
+   "v_pred": 5.943,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/190425/32579782.fts",
+   "mjd": 58598.004332,
+   "elong": 1.89,
+   "lin_flux": 0.0007857918783721389,
+   "v_meas": 7.762,
+   "v_pred": 5.893,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/070309/32172173.fts",
+   "mjd": 54168.012667,
+   "elong": 3.35,
+   "lin_flux": 0.0007216828647348054,
+   "v_meas": 7.854,
+   "v_pred": 5.943,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/080313/32189321.fts",
+   "mjd": 54538.012689,
+   "elong": 4.18,
+   "lin_flux": -0.0001980540446579837,
+   "v_meas": null,
+   "v_pred": 5.945,
+   "snr": -0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/200429/32620000.fts",
+   "mjd": 58968.004332,
+   "elong": 2.51,
+   "lin_flux": 0.0012391350646985392,
+   "v_meas": 7.267,
+   "v_pred": 5.883,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/020212/32083446.fts",
+   "mjd": 52317.012691,
+   "elong": 1.94,
+   "lin_flux": 0.0003426430392718124,
+   "v_meas": 8.663,
+   "v_pred": 5.922,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/980202/32023756.fts",
+   "mjd": 50846.035103,
+   "elong": 4.25,
+   "lin_flux": 0.0008078806429919351,
+   "v_meas": 7.732,
+   "v_pred": 5.891,
+   "snr": 1.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/210426/32659621.fts",
+   "mjd": 59330.004337,
+   "elong": 4.34,
+   "lin_flux": 0.0008615875332890279,
+   "v_meas": 7.662,
+   "v_pred": 5.873,
+   "snr": 1.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/020217/32083687.fts",
+   "mjd": 52322.012673,
+   "elong": 3.01,
+   "lin_flux": 0.0005328585378661275,
+   "v_meas": 8.183,
+   "v_pred": 5.922,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/050227/32136776.fts",
+   "mjd": 53428.012676,
+   "elong": 1.69,
+   "lin_flux": -0.0018512270267325773,
+   "v_meas": null,
+   "v_pred": 5.937,
+   "snr": -2.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/000208/32047404.fts",
+   "mjd": 51582.012674,
+   "elong": 1.74,
+   "lin_flux": -0.0018037563989050465,
+   "v_meas": null,
+   "v_pred": 5.909,
+   "snr": -0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090316/32206158.fts",
+   "mjd": 54906.720985,
+   "elong": 3.76,
+   "lin_flux": 0.000312093498537363,
+   "v_meas": 8.764,
+   "v_pred": 5.945,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/180422/32539342.fts",
+   "mjd": 58230.004333,
+   "elong": 3.04,
+   "lin_flux": 0.0004935984133635977,
+   "v_meas": 8.267,
+   "v_pred": 5.902,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/980127/32023566.fts",
+   "mjd": 50840.029092,
+   "elong": 1.64,
+   "lin_flux": -0.0005639432393072236,
+   "v_meas": null,
+   "v_pred": 5.891,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/980125/32023509.fts",
+   "mjd": 50838.033255,
+   "elong": 3.48,
+   "lin_flux": 0.00030861476897717075,
+   "v_meas": 8.776,
+   "v_pred": 5.891,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/010212/32065022.fts",
+   "mjd": 51952.012675,
+   "elong": 2.34,
+   "lin_flux": -8.48911538360042e-05,
+   "v_meas": null,
+   "v_pred": 5.916,
+   "snr": -0.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/180417/32538784.fts",
+   "mjd": 58225.004351,
+   "elong": 1.73,
+   "lin_flux": 0.0002080894529603234,
+   "v_meas": 9.204,
+   "v_pred": 5.902,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110326/32254437.fts",
+   "mjd": 55646.004354,
+   "elong": 4.44,
+   "lin_flux": 0.0006197974623739665,
+   "v_meas": 8.019,
+   "v_pred": 5.943,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090316/32206151.fts",
+   "mjd": 54906.570991,
+   "elong": 3.62,
+   "lin_flux": 0.0025041090319615537,
+   "v_meas": 6.503,
+   "v_pred": 5.945,
+   "snr": 2.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/160414/32458045.fts",
+   "mjd": 57492.004322,
+   "elong": 3.59,
+   "lin_flux": 0.0002499728909995759,
+   "v_meas": 9.005,
+   "v_pred": 5.918,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/000209/32047437.fts",
+   "mjd": 51583.012678,
+   "elong": 2.65,
+   "lin_flux": 0.00029999536207034387,
+   "v_meas": 8.807,
+   "v_pred": 5.909,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100319/32222763.fts",
+   "mjd": 55274.529345,
+   "elong": 2.46,
+   "lin_flux": 0.0014734848926288898,
+   "v_meas": 7.079,
+   "v_pred": 5.945,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090317/32206186.fts",
+   "mjd": 54907.320985,
+   "elong": 4.31,
+   "lin_flux": 0.002608523439193317,
+   "v_meas": 6.459,
+   "v_pred": 5.945,
+   "snr": 3.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100314/32222546.fts",
+   "mjd": 55269.887943,
+   "elong": 2.13,
+   "lin_flux": 0.00043561817463308087,
+   "v_meas": 8.402,
+   "v_pred": 5.945,
+   "snr": 0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/150412/32416672.fts",
+   "mjd": 57124.004335,
+   "elong": 4.82,
+   "lin_flux": 0.0007438960552905538,
+   "v_meas": 7.821,
+   "v_pred": 5.924,
+   "snr": 1.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/140329/32374498.fts",
+   "mjd": 56745.004332,
+   "elong": 4.12,
+   "lin_flux": 0.00016504440934739047,
+   "v_meas": 9.456,
+   "v_pred": 5.931,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/030215/32101309.fts",
+   "mjd": 52685.012695,
+   "elong": 3.07,
+   "lin_flux": 0.007336523823451577,
+   "v_meas": 5.336,
+   "v_pred": 5.928,
+   "snr": 2.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100314/32222554.fts",
+   "mjd": 55269.987674,
+   "elong": 2.04,
+   "lin_flux": -0.0006906815734781977,
+   "v_meas": null,
+   "v_pred": 5.945,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090316/32206171.fts",
+   "mjd": 54906.98765,
+   "elong": 4.0,
+   "lin_flux": 0.0008508366254222984,
+   "v_meas": 7.675,
+   "v_pred": 5.945,
+   "snr": 1.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090316/32206145.fts",
+   "mjd": 54906.430646,
+   "elong": 3.49,
+   "lin_flux": 0.0006034998856053077,
+   "v_meas": 8.048,
+   "v_pred": 5.945,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/130323/32333559.fts",
+   "mjd": 56374.99602,
+   "elong": 4.68,
+   "lin_flux": 0.0001427004014275855,
+   "v_meas": 9.614,
+   "v_pred": 5.936,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090315/32206110.fts",
+   "mjd": 54905.72126,
+   "elong": 2.84,
+   "lin_flux": 0.0011343518199527281,
+   "v_meas": 7.363,
+   "v_pred": 5.945,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120320/32293850.fts",
+   "mjd": 56006.88311,
+   "elong": 3.53,
+   "lin_flux": 0.00033000970464118983,
+   "v_meas": 8.704,
+   "v_pred": 5.94,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/010205/32064707.fts",
+   "mjd": 51945.012674,
+   "elong": 4.42,
+   "lin_flux": -0.00018141847302418477,
+   "v_meas": null,
+   "v_pred": 5.915,
+   "snr": -0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/240508/32779097.fts",
+   "mjd": 60438.004331,
+   "elong": 4.68,
+   "lin_flux": 0.00041237654718035923,
+   "v_meas": 8.462,
+   "v_pred": 5.838,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100315/32222568.fts",
+   "mjd": 55270.321008,
+   "elong": 1.76,
+   "lin_flux": 0.0014206936732818571,
+   "v_meas": 7.119,
+   "v_pred": 5.945,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/050301/32136875.fts",
+   "mjd": 53430.012675,
+   "elong": 3.51,
+   "lin_flux": -0.0004368076339883111,
+   "v_meas": null,
+   "v_pred": 5.937,
+   "snr": -0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/240516/32779997.fts",
+   "mjd": 60446.004331,
+   "elong": 2.58,
+   "lin_flux": 0.0007279181166750327,
+   "v_meas": 7.845,
+   "v_pred": 5.839,
+   "snr": 0.8
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120327/32294541.fts",
+   "mjd": 56013.004348,
+   "elong": 2.3,
+   "lin_flux": -0.00024010206575458191,
+   "v_meas": null,
+   "v_pred": 5.94,
+   "snr": -0.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090317/32206222.fts",
+   "mjd": 54907.98765,
+   "elong": 4.93,
+   "lin_flux": 0.0026309608818081607,
+   "v_meas": 6.45,
+   "v_pred": 5.945,
+   "snr": 6.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/090315/32206102.fts",
+   "mjd": 54905.529317,
+   "elong": 2.66,
+   "lin_flux": 0.0013646490354825465,
+   "v_meas": 7.162,
+   "v_pred": 5.945,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110324/32254293.fts",
+   "mjd": 55644.729358,
+   "elong": 3.28,
+   "lin_flux": 0.0007398527485222688,
+   "v_meas": 7.827,
+   "v_pred": 5.943,
+   "snr": 0.4
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120322/32294076.fts",
+   "mjd": 56008.862679,
+   "elong": 1.76,
+   "lin_flux": 0.0008938020188903102,
+   "v_meas": 7.622,
+   "v_pred": 5.94,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100319/32222752.fts",
+   "mjd": 55274.321007,
+   "elong": 2.27,
+   "lin_flux": 0.0025775118522103767,
+   "v_meas": 6.472,
+   "v_pred": 5.945,
+   "snr": 1.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/220508/32700621.fts",
+   "mjd": 59707.004332,
+   "elong": 2.7,
+   "lin_flux": 0.0009955910096187777,
+   "v_meas": 7.505,
+   "v_pred": 5.863,
+   "snr": 0.5
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/980126/32023538.fts",
+   "mjd": 50839.039407,
+   "elong": 2.54,
+   "lin_flux": 0.0063353678435827,
+   "v_meas": 5.496,
+   "v_pred": 5.891,
+   "snr": 1.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100318/32222740.fts",
+   "mjd": 55273.987675,
+   "elong": 1.98,
+   "lin_flux": 0.0018379753866220978,
+   "v_meas": 6.839,
+   "v_pred": 5.945,
+   "snr": 1.0
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100319/32222741.fts",
+   "mjd": 55274.012674,
+   "elong": 2.0,
+   "lin_flux": 0.0013483158695305516,
+   "v_meas": 7.176,
+   "v_pred": 5.945,
+   "snr": 0.6
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/020216/32083634.fts",
+   "mjd": 52321.012674,
+   "elong": 2.09,
+   "lin_flux": 0.0006646995367033054,
+   "v_meas": 7.943,
+   "v_pred": 5.922,
+   "snr": 0.3
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/120320/32293818.fts",
+   "mjd": 56006.599846,
+   "elong": 3.79,
+   "lin_flux": 0.0007196012055492284,
+   "v_meas": 7.857,
+   "v_pred": 5.94,
+   "snr": 0.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/100315/32222581.fts",
+   "mjd": 55270.596009,
+   "elong": 1.52,
+   "lin_flux": 0.0017161287896142448,
+   "v_meas": 6.914,
+   "v_pred": 5.945,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/060227/32155118.fts",
+   "mjd": 53793.012808,
+   "elong": 2.52,
+   "lin_flux": 0.0017914587512821605,
+   "v_meas": 6.867,
+   "v_pred": 5.94,
+   "snr": 0.9
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/260519/32860072.fts",
+   "mjd": 61179.004544,
+   "elong": 3.22,
+   "lin_flux": 0.0004234705608543353,
+   "v_meas": 8.433,
+   "v_pred": 5.811,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/180421/32539229.fts",
+   "mjd": 58229.004353,
+   "elong": 2.14,
+   "lin_flux": 0.0018944248877436143,
+   "v_meas": 6.806,
+   "v_pred": 5.902,
+   "snr": 1.1
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/150402/32415553.fts",
+   "mjd": 57114.004339,
+   "elong": 4.48,
+   "lin_flux": 0.00036125569674430125,
+   "v_meas": 8.605,
+   "v_pred": 5.924,
+   "snr": 0.7
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/110323/32254152.fts",
+   "mjd": 55643.421023,
+   "elong": 2.1,
+   "lin_flux": 0.00036672464385509177,
+   "v_meas": 8.589,
+   "v_pred": 5.943,
+   "snr": 0.2
+  },
+  {
+   "frame": "runs/heliospheric-crossings/frames/c3/230507/32739822.fts",
+   "mjd": 60071.004332,
+   "elong": 2.35,
+   "lin_flux": 0.002818513574668856,
+   "v_meas": 6.375,
+   "v_pred": 5.851,
+   "snr": 0.4
+  }
+ ]
+}

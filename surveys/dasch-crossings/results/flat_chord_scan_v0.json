@@ -1,0 +1,202 @@
+{
+ "van-maanen/A": {
+  "1.2Rs": {
+   "events": 216,
+   "covered": 6,
+   "exposures": 7,
+   "hw_hr": 6.82
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 12,
+   "exposures": 14,
+   "hw_hr": 15.78
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 63,
+   "exposures": 219,
+   "hw_hr": 139.45
+  }
+ },
+ "van-maanen/B": {
+  "1.2Rs": {
+   "events": 216,
+   "covered": 12,
+   "exposures": 17,
+   "hw_hr": 7.1
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 21,
+   "exposures": 36,
+   "hw_hr": 15.9
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 62,
+   "exposures": 238,
+   "hw_hr": 139.46
+  }
+ },
+ "wolf-359/A": {
+  "1.2Rs": {
+   "events": 152,
+   "covered": 2,
+   "exposures": 2,
+   "hw_hr": 3.8
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 16,
+   "exposures": 23,
+   "hw_hr": 14.52
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 60,
+   "exposures": 217,
+   "hw_hr": 139.31
+  }
+ },
+ "wolf-359/B": {
+  "1.2Rs": {
+   "events": 184,
+   "covered": 4,
+   "exposures": 6,
+   "hw_hr": 4.16
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 15,
+   "exposures": 23,
+   "hw_hr": 14.73
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 59,
+   "exposures": 177,
+   "hw_hr": 139.33
+  }
+ },
+ "teegarden/A": {
+  "1.2Rs": {
+   "events": 0,
+   "covered": 0,
+   "exposures": 0,
+   "hw_hr": null
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 14,
+   "exposures": 27,
+   "hw_hr": 13.09
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 61,
+   "exposures": 236,
+   "hw_hr": 139.17
+  }
+ },
+ "teegarden/B": {
+  "1.2Rs": {
+   "events": 38,
+   "covered": 0,
+   "exposures": 0,
+   "hw_hr": 2.06
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 9,
+   "exposures": 15,
+   "hw_hr": 13.62
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 56,
+   "exposures": 194,
+   "hw_hr": 139.22
+  }
+ },
+ "gj-1276/A": {
+  "1.2Rs": {
+   "events": 216,
+   "covered": 7,
+   "exposures": 8,
+   "hw_hr": 4.56
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 20,
+   "exposures": 25,
+   "hw_hr": 14.94
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 58,
+   "exposures": 176,
+   "hw_hr": 139.36
+  }
+ },
+ "gj-1276/B": {
+  "1.2Rs": {
+   "events": 216,
+   "covered": 7,
+   "exposures": 12,
+   "hw_hr": 5.29
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 16,
+   "exposures": 31,
+   "hw_hr": 15.17
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 60,
+   "exposures": 215,
+   "hw_hr": 139.39
+  }
+ },
+ "ross-128/A": {
+  "1.2Rs": {
+   "events": 0,
+   "covered": 0,
+   "exposures": 0,
+   "hw_hr": null
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 11,
+   "exposures": 15,
+   "hw_hr": 11.61
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 56,
+   "exposures": 197,
+   "hw_hr": 139.05
+  }
+ },
+ "ross-128/B": {
+  "1.2Rs": {
+   "events": 0,
+   "covered": 0,
+   "exposures": 0,
+   "hw_hr": null
+  },
+  "2.5Rs": {
+   "events": 216,
+   "covered": 10,
+   "exposures": 12,
+   "hw_hr": 11.48
+  },
+  "0.1AU": {
+   "events": 216,
+   "covered": 57,
+   "exposures": 208,
+   "hw_hr": 139.04
+  }
+ }
+}

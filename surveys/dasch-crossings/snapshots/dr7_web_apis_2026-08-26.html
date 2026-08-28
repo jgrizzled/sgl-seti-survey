@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>DASCH: DR7 Web API Reference</title>
+  <link rel="stylesheet" href='https://dasch.cfa.harvard.edu/style.css'>
+  
+  
+</head>
+
+<body>
+  <div class="frame">
+    <div class="masthead">
+      <p class="banner"><a href="/"><i>DASCH</i>: Digital Access to a Sky Century @ Harvard
+          <br>
+          <span style="font: 25px Georgia, serif;"><i>A New Look at the Temporal Universe</i></span></a>
+      </p>
+
+      <div id="navbar">
+        <ul class="menu" id="nav">
+          <li><a href="/">Home</a><!--$top--></li>
+          <li><a href="/dr7/">Data Release 7</a><!--$top--></li>
+          <li><a href="/data-access/">Search/Download Data</a><!--$top--></li>
+          <li><a href="/sitemap/">Sitemap</a><!--$top--></li>
+        </ul>
+      </div>
+
+      <p style="clear: left; margin: 0;">
+      </p>
+    </div>
+
+    <div class="mainfull">
+      
+<div class="headerclass">DR7: Web API Reference</div>
+
+<div class="mainform">
+  <p>The recommended mechanism to access DASCH DR7 data is using the <a href="https://dasch.cfa.harvard.edu/dr7/install-daschlab/"><em>daschlab</em></a>
+Python package. Under the hood, <em>daschlab</em> retrieves data using the web APIs
+documented on this page. You’re welcome to access these web APIs directly if the
+need arises. They are standard <a href="https://en.wikipedia.org/wiki/REST">RESTful</a> <a href="https://www.json.org/">JSON</a>-oriented interfaces that should
+be easy to access using any number of programming languages or client libraries.</p>
+<p>The definitive listing of all endpoints may be found on the
+automatically-generated <a href="https://docs.api.starglass.cfa.harvard.edu/">Web API Parameter Reference</a> page. For DASCH
+users, the key endpoints are:</p>
+<ul>
+<li><strong><a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-querycat"><code>POST /dasch/dr7/querycat</code></a>:</strong> Given a sky position and choice of
+photometric reference catalog, obtain a table of DASCH sources around that
+position, including the number of DASCH detections for each source.</li>
+<li><strong><a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></a>:</strong> Given a sky position, obtain a table of all
+exposures intersecting that position. The result indexes <em>exposures</em> rather
+than <em>plates</em> because some plates have multiple exposures, each of which has
+its own unique position on the sky.</li>
+<li><strong><a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-lightcurve"><code>POST /dasch/dr7/lightcurve</code></a>:</strong> Given some of the metadata provided by a
+<code>querycat</code> invocation, obtain the lightcurve of a catalog source.</li>
+<li><strong><a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-cutout"><code>POST /dasch/dr7/cutout</code></a>:</strong> Given some of the metadata provided by a
+<code>queryexps</code> invocation, obtain a cutout of a DASCH plate scan.</li>
+<li><strong><a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-mosaic-package"><code>POST /dasch/dr7/mosaic_package</code></a>:</strong> Obtain the information needed to download
+and construct a full-plate mosaic image.</li>
+</ul>
+<p>These and other science-relevant endpoints are documented below.</p>
+<p>The legacy <a href="https://dasch.cfa.harvard.edu/data-access/#cannon-data-portal">“Cannon” data portal</a> used to provide
+alternative data retrieval APIs. It no longer does so.</p>
+<h1 id="overview">Overview</h1>
+<p>The DASCH DR7 web APIs are served using the same infrastructure that powers the
+user-facing <a href="https://starglass.cfa.harvard.edu/">Starglass</a> website. They are standard <a href="https://en.wikipedia.org/wiki/REST">RESTful</a> <a href="https://www.json.org/">JSON</a>-oriented
+interfaces that can be accessed through one of two base URLs:</p>
+<div class="autotable">
+<table><thead><tr><th>Base URL</th><th>API key required?</th><th>Rate limits</th></tr></thead><tbody>
+<tr><td><code>https://api.starglass.cfa.harvard.edu/public/</code></td><td>No</td><td>Lower</td></tr>
+<tr><td><code>https://api.starglass.cfa.harvard.edu/full/</code></td><td>Yes</td><td>Higher</td></tr>
+</tbody></table>
+</div>
+<p>The “full” API, which provides higher rate limits but requires you to provide a
+Starglass API key, is also known as the “registered” API in some contexts.</p>
+<p>As a simple example, a fairly trivial Starglass API endpoint is <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/healthCheck"><code>GET /health</code></a>.
+To invoke this endpoint via the “public” base URL (sometimes referred to as the
+public “definition”), you would fetch this URL:</p>
+<blockquote>
+<p><code>https://api.starglass.cfa.harvard.edu/public/health</code></p>
+</blockquote>
+<p>To invoke this endpoint from the command line with <a href="https://curl.se/">curl</a>, you would run:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#bf616a;">curl -H </span><span>&#39;</span><span style="color:#a3be8c;">accept: application/json</span><span>&#39; https://api.starglass.cfa.harvard.edu/public/health
+</span></code></pre>
+<p>The result should be a very short JSON document:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">status</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">ready</span><span>&quot;,
+</span><span>  &quot;</span><span style="color:#a3be8c;">message</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">DB is available and fully loaded</span><span>&quot;
+</span><span>}
+</span></code></pre>
+<p>To invoke the “registered” version of the API, a Starglass API key must be
+provided as an <code>x-api-key</code> HTTP header. To obtain such an API key, you must
+first <a href="https://starglass.cfa.harvard.edu/signin">create a Starglass account</a>. Once signed in, click on the
+head-and-shoulders icon in the top right of <a href="https://starglass.cfa.harvard.edu/">any Starglass page</a>, and a
+popup menu will show the API key assigned to your user account. It will be a
+40-character string of letters and numbers. This API key should be treated as a
+secret and guarded accordingly.</p>
+<p>To invoke an endpoint using the registered definition with <a href="https://curl.se/">curl</a>, run a command of
+this form:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># replace the text [API_KEY] with your actual 40-character API key:
+</span><span style="color:#bf616a;">curl -H </span><span>&#39;</span><span style="color:#a3be8c;">x-api-key: [API_KEY]</span><span>&#39;</span><span style="color:#bf616a;"> -H </span><span>&#39;</span><span style="color:#a3be8c;">accept: application/json</span><span>&#39; \
+</span><span>  https://api.starglass.cfa.harvard.edu/full/health
+</span></code></pre>
+<p>To see how to invoke DASCH APIs in Python using the <a href="https://requests.readthedocs.io/">requests</a> library, see the
+<a href="https://github.com/pkgw/daschlab/blob/main/daschlab/apiclient.py">apiclient.py module of <em>daschlab</em></a>. Many of the key APIs are <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">“POST
+requests”</a> that require you to provide a JSON-formatted request body. This
+can be done so using curl, but is a lot easier in Python.</p>
+<p>For completeness, we note that there is an additional pair of development API
+servers rooted at <code>https://api.dev.starglass.cfa.harvard.edu/</code>. These have IP
+address restrictions limiting their usage to DASCH team members, and they offer
+no special features compared to the generally-accessible APIs. Also, the
+“registered” API offers one additional endpoint that does not exist in the
+public API: <a href="https://docs.api.starglass.cfa.harvard.edu/?urls.primaryName=registered#/default/getMosaicDownload"><code>GET /plates/p/{plate_id}/mosaic/download</code></a>. For programmatic
+users, however, this endpoint does not offer any functionality that can’t be
+obtained with the <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates-p-plate-id-mosaic"><code>GET /plates/p/{plate_id}/mosaic</code></a> endpoint, which is
+available in both the public and registered definitions.</p>
+<h1 id="additional-resources">Additional Resources</h1>
+<ul>
+<li>The <strong><a href="https://docs.api.starglass.cfa.harvard.edu/">Web API Parameter Reference</a></strong> describes the inputs and
+outputs of each API endpoint formally, and allows you to test endpoints right
+from your browser. Because it is automatically generated, however, it does not
+contain much narrative documentation.</li>
+<li>The <strong><a href="https://starglass.cfa.harvard.edu/docs/api/index.html">Starglass API User Guide</a></strong> provides a guide-level introduction to
+using the Starglass APIs. It is aimed at non-scientific users and does not
+describe DASCH-specific endpoints.</li>
+<li>The <strong><a href="https://daschlab.readthedocs.io/"><em>daschlab</em> API Documentation</a></strong> documents the <em>daschlab</em> Python
+package, which can largely be thought of as providing a nice Python client for
+the web APIs described here.</li>
+</ul>
+<h1 id="endpoints">Endpoints</h1>
+<p>For request and response schemas and a mechanism for testing each endpoint
+interactively from the web browser, see each endpoint’s definition in the
+<a href="https://docs.api.starglass.cfa.harvard.edu/">parameter reference</a>. Additional documentation here is only provided
+for those endpoints that benefit from cross-referencing with other elements of
+the DASCH DR7 documentation.</p>
+<h2 id="get-api-key"><code>GET /api_key</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get the API key used to make this API request.</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getApiKey"><code>GET /api_key</code> in the Parameter Reference</a></li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information — this
+endpoint does not deal with astrophysical data.</p>
+<h2 id="get-astronomers"><code>GET /astronomers</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about astronomers in the Starglass database</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getAstronomers"><code>GET /astronomers</code> in the Parameter Reference</a></li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information — this
+endpoint does not deal with astrophysical data.</p>
+<h2 id="get-class"><code>GET /class</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about plate classes in the Starglass database</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getClass"><code>GET /class</code> in the Parameter Reference</a></li>
+<li><a href="https://library.cfa.harvard.edu/plate-classes">The Plate Stacks page on plate classes</a></li>
+</ul>
+</li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information — this
+endpoint does not deal (strictly) with astrophysical data.</p>
+<h2 id="get-dasch-dr7-asset-photcal-asdf-hexid"><code>GET /dasch/dr7/asset/photcal_asdf/{hexid}</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Redirect the caller to download a photcal ASDF data file</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/daschDr7AssetPhotcalAsdf"><code>GET /dasch/dr7/asset/photcal_asdf/{hexid}</code> in the Parameter Reference</a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/photcal-asdf-contents/">Photometric Calibration ASDF File Contents</a></li>
+<li><a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.exposures.ExposureRow.html#daschlab.exposures.ExposureRow.photcal_asdf_url">The <code>ExposureRow.photcal_asdf_url()</code> API in <em>daschlab</em></a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint retrieves a single DASCH photometric calibration metadata file,
+which is stored in the <a href="https://asdf.readthedocs.io/">ASDF</a> format. Each file provides data relating to the
+photometric calibration of one plate (technically: one mosaic) against one
+photometric reference catalog. The contents of the file are documented on the
+<a href="https://dasch.cfa.harvard.edu/dr7/photcal-asdf-contents/">Photometric Calibration ASDF File Contents</a>
+page.</p>
+<p>The only input parameter to the API is the <code>{hexid}</code> path parameter. Appropriate
+values to use here should be obtained from the <code>result_id_apass</code> or
+<code>result_id_atlas</code> columns of a table returned by the <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></a>.</p>
+<p>When the invocation is successful, this API will return a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/307">307 redirection
+status code</a> pointing to a <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned AWS S3 URL</a>. This URL can be
+used to obtain the ASDF metadata file using standard HTTP techniques. The body
+of the response will also be a tiny JSON document containing the same
+information:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">location</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;the_presigned_URL&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>Depending on your use case, it may make sense to have your HTTP client layer
+process the redirection automatically, or to extract the target URL from either
+the <code>Location</code> HTTP header or the response body. The presigned URL is only valid
+for about 15 minutes.</p>
+<h2 id="post-dasch-dr7-cutout"><code>POST /dasch/dr7/cutout</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Obtain a FITS cutout of a full-plate mosaic</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/daschDr7Cutout"><code>POST /dasch/dr7/cutout</code> in the Parameter Reference</a></li>
+<li><a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.cutout">The <code>Session.cutout()</code> API in <em>daschlab</em></a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint retrieves a cutout of a full-plate image, returning a small FITS
+image.</p>
+<p>Input parameters are provided as a JSON-format body to the POST request. They are:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_id</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">solution_number</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">center_ra_deg</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">center_dec_deg</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>The cutout center position is specified as ICRS RA/deg in decimal degrees.
+Currently, the cutout size and pixel scale are <em>not</em> changeable parameters.</p>
+<p>To properly produce a cutout, both a source plate ID and a WCS solution number
+are needed. This is because some plates were exposed multiple times. The same
+sky location may therefore appear in <em>multiple</em> places in one plate image!
+Further complicating matters is the fact that some exposures are known to DASCH
+by virtue of being logged in historical notebooks, but the pipeline was unable
+to determine a precise WCS solution matching the exposure. In such cases it is
+not possible to generate a useful cutout even if the plate was scanned and the
+exposure is believed to overlap the target position. In other cases, the
+pipeline obtains multiple WCS solutions even when only one exposure is
+cataloged. See the <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#exposure-identity">Exposure Identity section of the Exposure List Columns
+page</a> for additional discussion. The <code>solution_number</code> input should match
+the <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#solnum"><code>solnum</code></a> column of an exposure table, obtained via the <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></a> endpoint. The <code>plate_id</code> input should come from the
+<a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#series"><code>series</code></a> and <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#platenum"><code>platenum</code></a> columns, with the plate number textualization
+padding the number with zeros so that it is always five characters long.</p>
+<p>The response to a successful invocation is a single JSON-encoded string. That
+string, in turn, is the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">base64</a>-encoded representation of a <a href="https://developer.mozilla.org/en-US/docs/Glossary/gzip_compression">gzipped</a>
+FITS file. Note that many FITS tools, including <a href="https://astropy.org/">Astropy</a> and <a href="https://sites.google.com/cfa.harvard.edu/saoimageds9">DS9</a>, can handle
+gzipped FITS data transparently, so you may not need to undo that compression
+manually. The FITS file contains the source image data, bilinearly interpolated
+onto a standard gnomonic (<code>TAN</code>) WCS projection centered at the specified
+coordinates.</p>
+<p>All cutouts generated for the same input coordinates will have the same size and
+use the same WCS projection. At the moment, the generated cutouts will be 835
+pixels on a side with a pixel scale of 0.0004 deg/pix, such that the output
+image is 20 arcminutes across in each dimension. For low-resolution plates
+(i.e., ones with large plate scales), this may substantially oversample the
+intrinsic resolution of the DASCH scan. However, there should be no plates where
+the cutout <em>undersamples</em> the intrinsic resolution of the scan.</p>
+<p>Note that due to the large size and very heterogeneous nature of the plates, the
+DASCH astrometric solutions are not uniformly accurate, especially when the
+target area is found at the edge of a plate. Certain cutouts may show
+substantial (hundreds of pixels) astrometric offsets relative to the ideal.
+These are best understood as errors in the DASCH WCS solution, rather than
+errors in the plate itself (or the scanning process).</p>
+<h2 id="post-dasch-dr7-lightcurve"><code>POST /dasch/dr7/lightcurve</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Obtain the lightcurve of the specified source</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/daschDr7Lightcurve"><code>POST /dasch/dr7/lightcurve</code> in the Parameter Reference</a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/">Lightcurve Data Table Columns</a></li>
+<li><a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.lightcurve">The <code>Session.lightcurve()</code> API in <em>daschlab</em></a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint retrieves a raw lightcurve of a single DASCH catalog source,
+returning a table of detailed information.</p>
+<p>Input parameters are provided as a JSON-format body to the POST request. They are:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">refcat</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">ref_number</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">gsc_bin_index</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>These values should come from the table produced by an invocation of <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-querycat"><code>POST /dasch/dr7/querycat</code></a>. The value of <code>refcat</code> should be consistent with whatever
+value was used in the catalog query (either <code>&quot;apass&quot;</code> or <code>&quot;atlas&quot;</code>), and
+<a href="https://dasch.cfa.harvard.edu/dr7/catalog-columns/#ref-number"><code>ref_number</code></a> and <a href="https://dasch.cfa.harvard.edu/dr7/catalog-columns/#gsc-bin-index"><code>gsc_bin_index</code></a> should match the corresponding values for the
+source of interest.</p>
+<p>The response to a successful invocation is a single JSON-encoded list of
+strings. Each string should be treated as if it was one record in a
+line-oriented <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> file. The columns of the output are documented in the
+<a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/">Lightcurve Data Table Columns</a> page, with the
+important difference that the raw web APIs return columns named in the
+“camel-case” form (<code>wordsLikeThis</code>) rather than “snake-case”
+(<code>words_like_this</code>). The first record in the output list will contain the column
+names.</p>
+<h2 id="post-dasch-dr7-mosaic-package"><code>POST /dasch/dr7/mosaic_package</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Obtain the information needed to download and construct a
+full-plate mosaic image</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/daschDr7MosaicPackage"><code>POST /dasch/dr7/mosaic_package</code> in the Parameter Reference</a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/valueadd-mosaic-contents/">Value-Added Mosaic FITS File Contents</a></li>
+<li><a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.mosaic">The <code>Session.mosaic()</code> API in <em>daschlab</em></a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint retrieves a <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned AWS S3 URL</a> that can be used to
+download a full-plate FITS image produced by the DASCH project, as well as
+relevant metadata needed to correctly interpret the FITS file.</p>
+<p>This endpoint, unlike most of the other ones defined by the DASCH web APIs,
+returns data that require some substantial massaging to get them into the best
+shape for scientific analysis. The <em>daschlab</em> API function <a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.mosaic"><code>Session.mosaic()</code></a>
+performs this work, and it is <strong>strongly</strong> recommended that you use <em>daschlab</em>
+rather than invoke this endpoint yourself. We refer to the files created by
+<em>daschlab</em> as “value-added” FITS mosaics, in contrast to than the “base” mosaics
+that you can access directly via this endpoint. If you wish to examine the code
+in <em>daschlab</em> that converts the latter into the former, refer to the
+<a href="https://github.com/pkgw/daschlab/blob/main/daschlab/mosaics.py"><code>daschlab.mosaics</code></a> Python module.</p>
+<p>Input parameters are provided as a JSON-format body to the POST request. They are:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_id</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">binning</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>The <code>plate_id</code> can be any valid plate ID; in typical usage it would be computed
+from data in a table returned by a <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></a> invocation, as
+explained in the documentation for <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-cutout"><code>POST /dasch/dr7/cutout</code></a>.</p>
+<p>The <code>binning</code> should be either 1 or 16, and specifies the pixel binning level of
+the mosaic that you wish to access. A value of 1 selects the full-resolution
+plate mosaic; these files have an average size of 750 MiB and can be more than a
+gigabyte in size. A value of 16 selects the 16×16 downsampled mosaic, which is
+therefore approximately 256 times less data than the full-sized mosaic.</p>
+<p>The body of the response is a JSON object as well:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">baseFitsUrl</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">baseFitsSize</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">metadata</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;complex-object&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>The <code>baseFitsUrl</code> field is a <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned AWS S3 URL</a> that can be used to
+obtain the base FITS mosaic using standard HTTP techniques. The URL is only
+valid for 15 minutes. The <code>baseFitsSize</code> field gives the size of that object in
+bytes.</p>
+<p>The <code>metadata</code> field contains a rather complex JSON data structure constructed
+from the DASCH/Starglass server-side databases. Its internal structure is not
+documented. Refer to the <a href="https://dasch.cfa.harvard.edu/dr7/valueadd-mosaic-contents/">Value-Added Mosaic FITS File
+Contents</a> page for details on the structure
+of the resulting FITS file created by <em>daschlab</em>, which incorporates all of
+noteworthy elements of the metadata object.</p>
+<h2 id="post-dasch-dr7-platephot"><code>POST /dasch/dr7/platephot</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Obtain multi-source photometry data from a subset of a single plate</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/daschDr7PlatePhot"><code>POST /dasch/dr7/platephot</code> in the Parameter Reference</a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/">Lightcurve Data Table Columns</a></li>
+<li><a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.extract">The <code>Session.extract()</code> API in <em>daschlab</em></a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint is a bit like the combination of <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-cutout"><code>POST /dasch/dr7/cutout</code></a> and
+<a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-lightcurve"><code>POST /dasch/dr7/lightcurve</code></a>, in that it retrieves a sample of the DASCH
+photometry for a single plate exposure, centered around a particular position.</p>
+<p>Input parameters are provided as a JSON-format body to the POST request. They
+are:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_id</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">solution_number</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">refcat</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">center_ra_deg</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">center_dec_deg</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>The <code>plate_id</code> and <code>solution_number</code> should come from a table returned by a
+<a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></a> invocation, as explained in the documentation for
+<a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-cutout"><code>POST /dasch/dr7/cutout</code></a>. The <code>refcat</code> should be either <code>&quot;apass&quot;</code> or <code>&quot;atlas&quot;</code>.
+The query center is specified as an ICRS RA/dec in decimal degrees. The size of
+the query are is currently fixed (see below).</p>
+<p>The response is in an identical format as that to <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-lightcurve"><code>POST /dasch/dr7/lightcurve</code></a>. Rather than returning measurements of the same source
+from many plates, however, this API returns measurements of many sources from
+one plate. The <a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/">Lightcurve Data Table Columns</a> page
+correctly documents the columns of the returned data table. Here too, the web
+APIs return columns named in the “camel-case” form (<code>wordsLikeThis</code>) rather than
+“snake-case” (<code>words_like_this</code>).</p>
+<p>The returned list of sources will approximately cover the same size as a cutout;
+that is, a radius of 10 arcminutes. Source selection is done using simple
+bounding RA/dec values and so may behave badly at the poles.</p>
+<p>For multiple-exposure plates, the DASCH photometry pipeline attempts to
+associate each source detected in the plate image with a WCS solution based on
+catalog cross-matching. This in turn determines the RA/dec coordinates assigned
+to the source. (Another way to think about multiple-exposure plates: each pixel
+has multiple RA/dec values associated with it.) If you are looking at cutout of
+a multiple-exposure plate and comparing it to the results of a <code>platephot</code>
+query, then, there might be obvious sources in the cutout that seem not to have
+corresponding entries in the photometry extract. To obtain data for these
+sources, you may need to repeat your query for other solutions associated with
+your plate in question, taking care to adjust the <code>center_ra_deg</code> and
+<code>center_dec_deg</code> values to ensure that the query covers the same <em>physical plate
+location</em> as your primary query. If you wish to plot all of the detections in
+one view, you will need to remap the RA/dec coordinates of the additional
+detections to capture what those coordinates <em>would be</em> if they were interpreted
+according to the WCS solution associated with your primary query. Phew!</p>
+<p>This API is slow, but it is the only way to obtain official DASCH photometry
+data for sources that didn’t match to anything in the reference catalog(s).</p>
+<h2 id="post-dasch-dr7-querycat"><code>POST /dasch/dr7/querycat</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Query a DASCH source catalog at a sky location</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/daschDr7Querycat"><code>POST /dasch/dr7/querycat</code> in the Parameter Reference</a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/catalog-columns/">Catalog Data Table Columns</a></li>
+<li><a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.refcat">The <code>Session.refcat()</code> API in <em>daschlab</em></a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint performs a cone-search query for sources from one of the DASCH
+reference catalogs (“refcats”).</p>
+<p>Input parameters are provided as a JSON-format body to the POST request. They
+are:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">refcat</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">ra_deg</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">dec_deg</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">radius_arcsec</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>The <code>refcat</code> parameter should be either <code>&quot;apass&quot;</code> or <code>&quot;atlas&quot;</code>. The search
+center position is specified as ICRS RA/deg in decimal degrees. The RA must be
+normalized to be between 0 and 360 degrees. The search radius is specified in
+arcseconds. The maximum allowed radius is 3600 arcsec (one degree).</p>
+<p>The search is actually a “box search” rather than a cone. That is, the returned
+sources will form an approximate square shape on the sky, with a half-size
+matching the requested radius.</p>
+<p>The response to a successful invocation is a single JSON-encoded list of
+strings. Each string should be treated as if it was one record in a
+line-oriented <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> file. The columns of the output are documented in the
+<a href="https://dasch.cfa.harvard.edu/dr7/catalog-columns/">Catalog Data Table Columns</a> page, with the important
+difference that the raw web APIs return columns named in the “camel-case” form
+(<code>wordsLikeThis</code>) rather than “snake-case” (<code>words_like_this</code>).</p>
+<h2 id="post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Query a DASCH exposure catalog at a sky location</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/daschDr7Queryexps"><code>POST /dasch/dr7/queryexps</code> in the Parameter Reference</a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/">Exposure List Data Table Columns</a></li>
+<li><a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.exposures">The <code>Session.exposures()</code> API in <em>daschlab</em></a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint queries the DASCH database of plates and their exposures,
+returning a list of all exposures intersecting the specified sky location.</p>
+<p>Input parameters are provided as a JSON-format body to the POST request. They
+are:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">ra_deg</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">dec_deg</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>}
+</span></code></pre>
+<p>The search center position is specified as ICRS RA/deg in decimal degrees. The
+RA must be normalized to be between 0 and 360 degrees.</p>
+<p>The response to a successful invocation is a single JSON-encoded list of
+strings. Each string should be treated as if it was one record in a
+line-oriented <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> file. The columns of the output are documented in the
+<a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/">Exposure List Data Table Columns</a>, with the
+important difference that the raw web APIs return columns named in the
+“camel-case” form (<code>wordsLikeThis</code>) rather than “snake-case”
+(<code>words_like_this</code>). The first record in the output list will contain the column
+names.</p>
+<p>Keep in mind that some plates have multiple exposures, so it is possible for a
+single plate to appear in the results multiple times if it has more than one
+exposure that covers the query location.</p>
+<p>The returned result will include plates that have not been scanned, as well as
+ones that have. This is because historical logbook information gives the
+exposure centers of some of these plates, and there is enough information to
+approximately infer where they land on the sky. If such a plate appears to be
+important to your research, you can contact the <a href="https://platestacks.cfa.harvard.edu/">HCO Plate Stacks</a> staff to
+request more information about it. Cutouts can only be obtained for plates that
+were scanned and where the pipeline was further able to obtain a precise WCS
+solution for one or more exposures.</p>
+<h2 id="get-health"><code>GET /health</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about the status of the Starglass database</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/healthCheck"><code>GET /health</code> in the Parameter Reference</a></li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information — this
+endpoint does not deal with astrophysical data.</p>
+<h2 id="get-locations"><code>GET /locations</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about observatory locations</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getLocations"><code>GET /locations</code> in the Parameter Reference</a></li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information about its
+inputs and outputs.</p>
+<p>The information returned by this endpoint includes basic latitude, longitude,
+and elevation information. You should not rely on its values in detail; prefer
+data from a better-maintained source, such as <a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.EarthLocation.html#astropy.coordinates.EarthLocation.of_site">Astropy’s site list</a>.</p>
+<h2 id="get-notebooks"><code>GET /notebooks</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about astronomer notebooks in the Starglass database</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getNotebooks"><code>GET /notebooks</code> in the Parameter Reference</a></li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information — this
+endpoint does not deal with astrophysical data.</p>
+<h2 id="get-notebooks-notebook-id"><code>GET /notebooks/{notebook_id}</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about a specific astronomer notebook</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getNotebook"><code>GET /notebooks/{notebook_id}</code> in the Parameter Reference</a></li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information — this
+endpoint does not deal with astrophysical data.</p>
+<h2 id="get-notebooks-notebook-id-page-num"><code>GET /notebooks/{notebook_id}/{page_num}</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about a specific page of an astronomer notebook</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getNotebookPage"><code>GET /notebooks/{notebook_id}/{page_num}</code> in the Parameter Reference</a></li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information — this
+endpoint does not deal with astrophysical data. It does, however, return URLs
+that allow you to access to photographs of the entire <a href="https://platestacks.cfa.harvard.edu/project-phaedra">PHaEDRA</a> notebook
+collection, which may be valuable for some research projects.</p>
+<h2 id="get-plates"><code>GET /plates</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about multiple plates</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getPlates"><code>GET /plates</code> in the Parameter Reference</a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates-p-plate-id"><code>GET /plates/p/{plate_id}</code></a> to query a single plate</li>
+</ul>
+</li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information, as well as
+the notes here on <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates-p-plate-id"><code>GET /plates/p/{plate_id}</code></a>. The data returned by this API
+may be valuable for some research use cases.</p>
+<h2 id="get-plates-p-plate-id"><code>GET /plates/p/{plate_id}</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get detailed information about a specific plate</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getPlate"><code>GET /plates/p/{plate_id}</code> in the Parameter Reference</a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates"><code>GET /plates</code></a> to query a multiple plates at once</li>
+<li><a href="https://starglass.cfa.harvard.edu/docs/api/plates.html">“Getting Information on HCO Plates” in the Starglass API User Guide</a></li>
+</ul>
+</li>
+</ul>
+<p>Retrieve detailed information about a specific plate.</p>
+<p>The primary input parameter to this endpoint is the <code>plate_id</code> path parameter.
+This should be a Starglass plate ID, consisting of a lower-case series
+designator and a plate number padded to five digits with zeros; e.g., <code>a03393</code>.
+There is also an optional URL query parameter <code>thumbnail_ratio</code>, defaulting to
+<code>4</code>. This controls the size of the thumbnail images in the API response.
+Scientific users are unlikely to need to change this from the default.</p>
+<p>The body of the response is a JSON document containing a variety of plate data.
+The overall structure is:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_id</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">class</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_comment</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">has_markings</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;boolean&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">markings_cleaned</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;boolean&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">telescope</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">location</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;location_record&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">catalog_exposures</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;catalog_exposure_records&gt;</span><span>],
+</span><span>  &quot;</span><span style="color:#a3be8c;">exposures</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;exposure_records&gt;</span><span>],
+</span><span>  &quot;</span><span style="color:#a3be8c;">mosaics</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;mosaic_records&gt;</span><span>],
+</span><span>  &quot;</span><span style="color:#a3be8c;">jacket_images</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;photo_records&gt;</span><span>],
+</span><span>  &quot;</span><span style="color:#a3be8c;">jacket_thumbnail</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;photo_records&gt;</span><span>],
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_images</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;photo_records&gt;</span><span>],
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_thumbnail</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;photo_records&gt;</span><span>],
+</span><span>  &quot;</span><span style="color:#a3be8c;">comment_astronomers</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;astronomer_names&gt;</span><span>],
+</span><span>  &quot;</span><span style="color:#a3be8c;">mentions</span><span>&quot;: [</span><span style="background-color:#bf616a;color:#2b303b;">&lt;mention_records&gt;</span><span>],
+</span><span>}
+</span></code></pre>
+<p>The <strong><code>plate_id</code></strong> is the same as the input parameter of the same name.</p>
+<p>The <strong><code>class</code></strong> is the <a href="https://library.cfa.harvard.edu/plate-classes">plate class</a> assigned to the plate. This information can
+be informative about the purpose for which the plate was made, and potentially
+which emulsion it used. However, be aware that the DASCH database of plate class
+information is highly incomplete, and not always accurate.</p>
+<p>The <strong><code>plate_comment</code></strong> is a curator’s comment associated with the plate, as
+logged in the DASCH database. If present, this may remark on the historical
+context of the plate, the presence of markings, astronomers believed to have use
+the plate, and so on.</p>
+<p>The <strong><code>has_markings</code></strong> field is true if the plate had handwritten markings on it
+at some point. This information is derived from metadata logged into the DASCH
+database, which should be generally but not perfectly accurate.</p>
+<p>The <strong><code>markings_cleaned</code></strong> field is true if the plate had handwritten markings
+that were erased prior to scanning by DASCH. This will be true for the vast
+majority of plates with markings that were scanned before 2024. This information
+is derived from metadata logged into the DASCH database, which should be
+generally but not perfectly accurate.</p>
+<p>The <strong><code>telescope</code></strong> field gives a human-friendly name of the telescope behind
+which this plate was exposed.</p>
+<p>The <strong><code>location</code></strong> field is a JSON object describing the location where the plate was
+exposed. Its structure is:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">name</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">lat</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">lon</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">elevation</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>The data here are the same as returned by the <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-locations"><code>GET /locations</code></a> endpoint, and
+likewise shouldn’t be taken too seriously. Note that some early Harvard
+telescopes were moved between multiple observatories, so the same telescope may
+appear at multiple locations.</p>
+<p>The <strong><code>catalog_exposures</code></strong> field is a list of JSON objects describing exposures
+of the plate, as cataloged in historical logbooks. Each record has the following
+structure:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">exposure_num</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">datetime</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">ctr_ra</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">ctr_dec</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">exposure_length</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>Here, the <code>exposure_num</code> is a sequence number used by the DASCH database,
+mapping to <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#expnum"><code>expnum</code></a> in the output from <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></a>. The
+<code>datetime</code> is the midpoint time of the exposure in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format. The
+cataloged exposure center is given in <code>ctr_ra</code> and <code>ctr_dec</code>, which are decimal
+degrees. The exposure duration <code>exposure_length</code> is measured in minutes. Any of
+these values might be null, if the corresponding logbook information was
+partial.</p>
+<p>The <strong><code>exposures</code></strong> field is a list of JSON objects describing exposures of the
+plate for which the DASCH pipeline was able to obtain a precise WCS solution.
+The size of this list can be larger, smaller, or the same as the
+<code>catalog_exposures</code> list: sometimes the pipeline can find a solution for which
+there is no documentation; sometimes an exposure is documented but can’t be
+solved by the pipeline. Each record has the following structure:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">solution_num</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">exposure_num</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">datetime</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">exposure</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">ctr_ra</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">ctr_dec</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">crpix1</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">crpix2</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">delta_dec_x</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">delta_dec_y</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">delta_ra_x</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">delta_ra_y</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">naxis1</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">naxis2</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>Here, <code>solution_num</code> gives the WCS solution number, corresponding to <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#solnum"><code>solnum</code></a>
+in the output from <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></a>. If it is a non-negative
+number, <code>expnum</code> gives the exposure number that the DASCH pipeline associated
+with this solution. The <code>datetime</code> field is as in <code>catalog_exposures</code>, while
+<code>exposure</code> is equivalent to <code>exposure_length</code>. However, <code>ctr_ra</code> and <code>ctr_dec</code>
+have slightly different semantics: they map to the FITS headers <code>CRVAL1</code> and
+<code>CRVAL2</code> in a WCS solution that <em>approximates</em> the position of the plate on the
+sky, referenced to its full-size mosaic image; this RA/dec may not be close to
+the plate center. The fields <code>naxis1</code>, <code>naxis2</code>, <code>crpix1</code>, and <code>crpix2</code> map to
+corresponding FITS headers. The fields <code>delta_ra_x</code>, <code>delta_ra_y</code>,
+<code>delta_dec_x</code>, and <code>delta_dec_y</code> map to FITS headers <code>CD1_1</code>, <code>CD1_2</code>, <code>CD2_1</code>,
+and <code>CD2_2</code>.</p>
+<p>Be aware that DASCH plates are so large on the sky that WCS distortion terms are
+virtually always necessary to obtain a good fit across the field. If you
+construct WCS solutions from the values returned in these records, they will
+only be approximately accurate.</p>
+<p>The <strong><code>mosaics</code></strong> field is a list of JSON objects describing DASCH images of the
+plate. In DASCH DR7, mosaics come in pairs: full-size files, and &quot;binned&quot;
+versions that are downsampled in 16×16 blocks. In principle, there can be
+multiple full-size mosaics of the same plate, but in DASCH DR7 this does not
+happen.</p>
+<p>Each mosaic record has the following structure:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_id</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">mosaic_num</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">bin_factor</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">flags</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">rotation</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>Due to the invariants mentioned above, none of these fields are actually needed
+to obtain a plate mosaic file with <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates-p-plate-id-mosaic"><code>GET /plates/p/{plate_id}/mosaic</code></a>. The
+<code>mosaic_num</code> is a mosaic sequence number, expressed as a string padded to two
+digits with a zero. The <code>bin_factor</code> is either <code>&quot;01&quot;</code> or <code>&quot;16&quot;</code>, indicating a
+full-size or binned mosaic, respectively. The <code>flags</code> and <code>rotation</code> fields are
+DASCH-internal identifiers that can distinguish between multiple mosiac
+variations but can be ignored by external users.</p>
+<p>The <strong><code>jacket_images</code></strong>, <strong><code>jacket_thumbnail</code></strong>, <strong><code>plate_images</code></strong>, and
+<strong><code>plate_thumbnail</code></strong> fields are all lists of JSON objects describing
+photographs of the plate and/or its paper jacket. Each record has the following
+structure:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_id</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">image_type</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">portion</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">url</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">thumbnail</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;boolean&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">thumbnail_ratio</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>The <code>image_type</code> field is either <code>&quot;plate&quot;</code> or <code>&quot;jacket&quot;</code>. The <code>portion</code> field
+describes which portion of the object was photographed, and will take on one of
+the values: <code>&quot;all&quot;</code> (everything), <code>&quot;t&quot;</code> (top), <code>&quot;b&quot;</code> (bottom), <code>&quot;ll&quot;</code> (lower
+left), <code>&quot;lr&quot;</code> (lower right), <code>&quot;ul&quot;</code> (upper left), <code>&quot;ur&quot;</code> (upper right). If the
+portion is (e.g.) <code>&quot;ul&quot;</code>, that does not guarantee that the other three corners
+were also photographed; blank areas were skipped.</p>
+<p>The <code>url</code> field is a <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned AWS S3 URL</a> that can be used to obtain
+the photograph using standard HTTP techniques. The URL is only valid for 15
+minutes.</p>
+<p>If true, the <code>thumbnail</code> field indicates that this record represents a
+downsampled thumbnail of an original image file. The <code>thumbnail_ratio</code> field
+represents the amount of downsampling that occurred; i.e., 4 indicates 4×4 pixel
+binning.</p>
+<p>When the markings on an plate were erased, the DASCH plate photographs represent
+the only record of their content. Beyond that, the plate photographs should not
+be used for quantitative work; use only the FITS mosaics.</p>
+<p>The <strong><code>comment_astronomers</code></strong> field gives a list of astronomer names mentioned
+in the <code>plate_comment</code>, as identified by a named-entity-recognition machine
+learning process. The names here are normalized to the Starglass preferred forms
+and can be passed to the <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-astronomers"><code>GET /astronomers</code></a> endpoint. The output of the ML
+algorithm is not completely accurate, and so some astronomer names mentioned in
+<code>plate_comment</code> may not be represented in this field, especially if they were
+abbreviated or misspelled.</p>
+<p>The <strong><code>mentions</code></strong> field gives a list of mentions of the plate in <a href="https://platestacks.cfa.harvard.edu/project-phaedra">PHaEDRA</a>
+astronomer notebooks, as identified by citizen-science volunteers. Each mention
+record has the following structure:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">author</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">notebook</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">page_num</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>This identifies the page in the notebook in which the plate was mentioned, as
+well as the author of the notebook mentioning the plate. Many notebooks have
+multiple credited authors, in which case there will be one mention record for
+each author. The <code>author</code> is in Starglass preferred form and can be passed to
+the <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-astronomers"><code>GET /astronomers</code></a> endpoint. The <code>notebook</code> is a PHaEDRA notebook ID (with
+the form <code>phaedra1234</code>) and can be passed to <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-notebooks-notebook-id"><code>GET /notebooks/{notebook_id}</code></a>,
+or combined with <code>page_num</code> and passed to <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-notebooks-notebook-id-page-num"><code>GET /notebooks/{notebook_id}/{page_num}</code></a> to retrieve an image of the page in question.</p>
+<p>Note that &quot;page number&quot; is a slight misnomer; better would be &quot;image sequence
+number&quot;. The numbers often map to page numbers, but sometimes get out of sync.</p>
+<h2 id="get-plates-p-plate-id-download"><code>GET /plates/p/{plate_id}/download</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Redirect the caller to download a plate photograph</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/PlateImageDownload"><code>GET /plates/p/{plate_id}/download</code> in the Parameter Reference</a></li>
+<li><a href="https://starglass.cfa.harvard.edu/docs/api/image_access.html">“Plate and Jacket Images” in the Starglass API User Guide</a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint retrieves a plate photograph data asset. Rather than returning any
+content, this endpoint returns a HTTP redirect to a <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned AWS S3
+URL</a> containing the requested photograph. In order to know what to
+request, you generally need to issue a <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates-p-plate-id"><code>GET /plates/p/{plate_id}</code></a> request, and
+the response to that request already includes a presigned image URL. So,
+programmatic users are unlikely to need to make use of this endpoint. See its
+entry in the parameter reference for more information.</p>
+<h2 id="get-plates-p-plate-id-mosaic"><code>GET /plates/p/{plate_id}/mosaic</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about a FITS mosaic of a plate</li>
+<li><strong>See also:</strong>
+<ul>
+<li><code>GET /plates/p/{plate_id}/mosaic</code> in the Parameter Reference](https://docs.api.starglass.cfa.harvard.edu/#/default/getMosaic)</li>
+<li><a href="https://starglass.cfa.harvard.edu/docs/api/mosaics.html">“Accessing Mosaics” in the Starglass API User Guide</a></li>
+</ul>
+</li>
+</ul>
+<p>This endpoint retrieves information about full-plate FITS imagery produced by
+the DASCH project, including a <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned AWS S3 URL</a> that can be used
+to retrieve the data.</p>
+<p>Scientific users should be aware of the <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-mosaic-package"><code>POST /dasch/dr7/mosaic_package</code></a>
+endpoint, which returns the same kind of presigned S3 URL but also includes
+additional metadata that include the best-available platewide astrometric
+solution. The <em>daschlab</em> Python API <a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.mosaic"><code>Session.mosaic()</code></a> implements the logic
+necessary to combine all of these inputs to create a “value-added” whole-plate
+FITS image that represents the gold standard in terms of complete, accurate,
+and well-formed metadata.</p>
+<p>The primary input parameter to this endpoint is the <code>plate_id</code> path parameter.
+This should be a Starglass plate ID, consisting of a lower-case series
+designator and a plate number padded to five digits with zeros; e.g., <code>a03393</code>.</p>
+<p>Additional input parameters are specified as URL query parameters (e.g.,
+<code>.../mosaic?bin_factor=01</code>). The only important one is <code>bin_factor</code>, which
+should be set to <code>01</code> or <code>16</code> depending on whether you wish to query the
+full-size or 16×16 binned mosaic. (See the discussion in the <code>mosaics</code> section
+of <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates-p-plate-id"><code>GET /plates/p/{plate_id}</code></a>.) If unspecified, you will get results for the
+binned mosaic.</p>
+<p>It is allowed to specify query parameters <code>mosaic_num</code>, <code>rotation</code>, and <code>flags</code>
+using values retrieved from a plate query, but given the invariants that hold in
+DASCH DR7, it should never be necessary or useful to do so.</p>
+<p>The body of the response is a JSON object with the following form:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">plate_id</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">mosaic_num</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">bin_factor</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">flags</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">rotation</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">presigned_link</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">object_size</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>Most fields here are the same as those described in the <code>mosaics</code> section of
+<a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates-p-plate-id"><code>GET /plates/p/{plate_id}</code></a>. The <code>presigned_link</code> field gives yet another
+<a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html">presigned AWS S3 URL</a> that can be used to download the mosaic data
+file. Like the others, it is valid for 15 minutes. The <code>object_size</code> field gives
+the size of the mosaic file in bytes.</p>
+<p>The mosaic files are FITS images stored using <a href="https://heasarc.gsfc.nasa.gov/fitsio/fpack/">fpack</a> compression. The unbinned
+mosaics generally range in size from a few hundred megabytes to a gigabyte or
+more.</p>
+<p>The mosaics returned by this endpoint have headers and metadata that may be
+inaccurate compared to the best available DR7 reduction. They will not
+necessarily include full WCS solutions, and the bitmap may need rotation or
+mirroring to align with the official DR7 astrometry.</p>
+<h2 id="get-plates-p-plate-id-mosaic-download"><code>GET /plates/p/{plate_id}/mosaic/download</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Redirect the caller to download a DASCH FITS &quot;mosaic&quot; of a plate</li>
+<li><strong>Note:</strong> Only available in the full (“registered”) version of the API</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/?urls.primaryName=registered#/default/getMosaicDownload"><code>GET /plates/p/{plate_id}/mosaic/download</code> in the Parameter Reference</a></li>
+</ul>
+<p>This endpoint has the same structure as <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-plates-p-plate-id-mosaic"><code>GET /plates/p/{plate_id}/mosaic</code></a>, but
+redirects its caller to the presigned URL instead of returning JSON. For
+programmatic users, it should not be necessary to use. Scientific users are once
+again directed to the <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-mosaic-package"><code>POST /dasch/dr7/mosaic_package</code></a> endpoint.</p>
+<h2 id="post-plates-search"><code>POST /plates/search</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Search for plates matching one or more criteria</li>
+<li><strong>See also:</strong>
+<ul>
+<li><a href="https://docs.api.starglass.cfa.harvard.edu/#/default/searchPlates"><code>POST /plates/search</code> in the Parameter Reference</a></li>
+<li><a href="https://starglass.cfa.harvard.edu/docs/api/search_api.html">“Search API” in the Starglass API User Guide</a></li>
+</ul>
+</li>
+</ul>
+<p>See the description of this endpoint in the parameter reference. While it can be
+used for complex plate queries that may be of interest to research users, it
+only returns a list of plate IDs without additional metadata. To obtain the data
+needed for most research use cases, use <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#post-dasch-dr7-queryexps"><code>POST /dasch/dr7/queryexps</code></a>.</p>
+<h2 id="get-series"><code>GET /series</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Get information about plate series</li>
+<li><strong>See also:</strong> <a href="https://docs.api.starglass.cfa.harvard.edu/#/default/getSeries"><code>GET /series</code> in the Parameter Reference</a></li>
+</ul>
+<p>See this endpoint’s entry in the parameter reference for information about its
+inputs and general usage.</p>
+<p>Some of the outputs of this endpoint have are more technical in nature. The
+response body is a JSON list of results, each of which is a JSON object with the
+following structure:</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">series</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">description</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">num_plates</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">aperture</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">fitted_plate_scale</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">nominal_plate_scale</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;number&gt;,</span><span>
+</span><span>  &quot;</span><span style="color:#a3be8c;">orientation</span><span>&quot;: </span><span style="background-color:#bf616a;color:#2b303b;">&lt;string&gt;</span><span>
+</span><span>}
+</span></code></pre>
+<p>Here, <code>num_plates</code> is the number of plates in the Starglass database associated
+with this series. The <code>aperture</code> field is the aperture of the telescope used to
+make plates in the series, measured in meters. The <code>nominal_plate_scale</code> and
+<code>fitted_plate_scale</code> fields give the plate scale of plates belonging to the
+series, measured in arcsec per millimeter. The “fitted” value is derived from
+the DASCH WCS solutions. In a few series (e.g. <code>misc</code>) the plate scale is not
+consistent across all plates. The <code>orientation</code> is a identifier giving the
+typical orientation of the plates in the series with regards to North.</p>
+
+</div>
+
+    </div>
+
+    <div id="contact" class="footer">
+      <p style="text-align: center;">
+        <b>Email List for Discussion/Announcements/Support:</b> <a target="_blank"
+          href="https://gaggle.email/join/dasch@gaggle.email"><i>dasch@gaggle.email</i></a>
+        <br>
+        <b>Plate Stacks:</b> <a
+          href="mailto:harvardplatestacks@cfa.harvard.edu"><i>harvardplatestacks@cfa.harvard.edu</i></a>
+        <br>
+        <a style="font-size: smaller;" target="_blank" href="https://hwp.harvard.edu/terms-use">Harvard Terms of
+          Use</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

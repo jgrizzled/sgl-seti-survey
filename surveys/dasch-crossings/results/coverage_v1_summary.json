@@ -1,0 +1,176 @@
+{
+ "generated_utc": "2026-08-26T22:57:17+00:00",
+ "hypotheses": "hypotheses.md v1.0 (FROZEN 2026-08-26)",
+ "input_events": "crossings/universal_1885_v1/events.ecsv",
+ "input_events_sha256": "sha256:9f0819ec25bf099f8c186f24fa11d84104a7bba310546071e4a2741ae9d0f775",
+ "era_jd": [
+  2409542.5,
+  2448988.5
+ ],
+ "units": {
+  "van-maanen/A_0.1AU": {
+   "events": 216,
+   "covered_windows": 63,
+   "inwindow_exposures": 219,
+   "timing_gate_lost": 0
+  },
+  "van-maanen/B_1.2Rs": {
+   "events": 216,
+   "covered_windows": 12,
+   "inwindow_exposures": 17,
+   "timing_gate_lost": 0
+  },
+  "van-maanen/B_2.5Rs": {
+   "events": 216,
+   "covered_windows": 21,
+   "inwindow_exposures": 36,
+   "timing_gate_lost": 0
+  },
+  "van-maanen/B_0.1AU": {
+   "events": 216,
+   "covered_windows": 62,
+   "inwindow_exposures": 238,
+   "timing_gate_lost": 0
+  },
+  "wolf-359/A_0.1AU": {
+   "events": 216,
+   "covered_windows": 60,
+   "inwindow_exposures": 217,
+   "timing_gate_lost": 0
+  },
+  "wolf-359/B_1.2Rs": {
+   "events": 184,
+   "covered_windows": 4,
+   "inwindow_exposures": 6,
+   "timing_gate_lost": 0
+  },
+  "wolf-359/B_2.5Rs": {
+   "events": 216,
+   "covered_windows": 15,
+   "inwindow_exposures": 23,
+   "timing_gate_lost": 0
+  },
+  "wolf-359/B_0.1AU": {
+   "events": 216,
+   "covered_windows": 59,
+   "inwindow_exposures": 177,
+   "timing_gate_lost": 0
+  },
+  "teegarden/A_0.1AU": {
+   "events": 216,
+   "covered_windows": 61,
+   "inwindow_exposures": 240,
+   "timing_gate_lost": 0
+  },
+  "teegarden/B_1.2Rs": {
+   "events": 38,
+   "covered_windows": 0,
+   "inwindow_exposures": 0,
+   "timing_gate_lost": 0
+  },
+  "teegarden/B_2.5Rs": {
+   "events": 216,
+   "covered_windows": 9,
+   "inwindow_exposures": 15,
+   "timing_gate_lost": 0
+  },
+  "teegarden/B_0.1AU": {
+   "events": 216,
+   "covered_windows": 56,
+   "inwindow_exposures": 194,
+   "timing_gate_lost": 0
+  },
+  "gj-1276/A_0.1AU": {
+   "events": 216,
+   "covered_windows": 58,
+   "inwindow_exposures": 176,
+   "timing_gate_lost": 0
+  },
+  "gj-1276/B_1.2Rs": {
+   "events": 216,
+   "covered_windows": 7,
+   "inwindow_exposures": 12,
+   "timing_gate_lost": 0
+  },
+  "gj-1276/B_2.5Rs": {
+   "events": 216,
+   "covered_windows": 16,
+   "inwindow_exposures": 31,
+   "timing_gate_lost": 0
+  },
+  "gj-1276/B_0.1AU": {
+   "events": 216,
+   "covered_windows": 60,
+   "inwindow_exposures": 215,
+   "timing_gate_lost": 0
+  },
+  "ross-128/A_0.1AU": {
+   "events": 216,
+   "covered_windows": 56,
+   "inwindow_exposures": 197,
+   "timing_gate_lost": 0
+  },
+  "ross-128/B_1.2Rs": {
+   "events": 0,
+   "covered_windows": 0,
+   "inwindow_exposures": 0,
+   "timing_gate_lost": 0
+  },
+  "ross-128/B_2.5Rs": {
+   "events": 216,
+   "covered_windows": 10,
+   "inwindow_exposures": 12,
+   "timing_gate_lost": 0
+  },
+  "ross-128/B_0.1AU": {
+   "events": 216,
+   "covered_windows": 57,
+   "inwindow_exposures": 208,
+   "timing_gate_lost": 0
+  }
+ },
+ "gates": {
+  "listing": "limMagApass present + wcssource in {imwcs,catalog}",
+  "timing": "sigma_t <= 0.5 * half-width; date-only sigma 1.0 d",
+  "overlap": "interval-based [start, start+exptime]"
+ },
+ "snapshots": {
+  "van-maanen_A_c0.json": "sha256:a138ca06b30f4086a22c57077c2bc290e672dc85f0c77bd20f0a3e96fe3fff9f",
+  "van-maanen_A_c1.json": "sha256:5e115cd54cb3c80a6ccbbcac2fab1deda67abd844ab375fa6c7ad07e15197a37",
+  "van-maanen_A_c2.json": "sha256:68f41d2a296db3b5e80374192e744681813768c32a55f3e3ba8e909043087213",
+  "van-maanen_B_c0.json": "sha256:0622948fc30715beb8a6896e78110efe40dd02a338c87684bbc9380b872a27b6",
+  "van-maanen_B_c1.json": "sha256:463879f0154a42b4368469474f6da32814cbd5bc2eee4612c345a521a97757ad",
+  "van-maanen_B_c2.json": "sha256:7c6bc7f35ac3413b74338f3362fa73366f431ea3b509c9d37d513fe7533b3c16",
+  "wolf-359_A_c0.json": "sha256:1c53b195c6da783d11da7f4c061a783ad3fc888c814017359f6556e9d1494f03",
+  "wolf-359_A_c1.json": "sha256:df933e2c6438c9ed0fef4a779cf95d20111f738ddd0f00fb916afba696b2bb82",
+  "wolf-359_A_c2.json": "sha256:118f49a9bf51686df5ce1d0a30814930094eab009cbd6f278990ab16095719c2",
+  "wolf-359_A_c3.json": "sha256:949e42b59f840daf16d051a3720f9058368ffb1fc64d1768871b16015fd89f95",
+  "wolf-359_B_c0.json": "sha256:63b2ad8aa53528d4f4f51fe5b339d84029742937a2cf904941e7946fe6516754",
+  "wolf-359_B_c1.json": "sha256:e1abecb147d025288b2ed005a52ee4ce650a3e8344a7fa9e26f2044fc7f5f1da",
+  "wolf-359_B_c2.json": "sha256:2e9d21a9e28405871deb32d97e040311c704161c13aabf29559ce7884572d8f5",
+  "wolf-359_B_c3.json": "sha256:05123398cc3e80798c586dd160211eea0fc2eb42dedfa51d402e3d9f5987e667",
+  "teegarden_A_c0.json": "sha256:22f7c596dcf6e0f2c59333e08e100f8e38fa47e2926ba8b40488f416e4494655",
+  "teegarden_A_c1.json": "sha256:8b9898fc1d0160dd78dc4a03b152f0342f7c8e60baa2d9d5f4fd2bd591846972",
+  "teegarden_A_c2.json": "sha256:decebc66138b3c1cc3d4517185aabf013275c7155994a95a36cd239b184a5b5e",
+  "teegarden_A_c3.json": "sha256:177d32063cd8bc37cef30f6ecb74a51009911beeebaca633128973d7444efbcb",
+  "teegarden_B_c0.json": "sha256:4359057ef8d2af3dbc9c21c38ad79f8fc72035f270100c9a35e6250cced9c9a3",
+  "teegarden_B_c1.json": "sha256:3aa09a09f4499200b1024673ac562e91d40bcedbf3a30c652034986c7e9c1bf7",
+  "teegarden_B_c2.json": "sha256:9b12978ef60d40948a0ea1333eda25436cd889d87bcd3cc55a0566ceb9d00137",
+  "teegarden_B_c3.json": "sha256:3d8a901f192c33a6d4e0c6f7571c3216a69f808ad4ce6dbbdc7d90f9598920be",
+  "teegarden_B_c4.json": "sha256:f6525700df5f953e3f016abdd422cc448425151767a03142986c8f9c9473db92",
+  "gj-1276_A_c0.json": "sha256:1875402b417c9f8b89ddd438df6679eeba66d1ed6a2ea7e4558d9b9fd6494865",
+  "gj-1276_A_c1.json": "sha256:a181ac3ad1d8554ad047e8f4b7c801481ed08d73d58bb1486dc4ce887368a6bc",
+  "gj-1276_A_c2.json": "sha256:f3a0d676a99ac38b061812dd8cc740c50688e7681cda05127cb43c44020e4155",
+  "gj-1276_B_c0.json": "sha256:57ebc7c15d1ebbb5739c89c878abe5bb25fc1b5513b82c43fa854805ae2fda8e",
+  "gj-1276_B_c1.json": "sha256:281f015cf01814f67892d944ac2b5715c826a5c9be2a18b2362650c8bebf0f6f",
+  "gj-1276_B_c2.json": "sha256:e8820759bc5e90bdc5cdc3a1b7bdb09d9048ba36721b65de1cea075c68ce40d1",
+  "ross-128_A_c0.json": "sha256:456848212306f68a2884bceae497766c0a8652887711b7125ebdccf14428ab80",
+  "ross-128_A_c1.json": "sha256:f1369f7d9a90e55a52af1fc78253b55f689ffa79226ee203141ad823917c4d6d",
+  "ross-128_B_c0.json": "sha256:7039004608777d5fc609c65dcd5b0f8610eb0d30dd39c17b5eef7cc77bce0c65",
+  "ross-128_B_c1.json": "sha256:ee71c78c7587a95d55fd6abe02453fad9fde733304cc8ce32cefdd104e6cb1cb"
+ },
+ "versions": {
+  "astropy": "8.0.1",
+  "numpy": "2.5.2"
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "generated_utc": "2026-08-26T23:09:11+00:00",
+ "object": "RY Cnc",
+ "period_days": 1.092943,
+ "querycat_stdmag": 14.08,
+ "n_usable_rows": 1008,
+ "global_median_B": 13.302029000000001,
+ "global_mad": 0.20587605989999863,
+ "n_faint_excursions": 85,
+ "eclipse_phase_mode": 0.8874563650966676,
+ "faint_phase_concentration": 0.7529411764705882,
+ "concentration_uniform_null": 0.3,
+ "eclipse_depth_mag": 0.7939310000000006,
+ "out_of_eclipse_scatter_mag": 0.1818312530999995,
+ "passed": true,
+ "snapshots": {
+  "querycat_rycnc.json": "sha256:86ccb3201187689b8d255f20a1c347a25056868b9df6dc6a0bb34999fbe14335",
+  "lightcurve_rycnc.json": "sha256:2a8ddb6e04168ada7e8e820ec021abfb64ae4dcfc0eae8f692e10b0dcf89ff52"
+ }
+}

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>DASCH: DR7 Exposure List Data Table Columns</title>
+  <link rel="stylesheet" href='https://dasch.cfa.harvard.edu/style.css'>
+  
+  
+</head>
+
+<body>
+  <div class="frame">
+    <div class="masthead">
+      <p class="banner"><a href="/"><i>DASCH</i>: Digital Access to a Sky Century @ Harvard
+          <br>
+          <span style="font: 25px Georgia, serif;"><i>A New Look at the Temporal Universe</i></span></a>
+      </p>
+
+      <div id="navbar">
+        <ul class="menu" id="nav">
+          <li><a href="/">Home</a><!--$top--></li>
+          <li><a href="/dr7/">Data Release 7</a><!--$top--></li>
+          <li><a href="/data-access/">Search/Download Data</a><!--$top--></li>
+          <li><a href="/sitemap/">Sitemap</a><!--$top--></li>
+        </ul>
+      </div>
+
+      <p style="clear: left; margin: 0;">
+      </p>
+    </div>
+
+    <div class="mainfull">
+      
+<div class="headerclass">DR7: Exposure List Data Table Columns</div>
+
+<div class="mainform">
+  <p>This page documents the columns of the exposure-list data tables exposed by the
+<em>daschlab</em> analysis toolkit. Different data sources may use different names or
+expose somewhat different sets of data.</p>
+<h1 id="columns-by-category">Columns by Category</h1>
+<div class="coltables">
+<h2 id="exposure-identity">Exposure Identity</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#local-id"><code>local_id</code></a></td><td>nonnegative integer</td><td>A unique number identifying this exposure within this <em>daschlab</em> session</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#series"><code>series</code></a></td><td>short string</td><td>The lowercase series name of the plate</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#platenum"><code>platenum</code></a></td><td>positive integer</td><td>The number of the plate within its series</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#mosnum"><code>mosnum</code></a></td><td>nonnegative integer</td><td>The ID of the FITS mosaic image associated with this exposure's plate</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#solnum"><code>solnum</code></a></td><td>nonnegative integer</td><td>The ID of the WCS solution number associated with this exposure</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#expnum"><code>expnum</code></a></td><td>nonnegative integer</td><td>The exposure sequence number from contemporaneous logbooks</td></tr>
+</tbody></table>
+<p>Identifying exposures is somewhat tricky.</p>
+<p>Every photographic plate worth scanning was exposed at least once, but some were
+exposed multiple times. This means that on a given plate image, the same pixel
+may correspond to multiple different RA/Dec values, and a single RA/Dec may
+occur at several different pixel locations, if the multiple exposures overlapped
+each other.</p>
+<p>For each plate that was successfully scanned, there is at least one “mosaic”,
+which is the DASCH terminology for a single large FITS image made from a plate
+scan. There can in principle be multiple mosaics per plate. Each mosaic is
+analyzed to search for as many WCS solutions as can be found.</p>
+<p>Ideally, each WCS solution corresponds to an exposure of the plate. However, we
+also have external information about what plates have exposures, based on
+historical observing logbooks. WCS solutions may or may not be identifiable with
+known exposures. Sometimes there are fewer WCS solutions than logged exposures;
+sometimes there are more. Furthermore, the logbooks may provide information
+about exposures on plates that haven't been scanned at all.</p>
+<p>There are therefore essentially two &quot;kinds&quot; of exposures. There are exposures
+associated with a particular WCS solution tied to a particular mosaic image
+derived from a scan of a particular plate. These exposures are said to &quot;have
+imaging&quot;. They are uniquely identified by the combination of <code>series</code>,
+<code>platenum</code>, <code>mosnum</code>, and <code>solnum</code>. For these exposures, the <code>expnum</code> field
+might be defined, if the exposure can be matched to an historical logbook
+record. The field might be masked if it cannot.</p>
+<p>Exposures without associated imaging data correspond to historical logbook
+records, and they are uniquely identified by the combination of <code>series</code>,
+<code>platenum</code>, and <code>expnum</code>. These plates will have masked <code>mosnum</code> and <code>solnum</code>
+values. For these exposures, the plate in question might or might not have been
+scanned: there might be a mosaic available, but no WCS solution that can be
+matched to this exposure’s information.</p>
+<h2 id="plate-attributes">Plate Attributes</h2>
+<p>These attributes are the same for multiple exposures of the same plate.</p>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#class"><code>class</code></a></td><td>short string</td><td>A classification of the associated plate’s type, assigned historically</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#median-colorterm-apass"><code>median_colorterm_apass</code></a></td><td>float</td><td>Representative color term for this plate derived from the APASS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#median-colorterm-atlas"><code>median_colorterm_atlas</code></a></td><td>float</td><td>Representative color term for this plate derived from the ATLAS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#lim-mag-apass"><code>lim_mag_apass</code></a></td><td>magnitude</td><td>Limiting magnitude of this exposure at the query position, derived from the APASS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#lim-mag-atlas"><code>lim_mag_atlas</code></a></td><td>magnitude</td><td>Limiting magnitude of this exposure at the query position, derived from the ATLAS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#n-solutions-apass"><code>n_solutions_apass</code></a></td><td>nonnegative integer</td><td>Number of photometric solutions for this exposure’s plate using the APASS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#n-solutions-atlas"><code>n_solutions_atlas</code></a></td><td>nonnegative integer</td><td>Number of photometric solutions for this exposure’s plate using the ATLAS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#n-magdep-apass"><code>n_magdep_apass</code></a></td><td>nonnegative integer</td><td>Number of photometric solutions with magnitude-dependent spatial calibration using the APASS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#n-magdep-atlas"><code>n_magdep_atlas</code></a></td><td>nonnegative integer</td><td>Number of photometric solutions with magnitude-dependent spatial calibration using the ATLAS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#result-id-apass"><code>result_id_apass</code></a></td><td>hexadecimal string</td><td>ID of the photometric calibration data file for this exposure’s plate using the APASS refcat</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#result-id-atlas"><code>result_id_atlas</code></a></td><td>hexadecimal string</td><td>ID of the photometric calibration data file for this exposure’s plate using the ATLAS refcat</td></tr>
+</tbody></table>
+<h2 id="exposure-specific-attributes">Exposure-Specific Attributes</h2>
+<p>Some plates were exposed multiple times. Each exposure has its own position on
+the sky, exposure time, etc.</p>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#exptime"><code>exptime</code></a></td><td>minutes</td><td>The duration of the exposure</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#obs-date"><code>obs_date</code></a></td><td><a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a></td><td>The date of the exposure</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#pos"><code>pos</code></a></td><td><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html">Astropy SkyCoord</a></td><td>The center position of the exposure; can be undefined</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#wcssource"><code>wcssource</code></a></td><td>short string</td><td>Description of the source of this exposure’s positional information</td></tr>
+</tbody></table>
+<p>When an exposure list is exported, the <code>pos</code> column may need to be broken into
+individual columns. In this case you will instead see:</p>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#pos"><code>ra_deg</code></a></td><td>deg</td><td>The RA encoded in <code>pos</code></td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#pos"><code>dec_deg</code></a></td><td>deg</td><td>The declination encoded in <code>pos</code></td></tr>
+</tbody></table>
+<p>If <code>obs_date</code> cannot be represented as an <a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a> object, it will be
+expressed as a geocentric Julian Date.</p>
+<h2 id="digitization">Digitization</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#binflags"><code>binflags</code></a></td><td>bit flags</td><td>Which rebinnings of the FITS mosaic have been created</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#scannum"><code>scannum</code></a></td><td>nonnegative integer</td><td>The ID of the scan associated with the digitized form of the plate</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#scan-date"><code>scan_date</code></a></td><td><a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a></td><td>The date-time at which the scan was made</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#mos-date"><code>mos_date</code></a></td><td><a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a></td><td>The date-time at which the mosaic was made</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#rotation-deg"><code>rotation_deg</code></a></td><td>small integer</td><td>The rotation applied to the mosaic in order to make North be up</td></tr>
+</tbody></table>
+<p>This fields are only defined if the exposure has associated imaging.</p>
+<h2 id="data-quality">Data Quality</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#reject"><code>reject</code></a></td><td>bit flags</td><td>Flags that <em>you</em> set to mark points as rejected</td></tr>
+</tbody></table>
+<h2 id="search-information">Search Information</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#center-distance"><code>center_distance</code></a></td><td>cm</td><td>The physical distance between the search position and the plate center</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#edge-distance"><code>edge_distance</code></a></td><td>cm</td><td>The physical distance between the search position and the nearest plate edge</td></tr>
+</tbody></table>
+</div>
+<h1 id="detailed-column-information-alphabetical">Detailed Column Information (Alphabetical)</h1>
+<h2 id="binflags"><code>binflags</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Internal field; which rebinnings of the FITS mosaic have been created</li>
+<li><strong>Units/type:</strong> Bit flags</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This is an internal field used to track which rebinnings of the FITS plate
+mosaic have been created. In the modern DASCH pipeline, the only binnings used
+are 1×1 (full resolution) and 16×16, and this field should always be 9 for
+plates that have been scanned. This column is provided for completeness but is
+not expected to be useful for analysis.</p>
+<h2 id="center-distance"><code>center_distance</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The physical distance between the search position and the plate center</li>
+<li><strong>Units/type:</strong> cm</li>
+<li><strong>Available for exposures without imaging:</strong> yes (but accuracy may be poor)</li>
+</ul>
+<p>If you generate an exposure list based on a spatial query (which is the typical
+case), this column will give the physical distance between the query center and
+the center of the plate. This quantity is particular to the matching exposure.
+If the plate contains multiple exposures, it is possible that your query center
+might appear on the plate in two different physical locations!</p>
+<p>You can use this information to identify plates where a target position is too
+close to the plate edge, where the data are likely to be of poor quality.</p>
+<p>If the exposure does not have associated imaging, this field will still be
+available. The logged exposure center will be used for this computation rather than
+a precise computation. The resulting number may have poor accuracy.</p>
+<h2 id="class"><code>class</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> A classification of the plate’s type, assigned historically</li>
+<li><strong>Units/type:</strong> Short string</li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+</ul>
+<p>See <a href="https://library.cfa.harvard.edu/plate-classes">the Plate Stacks summary of plate classes</a> for information
+about the historical classification scheme. Plate classifications conveyed a
+grab-bag of information about sky position, imaging type (direct, spectra,
+etc.), emulsion, exposure count, and so on.</p>
+<p>Plate class information is often missing from the DASCH databases, and when
+present it may not be of high accuracy. If you are doing anything that relies on
+the classes, you should examine photos of the plate jackets to confirm that your
+data are reliable.</p>
+<p>Most plate class information is not very useful in the modern context, but it
+can provide information about which photographic emulsion was used, which
+determines the color response of each plate. At the moment, checking the plate
+class is one of the ways to address the <a href="https://dasch.cfa.harvard.edu/dr7/ki/unspecified-emulsions/">Unspecified Emulsions known
+issue</a>.</p>
+<h2 id="edge-distance"><code>edge_distance</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The physical distance between the search position and the nearest plate edge</li>
+<li><strong>Units/type:</strong> cm</li>
+<li><strong>Available for exposures without imaging:</strong> yes (but accuracy may be poor)</li>
+</ul>
+<p>If you generate an exposure list based on a spatial query (which is the typical
+case), this column will give the physical distance between the query center and
+the nearest edge of the plate. This quantity is particular to the matching
+exposure. If the plate contains multiple exposures, it is possible that your
+query center might appear on the plate in two different physical locations!</p>
+<p>You can use this information to identify plates where a target position is too
+close to the plate edge, where the data are likely to be of poor quality.</p>
+<p>If the exposure does not have associated imaging, this field will still be
+available. The logged exposure center will be used for this computation rather than
+a precise computation. The resulting number may have poor accuracy.</p>
+<h2 id="expnum"><code>expnum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The plate-relative ID of the exposure</li>
+<li><strong>Units/type:</strong> Nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+</ul>
+<p>Each plate in the DASCH database is associated with one <em>or more</em> exposures.
+Different exposures of the same plate are numbered in the database sequentially
+starting at 0. This field gives this number.</p>
+<p>Exposure information is obtained from historical logbooks, and so is available
+even for plates that haven't been scanned.</p>
+<p>For plates that have been scanned, the pipeline attempts to match every exposure
+to a WCS solution obtained from analysis of its image. The ordering of the WCS
+solutions (see <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#solnum"><code>solnum</code></a>) may not match the ordering of the exposures.
+Sometimes, no empirical WCS solution is obtained for a known exposure. Other
+times, a WCS solution is obtained that does not correspond to any known
+exposure. In the latter case, this field will be undefined.</p>
+<h2 id="exptime"><code>exptime</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The duration of the exposure</li>
+<li><strong>Units/type:</strong> Minutes</li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+</ul>
+<p>This field gives the duration of the exposure.</p>
+<p>Exposure time information is obtained from historical logbooks, and so is
+available even for plates that haven't been scanned.</p>
+<h2 id="lim-mag-apass"><code>lim_mag_apass</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Limiting magnitude of this exposure at the query position,
+derived from the APASS refcat</li>
+<li><strong>Units/type:</strong> magnitude</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>An empirically-determined estimate of the faintest stellar magnitude that can be
+detected on the plate, based on the results of the APASS-based photometric
+calibration. This limit is therefore in the Johnson <em>B</em> band. The limit is
+calculated separately for the different “spatial” (annular) bins used in the
+DASCH photometric calibration process, and so therefore can vary across the
+plate.</p>
+<h2 id="lim-mag-atlas"><code>lim_mag_atlas</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Limiting magnitude of this exposure at the query position,
+derived from the ATLAS refcat</li>
+<li><strong>Units/type:</strong> magnitude</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>An empirically-determined estimate of the faintest stellar magnitude that can be
+detected on the plate, based on the results of the ATLAS-based photometric
+calibration. This limit is therefore in the SDSS <em>g</em> band. The limit is
+calculated separately for the different “spatial” (annular) bins used in the
+DASCH photometric calibration process, and so therefore can vary across the
+plate.</p>
+<h2 id="local-id"><code>local_id</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> A unique number identifying this exposure within this <em>daschlab</em> session</li>
+<li><strong>Units/type:</strong> Nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+<li><strong>Note:</strong> This column is added by <em>daschlab</em> and is not present when using the
+underlying web APIs directly</li>
+</ul>
+<p>Every exposure in a <em>daschlab</em> exposure list is assigned a unique &quot;local id&quot;,
+which is its index within the session’s top-level exposure list. Local IDs
+should only be used internally in an analysis; they are not meaningful except
+with reference to the particular session in which they were generated.</p>
+<h2 id="median-colorterm-apass"><code>median_colorterm_apass</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Representative color term for this plate derived from the APASS refcat</li>
+<li><strong>Units/type:</strong> Float</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>A representative <a href="https://dasch.cfa.harvard.edu/dr7/colorterms/">colorterm</a> capturing the
+spectral response of this plate, relative to the <em>B</em> and <em>V</em> magnitudes recorded
+in the APASS reference catalog. The DASCH photometric pipeline may derive many
+colorterms for each plate; this number is the median of all available colorterms
+for the plate’s first WCS solution (i.e., it will be the same for all exposures
+of the same plate).</p>
+<p>The colorterm is undefined if the plate was not scanned, not solved
+astrometrically, or if no APASS solution could be obtained for it. An <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#median-colorterm-atlas">ATLAS
+colorterm</a> may be available instead.</p>
+<p>See the <a href="https://dasch.cfa.harvard.edu/dr7/colorterms/">Colorterms</a> reference page for more
+information.</p>
+<h2 id="median-colorterm-atlas"><code>median_colorterm_atlas</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Representative color term for this plate derived from the ATLAS refcat</li>
+<li><strong>Units/type:</strong> Float</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>A representative <a href="https://dasch.cfa.harvard.edu/dr7/colorterms/">colorterm</a> capturing the
+spectral response of this plate, relative to the <em>g</em> and <em>r</em> magnitudes recorded
+in the ATLAS reference catalog. The DASCH photometric pipeline may derive many
+colorterms for each plate; this number is the median of all available colorterms
+for the plate’s first WCS solution (i.e., it will be the same for all exposures
+of the same plate).</p>
+<p>The colorterm is undefined if the plate was not scanned, not solved
+astrometrically, or if no ATLAS solution could be obtained for it. An <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#median-colorterm-apass">APASS
+colorterm</a> may be available instead.</p>
+<p>See the <a href="https://dasch.cfa.harvard.edu/dr7/colorterms/">Colorterms</a> reference page for more
+information.</p>
+<h2 id="mos-date"><code>mos_date</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The date-time at which the FITS mosaic of the plate’s scan was made</li>
+<li><strong>Units/type:</strong> <a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a></li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This is the time when the FITS mosaic of this plate was created. It is included
+for completeness but is not expected to be relevant to data processing.</p>
+<h2 id="mosnum"><code>mosnum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The ID of the FITS mosaic associated with this exposure</li>
+<li><strong>Units/type:</strong> Nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>After DASCH scans a plate, the raw scan data are “mosaicked” to create a large
+FITS image of the plate. Sometimes, multiple mosaics of the same plate need to
+be created. These mosaics are distinguished by a small increasing integer, the
+mosaic number. This column gives the relevant mosaic number for this plate.</p>
+<p>This field is used to identify and obtain the FITS mosaic files but otherwise
+shouldn’t be relevant to your analysis.</p>
+<h2 id="n-magdep-apass"><code>n_magdep_apass</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Number of photometric solutions with magnitude-dependent spatial
+calibration using the APASS refcat</li>
+<li><strong>Units/type:</strong> nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This counts the number of photometric solutions of this exposure’s plate for
+which the pipeline’s magnitude-dependent spatial calibration succeeded, all with
+regards to the APASS reference catalog. It is not an error if this calibration
+stage fails. This number will be less than or equal to <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#n-solutions-apass"><code>n_solutions_apass</code></a>. If
+the plate has multiple photometric solutions associated with multiple exposures,
+this field does not provide enough information to determine whether this
+particular exposure has a “magdep” solution or not.</p>
+<h2 id="n-magdep-atlas"><code>n_magdep_atlas</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Number of photometric solutions with magnitude-dependent spatial
+calibration using the ATLAS refcat</li>
+<li><strong>Units/type:</strong> nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This counts the number of photometric solutions of this exposure’s plate for
+which the pipeline’s magnitude-dependent spatial calibration succeeded, all with
+regards to the ATLAS reference catalog. It is not an error if this calibration
+stage fails. This number will be less than or equal to <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#n-solutions-atlas"><code>n_solutions_atlas</code></a>. If
+the plate has multiple photometric solutions associated with multiple exposures,
+this field does not provide enough information to determine whether this
+particular exposure has a “magdep” solution or not.</p>
+<h2 id="n-solutions-apass"><code>n_solutions_apass</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Number of photometric solutions for this exposure’s plate using
+the APASS refcat</li>
+<li><strong>Units/type:</strong> nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This counts the number of photometric solutions of this exposure’s plate
+obtained using the APASS reference catalog. This will be less than or equal to
+the number of astrometric WCS solutions.</p>
+<h2 id="n-solutions-atlas"><code>n_solutions_atlas</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Number of photometric solutions for this exposure’s plate using
+the ATLAS refcat</li>
+<li><strong>Units/type:</strong> nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This counts the number of photometric solutions of this exposure’s plate
+obtained using the ATLAS reference catalog.  This will be less than or equal to
+the number of astrometric WCS solutions.</p>
+<h2 id="obs-date"><code>obs_date</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The date of the exposure</li>
+<li><strong>Units/type:</strong> <a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a></li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+</ul>
+<p>This field gives the date of the exposure that caused this plate to match a
+spatial query (see <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#expnum"><code>expnum</code></a>), as a geocentric JD of the exposure
+midpoint.</p>
+<p>Observation dates are not always known with precision. Due to technical
+limitations, exposure-list tables do not currently provide information about the
+accuracy of this field. Lightcurve tables provide a
+<a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#time-accuracy"><code>time_accuracy</code></a> column that
+quantifies the date accuracy.</p>
+<p>For precise timing of astronomical events, observation times need to be
+converted into a barycentric or heliocentric frame. Note that many plates are
+sufficiently large on the sky that this conversion will give appreciably
+different results for sources at different plate locations.</p>
+<p>Exposure information is obtained from historical logbooks, and so is available
+even for plates that haven't been scanned.</p>
+<h2 id="platenum"><code>platenum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The number of the plate within its series</li>
+<li><strong>Units/type:</strong> Positive integer</li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+</ul>
+<p>The number of a plate within its <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#series"><code>series</code></a>. These two items uniquely
+identify each physical plate.</p>
+<h2 id="pos"><code>pos</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The center position of the exposure</li>
+<li><strong>Units/type:</strong> <a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html">Astropy SkyCoord</a></li>
+<li><strong>Available for exposures without imaging:</strong> yes (but accuracy may be poor)</li>
+</ul>
+<p>This field gives the center position of the exposure, in the ICRS J2000 frame.</p>
+<p>If the plate has not been scanned and WCS-solved, this field will still be
+available. It will provide the plate center as recorded in the hand-written
+observing logs. The resulting number may have poor accuracy.</p>
+<p>On the other hand, this column will occasionally be undefined, even if a plate
+has been successfully scanned. In this case, the RA and Dec values will be NaN.
+This situation seems to arise when a multiple-exposure plate is only partially
+WCS-solved.</p>
+<p>When an exposure list is exported, the <code>pos</code> column may need to be broken into
+individual columns. In this case you will instead see <code>ra_deg</code> and <code>dec_deg</code>.</p>
+<h2 id="reject"><code>reject</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Flags that <em>you</em> set to mark points as rejected</li>
+<li><strong>Units/type:</strong> Bit flags</li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+<li><strong>Note:</strong> This column is added by <em>daschlab</em> and is not present when using the
+underlying web APIs directly</li>
+</ul>
+<p>This column stores user-defined rejection flags as explained <a href="https://dasch.cfa.harvard.edu/dr7/reduce-lightcurve/#rejection-paradigm">in the Lightcurve
+Reduction Guide</a>. While that
+documentation refers to lightcurve data tables, the same philosophy and
+machinery applies to exposure-list tables. If you do not perform any rejections,
+this column will be filled with zeroes.</p>
+<h2 id="result-id-apass"><code>result_id_apass</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> ID of the photometric calibration data file for this exposure’s
+plate using the APASS refcat</li>
+<li><strong>Units/type:</strong> hexadecimal string</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This column contains a hexadecimal “result ID” identifying the file containing
+metadata regarding the APASS photometric calibration of this exposure’s plate.
+To obtain the calibration file, use the <em>daschlab</em> API
+<a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.exposures.ExposureRow.html#daschlab.exposures.ExposureRow.photcal_asdf_url"><code>ExposureRow.photcal_asdf_url()</code></a> or the underlying web API <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-dasch-dr7-asset-photcal-asdf-hexid"><code>GET /dasch/dr7/asset/photcal_asdf/{hexid}</code></a>. The file contents are documented on the
+<a href="https://dasch.cfa.harvard.edu/dr7/photcal-asdf-contents/">Photometric Calibration ASDF File Contents</a>
+page. If the plate had multiple exposures, the file contains information about
+the calibration of <em>all</em> exposures.</p>
+<p>The string will be empty if the plate had no successful APASS photometric
+calibrations. Note that the result identifiers are MD5 digests but they are
+<em>not</em> the MD5 digests of the file contents.</p>
+<h2 id="result-id-atlas"><code>result_id_atlas</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> ID of the photometric calibration data file for this exposure’s
+plate using the ATLAS refcat</li>
+<li><strong>Units/type:</strong> hexadecimal string</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This column contains a hexadecimal “result ID” identifying the file containing
+metadata regarding the ATLAS photometric calibration of this exposure’s plate.
+To obtain the calibration file, use the <em>daschlab</em> API
+<a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.exposures.ExposureRow.html#daschlab.exposures.ExposureRow.photcal_asdf_url"><code>ExposureRow.photcal_asdf_url()</code></a> or the underlying web API <a href="https://dasch.cfa.harvard.edu/dr7/web-apis/#get-dasch-dr7-asset-photcal-asdf-hexid"><code>GET /dasch/dr7/asset/photcal_asdf/{hexid}</code></a>. The file contents are documented on the
+<a href="https://dasch.cfa.harvard.edu/dr7/photcal-asdf-contents/">Photometric Calibration ASDF File Contents</a>
+page. If the plate had multiple exposures, the file contains information about
+the calibration of <em>all</em> exposures.</p>
+<p>The string will be empty if the plate had no successful APASS photometric
+calibrations. Note that the result identifiers are MD5 digests but they are
+<em>not</em> the MD5 digests of the file contents.</p>
+<h2 id="rotation-deg"><code>rotation_deg</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The rotation applied to the mosaic in order to make North be up</li>
+<li><strong>Units/type:</strong> small integer</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>During the DASCH scanning and astrometric-solving process, the FITS mosaic of
+each plate is rotated to ensure that North is up in the final image. This
+rotation is done coarsely, in increments of 90 degrees. This field gives that
+level of rotation. It will be equal to one of 0, 90, 180, or 270.</p>
+<p>The amount of rotation needed depends on factors like the orientation of the
+plate in the scanner, and so will not generally be of interest for scientific
+analysis. However, for some legacy purposes, the rotation value is needed to
+look up FITS mosaic files.</p>
+<h2 id="scan-date"><code>scan_date</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The date-time at which the scan was made</li>
+<li><strong>Units/type:</strong> <a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a></li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>This is the time when the plate was scanned. It is included for completeness but
+is not expected to be relevant to data processing. Note that plates were
+sometimes scanned more than once (see <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#scannum"><code>scannum</code></a>).</p>
+<h2 id="scannum"><code>scannum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The ID of the scan associated with the digitized form of this plate</li>
+<li><strong>Units/type:</strong> Nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>DASCH scanned some plates more than once. Different scans of the same plate are
+distinguished by a small increasing integer, the scan number. This column gives
+the relevant scan number associated with the digitized version of this plate.</p>
+<p>There is generally a 1:1 correspondence between scan numbers of <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#mosnum">mosaic
+numbers</a>, but some scans did not have any mosaics made of them, and
+some scans had multiple mosaics made. Because the <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#mosnum"><code>mosnum</code></a> is what
+identifies the specific FITS file associated with a plate, it is generally the
+more important quantity, although neither field should matter for scientific
+analysis.</p>
+<h2 id="series"><code>series</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The lowercase series name of the plate</li>
+<li><strong>Units/type:</strong> Short string</li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+</ul>
+<p>In conjunction with the <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#platenum">plate number</a>, the series uniquely
+identifies a physical plate.</p>
+<p>See <a href="https://library.cfa.harvard.edu/plate-series">the Plate Stacks summary of plate series</a> for some summary
+information about the different series.</p>
+<h2 id="solnum"><code>solnum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The ID of the WCS solution associated with this exposure</li>
+<li><strong>Units/type:</strong> Nonnegative integer</li>
+<li><strong>Available for exposures without imaging:</strong> no</li>
+</ul>
+<p>Each plate in the DASCH database is associated with one <em>or more</em> exposures. For
+plates that have been scanned, the pipeline attempts obtain detailed WCS
+solutions for each exposure. Successful solutions are numbered in the database
+sequentially starting at 0. This column gives the sequence number of the
+solution associated with this exposure.</p>
+<p>The ordering of the WCS solutions may not match the ordering of the exposures
+(see <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#expnum"><code>expnum</code></a>). Sometimes, no empirical WCS solution is obtained for
+a known exposure. In this case, position-based matching can still occur using
+the logged exposure location. Such matches will appear as rows in the plate list
+where <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#expnum"><code>expnum</code></a> is defined but this field is not.</p>
+<p>Other times, a WCS solution is obtained that does not correspond to any known
+exposure. In those cases, this field will be defined but <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#expnum"><code>expnum</code></a>
+will be blank.</p>
+<h2 id="wcssource"><code>wcssource</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Description of the source of the WCS information</li>
+<li><strong>Units/type:</strong> Short string</li>
+<li><strong>Available for exposures without imaging:</strong> yes</li>
+</ul>
+<p>This is a string describing the origin of the positional information for this
+match. Allowed values are <code>&quot;none&quot;</code>, <code>&quot;logbook&quot;</code>, or <code>&quot;imwcs&quot;</code>.</p>
+<p>The value <code>&quot;logbook&quot;</code> indicates that the positional information comes from a
+transcribed observing log. Due to rounding and transcription errors, this
+information may not be very accurate.</p>
+<p>The value <code>&quot;none&quot;</code> does <em>not</em> imply that there is no positional information for
+the plate. Instead, it is equivalent to <code>&quot;logbook&quot;</code>, but for plates that haven't
+yet been scanned.</p>
+<p>The value <code>&quot;imwcs&quot;</code> indicates that the positional information comes from an
+astrometric fit to the stars in a scanned plate image.</p>
+<p>Different exposures on the same plate may have different WCS source values,
+depending on which ones were able to be solved and which ones weren't.</p>
+<h1 id="column-subsets">Column Subsets</h1>
+<h2 id="medium-columns">“Medium” Columns</h2>
+<p>A “medium”-width exposure-list table is defined to contain only the following columns:</p>
+<ul>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#series"><code>series</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#platenum"><code>platenum</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#class"><code>class</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#expnum"><code>expnum</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#solnum"><code>solnum</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#obs-date"><code>obs_date</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#exptime"><code>exptime</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#pos"><code>pos</code></a> (or <code>ra_deg</code> and <code>dec_deg</code>)</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#wcssource"><code>wcssource</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#mosnum"><code>mosnum</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#rotation-deg"><code>rotation_deg</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#center-distance"><code>center_distance</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#edge-distance"><code>edge_distance</code></a></li>
+</ul>
+
+</div>
+
+    </div>
+
+    <div id="contact" class="footer">
+      <p style="text-align: center;">
+        <b>Email List for Discussion/Announcements/Support:</b> <a target="_blank"
+          href="https://gaggle.email/join/dasch@gaggle.email"><i>dasch@gaggle.email</i></a>
+        <br>
+        <b>Plate Stacks:</b> <a
+          href="mailto:harvardplatestacks@cfa.harvard.edu"><i>harvardplatestacks@cfa.harvard.edu</i></a>
+        <br>
+        <a style="font-size: smaller;" target="_blank" href="https://hwp.harvard.edu/terms-use">Harvard Terms of
+          Use</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

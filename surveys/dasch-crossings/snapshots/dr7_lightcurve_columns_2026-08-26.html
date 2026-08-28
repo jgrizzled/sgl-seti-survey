@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>DASCH: DR7 Lightcurve Data Table Columns</title>
+  <link rel="stylesheet" href='https://dasch.cfa.harvard.edu/style.css'>
+  
+  
+</head>
+
+<body>
+  <div class="frame">
+    <div class="masthead">
+      <p class="banner"><a href="/"><i>DASCH</i>: Digital Access to a Sky Century @ Harvard
+          <br>
+          <span style="font: 25px Georgia, serif;"><i>A New Look at the Temporal Universe</i></span></a>
+      </p>
+
+      <div id="navbar">
+        <ul class="menu" id="nav">
+          <li><a href="/">Home</a><!--$top--></li>
+          <li><a href="/dr7/">Data Release 7</a><!--$top--></li>
+          <li><a href="/data-access/">Search/Download Data</a><!--$top--></li>
+          <li><a href="/sitemap/">Sitemap</a><!--$top--></li>
+        </ul>
+      </div>
+
+      <p style="clear: left; margin: 0;">
+      </p>
+    </div>
+
+    <div class="mainfull">
+      
+<div class="headerclass">DR7: Lightcurve Data Table Columns</div>
+
+<div class="mainform">
+  <p>This page documents the columns of the lightcurve data tables exposed by the
+<em>daschlab</em> analysis toolkit. Different data sources may use different names or
+expose somewhat different sets of data.</p>
+<p>The <strong>essential columns</strong> are:</p>
+<ul>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#time"><code>time</code></a>, the time associated with the lightcurve point (HJD midpoint)</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-magdep"><code>magcal_magdep</code></a>, the best calibrated magnitude (band depends on refcat choice)</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-local-rms"><code>magcal_local_rms</code></a>, the best uncertainty estimate on <code>magcal_magdep</code></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#limiting-mag-local"><code>limiting_mag_local</code></a>, the limiting magnitude of the
+plate at the source position; for nondetections, this is the lower limit on
+the source magnitude. (You might colloquially call this an “upper limit”, but
+fainter magnitudes are larger numbers, after all.)</li>
+</ul>
+<p>The table columns described here <em>also</em> apply to “extracts”, tables of
+photometry associated with a spatial sub-region of a specified exposure,
+obtainable with the <a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.extract"><code>Session.extract()</code></a> <em>daschlab</em> API. The only difference is
+that while lightcurve tables have rows for many exposures covering the same
+source, extract tables have rows for many sources in the same exposure.</p>
+<h1 id="columns-by-category">Columns by Category</h1>
+<p>Some columns are listed in multiple sub-sections here, if appropriate.</p>
+<div class="coltables">
+<h2 id="identity">Identity</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#local-id"><code>local_id</code></a></td><td>nonnegative integer</td><td>A unique number identifying this lightcurve point</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-number"><code>sxt_number</code></a></td><td>positive integer</td><td>The <a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> source identifier (<a href="https://astromatic.github.io/sextractor/Param.html#measurement-parameter-list"><code>NUMBER</code></a> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#ref-number"><code>ref_number</code></a></td><td>nonnegative integer</td><td>A unique identifying number for this catalog source</td></tr>
+</tbody></table>
+<h2 id="astrometry">Astrometry</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#drad-rms2"><code>drad_rms2</code></a></td><td>arcsec per bin</td><td>RMS positional error per smoothing bin</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#pos"><code>pos</code></a></td><td><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html">Astropy SkyCoord</a></td><td>The fitted source position in this image</td></tr>
+</tbody></table>
+<p>When a lightcurve is exported, the <code>pos</code> column may need to be broken into
+individual columns. In this case you will instead see:</p>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#pos"><code>ra_deg</code></a></td><td>deg</td><td>The RA encoded in <code>pos</code></td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#pos"><code>dec_deg</code></a></td><td>deg</td><td>The declination encoded in <code>pos</code></td></tr>
+</tbody></table>
+<h2 id="data-quality">Data Quality</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#aflags"><code>aflags</code></a></td><td>bit flags</td><td>DASCH photometric data quality flags</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#a2flags"><code>a2flags</code></a></td><td>bit flags</td><td>“Additional AFLAGS”</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#bflags"><code>bflags</code></a></td><td>bit flags</td><td>DASCH photometric data processing flags</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#b2flags"><code>b2flags</code></a></td><td>bit flags</td><td>“Additional BFLAGS”</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#drad-rms2"><code>drad_rms2</code></a></td><td>arcsec per bin</td><td>RMS positional error per smoothing bin</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#local-bin-reject-flag"><code>local_bin_reject_flag</code></a></td><td>bit flags</td><td>Data quality flags associated with the “local bin” calibration</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#plate-quality-flag"><code>plate_quality_flag</code></a></td><td>bit flags</td><td>Data quality flags associated with plate-level metrics</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#reject"><code>reject</code></a></td><td>bit flags</td><td>Flags that <em>you</em> set to mark points as rejected</td></tr>
+</tbody></table>
+<h2 id="source-image">Source Image</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#background"><code>background</code></a></td><td>counts</td><td>Background level at the source position (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <a href="https://astromatic.github.io/sextractor/Photom.html#background-def"><code>BACKGROUND</code></a> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#ellipticity"><code>ellipticity</code></a></td><td>real number</td><td>Ellipticity of source image (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <a href="https://astromatic.github.io/sextractor/Position.html#elong-iso-def"><code>ELLIPTICITY</code></a> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#fwhm-image"><code>fwhm_image</code></a></td><td>pixels</td><td>FWHM of source image assuming Gaussianity (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>FWHM_IMAGE</code> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#fwhm-world"><code>fwhm_world</code></a></td><td>deg</td><td>FWHM of source image assuming Gaussianity (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>FWHM_WORLD</code> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#image-x"><code>image_x</code></a></td><td>pixels</td><td>X coordinate of the isophotal image centroid (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>X_IMAGE</code> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#image-y"><code>image_y</code></a></td><td>pixels</td><td>Y coordinate of the isophotal image centroid (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>Y_IMAGE</code> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#iso-area-world"><code>iso_area_world</code></a></td><td>deg²</td><td>Area of the isophotal source image (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_WORLD</code> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#kron-radius"><code>kron_radius</code></a></td><td>real number</td><td>Kron radius (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <a href="https://astromatic.github.io/sextractor/Photom.html#flux-auto-def"><code>KRON_RADIUS</code></a> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#plate-dist"><code>plate_dist</code></a></td><td>deg</td><td>Distance of the source from the plate center</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#theta-j2000"><code>theta_j2000</code></a></td><td>deg</td><td>Orientation of source image ellipse, East from North (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>THETA_J2000</code> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-iso0"><code>sxt_iso0</code></a></td><td>integer pixels²</td><td>Source image isophotal area at threshold level 0 (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_IMAGE</code> columns?)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-iso1"><code>sxt_iso1</code></a></td><td>integer pixels²</td><td>Source image isophotal area at threshold level 1 (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_IMAGE</code> columns?)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-iso2"><code>sxt_iso2</code></a></td><td>integer pixels²</td><td>Source image isophotal area at threshold level 2 (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_IMAGE</code> columns?)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-iso3"><code>sxt_iso3</code></a></td><td>integer pixels²</td><td>Source image isophotal area at threshold level 3 (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_IMAGE</code> columns?)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-iso4"><code>sxt_iso4</code></a></td><td>integer pixels²</td><td>Source image isophotal area at threshold level 4 (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_IMAGE</code> columns?)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-iso5"><code>sxt_iso5</code></a></td><td>integer pixels²</td><td>Source image isophotal area at threshold level 5 (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_IMAGE</code> columns?)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-iso6"><code>sxt_iso6</code></a></td><td>integer pixels²</td><td>Source image isophotal area at threshold level 6 (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_IMAGE</code> columns?)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#sxt-iso7"><code>sxt_iso7</code></a></td><td>integer pixels²</td><td>Source image isophotal area at threshold level 7 (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>ISOAREA_IMAGE</code> columns?)</td></tr>
+</tbody></table>
+<h2 id="photometry">Photometry</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-magdep"><code>magcal_magdep</code></a></td><td>mag</td><td>Calibrated magnitude after LOWESS, local, and magnitude-dependent calibration. <strong>Use this value.</strong></td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-local-rms"><code>magcal_local_rms</code></a></td><td>mag</td><td>Uncertainty in <code>magcal_local</code>; preferred by legacy tools for <code>magcal_magdep</code> too — <strong>why??</strong></td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#limiting-mag-local"><code>limiting_mag_local</code></a></td><td>mag</td><td>Locally corrected limiting magnitude for source detection</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#extinction"><code>extinction</code></a></td><td>mag</td><td>Local extinction estimate from the photometric calibration process</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#flux-iso"><code>flux_iso</code></a></td><td>counts</td><td>Isophotal flux (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <a href="https://astromatic.github.io/sextractor/Position.html#flux-iso-def"><code>FLUX_ISO</code></a> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#flux-max"><code>flux_max</code></a></td><td>counts</td><td>Peak flux above the background (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <code>FLUX_MAX</code> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#mag-aper"><code>mag_aper</code></a></td><td>uncalibrated mag</td><td>Circular aperture magnitude (which one??) (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <a href="https://astromatic.github.io/sextractor/Photom.html#flux-aper-def"><code>MAG_APER(?)</code></a> columns)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#mag-auto"><code>mag_auto</code></a></td><td>uncalibrated mag</td><td>“Kron-like” aperture magnitude (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <a href="https://astromatic.github.io/sextractor/Photom.html#flux-auto-def"><code>MAG_AUTO</code></a> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#mag-iso"><code>mag_iso</code></a></td><td>uncalibrated mag</td><td>Isophotal magnitude (<a href="https://www.astromatic.net/software/sextractor/">SExtractor</a> <a href="https://astromatic.github.io/sextractor/Position.html#flux-iso-def"><code>MAG_ISO</code></a> column)</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-iso"><code>magcal_iso</code></a></td><td>mag</td><td>Calibrated isophotal magnitude after LOWESS process</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-iso-rms"><code>magcal_iso_rms</code></a></td><td>mag</td><td>Error in the LOWESS fit</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-local"><code>magcal_local</code></a></td><td>mag</td><td>Calibrated magnitude after LOWESS and “local calibration”</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-local-error"><code>magcal_local_error</code></a></td><td>mag</td><td>RMS of the needed median magnitude correction in the “local calibration” process</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcor-local"><code>magcor_local</code></a></td><td>mag</td><td>Median magnitude correction needed in the “local calibration” region</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-magdep-rms"><code>magcal_magdep_rms</code></a></td><td>mag</td><td>Uncertainty in <code>magcal_magdep</code>; <strong>why do legacy tools not use this??</strong></td></tr>
+</tbody></table>
+<h2 id="timing">Timing</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#time"><code>time</code></a></td><td><a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a></td><td>HJD midpoint of the exposure time.</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#time-accuracy"><code>time_accuracy</code></a></td><td>days</td><td>Estimated accuracy of <code>time</code>.</td></tr>
+</tbody></table>
+<h2 id="catalog-match-information">Catalog Match Information</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#blended-mag"><code>blended_mag</code></a></td><td>mag</td><td>Effective combined magnitude of refcat objects covered by this source</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#catalog-dec"><code>catalog_dec</code></a></td><td>deg</td><td>Catalog star declination, precessed to plate’s epoch</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#catalog-ra"><code>catalog_ra</code></a></td><td>deg</td><td>Catalog star right ascension, precessed to plate’s epoch</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#gsc-bin-index"><code>gsc_bin_index</code></a></td><td>nonnegative integer</td><td>Spatial index value based on GSC binning; needed by some low-level APIs</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#pm-dec"><code>pm_dec</code></a></td><td>mas/yr</td><td>Cataloged source proper motion in declination</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#pm-ra-cosdec"><code>pm_ra_cosdec</code></a></td><td>mas/yr</td><td>Cataloged source proper motion in right ascension, including cos(δ) term</td></tr>
+</tbody></table>
+<h2 id="plate-exposure-identification">Plate / Exposure Identification</h2>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#exp-local-id"><code>exp_local_id</code></a></td><td>nonnegative integer</td><td>The <code>local_id</code> of the exposure associated with this point</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#expnum"><code>expnum</code></a></td><td>nonnegative integer</td><td>The exposure number that this detection comes from</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#mosnum"><code>mosnum</code></a></td><td>nonnegative integer</td><td>The mosaic number of the FITS file used for analysis</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#platenum"><code>platenum</code></a></td><td>nonnegative integer</td><td>The number of the plate</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#plate-local-id"><code>plate_local_id</code></a></td><td>nonnegative integer</td><td>The “local ID” of the matched plate in the <em>daschlab</em> plates table</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#series"><code>series</code></a></td><td>short string</td><td>The lowercase series name of the plate</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#series-id"><code>series_id</code></a></td><td>nonnegative integer</td><td>A small internal integer corresponding to <code>series</code></td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#solnum"><code>solnum</code></a></td><td>nonnegative integer</td><td>The WCS solution number corresponding to <code>expnum</code></td></tr>
+</tbody></table>
+<h2 id="calibration-pipeline-information">Calibration Pipeline Information</h2>
+<p>See also “data quality” and “photometry”.</p>
+<table><thead><tr><th>Name</th><th>Unit/Type</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#dasch-mask-index"><code>dasch_mask_index</code></a></td><td>positive integer</td><td>Index of the mask file used for pipeline defect processing</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#dasch-photdb-version-id"><code>dasch_photdb_version_id</code></a></td><td>positive integer</td><td>Internal version number of the binary photometry record</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#local-bin-index"><code>local_bin_index</code></a></td><td>nonnegative integer</td><td>Bin number used in the “local calibration”</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magdep-bin"><code>magdep_bin</code></a></td><td>nonnegative integer</td><td>Bin number used in the magnitude-dependent calibration</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#npoints-local"><code>npoints_local</code></a></td><td>nonnegative integer</td><td>Number of stars used for the median magnitude correction in “local calibration”</td></tr>
+<tr><td><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#spatial-bin"><code>spatial_bin</code></a></td><td>integer between 1 and 9 (inclusive)</td><td>Annular ring number for the “spatial” calibration</td></tr>
+</tbody></table>
+</div>
+<h1 id="detailed-column-information-alphabetical">Detailed Column Information (Alphabetical)</h1>
+<h2 id="aflags"><code>aflags</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> DASCH photometric data quality flags</li>
+<li><strong>Units/type:</strong> bit field</li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#AFLAGS_ext">see associated remarks in the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="a2flags"><code>a2flags</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="background"><code>background</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="bflags"><code>bflags</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#BFLAGS_ext">see associated remarks in the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="b2flags"><code>b2flags</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="blended-mag"><code>blended_mag</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<p>“For case B and BD objects, the effective magnitude of all of the GSC2.3.2 objects within the blend.”</p>
+<h2 id="catalog-dec"><code>catalog_dec</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<p>This is <code>dec_2</code> in the legacy data terminology.</p>
+<h2 id="catalog-ra"><code>catalog_ra</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<p>This is <code>ra_2</code> in the legacy data terminology.</p>
+<h2 id="dasch-mask-index"><code>dasch_mask_index</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="dasch-photdb-version-id"><code>dasch_photdb_version_id</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="drad-rms2"><code>drad_rms2</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="ellipticity"><code>ellipticity</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="exp-local-id"><code>exp_local_id</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> The <code>local_id</code> of the exposure associated with this plate</li>
+<li><strong>Units/type:</strong> nonnegative integer</li>
+<li><strong>Available for nondetections:</strong> yes</li>
+<li><strong>Note:</strong> This column is added by <em>daschlab</em> and is not present when using the
+underlying web APIs directly</li>
+</ul>
+<p>This column identifies the row of the <a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/">exposure data
+table</a> in which you can find information about
+the exposure associated with this lightcurve point. In particular, it is the
+<a href="https://dasch.cfa.harvard.edu/dr7/exposurelist-columns/#local-id"><code>local_id</code> of that row</a>. You can use
+this field in <em>daschlab</em> to easily look up metadata associated with that
+exposure.</p>
+<p>It is possible in rare circumstances that <em>daschlab</em> will be unable to match a
+lightcurve row with a corresponding row in the relevant exposure table. In that
+case, this value will be -1.</p>
+<h2 id="expnum"><code>expnum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="extinction"><code>extinction</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#extinction_ext">see associated remarks in the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="flux-iso"><code>flux_iso</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="flux-max"><code>flux_max</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="fwhm-image"><code>fwhm_image</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="fwhm-world"><code>fwhm_world</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="gsc-bin-index"><code>gsc_bin_index</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="image-x"><code>image_x</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="image-y"><code>image_y</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="iso-area-world"><code>iso_area_world</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="kron-radius"><code>kron_radius</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="limiting-mag-local"><code>limiting_mag_local</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="local-bin-index"><code>local_bin_index</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="local-bin-reject-flag"><code>local_bin_reject_flag</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#rejectFlag_ext">see associated remarks in he Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="local-id"><code>local_id</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+<li><strong>Note:</strong> This column is added by <em>daschlab</em> and is not present when using the
+underlying web APIs directly</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="mag-aper"><code>mag_aper</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="mag-auto"><code>mag_auto</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="mag-iso"><code>mag_iso</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magcal-iso"><code>magcal_iso</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magcal-iso-rms"><code>magcal_iso_rms</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magcal-local"><code>magcal_local</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magcal-local-error"><code>magcal_local_error</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magcal-local-rms"><code>magcal_local_rms</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#magcallocalrms">see associated remarks in the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magcal-magdep"><code>magcal_magdep</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magcal-magdep-rms"><code>magcal_magdep_rms</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magcor-local"><code>magcor_local</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="magdep-bin"><code>magdep_bin</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="mosnum"><code>mosnum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#mosaicNumber_ext">see associated remarks in the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="npoints-local"><code>npoints_local</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="plate-dist"><code>plate_dist</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="plate-local-id"><code>plate_local_id</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+<li><strong>Note:</strong> This column is added by <em>daschlab</em> and is not present when using the
+underlying web APIs directly</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="plate-quality-flag"><code>plate_quality_flag</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#quality_ext">see associated remarks in the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="platenum"><code>platenum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="pm-dec"><code>pm_dec</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="pm-ra-cosdec"><code>pm_ra_cosdec</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="pos"><code>pos</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="ref-number"><code>ref_number</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> A unique identifying number for this catalog source</li>
+<li><strong>Units/type:</strong> nonnegative integer</li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p>This column gives the unique identifying number of the catalog source that this
+lightcurve applies to. It aligns with <a href="https://dasch.cfa.harvard.edu/dr7/catalog-columns/#ref-number">the <code>ref_number</code> column in catalog data
+tables</a>. For a standard lightcurve, this
+will have the same value in every row of the table. If you <a href="https://dasch.cfa.harvard.edu/dr7/ki/source-splitting/#mitigation">merge
+lightcurves</a> or <a href="https://daschlab.readthedocs.io/en/latest/api/daschlab.Session.html#daschlab.Session.extract">obtain a
+single-exposure photometry
+extract</a>,
+it will vary.</p>
+<h2 id="reject"><code>reject</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+<li><strong>Note:</strong> This column is added by <em>daschlab</em> and is not present when using the
+underlying web APIs directly</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="series"><code>series</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="series-id"><code>series_id</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="solnum"><code>solnum</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="spatial-bin"><code>spatial_bin</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-iso0"><code>sxt_iso0</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-iso1"><code>sxt_iso1</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-iso2"><code>sxt_iso2</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-iso3"><code>sxt_iso3</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-iso4"><code>sxt_iso4</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-iso5"><code>sxt_iso5</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-iso6"><code>sxt_iso6</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-iso7"><code>sxt_iso7</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="sxt-number"><code>sxt_number</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="theta-j2000"><code>theta_j2000</code></h2>
+<ul>
+<li><strong>Synopsis:</strong></li>
+<li><strong>Units/type:</strong></li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p><strong>FIXME:</strong> not yet documented here; <a href="https://dasch.cfa.harvard.edu/data-guide/#database-variables">see the Legacy Data Guide</a>.
+If you’re reading this, try inquiring on <a href="https://gaggle.email/join/dasch@gaggle.email">the DASCH Astrophysics email list</a>!</p>
+<h2 id="time"><code>time</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> HJD midpoint of the exposure time</li>
+<li><strong>Unit/type:</strong> <a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a></li>
+<li><strong>Available for nondetections:</strong> yes</li>
+</ul>
+<p>The <code>time</code> column is guaranteed to always give the best available time for the
+lightcurve point in question. It is the HJD midpoint of the exposure time. When
+using <em>daschlab</em>, this column is stored as an <a href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time">Astropy Time</a> quantity, so
+it is easy to convert to other date formats.</p>
+<p><strong>TODO:</strong> figure out and specify what timescale we're talking about!</p>
+<h2 id="time-accuracy"><code>time_accuracy</code></h2>
+<ul>
+<li><strong>Synopsis:</strong> Estimated uncertainty on <a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#time"><code>time</code></a>.</li>
+<li><strong>Unit/type:</strong> days</li>
+<li><strong>Available for nondetections:</strong> no</li>
+</ul>
+<p>DASCH lightcurve timestamps must be determined from transcriptions of the
+hand-written observing logbooks, so they are subject to errors. The DASCH
+pipeline assesses the self-consistency of various observing parameters to check
+whether the transcribed timestamp “makes sense” and assigns a value for this
+column based on the results.</p>
+<p>Because DASCH’s timestamps derive from these hand-written records, the best
+possible accuracy with which they should be trusted is a few minutes. This is
+comparable to the precision achievable with HJDs in an unspecified timescale
+(<a href="https://ui.adsabs.harvard.edu/abs/2010PASP..122..935E/abstract">Eastman et al., 2010</a>).</p>
+<h1 id="column-subsets">Column Subsets</h1>
+<h2 id="medium-columns">“Medium” Columns</h2>
+<p>A “medium”-width lightcurve table is defined to contain only the following columns:</p>
+<ul>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#time"><code>time</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-magdep"><code>magcal_magdep</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#limiting-mag-local"><code>limiting_mag_local</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#pos"><code>pos</code></a> (or <code>ra_deg</code> and <code>dec_deg</code>)</li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#fwhm-world"><code>fwhm_world</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#ellipticity"><code>ellipticity</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#theta-j2000"><code>theta_j2000</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#iso-area-world"><code>iso_area_world</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#aflags"><code>aflags</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#bflags"><code>bflags</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#plate-quality-flag"><code>plate_quality_flag</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#local-bin-reject-flag"><code>local_bin_reject_flag</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#series"><code>series</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#platenum"><code>platenum</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#mosnum"><code>mosnum</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#solnum"><code>solnum</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#expnum"><code>expnum</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#image-x"><code>image_x</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#image-y"><code>image_y</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-local-rms"><code>magcal_local_rms</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcal-local-error"><code>magcal_local_error</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#drad-rms2"><code>drad_rms2</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#extinction"><code>extinction</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#magcor-local"><code>magcor_local</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#blended-mag"><code>blended_mag</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#npoints-local"><code>npoints_local</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#background"><code>background</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#fwhm-image"><code>fwhm_image</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#kron-radius"><code>kron_radius</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#time-accuracy"><code>time_accuracy</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#catalog-ra"><code>catalog_ra</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#catalog-dec"><code>catalog_dec</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#pm-ra-cosdec"><code>pm_ra_cosdec</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#pm-dec"><code>pm_dec</code></a></li>
+<li><a href="https://dasch.cfa.harvard.edu/dr7/lightcurve-columns/#plate-dist"><code>plate_dist</code></a></li>
+</ul>
+
+</div>
+
+    </div>
+
+    <div id="contact" class="footer">
+      <p style="text-align: center;">
+        <b>Email List for Discussion/Announcements/Support:</b> <a target="_blank"
+          href="https://gaggle.email/join/dasch@gaggle.email"><i>dasch@gaggle.email</i></a>
+        <br>
+        <b>Plate Stacks:</b> <a
+          href="mailto:harvardplatestacks@cfa.harvard.edu"><i>harvardplatestacks@cfa.harvard.edu</i></a>
+        <br>
+        <a style="font-size: smaller;" target="_blank" href="https://hwp.harvard.edu/terms-use">Harvard Terms of
+          Use</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+{
+  "era_mjd": [
+    60790.11722739659,
+    61047.354118603194
+  ],
+  "n_visits_total": 28698,
+  "z_grid_au": [
+    550.0,
+    1000.0,
+    2500.0,
+    5500.0,
+    10000.0
+  ],
+  "ladder": {
+    "A": [
+      0.1
+    ],
+    "B": [
+      0.0056,
+      0.0116,
+      0.1
+    ]
+  },
+  "discovery_deg": 2.0,
+  "a_1au_geometry_only": {
+    "in_era_events": 85,
+    "targets": 84
+  },
+  "channels": {
+    "A": {
+      "0.1": {
+        "in_era_events": 5,
+        "events_with_candidate_visits": 1,
+        "searchable_units": {
+          "ross-154 i": [
+            {
+              "visit": 2025070100189,
+              "z_au": NaN,
+              "detector": 110,
+              "maglim": 22.5563,
+              "dt_days": -1.392,
+              "b_at_visit_rsun": 6.102
+            },
+            {
+              "visit": 2025070200223,
+              "z_au": NaN,
+              "detector": 21,
+              "maglim": 23.0815,
+              "dt_days": -0.314,
+              "b_at_visit_rsun": 3.592
+            },
+            {
+              "visit": 2025070200224,
+              "z_au": NaN,
+              "detector": 164,
+              "maglim": 23.3644,
+              "dt_days": -0.313,
+              "b_at_visit_rsun": 3.592
+            },
+            {
+              "visit": 2025070400746,
+              "z_au": NaN,
+              "detector": 172,
+              "maglim": 22.2976,
+              "dt_days": 1.945,
+              "b_at_visit_rsun": 7.852
+            },
+            {
+              "visit": 2025070700074,
+              "z_au": NaN,
+              "detector": 31,
+              "maglim": 22.0037,
+              "dt_days": 4.609,
+              "b_at_visit_rsun": 17.109
+            }
+          ],
+          "ross-154 z": [
+            {
+              "visit": 2025070100235,
+              "z_au": NaN,
+              "detector": 110,
+              "maglim": 21.9683,
+              "dt_days": -1.363,
+              "b_at_visit_rsun": 6.017
+            },
+            {
+              "visit": 2025070100330,
+              "z_au": NaN,
+              "detector": 70,
+              "maglim": 22.3862,
+              "dt_days": -1.318,
+              "b_at_visit_rsun": 5.88
+            },
+            {
+              "visit": 2025070200289,
+              "z_au": NaN,
+              "detector": 21,
+              "maglim": 23.0874,
+              "dt_days": -0.278,
+              "b_at_visit_rsun": 3.553
+            },
+            {
+              "visit": 2025070200290,
+              "z_au": NaN,
+              "detector": 164,
+              "maglim": 23.1828,
+              "dt_days": -0.278,
+              "b_at_visit_rsun": 3.553
+            },
+            {
+              "visit": 2025070400794,
+              "z_au": NaN,
+              "detector": 172,
+              "maglim": 22.0541,
+              "dt_days": 1.968,
+              "b_at_visit_rsun": 7.93
+            },
+            {
+              "visit": 2025070700101,
+              "z_au": NaN,
+              "detector": 31,
+              "maglim": 21.9609,
+              "dt_days": 4.623,
+              "b_at_visit_rsun": 17.158
+            }
+          ],
+          "ross-154 r": [
+            {
+              "visit": 2025070300474,
+              "z_au": NaN,
+              "detector": 106,
+              "maglim": 24.048,
+              "dt_days": 0.844,
+              "b_at_visit_rsun": 4.586
+            }
+          ],
+          "ross-154 y": [
+            {
+              "visit": 2025070400158,
+              "z_au": NaN,
+              "detector": 55,
+              "maglim": 21.7978,
+              "dt_days": 1.643,
+              "b_at_visit_rsun": 6.879
+            },
+            {
+              "visit": 2025070400206,
+              "z_au": NaN,
+              "detector": 55,
+              "maglim": 21.8486,
+              "dt_days": 1.666,
+              "b_at_visit_rsun": 6.951
+            },
+            {
+              "visit": 2025070600111,
+              "z_au": NaN,
+              "detector": 26,
+              "maglim": 20.559,
+              "dt_days": 3.604,
+              "b_at_visit_rsun": 13.546
+            },
+            {
+              "visit": 2025070600159,
+              "z_au": NaN,
+              "detector": 26,
+              "maglim": 20.8113,
+              "dt_days": 3.626,
+              "b_at_visit_rsun": 13.623
+            }
+          ]
+        }
+      }
+    },
+    "B": {
+      "0.0056": {
+        "in_era_events": 2,
+        "events_with_candidate_visits": 0,
+        "searchable_units": {}
+      },
+      "0.0116": {
+        "in_era_events": 3,
+        "events_with_candidate_visits": 0,
+        "searchable_units": {}
+      },
+      "0.1": {
+        "in_era_events": 4,
+        "events_with_candidate_visits": 1,
+        "searchable_units": {
+          "ross-128 r": [
+            {
+              "visit": 2025091300612,
+              "z_au": 550.0,
+              "detector": 102,
+              "maglim": 23.3661,
+              "dt_days": -5.657,
+              "b_at_visit_rsun": 20.921
+            },
+            {
+              "visit": 2025091300612,
+              "z_au": 1000.0,
+              "detector": 102,
+              "maglim": 23.3661,
+              "dt_days": -5.657,
+              "b_at_visit_rsun": 20.921
+            },
+            {
+              "visit": 2025091300612,
+              "z_au": 2500.0,
+              "detector": 102,
+              "maglim": 23.3661,
+              "dt_days": -5.657,
+              "b_at_visit_rsun": 20.921
+            },
+            {
+              "visit": 2025091300612,
+              "z_au": 5500.0,
+              "detector": 102,
+              "maglim": 23.3661,
+              "dt_days": -5.657,
+              "b_at_visit_rsun": 20.921
+            },
+            {
+              "visit": 2025091300612,
+              "z_au": 10000.0,
+              "detector": 102,
+              "maglim": 23.3661,
+              "dt_days": -5.657,
+              "b_at_visit_rsun": 20.921
+            }
+          ]
+        }
+      }
+    }
+  }
+}

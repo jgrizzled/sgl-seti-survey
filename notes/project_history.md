@@ -1148,3 +1148,214 @@ supply is per-band; on-star flare-star units want a design-time
 two-band fluence gate. The wolf-359 burst is recorded for any
 future UV mission able to re-cover a window; ledger rows queued for
 the §5.7 refresh.
+
+## 12. DASCH recon + crossings backward extension (2026-08-26; plan §5.8 item 5)
+
+Session goal: open queue item 5 — the pre-1980 century of crossing
+windows in the Harvard plates (DR7) — by executing the plan row's
+prerequisite (extend the universal crossing list backward from 1980)
+and a DECam-style reachability recon of the DASCH services (marked
+_unprobed_ in the plan). Both done same-day on the dev machine; full
+facts in `surveys/dasch-crossings/notes/dasch_recon_2026-08-26.md`.
+
+**Backward extension.** `crossings/universal_1885_v1`
+(`xng-e2d1063af9d0`): Earth center, 1885-01-01 → 1993-01-01, same
+registry/model/every-minimum construction — 37,096 events, 0
+invalid, 91 MB, ~85 min. Deliberately overlaps `universal_v1` over
+1980–92 as a regression check: **all 4,104 shared-era events match
+1:1, max |Δt_ca| 23 s, max |Δb| 3.4×10⁻⁷ R☉**. 13,053 events
+`degraded`, dominated by `long_propagation_span` (sglseti's declared
+75-yr linear-motion bound → everything before ~1941). The §7
+old-epoch accuracy budget was then *measured*: astropy builtin vs
+JPL DE440S heliocentric Earth ≤ 6 km ≈ 1×10⁻⁵ R☉ at 1885;
+grazing-family astrometric sensitivity (5 km/s RV + 0.1 mas/yr µ
+perturbations through the rigorous `apply_space_motion` propagation)
+≤ 2×10⁻⁴ R☉ and ≲ 5 s in t_ca — 50× under the standing 0.010 R☉
+LEO budget, so the degraded flags are conservative bookkeeping, not
+physical limits. Unmodelled century-baseline orbital motion stays a
+per-target freeze check.
+
+**Recon.** DASCH DR7 rides the Starglass REST API
+(`api.starglass.cfa.harvard.edu/public/`, anonymous, JSON POST;
+WAF rejects python-urllib UAs — send a curl-like UA; registered
+`x-api-key` tier exists if rate limits ever bite). All five science
+endpoints probed live end-to-end: queryexps (9,000–15,000 exposures
+per probed position, 27 columns incl. per-exposure `limMagApass`,
+`exptime` **in minutes**, `wcssource`), querycat, lightcurve
+(van Maanen: 3,544 rows 1890–1989, calibrated mags + per-epoch
+`limiting_mag_local` on every non-detection row, `time_accuracy_days`
+mode 60 s but absent on non-detection rows, AFLAGS/BFLAGS bits
+unpinned), cutout (FITS verified: 20′, 1.44″/px, TAN, target
+centred; minimal header — CD-diagonal-only, resampling status
+unpinned), platephot (subregion detections **including uncatalogued
+sources** — catalogue-level channel-B search possible; exactly-50-row
+probe response unexplained), mosaic_package (pre-signed S3, binning
+1/16). DR7 facts: ~430k plates, 97 %/89 % astrometric/photometric
+success, APASS DR8 = B-band science refcat ("excellent long-term
+stability") vs ATLAS-refcat2 with documented false long-term trends
+(astrometry only); typical depth B 12–16, probed best 18.3; Menzel
+gap 1953–68 confirmed at every position; known-issues page (defects,
+blends, splitting, missing points) drives the single-detection
+vetting design.
+
+**Science yield of the recon.** Coverage probed at the grazing
+family's 10 positions (stars + antipodes): ~2.3–3.1k calibrated
+exposures each, 150–340 at B ≥ 15, both hemispheres. Intersected
+with `universal_1885_v1`: **van-maanen, gj-1276 and wolf-359 are
+photosphere-grazing (≤ 1.2 R☉) on essentially every annual crossing
+of the DASCH century** (van-maanen b ≈ 0.59–0.69 R☉ throughout —
+the modern deep-graze family is the tail of a secular deepening);
+teegarden B holds 38 grazing events and the 2.5 R☉ rung adds
+ross-128 everywhere. ~15–28 covered windows per target-channel at
+±1 d (~120 grazing windows across the family; 0.1 AU rung tracks
+±3 d at ~35–48/channel) — roughly an order of magnitude more
+grazing-rung windows than all prior surveys combined, ending where
+the 1980 list begins. Next: hypothesis freeze (open items listed in
+the recon note: flag-bit pinning, platephot semantics, cutout
+resampling, series policy, flat-chord scan, timing gate, positive
+control, snapshot set).
+
+## 13. Rubin DP2 crossings survey (2026-08-26; plan §5.13 — complete)
+
+Same-day chain following the morning's RSP recon (§ `surveys/rubin/`):
+plan §5.13 opened (Pipeline A tabled until the image release, §6);
+hypothesis freeze v1.0 (D1–D8; pre-freeze recon contact at the
+ross-128 antipode declared, unit kept blind; reliability barred from
+absolute cuts; ross-154 saturation expectation frozen as a rule, not
+a decision) → coverage (21 snapshots; era re-measured identical;
+ross-128 B 0.1 AU the only searchable unit — all five z positions on
+detector 102, magLim r 23.366, Δt −5.66 d, b(t) = 20.9 R☉ rim
+sample; ross-154 A 16 on-detector visits; grazing rungs 0 visits) →
+threshold freeze (1 unit × S_det = 1 trial; Ross 154 G = 9.13 →
+excluded per §6) → dev on 62 off-window pseudo-units (blind guard on
+the unit visit; null 0/53 associations; **amendment v1.1**: control
+locus-avoidance 10″ → 2.5″ after the 10″ rule proved geometrically
+impossible at inner-z offsets; SkyBoT positive control PASS —
+2006 SE393 at 0.308″, S_det 31.3, diaSourceId = the catalog's own
+ssObjectId link; injection census 0 → completeness route ii) →
+**blind confirmatory: S_det = 0, zero DiaSources in the discovery
+cone, 0 exceedances vs 0.11 expected — 0 candidates.** Report
+`report/rubin_crossings.md`. New record classes: first catalog-level
+substrate; deepest wide-rung single-epoch flux threshold
+(not-injection-calibrated statement, ~1.3 kW through the 0.1 AU
+cone); designated follow-up = image-level re-run at the late-2026
+visit/difference-image release upgrading the unit to an
+injection-calibrated exclusion.
+
+### §12 continuation — freeze through blind confirmatory (same day)
+
+**Freeze chain.** Hypotheses v1.0 drafted post-recon and **frozen on
+user approval of D1–D8** (5-target scope; catalogue-level substrate;
+532 nm declared unconstrained — out of the blue plates' band — with
+355 nm conditionally in-band; no pulse statistic, the century
+recurrence stack as the new cell; van-maanen A `forced_dev` after the
+recon lightcurve pull). Coverage stage (fresh snapshot pulls,
+interval-based overlap, timing gate): **18 searched units** —
+including all three B 1.2 R☉ grazing units (van-maanen 12, gj-1276 7,
+wolf-359 4 covered windows) and 0.1 AU rungs at 56–63 windows each;
+ledger rows teegarden B 1.2 R☉ and ross-128 B 1.2 R☉. Threshold
+freeze v1.0: B locus-track hit statistic (r_match 10″, z-family
+polyline, 8 same-pull ring controls at ±60–120″), A robust-z with
+8 temporal pseudo-windows; 36 trials (dev 6 / confirmatory 30).
+
+**Dev stage (0 exceedances / 6 trials, final chain).** Positive
+controls: RY Cnc through the A-chain (85 faint excursions 75 %
+phase-locked, depth 0.79 mag, scatter 0.18) and **(7) Iris 1911**
+through the B-chain (found via a Horizons coincidence scan of the
+teegarden star field after JPL sb_ident 500'd on pre-1950 epochs;
+recovered 0.2″ from the timing-extended trail, correctly
+trail-elongated). Three dev findings → amendments, all
+pre-confirmatory: **v1.1** the DR7 APASS refcat carries pm = 0 dummy
+entries for van-maanen and wolf-359 (the APASS "lightcurve" of van
+Maanen = 9 spurious rows vs 1,552 real ATLAS ones) → PM-match
+routing, era-local ±5 yr baselines, Stouffer S_stack; **v1.2** the
+Iris control was killed by the frozen fatal template —
+`SUSPECTED_DEFECT` stamps real single-plate transients — demoted to
+annotation feeding cutout inspection; **v1.3** the teegarden dev
+exceedance adjudicated to (a) the quiescent star marginally
+extracted at the plate limit (off-window same-locus measurement:
+2/12 deep plates, median B 17.11 ≈ expected 17.3) and (b) a
+defect-class row killed by cutout pixels (≤ 3.4σ diffuse vs a 21σ
+field star) → the limits-only quiescent-star gate (hit ≥ 1 mag
+brighter than measured quiescence; rings never gated).
+
+**Blind confirmatory (15 units / 30 trials): 0 candidates — 2
+exceedances vs 3.33 expected, both adjudicated.** Both sat in
+wolf-359 A 0.1 AU, whose quiescent measurement worked perfectly
+(12/12 deep off-window plates detect the PM-less-refcat star,
+median B 15.66): the 1943/ac37753 hit (B 14.58, 0.35 mag above the
+plate limit, 7.4″, fwhm 10 px) and the 1982/dny00425 hit (B 13.02,
+0.5 mag above limit, 7.1″) both show ≤ 4σ diffuse pixel structure
+where real sources on the same cutouts reach 16–20σ — vetoed
+defect-class (`results/adjudication_wolf359A_v1.json`); no
+recurrence across the unit's 56 covered windows; genuine star
+extractions sit at 1.4–2.4″. Annotations: one van-maanen B 0.1 AU
+locus hit (1905, S = T = 1, not an exceedance); ross-128 A clean
+with heavy-tailed controls (T 7.09). Completeness (field-star
+recovery per covered window, Wilson intervals) and report
+`report/dasch_crossings.md` close the survey — the programme's
+first pre-1980 constraints, kW-class through the grazing cones back
+to the 1890s, the century recurrence-stack cell clean on every
+searched unit.
+
+**Completeness + constraints (closing the survey).** Field-star
+recovery pooled per plate-limit stratum (`completeness_pooled_v1`):
+90 % depth sits **1.5–2.5 mag above the archive's limMag columns**
+(the C1 lesson at catalogue level); deep-plate strata reach m90
+13.5–14.5. Constraint headlines: van-maanen and wolf-359 B 1.2 R☉
+≳ 20 kW on deep-plate windows, sub-MW (m90 10.5) over the
+shallow-plate century bulk to the 1890s, MW-class 0.1 AU cones;
+template costs measured on 8,714 matched rows (fatal 1.2 %, strict
+22 %, SUSPECTED_DEFECT on 13.9 % of genuine stars). One flagged
+anomaly: the ross-128 antipode field never reaches 90 % recovery
+(60–85 % over B 9–14) — constraint rows honest but shallow;
+diagnosis queued. Report `report/dasch_crossings.md`.
+
+**Blind confirmatory run — 0 CANDIDATES (2026-08-26;
+`surveys/heliospheric-crossings/results/confirmatory_v1.{md,json → confirmatory_search_v1.json}`).**
+Fetch 68,330/68,522 frames (92.7 GB new; 21,477 shared from the dev
+cache), full measure (0 worker errors), ONE reduce under the frozen
+v1.0+v1.1+v1.2 chain: **30 searched trials, 2 exceedances vs 3.3
+expected — under budget; every recurrence statistic null.**
+Adjudications (frozen ladder): gj-1276 S_pulse 18.7/17.4 = one 12-min
+frame (2014-09-04 07:12, +2078 with negative neighbours) → vetoed,
+single-frame/cosmic-ray rule; van-maanen S_event 4.51/1.19 = one
+window (2020-10-05/06), a ~3 h all-PA annulus disturbance whose onset
+follows a CDAW-catalogued C2 CME by 48 min (20:48) — both ±25° rings
+swing hundreds in both signs; catalogued CPAs (263°/274°/85°) differ
+from the source PA (122°): the azimuthal-median detrend couples all
+PAs during a corona-wide transient → adjudicated CME-period
+systematic, retained, non-promotable (no recurrence: 27 siblings
+≤ 0.17). New structural finding: **ross-128's S1 antipode is
+permanently blended** — the fixed S1 sky position sits 121″ (2.2 px)
+from a VT 7.2 star, inside the frozen 3 px mask at every epoch
+forever → constraint-only, ledger nominal-covered/resolution-blended
+(the S1 apparent source is a fixed ICRS point; the Sun sweeps past
+it). Bookkeeping blemish recorded (baseline day-picks inside windows,
+~5 % conservative contamination; no re-run — blind preserved).
+Remaining: completeness (stamp injections + Uranus control + L1-era
+ZP validation) → report/lasco_crossings.md.
+
+**Completeness + report — LASCO SURVEY COMPLETE, 0 candidates
+(2026-08-27; `report/lasco_crossings.md`; completeness
+`surveys/heliospheric-crossings/results/{completeness_v1,power_limits_v1,uranus_control_v1,zp_validation_v1}.json`).**
+Stamp-measured response + injections into the real confirmatory null
+series vs the fixed confirmatory thresholds (100 draws, seed
+20260825): **the coronal night-to-night systematics set the floor —
+recurrence-stack m90 V 4.5–8.4**, far shallower than naive stack
+scaling (the freeze's "measured, not assumed" clause doing its job).
+Physics: downlink ≳ 40–530 MW through the 2.5 R☉ cone
+(recurrence-stacked, C2 wings), 3–26 GW through the 0.1 AU cone;
+**pulse cell 6.7 MW per ≥ 12-min pulse (gj-1276)**; S2 10-m-class
+uplink 0.7–1.1 GW. Controls: 217 single-frame S/N>8 star measurements
+unbiased (−0.02 ± 0.39); era stability 0.064 mag year-to-year,
+−0.066 across the L1 boundary; Uranus recovered at the predicted
+moving position at ~20σ stacked but 1.65 mag faint — its
+methane-absorbed red spectrum in the red-weighted Clear band
+(diagnosed via same-field stars: chain unbiased; a ±0.3 band-
+conversion systematic declared). The flux gate is carried by the
+stellar validation + the gj-908 red-dwarf in-situ control. The
+sunward cell — archivally virgin before this programme — is closed
+at MW-class power; substrate chain validated for STEREO/WISPR
+follow-ons. v2 design notes recorded (baseline in-window picks,
+CME-robust per-sector detrend, inner-field scale).
