@@ -1,0 +1,1759 @@
+{
+  "generated_utc": "2026-09-04T15:33:37.040683+00:00",
+  "era_jd": [
+    2458407.0,
+    2459868.0
+  ],
+  "era_mjd": [
+    58406.5,
+    59867.5
+  ],
+  "dec_min": -28.5,
+  "quantisation_d": 0.25,
+  "cone_deg": 0.1,
+  "n_proxy_sources": 3,
+  "events_input": "crossings/universal_v1/events.ecsv",
+  "n_events_total": 16586,
+  "n_events_in_era_not_sunward": 684,
+  "era_scope": {
+    "B_1.2Rsun": {
+      "events": 16,
+      "events_in_footprint": 16,
+      "targets_in_footprint": 4,
+      "per_target": {
+        "gj-1276": 4,
+        "teegarden": 4,
+        "van-maanen": 4,
+        "wolf-359": 4
+      }
+    },
+    "B_2.5Rsun": {
+      "events": 20,
+      "events_in_footprint": 20,
+      "targets_in_footprint": 5,
+      "per_target": {
+        "gj-1276": 4,
+        "ross-128": 4,
+        "teegarden": 4,
+        "van-maanen": 4,
+        "wolf-359": 4
+      }
+    },
+    "B_0.1AU": {
+      "events": 28,
+      "events_in_footprint": 28,
+      "targets_in_footprint": 7,
+      "per_target": {
+        "gj-1276": 4,
+        "gj-908": 4,
+        "ross-128": 4,
+        "ross-154": 4,
+        "teegarden": 4,
+        "van-maanen": 4,
+        "wolf-359": 4
+      }
+    },
+    "A_0.1AU": {
+      "events": 28,
+      "events_in_footprint": 28,
+      "targets_in_footprint": 7,
+      "per_target": {
+        "gj-1276": 4,
+        "gj-908": 4,
+        "ross-128": 4,
+        "ross-154": 4,
+        "teegarden": 4,
+        "van-maanen": 4,
+        "wolf-359": 4
+      }
+    }
+  },
+  "units": {
+    "gj-1276:A": {
+      "channel": "A",
+      "ra_deg": 343.4871634585826,
+      "dec_deg": -6.785809682235209,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 124865029,
+          "sep_arcsec": 58.26985235667921,
+          "tmcjmag": 14.013,
+          "meanmag": 16.957047,
+          "rmsmag": 1.2284621,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 124864977,
+          "sep_arcsec": 121.02384690239931,
+          "tmcjmag": 13.487,
+          "meanmag": 13.724108,
+          "rmsmag": 0.2995209,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 124865076,
+          "sep_arcsec": 136.18281526879258,
+          "tmcjmag": 12.316,
+          "meanmag": 12.295235,
+          "rmsmag": 0.060291324,
+          "psfcontam": 1.0
+        }
+      ],
+      "n_epochs": 110,
+      "n_nights": 110,
+      "mjd_first": 58415.299999999814,
+      "mjd_last": 59854.299999999814,
+      "limmag_median": 14.593772000000001,
+      "limmag_p10_p90": [
+        14.1812924,
+        14.93567
+      ],
+      "distinct_obsjd_values": 110,
+      "events": [
+        {
+          "event_id": "evt-b53f9852eaed",
+          "t_ca_utc": "2019-09-05T07:08:05.806",
+          "b_rsun": 0.837,
+          "v_perp": 29.5,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.858,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 3
+            }
+          },
+          "closest_epoch_d": 3.003
+        },
+        {
+          "event_id": "evt-0227e1464782",
+          "t_ca_utc": "2020-09-04T13:19:42.615",
+          "b_rsun": 0.835,
+          "v_perp": 29.5,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.86,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 0.745
+        },
+        {
+          "event_id": "evt-d557e698c005",
+          "t_ca_utc": "2021-09-04T19:29:43.824",
+          "b_rsun": 0.834,
+          "v_perp": 29.5,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.856,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 3
+            }
+          },
+          "closest_epoch_d": 0.488
+        },
+        {
+          "event_id": "evt-2dc7e506f4df",
+          "t_ca_utc": "2022-09-05T01:29:28.269",
+          "b_rsun": 0.832,
+          "v_perp": 29.5,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.859,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 2.762
+        }
+      ]
+    },
+    "gj-1276:B": {
+      "channel": "B",
+      "ra_deg": 163.52539753581163,
+      "dec_deg": 6.795921922104959,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 845674860,
+          "sep_arcsec": 87.83362187506359,
+          "tmcjmag": 14.817,
+          "meanmag": 14.821437,
+          "rmsmag": 0.34249243,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 845674836,
+          "sep_arcsec": 113.51014295536035,
+          "tmcjmag": 13.379,
+          "meanmag": 13.557806,
+          "rmsmag": 0.1442336,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 845674791,
+          "sep_arcsec": 117.67247412296092,
+          "tmcjmag": 13.472,
+          "meanmag": 13.42522,
+          "rmsmag": 0.19033772,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 109,
+      "n_nights": 107,
+      "mjd_first": 58438.5,
+      "mjd_last": 59757.299999999814,
+      "limmag_median": 14.536176,
+      "limmag_p10_p90": [
+        14.023024,
+        14.9558184
+      ],
+      "distinct_obsjd_values": 106,
+      "events": [
+        {
+          "event_id": "evt-a31104250324",
+          "t_ca_utc": "2019-03-03T08:40:22.634",
+          "b_rsun": 0.733,
+          "v_perp": 30.1,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.255,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.64,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.758,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 1.939
+        },
+        {
+          "event_id": "evt-64fbc0c53c7e",
+          "t_ca_utc": "2020-03-02T14:46:08.411",
+          "b_rsun": 0.731,
+          "v_perp": 30.0,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.255,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.641,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.76,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 2.885
+        },
+        {
+          "event_id": "evt-24912cfb2980",
+          "t_ca_utc": "2021-03-02T21:03:54.885",
+          "b_rsun": 0.729,
+          "v_perp": 30.0,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.256,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.641,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.762,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 4.422
+        },
+        {
+          "event_id": "evt-57e0c494a587",
+          "t_ca_utc": "2022-03-03T03:18:11.527",
+          "b_rsun": 0.729,
+          "v_perp": 30.1,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.255,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.641,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.757,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 21.638
+        }
+      ]
+    },
+    "gj-908:A": {
+      "channel": "A",
+      "ra_deg": 357.3080439818455,
+      "dec_deg": 2.3955148304715905,
+      "n_events": 4,
+      "n_sources_6arcmin": 16,
+      "nearest_sources": [
+        {
+          "pts_key": 1106676742,
+          "sep_arcsec": 28.61362835367461,
+          "tmcjmag": 5.827,
+          "meanmag": 9.832187,
+          "rmsmag": 0.85141176,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 1106676837,
+          "sep_arcsec": 206.14492460815075,
+          "tmcjmag": 13.566,
+          "meanmag": 13.590244,
+          "rmsmag": 0.39780167,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 1106676835,
+          "sep_arcsec": 247.9106803413651,
+          "tmcjmag": 14.618,
+          "meanmag": 14.676826,
+          "rmsmag": 0.47130832,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 98,
+      "n_nights": 98,
+      "mjd_first": 58411.299999999814,
+      "mjd_last": 59858.299999999814,
+      "limmag_median": 14.6130085,
+      "limmag_p10_p90": [
+        13.464404100000001,
+        15.0437666
+      ],
+      "distinct_obsjd_values": 98,
+      "events": [
+        {
+          "event_id": "evt-16c110d39fd7",
+          "t_ca_utc": "2019-09-22T01:11:01.287",
+          "b_rsun": 12.31,
+          "v_perp": 29.7,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 4.786,
+              "strict": 3,
+              "nominal": 4,
+              "loose": 4
+            }
+          },
+          "closest_epoch_d": 0.251
+        },
+        {
+          "event_id": "evt-9bcebb29fe0a",
+          "t_ca_utc": "2020-09-21T07:13:15.265",
+          "b_rsun": 12.31,
+          "v_perp": 29.7,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 4.785,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 1.001
+        },
+        {
+          "event_id": "evt-9bc7720df4a7",
+          "t_ca_utc": "2021-09-21T13:23:51.774",
+          "b_rsun": 12.307,
+          "v_perp": 29.7,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 4.788,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 1.942
+        },
+        {
+          "event_id": "evt-29537724d2a9",
+          "t_ca_utc": "2022-09-21T19:29:37.551",
+          "b_rsun": 12.308,
+          "v_perp": 29.7,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 4.785,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 1.312
+        }
+      ]
+    },
+    "gj-908:B": {
+      "channel": "B",
+      "ra_deg": 177.3162047857483,
+      "dec_deg": -2.3906842978167404,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 244073269,
+          "sep_arcsec": 47.72010555481643,
+          "tmcjmag": 15.377,
+          "meanmag": 15.711803,
+          "rmsmag": 0.67224324,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 244073297,
+          "sep_arcsec": 59.83606176463405,
+          "tmcjmag": 11.253,
+          "meanmag": 11.391919,
+          "rmsmag": 0.084950455,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 244073241,
+          "sep_arcsec": 96.20863267135213,
+          "tmcjmag": 14.537,
+          "meanmag": 15.357234,
+          "rmsmag": 1.6532993,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 168,
+      "n_nights": 86,
+      "mjd_first": 58428.5,
+      "mjd_last": 59756.299999999814,
+      "limmag_median": 14.552049499999999,
+      "limmag_p10_p90": [
+        13.5002008,
+        14.9413185
+      ],
+      "distinct_obsjd_values": 86,
+      "events": [
+        {
+          "event_id": "evt-c6d788f0bf73",
+          "t_ca_utc": "2019-03-19T15:37:55.312",
+          "b_rsun": 12.156,
+          "v_perp": 29.9,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 4.776,
+              "strict": 4,
+              "nominal": 4,
+              "loose": 4
+            }
+          },
+          "closest_epoch_d": 1.351
+        },
+        {
+          "event_id": "evt-536fd06247ee",
+          "t_ca_utc": "2020-03-18T21:49:59.087",
+          "b_rsun": 12.156,
+          "v_perp": 29.9,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 4.774,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 9.59
+        },
+        {
+          "event_id": "evt-ccb92e30c897",
+          "t_ca_utc": "2021-03-19T03:58:22.730",
+          "b_rsun": 12.155,
+          "v_perp": 29.9,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 4.774,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 0.134
+        },
+        {
+          "event_id": "evt-762b8090ef06",
+          "t_ca_utc": "2022-03-19T10:14:41.938",
+          "b_rsun": 12.152,
+          "v_perp": 29.9,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 4.777,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 18.873
+        }
+      ]
+    },
+    "ross-128:A": {
+      "channel": "A",
+      "ra_deg": 176.93848236624152,
+      "dec_deg": 0.7975197883317757,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 831370617,
+          "sep_arcsec": 28.279386717863247,
+          "tmcjmag": 6.505,
+          "meanmag": 10.849129,
+          "rmsmag": 0.9910047,
+          "psfcontam": 1.0
+        },
+        {
+          "pts_key": 831351570,
+          "sep_arcsec": 32.60780015358313,
+          "tmcjmag": 14.511,
+          "meanmag": 10.085951,
+          "rmsmag": 1.5600967,
+          "psfcontam": 1.0
+        },
+        {
+          "pts_key": 831351531,
+          "sep_arcsec": 66.39934488174795,
+          "tmcjmag": 14.449,
+          "meanmag": 14.236456,
+          "rmsmag": 0.66281635,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 91,
+      "n_nights": 91,
+      "mjd_first": 58428.5,
+      "mjd_last": 59756.299999999814,
+      "limmag_median": 14.260971,
+      "limmag_p10_p90": [
+        13.569378,
+        14.747347
+      ],
+      "distinct_obsjd_values": 91,
+      "events": [
+        {
+          "event_id": "evt-3be27a0611ba",
+          "t_ca_utc": "2019-03-18T00:43:11.518",
+          "b_rsun": 1.811,
+          "v_perp": 29.9,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.767,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 0.27
+        },
+        {
+          "event_id": "evt-2ad0512a3645",
+          "t_ca_utc": "2020-03-17T06:56:42.559",
+          "b_rsun": 1.812,
+          "v_perp": 29.9,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.765,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 10.789
+        },
+        {
+          "event_id": "evt-5cedbe3002b1",
+          "t_ca_utc": "2021-03-17T13:05:33.169",
+          "b_rsun": 1.814,
+          "v_perp": 29.9,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.763,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 1.754
+        },
+        {
+          "event_id": "evt-0a2acf6ed058",
+          "t_ca_utc": "2022-03-17T19:21:08.743",
+          "b_rsun": 1.814,
+          "v_perp": 29.9,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.767,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 20.494
+        }
+      ]
+    },
+    "ross-128:B": {
+      "channel": "B",
+      "ra_deg": 356.9419263894581,
+      "dec_deg": -0.7890419286533022,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 1005031668,
+          "sep_arcsec": 84.4372763377964,
+          "tmcjmag": 13.66,
+          "meanmag": 11.63011,
+          "rmsmag": 0.54431254,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 1005031644,
+          "sep_arcsec": 86.10246773151371,
+          "tmcjmag": 12.864,
+          "meanmag": 12.858493,
+          "rmsmag": 0.19573125,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 1005031628,
+          "sep_arcsec": 109.46273771205755,
+          "tmcjmag": 13.337,
+          "meanmag": 13.482962,
+          "rmsmag": 0.14630713,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 80,
+      "n_nights": 80,
+      "mjd_first": 58416.299999999814,
+      "mjd_last": 59853.5,
+      "limmag_median": 14.678619999999999,
+      "limmag_p10_p90": [
+        14.106799800000001,
+        15.0214848
+      ],
+      "distinct_obsjd_values": 80,
+      "events": [
+        {
+          "event_id": "evt-dbac5186692f",
+          "t_ca_utc": "2019-09-20T09:45:12.501",
+          "b_rsun": 1.849,
+          "v_perp": 29.6,
+          "rungs": {
+            "2.5Rsun": {
+              "half_width_d": 0.457,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.819,
+              "strict": 4,
+              "nominal": 4,
+              "loose": 4
+            }
+          },
+          "closest_epoch_d": 1.106
+        },
+        {
+          "event_id": "evt-2936c5c542ab",
+          "t_ca_utc": "2020-09-19T15:47:53.446",
+          "b_rsun": 1.851,
+          "v_perp": 29.7,
+          "rungs": {
+            "2.5Rsun": {
+              "half_width_d": 0.456,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.816,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 4.642
+        },
+        {
+          "event_id": "evt-652aa6f7ba2f",
+          "t_ca_utc": "2021-09-19T21:57:19.355",
+          "b_rsun": 1.851,
+          "v_perp": 29.6,
+          "rungs": {
+            "2.5Rsun": {
+              "half_width_d": 0.457,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.82,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 7.415
+        },
+        {
+          "event_id": "evt-521d59fe7c6a",
+          "t_ca_utc": "2022-09-20T04:04:32.398",
+          "b_rsun": 1.853,
+          "v_perp": 29.7,
+          "rungs": {
+            "2.5Rsun": {
+              "half_width_d": 0.456,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.817,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 3.67
+        }
+      ]
+    },
+    "ross-154:A": {
+      "channel": "A",
+      "ra_deg": 282.4597610398149,
+      "dec_deg": -23.83736841750681,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 71165038,
+          "sep_arcsec": 14.97225681632334,
+          "tmcjmag": 6.222,
+          "meanmag": 8.345804,
+          "rmsmag": 0.65252537,
+          "psfcontam": 4.0
+        },
+        {
+          "pts_key": 71165080,
+          "sep_arcsec": 19.812358156472776,
+          "tmcjmag": 15.099,
+          "meanmag": 8.611097,
+          "rmsmag": 0.8021423,
+          "psfcontam": 6.0
+        },
+        {
+          "pts_key": 71165073,
+          "sep_arcsec": 19.94106707934261,
+          "tmcjmag": 15.327,
+          "meanmag": 8.611097,
+          "rmsmag": 0.8021423,
+          "psfcontam": 5.0
+        }
+      ],
+      "n_epochs": 103,
+      "n_nights": 103,
+      "mjd_first": 58600.5,
+      "mjd_last": 59818.299999999814,
+      "limmag_median": 13.520797,
+      "limmag_p10_p90": [
+        13.151280400000001,
+        13.912778399999999
+      ],
+      "distinct_obsjd_values": 103,
+      "events": [
+        {
+          "event_id": "evt-fdcb2478c523",
+          "t_ca_utc": "2019-07-03T20:55:17.748",
+          "b_rsun": 3.402,
+          "v_perp": 29.3,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.834,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 3
+            }
+          },
+          "closest_epoch_d": 0.428
+        },
+        {
+          "event_id": "evt-1611d9ccfd4b",
+          "t_ca_utc": "2020-07-03T03:06:46.224",
+          "b_rsun": 3.402,
+          "v_perp": 29.3,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.839,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 2.83
+        },
+        {
+          "event_id": "evt-0cbabe9443a1",
+          "t_ca_utc": "2021-07-03T09:22:48.765",
+          "b_rsun": 3.403,
+          "v_perp": 29.3,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.836,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 1.909
+        },
+        {
+          "event_id": "evt-2fa6fd94f249",
+          "t_ca_utc": "2022-07-03T15:17:25.812",
+          "b_rsun": 3.403,
+          "v_perp": 29.3,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.835,
+              "strict": 4,
+              "nominal": 4,
+              "loose": 4
+            }
+          },
+          "closest_epoch_d": 0.663
+        }
+      ]
+    },
+    "ross-154:B": {
+      "channel": "B",
+      "ra_deg": 102.46358303349376,
+      "dec_deg": 23.839979379414054,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 137723208,
+          "sep_arcsec": 33.312287756680526,
+          "tmcjmag": 14.857,
+          "meanmag": 15.03126,
+          "rmsmag": 0.5184538,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 137723218,
+          "sep_arcsec": 55.83998151226189,
+          "tmcjmag": 12.516,
+          "meanmag": 12.744803,
+          "rmsmag": 0.2677993,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 137685058,
+          "sep_arcsec": 67.28087392320143,
+          "tmcjmag": 14.6,
+          "meanmag": 14.859891,
+          "rmsmag": 0.49456838,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 163,
+      "n_nights": 154,
+      "mjd_first": 58413.299999999814,
+      "mjd_last": 59863.5,
+      "limmag_median": 14.278755,
+      "limmag_p10_p90": [
+        12.9924438,
+        14.6937282
+      ],
+      "distinct_obsjd_values": 154,
+      "events": [
+        {
+          "event_id": "evt-a4de2496af88",
+          "t_ca_utc": "2019-01-02T08:36:34.170",
+          "b_rsun": 3.295,
+          "v_perp": 30.3,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.648,
+              "strict": 5,
+              "nominal": 5,
+              "loose": 5
+            }
+          },
+          "closest_epoch_d": 0.941
+        },
+        {
+          "event_id": "evt-69bc6d911334",
+          "t_ca_utc": "2020-01-02T14:45:24.779",
+          "b_rsun": 3.294,
+          "v_perp": 30.3,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.649,
+              "strict": 12,
+              "nominal": 12,
+              "loose": 12
+            }
+          },
+          "closest_epoch_d": 1.885
+        },
+        {
+          "event_id": "evt-3a24ec02ed72",
+          "t_ca_utc": "2021-01-01T20:57:55.521",
+          "b_rsun": 3.296,
+          "v_perp": 30.3,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.651,
+              "strict": 4,
+              "nominal": 5,
+              "loose": 5
+            }
+          },
+          "closest_epoch_d": 0.626
+        },
+        {
+          "event_id": "evt-1254435490ce",
+          "t_ca_utc": "2022-01-02T03:12:01.863",
+          "b_rsun": 3.296,
+          "v_perp": 30.3,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.647,
+              "strict": 4,
+              "nominal": 4,
+              "loose": 4
+            }
+          },
+          "closest_epoch_d": 0.367
+        }
+      ]
+    },
+    "teegarden:A": {
+      "channel": "A",
+      "ra_deg": 43.27397405599559,
+      "dec_deg": 16.859772755020938,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 800671116,
+          "sep_arcsec": 89.52887417381282,
+          "tmcjmag": 15.211,
+          "meanmag": 15.235795,
+          "rmsmag": 0.65765613,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 800671141,
+          "sep_arcsec": 105.14866266767494,
+          "tmcjmag": 8.394,
+          "meanmag": 16.61056,
+          "rmsmag": 1.4942834,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 800675403,
+          "sep_arcsec": 121.86994704680373,
+          "tmcjmag": 12.721,
+          "meanmag": 12.720393,
+          "rmsmag": 0.11355059,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 142,
+      "n_nights": 138,
+      "mjd_first": 58411.299999999814,
+      "mjd_last": 59858.5,
+      "limmag_median": 14.647376,
+      "limmag_p10_p90": [
+        13.9222488,
+        14.9271584
+      ],
+      "distinct_obsjd_values": 139,
+      "events": [
+        {
+          "event_id": "evt-c6abc35d36ea",
+          "t_ca_utc": "2018-11-08T13:22:24.601",
+          "b_rsun": 1.112,
+          "v_perp": 30.1,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.75,
+              "strict": 11,
+              "nominal": 12,
+              "loose": 12
+            }
+          },
+          "closest_epoch_d": 0.743
+        },
+        {
+          "event_id": "evt-366fd233073c",
+          "t_ca_utc": "2019-11-08T19:36:22.609",
+          "b_rsun": 1.106,
+          "v_perp": 30.0,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.754,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 3
+            }
+          },
+          "closest_epoch_d": 0.517
+        },
+        {
+          "event_id": "evt-5d2d162f8aa9",
+          "t_ca_utc": "2020-11-08T01:46:23.818",
+          "b_rsun": 1.102,
+          "v_perp": 30.1,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.753,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 3.574
+        },
+        {
+          "event_id": "evt-58c317b4802f",
+          "t_ca_utc": "2021-11-08T07:52:17.929",
+          "b_rsun": 1.097,
+          "v_perp": 30.1,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.751,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 4
+            }
+          },
+          "closest_epoch_d": 0.028
+        }
+      ]
+    },
+    "teegarden:B": {
+      "channel": "B",
+      "ra_deg": 223.29917659192935,
+      "dec_deg": -16.833308367131192,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 1317498054,
+          "sep_arcsec": 42.908276120790106,
+          "tmcjmag": 13.899,
+          "meanmag": 14.012446,
+          "rmsmag": 0.30986243,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 1317498084,
+          "sep_arcsec": 49.882382193455825,
+          "tmcjmag": 14.81,
+          "meanmag": 15.100316,
+          "rmsmag": 0.51360255,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 1317498024,
+          "sep_arcsec": 63.17374621273072,
+          "tmcjmag": 13.074,
+          "meanmag": 13.181231,
+          "rmsmag": 0.28348365,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 110,
+      "n_nights": 110,
+      "mjd_first": 58480.5,
+      "mjd_last": 59746.299999999814,
+      "limmag_median": 14.486359,
+      "limmag_p10_p90": [
+        13.8583133,
+        14.8129692
+      ],
+      "distinct_obsjd_values": 110,
+      "events": [
+        {
+          "event_id": "evt-bd8fc47e99f2",
+          "t_ca_utc": "2019-05-06T22:22:43.752",
+          "b_rsun": 1.007,
+          "v_perp": 29.5,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.178,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.624,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.857,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 1.632
+        },
+        {
+          "event_id": "evt-1a3d62092d33",
+          "t_ca_utc": "2020-05-06T04:33:53.594",
+          "b_rsun": 1.002,
+          "v_perp": 29.5,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.18,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.625,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.862,
+              "strict": 4,
+              "nominal": 4,
+              "loose": 4
+            }
+          },
+          "closest_epoch_d": 2.89
+        },
+        {
+          "event_id": "evt-1aebdfada76b",
+          "t_ca_utc": "2021-05-06T10:51:15.069",
+          "b_rsun": 0.998,
+          "v_perp": 29.5,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.182,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.625,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.858,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 3
+            }
+          },
+          "closest_epoch_d": 1.152
+        },
+        {
+          "event_id": "evt-64a2465e6b55",
+          "t_ca_utc": "2022-05-06T16:52:10.113",
+          "b_rsun": 0.993,
+          "v_perp": 29.5,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.184,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.626,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.858,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 3
+            }
+          },
+          "closest_epoch_d": 1.403
+        }
+      ]
+    },
+    "van-maanen:A": {
+      "channel": "A",
+      "ra_deg": 12.298547701425004,
+      "dec_deg": 5.372592631190984,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 1100633902,
+          "sep_arcsec": 14.649661963448176,
+          "tmcjmag": 13.903,
+          "meanmag": 12.669706,
+          "rmsmag": 0.25296226,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 1100633926,
+          "sep_arcsec": 61.48066100163677,
+          "tmcjmag": 11.688,
+          "meanmag": 16.557415,
+          "rmsmag": 1.2622181,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 1100633873,
+          "sep_arcsec": 73.32108469681174,
+          "tmcjmag": 14.964,
+          "meanmag": 15.189877,
+          "rmsmag": 0.669414,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 93,
+      "n_nights": 93,
+      "mjd_first": 58411.299999999814,
+      "mjd_last": 59851.5,
+      "limmag_median": 14.485113,
+      "limmag_p10_p90": [
+        13.6938382,
+        14.956813
+      ],
+      "distinct_obsjd_values": 93,
+      "events": [
+        {
+          "event_id": "evt-7a52aa0c4d47",
+          "t_ca_utc": "2019-10-07T05:43:32.087",
+          "b_rsun": 0.34,
+          "v_perp": 29.8,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.812,
+              "strict": 5,
+              "nominal": 5,
+              "loose": 5
+            }
+          },
+          "closest_epoch_d": 0.939
+        },
+        {
+          "event_id": "evt-059fe9363c7f",
+          "t_ca_utc": "2020-10-06T11:53:14.663",
+          "b_rsun": 0.337,
+          "v_perp": 29.8,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.812,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 7.195
+        },
+        {
+          "event_id": "evt-27fec02e4e48",
+          "t_ca_utc": "2021-10-06T17:59:17.107",
+          "b_rsun": 0.335,
+          "v_perp": 29.8,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.809,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 5.25
+        },
+        {
+          "event_id": "evt-55bacf41a787",
+          "t_ca_utc": "2022-10-07T00:03:00.318",
+          "b_rsun": 0.332,
+          "v_perp": 29.8,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.813,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 7.502
+        }
+      ]
+    },
+    "van-maanen:B": {
+      "channel": "B",
+      "ra_deg": 192.30797426526436,
+      "dec_deg": -5.35193192510426,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 232989951,
+          "sep_arcsec": 62.0469128604903,
+          "tmcjmag": 14.035,
+          "meanmag": 14.1573,
+          "rmsmag": 0.39350393,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 232989999,
+          "sep_arcsec": 99.34125820616016,
+          "tmcjmag": 11.449,
+          "meanmag": 11.597501,
+          "rmsmag": 0.10632982,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 232989918,
+          "sep_arcsec": 130.95037804419243,
+          "tmcjmag": 13.974,
+          "meanmag": 13.939664,
+          "rmsmag": 0.29635972,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 118,
+      "n_nights": 98,
+      "mjd_first": 58475.5,
+      "mjd_last": 59769.299999999814,
+      "limmag_median": 14.4345125,
+      "limmag_p10_p90": [
+        13.4176127,
+        14.772350600000001
+      ],
+      "distinct_obsjd_values": 98,
+      "events": [
+        {
+          "event_id": "evt-ed0d233e1163",
+          "t_ca_utc": "2019-04-03T17:18:34.720",
+          "b_rsun": 0.256,
+          "v_perp": 29.8,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.317,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.672,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.81,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 3
+            }
+          },
+          "closest_epoch_d": 1.221
+        },
+        {
+          "event_id": "evt-be730bb49b64",
+          "t_ca_utc": "2020-04-02T23:24:20.497",
+          "b_rsun": 0.252,
+          "v_perp": 29.8,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.317,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.673,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.814,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 5.475
+        },
+        {
+          "event_id": "evt-394b595cd695",
+          "t_ca_utc": "2021-04-03T05:42:33.938",
+          "b_rsun": 0.249,
+          "v_perp": 29.8,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.317,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.673,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.814,
+              "strict": 3,
+              "nominal": 3,
+              "loose": 3
+            }
+          },
+          "closest_epoch_d": 1.062
+        },
+        {
+          "event_id": "evt-8acf3fcf150b",
+          "t_ca_utc": "2022-04-03T11:49:46.981",
+          "b_rsun": 0.247,
+          "v_perp": 29.8,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.317,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.672,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.81,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 3.807
+        }
+      ]
+    },
+    "wolf-359:A": {
+      "channel": "A",
+      "ra_deg": 164.09813948995446,
+      "dec_deg": 6.999226849841597,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 845737042,
+          "sep_arcsec": 21.545178039778687,
+          "tmcjmag": 14.538,
+          "meanmag": 9.324864,
+          "rmsmag": 1.321056,
+          "psfcontam": 1.0
+        },
+        {
+          "pts_key": 845737036,
+          "sep_arcsec": 34.399808508970175,
+          "tmcjmag": 13.911,
+          "meanmag": 12.112769,
+          "rmsmag": 1.1863127,
+          "psfcontam": 1.0
+        },
+        {
+          "pts_key": 845737012,
+          "sep_arcsec": 96.63822118534887,
+          "tmcjmag": 7.085,
+          "meanmag": 17.116606,
+          "rmsmag": 1.5704814,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 111,
+      "n_nights": 109,
+      "mjd_first": 58438.5,
+      "mjd_last": 59757.299999999814,
+      "limmag_median": 14.428741,
+      "limmag_p10_p90": [
+        13.919379,
+        14.799035
+      ],
+      "distinct_obsjd_values": 108,
+      "events": [
+        {
+          "event_id": "evt-6ee16e1d6bb7",
+          "t_ca_utc": "2019-03-03T19:26:07.809",
+          "b_rsun": 0.781,
+          "v_perp": 30.1,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.758,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 1.49
+        },
+        {
+          "event_id": "evt-44b11bc6437a",
+          "t_ca_utc": "2020-03-03T01:30:16.020",
+          "b_rsun": 0.777,
+          "v_perp": 30.0,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.76,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 2.437
+        },
+        {
+          "event_id": "evt-ef483676ce19",
+          "t_ca_utc": "2021-03-03T07:46:08.261",
+          "b_rsun": 0.774,
+          "v_perp": 30.0,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.762,
+              "strict": 1,
+              "nominal": 1,
+              "loose": 1
+            }
+          },
+          "closest_epoch_d": 3.976
+        },
+        {
+          "event_id": "evt-762521692b0a",
+          "t_ca_utc": "2022-03-03T13:58:03.703",
+          "b_rsun": 0.768,
+          "v_perp": 30.1,
+          "rungs": {
+            "0.1AU": {
+              "half_width_d": 5.757,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            }
+          },
+          "closest_epoch_d": 22.082
+        }
+      ]
+    },
+    "wolf-359:B": {
+      "channel": "B",
+      "ra_deg": 344.0807255923102,
+      "dec_deg": -6.987389422749068,
+      "n_events": 4,
+      "n_sources_6arcmin": 20,
+      "nearest_sources": [
+        {
+          "pts_key": 124907621,
+          "sep_arcsec": 117.35649391806626,
+          "tmcjmag": 13.503,
+          "meanmag": 13.728656,
+          "rmsmag": 0.19613543,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 124907680,
+          "sep_arcsec": 129.6483551545642,
+          "tmcjmag": 13.515,
+          "meanmag": 13.611555,
+          "rmsmag": 0.16683638,
+          "psfcontam": 0.0
+        },
+        {
+          "pts_key": 124904140,
+          "sep_arcsec": 153.74310636895316,
+          "tmcjmag": 15.068,
+          "meanmag": 15.343294,
+          "rmsmag": 0.47955665,
+          "psfcontam": 0.0
+        }
+      ],
+      "n_epochs": 224,
+      "n_nights": 115,
+      "mjd_first": 58415.299999999814,
+      "mjd_last": 59854.299999999814,
+      "limmag_median": 14.552324500000001,
+      "limmag_p10_p90": [
+        14.1670353,
+        14.9256319
+      ],
+      "distinct_obsjd_values": 115,
+      "events": [
+        {
+          "event_id": "evt-75392d7225e9",
+          "t_ca_utc": "2019-09-05T18:45:35.868",
+          "b_rsun": 0.727,
+          "v_perp": 29.5,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.26,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.652,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.858,
+              "strict": 6,
+              "nominal": 6,
+              "loose": 6
+            }
+          },
+          "closest_epoch_d": 2.518
+        },
+        {
+          "event_id": "evt-233fe71b4582",
+          "t_ca_utc": "2020-09-05T00:55:45.411",
+          "b_rsun": 0.723,
+          "v_perp": 29.5,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.261,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 2
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.653,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            },
+            "0.1AU": {
+              "half_width_d": 5.861,
+              "strict": 2,
+              "nominal": 4,
+              "loose": 4
+            }
+          },
+          "closest_epoch_d": 0.261
+        },
+        {
+          "event_id": "evt-2dbd2c824063",
+          "t_ca_utc": "2021-09-05T07:03:25.421",
+          "b_rsun": 0.718,
+          "v_perp": 29.5,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.262,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.653,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            },
+            "0.1AU": {
+              "half_width_d": 5.856,
+              "strict": 6,
+              "nominal": 6,
+              "loose": 6
+            }
+          },
+          "closest_epoch_d": 0.006
+        },
+        {
+          "event_id": "evt-1df551c2bc06",
+          "t_ca_utc": "2022-09-05T13:01:42.600",
+          "b_rsun": 0.715,
+          "v_perp": 29.5,
+          "rungs": {
+            "1.2Rsun": {
+              "half_width_d": 0.263,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "2.5Rsun": {
+              "half_width_d": 0.653,
+              "strict": 0,
+              "nominal": 0,
+              "loose": 0
+            },
+            "0.1AU": {
+              "half_width_d": 5.86,
+              "strict": 2,
+              "nominal": 2,
+              "loose": 2
+            }
+          },
+          "closest_epoch_d": 3.243
+        }
+      ]
+    }
+  }
+}

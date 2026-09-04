@@ -1501,3 +1501,52 @@ epochs for S_event; window-mean-vs-zero ladder rung; PM/parallax
 template (or reduced-mode PM-propagated photometry) for channel A;
 PM-matched ASAS-SN sources. Nothing committed to git during the
 session (user's call).
+
+## 15. Gattini-IR + WINTER reachability recon (2026-09-04; plan §5.8 item 6 — BLOCKED)
+
+Live probes from the dev machine, all anonymous
+(`surveys/gattini-crossings/notes/gattini_winter_recon_2026-09-04.md`;
+scan `scripts/recon_scan.py` → `results/recon_scan_v0.json`;
+snapshots `runs/gattini-crossings/recon/`). **Neither archive can
+carry a crossings search today; no freeze.**
+
+**PGIR.** The public DR1 (NOIRLab Data Lab `pgir_dr1`: `exposures`
+4.13 M quadrant stacks, `photometry` 47.6 G rows, `sources` 148.9 M;
+TAP + `queryClient` q3c cones, sub-second) is a **light-curve catalog
+of 2MASS point sources**, J < 15.5, era 2018-10-15 → 2022-10-15
+(1,130 nights), δ > −28.5°, per-epoch 5σ depth J ≈ 14.5 Vega at the
+targets (plan said "J ~16" — that was the nominal AB number),
+saturation J 8.5 → 6.0. No image service (SIA 404 where `nsc_dr2`
+answers; no storage tree; no IRSA holding). Two defects kill both
+channels: (1) photometry is forced at **2MASS-epoch positions** —
+every in-era target is a high-PM star 15–120″ from its 2MASS entry,
+which reads empty sky (van-maanen 16.6 vs J 11.7, wolf-359 17.1 vs
+7.1, teegarden 16.6 vs 8.4) while the flux lands in drifting
+neighbour entries; the bright ones (gj-908, ross-154, ross-128
+pre-2020) are saturated besides; no antipode has a catalogued source
+within 33″ → channel B has no photometry at all; (2) `obsjd` is
+**float32 at the source** (paper table types) → 0.25 d bins (2,596
+distinct values over 1,130 nights), ~40 % of a grazing window.
+Non-detection rows are kept, so the catalog does give the **visit
+list**: all 14 in-era target-channels (7 targets × A/B, ≤ 0.1 AU,
+4 events each 2019–2022) imaged 80–224 times; the van-maanen
+0.25 R☉ April family has zero in-window epochs (closest 1.06 d);
+wolf-359 B (b 0.72 R☉) is in-window at 2.5 R☉ in 2020 and 2021 (2
+epochs each) and marginally at 1.2 R☉; 0.1 AU rungs 3–26 epochs per
+unit. Wavelength correction: PGIR is J only — **1064 nm is not in J**;
+that cell needs WINTER Y.
+
+**WINTER.** Y/J/Hs, 1.1″ px, single-visit J 17.6–19.3, operating
+since 2023-06 — the right substrate — but closed: no data release, no
+proprietary-period statement in any paper (incl. the Dec-2025
+instrument paper), no IRSA holding, `winter.caltech.edu` is a
+login-only portal.
+
+**Outcome.** Item 6 marked BLOCKED in plan §5.8 (substrate, not
+adapter cost); the route is a data ask to the PGIR team (stack
+cutouts, or a PM-propagated forced-photometry run over the 56
+windows — the visit list is the attachment) or a future image/DR2
+release; WINTER re-check added to §5.7 standing maintenance. No
+adapter written, no hypotheses drafted, nothing committed to git.
+Cone-power framing if a route opens: ~5 mag shallower than ATLAS →
+MW-class floors at 0.1 AU (opening the cell, as the plan framed it).

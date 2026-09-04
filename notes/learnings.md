@@ -411,3 +411,16 @@ catalogs. Lessons from DASCH (`report/dasch_crossings.md` §4):
 - JPL `sb_ident` 500s on pre-1950 epochs; the workaround is direct
   Horizons per-asteroid ephemerides × plate-date coincidence
   scanning (asteroids 1–100, 1-day steps, minutes of wall time).
+
+- **Catalog-level light-curve releases can be un-searchable for
+  exactly our targets** (PGIR DR1, 2026-09-04): forced photometry at
+  the reference-catalog epoch (2MASS, 1998–2001) puts every nearby
+  high-proper-motion star 15–120″ from its own entry two decades
+  later — the entry reads sky, the flux lands in drifting neighbour
+  entries — and empty-sky antipodes have no entry at all. Check
+  three things before trusting any such catalog: is the position
+  PM-propagated, are non-detections kept (they were; the visit list
+  survives), and what is the time column's storage type (float32 JD
+  = 0.25 d bins at JD 2.46×10⁶ — invisible in a schema description
+  that says "Julian date"). A visit list is still worth recording:
+  it turns a future data ask into a 56-window request.
