@@ -1,0 +1,167 @@
+{
+  "estimator": "field-level union of quality-G image_ids of catalogued sources within 3 arcmin",
+  "era_mjd": [
+    56595.0,
+    60842.0
+  ],
+  "channel_A_nearest_source": {
+    "gj-1276": {
+      "asas_sn_id": "472446751098",
+      "sep_arcsec": 13.3
+    },
+    "gj-908": {
+      "asas_sn_id": "377957939827",
+      "sep_arcsec": 7.2
+    },
+    "ross-128": {
+      "asas_sn_id": "455267044405",
+      "sep_arcsec": 7.8
+    },
+    "ross-154": {
+      "asas_sn_id": "506807067974",
+      "sep_arcsec": 4.0
+    },
+    "teegarden": {
+      "asas_sn_id": "266288667418",
+      "sep_arcsec": 27.4
+    },
+    "van-maanen": {
+      "asas_sn_id": "386547103335",
+      "sep_arcsec": 15.0
+    },
+    "wolf-359": {
+      "asas_sn_id": "661431933573",
+      "sep_arcsec": 36.0
+    }
+  },
+  "channels": {
+    "B": {
+      "0.1AU": {
+        "events_total": 77,
+        "events_in_era": 70,
+        "events_covered": 62,
+        "median_images_covered": 7.0,
+        "per_target": {
+          "gj-1276": [
+            9,
+            10
+          ],
+          "gj-908": [
+            9,
+            10
+          ],
+          "ross-128": [
+            9,
+            10
+          ],
+          "ross-154": [
+            9,
+            10
+          ],
+          "teegarden": [
+            9,
+            10
+          ],
+          "van-maanen": [
+            8,
+            10
+          ],
+          "wolf-359": [
+            9,
+            10
+          ]
+        }
+      },
+      "1.2Rsun": {
+        "events_total": 44,
+        "events_in_era": 40,
+        "events_covered": 12,
+        "median_images_covered": 1.0,
+        "per_target": {
+          "gj-1276": [
+            4,
+            10
+          ],
+          "teegarden": [
+            1,
+            10
+          ],
+          "van-maanen": [
+            5,
+            10
+          ],
+          "wolf-359": [
+            2,
+            10
+          ]
+        }
+      },
+      "2.5Rsun": {
+        "events_total": 55,
+        "events_in_era": 50,
+        "events_covered": 23,
+        "median_images_covered": 1.0,
+        "per_target": {
+          "gj-1276": [
+            7,
+            10
+          ],
+          "ross-128": [
+            3,
+            10
+          ],
+          "teegarden": [
+            4,
+            10
+          ],
+          "van-maanen": [
+            5,
+            10
+          ],
+          "wolf-359": [
+            4,
+            10
+          ]
+        }
+      }
+    },
+    "A": {
+      "0.1AU": {
+        "events_total": 77,
+        "events_in_era": 69,
+        "events_covered": 59,
+        "median_images_covered": 9.0,
+        "per_target": {
+          "gj-1276": [
+            9,
+            10
+          ],
+          "gj-908": [
+            8,
+            10
+          ],
+          "ross-128": [
+            9,
+            10
+          ],
+          "ross-154": [
+            6,
+            9
+          ],
+          "teegarden": [
+            9,
+            10
+          ],
+          "van-maanen": [
+            9,
+            10
+          ],
+          "wolf-359": [
+            9,
+            10
+          ]
+        }
+      }
+    }
+  }
+}

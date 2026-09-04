@@ -1,0 +1,37 @@
+{
+ "stage": "dev (threshold freeze v1.0, split D8: wolf-359 + gj-908)",
+ "date": "2026-09-04",
+ "trials": 10,
+ "expected_control_crossings": 1.317,
+ "exceedances": [
+  {
+   "unit": "B 2.5Rsun wolf-359 o",
+   "statistics": {"S_event": [3.55, 1.45], "S_pulse": [3.18, 2.14]},
+   "window": "evt-da7ea0 (t_ca MJD 60192.804, 2023-09-05; 2.5 Rsun half-window 0.654 d)",
+   "facts": [
+    "the in-window set at z=550 is ONE exposure: 04a60192o0205o (Sutherland), dt -0.462 d, 97 +/- 28 uJy (3.5 sigma) - S_w equals the single-epoch S/N",
+    "the other three quad members read -90 +/- 106 (mask-pass), 345 +/- 247 and -73 +/- 289 (mask-fail: mag5sig 16.7 / 15.9, Sky 16-17.3) - a degrading-sky quad; the 0.477-d exposure is dropped at z=550 by the R>=0.2 response rule (drift 3.0 arcsec vs s=1.64 arcsec) and enters at higher z, where the unit's S_pulse (3.18 at z=5500) is the same 3.5-sigma exposure",
+    "ingress/egress positions 37.5 arcsec away read -13 +/- 29 and -3 +/- 25 in the same exposure: local difference-image noise is nominal",
+    "SkyBoT (M22, 120 arcsec): no known object; nearest catalogued body Saturn at ~10 deg (runs/atlas-asassn-crossings/skybot/exceedance_da7ea0.txt)",
+    "recurrence: the unit's other covered windows give S_w -1.80, 2.65, -0.05 (evt-2dbd2c, 1df551, 3a6249); no second window exceeds",
+    "the identical epoch is the S_event maximum of the B 0.1 AU wolf-359 unit, where it sits below T (4.14) - the wider unit's richer control family sets a higher bar"
+   ],
+   "veto_ladder": {"1_skybot": "clean", "2_intra_quad": "FAIL - single-exposure window, quad members consistent with zero", "3_template_step": "n/a (2023)", "4_recurrence": "none", "5_rate": "n/a (grazing rung)"},
+   "disposition": "retained, non-promotable: single-exposure 3.5-sigma fluctuation in a low-quality quad; counts as 2 of the 1.3 expected control crossings (S_event and S_pulse share the epoch)"
+  }
+ ],
+ "control_findings": [
+  {
+   "unit": "B 0.1AU wolf-359 o",
+   "finding": "S_pulse control T = 15.78 set by one exposure in the +23 d pseudo-window of evt-3a6249: 03a60585o0050o (El Sauce, MJD 60584.7477), 445 +/- 23 uJy, chi/N 44.7; absent in 03a60585o0044o (4 min earlier, 19 +/- 18) and o0103 (35 min later, 17 +/- 17) and at both mini-track positions 37.5 arcsec away (-11 +/- 22, 1 +/- 20); SkyBoT (W68) clean, Saturn 2.4 deg away",
+   "reading": "single-frame artefact (cosmic ray / hot pixel class) passing the FAQ mask (which has no chi/N term); the frozen max rule makes it the S_pulse threshold for this unit - the trial is valid but insensitive; a chi/N<5 term belongs in a future strict mask (not adopted post-data)"
+  }
+ ],
+ "machinery_diagnostics": {
+  "k_rescale": "1.00-1.53 across positions (median ~1.05): the FAQ-masked duJy are near-honest; the largest k (1.53) is the 2016-era 02a-only series",
+  "ks_standardized_baseline": "KS p 0.24-0.97 on 200-1140 baseline epochs per event; std 1.0-1.3 typical, three events at 2.0-5.9 (tail outliers of the artefact class above; medians unaffected); frac(z>3) 0-0.45 %",
+  "mini_track": "at z=550 the grazing-rung windows shrink to the ~0.43 d around t_ca where R>=0.2 (drift 6.5 arcsec/d against s~1.6 arcsec); the nested-z max recovers the full window at z>=2500 - working as frozen, recorded for the report",
+  "validity_counts": "engine control-validity counts match the freeze for every trial (no validity_mismatch flags)"
+ },
+ "amendments_required": "none - both findings are handled by the frozen veto ladder (rung 2) and the frozen max rule; the dev stage validates the chain for the blind confirmatory run"
+}

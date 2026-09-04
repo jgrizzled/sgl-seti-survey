@@ -1,0 +1,207 @@
+{
+  "tasks_total": 308,
+  "series_available": 308,
+  "series_failed": 0,
+  "partial": false,
+  "mask": "FAQ primary (\u00a77)",
+  "faq_keep_fraction_median": 0.9311602601249114,
+  "pseudo_offsets_d": [
+    -97,
+    -71,
+    -47,
+    -23,
+    23,
+    47,
+    71,
+    97
+  ],
+  "channels": {
+    "B": {
+      "1.2Rsun": {
+        "events_available": 44,
+        "events_covered": 8,
+        "events_covered_o": 7,
+        "events_covered_c": 3,
+        "median_in_window_exposures_covered": 4.0,
+        "median_window_d": 0.5140135649524065,
+        "pseudo_windows_with_data_mean_o": 1.3863636363636365,
+        "per_target": {
+          "gj-1276": {
+            "events": 11,
+            "covered": 2,
+            "nights_total": 2,
+            "exposures_total": 8
+          },
+          "teegarden": {
+            "events": 11,
+            "covered": 1,
+            "nights_total": 2,
+            "exposures_total": 10
+          },
+          "van-maanen": {
+            "events": 11,
+            "covered": 4,
+            "nights_total": 5,
+            "exposures_total": 18
+          },
+          "wolf-359": {
+            "events": 11,
+            "covered": 1,
+            "nights_total": 1,
+            "exposures_total": 12
+          }
+        }
+      },
+      "2.5Rsun": {
+        "events_available": 55,
+        "events_covered": 25,
+        "events_covered_o": 17,
+        "events_covered_c": 10,
+        "median_in_window_exposures_covered": 4.0,
+        "median_window_d": 1.281487974941526,
+        "pseudo_windows_with_data_mean_o": 2.709090909090909,
+        "per_target": {
+          "gj-1276": {
+            "events": 11,
+            "covered": 4,
+            "nights_total": 4,
+            "exposures_total": 13
+          },
+          "ross-128": {
+            "events": 11,
+            "covered": 3,
+            "nights_total": 3,
+            "exposures_total": 13
+          },
+          "teegarden": {
+            "events": 11,
+            "covered": 7,
+            "nights_total": 9,
+            "exposures_total": 39
+          },
+          "van-maanen": {
+            "events": 11,
+            "covered": 7,
+            "nights_total": 9,
+            "exposures_total": 30
+          },
+          "wolf-359": {
+            "events": 11,
+            "covered": 4,
+            "nights_total": 5,
+            "exposures_total": 22
+          }
+        }
+      },
+      "0.1AU": {
+        "events_available": 77,
+        "events_covered": 74,
+        "events_covered_o": 71,
+        "events_covered_c": 42,
+        "median_in_window_exposures_covered": 17.0,
+        "median_window_d": 11.624726968303735,
+        "pseudo_windows_with_data_mean_o": 7.038961038961039,
+        "per_target": {
+          "gj-1276": {
+            "events": 11,
+            "covered": 11,
+            "nights_total": 51,
+            "exposures_total": 209
+          },
+          "gj-908": {
+            "events": 11,
+            "covered": 11,
+            "nights_total": 43,
+            "exposures_total": 156
+          },
+          "ross-128": {
+            "events": 11,
+            "covered": 10,
+            "nights_total": 44,
+            "exposures_total": 164
+          },
+          "ross-154": {
+            "events": 11,
+            "covered": 10,
+            "nights_total": 43,
+            "exposures_total": 166
+          },
+          "teegarden": {
+            "events": 11,
+            "covered": 11,
+            "nights_total": 69,
+            "exposures_total": 295
+          },
+          "van-maanen": {
+            "events": 11,
+            "covered": 11,
+            "nights_total": 56,
+            "exposures_total": 246
+          },
+          "wolf-359": {
+            "events": 11,
+            "covered": 10,
+            "nights_total": 51,
+            "exposures_total": 222
+          }
+        },
+        "events_covered_union_track": 74
+      }
+    },
+    "A": {
+      "0.1AU": {
+        "events_available": 77,
+        "events_covered": 68,
+        "events_covered_o": 67,
+        "events_covered_c": 37,
+        "median_in_window_exposures_covered": 14.0,
+        "median_window_d": 11.529697445259552,
+        "pseudo_windows_with_data_mean_o": 6.441558441558442,
+        "per_target": {
+          "gj-1276": {
+            "events": 11,
+            "covered": 10,
+            "nights_total": 49,
+            "exposures_total": 207
+          },
+          "gj-908": {
+            "events": 11,
+            "covered": 8,
+            "nights_total": 25,
+            "exposures_total": 76
+          },
+          "ross-128": {
+            "events": 11,
+            "covered": 9,
+            "nights_total": 44,
+            "exposures_total": 153
+          },
+          "ross-154": {
+            "events": 11,
+            "covered": 10,
+            "nights_total": 52,
+            "exposures_total": 150
+          },
+          "teegarden": {
+            "events": 11,
+            "covered": 10,
+            "nights_total": 51,
+            "exposures_total": 181
+          },
+          "van-maanen": {
+            "events": 11,
+            "covered": 10,
+            "nights_total": 52,
+            "exposures_total": 191
+          },
+          "wolf-359": {
+            "events": 11,
+            "covered": 11,
+            "nights_total": 38,
+            "exposures_total": 149
+          }
+        }
+      }
+    }
+  }
+}

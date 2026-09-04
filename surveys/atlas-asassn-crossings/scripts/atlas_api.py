@@ -71,6 +71,14 @@ def wait_and_fetch(task_url, hdrs, out_path, query_params=None,
         if time.time() - t0 > timeout_s:
             raise TimeoutError(f'{task_url} not finished after {timeout_s}s')
         time.sleep(poll_s)
+    return fetch_result(j, hdrs, out_path, query_params, t0=t0, delete=delete)
+
+
+def fetch_result(j, hdrs, out_path, query_params=None, t0=None, delete=True):
+    """Given a finished task's JSON, save result text + sidecar, DELETE
+    the task. Returns the sidecar dict."""
+    task_url = j['url']
+    t0 = t0 or time.time()
     txt = requests.get(j['result_url'], headers=hdrs).text
     os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
     with open(out_path, 'w') as f:

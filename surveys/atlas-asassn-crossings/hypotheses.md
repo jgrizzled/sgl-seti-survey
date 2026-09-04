@@ -244,3 +244,85 @@ remedy (no searchable rung). **Decision D1.**
   ross-154 or gj-908 (wide-b, insensitive rungs — machinery
   validation); all grazing-rung targets except wolf-359 confirmatory.
   Seed declared at threshold freeze.
+
+## 12. Pre-data amendments at coverage start (2026-09-03, new server)
+
+Recorded before any survey-position light curve was searched (the
+first windowed task was pulled only to time the queue; nothing beyond
+row/night counts and the FAQ-mask fraction was formed from it).
+
+- **A1 — in-era event count (§3, §6, §9).** The §3 table and the
+  "22 semiannual windows per target" framing counted every in-era
+  Earth crossing of the Sun–star axis by link direction only. The
+  universal list holds two such crossings per year: one with Earth on
+  the star side (channel A star at solar elongation ≈ 180°; channel B
+  antipode at ≈ 0°) and one on the anti-star side (the reverse).
+  Half of each channel's 22 are therefore the sunward combinations
+  the freeze already declares out of scope (§3; plan §5.8 item 9 —
+  searched by the LASCO survey). Measured at coverage start
+  (`scripts/build_task_list.py`, elongation at every task position:
+  174–180° kept, 0.1–0.5° dropped; `results/era_scope_v1.json`
+  carries both counts): **11 searchable events per target per
+  channel, annual (~365 d) recurrence** — B 1.2 R☉ 44 / 2.5 R☉ 55 /
+  0.1 AU 77, A 0.1 AU 77 (A 1.0 AU 957, constraint-only).
+  Consequences: the recurrence stack is over ≤ 11 windows, so the §9
+  pre-declared stack depth (21.3–21.7) shifts ~0.4 mag shallower
+  (≈ 20.9–21.3) before coverage attrition; the pseudo-window family
+  (±23/47/71/97 d) is unchanged — every offset sits at elongation
+  ≥ 80°; the §6 task budget becomes **231 B + 77 A = 308 windowed
+  tasks** (`results/task_list_v1.ecsv`). D3 is unchanged in
+  construction; the channel-A "mini-track" collapses by geometric
+  identity (the star has no z-track and moves < 0.1″ over the 0.1 AU
+  half-window), so A gets one position per event — recorded here, not
+  a design change. Prior crossings surveys (ZTF/PS1/PTF coverage
+  scripts) applied the axis-side filter; `era_scope_v0.json` did not
+  and is superseded by `era_scope_v1.json`.
+- **A2 — eras (§2, D7).** ATLAS era end = **MJD 61286 (2026-09-03,
+  coverage start)**. ASAS-SN Sky Patrol v2 ceiling re-measured over
+  the 14 narrow-rung positions (3′ cones, `scripts/asassn_currency.py`,
+  `results/asassn_currency_2026-09-03.json`): **max JD 2460842.8 =
+  2025-06-16 (MJD 60842)** — unchanged from the recon's 2460841 after
+  15 months, so the ceiling is the reprocessing lag, not ingestion;
+  per-position ceilings range 2025-02 (teegarden, both sides) to
+  2025-06. ASAS-SN v2 is a 2013 → 2025-06 substrate for this survey;
+  windows after that are ATLAS-only.
+- **A3 — queue facts.** The API schema (snapshot
+  `runs/atlas-asassn-crossings/docs_snapshot/`) has no radec-list
+  parameter: one position per task, serial per account. One windowed
+  (±110 d) difference-flux task executes in ~2.2 min server time
+  (vs 25–70 min full-history), so the 308-task fleet is ~12 h of
+  serial drain (`scripts/atlas_drain.py`, resumable via sidecars +
+  `comment` = task key).
+
+## 13. Threshold freeze v1.0 (2026-09-04; `configs/threshold_freeze_v1.json`)
+
+Recorded before any in-window statistic was formed. Content hash
+`sha256:3fe21df01476d0cb71c63cb796d6c3579b0f98d390c4ec436a5a995b0777bccd`;
+seed **20260904**; inputs hashed: this document (as of A1–A3),
+`task_list_v1.ecsv`, `coverage_v1_events.ecsv`,
+`asassn_ledger_v1_events.ecsv`, `saturation_cut_v1.json`. User-approved
+decisions (2026-09-04): D8 split **dev = wolf-359 (D1) + gj-908**,
+every rung/channel of a dev target is dev; per-statistic gates —
+S_pulse/S_event at ≥ 1 covered window, S_stack at ≥ 3 covered
+windows, and a statistic is a searched trial only with **≥ 4 valid
+mirror-gated controls** (pseudo-windows for S_pulse/S_event,
+pseudo-stacks for S_stack), else constraint-only; per-trial crossing
+probability 1/(n_valid + 1) from measured validity; o band searched,
+c annotation only; ASAS-SN v2 coverage ledger only (PM-matched
+on-star series deferred); D2 saturation on the reduced-mode 20-d
+series (`scripts/saturation_cut.py`): gj-1276 ok, teegarden marginal
+(o 12.59), van-maanen (12.30), wolf-359, ross-128, ross-154, gj-908
+excluded; D6 positive control (15000) CCD in MPC mode.
+
+**Population.** 14 searched units / 37 trials (dev 10, confirmatory
+27), expected control crossings 4.55. B 0.1 AU: all 7 targets, three
+statistics each (8 valid controls). A 0.1 AU: gj-1276, teegarden
+(three statistics). Grazing rungs: S_pulse + S_event only — B 1.2 R☉
+van-maanen (4 windows, 4 valid controls) and wolf-359 (1 window);
+B 2.5 R☉ van-maanen (5), teegarden (4), wolf-359 (4), each with 7
+valid controls; **S_stack is constraint-only at every grazing rung**
+(≤ 3 valid pseudo-stacks — the recurrence cell's calibrated test
+needs coverage the nightly cadence did not deliver). Constraint-only
+units: B 1.2 R☉ teegarden, gj-1276; B 2.5 R☉ gj-1276, ross-128
+(1–3 valid controls). Depth honesty and the A 1.0 AU constraint-only
+rung as in the freeze file.

@@ -1,0 +1,87 @@
+{
+ "n_rows": 1059,
+ "n_primary_mask": 1011,
+ "ephemeris": {
+  "n_days": 977,
+  "V_range": [
+   18.414,
+   20.424
+  ],
+  "r_au_range": [
+   2.598803173047,
+   2.844901466599
+  ]
+ },
+ "bands": {
+  "o": {
+   "n": 778,
+   "V_pred_range": [
+    18.415415741999997,
+    20.412817670000003
+   ],
+   "nightly_stacks_snr5": {
+    "n_nights": 125,
+    "median_resid_mag": -0.059,
+    "robust_scatter_mag": 0.316,
+    "apparition_median_resid": {
+     "2024": [
+      -0.045,
+      75
+     ],
+     "2025": [
+      -0.098,
+      50
+     ]
+    },
+    "gate_nightly_scatter_le_0p2": false,
+    "gate_apparition_offset_le_0p2": true
+   },
+   "offset_o_minus_V_median": -0.255,
+   "robust_scatter": 0.458,
+   "slope_resid_vs_V": -0.0256,
+   "flux_ratio_pred_over_meas": 0.997,
+   "median_snr": 3.8,
+   "frac_detected_snr3": 0.607,
+   "gate_scatter_le_0p2": false,
+   "gate_slope_lt_0p1": true
+  },
+  "c": {
+   "n": 194,
+   "V_pred_range": [
+    18.42309995300002,
+    20.305427060000003
+   ],
+   "nightly_stacks_snr5": {
+    "n_nights": 35,
+    "median_resid_mag": -0.024,
+    "robust_scatter_mag": 0.31,
+    "apparition_median_resid": {
+     "2024": [
+      -0.024,
+      15
+     ],
+     "2025": [
+      -0.028,
+      20
+     ]
+    },
+    "gate_nightly_scatter_le_0p2": false,
+    "gate_apparition_offset_le_0p2": true
+   },
+   "offset_o_minus_V_median": 0.046,
+   "robust_scatter": 0.442,
+   "slope_resid_vs_V": -0.0534,
+   "flux_ratio_pred_over_meas": 0.999,
+   "median_snr": 4.8,
+   "frac_detected_snr3": 0.68,
+   "gate_scatter_le_0p2": false,
+   "gate_slope_lt_0p1": true
+  }
+ },
+ "gate_decision": {
+  "D6_scale_gate": "PASS",
+  "basis": "the control is deliberately faint (V 18.4-20.4, per-exposure S/N ~4), so the per-exposure and nightly-stack scatters (0.46 / 0.32 mag) are photon noise + rotational lightcurve, not calibration; the scale is tested by bias: apparition medians after one colour term (o-V = -0.255) within 0.1 mag ({'2024': (-0.045, 75), '2025': (-0.098, 50)}), residual-vs-brightness slope -0.026 mag/mag (< 0.1), c band consistent (-0.024)",
+  "declared_systematic_mag": 0.1,
+  "image_request_fallback": "not triggered (no residual > 0.2 mag)"
+ }
+}

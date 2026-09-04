@@ -1,0 +1,72 @@
+{
+  "era_mjd": [
+    57227.0,
+    61286.0
+  ],
+  "half_range_days": 110.0,
+  "z_track_au": 550.0,
+  "n_tasks": 308,
+  "by_channel": {
+    "A": 77,
+    "B": 231
+  },
+  "by_pos_role": {
+    "tca": 154,
+    "ingress": 77,
+    "egress": 77
+  },
+  "events_per_target_per_channel": 11,
+  "sunward_events_dropped": {
+    "van-maanen": {
+      "A": 11,
+      "B": 11
+    },
+    "wolf-359": {
+      "A": 11,
+      "B": 11
+    },
+    "gj-1276": {
+      "A": 11,
+      "B": 11
+    },
+    "teegarden": {
+      "A": 11,
+      "B": 11
+    },
+    "ross-128": {
+      "A": 11,
+      "B": 11
+    },
+    "ross-154": {
+      "A": 11,
+      "B": 11
+    },
+    "gj-908": {
+      "A": 11,
+      "B": 11
+    }
+  },
+  "sun_elong_deg_range": [
+    174.15086810124046,
+    179.9361821891872
+  ],
+  "mini_track_offset_arcsec": {
+    "B_max": 37.51743107392232,
+    "B_median_nonzero": 37.46794021053741
+  },
+  "half_windows_days": {
+    "1.2Rsun": [
+      0.1718768740365942,
+      0.31824448542454653
+    ],
+    "2.5Rsun": [
+      0.4548672043021621,
+      0.6731175072966882
+    ],
+    "0.1AU": [
+      4.772148810994077,
+      5.861861273799835
+    ]
+  },
+  "channel_A_mini_track": "collapsed to 1 position (geometric identity, see docstring)"
+}

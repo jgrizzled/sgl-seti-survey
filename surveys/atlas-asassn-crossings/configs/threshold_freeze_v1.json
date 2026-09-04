@@ -1,0 +1,1111 @@
+{
+ "alpha": {
+  "fwer_alpha": 0.05,
+  "ks_alpha": 0.01
+ },
+ "completeness": {
+  "depth_honesty": "grazing-rung stacks hold ~18-30 exposures (van-maanen 1.2 R_sun 18 over 4 windows), ~20.6 stacked; 0.1 AU stacks ~21.5; per-window kW-class limits through the grazing cones, not the hypotheses \u00a79 \"few hundred W\" - stated before search",
+  "method": "D6 response-model injections into the real off-window residual series of each searched unit: signal uJy x R_i(offset, FWHM) with the chord temporal profile, >= 100 draws per unit and statistic, seed 20260904; recovery = exceedance of the frozen T",
+  "positive_control": "(15000) CCD, MPC mode, MJD 60310-61286, through the identical mask -> detrend -> statistic chain vs JPL Horizons predicted V (o via the asteroid solar-colour offset); gate |residual| <= 0.2 mag, else a small image-request subsample (D6)"
+ },
+ "controls": {
+  "designated_offsets_days": [
+   -97,
+   -71,
+   -47,
+   -23,
+   23,
+   47,
+   71,
+   97
+  ],
+  "kind": "temporal pseudo-windows at the same fixed position (both channels)",
+  "per_trial_crossing_probability": "1/(n_valid + 1), tallied from measured validity - not the nominal 1/9",
+  "redraws": "none available inside the +/-110 d pull; overlap with a real window of any rung is geometrically impossible (|offset| - half >= 17 d)",
+  "threshold_rule": "T = max one-sided control statistic over the valid controls, per statistic; exceedance S > max(T, 0); margin S - T reported",
+  "validity": "mirror-gated per statistic: for S_pulse/S_event an offset is a valid control iff >= 1 covered event of the unit has primary-mask o data in that pseudo-window (the control statistic takes the same max over events); for S_stack a pseudo-stack k is valid iff >= 3 events have data at offset k; the same-offset pseudo-windows of all covered events form one pseudo-stack, chord-weighted identically"
+ },
+ "detrending": {
+  "rule": "D5: per position and band, residual r_i = f_i - running median of off-window primary-mask epochs within +/-15 d of t_i (30 d window; min 5 epochs, else the off-window global median); in-window epochs never enter the median",
+  "variance": "v_i = k sigma_i^2 (duJy), k = median(r^2/sigma^2)/0.4549 over off-window epochs after 3x3-sigma clipping, floor 1, per (position, band) - the established recipe"
+ },
+ "freeze_content_hash": "sha256:3fe21df01476d0cb71c63cb796d6c3579b0f98d390c4ec436a5a995b0777bccd",
+ "freeze_version": "atlas-asassn-crossings-thresholds-v1.0",
+ "frozen_at": "2026-09-04",
+ "hypothesis_version": "atlas-asassn-crossings-hypotheses-v1.0 + \u00a712 amendments A1-A3",
+ "input_hashes": {
+  "asassn_ledger": "sha256:ecc72a1131532565c67642405209fc15b0d1ac06ffc4bbc008b7781c5d8cebf7",
+  "coverage": "sha256:a1f46f470fb7b3dfdd70c4407d0ac8afe38bc956c2df13f8de283bf9cba284e5",
+  "hypotheses": "sha256:3d999a0a1011b58f1f90bd490645f51074c1ec41b9fb4a13282e2187a49f3d8d",
+  "saturation": "sha256:f4c4ea2e6e49e00bc20c47e9331d50236c815aed043f02772bc427535286b8c5",
+  "task_list": "sha256:9eea2ee396b4edd734b39e2c0b22c2161c92e2363b28b43886195678dafe1cb8"
+ },
+ "quality": {
+  "primary_mask": "FAQ recipe (atlas_api.faq_quality_mask): duJy<10000, err==0, 100<x,y<10460, 1.6<maj,min<5, -1<apfit<-0.1, mag5sig>17, Sky>17; H-filter rows dropped",
+  "strict_mask": "primary + mag5sig>18.5 + |MJD - template step (58417, 58882)| > 30 d; strict re-run reported for every exceedance"
+ },
+ "search_units": [
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "constraint_only",
+   "covered_event_ids": [
+    "evt-80ac727d0ce6"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 4,
+   "in_window_exposures_o": 4,
+   "n_covered_events": 1,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [
+    "S_pulse: 1 valid controls < 4 -> constraint-only",
+    "S_event: 1 valid controls < 4 -> constraint-only",
+    "S_stack: 1 covered windows < 3 -> not formed"
+   ],
+   "per_offset_covered_events": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "rung": "1.2Rsun",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {},
+   "target_id": "gj-1276"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "constraint_only",
+   "covered_event_ids": [
+    "evt-898a207ba6d9"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 0,
+   "in_window_exposures_o": 10,
+   "n_covered_events": 1,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [
+    "S_pulse: 3 valid controls < 4 -> constraint-only",
+    "S_event: 3 valid controls < 4 -> constraint-only",
+    "S_stack: 1 covered windows < 3 -> not formed"
+   ],
+   "per_offset_covered_events": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0
+   ],
+   "rung": "1.2Rsun",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {},
+   "target_id": "teegarden"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-fc686acceba1",
+    "evt-ed0d233e1163",
+    "evt-394b595cd695",
+    "evt-967947b04481"
+   ],
+   "expected_control_crossings": 0.4,
+   "in_window_exposures_c": 4,
+   "in_window_exposures_o": 14,
+   "n_covered_events": 4,
+   "n_events": 11,
+   "n_trials": 2,
+   "notes": [
+    "S_stack: 2 valid pseudo-stacks < 4 -> constraint-only"
+   ],
+   "per_offset_covered_events": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    3,
+    3
+   ],
+   "rung": "1.2Rsun",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 4,
+     "p_crossing": 0.2
+    },
+    "S_pulse": {
+     "n_valid_controls": 4,
+     "p_crossing": 0.2
+    }
+   },
+   "target_id": "van-maanen"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-2dbd2c824063"
+   ],
+   "expected_control_crossings": 0.4,
+   "in_window_exposures_c": 8,
+   "in_window_exposures_o": 4,
+   "n_covered_events": 1,
+   "n_events": 11,
+   "n_trials": 2,
+   "notes": [
+    "S_stack: 1 covered windows < 3 -> not formed"
+   ],
+   "per_offset_covered_events": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ],
+   "rung": "1.2Rsun",
+   "saturation_status": null,
+   "split": "dev",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 4,
+     "p_crossing": 0.2
+    },
+    "S_pulse": {
+     "n_valid_controls": 4,
+     "p_crossing": 0.2
+    }
+   },
+   "target_id": "wolf-359"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "constraint_only",
+   "covered_event_ids": [
+    "evt-24912cfb2980",
+    "evt-80ac727d0ce6"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 5,
+   "in_window_exposures_o": 8,
+   "n_covered_events": 2,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [
+    "S_pulse: 2 valid controls < 4 -> constraint-only",
+    "S_event: 2 valid controls < 4 -> constraint-only",
+    "S_stack: 2 covered windows < 3 -> not formed"
+   ],
+   "per_offset_covered_events": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    2,
+    0,
+    0
+   ],
+   "rung": "2.5Rsun",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {},
+   "target_id": "gj-1276"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "constraint_only",
+   "covered_event_ids": [
+    "evt-af37dd9acfaa",
+    "evt-cdd227351deb"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 4,
+   "in_window_exposures_o": 9,
+   "n_covered_events": 2,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [
+    "S_pulse: 1 valid controls < 4 -> constraint-only",
+    "S_event: 1 valid controls < 4 -> constraint-only",
+    "S_stack: 2 covered windows < 3 -> not formed"
+   ],
+   "per_offset_covered_events": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   "rung": "2.5Rsun",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {},
+   "target_id": "ross-128"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-898a207ba6d9",
+    "evt-64a2465e6b55",
+    "evt-14efb12a5dfb",
+    "evt-d6a207b21d89"
+   ],
+   "expected_control_crossings": 0.25,
+   "in_window_exposures_c": 13,
+   "in_window_exposures_o": 26,
+   "n_covered_events": 4,
+   "n_events": 11,
+   "n_trials": 2,
+   "notes": [
+    "S_stack: 3 valid pseudo-stacks < 4 -> constraint-only"
+   ],
+   "per_offset_covered_events": [
+    1,
+    3,
+    1,
+    1,
+    1,
+    3,
+    4,
+    0
+   ],
+   "rung": "2.5Rsun",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 7,
+     "p_crossing": 0.125
+    },
+    "S_pulse": {
+     "n_valid_controls": 7,
+     "p_crossing": 0.125
+    }
+   },
+   "target_id": "teegarden"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-fc686acceba1",
+    "evt-ed0d233e1163",
+    "evt-be730bb49b64",
+    "evt-394b595cd695",
+    "evt-967947b04481"
+   ],
+   "expected_control_crossings": 0.25,
+   "in_window_exposures_c": 13,
+   "in_window_exposures_o": 17,
+   "n_covered_events": 5,
+   "n_events": 11,
+   "n_trials": 2,
+   "notes": [
+    "S_stack: 3 valid pseudo-stacks < 4 -> constraint-only"
+   ],
+   "per_offset_covered_events": [
+    2,
+    1,
+    0,
+    1,
+    2,
+    4,
+    4,
+    3
+   ],
+   "rung": "2.5Rsun",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 7,
+     "p_crossing": 0.125
+    },
+    "S_pulse": {
+     "n_valid_controls": 7,
+     "p_crossing": 0.125
+    }
+   },
+   "target_id": "van-maanen"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-2dbd2c824063",
+    "evt-1df551c2bc06",
+    "evt-da7ea0a9591e",
+    "evt-3a6249c03c67"
+   ],
+   "expected_control_crossings": 0.25,
+   "in_window_exposures_c": 8,
+   "in_window_exposures_o": 14,
+   "n_covered_events": 4,
+   "n_events": 11,
+   "n_trials": 2,
+   "notes": [
+    "S_stack: 3 valid pseudo-stacks < 4 -> constraint-only"
+   ],
+   "per_offset_covered_events": [
+    0,
+    1,
+    3,
+    2,
+    2,
+    3,
+    3,
+    1
+   ],
+   "rung": "2.5Rsun",
+   "saturation_status": null,
+   "split": "dev",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 7,
+     "p_crossing": 0.125
+    },
+    "S_pulse": {
+     "n_valid_controls": 7,
+     "p_crossing": 0.125
+    }
+   },
+   "target_id": "wolf-359"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-ff5f06cfd16a",
+    "evt-736f910b0aa7",
+    "evt-667ee9db0835",
+    "evt-a31104250324",
+    "evt-64fbc0c53c7e",
+    "evt-24912cfb2980",
+    "evt-57e0c494a587",
+    "evt-80ac727d0ce6",
+    "evt-ca2a82a2d41e",
+    "evt-9c6a08c6df77",
+    "evt-27f78476fe86"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 45,
+   "in_window_exposures_o": 164,
+   "n_covered_events": 11,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    6,
+    8,
+    9,
+    10,
+    10,
+    11,
+    11,
+    10
+   ],
+   "rung": "0.1AU",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "gj-1276"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-f0e99edb3835",
+    "evt-0d43b6030003",
+    "evt-dc1c51df25a2",
+    "evt-c6d788f0bf73",
+    "evt-536fd06247ee",
+    "evt-ccb92e30c897",
+    "evt-762b8090ef06",
+    "evt-a317de8d931c",
+    "evt-942dca4c6bc1",
+    "evt-1ff54c0eec27",
+    "evt-dc367a0529c3"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 21,
+   "in_window_exposures_o": 135,
+   "n_covered_events": 11,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    10,
+    10,
+    10,
+    10,
+    9,
+    10,
+    10,
+    11
+   ],
+   "rung": "0.1AU",
+   "saturation_status": null,
+   "split": "dev",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "gj-908"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-af37dd9acfaa",
+    "evt-9de5e5972949",
+    "evt-6ab7bbea1b8b",
+    "evt-dbac5186692f",
+    "evt-2936c5c542ab",
+    "evt-652aa6f7ba2f",
+    "evt-521d59fe7c6a",
+    "evt-cdd227351deb",
+    "evt-7eb0176056f6",
+    "evt-5197f21cd67b"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 36,
+   "in_window_exposures_o": 128,
+   "n_covered_events": 10,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    6,
+    8,
+    9,
+    9,
+    10,
+    10,
+    9,
+    8
+   ],
+   "rung": "0.1AU",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "ross-128"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-0f103ff97a92",
+    "evt-af68df9fd115",
+    "evt-a4de2496af88",
+    "evt-69bc6d911334",
+    "evt-3a24ec02ed72",
+    "evt-1254435490ce",
+    "evt-95fce41e507b",
+    "evt-8078ac7feb17",
+    "evt-9e66aca585d5"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 31,
+   "in_window_exposures_o": 135,
+   "n_covered_events": 9,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    6,
+    8,
+    8,
+    9,
+    9,
+    8,
+    7,
+    8
+   ],
+   "rung": "0.1AU",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "ross-154"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-898a207ba6d9",
+    "evt-bb683d4cb6a4",
+    "evt-bd8fc47e99f2",
+    "evt-1a3d62092d33",
+    "evt-1aebdfada76b",
+    "evt-64a2465e6b55",
+    "evt-889c3c94eebc",
+    "evt-e78db045804b",
+    "evt-14efb12a5dfb",
+    "evt-d6a207b21d89"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 76,
+   "in_window_exposures_o": 219,
+   "n_covered_events": 10,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    9,
+    8,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+   ],
+   "rung": "0.1AU",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "teegarden"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-4e5570fe26fb",
+    "evt-fc686acceba1",
+    "evt-f3d9fc10fe38",
+    "evt-ed0d233e1163",
+    "evt-be730bb49b64",
+    "evt-394b595cd695",
+    "evt-8acf3fcf150b",
+    "evt-1d7fc0d8e139",
+    "evt-967947b04481",
+    "evt-9b443484ef32",
+    "evt-a6464a98e64a"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 66,
+   "in_window_exposures_o": 180,
+   "n_covered_events": 11,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    8,
+    9,
+    10,
+    10,
+    11,
+    11,
+    10,
+    10
+   ],
+   "rung": "0.1AU",
+   "saturation_status": null,
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "van-maanen"
+  },
+  {
+   "band": "o",
+   "channel": "B",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-8be0818b87a6",
+    "evt-400999c7cb48",
+    "evt-75392d7225e9",
+    "evt-233fe71b4582",
+    "evt-2dbd2c824063",
+    "evt-1df551c2bc06",
+    "evt-da7ea0a9591e",
+    "evt-3a6249c03c67",
+    "evt-d7450883e9ef"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 62,
+   "in_window_exposures_o": 160,
+   "n_covered_events": 9,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    8,
+    9,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9
+   ],
+   "rung": "0.1AU",
+   "saturation_status": null,
+   "split": "dev",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "wolf-359"
+  },
+  {
+   "band": "o",
+   "channel": "A",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-2b12360baf05",
+    "evt-7db9701b20db",
+    "evt-b53f9852eaed",
+    "evt-0227e1464782",
+    "evt-d557e698c005",
+    "evt-2dc7e506f4df",
+    "evt-ed23b2322fe3",
+    "evt-63ba88804063",
+    "evt-fbb5a358cbe8"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 68,
+   "in_window_exposures_o": 139,
+   "n_covered_events": 9,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    8,
+    9,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9
+   ],
+   "rung": "0.1AU",
+   "saturation_status": "ok",
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "gj-1276"
+  },
+  {
+   "band": "o",
+   "channel": "A",
+   "class": "saturation_excluded",
+   "covered_event_ids": [
+    "evt-f0c3e1cd6612",
+    "evt-16c110d39fd7",
+    "evt-9bcebb29fe0a",
+    "evt-9bc7720df4a7",
+    "evt-29537724d2a9",
+    "evt-4504c30c601e",
+    "evt-e7e2dd3ccdac",
+    "evt-40fc439db095"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 9,
+   "in_window_exposures_o": 67,
+   "n_covered_events": 8,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [],
+   "per_offset_covered_events": [
+    5,
+    7,
+    7,
+    8,
+    8,
+    8,
+    8,
+    6
+   ],
+   "rung": "0.1AU",
+   "saturation_status": "excluded",
+   "split": "dev",
+   "statistics": {},
+   "target_id": "gj-908"
+  },
+  {
+   "band": "o",
+   "channel": "A",
+   "class": "saturation_excluded",
+   "covered_event_ids": [
+    "evt-6765cce863e7",
+    "evt-2f9d51387f7c",
+    "evt-2ad0512a3645",
+    "evt-5cedbe3002b1",
+    "evt-0a2acf6ed058",
+    "evt-c738d2743da0",
+    "evt-46795327993e",
+    "evt-78761ae3af97",
+    "evt-44d64d1b5e55"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 41,
+   "in_window_exposures_o": 112,
+   "n_covered_events": 9,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [],
+   "per_offset_covered_events": [
+    6,
+    7,
+    7,
+    9,
+    7,
+    9,
+    9,
+    9
+   ],
+   "rung": "0.1AU",
+   "saturation_status": "excluded",
+   "split": "confirmatory",
+   "statistics": {},
+   "target_id": "ross-128"
+  },
+  {
+   "band": "o",
+   "channel": "A",
+   "class": "saturation_excluded",
+   "covered_event_ids": [
+    "evt-02356e3d8e9f",
+    "evt-c0c15a3570be",
+    "evt-68f3c7fb6407",
+    "evt-fdcb2478c523",
+    "evt-1611d9ccfd4b",
+    "evt-0cbabe9443a1",
+    "evt-2fa6fd94f249",
+    "evt-8b0919a91ef1",
+    "evt-04c01641edb6",
+    "evt-401f3b3fbfb6"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 33,
+   "in_window_exposures_o": 117,
+   "n_covered_events": 10,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [],
+   "per_offset_covered_events": [
+    6,
+    8,
+    8,
+    9,
+    9,
+    8,
+    9,
+    7
+   ],
+   "rung": "0.1AU",
+   "saturation_status": "excluded",
+   "split": "confirmatory",
+   "statistics": {},
+   "target_id": "ross-154"
+  },
+  {
+   "band": "o",
+   "channel": "A",
+   "class": "searched",
+   "covered_event_ids": [
+    "evt-21f165305651",
+    "evt-df334da61ef4",
+    "evt-c6abc35d36ea",
+    "evt-366fd233073c",
+    "evt-5d2d162f8aa9",
+    "evt-58c317b4802f",
+    "evt-03a1a1d3f202",
+    "evt-0a5c3b38dd8f",
+    "evt-0fa6d97dbb15",
+    "evt-ddcdf24345e2"
+   ],
+   "expected_control_crossings": 0.3333,
+   "in_window_exposures_c": 40,
+   "in_window_exposures_o": 141,
+   "n_covered_events": 10,
+   "n_events": 11,
+   "n_trials": 3,
+   "notes": [],
+   "per_offset_covered_events": [
+    7,
+    8,
+    10,
+    10,
+    9,
+    8,
+    9,
+    9
+   ],
+   "rung": "0.1AU",
+   "saturation_status": "marginal",
+   "split": "confirmatory",
+   "statistics": {
+    "S_event": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_pulse": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    },
+    "S_stack": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111
+    }
+   },
+   "target_id": "teegarden"
+  },
+  {
+   "band": "o",
+   "channel": "A",
+   "class": "saturation_excluded",
+   "covered_event_ids": [
+    "evt-7a2264cf4c09",
+    "evt-90c4a6ccc151",
+    "evt-337fecc5e5cf",
+    "evt-7a52aa0c4d47",
+    "evt-059fe9363c7f",
+    "evt-27fec02e4e48",
+    "evt-55bacf41a787",
+    "evt-a4c4cbe94bc3",
+    "evt-1c94c2969f91",
+    "evt-bcaac56bf788"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 26,
+   "in_window_exposures_o": 165,
+   "n_covered_events": 10,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [],
+   "per_offset_covered_events": [
+    7,
+    10,
+    10,
+    9,
+    9,
+    9,
+    10,
+    8
+   ],
+   "rung": "0.1AU",
+   "saturation_status": "excluded",
+   "split": "confirmatory",
+   "statistics": {},
+   "target_id": "van-maanen"
+  },
+  {
+   "band": "o",
+   "channel": "A",
+   "class": "saturation_excluded",
+   "covered_event_ids": [
+    "evt-24177491ed40",
+    "evt-d745bf6b72a4",
+    "evt-9042432607f8",
+    "evt-6ee16e1d6bb7",
+    "evt-44b11bc6437a",
+    "evt-ef483676ce19",
+    "evt-762521692b0a",
+    "evt-ef489fdf2833",
+    "evt-9d9e4347f09e",
+    "evt-f123eec2c7db",
+    "evt-535c6bc0b5c7"
+   ],
+   "expected_control_crossings": 0,
+   "in_window_exposures_c": 45,
+   "in_window_exposures_o": 104,
+   "n_covered_events": 11,
+   "n_events": 11,
+   "n_trials": 0,
+   "notes": [],
+   "per_offset_covered_events": [
+    6,
+    7,
+    10,
+    8,
+    9,
+    9,
+    10,
+    9
+   ],
+   "rung": "0.1AU",
+   "saturation_status": "excluded",
+   "split": "dev",
+   "statistics": {},
+   "target_id": "wolf-359"
+  }
+ ],
+ "seed": 20260904,
+ "split": {
+  "dev_targets": [
+   "wolf-359",
+   "gj-908"
+  ],
+  "rule": "D8 as approved 2026-09-04: dev = wolf-359 (D1 forced) + gj-908 (widest b, thinnest A coverage); all other targets confirmatory; every rung and channel of a dev target is dev",
+  "seed": 20260904
+ },
+ "statistics": {
+  "A_1.0AU": "constraint-only, no ATLAS pull (hypotheses \u00a73, standing window~season theorem); coverage claim deferred to a ledger addendum",
+  "A_saturation": "D2 table results/saturation_cut_v1.json on the reduced-mode 20-d series: excluded units carry no statistic; marginal units are searched and flagged",
+  "S_event": "secondary: max over covered windows of S_w = sum(w_i r_i) / sqrt(sum(w_i^2 v_i)); one-sided positive",
+  "S_pulse": "tertiary (pulse cell): max over in-window epochs of r_i sqrt(R_i) / sqrt(v_i); one-sided positive",
+  "S_stack": "primary (the recurrence cell): the same weighted sum over all covered windows of the unit pooled, S = sum_w sum(w r) / sqrt(sum_w sum(w^2 v)); requires >= 3 covered windows",
+  "gates": {
+   "S_pulse_S_event": ">= 1 covered window (>= 1 primary-mask o exposure)",
+   "S_stack": ">= 3 covered windows",
+   "controls": ">= 4 valid controls per statistic, else constraint-only for that statistic"
+  },
+  "unit": "(target, channel, rung, o band); channel B 0.1 AU unit epochs = union over the D3 mini-track positions with per-epoch position selection (below)",
+  "weights": "inverse variance w_i = R_i / v_i; R_i = response factor exp(-d_i^2 / 2 s_i^2), d_i = offset between the task position and the predicted apparent source position at epoch i (B: relay at z on the anti-star axis; A: star), s_i = FWHM_i/2.355 from the epoch maj/min (arcsec, 1.86\"/px); epochs with R_i < 0.2 dropped; B evaluated over the nested z family (550, 1000, 2500, 5500, 10000 AU) choosing per epoch the mini-track position of largest R_i, statistic = max over z; controls take the same max",
+  "window": "flat chord t_ca +/- sqrt(r^2 - b^2)/v_perp (task_list_v1 half-windows)"
+ },
+ "substrate": {
+  "ASAS-SN_v2": "coverage-fraction ledger only (asassn_ledger_v1); no v2 photometry enters any statistic at this freeze; channel-A on-star v2 series deferred to a PM-matched follow-up (nearest-source matches are epoch-offset for the high-PM stars)",
+  "ATLAS": "server-calibrated tphot difference-flux forced photometry (uJy, AB) at fixed positions, windowed +/-110 d per event (task_list_v1); o band searched, c band chromatic annotation only (3/44 and 10/55 grazing windows covered in c)",
+  "observer": "Earth-center universal list; site-vs-geocenter <= R_earth = 0.8 % of the tightest rung, declared budget term"
+ },
+ "trials": {
+  "disposition": "every exceedance individually adjudicated by the veto ladder; no silent drops",
+  "expected_control_crossings": 4.55,
+  "n_searched_units": 14,
+  "n_trials": 37,
+  "n_trials_confirmatory": 27,
+  "n_trials_dev": 10
+ },
+ "veto_ladder": [
+  "1. SkyBoT known-object census at every exceedance epoch (antipode fields sit in the opposition asteroid stream)",
+  "2. intra-quad consistency: a window-locked signal must be present across the night's quad (a main-belt mover crosses the PSF in <~ 15 min)",
+  "3. template-step annotation: exceedances within 30 d of MJD 58417 / 58882 re-run on the reduced-mode series (strict mask)",
+  "4. recurrence: any S_event / S_pulse exceedance tested on the unit's other covered windows",
+  "5. rate test vs the z-track prediction where the mini-track resolves it (B 0.1 AU)",
+  "annotations (never sole grounds): c-band chromatic consistency where c epochs exist"
+ ]
+}

@@ -1,10 +1,20 @@
 ---
 title: "ATLAS/ASAS-SN crossings — server migration & resume checklist"
 date: 2026-08-25
-status: "hypotheses v1.0 frozen; coverage stage deliberately NOT started — resumes on the new server"
+status: "RESUMED 2026-09-03 on the new server; survey COMPLETE 2026-09-04 (report/atlas_asassn_crossings.md)"
 ---
 
 # Resume checklist (new machine)
+
+**Resolved 2026-09-03.** All four "needs" verified on the server
+(repo + `../sglseti` 19c8167 clean, `.env` token, `uv` env Python
+3.12.2, ATLAS queue 200 / ASAS-SN port 9006 open); `runs/` is a
+symlink to the 8 TB SSD (`/mnt/ssd2/astro/sgl-seti-survey-runs`).
+First actions 1–4 done the same day (era end MJD 61286; ASAS-SN
+ceiling unchanged at 2025-06-16; no radec-list batching exists —
+schema snapshot under `runs/atlas-asassn-crossings/docs_snapshot/`;
+windowed task = ~2.2 min; `scripts/atlas_drain.py` running the
+308-task fleet, complete 2026-09-04, 0 failures). Item 5 done (`scripts/asassn_ledger.py`); item 6 continues from the threshold freeze.
 
 State at pause (2026-08-25): recon complete
 (`atlas_asassn_recon_2026-08-25.md`), era scoping done

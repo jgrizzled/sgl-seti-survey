@@ -300,6 +300,27 @@ Amendments forced by evidence on development sets (the retrospectives):
   day (no egress to shape-test), and the era's two deepest grazes fell
   between sectors entirely.
 
+- **Windows shorter than the revisit interval are covered by luck**
+  (ATLAS crossings, 2026-09-04): nightly cadence delivered 0.1 AU
+  windows (10–12 d) at 95 % but 0.3–1.3 d grazing windows at 18–45 %,
+  and the pre-declared recurrence stack (100–180 exposures) was 14–30
+  in reality with ≤ 3 valid pseudo-stacks — the recurrence cell needs
+  a substrate whose cadence is well inside the window. Also: count
+  crossing windows with the axis-side filter — link direction alone
+  double-counts the sunward crossing of each year (caught pre-data by
+  an elongation check).
+- **Mirror-gated control validity with 1/(n+1) per-trial accounting**
+  keeps the exceedance budget honest when the nominal 8 controls do
+  not exist; the frozen max rule then makes a trial *artefact-set*
+  (insensitive, still valid) whenever one pseudo-window holds a
+  single-frame outlier — a chi/N mask term and a ≥ 2-epoch S_event
+  gate are the cheap fixes for a v2.
+- **Channel A on a high-PM star in difference imaging is the PM
+  dipole**: at 5″/yr against a multi-year template the "difference
+  flux" is the whole star (k 10²–10⁷). Either carry the parallax/PM
+  systematics template or use reduced-mode photometry at a per-epoch
+  PM-propagated position.
+
 ## 9. Reproducibility and engineering
 
 - Content-hash (bytes + schema version) every input and derived

@@ -1,0 +1,51 @@
+{
+ "stage": "blind confirmatory (threshold freeze v1.0)",
+ "date": "2026-09-04",
+ "trials": 27, "expected_control_crossings": 3.233, "exceedances": 5, "distinct_events": 3,
+ "candidates": 0,
+ "adjudications": [
+  {
+   "id": "X1", "units": ["B 1.2Rsun van-maanen o (S_event 2.78 vs T 1.97)", "B 2.5Rsun van-maanen o (S_event 2.78 vs T 2.64)"],
+   "window": "evt-fc686a, t_ca MJD 57846.213 (2017-04-03), b = 0.24 Rsun; 1.2 Rsun half-window 0.317 d",
+   "facts": [
+    "in-window epochs: three Haleakala (01a) exposures at dt +0.269/+0.285/+0.300 d: 11, 66, 43 +/- ~30 uJy (0.4 / 2.3 / 1.3 sigma) - a consistent +40 uJy mean over the quad (rung 2 pass; the quad's 4th exposure is absent from the server output)",
+    "the ingress/egress positions 37.5 arcsec away read -9/-32/-4 and -22/+47/-24 in the same exposures: local noise nominal, no field-wide offset",
+    "the six exposures 0.67-0.72 d before t_ca (outside both grazing windows, inside the 0.1 AU window) average -1 uJy",
+    "SkyBoT (T05, 120 arcsec): no known object; nearest catalogued bodies are Jupiter's satellites 5.4 deg away (skybot/conf_vanmaanen_fc686a.txt)",
+    "template step: 2017-04 predates both wallpaper changes (58417, 58882)",
+    "recurrence: the unit's other covered windows give S_w -1.33, -0.84, -0.48 (1.2 Rsun) and the same plus the 2.5 Rsun-only window - no second window exceeds; the 0.1 AU unit of the same event sits below its T (2.67 vs 3.37)",
+    "the two exceedances are one epoch set counted in two nested rungs (4 and 7 valid controls; margins 0.81 and 0.14)"
+   ],
+   "veto_ladder": {"1_skybot": "clean", "2_intra_quad": "pass (consistent positive)", "3_template_step": "n/a", "4_recurrence": "none in 3-4 other covered windows", "5_rate": "n/a"},
+   "disposition": "retained-ambiguous, non-promotable: a 2.8-sigma three-exposure chord in one of four covered photosphere-grazing windows, without recurrence; promotion requires recurrence at a second covered window (the frozen rule). Counts as 2 of the 3.2 expected control crossings."
+  },
+  {
+   "id": "X2", "units": ["B 0.1AU gj-1276 o (S_event 5.09 vs T 3.03 at z=10000; S_pulse 3.04 vs T 2.93)"],
+   "window": "evt-9c6a08, t_ca MJD 60736.909 (2025-03-31), 0.1 AU half-window 5.86 d, 28 in-window epochs at z=10000 (8 at z=550: S_w 0.14)",
+   "facts": [
+    "in-window nightly means at the tca position: +10.5, -6.5, +7.5, +1.0, -3.0, -11.5, -3.0, -5.5 uJy (+/- 5-9) - consistent with zero; the window holds no excess over the local zero",
+    "off-window baseline is depressed: nightly means -13 to -25 uJy at dt -10 to -25 d and -55 +/- 28 at +15 d; the D5 30-d running median therefore sits near -10 uJy and every in-window epoch acquires a +10 uJy (~0.8 sigma) residual; 28 such epochs give the 5.1-sigma pooled chord",
+    "the statistic elsewhere: the unit's other 10 windows at z=10000 give S_w -3.36 ... +1.53 - a null wider than the 8 controls (max 3.03) resolve; the same baseline-structure class",
+    "S_pulse 3.04: the +31 +/- 15 exposure (04a60731o0628o) whose quad reads -8, +22, +31, -3 - inconsistent (rung 2 fail)",
+    "SkyBoT (M22 at the peak exposure; T08 at t_ca; 120 arcsec): no known object (nearest listed > 1 deg); an 11-day fixed-position chord is in any case incompatible with a mover",
+    "template step: n/a (2025)"
+   ],
+   "veto_ladder": {"1_skybot": "clean", "2_intra_quad": "FAIL for S_pulse; S_event is a multi-night chord", "3_template_step": "n/a", "4_recurrence": "none in 10 other covered windows", "5_rate": "n/a at z=10000 (drift 0.36 arcsec/d)"},
+   "disposition": "adjudicated systematic (difference-image low-frequency baseline structure; the in-window level is zero and the excess is manufactured by a ~-10 uJy off-window depression the 30-d median cannot remove), retained, non-promotable; no recurrence. Counts as 2 of the expected crossings. v2 design note: a window-scale baseline test (in-window mean vs zero, not vs local median) belongs in the ladder."
+  },
+  {
+   "id": "X3", "units": ["A 0.1AU teegarden o (S_stack 11.84 vs T 6.88)"],
+   "window": "all 10 covered windows pooled; dominated by evt-0a5c3b (S_w 11.95, 2023-11) and evt-ddcdf2 (4.99)",
+   "facts": [
+    "the 'difference flux' at the star position is 34,000-59,000 uJy - the star's full o-band flux (m 12.59 = 33.4 mJy): Teegarden (5.1 arcsec/yr) has moved > 1 FWHM off its template position, so the difference image carries the star itself (the PM dipole against a multi-year reference, learnings 8)",
+    "chi/N 60-5600 per exposure; k factors 79 to 2.9e7 across events (the 2023-11 window's k = 79 makes it the most 'significant' by accident of the rescale)",
+    "control statistics span -14.1 to +6.9: the unit's null is systematics-dominated; the real window S_w run -6.7 to +12.0",
+    "night-to-night 'excess' of 10-30 % of the stellar flux tracks seeing (maj/min) - PSF-mismatch residuals of a marginal-saturation star, not a window-locked signal"
+   ],
+   "veto_ladder": {"1_skybot": "n/a (on-star)", "2_intra_quad": "n/a", "3_template_step": "n/a", "4_recurrence": "the stack is the recurrence test; the per-window values are systematics", "5_rate": "n/a"},
+   "disposition": "adjudicated channel-A blended systematic (marginal-saturation + proper-motion dipole class, pre-declared in hypotheses 6 as the ZTF v1.1 systematics-template regime; the freeze carried the variance rescale but not the parallax/PM template), retained, non-promotable; the unit is reported as systematics-limited with its measured null. Counts as 1 of the expected crossings."
+  }
+ ],
+ "budget": "5 exceedances vs 3.23 expected (Poisson P(>=5) ~ 0.23); 4 of the 5 are two epoch-sets counted in nested rungs / two statistics; no exceedance survives the ladder",
+ "dispositions_summary": {"retained_ambiguous_single_window": 1, "adjudicated_systematic": 2}
+}

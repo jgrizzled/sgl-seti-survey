@@ -1,0 +1,412 @@
+{
+  "measured_utc": "2026-09-03T22:44:24.367242+00:00",
+  "jd_max_all": 2460842.8438034,
+  "mjd_max_all": 60842.343803400174,
+  "iso_max_all": "2025-06-16T08:15:04.614",
+  "recon_ceiling_jd": 2460841.0,
+  "positions": [
+    {
+      "channel": "A",
+      "target_id": "van-maanen",
+      "ra_deg": 12.298460034193983,
+      "dec_deg": 5.372784662902564,
+      "radius_arcsec": 180.0,
+      "n_sources": 8,
+      "jd_max": 2460839.6155951,
+      "jd_min": 2456221.0127671,
+      "n_epochs": 12843,
+      "n_epochs_good": 10567,
+      "cameras": [
+        "bC",
+        "bD",
+        "bG",
+        "bH",
+        "ba",
+        "bc",
+        "bd",
+        "bg",
+        "bk",
+        "bo",
+        "bs",
+        "bt"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 8
+    },
+    {
+      "channel": "B",
+      "target_id": "van-maanen",
+      "ra_deg": 192.30810908242535,
+      "dec_deg": -5.351627732415991,
+      "radius_arcsec": 180.0,
+      "n_sources": 15,
+      "jd_max": 2460839.256696,
+      "jd_min": 2456016.9485324,
+      "n_epochs": 20326,
+      "n_epochs_good": 17053,
+      "cameras": [
+        "bA",
+        "bE",
+        "ba",
+        "be",
+        "bi",
+        "bm",
+        "bq"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 15
+    },
+    {
+      "channel": "A",
+      "target_id": "wolf-359",
+      "ra_deg": 164.09786384697304,
+      "dec_deg": 6.999035573202284,
+      "radius_arcsec": 180.0,
+      "n_sources": 34,
+      "jd_max": 2460838.5562529,
+      "jd_min": 2455947.0568173,
+      "n_epochs": 40069,
+      "n_epochs_good": 35125,
+      "cameras": [
+        "bC",
+        "bG",
+        "ba",
+        "bc",
+        "bg",
+        "bk",
+        "bo",
+        "bs"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 31
+    },
+    {
+      "channel": "B",
+      "target_id": "wolf-359",
+      "ra_deg": 344.0808677297691,
+      "dec_deg": -6.987258954020972,
+      "radius_arcsec": 180.0,
+      "n_sources": 10,
+      "jd_max": 2460841.8206786,
+      "jd_min": 2456595.8338236,
+      "n_epochs": 10804,
+      "n_epochs_good": 8530,
+      "cameras": [
+        "bB",
+        "bF",
+        "bb",
+        "bf",
+        "bj",
+        "bn",
+        "br",
+        "cB"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 8
+    },
+    {
+      "channel": "A",
+      "target_id": "gj-1276",
+      "ra_deg": 343.4869864518007,
+      "dec_deg": -6.785761640142671,
+      "radius_arcsec": 180.0,
+      "n_sources": 6,
+      "jd_max": 2460840.5322851,
+      "jd_min": 2456592.8277051,
+      "n_epochs": 15825,
+      "n_epochs_good": 12773,
+      "cameras": [
+        "bA",
+        "bB",
+        "bE",
+        "bF",
+        "ba",
+        "bb",
+        "be",
+        "bf",
+        "bi",
+        "bj",
+        "bm",
+        "bn",
+        "bq",
+        "br",
+        "cB"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 6
+    },
+    {
+      "channel": "B",
+      "target_id": "gj-1276",
+      "ra_deg": 163.52571166788283,
+      "dec_deg": 6.796301065388823,
+      "radius_arcsec": 180.0,
+      "n_sources": 10,
+      "jd_max": 2460838.5562529,
+      "jd_min": 2455947.0568173,
+      "n_epochs": 12906,
+      "n_epochs_good": 11322,
+      "cameras": [
+        "bC",
+        "bG",
+        "ba",
+        "bc",
+        "bg",
+        "bk",
+        "bo",
+        "bs"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 10
+    },
+    {
+      "channel": "A",
+      "target_id": "teegarden",
+      "ra_deg": 43.274716010548254,
+      "dec_deg": 16.858984339497496,
+      "radius_arcsec": 180.0,
+      "n_sources": 8,
+      "jd_max": 2460710.2720615,
+      "jd_min": 2455949.8816191,
+      "n_epochs": 16089,
+      "n_epochs_good": 13297,
+      "cameras": [
+        "bA",
+        "bB",
+        "bE",
+        "bF",
+        "ba",
+        "bb",
+        "be",
+        "bf",
+        "bi",
+        "bj",
+        "bm",
+        "bn",
+        "bq",
+        "br"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 7
+    },
+    {
+      "channel": "B",
+      "target_id": "teegarden",
+      "ra_deg": 223.29957490686323,
+      "dec_deg": -16.832579293007967,
+      "radius_arcsec": 180.0,
+      "n_sources": 14,
+      "jd_max": 2460710.6283104,
+      "jd_min": 2456651.1606467,
+      "n_epochs": 16573,
+      "n_epochs_good": 13306,
+      "cameras": [
+        "bD",
+        "bH",
+        "bd",
+        "bf",
+        "bh",
+        "bl",
+        "bp",
+        "bt"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 13
+    },
+    {
+      "channel": "A",
+      "target_id": "ross-128",
+      "ra_deg": 176.93852570128865,
+      "dec_deg": 0.7974337439614274,
+      "radius_arcsec": 180.0,
+      "n_sources": 21,
+      "jd_max": 2460841.7747804,
+      "jd_min": 2455956.0737297,
+      "n_epochs": 26697,
+      "n_epochs_good": 22986,
+      "cameras": [
+        "bA",
+        "bE",
+        "ba",
+        "be",
+        "bi",
+        "bm",
+        "bq"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 21
+    },
+    {
+      "channel": "B",
+      "target_id": "ross-128",
+      "ra_deg": 356.94223756483984,
+      "dec_deg": -0.789948795309628,
+      "radius_arcsec": 180.0,
+      "n_sources": 8,
+      "jd_max": 2460839.5585886,
+      "jd_min": 2456220.8282356,
+      "n_epochs": 16311,
+      "n_epochs_good": 13217,
+      "cameras": [
+        "bD",
+        "bG",
+        "bH",
+        "ba",
+        "bd",
+        "be",
+        "bf",
+        "bg",
+        "bh",
+        "bk",
+        "bl",
+        "bo",
+        "bp",
+        "bs",
+        "bt"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 8
+    },
+    {
+      "channel": "A",
+      "target_id": "ross-154",
+      "ra_deg": 282.4598095874916,
+      "dec_deg": -23.83738044211937,
+      "radius_arcsec": 180.0,
+      "n_sources": 55,
+      "jd_max": 2460842.8438034,
+      "jd_min": 2458223.9352413,
+      "n_epochs": 91096,
+      "n_epochs_good": 73026,
+      "cameras": [
+        "bA",
+        "bE",
+        "bG",
+        "bi",
+        "bk",
+        "bm",
+        "bo",
+        "bq",
+        "bs"
+      ],
+      "filters": [
+        "g"
+      ],
+      "n_sources_with_epochs": 53
+    },
+    {
+      "channel": "B",
+      "target_id": "ross-154",
+      "ra_deg": 102.46357622305972,
+      "dec_deg": 23.838400532940508,
+      "radius_arcsec": 180.0,
+      "n_sources": 45,
+      "jd_max": 2460713.3977261,
+      "jd_min": 2457008.0822244,
+      "n_epochs": 83363,
+      "n_epochs_good": 70422,
+      "cameras": [
+        "bD",
+        "bF",
+        "bH",
+        "bd",
+        "bf",
+        "bj",
+        "bl",
+        "bn",
+        "bp",
+        "br",
+        "bt"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 45
+    },
+    {
+      "channel": "A",
+      "target_id": "gj-908",
+      "ra_deg": 357.3079745588151,
+      "dec_deg": 2.395581031400674,
+      "radius_arcsec": 180.0,
+      "n_sources": 8,
+      "jd_max": 2460840.5704554,
+      "jd_min": 2456220.8317686,
+      "n_epochs": 11283,
+      "n_epochs_good": 9119,
+      "cameras": [
+        "bA",
+        "bE",
+        "ba",
+        "be",
+        "bi",
+        "bm",
+        "bq"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 8
+    },
+    {
+      "channel": "B",
+      "target_id": "gj-908",
+      "ra_deg": 177.3186318879445,
+      "dec_deg": -2.385187543980531,
+      "radius_arcsec": 180.0,
+      "n_sources": 12,
+      "jd_max": 2460837.5490106,
+      "jd_min": 2455956.0769895,
+      "n_epochs": 15689,
+      "n_epochs_good": 13500,
+      "cameras": [
+        "bC",
+        "bG",
+        "ba",
+        "bc",
+        "be",
+        "bg",
+        "bk",
+        "bo",
+        "bs"
+      ],
+      "filters": [
+        "V",
+        "g"
+      ],
+      "n_sources_with_epochs": 11
+    }
+  ]
+}

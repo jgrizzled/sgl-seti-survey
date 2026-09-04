@@ -1359,3 +1359,145 @@ sunward cell — archivally virgin before this programme — is closed
 at MW-class power; substrate chain validated for STEREO/WISPR
 follow-ons. v2 design notes recorded (baseline in-window picks,
 CME-robust per-sector detrend, inner-field scale).
+
+## 14. ATLAS + ASAS-SN crossings — coverage stage resumed on the server (2026-09-03; plan §5.9)
+
+**Migration + checklist.** Execution moved to the new Linux server
+(`runs/` → 8 TB SSD symlink). Resume checklist cleared the same day:
+sglseti 19c8167 clean, `.env` token, ATLAS queue 200, ASAS-SN v2 port
+9006 egress open, Python 3.12.2 env. API docs + OpenAPI schema
+snapshotted (`runs/atlas-asassn-crossings/docs_snapshot/`).
+
+**Pre-data amendments (hypotheses §12, A1–A3).** Building the task
+list exposed a freeze counting defect: the "22 semiannual windows per
+target" counted both yearly Earth crossings of the axis, but one of
+each pair puts the channel's sky position at solar elongation
+0.1–0.5° — the sunward combination the freeze itself excludes
+(LASCO owns it). Verified by elongation at every task position
+(kept 174–180°). Searchable population = **11 annual windows per
+target per channel** (B 44/55/77 by rung, A 0.1 AU 77); stack depth
+~0.4 mag shallower than pre-declared; pseudo-window family unaffected
+(offsets at elongation ≥ 80°); no archive data at survey positions
+had been searched. Eras: ATLAS end MJD 61286; ASAS-SN v2 ceiling
+re-measured over 14 positions at **2025-06-16, unchanged after 15
+months** (reprocessing lag — v2 is a 2013→2025-06 substrate). Schema
+has no radec-list parameter (recon open item closed: one position per
+task, serial).
+
+**Coverage drain running.** `scripts/build_task_list.py` → 308
+windowed (±110 d) difference-flux tasks: 231 B (t_ca position + D3
+mini-track ingress/egress at z = 550, offsets 37.5″) + 77 A (mini-
+track collapses by geometric identity — recorded). One windowed task
+= 2.2 min server time (vs 25–70 min full-history) → ~12 h serial.
+`scripts/atlas_drain.py` submits with `comment` = task key, keeps
+≤ 8 in flight, fetch-then-DELETE with the atlas_api sidecar snapshot;
+sidecars are the done-list, `inflight.json` + server-side comment
+adoption make it crash-resumable. First series (van-maanen B
+2016-04 event): 214 rows, 82 % FAQ-mask keep, 5 rows/night median,
+mag5sig 19.06 — but 0 exposures inside its 0.34 d grazing window
+(10 in the 0.1 AU window): the coverage-fraction attrition the stage
+exists to measure. Next: coverage ledger (ATLAS in-window epochs per
+event × rung × band + ASAS-SN v2 epoch lists), then the threshold
+freeze.
+
+**Coverage stage COMPLETE (2026-09-04).** The 308-task drain
+finished at 06:06 UTC (7.4 h; 0 failures; median server time 54 s,
+max 499 s; 16 MB of series + sidecars under
+`runs/atlas-asassn-crossings/lc/`). ATLAS ledger
+(`results/coverage_v1_{events.ecsv,summary.json}`, FAQ mask keep
+median 0.93): **the grazing rungs are attrition-dominated** — B
+1.2 R☉ 8/44 windows covered (van-maanen 4/11, gj-1276 2, teegarden 1,
+wolf-359 1; 4 exposures median per covered window), B 2.5 R☉ 25/55
+(van-maanen 7, teegarden 7, gj-1276 4, wolf-359 4, ross-128 3), while
+the 0.1 AU rungs are near-complete (B 74/77 with 17 exposures median,
+mini-track union identical; A 68/77 with 14). Cause: 0.5–1.3 d
+windows against nightly-at-best sampling with weather and sun-gap
+losses (ATLAS is a ~1–2 d cadence survey; a window shorter than the
+revisit interval is covered only by luck). The §9 pre-declared
+recurrence-stack depth (~100–180 exposures) is therefore not
+delivered for the grazing rungs: the van-maanen 1.2 R☉ stack holds
+18 exposures across 4 windows (≈ 20.6 stacked), 2.5 R☉ 30 across 7;
+the 0.1 AU stacks (150–300 exposures) do reach ~21.5. The
+photosphere-grazing 0.24 R☉ family is nonetheless **searchable for
+the first time** (4 covered windows). Pseudo-window availability
+scales the same way (mean 1.4 / 2.7 / 7.0 of 8 offsets with data at
+1.2 R☉ / 2.5 R☉ / 0.1 AU, o band) — the 1/9 control budget will be
+computed from actual availability at the freeze.
+ASAS-SN v2 ledger (`results/asassn_ledger_v1_*`, field-level union
+of quality-G image_ids of catalogued sources within 3′; coverage
+records only): B 0.1 AU 62/70 in-era windows, 1.2 R☉ 12/40, 2.5 R☉
+23/50 (median 1 image), A 0.1 AU 59/69 — the same attrition shape
+at ~2 d cadence. Channel-A nearest v2 sources sit 4–8″ from
+gj-908/ross-128/ross-154 but 15–36″ from van-maanen/teegarden/
+wolf-359 — the high-PM stars' master_list positions are epoch-offset
+(the DASCH PM-match lesson); the D2 saturation table must PM-match,
+not nearest-match. Next: threshold freeze (seed, D8 split, control
+budget from measured availability), then dev → confirmatory.
+
+**Threshold freeze → dev → blind confirmatory (2026-09-04, same
+day).** User-approved freeze recommendations (seed 20260904; dev =
+wolf-359 + gj-908; per-statistic gates — S_pulse/S_event at ≥ 1
+covered window, S_stack at ≥ 3, and ≥ 4 valid mirror-gated controls
+for a trial; o searched, c annotation; ASAS-SN ledger-only; D6 MPC
+control (15000) CCD). Saturation table on 20-d reduced-mode series
+(`scripts/saturation_cut.py`): gj-1276 ok, teegarden marginal
+(o 12.59), the other five excluded — channel A searches two stars.
+**Freeze** (`configs/threshold_freeze_v1.json`, hypotheses §13): 14
+searched units / 37 trials (dev 10, conf 27), 4.55 expected control
+crossings; **S_stack is constraint-only at every grazing rung** (≤ 3
+valid pseudo-stacks) — the recurrence cell's calibrated test is not
+deliverable at nightly cadence; grazing S_pulse/S_event searched for
+van-maanen (1.2 + 2.5 R☉), teegarden and wolf-359 (2.5 R☉).
+Engine `scripts/search_core.py` (D5 running-median detrend, k
+rescale, response-weighted chord, best-R mini-track position per
+epoch, nested-z max, mirror-gated pseudo-window controls, max-rule
+T); `run_search.py --split`.
+**Dev (10 trials, 1.3 expected): 2 exceedances**, one epoch — wolf-359
+2.5 R☉ S_event 3.55 / S_pulse 3.18: a single 3.5σ Sutherland exposure
+in a degraded-sky quad whose other members read zero (rung 2 fail;
+SkyBoT clean; no recurrence) → retained, non-promotable. Control
+finding: a 445 µJy chi/N-45 single-frame artefact in a pseudo-window
+sets the wolf-359 0.1 AU S_pulse T at 15.8 (FAQ mask has no chi/N
+term; frozen max rule keeps the trial valid but insensitive). KS of
+standardized baselines p 0.24–0.97; k 1.0–1.5; engine validity
+counts match the freeze. No amendments (`results/dev_adjudication_v1.json`).
+**Blind confirmatory (27 trials, 3.2 expected): 5 exceedances on 3
+events, 0 candidates** (`results/confirmatory_adjudication_v1.json`):
+X1 van-maanen 1.2 + 2.5 R☉ S_event 2.78 (evt-fc686a, 2017-04) — a
+2.8σ three-exposure quad-consistent chord (+40 µJy) in one of four
+covered photosphere-grazing windows, SkyBoT clean, no recurrence →
+**retained-ambiguous, non-promotable**; X2 gj-1276 B 0.1 AU S_event
+5.09 / S_pulse 3.04 (evt-9c6a08, 2025-03, z = 10000) — in-window
+nightly means consistent with zero, the excess manufactured by a
+−10 µJy off-window baseline depression the 30-d median cannot
+remove; S_pulse quad-inconsistent → adjudicated systematic; X3
+teegarden A S_stack 11.8 — the difference flux at the star is the
+star's full 34 mJy (5″/yr PM dipole against the template), k 10²–10⁷,
+controls −14…+7 → adjudicated channel-A blended systematic. Poisson
+P(≥ 5 | 3.2) ≈ 0.23. v2 notes: chi/N mask term; window-mean-vs-zero
+test in the ladder; PM/parallax systematics template for channel A.
+Completeness (D6 injections, `scripts/completeness_v1.py`) and the
+MPC positive control (`scripts/mpc_control.py`) running.
+
+**Completeness + report — ATLAS/ASAS-SN SURVEY COMPLETE, 0 candidates
+(2026-09-04; `report/atlas_asassn_crossings.md`).** D6 injections
+(`scripts/completeness_v1.py`, 100 draws/mag, seed 20260904, z = 550
+geometry, into the real baseline series against the frozen T): B
+units recover to o 19.7–20.75 per window, 19.8–20.5 stacked at
+0.1 AU; five trials artefact-set (T 15.8–412 from single-frame
+pseudo-window outliers → insensitive); both A units systematics-
+limited. Positive control (15000) CCD (MPC mode, 2024–2026, V
+18.4–20.4): scale gate PASS on bias (apparitions −0.05/−0.10 mag after
+one colour term, slope −0.03), scatter photon+rotation-dominated at
+S/N 5–8; ±0.1 mag declared. Physics: **van-maanen 0.24 R☉
+photosphere-grazing cone ≳ 78 W per window (4 of 11 windows) — first
+constraint ever on that family**; 2.5 R☉ cones 280–590 W (4–5 windows
+each, three targets); 0.1 AU 26–55 kW / 26–41 kW stacked, seven
+targets; pulse cell 140–890 W (grazing). Structural finding: a window
+shorter than the revisit interval is covered by luck — 18/45/95 %
+coverage by rung — so the recurrence cell is not calibratable at the
+grazing rungs on a nightly survey. v2 notes: chi/N mask term; ≥ 2
+epochs for S_event; window-mean-vs-zero ladder rung; PM/parallax
+template (or reduced-mode PM-propagated photometry) for channel A;
+PM-matched ASAS-SN sources. Nothing committed to git during the
+session (user's call).
