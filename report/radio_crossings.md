@@ -65,6 +65,8 @@ by cell:
 4. **Identified micro-follow-ups, handed off, not executed here:**
    (a) the 4 strict VLASS narrow-rung on-star epochs + 2
    tolerance-edge rows — a six-cutout quick-look transient check
+   (done 2026-09-04, `report/radio_quicklook.md`: nothing above 3σ;
+   exact CADC tile times put both tolerance-edge rows outside the window)
    (broadband emission only; continuum imaging dilutes CW lines by
    ~10⁹); (b) the 3 teegarden APF spectra — an optical laser-line
    inspection during a crossing window, belonging to the

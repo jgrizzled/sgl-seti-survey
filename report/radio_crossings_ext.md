@@ -145,6 +145,10 @@ searches (VAST, RACS, LoTSS), cited as for BL — nothing to add here.
 
 ## 4. Hand-offs (not executed here)
 
+_Update 2026-09-04: (a) and (b) executed as the radio quick-look —
+`report/radio_quicklook.md`. Nothing coincident at any position in
+catalogues or cutouts (ASKAP images via the OPAL login)._
+
 - (a) **Antipode cutout quick-look**: the 6 validated B 0.1 AU epochs
   (wolf-359 ×2, ross-154, ross-128, van-maanen 2022, teegarden 2026)
   — broadband transient check at the relay position, RACS/VAST

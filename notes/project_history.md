@@ -1658,3 +1658,51 @@ pointed at opposition; CoRoT is expected to fail the same gate, not
 probed). `crossings/README.md` gained the `kepler_v1` row; plan status
 line, §5.8 intro/row 8 and the priority-7 row updated; nothing
 committed to git.
+
+## 18. Outstanding-items ledger + radio quick-look (2026-09-04; plan §5.15, item O1 — done)
+
+**Ledger.** With every §5.8 queue item complete, closed or blocked,
+the plan gained §5.15: a three-tier table of everything that remains
+(Tier 1 ready now: radio quick-look O1, STEREO-A HI-1 O2, SPHEREx
+QR2 controls O3, spectral-archive family O4, WISPR geometry pass O5;
+Tier 2 small standing items O6–O8; Tier 3 externally blocked O9–O13).
+SPHEREx QR3 was checked live: IRSA `spherex.obscore` still serves only
+`spherex_qr2`, latest epoch MJD 61241 (≈ 2026-07-20), so the deferred
+six-detector joint cell and template refit no longer wait on it.
+
+**Quick-look (O1).** `surveys/radio-crossings/scripts/quicklook_v1.py`
+→ `results/quicklook_v1.json`, `report/radio_quicklook.md`, raw
+responses + 26 VLASS cutouts under `runs/radio-crossings/quicklook/`.
+17 epochs from the v1/v2 in-window tables (10 ASKAP in-footprint at
+0.1 AU, 1 LoTSS in-beam, 6 VLASS). Catalogue stage: the VAST
+full-survey SBIDs have per-SBID component catalogues in CASDA TAP
+(`AS207.vast_extragal_dr1_*_sb<sbid>_components_v01`) — the only truly
+epoch-resolved public catalogues — and both wolf-359 antipode epochs
+plus gj-1276 A and van-maanen A are empty within 20″ (nearest
+components 219–292″; 5σ ≈ 0.9–1.3 mJy). RACS epochs checked against
+the release catalogues (low2/high single-epoch, consistent SBIDs;
+mid's SBID column shows the 2024-11 teegarden observation is not in
+the release); LoTSS DR3 mosaic empty at 71″. VAST-pilot and FLASH
+SBIDs have no TAP catalogue. VLASS: CADC CAOM2 gives exact tile
+times and SODA cutouts anonymously; nothing above 2.3σ at any
+position in 26 tiles, and the two v1 tolerance-edge rows (gj-1276 A,
+wolf-359 B, VLASS2.1) are 2.5–3 d outside the strict window.
+Closest anything came: a 3.1 mJy RACS-low2 component 29″ from the
+van-maanen B 2022 antipode (a fixed-sky deep-graze point; background).
+
+**Authenticated stage (same day).** The user added OPAL credentials to
+`.env`; CASDA DataLink accepts them as HTTP basic auth and hands back
+a per-product cutout token, after which the SODA async job needs no
+auth (the astroquery.casda flow). Stage 1b downloads the level-5
+Selavy catalogues (VAST pilot v2, FLASH SB84179, RACS-mid SB67840)
+and cone-searches them locally; stage 2 cut out all 12 accessible
+ASKAP images (the VAST-pilot v1 products and the REJECTED FLASH
+SB83234 are "no permission"). Every position empty: wolf-359
+antipode pixels +0.03 / −0.12 mJy at 0.2 mJy rms; teegarden 2026
+antipode +0.03 mJy at 0.07 mJy rms in the 2-h FLASH image. One
+2.7σ pixel at the gj-1276 star (VAST 2023-09-03, 0.64 mJy) was
+followed across all 16 VAST_2257-06 epochs
+(`quicklook_gj1276_epochs.py`): mean +0.09 ± 0.06 mJy, no catalogue
+component within 60″ in any epoch — the maximum of a noise series.
+O1 closed; no residual. Decision §5.5 unchanged. Plan status line,
+§5.5, §5.15, both radio reports updated; nothing committed to git.

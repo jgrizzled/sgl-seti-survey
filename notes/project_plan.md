@@ -1,7 +1,7 @@
 ---
 title: "sgl-seti-survey — Project Plan"
 date: 2026-08-21
-status: "v1.6 — Pipeline A (§4): all six surveys complete on the v2 design (WISE, ZTF, SPHEREx, PS1, joint, DECam), 0 candidates everywhere; Pipeline B (§5): eight surveys complete with 0 candidates (ZTF, PS1, WISE, joint, radio geometry-only, TESS, ATLAS/ASAS-SN §5.9, PTF/iPTF §5.10 — complete 2026-08-26 incl. the first pre-2015 photosphere-grazing constraint); §5.9 ATLAS/ASAS-SN — COMPLETE 2026-09-04 (0 candidates; 27 blind trials, 5 adjudicated exceedances vs 3.2 expected incl. one retained-ambiguous 2.8σ van-maanen grazing chord; first per-window constraints on the van-maanen 0.24 R☉ photosphere-grazing cone: ≳ 80 W in 4 of 11 windows, 2.5 R☉ cones 280–590 W; recurrence cell not calibratable at grazing rungs; report/atlas_asassn_crossings.md); §5.11 heliospheric/LASCO — COMPLETE 2026-08-27 (0 candidates blind, 30 trials, 2 adjudicated exceedances vs 3.3 expected; first-ever sunward-cell constraints: pulse ≥6.7 MW/12-min + 40–530 MW recurrence-stacked through the 2.5 R☉ cone; report/lasco_crossings.md); §5.12 GALEX/gPhoton — COMPLETE 2026-08-26 (0 candidates; 1 retained-ambiguous exceedance vs 1.56 expected; first UV pulse-cell constraints incl. ~6 kW time-averaged coherent trains); §5.13 Rubin DP2 crossings — COMPLETE 2026-08-26 (0 candidates, 1 blind trial; first catalog-level substrate; deepest wide-rung single-epoch threshold ~1.3 kW through the 0.1 AU cone, not injection-calibrated; Rubin Pipeline A tabled until the visit/difference-image release, §6); §5.14 DASCH — COMPLETE 2026-08-26 (0 candidates, 30 blind trials, 2 defect-adjudicated exceedances vs 3.33 expected; first pre-1980 power constraints — grazing cones ≳ 20 kW on deep-plate windows, sub-MW across the century bulk to the 1890s; recurrence-stack cell closed clean); queue item 6 (Gattini-IR + WINTER) — RECON 2026-09-04, BLOCKED: PGIR DR1 is a 2MASS-source light-curve catalog (no images, 2MASS-epoch forced positions, 0.25-d float32 times) and WINTER has no public release; visit lists recorded, needs a PGIR-team data ask; queue item 7 (radio metadata extensions) — COMPLETE 2026-09-04 (geometry-only, decision unchanged; CASDA ObsCore 91 cones + LoTSS DR3 pointing dates; grazing rungs 0 observations in 95 in-span events; first archival radio coverage of 0.1 AU antipode windows — 6 validated ASKAP epochs / 5 targets, wolf-359 2023+2024 inside the VAST primary beam; report/radio_crossings_ext.md); item 8 (Kepler/K2 footprint intersect) — COMPLETE 2026-09-04, CLOSED with no survey: 0 channel positions on Kepler silicon during any crossing at any rung, and none possible — K2 boresights never came within 22° (37° with the true C14 start) of the spacecraft's anti-sun point while ≤ 0.1 AU channel positions sit within 3.5° of it (elongation gate, 4th confirmation), the prime field is 66°+ off; Earth-center is invalid for Kepler at every rung (0.04–1.14 AU from Earth; |Δt_ca| median 33 d), so a spacecraft list crossings/kepler_v1 was built (Horizons −227); five registry stars have K2 light curves at b ≈ 0.9–1.0 AU (wide rung, recorded, not a queue item); surveys/kepler-crossings/notes/kepler_k2_footprint_intersect_2026-09-04.md. Execution record: notes/project_history.md; lessons: notes/learnings.md"
+status: "v1.6 — Pipeline A (§4): all six surveys complete on the v2 design (WISE, ZTF, SPHEREx, PS1, joint, DECam), 0 candidates everywhere; Pipeline B (§5): eight surveys complete with 0 candidates (ZTF, PS1, WISE, joint, radio geometry-only, TESS, ATLAS/ASAS-SN §5.9, PTF/iPTF §5.10 — complete 2026-08-26 incl. the first pre-2015 photosphere-grazing constraint); §5.9 ATLAS/ASAS-SN — COMPLETE 2026-09-04 (0 candidates; 27 blind trials, 5 adjudicated exceedances vs 3.2 expected incl. one retained-ambiguous 2.8σ van-maanen grazing chord; first per-window constraints on the van-maanen 0.24 R☉ photosphere-grazing cone: ≳ 80 W in 4 of 11 windows, 2.5 R☉ cones 280–590 W; recurrence cell not calibratable at grazing rungs; report/atlas_asassn_crossings.md); §5.11 heliospheric/LASCO — COMPLETE 2026-08-27 (0 candidates blind, 30 trials, 2 adjudicated exceedances vs 3.3 expected; first-ever sunward-cell constraints: pulse ≥6.7 MW/12-min + 40–530 MW recurrence-stacked through the 2.5 R☉ cone; report/lasco_crossings.md); §5.12 GALEX/gPhoton — COMPLETE 2026-08-26 (0 candidates; 1 retained-ambiguous exceedance vs 1.56 expected; first UV pulse-cell constraints incl. ~6 kW time-averaged coherent trains); §5.13 Rubin DP2 crossings — COMPLETE 2026-08-26 (0 candidates, 1 blind trial; first catalog-level substrate; deepest wide-rung single-epoch threshold ~1.3 kW through the 0.1 AU cone, not injection-calibrated; Rubin Pipeline A tabled until the visit/difference-image release, §6); §5.14 DASCH — COMPLETE 2026-08-26 (0 candidates, 30 blind trials, 2 defect-adjudicated exceedances vs 3.33 expected; first pre-1980 power constraints — grazing cones ≳ 20 kW on deep-plate windows, sub-MW across the century bulk to the 1890s; recurrence-stack cell closed clean); queue item 6 (Gattini-IR + WINTER) — RECON 2026-09-04, BLOCKED: PGIR DR1 is a 2MASS-source light-curve catalog (no images, 2MASS-epoch forced positions, 0.25-d float32 times) and WINTER has no public release; visit lists recorded, needs a PGIR-team data ask; queue item 7 (radio metadata extensions) — COMPLETE 2026-09-04 (geometry-only, decision unchanged; CASDA ObsCore 91 cones + LoTSS DR3 pointing dates; grazing rungs 0 observations in 95 in-span events; first archival radio coverage of 0.1 AU antipode windows — 6 validated ASKAP epochs / 5 targets, wolf-359 2023+2024 inside the VAST primary beam; report/radio_crossings_ext.md); item 8 (Kepler/K2 footprint intersect) — COMPLETE 2026-09-04, CLOSED with no survey: 0 channel positions on Kepler silicon during any crossing at any rung, and none possible — K2 boresights never came within 22° (37° with the true C14 start) of the spacecraft's anti-sun point while ≤ 0.1 AU channel positions sit within 3.5° of it (elongation gate, 4th confirmation), the prime field is 66°+ off; Earth-center is invalid for Kepler at every rung (0.04–1.14 AU from Earth; |Δt_ca| median 33 d), so a spacecraft list crossings/kepler_v1 was built (Horizons −227); five registry stars have K2 light curves at b ≈ 0.9–1.0 AU (wide rung, recorded, not a queue item); surveys/kepler-crossings/notes/kepler_k2_footprint_intersect_2026-09-04.md. Outstanding-items ledger: §5.15 (2026-09-04); O1 radio quick-look done 2026-09-04 (17 epochs incl. 12 ASKAP + 26 VLASS cutouts, nothing coincident, nothing above 3σ; report/radio_quicklook.md). Execution record: notes/project_history.md; lessons: notes/learnings.md"
 tags:
   - SETI
   - technosignatures
@@ -270,7 +270,8 @@ as joint v3.0** (§4.5: 0 candidates blind; the stack-regime asteroid
 control also closed, `notes/learnings.md` §10 item 1);
 SPHEREx re-run per quick release (QR3 adds a true parallax-phase
 hold-out); the stack-regime positive controls and template refits
-listed in `notes/learnings.md` §10; Rubin and Gaia DR4 (§6).
+listed in `notes/learnings.md` §10; Rubin and Gaia DR4 (§6). All
+remaining items are tracked in the §5.15 ledger.
 
 ### 4.1 WISE/NEOWISE
 
@@ -502,8 +503,10 @@ targets sit inside antipode windows (wolf-359 2023-09 and 2024-09 at
 on-star A 0.1 AU: gj-1276 VAST 2023, teegarden RACS-mid 2024 + LoTSS
 2023 (in beam), van-maanen VAST 2024. The "nobody has ever looked"
 statement now holds for targeted radio and the grazing rungs only.
-Hand-offs: antipode cutout/catalogue quick-look on the 6 epochs
-(with the VLASS six); VLASS refresh at the yearly refresh.
+Hand-offs: ~~antipode cutout/catalogue quick-look on the 6 epochs
+(with the VLASS six)~~ — done 2026-09-04, `report/radio_quicklook.md`
+(nothing coincident anywhere, ASKAP cutouts included via the OPAL
+login); VLASS refresh at the yearly refresh.
 
 ### 5.6 TESS
 
@@ -871,6 +874,42 @@ PM-less for high-µ stars (v1.1 routing), DASCH's defect classifier
 eats real single-plate transients (v1.2 — `SUSPECTED_DEFECT`
 demoted to annotation), sub-limit stars are their own hit
 background (v1.3 quiescent gate).
+
+### 5.15 Outstanding items (ledger, 2026-09-04)
+
+Every §5.8 queue item is complete, closed, or blocked, so this ledger
+is the single list of what remains. It is ordered by readiness, then
+by recommended sequence within each tier; each row names the section
+that owns the item. Update this table when an item starts (give it its
+own section, as the queue did) or closes.
+
+**Tier 1 — ready now, in-repo (recommended order)**
+
+| #  | Item | Owner | What it is | Status |
+| -- | ---- | ----- | ---------- | ------ |
+| O1 | **Radio quick-look** | §5.5 hand-offs (a)+(b) of `report/radio_crossings_ext.md` §4, plus the VLASS six of `report/radio_crossings.md` | Broadband transient check at the relay position: RACS/VAST catalogue cone-search first, image cutout second, on the 6 validated ASKAP B 0.1 AU antipode epochs, the 4 on-star narrow-rung epochs, and the 4 strict + 2 tolerance-edge VLASS on-star epochs. Geometry-only decision unchanged; this is a look, not a search | **Done 2026-09-04** (`report/radio_quicklook.md`): 17 epochs, 0 coincident catalogue components (10 catalogues, 7 epoch-resolved), 0 pixels above 3σ in 12 ASKAP + 26 VLASS cutouts; both wolf-359 antipode epochs empty at 0.2 mJy rms, teegarden 2026 antipode empty at 0.07 mJy (2-h FLASH); exact tile times put the two VLASS tolerance-edge rows outside the window. ASKAP stage ran with the OPAL login (`.env`); only the REJECTED FLASH SB83234 is closed. gj-1276 2.7σ pixel in-window = max of a 16-epoch noise series |
+| O2 | **STEREO-A HI-1 sunward survey** | §5.11 ("Later"); geometry study `surveys/heliospheric-crossings/notes/sunward_geometry_study_2026-08-25.md` §5 | Second heliospheric substrate, sub-MW downlink cell at V ~ 13 with 40-min cadence from 2007. Prerequisite: a STEREO-A observer crossing list via `register_spacecraft_table_observer` (Horizons −234), as `crossings/kepler_v1` was built; then DECam-style archive recon (UKSSDC/NRL HI L2), freeze, blind run, report | Not started |
+| O3 | **SPHEREx deferred controls on QR2** | §4.3; `notes/learnings.md` §10; `report/spherex_survey.md` | (i) the six-detector joint cell from the stored per-tensor accumulators; (ii) template refit with injections (slow-source absorption unmodelled). Both were deferred to the QR3 re-run, but QR3 is not out (IRSA `spherex.obscore` serves only `spherex_qr2`, latest epoch MJD 61241 ≈ 2026-07-20, checked 2026-09-04) and neither depends on it. Independent of O1/O2 | Not started |
+| O4 | **Spectral-archive family** | §3.6 row 10 (never started) | New survey with its own recon: the 3 teegarden APF spectra handed off from §5.5 (optical laser-line inspection in a crossing window); the 1550 nm line hypotheses moved here from §5.8 item 6 (APOGEE H-band, ESO NIRPS); ESO/Keck archives generally | Not started |
+| O5 | **PSP/WISPR observer-geometry pass** | §5.11; geometry study §4 caveat 1 | Prerequisite study before WISPR can be adopted: PSP-observer crossing list (inner-heliosphere observer, 0.05–0.7 AU), graze-point elongation vs the 13.5° inner FOV edge per encounter. Short, using the generic spacecraft machinery | Not started |
+
+**Tier 2 — small standing items (no sequence)**
+
+| #  | Item | Owner | Status |
+| -- | ---- | ----- | ------ |
+| O6 | Propagate impact-parameter uncertainty in the universal crossing list (`sglseti.crossing_uncertainty` exists per event) | §5.7 caveat | Open |
+| O7 | S2 1 AU outer-skirt (ε ≳ 30–40°) blended search on a night-sky archive (ATLAS-style) | geometry study §4 caveat 3 | Open, low priority |
+| O8 | SPHEREx re-run at QR3 (true parallax-phase hold-out) | §4.3 | Waiting on release |
+
+**Tier 3 — blocked on external parties or dates**
+
+| #   | Item | Owner | Blocker |
+| --- | ---- | ----- | ------- |
+| O9  | Gattini-IR epochal images / PM-propagated forced photometry | §5.8 item 6 | A data ask to the PGIR team (user action) or a future image release |
+| O10 | WINTER re-check | §5.7 | No public release |
+| O11 | Rubin Pipeline A + image-level Pipeline B | §6 | Visit/difference-image release (late 2026), Year-1 release |
+| O12 | Gaia DR4 astrometric SGL-track test + L2-observer list | §6 | Release not before 2026-12 |
+| O13 | BL-MeerKAT re-check; VLASS refresh (epochs 3.2 / 4.x); v2 CASDA/LoTSS re-run; TESS/GALEX ledger fold-in; teegarden recurrence re-test | §5.7 | The yearly crossing-list refresh |
 
 ## 6. Future projects (both pipelines)
 

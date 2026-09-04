@@ -290,6 +290,22 @@ Amendments forced by evidence on development sets (the retrospectives):
   the image bound, not the footprint — declare your own. LoTSS DR3
   `pointings.dateallobs` gives every 8-h run's mid-MJD; DR2 has only
   `dateobs`.
+- Radio quick-look access map (2026-09-04): CASDA *catalogues* are
+  anonymous TAP — VAST full-survey SBIDs each have an epoch-resolved
+  component table (`AS207.vast_extragal_dr1_<field>_sb<sbid>_components_v01`),
+  RACS has release tables (only `racs_mid_*` and `racs_low2_v_*` carry
+  `sbid`), and the level-5 Selavy files of pilot/guest/FLASH SBIDs are
+  not exposed to TAP but downloadable; CASDA *images* and level-5
+  files are HTTP 401 without an OPAL login. With one (`.env`
+  `OPAL_USERNAME`/`OPAL_PASSWORD`): basic auth on the DataLink VOTable
+  → per-product `cutout_service` token → POST `ID=<token>` to
+  `casda_data_access/data/async`, then `/parameters` (CIRCLE) and
+  `/phase` RUN, no auth; ~25 s per 3′ cutout. Permissions are per
+  product (pilot v1 and REJECTED images closed). VLASS is the opposite: CADC CAOM2 has exact quick-look
+  tile time bounds (VLASS4.1 planes lack them — read the tile header)
+  and SODA cutouts (`minoc/files/<uri>?CIRCLE=ra+dec+r`) are anonymous.
+  ASTRON `lotss_dr3.main_sources` is a mosaic of all runs, never
+  epoch-resolved.
 - The 1/9 exceedance budget behaved exactly as designed in both
   searched surveys (ZTF 3 vs 4.0 expected; PS1 2 vs 2.1).
 - **Correlated exact-mask attrition** is the single-phase-cadence
