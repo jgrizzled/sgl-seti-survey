@@ -260,6 +260,20 @@ Amendments forced by evidence on development sets (the retrospectives):
   multi-year references, k factors 10²–10⁴); the parallax-factor
   systematics template + empirical variance rescale recipe is reusable.
   The antipode (downlink pre-lens) channel is the workhorse.
+- "Archivally virgin" is rung- and mode-specific (radio, 2026-09-04):
+  the antipode channel has zero *targeted* radio pointings, but
+  wide-field ASKAP continuum epochs (VAST/RACS/FLASH) do fall inside
+  the ±6 d 0.1 AU windows — 6 validated epochs on 5 targets, none on
+  the ≤ 1 d grazing windows. State which rung and which archive class a
+  "nobody has looked" claim covers.
+- CASDA ObsCore is the cheapest revisiting-radio substrate: `cube` +
+  `cont.restored.t0` rows carry `s_region` and per-SBID intervals for
+  every ASKAP project at once (one TAP cone per position, ~7 s); the
+  VAST-pilot cubes lack `t_min` (join `casda.observation` by SBID),
+  several cubes per SBID need a quality-ranked dedupe, and `s_fov` is
+  the image bound, not the footprint — declare your own. LoTSS DR3
+  `pointings.dateallobs` gives every 8-h run's mid-MJD; DR2 has only
+  `dateobs`.
 - The 1/9 exceedance budget behaved exactly as designed in both
   searched surveys (ZTF 3 vs 4.0 expected; PS1 2 vs 2.1).
 - **Correlated exact-mask attrition** is the single-phase-cadence

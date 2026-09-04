@@ -1,0 +1,1724 @@
+[
+ {
+  "channel": "A",
+  "target_id": "61-cyg-a",
+  "status": "ok",
+  "ra": 316.7561034444469,
+  "dec": 38.768579604578676,
+  "n_events": 14,
+  "n_cubes": 19,
+  "n_obs": 17,
+  "n_obs_dated": 17,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 17
+  },
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "A",
+  "target_id": "61-cyg-b",
+  "status": "ok",
+  "ra": 316.7611788802493,
+  "dec": 38.760655505410696,
+  "n_events": 14,
+  "n_cubes": 19,
+  "n_obs": 17,
+  "n_obs_dated": 17,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 17
+  },
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "A",
+  "target_id": "61-vir",
+  "status": "ok",
+  "ra": 199.59479773770852,
+  "dec": -18.31734127727016,
+  "n_events": 14,
+  "n_cubes": 50,
+  "n_obs": 23,
+  "n_obs_dated": 23,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 10,
+   "ASKAP Pilot Survey for WALLABY": 3,
+   "ASKAP Pilot Survey for EMU": 3,
+   "WALLABY": 3,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "FLASH": 3
+  },
+  "n_inwindow_rows": 13
+ },
+ {
+  "channel": "A",
+  "target_id": "82-eri",
+  "status": "ok",
+  "ra": 50.00649212105847,
+  "dec": -43.06551535525191,
+  "n_events": 14,
+  "n_cubes": 51,
+  "n_obs": 41,
+  "n_obs_dated": 41,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 8,
+   "The Rapid ASKAP Continuum Survey": 10,
+   "VAST": 19,
+   "EMU": 2,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 4
+ },
+ {
+  "channel": "A",
+  "target_id": "alpha-cen-a",
+  "status": "ok",
+  "ra": 219.85845658418754,
+  "dec": -60.83196591138279,
+  "n_events": 14,
+  "n_cubes": 260,
+  "n_obs": 248,
+  "n_obs_dated": 248,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 15,
+   "VAST": 217,
+   "EMU": 4,
+   "ASKAP Engineering Commissioning": 12
+  },
+  "n_inwindow_rows": 76
+ },
+ {
+  "channel": "A",
+  "target_id": "alpha-cen-b",
+  "status": "ok",
+  "ra": 219.85797733155607,
+  "dec": -60.83030466957591,
+  "n_events": 14,
+  "n_cubes": 260,
+  "n_obs": 248,
+  "n_obs_dated": 248,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 15,
+   "VAST": 217,
+   "EMU": 4,
+   "ASKAP Engineering Commissioning": 12
+  },
+  "n_inwindow_rows": 76
+ },
+ {
+  "channel": "A",
+  "target_id": "barnard-star",
+  "status": "ok",
+  "ra": 269.4473936818172,
+  "dec": 4.753797426932817,
+  "n_events": 14,
+  "n_cubes": 50,
+  "n_obs": 46,
+  "n_obs_dated": 46,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 9,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 33,
+   "A multi-wavelength untargeted search for variables and transient events on minute-timescale": 1,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 15
+ },
+ {
+  "channel": "A",
+  "target_id": "eps-eri",
+  "status": "ok",
+  "ra": 53.22683191898612,
+  "dec": -9.458175646549238,
+  "n_events": 14,
+  "n_cubes": 66,
+  "n_obs": 48,
+  "n_obs_dated": 48,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 11,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1,
+   "The Rapid ASKAP Continuum Survey": 10,
+   "VAST": 19,
+   "FLASH": 5,
+   "EMU": 2
+  },
+  "n_inwindow_rows": 7
+ },
+ {
+  "channel": "A",
+  "target_id": "eps-ind-a",
+  "status": "ok",
+  "ra": 330.8826832710713,
+  "dec": -56.80088189781638,
+  "n_events": 14,
+  "n_cubes": 102,
+  "n_obs": 78,
+  "n_obs_dated": 78,
+  "collections": {
+   "ASKAP Pilot Survey for POSSUM": 2,
+   "ASKAP Pilot Survey for VAST": 26,
+   "The Rapid ASKAP Continuum Survey": 10,
+   "EMU": 3,
+   "FLASH": 2,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 32,
+   "ASKAP Pilot Survey for EMU": 1
+  },
+  "n_inwindow_rows": 28
+ },
+ {
+  "channel": "A",
+  "target_id": "eps-ind-b",
+  "status": "ok",
+  "ra": 331.0867674668591,
+  "dec": -56.797341606931404,
+  "n_events": 14,
+  "n_cubes": 104,
+  "n_obs": 80,
+  "n_obs_dated": 80,
+  "collections": {
+   "ASKAP Pilot Survey for POSSUM": 2,
+   "ASKAP Pilot Survey for VAST": 26,
+   "The Rapid ASKAP Continuum Survey": 12,
+   "EMU": 3,
+   "FLASH": 2,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 32,
+   "ASKAP Pilot Survey for EMU": 1
+  },
+  "n_inwindow_rows": 28
+ },
+ {
+  "channel": "A",
+  "target_id": "ez-aqr",
+  "status": "ok",
+  "ra": 339.65413509395904,
+  "dec": -15.286367005534473,
+  "n_events": 14,
+  "n_cubes": 27,
+  "n_obs": 18,
+  "n_obs_dated": 18,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 13,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "FLASH": 2,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2
+  },
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "A",
+  "target_id": "fomalhaut",
+  "status": "ok",
+  "ra": 344.4149221578958,
+  "dec": -29.6232164858474,
+  "n_events": 14,
+  "n_cubes": 245,
+  "n_obs": 133,
+  "n_obs_dated": 133,
+  "collections": {
+   "ASKAP Pilot Survey for DINGO": 28,
+   "The Rapid ASKAP Continuum Survey": 9,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 18,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "GEM-DEEP: GAMA23 EXPLORATION VIA MULTI-BAND DEEP RADIO OBSERVATIONS": 5,
+   "DINGO": 63,
+   "EMU": 1,
+   "FLASH": 1,
+   "ASKAP Early Science Broadband Survey": 2,
+   "WALLABY": 2,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2
+  },
+  "n_inwindow_rows": 73
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1002",
+  "status": "ok",
+  "ra": 1.675165534670727,
+  "dec": -7.549228962564487,
+  "n_events": 14,
+  "n_cubes": 123,
+  "n_obs": 91,
+  "n_obs_dated": 91,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 27,
+   "The Rapid ASKAP Continuum Survey": 15,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 32,
+   "EMU": 10,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 3,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 31
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1061",
+  "status": "ok",
+  "ra": 54.00497762218454,
+  "dec": -44.51497335490619,
+  "n_events": 14,
+  "n_cubes": 111,
+  "n_obs": 85,
+  "n_obs_dated": 85,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 17,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1,
+   "The Rapid ASKAP Continuum Survey": 16,
+   "WALLABY": 3,
+   "VAST": 39,
+   "ASKAP Early Science Broadband Survey": 1,
+   "EMU": 4,
+   "FLASH": 4
+  },
+  "n_inwindow_rows": 11
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1087",
+  "status": "ok",
+  "ra": 89.1034191726403,
+  "dec": 5.3579280924399795,
+  "n_events": 14,
+  "n_cubes": 33,
+  "n_obs": 32,
+  "n_obs_dated": 32,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 12,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 19
+  },
+  "n_inwindow_rows": 14
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-11068",
+  "status": "ok",
+  "ra": 110.0133116267919,
+  "dec": -8.781237796583326,
+  "n_events": 15,
+  "n_cubes": 154,
+  "n_obs": 140,
+  "n_obs_dated": 140,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 15,
+   "VAST": 115,
+   "ASKAP Engineering Commissioning": 5,
+   "EMU": 5
+  },
+  "n_inwindow_rows": 43
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1111",
+  "status": "ok",
+  "ra": 127.44834109504377,
+  "dec": 26.772435059813834,
+  "n_events": 15,
+  "n_cubes": 18,
+  "n_obs": 15,
+  "n_obs_dated": 15,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 14,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1
+  },
+  "n_inwindow_rows": 7
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-11547",
+  "status": "ok",
+  "ra": 162.0516261108092,
+  "dec": -39.94110030876476,
+  "n_events": 15,
+  "n_cubes": 93,
+  "n_obs": 80,
+  "n_obs_dated": 80,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 15,
+   "ASKAP Engineering Commissioning": 3,
+   "VAST": 57,
+   "EMU": 1,
+   "WALLABY": 1,
+   "FLASH": 3
+  },
+  "n_inwindow_rows": 21
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1221",
+  "status": "ok",
+  "ra": 267.0107821282963,
+  "dec": 70.88307280290772,
+  "n_events": 15,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-12724",
+  "status": "ok",
+  "ra": 281.30620980538293,
+  "dec": -63.95979707664237,
+  "n_events": 14,
+  "n_cubes": 111,
+  "n_obs": 43,
+  "n_obs_dated": 43,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 14,
+   "ASKAP Pilot Survey for CRAFT": 1,
+   "ASKAP Pilot Survey for VAST": 12,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 6,
+   "VAST": 2,
+   "EMU": 5,
+   "FLASH": 3
+  },
+  "n_inwindow_rows": 3
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-1276",
+  "status": "ok",
+  "ra": 343.4871634513337,
+  "dec": -6.785809688678448,
+  "n_events": 14,
+  "n_cubes": 51,
+  "n_obs": 45,
+  "n_obs_dated": 45,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 14,
+   "The Rapid ASKAP Continuum Survey": 10,
+   "VAST": 18,
+   "FLASH": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2
+  },
+  "n_inwindow_rows": 15
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-13157",
+  "status": "ok",
+  "ra": 327.91606509993073,
+  "dec": 59.29291863999668,
+  "n_events": 14,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-2012",
+  "status": "ok",
+  "ra": 10.355498307533757,
+  "dec": -22.352899417732587,
+  "n_events": 14,
+  "n_cubes": 79,
+  "n_obs": 50,
+  "n_obs_dated": 50,
+  "collections": {
+   "ASKAP Pilot Survey for Gravitational Wave Counterparts": 9,
+   "ASKAP Pilot Survey for FLASH": 2,
+   "ASKAP Pilot Survey for VAST": 1,
+   "The Rapid ASKAP Continuum Survey": 16,
+   "VAST": 17,
+   "FLASH": 4,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1
+  },
+  "n_inwindow_rows": 12
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-2066",
+  "status": "ok",
+  "ra": 124.03105093417872,
+  "dec": 1.3029187131380657,
+  "n_events": 15,
+  "n_cubes": 73,
+  "n_obs": 59,
+  "n_obs_dated": 59,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 11,
+   "ASKAP Pilot Survey for FLASH": 1,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 38,
+   "EMU": 3,
+   "FLASH": 2,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2
+  },
+  "n_inwindow_rows": 21
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-229-a",
+  "status": "ok",
+  "ra": 92.64335495203282,
+  "dec": -21.868952161372018,
+  "n_events": 14,
+  "n_cubes": 32,
+  "n_obs": 19,
+  "n_obs_dated": 19,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 14,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "FLASH": 4
+  },
+  "n_inwindow_rows": 5
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-251",
+  "status": "ok",
+  "ra": 103.69892199979185,
+  "dec": 33.26586355195946,
+  "n_events": 15,
+  "n_cubes": 24,
+  "n_obs": 20,
+  "n_obs_dated": 20,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 17,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 3
+  },
+  "n_inwindow_rows": 11
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-293",
+  "status": "ok",
+  "ra": 118.30617252977687,
+  "dec": -67.8006333132478,
+  "n_events": 14,
+  "n_cubes": 59,
+  "n_obs": 30,
+  "n_obs_dated": 30,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 17,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "EMU": 6,
+   "FLASH": 6
+  },
+  "n_inwindow_rows": 4
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-3112",
+  "status": "ok",
+  "ra": 25.749140235489676,
+  "dec": -67.31442876202317,
+  "n_events": 14,
+  "n_cubes": 69,
+  "n_obs": 42,
+  "n_obs_dated": 42,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 27,
+   "ASKAP Pilot Survey for GASKAP-HI": 2,
+   "EMU": 4,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 2,
+   "FLASH": 5,
+   "ASKAP Early Science at High Spectral Resolution": 1,
+   "GASKAP-HI": 1
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-318",
+  "status": "ok",
+  "ra": 130.37769217169927,
+  "dec": -32.934603370457694,
+  "n_events": 15,
+  "n_cubes": 107,
+  "n_obs": 93,
+  "n_obs_dated": 93,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 13,
+   "VAST": 70,
+   "ASKAP Engineering Commissioning": 4,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 3,
+   "FLASH": 2,
+   "ASKAP Early Science Broadband Survey": 1
+  },
+  "n_inwindow_rows": 27
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-3306",
+  "status": "ok",
+  "ra": 69.44896697593059,
+  "dec": -8.828863417669222,
+  "n_events": 14,
+  "n_cubes": 65,
+  "n_obs": 52,
+  "n_obs_dated": 52,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 9,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 37,
+   "FLASH": 3,
+   "EMU": 2
+  },
+  "n_inwindow_rows": 13
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-338-a",
+  "status": "ok",
+  "ra": 138.57999086132205,
+  "dec": 52.68330303947462,
+  "n_events": 15,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-338-b",
+  "status": "ok",
+  "ra": 138.587677885699,
+  "dec": 52.68252455256434,
+  "n_events": 15,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-3512",
+  "status": "ok",
+  "ra": 130.330884738014,
+  "dec": 59.48988472784056,
+  "n_events": 15,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-367",
+  "status": "ok",
+  "ra": 146.12039699759083,
+  "dec": -45.77995800245542,
+  "n_events": 15,
+  "n_cubes": 74,
+  "n_obs": 57,
+  "n_obs_dated": 57,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 12,
+   "ASKAP Pilot Survey for WALLABY": 2,
+   "VAST": 35,
+   "WALLABY": 2,
+   "ASKAP Engineering Commissioning": 2,
+   "EMU": 2,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 10
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-514",
+  "status": "ok",
+  "ra": 202.50572255396787,
+  "dec": 10.37097947369038,
+  "n_events": 14,
+  "n_cubes": 48,
+  "n_obs": 40,
+  "n_obs_dated": 40,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 16,
+   "ASKAP Engineering Commissioning": 1,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "VAST": 20,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 13
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-518",
+  "status": "ok",
+  "ra": 204.11111805858454,
+  "dec": 3.6730092726904333,
+  "n_events": 14,
+  "n_cubes": 150,
+  "n_obs": 124,
+  "n_obs_dated": 124,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 18,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2,
+   "The Rapid ASKAP Continuum Survey": 13,
+   "ASKAP Engineering Commissioning": 4,
+   "VAST": 77,
+   "FLASH": 8,
+   "EMU": 2
+  },
+  "n_inwindow_rows": 38
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-526",
+  "status": "ok",
+  "ra": 206.44300833536562,
+  "dec": 14.883144715091113,
+  "n_events": 14,
+  "n_cubes": 27,
+  "n_obs": 19,
+  "n_obs_dated": 19,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 17,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 8
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-54",
+  "status": "ok",
+  "ra": 18.135105091746347,
+  "dec": -16.995250833821018,
+  "n_events": 14,
+  "n_cubes": 22,
+  "n_obs": 16,
+  "n_obs_dated": 16,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 13,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-581",
+  "status": "ok",
+  "ra": 229.85464187500668,
+  "dec": -7.722830595467531,
+  "n_events": 14,
+  "n_cubes": 79,
+  "n_obs": 63,
+  "n_obs_dated": 63,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 13,
+   "FLASH": 3,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 38,
+   "EMU": 4,
+   "Measurement of Magnetic Fields of Solar Coronal Mass Ejections using Wide Field of View Faraday Rotation Observations": 3
+  },
+  "n_inwindow_rows": 24
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-588",
+  "status": "ok",
+  "ra": 233.0447970689957,
+  "dec": -41.28159042302616,
+  "n_events": 14,
+  "n_cubes": 28,
+  "n_obs": 17,
+  "n_obs_dated": 17,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 13,
+   "FLASH": 3,
+   "EMU": 1
+  },
+  "n_inwindow_rows": 6
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-625",
+  "status": "ok",
+  "ra": 246.35692341566653,
+  "dec": 54.30313956437119,
+  "n_events": 14,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-66-a",
+  "status": "ok",
+  "ra": 24.952033056433578,
+  "dec": -56.193251642801016,
+  "n_events": 14,
+  "n_cubes": 73,
+  "n_obs": 43,
+  "n_obs_dated": 43,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 9,
+   "EMU": 3,
+   "WALLABY": 8,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "VAST": 18,
+   "FLASH": 1,
+   "GASKAP-HI": 3
+  },
+  "n_inwindow_rows": 4
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-66-b",
+  "status": "ok",
+  "ra": 24.95149325609309,
+  "dec": -56.19640628950983,
+  "n_events": 14,
+  "n_cubes": 73,
+  "n_obs": 43,
+  "n_obs_dated": 43,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 9,
+   "EMU": 3,
+   "WALLABY": 8,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "VAST": 18,
+   "FLASH": 1,
+   "GASKAP-HI": 3
+  },
+  "n_inwindow_rows": 4
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-667-c",
+  "status": "ok",
+  "ra": 259.75314993148936,
+  "dec": -34.99809918652198,
+  "n_events": 14,
+  "n_cubes": 156,
+  "n_obs": 150,
+  "n_obs_dated": 150,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 12,
+   "The Rapid ASKAP Continuum Survey": 25,
+   "VAST": 106,
+   "ASKAP Engineering Commissioning": 7
+  },
+  "n_inwindow_rows": 50
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-674",
+  "status": "ok",
+  "ra": 262.1713154750514,
+  "dec": -46.90034117749556,
+  "n_events": 14,
+  "n_cubes": 95,
+  "n_obs": 78,
+  "n_obs_dated": 78,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 20,
+   "ASKAP Pilot Survey for EMU": 1,
+   "ASKAP Pilot Survey for FLASH": 1,
+   "VAST": 49,
+   "ASKAP Engineering Commissioning": 3,
+   "EMU": 2,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 21
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-682",
+  "status": "ok",
+  "ra": 264.25952787530673,
+  "dec": -44.32469412984094,
+  "n_events": 14,
+  "n_cubes": 98,
+  "n_obs": 78,
+  "n_obs_dated": 78,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 18,
+   "ASKAP Pilot Survey for EMU": 2,
+   "VAST": 49,
+   "ASKAP Engineering Commissioning": 3,
+   "WALLABY": 2,
+   "EMU": 3,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 21
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-687",
+  "status": "ok",
+  "ra": 264.1029024460482,
+  "dec": 68.33167238910356,
+  "n_events": 15,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-783",
+  "status": "ok",
+  "ra": 302.803069226958,
+  "dec": -36.11043987364195,
+  "n_events": 14,
+  "n_cubes": 67,
+  "n_obs": 54,
+  "n_obs_dated": 54,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 12,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 32,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "WALLABY": 2,
+   "FLASH": 3,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2
+  },
+  "n_inwindow_rows": 18
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-784",
+  "status": "ok",
+  "ra": 303.4789436278097,
+  "dec": -45.16497293245378,
+  "n_events": 14,
+  "n_cubes": 88,
+  "n_obs": 72,
+  "n_obs_dated": 72,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 26,
+   "ASKAP Pilot Survey for FLASH": 1,
+   "The Rapid ASKAP Continuum Survey": 10,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 31,
+   "WALLABY": 1,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 28
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-832",
+  "status": "ok",
+  "ra": 323.3911704024723,
+  "dec": -49.013811403563125,
+  "n_events": 14,
+  "n_cubes": 91,
+  "n_obs": 64,
+  "n_obs_dated": 64,
+  "collections": {
+   "ASKAP Pilot Survey for POSSUM": 2,
+   "ASKAP Pilot Survey for VAST": 17,
+   "The Rapid ASKAP Continuum Survey": 16,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 19,
+   "FLASH": 1,
+   "EMU": 5,
+   "WALLABY": 2,
+   "ASKAP Pilot Survey for EMU": 1
+  },
+  "n_inwindow_rows": 20
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-876",
+  "status": "ok",
+  "ra": 343.3255321572091,
+  "dec": -14.267662788575734,
+  "n_events": 14,
+  "n_cubes": 33,
+  "n_obs": 23,
+  "n_obs_dated": 23,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 16,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 4,
+   "FLASH": 3
+  },
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-908",
+  "status": "ok",
+  "ra": 357.30804395627024,
+  "dec": 2.3955148227001386,
+  "n_events": 14,
+  "n_cubes": 103,
+  "n_obs": 88,
+  "n_obs_dated": 88,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 16,
+   "The Rapid ASKAP Continuum Survey": 25,
+   "ASKAP Pilot Survey for FLASH": 1,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 37,
+   "FLASH": 2,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 4
+  },
+  "n_inwindow_rows": 33
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-915",
+  "status": "ok",
+  "ra": 0.5496475001975107,
+  "dec": -43.16944479387283,
+  "n_events": 14,
+  "n_cubes": 46,
+  "n_obs": 35,
+  "n_obs_dated": 35,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 12,
+   "VAST": 18,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "EMU": 2,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 4
+ },
+ {
+  "channel": "A",
+  "target_id": "gj-9193",
+  "status": "ok",
+  "ra": 88.79291067085862,
+  "dec": -4.182466789597891,
+  "n_events": 14,
+  "n_cubes": 57,
+  "n_obs": 53,
+  "n_obs_dated": 53,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 11,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 39,
+   "FLASH": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1
+  },
+  "n_inwindow_rows": 14
+ },
+ {
+  "channel": "A",
+  "target_id": "gj65-a",
+  "status": "ok",
+  "ra": 24.776781136588635,
+  "dec": -17.947442199199173,
+  "n_events": 14,
+  "n_cubes": 27,
+  "n_obs": 14,
+  "n_obs_dated": 14,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 8,
+   "WALLABY": 3,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "gj65-b",
+  "status": "ok",
+  "ra": 24.77658546730673,
+  "dec": -17.946977482584863,
+  "n_events": 14,
+  "n_cubes": 27,
+  "n_obs": 14,
+  "n_obs_dated": 14,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 8,
+   "WALLABY": 3,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "groombridge-34-a",
+  "status": "ok",
+  "ra": 4.619107961260849,
+  "dec": 44.02543289732871,
+  "n_events": 14,
+  "n_cubes": 17,
+  "n_obs": 15,
+  "n_obs_dated": 15,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 14,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "groombridge-34-b",
+  "status": "ok",
+  "ra": 4.631124038552979,
+  "dec": 44.02927974063483,
+  "n_events": 14,
+  "n_cubes": 17,
+  "n_obs": 15,
+  "n_obs_dated": 15,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 14,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "hd-219134",
+  "status": "ok",
+  "ra": 348.34331990758335,
+  "dec": 57.17012388837169,
+  "n_events": 14,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "kapteyn-star",
+  "status": "ok",
+  "ra": 77.97377853844277,
+  "dec": -45.05246622334708,
+  "n_events": 14,
+  "n_cubes": 89,
+  "n_obs": 77,
+  "n_obs_dated": 77,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 22,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2,
+   "The Rapid ASKAP Continuum Survey": 10,
+   "ASKAP Pilot Survey for FLASH": 1,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "VAST": 39,
+   "EMU": 2
+  },
+  "n_inwindow_rows": 4
+ },
+ {
+  "channel": "A",
+  "target_id": "lacaille-8760",
+  "status": "ok",
+  "ra": 319.2891180554898,
+  "dec": -38.87409920418291,
+  "n_events": 14,
+  "n_cubes": 119,
+  "n_obs": 99,
+  "n_obs_dated": 99,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 19,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 26,
+   "ASKAP Pilot Survey for VAST": 6,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 38,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "ASKAP Early Science Broadband Survey": 1,
+   "EMU": 2,
+   "WALLABY": 2,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 55
+ },
+ {
+  "channel": "A",
+  "target_id": "lacaille-9352",
+  "status": "ok",
+  "ra": 346.5158782408425,
+  "dec": -35.84529591389895,
+  "n_events": 14,
+  "n_cubes": 188,
+  "n_obs": 122,
+  "n_obs_dated": 122,
+  "collections": {
+   "ASKAP Pilot Survey for DINGO": 28,
+   "The Rapid ASKAP Continuum Survey": 10,
+   "ASKAP Engineering Commissioning": 3,
+   "VAST": 46,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "DINGO": 29,
+   "EMU": 2,
+   "FLASH": 1,
+   "ASKAP Early Science Broadband Survey": 1,
+   "WALLABY": 1
+  },
+  "n_inwindow_rows": 48
+ },
+ {
+  "channel": "A",
+  "target_id": "lalande-21185",
+  "status": "ok",
+  "ra": 165.82996412107707,
+  "dec": 35.9418776228988,
+  "n_events": 15,
+  "n_cubes": 25,
+  "n_obs": 21,
+  "n_obs_dated": 21,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 21
+  },
+  "n_inwindow_rows": 7
+ },
+ {
+  "channel": "A",
+  "target_id": "lhs-1723",
+  "status": "ok",
+  "ra": 75.48596949305816,
+  "dec": -6.949417103797115,
+  "n_events": 14,
+  "n_cubes": 76,
+  "n_obs": 60,
+  "n_obs_dated": 60,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 12,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 40,
+   "EMU": 5,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 20
+ },
+ {
+  "channel": "A",
+  "target_id": "lp-145-141",
+  "status": "ok",
+  "ra": 176.46494163725933,
+  "dec": -64.84355064006905,
+  "n_events": 14,
+  "n_cubes": 170,
+  "n_obs": 162,
+  "n_obs_dated": 162,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 13,
+   "VAST": 141,
+   "EMU": 2,
+   "ASKAP Engineering Commissioning": 6
+  },
+  "n_inwindow_rows": 26
+ },
+ {
+  "channel": "A",
+  "target_id": "ltt-1445-a",
+  "status": "ok",
+  "ra": 45.46185963755006,
+  "dec": -16.59494994052281,
+  "n_events": 14,
+  "n_cubes": 33,
+  "n_obs": 25,
+  "n_obs_dated": 25,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 20,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 2,
+   "FLASH": 2,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1
+  },
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "luhman16-a",
+  "status": "ok",
+  "ra": 162.30860279085317,
+  "dec": -53.31811014157782,
+  "n_events": 14,
+  "n_cubes": 107,
+  "n_obs": 92,
+  "n_obs_dated": 92,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 24,
+   "VAST": 60,
+   "EMU": 4,
+   "ASKAP Engineering Commissioning": 2,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 16
+ },
+ {
+  "channel": "A",
+  "target_id": "luhman16-b",
+  "status": "ok",
+  "ra": 162.3083457017755,
+  "dec": -53.3178696792028,
+  "n_events": 14,
+  "n_cubes": 107,
+  "n_obs": 92,
+  "n_obs_dated": 92,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 24,
+   "VAST": 60,
+   "EMU": 4,
+   "ASKAP Engineering Commissioning": 2,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 16
+ },
+ {
+  "channel": "A",
+  "target_id": "luyten-star",
+  "status": "ok",
+  "ra": 111.85542695667131,
+  "dec": 5.20420093461482,
+  "n_events": 15,
+  "n_cubes": 59,
+  "n_obs": 55,
+  "n_obs_dated": 55,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 11,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 39,
+   "FLASH": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2
+  },
+  "n_inwindow_rows": 17
+ },
+ {
+  "channel": "A",
+  "target_id": "procyon-a",
+  "status": "ok",
+  "ra": 114.82150371770727,
+  "dec": 5.218579942290716,
+  "n_events": 15,
+  "n_cubes": 38,
+  "n_obs": 35,
+  "n_obs_dated": 35,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 11,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 20,
+   "FLASH": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2
+  },
+  "n_inwindow_rows": 14
+ },
+ {
+  "channel": "A",
+  "target_id": "procyon-b",
+  "status": "ok",
+  "ra": 114.82078989201928,
+  "dec": 5.219719785345368,
+  "n_events": 15,
+  "n_cubes": 38,
+  "n_obs": 35,
+  "n_obs_dated": 35,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 11,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 20,
+   "FLASH": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2
+  },
+  "n_inwindow_rows": 14
+ },
+ {
+  "channel": "A",
+  "target_id": "proxima-cen",
+  "status": "ok",
+  "ra": 217.38101458631763,
+  "dec": -62.67516936803865,
+  "n_events": 14,
+  "n_cubes": 172,
+  "n_obs": 156,
+  "n_obs_dated": 156,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 14,
+   "VAST": 129,
+   "EMU": 6,
+   "ASKAP Engineering Commissioning": 6,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1
+  },
+  "n_inwindow_rows": 41
+ },
+ {
+  "channel": "A",
+  "target_id": "ross-128",
+  "status": "ok",
+  "ra": 176.93856670253547,
+  "dec": 0.7973499146240669,
+  "n_events": 15,
+  "n_cubes": 71,
+  "n_obs": 50,
+  "n_obs_dated": 50,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 12,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1,
+   "ASKAP Pilot Survey for FLASH": 3,
+   "The Rapid ASKAP Continuum Survey": 7,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 19,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "EMU": 4,
+   "FLASH": 1,
+   "ASKAP Early Science Broadband Survey": 1
+  },
+  "n_inwindow_rows": 16
+ },
+ {
+  "channel": "A",
+  "target_id": "ross-154",
+  "status": "ok",
+  "ra": 282.4597610734566,
+  "dec": -23.83736841504524,
+  "n_events": 14,
+  "n_cubes": 33,
+  "n_obs": 26,
+  "n_obs_dated": 26,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 15,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2,
+   "Measurement of Magnetic Fields of Solar Coronal Mass Ejections using Wide Field of View Faraday Rotation Observations": 7,
+   "FLASH": 1,
+   "GASKAP-HI": 1
+  },
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "A",
+  "target_id": "ross-248",
+  "status": "ok",
+  "ra": 355.4802005769814,
+  "dec": 44.168090285467,
+  "n_events": 14,
+  "n_cubes": 17,
+  "n_obs": 15,
+  "n_obs_dated": 15,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 14,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "sigma-dra",
+  "status": "ok",
+  "ra": 293.1000684147282,
+  "dec": 69.65081609208927,
+  "n_events": 14,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "sirius-a",
+  "status": "ok",
+  "ra": 101.28283158566015,
+  "dec": -16.723738608371363,
+  "n_events": 15,
+  "n_cubes": 24,
+  "n_obs": 19,
+  "n_obs_dated": 19,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 18,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 10
+ },
+ {
+  "channel": "A",
+  "target_id": "sirius-b",
+  "status": "ok",
+  "ra": 101.285823097032,
+  "dec": -16.722474366700265,
+  "n_events": 15,
+  "n_cubes": 24,
+  "n_obs": 19,
+  "n_obs_dated": 19,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 18,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 10
+ },
+ {
+  "channel": "A",
+  "target_id": "tau-cet",
+  "status": "ok",
+  "ra": 26.0064427880284,
+  "dec": -15.932456464183982,
+  "n_events": 14,
+  "n_cubes": 41,
+  "n_obs": 23,
+  "n_obs_dated": 23,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 15,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "FLASH": 5,
+   "WALLABY": 2
+  },
+  "n_inwindow_rows": 3
+ },
+ {
+  "channel": "A",
+  "target_id": "teegarden",
+  "status": "ok",
+  "ra": 43.274969128678954,
+  "dec": 16.858715742265737,
+  "n_events": 14,
+  "n_cubes": 23,
+  "n_obs": 18,
+  "n_obs_dated": 18,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 16,
+   "FLASH": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1
+  },
+  "n_inwindow_rows": 14
+ },
+ {
+  "channel": "A",
+  "target_id": "van-maanen",
+  "status": "ok",
+  "ra": 12.298547686887101,
+  "dec": 5.372592565894828,
+  "n_events": 14,
+  "n_cubes": 63,
+  "n_obs": 57,
+  "n_obs_dated": 57,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 16,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 36,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "FLASH": 2
+  },
+  "n_inwindow_rows": 18
+ },
+ {
+  "channel": "A",
+  "target_id": "wise-0855",
+  "status": "ok",
+  "ra": 133.78313792263404,
+  "dec": -7.244237689081501,
+  "n_events": 15,
+  "n_cubes": 47,
+  "n_obs": 36,
+  "n_obs_dated": 36,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 11,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 19,
+   "EMU": 4,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 12
+ },
+ {
+  "channel": "A",
+  "target_id": "wolf-1061",
+  "status": "ok",
+  "ra": 247.57468471112776,
+  "dec": -12.66945470514548,
+  "n_events": 14,
+  "n_cubes": 12,
+  "n_obs": 9,
+  "n_obs_dated": 9,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 8,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "A",
+  "target_id": "wolf-1069",
+  "status": "ok",
+  "ra": 306.524999387471,
+  "dec": 58.576182480406125,
+  "n_events": 14,
+  "n_cubes": 0,
+  "n_obs": 0,
+  "n_obs_dated": 0,
+  "collections": {},
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "A",
+  "target_id": "wolf-359",
+  "status": "ok",
+  "ra": 164.09759841360312,
+  "dec": 6.998851994132253,
+  "n_events": 15,
+  "n_cubes": 58,
+  "n_obs": 45,
+  "n_obs_dated": 45,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 20,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 18,
+   "FLASH": 2,
+   "EMU": 4
+  },
+  "n_inwindow_rows": 18
+ },
+ {
+  "channel": "A",
+  "target_id": "wolf-437",
+  "status": "ok",
+  "ra": 191.97990454977722,
+  "dec": 9.748692576959614,
+  "n_events": 15,
+  "n_cubes": 82,
+  "n_obs": 66,
+  "n_obs_dated": 66,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 17,
+   "ASKAP Pilot Survey for WALLABY": 1,
+   "FLASH": 5,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 41
+  },
+  "n_inwindow_rows": 22
+ },
+ {
+  "channel": "B",
+  "target_id": "gj-1276",
+  "status": "ok",
+  "ra": 163.52539767213875,
+  "dec": 6.7959220300799,
+  "n_events": 14,
+  "n_cubes": 58,
+  "n_obs": 45,
+  "n_obs_dated": 45,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 20,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 18,
+   "FLASH": 2,
+   "EMU": 4
+  },
+  "n_inwindow_rows": 0
+ },
+ {
+  "channel": "B",
+  "target_id": "gj-908",
+  "status": "ok",
+  "ra": 177.3162046397739,
+  "dec": -2.390684519206648,
+  "n_events": 14,
+  "n_cubes": 116,
+  "n_obs": 89,
+  "n_obs_dated": 89,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 22,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 2,
+   "ASKAP Pilot Survey for FLASH": 3,
+   "The Rapid ASKAP Continuum Survey": 12,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 39,
+   "EMU": 6,
+   "FLASH": 2,
+   "ASKAP Early Science Broadband Survey": 1
+  },
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "B",
+  "target_id": "ross-128",
+  "status": "ok",
+  "ra": 356.9419263344713,
+  "dec": -0.7890420452670088,
+  "n_events": 14,
+  "n_cubes": 69,
+  "n_obs": 57,
+  "n_obs_dated": 57,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 16,
+   "The Rapid ASKAP Continuum Survey": 15,
+   "ASKAP Pilot Survey for FLASH": 1,
+   "ASKAP Engineering Commissioning": 1,
+   "VAST": 18,
+   "FLASH": 1,
+   "Survey and routine Monitoring of ASKAP&apos;s RFI environment and Trends (SMART)": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 4
+  },
+  "n_inwindow_rows": 2
+ },
+ {
+  "channel": "B",
+  "target_id": "ross-154",
+  "status": "ok",
+  "ra": 102.4636801620969,
+  "dec": 23.84000658783782,
+  "n_events": 15,
+  "n_cubes": 14,
+  "n_obs": 13,
+  "n_obs_dated": 13,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 10,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 3
+  },
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "B",
+  "target_id": "teegarden",
+  "status": "ok",
+  "ra": 223.299176588207,
+  "dec": -16.83330828665939,
+  "n_events": 14,
+  "n_cubes": 26,
+  "n_obs": 21,
+  "n_obs_dated": 21,
+  "collections": {
+   "The Rapid ASKAP Continuum Survey": 17,
+   "Measurement of Magnetic Fields of Solar Coronal Mass Ejections using Wide Field of View Faraday Rotation Observations": 3,
+   "FLASH": 1
+  },
+  "n_inwindow_rows": 1
+ },
+ {
+  "channel": "B",
+  "target_id": "van-maanen",
+  "status": "ok",
+  "ra": 192.30797426885965,
+  "dec": -5.35193167331165,
+  "n_events": 14,
+  "n_cubes": 97,
+  "n_obs": 79,
+  "n_obs_dated": 79,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 18,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1,
+   "The Rapid ASKAP Continuum Survey": 12,
+   "ASKAP Engineering Commissioning": 2,
+   "VAST": 39,
+   "EMU": 3,
+   "FLASH": 4
+  },
+  "n_inwindow_rows": 3
+ },
+ {
+  "channel": "B",
+  "target_id": "wolf-359",
+  "status": "ok",
+  "ra": 344.0807255309753,
+  "dec": -6.987389437782882,
+  "n_events": 14,
+  "n_cubes": 50,
+  "n_obs": 44,
+  "n_obs_dated": 44,
+  "collections": {
+   "ASKAP Pilot Survey for VAST": 14,
+   "The Rapid ASKAP Continuum Survey": 10,
+   "VAST": 18,
+   "FLASH": 1,
+   "Other ASKAP pilot science including tests, TOOs or guest observations": 1
+  },
+  "n_inwindow_rows": 2
+ }
+]

@@ -1,0 +1,213 @@
+{
+ "era_mjd": [
+  56658.0,
+  61771.0
+ ],
+ "askap": {
+  "A_0.1": {
+   "in_image": {
+    "rows": 8,
+    "events": 4,
+    "targets": 4
+   },
+   "in_footprint": {
+    "rows": 3,
+    "events": 3,
+    "targets": 3
+   },
+   "in_footprint_validated": {
+    "rows": 3,
+    "events": 3,
+    "targets": 3
+   },
+   "in_footprint_racs": {
+    "rows": 1,
+    "events": 1,
+    "targets": 1
+   },
+   "in_footprint_vast": {
+    "rows": 2,
+    "events": 2,
+    "targets": 2
+   }
+  },
+  "A_1.0": {
+   "in_image": {
+    "rows": 1288,
+    "events": 308,
+    "targets": 75
+   },
+   "in_footprint": {
+    "rows": 456,
+    "events": 226,
+    "targets": 64
+   },
+   "in_footprint_validated": {
+    "rows": 433,
+    "events": 221,
+    "targets": 64
+   },
+   "in_footprint_racs": {
+    "rows": 115,
+    "events": 96,
+    "targets": 46
+   },
+   "in_footprint_vast": {
+    "rows": 274,
+    "events": 124,
+    "targets": 32
+   }
+  },
+  "B_0.0056": {
+   "in_image": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_footprint": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_footprint_validated": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_footprint_racs": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_footprint_vast": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   }
+  },
+  "B_0.0116": {
+   "in_image": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_footprint": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_footprint_validated": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_footprint_racs": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_footprint_vast": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   }
+  },
+  "B_0.1": {
+   "in_image": {
+    "rows": 10,
+    "events": 8,
+    "targets": 6
+   },
+   "in_footprint": {
+    "rows": 7,
+    "events": 7,
+    "targets": 5
+   },
+   "in_footprint_validated": {
+    "rows": 6,
+    "events": 6,
+    "targets": 5
+   },
+   "in_footprint_racs": {
+    "rows": 2,
+    "events": 2,
+    "targets": 2
+   },
+   "in_footprint_vast": {
+    "rows": 3,
+    "events": 3,
+    "targets": 2
+   }
+  }
+ },
+ "lotss": {
+  "A_0.1": {
+   "in_image": {
+    "rows": 1,
+    "events": 1,
+    "targets": 1
+   },
+   "in_beam": {
+    "rows": 1,
+    "events": 1,
+    "targets": 1
+   }
+  },
+  "A_1.0": {
+   "in_image": {
+    "rows": 59,
+    "events": 20,
+    "targets": 15
+   },
+   "in_beam": {
+    "rows": 29,
+    "events": 13,
+    "targets": 10
+   }
+  },
+  "B_0.0056": {
+   "in_image": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_beam": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   }
+  },
+  "B_0.0116": {
+   "in_image": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_beam": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   }
+  },
+  "B_0.1": {
+   "in_image": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   },
+   "in_beam": {
+    "rows": 0,
+    "events": 0,
+    "targets": 0
+   }
+  }
+ },
+ "lotss_obs_mjd_range": [
+  56800.625,
+  60540.5277662
+ ],
+ "n_events": {
+  "A": 1226,
+  "B": 99
+ }
+}

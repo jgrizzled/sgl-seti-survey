@@ -1550,3 +1550,60 @@ release; WINTER re-check added to §5.7 standing maintenance. No
 adapter written, no hypotheses drafted, nothing committed to git.
 Cone-power framing if a route opens: ~5 mag shallower than ATLAS →
 MW-class floors at 0.1 AU (opening the cell, as the plan framed it).
+
+## 16. Radio metadata extensions — ASKAP + LoTSS (2026-09-04; plan §5.8 item 7 — complete)
+
+Geometry-only repeat of the 2026-08-24 VLASS construction (§6 step 7)
+on two revisiting archives; decision unchanged, no pixel touched.
+Report `report/radio_crossings_ext.md`; script
+`surveys/radio-crossings/scripts/coverage_intersect_v2.py` (+
+`census_v2.py`); snapshots `runs/radio-crossings/v2/`.
+
+**Recon (same session, all anonymous).** CASDA TAP
+(`casda.csiro.au/casda_vo_tools/tap`) `ivoa.obscore` holds every ASKAP
+data product with `s_region` polygons and per-SBID `t_min/t_max`;
+collections RACS (168 k cubes, 2019-04 →), VAST pilot (45.8 k cubes,
+**no `t_min` on the cubes** — dated via `casda.observation` by SBID),
+VAST full (264 k, 2022-11 →), EMU, FLASH, WALLABY, DINGO, commissioning.
+`dataproduct_type='image'` is a red herring (WALLABY/RACS DR1
+mosaics only); the per-epoch products are `cube` +
+`cont.restored.t0`. Several cubes per SBID (v1/v2 re-runs, lowres/raw)
+→ dedupe per (SBID, field centre), best `quality_level`. `s_fov` is the
+image bound (43–99°!), so a declared footprint (2.25° + HPBW/2) sits
+beside the archive's own containment. ASTRON VO TAP
+(`vo.astron.nl/__system__/tap/run/tap`) has `lotss_dr3.pointings`
+(2,551 pointings, `dateallobs` = mid-MJD of every 8-h run; 5,458
+observations 2014-05 → 2024-08) — exactly the per-pointing dates the
+plan row wanted; DR2 tables carry only `dateobs`.
+
+**Run.** 91 CASDA cones (84 A + 7 B; ~7 s each) + 1 LoTSS table pull;
+0 failures; 12 min wall. Universal events 2014–2028, frozen ladder,
+actual on-sky interval vs flat-chord window (no tolerance).
+
+**Result.** Grazing rungs (B 1.2 / 2.5 R☉): 0 observations in 65
+in-span ASKAP + 30 LoTSS events — ±0.3–0.7 d windows vs 15-min visits
+at weeks-to-years cadence. **B 0.1 AU (antipode): 7 of 50 in-span
+ASKAP events covered in footprint, 6 validated, 5 targets** —
+wolf-359 2023-09-03 (VAST SB52549, UNCERTAIN) and 2024-09-10
+(SB65727, GOOD), both 0.80° from the VAST_2257-06 centre; ross-154
+2021-12-29 (RACS-high SB34957, 0.63°); ross-128 2021-09-21 (VAST
+pilot SB32330, 2.45°); van-maanen 2022-03-29 (RACS-low SB38682,
+footprint edge 3.12°); teegarden 2026-05-03 (FLASH SB84179, 2.18°,
+UNCERTAIN); van-maanen 2026-03-29 FLASH SB83234 REJECTED. LoTSS: 0
+antipode hits (3 antipodes in its footprint). A 0.1 AU: ASKAP 3
+(gj-1276 VAST 2023-09-03 at 1.10°; teegarden RACS-mid 2024-11-11 at
+2.09°; van-maanen VAST 2024-10-07 at the edge) + LoTSS 1 (teegarden
+P043+19 2023-11-04, 1.89°, in beam). A 1.0 AU: ASKAP 211/606 in-span
+events (64 targets), LoTSS 13/300 — the surveys' own transient
+searches are the constraint, as with BL. Antipode visit lists
+(any date): 13–89 ASKAP observations per target.
+
+**Outcome.** The 2026-08-24 "antipode channel archivally virgin"
+statement is now qualified: true for targeted radio (BL) and the
+grazing rungs; false at the 0.1 AU rung, where wide-field 0.9–1.7 GHz
+continuum epochs exist (~0.2 mJy/beam, broadband only — continuum
+imaging dilutes CW lines ~10⁹, §5.5). Hand-offs: (a) antipode
+catalogue-cone + cutout quick-look on the 6 validated epochs alongside
+the VLASS six; (b) the 4 on-star narrow-rung epochs; (c) VLASS arm
+refresh + v2 re-run at the yearly refresh (§5.7). Plan §5.5/§5.7/§5.8
+updated; nothing committed to git.

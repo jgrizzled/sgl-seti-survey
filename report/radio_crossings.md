@@ -90,7 +90,17 @@ crossings at 3+ annual windows; the v2-style null-ensemble redesign
 if the d = 1 wide-beam rung is ever to be searched with calibrated
 error rates.
 
-## 5. Products
+## 5. Extension (2026-09-04)
+
+`report/radio_crossings_ext.md` repeats this construction on CASDA
+(RACS / VAST / EMU and every other ASKAP continuum collection) and
+LoTSS DR3 pointing dates. Decision unchanged. The antipode statement
+in §2–3 ("nobody has ever looked") now carries a qualifier: it holds
+for targeted radio (BL) and for the grazing rungs, but six validated
+wide-field ASKAP epochs sit inside 0.1 AU antipode windows (wolf-359
+2023 and 2024 inside the VAST primary beam).
+
+## 6. Products
 
 `surveys/radio-crossings/{scripts/coverage_intersect.py, results/*}`
 (`bl_inwindow_v1.ecsv`, `bl_targets_v1.json`,
