@@ -518,6 +518,18 @@ wheels = [
 ]
 
 [[package]]
+name = "k2fov"
+version = "8.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5d/13/3c34ed53005c0ae34b468db1917e9273c0ba345e5334807c0c55ba8272f2/k2fov-8.0.1.tar.gz", hash = "sha256:b98892f4e658a575d9b7271362ef33dec039af4fe3152af606c74c3f79747588", size = 5052060, upload-time = "2024-12-02T21:26:38.569Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/30/80/1ae8c7a55992c0d1c6c48c2608ba8378d0909d1aeec5cce27b89924ce06e/K2fov-8.0.1-py3-none-any.whl", hash = "sha256:9172e74b654045c3587c167f4a40f570870651165cf8e7de2481a37a41247769", size = 61865, upload-time = "2024-12-02T21:26:37.249Z" },
+]
+
+[[package]]
 name = "kiwisolver"
 version = "1.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1175,6 +1187,7 @@ source = { editable = "." }
 dependencies = [
     { name = "astro-datalab" },
     { name = "astropy" },
+    { name = "k2fov" },
     { name = "pandas" },
     { name = "pypdf" },
     { name = "pyyaml" },
@@ -1193,6 +1206,7 @@ dev = [
 requires-dist = [
     { name = "astro-datalab", specifier = "==2.22.1" },
     { name = "astropy", specifier = ">=6.0" },
+    { name = "k2fov", specifier = ">=8.0.1" },
     { name = "pandas", specifier = ">=3.0.5" },
     { name = "pypdf", specifier = ">=6.16.1" },
     { name = "pyyaml", specifier = ">=6.0.3" },

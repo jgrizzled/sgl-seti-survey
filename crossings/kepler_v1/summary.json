@@ -1,0 +1,21 @@
+{
+  "crossings_id": "xng-07012bdf124d",
+  "generated_utc": "2026-09-04T16:12:46+00:00",
+  "observer_id": "kepler-spacecraft",
+  "n_targets": 88,
+  "n_events": 3352,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:217"
+  ],
+  "files": {
+    "events_ecsv": "/home/jgreene/code/sgl-seti-survey/crossings/kepler_v1/events.ecsv",
+    "windows_ecsv": "/home/jgreene/code/sgl-seti-survey/crossings/kepler_v1/windows.ecsv",
+    "result_json": "/home/jgreene/code/sgl-seti-survey/crossings/kepler_v1/result.json",
+    "manifest_json": "/home/jgreene/code/sgl-seti-survey/crossings/kepler_v1/manifest.json"
+  },
+  "observer_table": "crossings/observers/kepler_sc_ephemeris.npz",
+  "observer_table_sha256": "sha256:a48ebaa703445cb79841f525401f0e9ef7f6e69b1b58cf4cd5c72e8dc4d36b86",
+  "observer_accuracy": "JPL Horizons -227 SSB vectors at 6 h sampling; heliocentric Earth-trailing orbit (period 372.5 d) makes linear-interpolation error negligible. The spacecraft was 0.04 AU (2009) to 1.14 AU (2018) from Earth, so the Earth-center list is invalid for Kepler at every rung; the crossing epochs shift by the trailing angle (weeks to months)"
+}

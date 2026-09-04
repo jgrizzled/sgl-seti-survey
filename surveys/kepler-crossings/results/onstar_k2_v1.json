@@ -1,0 +1,247 @@
+{
+ "ez-aqr:c3": {
+  "ra": 339.64987670898944,
+  "dec": -15.290440458267444,
+  "campaign": "c3",
+  "geometry": {
+   "start": {
+    "mjd": 56976.59,
+    "sun_elongation_deg": 143.2,
+    "b_au": 0.602
+   },
+   "mid": {
+    "mjd": 57011.18,
+    "sun_elongation_deg": 108.8,
+    "b_au": 0.933
+   },
+   "end": {
+    "mjd": 57045.78,
+    "sun_elongation_deg": 73.3,
+    "b_au": 0.936
+   }
+  },
+  "k2_products_within_1arcmin": [],
+  "k2_products_within_6arcmin": [],
+  "note": "on C3 silicon but no K2 product within 6 arcmin of the 2014 position (nearest ktwo205985923 at 0.05 deg): not targeted"
+ },
+ "gj-876:c3": {
+  "ra": 343.32377871387337,
+  "dec": -14.266467529458358,
+  "campaign": "c3",
+  "geometry": {
+   "start": {
+    "mjd": 56976.59,
+    "sun_elongation_deg": 146.7,
+    "b_au": 0.55
+   },
+   "mid": {
+    "mjd": 57011.18,
+    "sun_elongation_deg": 112.4,
+    "b_au": 0.911
+   },
+   "end": {
+    "mjd": 57045.78,
+    "sun_elongation_deg": 77.0,
+    "b_au": 0.952
+   }
+  },
+  "k2_products_within_1arcmin": [
+   {
+    "sequence": 3,
+    "target_name": "ktwo206019387",
+    "type": "timeseries",
+    "n": 2,
+    "t_min": 56976.58756383,
+    "t_max": 57045.77574639
+   },
+   {
+    "sequence": 3,
+    "target_name": "ktwo206019392",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 56976.58756383,
+    "t_max": 57045.77574639
+   },
+   {
+    "sequence": 3,
+    "target_name": "polar206019387",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 56976.59778063658,
+    "t_max": 57045.765529629636
+   },
+   {
+    "sequence": 3,
+    "target_name": "polar206019392",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 56976.59778063658,
+    "t_max": 57045.765529629636
+   }
+  ]
+ },
+ "ross-128:c1": {
+  "ra": 176.93740012189272,
+  "dec": 0.7996978109610592,
+  "campaign": "c1",
+  "geometry": {
+   "start": {
+    "mjd": 56807.66,
+    "sun_elongation_deg": 140.9,
+    "b_au": 0.653
+   },
+   "mid": {
+    "mjd": 56848.75,
+    "sun_elongation_deg": 103.4,
+    "b_au": 1.02
+   },
+   "end": {
+    "mjd": 56889.85,
+    "sun_elongation_deg": 66.4,
+    "b_au": 0.959
+   }
+  },
+  "k2_products_within_1arcmin": [
+   {
+    "sequence": 1,
+    "target_name": "ktwo201518346",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 56807.66300973,
+    "t_max": 56889.84696699
+   },
+   {
+    "sequence": 1,
+    "target_name": "polar201518346",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 56807.67322650462,
+    "t_max": 56889.83675023149
+   }
+  ]
+ },
+ "ross-154:c7": {
+  "ra": 282.45871645423404,
+  "dec": -23.83707949623646,
+  "campaign": "c7",
+  "geometry": {
+   "start": {
+    "mjd": 57299.74,
+    "sun_elongation_deg": 136.7,
+    "b_au": 0.708
+   },
+   "mid": {
+    "mjd": 57341.05,
+    "sun_elongation_deg": 97.4,
+    "b_au": 1.0
+   },
+   "end": {
+    "mjd": 57382.36,
+    "sun_elongation_deg": 56.1,
+    "b_au": 0.819
+   }
+  },
+  "k2_products_within_1arcmin": [
+   {
+    "sequence": 7,
+    "target_name": "ktwo215632069",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 57299.74490633,
+    "t_max": 57382.3579675
+   },
+   {
+    "sequence": 7,
+    "target_name": "ktwo215632123",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 57299.74490633,
+    "t_max": 57382.3579675
+   }
+  ]
+ },
+ "van-maanen:c8": {
+  "ra": 12.296704452146699,
+  "dec": 5.376635093222323,
+  "campaign": "c8",
+  "geometry": {
+   "start": {
+    "mjd": 57391.55,
+    "sun_elongation_deg": 138.7,
+    "b_au": 0.648
+   },
+   "mid": {
+    "mjd": 57430.92,
+    "sun_elongation_deg": 98.0,
+    "b_au": 0.968
+   },
+   "end": {
+    "mjd": 57470.28,
+    "sun_elongation_deg": 57.4,
+    "b_au": 0.833
+   }
+  },
+  "k2_products_within_1arcmin": [
+   {
+    "sequence": 8,
+    "target_name": "ktwo220434748",
+    "type": "timeseries",
+    "n": 2,
+    "t_min": 57391.55306433,
+    "t_max": 57470.2837397
+   },
+   {
+    "sequence": 8,
+    "target_name": "ktwo229228408",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 57391.55306433,
+    "t_max": 57470.2837397
+   },
+   {
+    "sequence": 8,
+    "target_name": "ktwo229228520",
+    "type": "timeseries",
+    "n": 1,
+    "t_min": 57391.55306433,
+    "t_max": 57470.2837397
+   }
+  ]
+ },
+ "wolf-359:c14": {
+  "ra": 164.10176611356226,
+  "dec": 7.001739644442128,
+  "campaign": "c14",
+  "geometry": {
+   "start": {
+    "mjd": 57889.0,
+    "sun_elongation_deg": 161.0,
+    "b_au": 0.331
+   },
+   "mid": {
+    "mjd": 57936.96,
+    "sun_elongation_deg": 116.0,
+    "b_au": 0.935
+   },
+   "end": {
+    "mjd": 57984.92,
+    "sun_elongation_deg": 72.6,
+    "b_au": 1.002
+   }
+  },
+  "k2_products_within_1arcmin": [],
+  "k2_products_within_6arcmin": [
+   {
+    "sequence": 14,
+    "target_name": "ktwo201885041",
+    "type": "timeseries",
+    "n": 2,
+    "s_ra": 164.120115,
+    "s_dec": 7.01454,
+    "t_min": 57905.21283863,
+    "t_max": 57984.92432679,
+    "note": "EPIC position is catalog-epoch; 80 arcsec from the 2017 star position (PM 4.7 arcsec/yr) so the 1-arcmin box missed it. Two rows = long + short cadence."
+   }
+  ]
+ }
+}

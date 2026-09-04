@@ -12,6 +12,7 @@ dependencies = [
     "astro-datalab==2.22.1",
     "pandas>=3.0.5",
     "skypatrol==0.6.21",
+    "k2fov>=8.0.1",
 ]
 
 [dependency-groups]

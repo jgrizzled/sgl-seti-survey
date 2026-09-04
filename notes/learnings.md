@@ -250,9 +250,13 @@ Amendments forced by evidence on development sets (the retrospectives):
 - The crossing geometry phase-locks to the sidereal year: wide-beam
   rungs have window ≈ observing season and are constraint-only by
   construction — design narrow-rung-first for optical archives.
-- Two structural theorems, confirmed independently three+ times: an
+- Two structural theorems, confirmed independently four times: an
   elongation-90° surveyor cannot see channels B / A-0.1 at all
-  (elongation gate); and ~annual multi-month windows defeat the
+  (elongation gate — Kepler/K2 2026-09-04 is the spacecraft case:
+  a solar-array pointing constraint that keeps the boresight 60°–145°
+  from the Sun makes a whole mission blind to every rung ≤ 0.1 AU,
+  and a footprint intersect can be closed by geometry before any
+  pixel is touched); and ~annual multi-month windows defeat the
   8-offset pseudo-window temporal control family (ZTF, PS1, WISE,
   TESS channel A alike) — a v2-style null ensemble is the designated
   route if the wide rung is ever searched with calibrated error rates.
@@ -266,6 +270,18 @@ Amendments forced by evidence on development sets (the retrospectives):
   the ±6 d 0.1 AU windows — 6 validated epochs on 5 targets, none on
   the ≤ 1 d grazing windows. State which rung and which archive class a
   "nobody has looked" claim covers.
+- A spacecraft substrate needs its own crossing list before any
+  intersect, and the cost is now ~15 min (`--fetch-observer` +
+  `--observer` in `sglsurvey/crossings.py`; TESS, SOHO, Kepler). The
+  Earth-center list is wrong for a heliocentric-orbit observer at
+  *every* rung (Kepler: |Δt_ca| median 33 d), not just at grazing b as
+  for HEO/L1 spacecraft.
+- MAST CAOM TAP: the sync endpoint 504s at 60 s, the async UWS
+  endpoint completes the same query; `GROUP BY sequence_number`
+  campaign ranges must be clipped to planned dates (a K2 product is
+  mis-tagged C12 → 14); EPIC/2MASS-epoch catalog positions put a
+  4.7″/yr star 80″ from its own K2 target row by 2017 — search by
+  epoch-propagated position with a ≥ 2′ box.
 - CASDA ObsCore is the cheapest revisiting-radio substrate: `cube` +
   `cont.restored.t0` rows carry `s_region` and per-SBID intervals for
   every ASKAP project at once (one TAP cone per position, ~7 s); the

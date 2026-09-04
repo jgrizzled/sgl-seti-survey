@@ -1607,3 +1607,54 @@ catalogue-cone + cutout quick-look on the 6 validated epochs alongside
 the VLASS six; (b) the 4 on-star narrow-rung epochs; (c) VLASS arm
 refresh + v2 re-run at the yearly refresh (§5.7). Plan §5.5/§5.7/§5.8
 updated; nothing committed to git.
+
+## 17. Kepler/K2 footprint intersect (2026-09-04; plan §5.8 item 8 — closed, no hit possible)
+
+Geometry-only, one session. Note
+`surveys/kepler-crossings/notes/kepler_k2_footprint_intersect_2026-09-04.md`;
+scripts `surveys/kepler-crossings/scripts/{footprint_intersect,onstar_k2_check}.py`;
+results `surveys/kepler-crossings/results/`; snapshots
+`runs/kepler-crossings/recon/` (26 MAST responses).
+
+**Observer correction first.** The plan row said "vs `universal_v1`
+antipodes", but Kepler flew an Earth-trailing heliocentric orbit and
+was 0.04 AU (2009) → 1.14 AU (2018) from Earth. Added
+`--observer kepler` to `sglsurvey/crossings.py` (Horizons −227, same
+pattern as TESS/SOHO) and built `crossings/kepler_v1`
+(`xng-07012bdf124d`, 2009-05-01 → 2018-11-01, 3,352 events, 0
+invalid, 11 min). Matched Earth-center events shift by |Δt_ca| median
+33 d / max 117 d and |Δb| up to 1 AU — invalid at every rung, not only
+grazing ones.
+
+**Footprints and dates.** `K2fov` 8.0.1 (added to `pyproject.toml`):
+silicon-level channel polygons for C0–C19 (dead modules 3/7, module 4
+after C10) and the prime field as campaign 1000 (roll 20° + 90° ×
+season, four-season envelope). Actual campaign data ranges from MAST
+CAOM TAP (`dbo.obspointing` grouped by `sequence_number`; the sync
+endpoint 504s past 60 s, the async UWS endpoint works; one product
+mis-tagged C12 → sequence 14, so ranges are clipped to the planned
+dates ± 15 d).
+
+**Result.** 0 of 1,435 field-active events on silicon at any b (list
+max 1.03 AU). Structural: K2 boresights stayed 61°–158° from the Sun
+as seen from the spacecraft (backward-facing campaigns sweep 142° →
+61°, forward-facing 61° → 143°; mid-campaign at quadrature), never
+within 22° (37° with the true C14 start) of the anti-sun point; the
+prime field (ecliptic latitude +65°) never within 66°. Every ≤ 0.1 AU
+channel position sits within 3.5° of anti-sun (grazing rungs ≤ 0.7°);
+the nearest active boresight to one was 17.3° (29.6° with the true
+C14 start) against a 7.6° FOV half-diagonal. Fourth independent
+confirmation of the elongation gate (learnings §8), first for a
+spacecraft. Sky-only: K2 did image 5 of the 14 ≤ 0.1 AU unit positions
+in other campaigns, 1–9 months off the crossings, and five registry
+stars have K2 light curves at b ≈ 0.9–1.0 AU (wolf-359 C14 LC+SC,
+ross-128 C1, ross-154 C7, van-maanen C8 LC+SC, gj-876 C3; EZ Aqr on
+C3 silicon but not targeted) — the wide rung where the archive's own
+flare/transient searches are the constraint; recorded, not queued.
+
+**Outcome.** Item 8 closed with no survey and no freeze; the 2009–2015
+30-min pulse cell stays open (no continuous-cadence 1 AU mission
+pointed at opposition; CoRoT is expected to fail the same gate, not
+probed). `crossings/README.md` gained the `kepler_v1` row; plan status
+line, §5.8 intro/row 8 and the priority-7 row updated; nothing
+committed to git.

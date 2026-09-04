@@ -28,6 +28,9 @@ same request with a per-epoch observer (plan §11.2 step 4):
   LEO offset declared as a budget (a coarse-sampled table of a 95-min
   orbit would be no more accurate than Earth center; the per-frame
   route via L2 headers is a survey-stage task).
+* ``--observer kepler`` — a JPL Horizons SSB vector table (spacecraft
+  -227) fetched by ``--fetch-observer kepler``; Earth-trailing
+  heliocentric orbit, up to ~1 AU from Earth (plan §5.8 item 8).
 * ``--observer soho`` — a JPL Horizons SSB vector table (spacecraft
   -21) fetched by ``--fetch-observer soho``. SOHO's L1 halo orbit has
   ~0.9 R_sun transverse amplitude (measured directly in the LASCO
@@ -77,8 +80,13 @@ OBSERVER_DEFAULTS = {
     # LASCO science era; stop bounded by the Horizons -21 SPK end
     # (2026-10-05), not the universal 2028 window — extend at refresh
     "soho": ("1996-01-01", "2026-10-01", "soho_v1"),
+    # Kepler science era: Q0 start 2009-05-02 .. K2 C19 end 2018-09-26
+    # (spacecraft retired 2018-10-30); Earth-trailing heliocentric orbit
+    # drifts ~0.1 AU/yr from Earth, so Earth-center is invalid at every
+    # rung (plan §5.8 item 8 footprint intersect)
+    "kepler": ("2009-05-01", "2018-11-01", "kepler_v1"),
 }
-HORIZONS_IDS = {"tess": "-95", "soho": "-21"}
+HORIZONS_IDS = {"tess": "-95", "soho": "-21", "kepler": "-227"}
 
 
 def _sha256(path: Path) -> str:
@@ -198,6 +206,24 @@ def resolve_observer(name: str):
             "halo cross-track amplitude ~0.9 R_sun (measured in the "
             "LASCO recon star check) invalidates the Earth-center list "
             "at grazing impact parameters, which this run corrects"}
+    if name == "kepler":
+        npz = OBSERVER_TABLE_DIR / "kepler_sc_ephemeris.npz"
+        if not npz.exists():
+            raise SystemExit("no Kepler table; run --fetch-observer kepler first")
+        tab = np.load(npz)
+        ident = _sha256(npz)
+        obs = register_spacecraft_table_observer(
+            "kepler-spacecraft", tab["mjd_utc"], tab["xyz_au"], ident,
+            max_gap_days=1.0)
+        return obs, {
+            "observer_table": str(npz.relative_to(REPO)),
+            "observer_table_sha256": ident,
+            "observer_accuracy": "JPL Horizons -227 SSB vectors at 6 h "
+            "sampling; heliocentric Earth-trailing orbit (period 372.5 d) "
+            "makes linear-interpolation error negligible. The spacecraft "
+            "was 0.04 AU (2009) to 1.14 AU (2018) from Earth, so the "
+            "Earth-center list is invalid for Kepler at every rung; the "
+            "crossing epochs shift by the trailing angle (weeks to months)"}
     raise ValueError(name)
 
 

@@ -1,0 +1,17 @@
+{
+ "observer": "kepler",
+ "horizons_command": "-227",
+ "center": "500@0 (SSB)",
+ "ref_plane": "FRAME (ICRF)",
+ "start": "2009-05-01",
+ "stop": "2018-11-01",
+ "step": "6h",
+ "n_rows": 13885,
+ "mjd_utc_range": [
+  54951.99923396418,
+  58422.99919927672
+ ],
+ "raw_response": "kepler_horizons_response.txt",
+ "raw_sha256": "sha256:355a031e31243ec86d42441d8862f7f241d639f7a55e261314546316cc361b7a",
+ "table_sha256": "sha256:a48ebaa703445cb79841f525401f0e9ef7f6e69b1b58cf4cd5c72e8dc4d36b86"
+}
