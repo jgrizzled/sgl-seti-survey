@@ -1,0 +1,270 @@
+{
+ "source": "CDS J/A+A/684/A117 tablea1 (Dreizler+2024), RV epochs of Teegarden's Star; BJD mid-exposure",
+ "n_rows": 467,
+ "in_window": [
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2016-11-03T00:23",
+   "bjd_mid": 2457695.516218,
+   "event_id": "evt-21f165305651",
+   "dt_days": -5.026,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2017-11-02T20:28",
+   "bjd_mid": 2458060.353308,
+   "event_id": "evt-df334da61ef4",
+   "dt_days": -5.445,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2017-11-02T23:58",
+   "bjd_mid": 2458060.499141,
+   "event_id": "evt-df334da61ef4",
+   "dt_days": -5.3,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2017-11-07T00:43",
+   "bjd_mid": 2458064.530125,
+   "event_id": "evt-df334da61ef4",
+   "dt_days": -1.269,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2017-11-07T03:59",
+   "bjd_mid": 2458064.666167,
+   "event_id": "evt-df334da61ef4",
+   "dt_days": -1.133,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2017-11-07T23:26",
+   "bjd_mid": 2458065.476738,
+   "event_id": "evt-df334da61ef4",
+   "dt_days": -0.322,
+   "rungs": [
+    "0.1AU",
+    "2.5Rsun"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2017-11-08T21:02",
+   "bjd_mid": 2458066.376404,
+   "event_id": "evt-df334da61ef4",
+   "dt_days": 0.578,
+   "rungs": [
+    "0.1AU",
+    "2.5Rsun"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2017-11-09T00:13",
+   "bjd_mid": 2458066.509666,
+   "event_id": "evt-df334da61ef4",
+   "dt_days": 0.711,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2018-11-04T21:05",
+   "bjd_mid": 2458427.378889,
+   "event_id": "evt-c6abc35d36ea",
+   "dt_days": -3.678,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2018-11-11T00:31",
+   "bjd_mid": 2458433.521582,
+   "event_id": "evt-c6abc35d36ea",
+   "dt_days": 2.464,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2018-11-11T21:43",
+   "bjd_mid": 2458434.405462,
+   "event_id": "evt-c6abc35d36ea",
+   "dt_days": 3.348,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "CARM_VIS",
+   "utc": "2019-11-04T04:54",
+   "bjd_mid": 2458791.70419,
+   "event_id": "evt-366fd233073c",
+   "dt_days": -4.613,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "MAROON-X_b2",
+   "utc": "2021-11-08T11:11",
+   "bjd_mid": 2459526.9661853,
+   "event_id": "evt-58c317b4802f",
+   "dt_days": 0.138,
+   "rungs": [
+    "0.1AU",
+    "2.5Rsun"
+   ]
+  },
+  {
+   "instrument": "MAROON-X_b2",
+   "utc": "2021-11-11T10:32",
+   "bjd_mid": 2459529.9395726,
+   "event_id": "evt-58c317b4802f",
+   "dt_days": 3.112,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "MAROON-X_b2",
+   "utc": "2021-11-12T08:31",
+   "bjd_mid": 2459530.8550022,
+   "event_id": "evt-58c317b4802f",
+   "dt_days": 4.027,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "MAROON-X_r2",
+   "utc": "2021-11-08T11:11",
+   "bjd_mid": 2459526.9661853,
+   "event_id": "evt-58c317b4802f",
+   "dt_days": 0.138,
+   "rungs": [
+    "0.1AU",
+    "2.5Rsun"
+   ]
+  },
+  {
+   "instrument": "MAROON-X_r2",
+   "utc": "2021-11-11T10:32",
+   "bjd_mid": 2459529.9395726,
+   "event_id": "evt-58c317b4802f",
+   "dt_days": 3.112,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "MAROON-X_r2",
+   "utc": "2021-11-12T08:31",
+   "bjd_mid": 2459530.8550022,
+   "event_id": "evt-58c317b4802f",
+   "dt_days": 4.027,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "HPF",
+   "utc": "2019-11-06T09:13",
+   "bjd_mid": 2458793.8843234,
+   "event_id": "evt-366fd233073c",
+   "dt_days": -2.433,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "HPF",
+   "utc": "2019-11-06T09:30",
+   "bjd_mid": 2458793.8959212,
+   "event_id": "evt-366fd233073c",
+   "dt_days": -2.421,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "HPF",
+   "utc": "2019-11-14T08:29",
+   "bjd_mid": 2458801.8536193,
+   "event_id": "evt-366fd233073c",
+   "dt_days": 5.537,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "HPF",
+   "utc": "2019-11-14T08:45",
+   "bjd_mid": 2458801.8652171,
+   "event_id": "evt-366fd233073c",
+   "dt_days": 5.548,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "HPF",
+   "utc": "2020-11-02T09:17",
+   "bjd_mid": 2459155.8873405,
+   "event_id": "evt-5d2d162f8aa9",
+   "dt_days": -5.687,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "HPF",
+   "utc": "2020-11-02T09:34",
+   "bjd_mid": 2459155.8989388,
+   "event_id": "evt-5d2d162f8aa9",
+   "dt_days": -5.675,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "HPF",
+   "utc": "2020-11-12T08:41",
+   "bjd_mid": 2459165.8620112,
+   "event_id": "evt-5d2d162f8aa9",
+   "dt_days": 4.288,
+   "rungs": [
+    "0.1AU"
+   ]
+  },
+  {
+   "instrument": "HPF",
+   "utc": "2020-11-12T08:57",
+   "bjd_mid": 2459165.8736091,
+   "event_id": "evt-5d2d162f8aa9",
+   "dt_days": 4.3,
+   "rungs": [
+    "0.1AU"
+   ]
+  }
+ ]
+}

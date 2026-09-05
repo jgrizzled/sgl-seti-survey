@@ -1,0 +1,155 @@
+{
+ "family": "confirmatory",
+ "date": "2026-09-05",
+ "note": "manual adjudication per the frozen ladder (hypotheses \u00a78), evidence in results/confirmatory_exceedance_evidence_v1.json and the report",
+ "dispositions": [
+  {
+   "unit": "ross-128|ESPRESSO|2020-03-17",
+   "statistics": [
+    "S_line 532",
+    "S_coadd 532",
+    "S_line generic",
+    "S_coadd generic"
+   ],
+   "lambda_nm": [
+    540.822,
+    546.381
+   ],
+   "disposition": "defect/contamination",
+   "evidence": "spectrum ADP.2021-04-27T19:22:55.144 (2020-03-16T02:04, SNR 54) contains 31 peaks with S>17 incl. the Hg I pentad 404.8/436.0/546.2/577.1/579.2 nm (vacuum; first-pass grid offset +84 km/s = A9) \u2014 artificial lamp light in the science fibre; the unit's other spectrum (2020-03-22) is clean (z<2 at both wavelengths). Post hoc, excluding the contaminated spectrum, the unit's S_line is that of the clean spectrum (see report)."
+  },
+  {
+   "unit": "ross-128|HARPS|2015-03-18",
+   "statistics": [
+    "S_coadd generic"
+   ],
+   "lambda_nm": [
+    557.888
+   ],
+   "disposition": "telluric",
+   "evidence": "[O I] 5577 airglow (557.889 nm vac, observer frame); recurrent in all in-window spectra; HARPS s1d is not sky-subtracted"
+  },
+  {
+   "unit": "ross-128|HARPS|2021-03-17",
+   "statistics": [
+    "S_coadd generic"
+   ],
+   "lambda_nm": [
+    557.891
+   ],
+   "disposition": "telluric",
+   "evidence": "[O I] 5577 airglow, as above (18 spectra, z 9-15 in each)"
+  },
+  {
+   "unit": "ross-128|SPIRou|2022-03-17",
+   "statistics": [
+    "S_coadd generic"
+   ],
+   "lambda_nm": [
+    1456.41
+   ],
+   "disposition": "telluric",
+   "evidence": "OH sky line (SPIRou OHLine model 208 at the observer wavelength vs band p99 55); the corrected flux shows an 8-px constant plateau = interpolated sky-subtraction residual; 10% of nulls hot at the pixel"
+  },
+  {
+   "unit": "teegarden|CARMENES-VIS|2017-11-08",
+   "statistics": [
+    "S_line generic",
+    "S_coadd generic"
+   ],
+   "lambda_nm": [
+    882.95,
+    775.276
+   ],
+   "disposition": "telluric",
+   "evidence": "OH airglow: OH 7-3 8827.10 \u00c5 = 882.952 nm vac and OH 9-4 7750.64 \u00c5 = 775.277 nm vac in the observer frame; the same spectra show the OH 8-3/9-4/6-2/7-3 forest at z 9-50; relative amplitude anticorrelates with SNR (additive sky); CARMENES has no sky fibre"
+  },
+  {
+   "unit": "teegarden|CARMENES-VIS|2019-11-08",
+   "statistics": [
+    "S_line generic"
+   ],
+   "lambda_nm": [
+    882.956
+   ],
+   "disposition": "telluric",
+   "evidence": "same OH 7-3 8827.10 \u00c5 line, same observer-frame wavelength as 2017 (882.951 nm)"
+  },
+  {
+   "unit": "teegarden|ESPRESSO|2024-11-08",
+   "statistics": [
+    "S_line 532",
+    "S_coadd 532"
+   ],
+   "lambda_nm": [
+    532.249
+   ],
+   "disposition": "defect/cosmic",
+   "evidence": "2-pixel spike (z 23.5, 29.3, then 8.5) in one spectrum (2024-11-06T03:06, SNR 9.6); absent (z<2) in the other three in-window spectra; survives the single-pixel despike by being 2 px wide"
+  },
+  {
+   "unit": "wolf-359|CARMENES-VIS|2017-03-03",
+   "statistics": [
+    "S_coadd generic"
+   ],
+   "lambda_nm": [
+    760.024
+   ],
+   "disposition": "telluric",
+   "evidence": "O2 A band (759-770 nm); 38% of nulls hot at the pixel; auto ladder sigma-band rule"
+  },
+  {
+   "unit": "wolf-359|NIRPS|2025-03-03",
+   "statistics": [
+    "S_line 1550",
+    "S_coadd 1550"
+   ],
+   "lambda_nm": [
+    1569.499
+   ],
+   "disposition": "telluric",
+   "evidence": "sits on a CO2 telluric line: NIRPS ATM_TRANSM = 0.79 at 1569.497 nm (line series 1569.014/.253/.497/.750/1570.009 nm); emission-like over-correction residual present in all 8 in-window spectra of the two nights (z 3.7-5.4), <=2.4 in 60 nulls; the SPIRou 2019/2021 in-window spectra and nulls show nothing at the same barycentric wavelength (z<=2.5)"
+  },
+  {
+   "unit": "wolf-359|NIRPS|2025-03-03",
+   "statistics": [
+    "S_coadd generic"
+   ],
+   "lambda_nm": [
+    1807.245
+   ],
+   "disposition": "telluric",
+   "evidence": "1.8 um water/CO2 band edge, template transmission 0.02, 40% of nulls hot; auto sigma-band rule"
+  },
+  {
+   "unit": "wolf-359|SPIRou|2021-03-03",
+   "statistics": [
+    "S_coadd 1064"
+   ],
+   "lambda_nm": [
+    1080.088
+   ],
+   "disposition": "telluric",
+   "evidence": "13-px constant plateau in the corrected flux (interpolated OH-subtraction region; OHLine model 5.3, well above the p90 0.006) present on the 2021-03-02 night only"
+  },
+  {
+   "unit": "wolf-359|SPIRou|2021-03-03",
+   "statistics": [
+    "S_coadd generic"
+   ],
+   "lambda_nm": [
+    1355.383
+   ],
+   "disposition": "telluric",
+   "evidence": "1.35 um water band (opaque), template flat at 1.0, NaN-bounded, 28% of nulls hot"
+  }
+ ],
+ "tally": {
+  "exceedances": 18,
+  "telluric_sky": 12,
+  "defect_contamination": 4,
+  "defect_cosmic": 2,
+  "retained_ambiguous": 0,
+  "candidates": 0
+ }
+}

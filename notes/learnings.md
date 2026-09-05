@@ -570,3 +570,71 @@ catalogs. Lessons from DASCH (`report/dasch_crossings.md` §4):
   Size the per-worker peak first (template epoch cache = nodes × epochs
   × 8 B; injection maps ≈ 5 MB × exposures per band), sample only the
   nodes you need, and watch memory in the monitor loop.
+
+## 14. Archived spectra as a crossings substrate (spectral-archive family, 2026-09-05)
+
+The first non-imaging survey. Reduced 1D spectra with sub-minute time
+stamps are the cleanest substrate the programme has met (no WCS, PSF,
+mask or ZP machinery), and the same star's out-of-window spectra are a
+free null ensemble. The lessons are about what a same-star ensemble on a
+barycentric grid does *not* see.
+
+- **Observer-frame emission smeared across a barycentric ensemble is
+  invisible to the per-pixel σ and lands on the threshold instead.**
+  Airglow (OH Meinel bands, [O I] 5577/6300), lamp lines and
+  telluric-correction residuals are fixed in the observer frame; 60
+  nulls spanning the year put each such line at 60 different
+  barycentric pixels (±30 km/s), so no pixel's MAD is inflated, while
+  the in-window spectra of one week put it at one pixel — 12 of the 18
+  confirmatory exceedances were exactly this. v2 must mask sky
+  emission in the observer frame *before* resampling, and treat
+  telluric transmission < 0.9 as a mask for the NIR line cells (the
+  wolf-359 NIRPS 1569.50 nm "recurrent line" sat on a CO₂ line at
+  transmission 0.79 and was present in all eight spectra of two nights).
+- **Whole-spectrum contamination needs a spectrum-level veto.** One
+  ESPRESSO ross-128 frame carried the Hg I lamp pentad and 31 peaks
+  above threshold; the per-feature ladder dispositions each peak, but a
+  count of PSF-consistent peaks across the band (> 10 → contaminated)
+  is the honest gate. The same pentad also revealed a +84 km/s grid
+  error: **ESPRESSO phase-3 `WAVE` is vacuum, HARPS `WAVE` is air** —
+  never assume a frame per archive; check a known line (K I 7699,
+  Na D) per product type at recon.
+- **Thresholds set by the max over 60 × 2×10⁵ pixels are hostage to
+  the ugliest pixel.** Cosmic hits (1–3 px), normalisation blow-ups
+  next to masked runs, zero-flux orders of an M dwarf normalised by a
+  near-zero running median, a frame with SNR 0.95 and a frame with a
+  wrong header BERV each put T at 10³–10⁵ on the first pass. The
+  remedies, in order of leverage: a PSF-consistent statistic (only
+  Gaussian-fit-compliant local maxima count — identically for nulls and
+  in-window), the SNR gate at spectrum *and* pixel granularity, each
+  spectrum's own photon error as the σ floor (the ensemble-median floor
+  over-weights low-SNR spectra: robust z scale 0.6–3.4, r = −0.9 with
+  SNR), and a wavelength-solution gate against the template. Four dev
+  passes were needed; every one of them was a gate, not a hypothesis.
+- **Bookkeeping for "max over n spectra vs max over N nulls" is
+  n/(N+n), not 1/(N+1).** Units with 18–40 in-window spectra have null
+  exceedance probabilities of 0.23–0.40 per cell by construction; the
+  coadd statistic is the sharper test for them, and the expected-count
+  line of the report must use the right formula.
+- **Unit-conversion arithmetic in a recon note is a freeze input —
+  check it with a second route.** The recon's order-of-magnitude
+  power floors were 10⁴ too high (erg→W applied as 10⁻³ instead of
+  10⁻⁷ J per erg with the cm²→m² factor); the injection chain caught it
+  because the numbers disagreed with a hand calculation from the
+  measured continuum. Related: **log-log interpolation of Gaia+2MASS
+  photometry misses the 1.0–1.1 µm flux peak of an M6 dwarf by 2.3×**;
+  NIRPS's absolute `FLUX_CAL` (checked to 0.15 mag against 2MASS J/H)
+  is the right F_λ for NIR line cells, and a measured SED should be
+  the default whenever a flux-calibrated product exists.
+- **Barycentric bookkeeping**: SPIRou APERO and CARMENES caracal store
+  observer-frame vacuum wavelengths with `BERV` in the header
+  (λ_bary = λ_obs (1 + BERV/c), verified by stellar-line alignment);
+  ESO phase 3 is already barycentric (`SPECSYS`). The BERV-sign check
+  must be done on stellar-line regions — whole-band residuals are
+  telluric-dominated and give the opposite verdict.
+- **Product-level traps**: HARPS s1d has no error vector (`FLUXERR
+  = -1`); X-shooter IDPs come in four variants per exposure and in nm;
+  older SPIRou `t` files lack `OHLine`/`Recon`/`MJDMID`; SOPHIE public
+  headers are date-stripped (BJD rounded to the day); CARMENES DR1 zip
+  members carry an `_A` suffix and the Karmn `+` must be
+  percent-encoded.

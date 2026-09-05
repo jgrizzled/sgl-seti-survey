@@ -1,0 +1,215 @@
+{
+ "survey": "spectral-archives",
+ "version": "v1.1",
+ "frozen_utc": "2026-09-05",
+ "crossings_id": "xng-a09e2db7681d",
+ "channel": "A",
+ "seed": 20260905,
+ "rungs_au": {
+  "1.2Rsun": 0.005580564,
+  "2.5Rsun": 0.011626175,
+  "0.1AU": 0.1
+ },
+ "rung_radius_m": {
+  "1.2Rsun": 834900000.0,
+  "2.5Rsun": 1739400000.0,
+  "0.1AU": 14959790000.0
+ },
+ "cells_nm": {
+  "532": [
+   515,
+   545
+  ],
+  "1064": [
+   1030,
+   1090
+  ],
+  "1550": [
+   1530,
+   1570
+  ],
+  "generic": null
+ },
+ "instruments": {
+  "HARPS": {
+   "archive": "ESO-phase3",
+   "R": 115000,
+   "band_nm": [
+    378,
+    691
+   ],
+   "air_to_vacuum": true,
+   "fwhm_px": 2.5
+  },
+  "ESPRESSO": {
+   "archive": "ESO-phase3",
+   "R": 140000,
+   "band_nm": [
+    378,
+    789
+   ],
+   "air_to_vacuum": false,
+   "fwhm_px": 2.5
+  },
+  "NIRPS": {
+   "archive": "ESO-phase3",
+   "R": 70000,
+   "band_nm": [
+    966,
+    1923
+   ],
+   "air_to_vacuum": false,
+   "fwhm_px": 2.5,
+   "flux_column": "FLUX_TELL_CAL_SKYSUB"
+  },
+  "XSHOOTER": {
+   "archive": "ESO-phase3",
+   "R": 7000,
+   "band_nm": [
+    300,
+    2480
+   ],
+   "air_to_vacuum": false,
+   "fwhm_px": 3.0
+  },
+  "SPIRou": {
+   "archive": "CADC/CFHT",
+   "R": 73000,
+   "band_nm": [
+    955,
+    2515
+   ],
+   "air_to_vacuum": false,
+   "fwhm_px": 2.5,
+   "product": "t"
+  },
+  "CARMENES-VIS": {
+   "archive": "CARMENES-DR1",
+   "R": 94600,
+   "band_nm": [
+    520,
+    960
+   ],
+   "air_to_vacuum": false,
+   "fwhm_px": 2.5
+  },
+  "SOPHIE": {
+   "archive": "SOPHIE",
+   "R": 75000,
+   "band_nm": [
+    387,
+    694
+   ],
+   "air_to_vacuum": true,
+   "fwhm_px": 2.5,
+   "conditional": "included iff s1d served anonymously and header UT inside the 2.5 Rsun window"
+  }
+ },
+ "unit": "target x instrument x event",
+ "min_null_pool": 20,
+ "n_null": 60,
+ "n_coadd_draws": 60,
+ "grid": {
+  "step_lnlambda": "1/(3R)",
+  "frame": "barycentric vacuum"
+ },
+ "normalisation": {
+  "running_median_px": 201
+ },
+ "mask": {
+  "spirou_recon_min": 0.3,
+  "spirou_ohline_pct": 99,
+  "qual_nonzero": true
+ },
+ "statistics": {
+  "S_line": "max over in-window spectra of max_cell matched-filter S; T = max over null ensemble",
+  "S_coadd": "max_cell S on the mean of n in-window spectra; T = max over 60 draws of n nulls; units with n >= 2"
+ },
+ "false_alarm_per_trial": "1/(N_null+1)",
+ "adjudication_order": [
+  "shape",
+  "stellar_flare",
+  "telluric_sky",
+  "recurrence"
+ ],
+ "shape_fwhm_bounds": [
+  0.6,
+  2.0
+ ],
+ "stellar_line_tolerance_km_s": 150,
+ "stellar_lines_nm_vacuum": {
+  "Halpha": 656.46,
+  "Hbeta": 486.27,
+  "Hgamma": 434.17,
+  "Hdelta": 410.29,
+  "CaII_K": 393.48,
+  "CaII_H": 396.96,
+  "CaII_IRT1": 850.04,
+  "CaII_IRT2": 854.44,
+  "CaII_IRT3": 866.45,
+  "HeI_D3": 587.73,
+  "HeI_10830": 1083.33,
+  "NaI_D2": 589.16,
+  "NaI_D1": 589.76,
+  "KI_7665": 766.7,
+  "KI_7699": 770.11,
+  "MgI_b1": 518.5,
+  "MgI_b2": 517.41,
+  "MgI_b4": 516.88,
+  "FeII_5018": 501.98,
+  "FeII_5169": 517.08,
+  "Pa_beta": 1282.16,
+  "Pa_gamma": 1094.11,
+  "Pa_delta": 1005.22,
+  "Br_gamma": 2166.12,
+  "CaI_4227": 422.79
+ },
+ "injection": {
+  "amplitudes_rel": "12 log-spaced steps 0.02..2.0 of local pseudo-continuum",
+  "per_step": 50,
+  "recovery": "S_line > T_line",
+  "A90_interp": "linear"
+ },
+ "power": "P = 1.0645 * A90 * Flambda_cont * FWHM_lambda * pi * b_rung^2",
+ "photometry_source": "Gaia DR3 G/BP/RP + 2MASS J/H/Ks via SIMBAD (snapshotted), log-log interpolated",
+ "split": {
+  "dev": [
+   "ross-154",
+   "gj-908"
+  ],
+  "confirmatory": [
+   "wolf-359",
+   "ross-128",
+   "teegarden"
+  ]
+ },
+ "excluded_handoff": [
+  "KOA HIRES wolf-359 2010 (raw, I2)",
+  "MAROON-X teegarden 2021 + ross-128 2024 (raw)",
+  "CRIRES teegarden 2009 (raw, K band)",
+  "BL APF teegarden 2016 (raw 2D)",
+  "SPIRou teegarden 2025 (proprietary)",
+  "FEROS (<20 nulls)",
+  "EFOSC/LRIS/LAMOST low-res",
+  "X-shooter (all arms; dev finding A8)"
+ ],
+ "amended_utc": "2026-09-05",
+ "amendments_v1_1": {
+  "A1_wavelength_solution_gate": "stellar-region cross-correlation shift vs the ensemble template <= 3 px, nulls and in-window alike (found: one CARMENES ross-154 frame with a wrong header BERV, car-20170911)",
+  "A2_pixel_snr_gate": "the frozen SNR >= 5 gate applied at spectrum and pixel granularity: (i) a spectrum whose median raw flux/error over the band is < 5 is unusable (found: HARPS 118-s frame with SNR 0.95); (ii) per spectrum, pixels whose local running-median continuum has cont/running-median(err) < 5 are masked (found: zero-flux blue orders of the M dwarfs, CARMENES 520-540 nm, HARPS < 410 nm, normalised to +-1e3); (iii) pixels with ensemble-median photon SNR < 5 excluded from every cell",
+  "A3_psf_consistent_statistic": "S_line / S_coadd = max over local maxima of S (floor 4, distance 3 px, <= 200 peaks fitted) whose Gaussian fit to z has FWHM within [0.6, 2.0] x instrumental and |mu - peak| <= 2 px; despike of isolated single-pixel spikes (|z|>4, neighbours < 0.4|z|) retained; identical for nulls, coadd draws and in-window spectra (found: 1-3 px cosmic hits and normalisation blow-ups adjacent to masked runs set T at 1e3-1e5 in every dev combo)",
+  "A4_loaders": "X-shooter IDP WAVE unit read from TUNIT (nm); SPIRou Recon/OHLine extensions optional; HARPS s1d has no error vector -> photon-shaped error scaled to the header SNR",
+  "A5_berv_check": "D8 BERV-sign check evaluated on stellar-line regions (none/applied/flipped cross-correlation), not whole-band RMS",
+  "A6_sigma_floor": "per-pixel scale sigma_i = max(ensemble MAD scatter, the spectrum's OWN propagated photon error) (the frozen wording); the first implementation floored on the ensemble-median error, over-weighting low-SNR spectra (robust z scale up to 3.4, corr(scale, SNR) = -0.9)",
+  "A7_bookkeeping": "expected exceedances per unit = sum over S_line cells of n/(N+n) (max over n in-window spectra vs max over N nulls) + coadd cells/(n_draws+1); the frozen 1/(N+1) holds only for n = 1",
+  "A8_xshooter": "X-shooter arms excluded from the family (dev: 4 phase-3 product variants per exposure violate the unit definition, no BERV keyword, single-night null pool blind to night-to-night sky residuals, 14/36 in-window products fail the wavelength gate); no confirmatory X-shooter unit exists",
+  "A9_espresso_frame": "ESPRESSO phase-3 WAVE is vacuum (a WAVE_AIR column exists; K I 7699 / Na D land at vacuum positions); the v1.0 flag (air, as HARPS) double-converted the grid by +84 km/s. Found in confirmatory adjudication via the Hg-lamp pentad in the ross-128 2020-03-16 spectrum; the two ESPRESSO combos were re-run with the corrected frame (first-pass ESPRESSO results kept in results/confirmatory_search_v1_espresso_airflag.json). The statistic is translation-invariant; only the stellar-line masks and cell edges move."
+ },
+ "pixel_snr_min": 5.0,
+ "peak_floor_S": 4.0,
+ "max_peaks_fit": 200,
+ "wave_shift_max_px": 3,
+ "load_flags_seen_at_dev": {
+  "stellar_mask": "the frozen +-150 km/s stellar-line list is masked out of every cell for nulls and in-window spectra (declared: lines coincident with stellar emission lines are unconstrained)"
+ }
+}

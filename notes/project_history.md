@@ -1884,3 +1884,132 @@ m90 −1.5). Corrected persistent medians (confirmatory): D1 19.30, D2
 caveats updated; plan §4.3, §5.15 O3/O8, status line; learnings §13.
 Engine change: `ArchiveProfile.inj_subdir` (generic, was WISE-only).
 Nothing committed to git.
+
+## 21. Spectral-archive family reachability recon (2026-09-05; plan §5.15 item O4 — recon complete, ready for a freeze)
+
+Live probes from the dev machine, all anonymous
+(`surveys/spectral-archives/notes/spectral_archives_recon_2026-09-05.md`;
+scan `scripts/recon_scan.py` → `results/recon_scan_v0.json` +
+`recon_rows_v0.json` (16,433 rows); tables `scripts/recon_summary.py`
+→ `results/recon_summary_v0.md`; 187 response snapshots under
+`runs/spectral-archives/recon/`). **A public, multi-instrument on-star
+substrate exists; the family is channel A only; no freeze yet.**
+
+**Geometry.** Channel A (on-star, star at opposition) for the seven
+b ≤ 0.1 AU targets: one event per sidereal year on a fixed date, flat
+chords ±5.8 d (0.1 AU), ±11–16 h (2.5 R☉), ±2.5–7.5 h (1.2 R☉; not
+ross-128/ross-154/gj-908). No elongation gate. Channel B closed on
+paper: the only antipode-position spectra are multi-object sky fibres
+(≈ 1e-5 per tile chance of a fibre on the antipode) — nothing to
+search; SPHEREx remains the only "spectral" B-side substrate (§4.3).
+
+**Archives.** KOA TAP, ESO TAP (`dbo.raw` via `INTERSECTS(s_region)`,
+`ivoa.ObsCore` phase 3), CADC CAOM (Gemini MAROON-X/GNIRS/GRACES,
+CFHT SPIRou/ESPaDOnS, HST, SDSS mirrors — Gemini's own archive blocks
+anonymous access), MAST Mashup cone (TAP cone too slow), SDSS
+SkyServer DR17/DR19, NEID TAP (0 rows), BL Open Data (APF raw 2D
+frames), CARMENES GTO DR1 (per-star spectrum lists; VIS only), SOPHIE
+CGI (day-level dates), LAMOST DR10 form POST, Data Lab DESI DR1. Not
+probed: SMOKA (IRD), TNG (GIANO-B), the Calar Alto form (CARMENES
+NIR), HET (HPF; no archive). 5′ cone on the era-mean position,
+on-star within 3′, CADC multi-plane rows deduplicated per minute.
+
+**Result.** 7,644 on-star spectra 1978→2026: wolf-359 2,302
+(SPIRou 768, NIRPS 227, HIRES 197), ross-154 1,560 (EFOSC flare
+campaign 601), van-maanen 1,199 (1,022 ePESSTO+ standard-star EFOSC
+frames, R ~ 400), ross-128 1,108, gj-908 786, teegarden 659, gj-1276
+30. In-window: **633 at 0.1 AU (67 of 336 events), 30 at 2.5 R☉ (11
+events), 14 at 1.2 R☉ (5 events)**. Grazing ledger: wolf-359 HIRES
+2010-03-03 (−2.1 h, I₂ in), SPIRou ×4 2021-03-03 (+4.1 h), NIRPS ×4
+2025-03-03 (−3.0 h; phase-3 1D SNR 88), SOPHIE 2022 (hour unresolved);
+teegarden CRIRES ×4 2009-11-08 (−2.4 h; Bean NH₃-cell K-band survey,
+λ to confirm), CARMENES VIS ×2 2017-11-07/08 (−7.9/+13.7 h; NIR twins
+not in DR1), MAROON-X 2021-11-08 (+3.3 h), SPIRou ×4 2025-11-08
+(+0.2 h; proprietary to ~2026-11); ross-128 HARPS ×4 2021-03-17
+(−10.7 → −4.6 h), SPIRou ×4 2022-03-17 (−7.1 h), MAROON-X 2024-03-17
+(+1.4 h). **1064 and 1550 nm are in band inside grazing windows for the
+first time** (SPIRou, NIRPS). Downloads verified anonymously: ESO
+phase-3 NIRPS + HARPS 1D, CADC SPIRou APERO `t` (telluric-corrected
+orders + OH model). CDS J/A+A/684/A117 adds Teegarden epoch lists for
+non-public instruments: HPF 8 epochs in the 2019/2020 0.1 AU windows
+(810–1280 nm). Prior art: Tellis & Marcy 2017 (67,708 HIRES spectra,
+5,600 stars), Zuckerman+2023 (1,983 APF spectra, 388 stars) — no time
+selection; a cross-match, not a new search, for the wide rung.
+
+**Design read-out (for the freeze).** Substrate = reduced 1D spectra,
+the cleanest v2 substrate met; statistic = unresolved-line excess over
+the star's own template; null ensemble = same star + same instrument
+out of window (hundreds per instrument); injections at the
+instrumental FWHM, power through the rung cone (P = F·π b²). Order-of-
+magnitude floors (not injection-calibrated; the recon note's first
+draft mis-scaled erg→W by 10⁴, corrected the same day): watts through
+the grazing cones, kW through 0.1 AU. Plan
+corrections: APOGEE is not the 1550 nm substrate (2–4 visits, none in
+window); fibre surveys drop out of the design; van-maanen (b 0.32–
+0.46 R☉) has no échelle spectrum in any grazing window → a future-
+observation recommendation; gj-1276 uncovered. Plan §5.15 O4, §3.6
+row 10 and the status line updated. No adapter, no hypotheses, nothing
+committed to git.
+
+### §21 continuation — freeze through report (same day)
+
+User approval of the six recon recommendations ("Looks good, proceed")
+→ freeze v1.0 (`surveys/spectral-archives/hypotheses.md` D1–D9,
+`thresholds.md`, `configs/threshold_freeze_v1.json`, sha in
+`results/threshold_freeze_v1_sha.txt`) → `select_units.py` (29 units,
+seed 20260905; X-shooter split per arm) → `fetch.py` (961 files, 706 HTTP
++ 4 CARMENES zips with 255 members, 0 failures, 12 GB, sha256 manifest)
+→ dev on ross-154 (HARPS, CARMENES) and gj-908 (HARPS, X-shooter-NIR).
+
+**Dev (four passes)** produced amendment **v1.1**
+(`configs/threshold_freeze_v1_1.json`; `notes/dev_machinery_log_2026-09-05.md`):
+the first-pass thresholds were set by cosmic hits, flare lines,
+zero-flux blue orders normalised to ±10³, a frame with header SNR 0.95
+and a CARMENES frame with a wrong header BERV (T at 10³–10⁵). Gates
+frozen before any confirmatory spectrum: A1 wavelength-solution gate
+(stellar-region shift ≤ 3 px), A2 SNR ≥ 5 at spectrum and pixel
+granularity, A3 PSF-consistent statistic (Gaussian-fit-compliant local
+maxima only), A4 loader fixes (X-shooter nm, SPIRou optional
+extensions, HARPS synthetic errors), A5 D8 BERV check on stellar
+regions (whole-band RMS gave the opposite verdict), A6 σ floor = the
+spectrum's own photon error (ensemble-median floor over-weighted
+low-SNR spectra, r = −0.9), A7 bookkeeping n/(N+n), A8 X-shooter
+excluded (4 product variants per exposure, single-night nulls).
+Dev outcome: 10 counted trials, 1 exceedance (O₂ A band → telluric)
+vs 0.6 expected.
+
+**Confirmatory (once).** 24 units (wolf-359 HARPS not searchable: 18
+usable nulls), 77 trials, 18 exceedances vs 4.7 expected. Manual
+adjudication (`results/adjudication_confirmatory_v1.json`, evidence
+`results/confirmatory_exceedance_evidence_v1.json`): 12 sky/telluric —
+[O I] 5577 (HARPS ross-128 2015, 2021), OH 1456.4 nm (SPIRou ross-128),
+OH 7-3 8827.10 Å and OH 9-4 7750.64 Å airglow in the teegarden CARMENES
+spectra of 2017 and 2019 (the whole Meinel forest at z 9–50, amplitude
+anticorrelated with SNR), O₂ A band (wolf-359 CARMENES), the CO₂ line
+at 1569.497 nm (NIRPS `ATM_TRANSM` 0.79; the emission-like residual in
+all eight wolf-359 spectra of 2025-03-02/03, absent at the same
+barycentric wavelength in 24 SPIRou spectra), the 1.8 and 1.35 µm
+bands, an OH-subtraction plateau (SPIRou 1080.09 nm); 4 from the
+ESPRESSO ross-128 2020-03-16 spectrum carrying the Hg I lamp pentad
+(31 peaks above threshold); 2 from a 2-px cosmic hit (teegarden
+ESPRESSO 532.25 nm). **0 retained-ambiguous, 0 candidates.** The Hg
+pentad also exposed **A9**: ESPRESSO phase-3 `WAVE` is vacuum (HARPS
+is air) — the two ESPRESSO combos were re-run with the corrected frame
+(first-pass file kept; T changed ≤ 12 %, S < 5 %, no exceedance
+changed). SOPHIE wolf-359 2022 not admitted (public header
+date-stripped).
+
+**Completeness.** Injections at the instrumental FWHM; F_λ from the
+measured NIRPS absolute SED for wolf-359 (checked against 2MASS J/H to
+0.12–0.17 mag; a Gaia+2MASS log-log interpolation under-estimates the
+1.06 µm peak of an M6 dwarf by 2.3×, and the recon note's first
+order-of-magnitude powers were 10⁴ too high from an erg→W slip, both
+corrected): **12 W (1550 nm) and 22 W (1064 nm) through the 1.2 R☉
+cone** (wolf-359 NIRPS 2025), 190–220 W (SPIRou 2021), **37 W at 532 nm
+through 2.5 R☉** (ross-128 HARPS 2021), 53–95 W / 400 W through 2.5 R☉
+(wolf-359 NIR / ross-128 SPIRou 1550), 0.1–7 kW through 0.1 AU on 13
+units; CARMENES-VIS and generic cells unconstrained beyond 200 % of
+the continuum. Report `report/spectral_archives.md`; plan §5.15 O4 →
+complete, new §5.17, §3.6 row 10, §5.7 refresh item, status line;
+learnings §14. Runs: `runs/spectral-archives/v1/` (data 12 GB,
+ensembles, logs, manifest). Nothing committed to git.

@@ -1,0 +1,102 @@
+{
+ "wolf-359": {
+  "gaia": {
+   "source_id": "3864972938605115520",
+   "phot_g_mean_mag": "11.038391",
+   "phot_bp_mean_mag": "13.770287",
+   "phot_rp_mean_mag": "9.58545",
+   "parallax": "415.17941567802137"
+  },
+  "twomass": {
+   "designation": "10562886+0700527 ",
+   "ra": "164.12027",
+   "dec": "7.014658",
+   "j_m": "7.085",
+   "h_m": "6.482",
+   "k_m": "6.084",
+   "ph_qual": "AAA"
+  },
+  "twomass_n_in_cone": 1,
+  "rv_km_s": 19.57
+ },
+ "ross-128": {
+  "gaia": {
+   "source_id": "3796072592206250624",
+   "phot_g_mean_mag": "9.601",
+   "phot_bp_mean_mag": "11.361026",
+   "phot_rp_mean_mag": "8.327767",
+   "parallax": "296.3053079139394"
+  },
+  "twomass": {
+   "designation": "11474440+0048164 ",
+   "ra": "176.93502",
+   "dec": "0.804568",
+   "j_m": "6.505",
+   "h_m": "5.945",
+   "k_m": "5.654",
+   "ph_qual": "AAA"
+  },
+  "twomass_n_in_cone": 2,
+  "rv_km_s": -30.66
+ },
+ "teegarden": {
+  "gaia": {
+   "source_id": "35227046884571776",
+   "phot_g_mean_mag": "12.263103",
+   "phot_bp_mean_mag": "15.31863",
+   "phot_rp_mean_mag": "10.790128",
+   "parallax": "260.98844068047276"
+  },
+  "twomass": {
+   "designation": "02530084+1652532 ",
+   "ra": "43.253536",
+   "dec": "16.881466",
+   "j_m": "8.394",
+   "h_m": "7.883",
+   "k_m": "7.585",
+   "ph_qual": "AAA"
+  },
+  "twomass_n_in_cone": 2,
+  "rv_km_s": 63.0
+ },
+ "ross-154": {
+  "gaia": {
+   "source_id": "4075141768785646848",
+   "phot_g_mean_mag": "9.126414",
+   "phot_bp_mean_mag": "10.732183",
+   "phot_rp_mean_mag": "7.898147",
+   "parallax": "336.0266016683708"
+  },
+  "twomass": {
+   "designation": "18494929-2350101 ",
+   "ra": "282.455404",
+   "dec": "-23.836149",
+   "j_m": "6.222",
+   "h_m": "5.655",
+   "k_m": "5.37",
+   "ph_qual": "AAA"
+  },
+  "twomass_n_in_cone": 13,
+  "rv_km_s": -11.12
+ },
+ "gj-908": {
+  "gaia": {
+   "source_id": "2739689239311660672",
+   "phot_g_mean_mag": "8.152917",
+   "phot_bp_mean_mag": "9.216571",
+   "phot_rp_mean_mag": "7.120805",
+   "parallax": "169.21632962255026"
+  },
+  "twomass": {
+   "designation": "23491255+0224037 ",
+   "ra": "357.302331",
+   "dec": "2.401053",
+   "j_m": "5.827",
+   "h_m": "5.282",
+   "k_m": "5.043",
+   "ph_qual": "AAA"
+  },
+  "twomass_n_in_cone": 2,
+  "rv_km_s": -71.37
+ }
+}

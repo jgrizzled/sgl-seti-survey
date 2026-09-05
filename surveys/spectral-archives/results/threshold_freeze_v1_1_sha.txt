@@ -1,0 +1,1 @@
+8dec075ecf42afa42030a7559c2d6d600cd869060b55c8718bf4ea1c3d948ac6  surveys/spectral-archives/configs/threshold_freeze_v1_1.json
