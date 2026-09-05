@@ -128,6 +128,7 @@ class ArchiveProfile:
     linear_wcs: bool = True
     static_epoch_scale: Callable = None   # (tensor d, epoch idx, node) -> per-epoch multiplier on predicted static flux               # False: sample with the full (SIP) WCS instead of the local Jacobian        # (fm, obs, offsets_arcsec(N,2), centre, f, v) -> (f, v): e.g. static-template subtraction   # (endpoint, role, band) -> (lo_mag, hi_mag); default m90_v1 ± halfwidth
     observer_identity: str = ""
+    inj_subdir: str = "injections"        # switchable so a joint stage can write a second injection set (same draws, its own window)
 
     # -- derived -----------------------------------------------------------------
     @property
@@ -174,7 +175,7 @@ class ArchiveProfile:
 
     @property
     def inj_dir(self) -> Path:
-        return self.run_dir / "injections"
+        return self.run_dir / self.inj_subdir
 
     @property
     def hypotheses_path(self) -> Path:

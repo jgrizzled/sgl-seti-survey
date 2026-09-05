@@ -398,9 +398,12 @@ Amendments forced by evidence on development sets (the retrospectives):
   Fetch: `surveys/{ztf,panstarrs}/scripts/asteroid_stack_fetch.py`;
   scoring `surveys/joint/scripts/asteroid_control_stack.py`; products
   `runs/{ztf/v2,panstarrs/v2,joint/v3}/control/220000_stack/`.
-- SPHEREx template refit with injections (slow-source absorption
+- ~~SPHEREx template refit with injections (slow-source absorption
   unmodelled); a six-detector SPHEREx joint cell from the stored
-  accumulators.
+  accumulators.~~ Done 2026-09-04 (`report/spherex_joint6.md`; §13
+  below): joint cell 0 candidates (122 confirmatory cells, persistent
+  m90 20.93); the template absorbs a median 49 % of a slow source's
+  flux — the v2 depths are overstated by ~0.7 mag for slow sources.
 - ~~The WISE-joint (three-archive) stage on the common µ reference
   epoch, with Vega→AB and surface-brightness conventions reconciled —
   the 0.5–22 µm colour-consistency test then becomes a calibrated
@@ -522,3 +525,48 @@ catalogs. Lessons from DASCH (`report/dasch_crossings.md` §4):
 - Fork-safety: `np.load` of a compressed npz is lazy; forked workers
   sharing the handle corrupt each other's reads ("Error -3 while
   decompressing"). Copy arrays eagerly at import.
+
+## 13. Static-sky templates with few visits (SPHEREx deferred controls, 2026-09-04)
+
+- **A static template fitted to data that contain the source absorbs it
+  in proportion to the source's share of the node's weight — and with
+  2–3 visits per node that share is ~half.** SPHEREx QR2: median 49 %
+  of a persistent source's stacked flux is removed by the (a, b·λ)
+  fit, 80–90 % in single-visit corridors (a source present in the
+  node's only visit *is* a star to the fit), 5–10 % in the deep field.
+  The effect is set by the visit count, not by z (a 550 AU source
+  moves 375″/yr but is static within a visit), not by residual motion,
+  and it is linear in magnitude below the clip. Injections added after
+  the template subtraction cannot see it: measure it by refitting the
+  template with the injected per-epoch flux added, and anchor the fast
+  refit against a full image-level injection (agreement < 0.01 here).
+  Visit- and block-scale sources are absorbed like persistent ones;
+  only exposure-flicker is absorbed proportionally less. Forward fix: a
+  source-excluded template (per node, drop the epochs during which the
+  hypothesised track is within ~2 FWHM) — exact by construction.
+- **A ring normaliser must be a positive scale.** In an over-subtracted
+  field every trajectory's S_max can be negative; T becomes a tiny
+  positive number and q95 negative, and R̃ = R/q95 turns the most
+  negative ring values into the family's largest statistics (joint dev
+  R̃_FWER 5.26 → 1.59 after voiding q95 ≤ 0). The per-detector engine
+  lacks the guard and was saved by the heavy-tail rule's sign; add it
+  at the QR3 re-run.
+- **A joint cell from stored accumulators is cheap and worth ~√N.**
+  Σ_b A_b / √Σ_b B_b over six detectors with the same grid needs no
+  image, only a re-run of the injection chain with a common magnitude
+  window so the j-th injection is one source everywhere (the profile's
+  `inj_subdir` is now generic). Gain 0.6–0.9 mag over the best
+  detector; the joint injections still draw visit/block on-patterns
+  per detector although dichroic pairs share exposure times — fix in
+  the chain, not the analysis.
+- **Kept products must be real files, not links into directories
+  scheduled for deletion.** The v3 templates survived the v1 retirement
+  only as a dangling symlink; the fix was regeneration from the
+  retained cutouts plus a rebuilt-tensor comparison. When comparing
+  rebuilt tensors, match epochs by observation id — exposures of a
+  dichroic pair share an MJD and `argsort` orders them arbitrarily.
+- **Two memory-hungry pools on one 60 GB box will OOM each other, and a
+  `multiprocessing.Pool` with a killed worker hangs rather than fails.**
+  Size the per-worker peak first (template epoch cache = nodes × epochs
+  × 8 B; injection maps ≈ 5 MB × exposures per band), sample only the
+  nodes you need, and watch memory in the monitor loop.

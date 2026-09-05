@@ -1823,3 +1823,64 @@ uplink 3–61 MW; S_event 10.7–13.2; pulse cell V_eq 5.6–8.0 (GW-class,
 T_pulse 7–106 from bright-star control patches). Report
 `report/stereo_hi_crossings.md`; plan §5.16 + §5.15 O2 + status line;
 learnings §12. Nothing committed to git.
+
+## 20. SPHEREx deferred controls on QR2 (2026-09-04; plan §5.15 item O3 — complete)
+
+**Recon.** QR3 still absent, so both controls deferred from the v2
+SPHEREx report ran on QR2. First finding: the v3 static templates were
+gone — `runs/spherex/calib_v4/templates` was a symlink into `calib_v2`,
+deleted by the v1 retirement; the tensors (template-subtracted) and the
+33,879 cutouts survived. `surveys/spherex/scripts/template_control.py
+fit` regenerated all 462 corridor × detector templates with the
+unchanged algorithm into a real directory; `verify` rebuilt the van
+Maanen tensors with them and matched the stored v2 tensors at every
+valid node to < 0.05σ per epoch and 2.5 × 10⁻⁴ in S_max (not
+bit-identical — the epoch order of dichroic-paired exposures with equal
+MJD is arbitrary, and the lost set came from a slightly earlier
+photometry state).
+
+**Pre-freeze prep and finding.** The template-absorption module
+(`template_absorb.py`: per-source refit of the template with the
+injected per-epoch flux added, absorbed fraction at the track with the
+v2 stack's own weights) gave 49–68 % on the van Maanen dev corridor at
+every z. Because that changes the depth claim, it was anchored end to
+end (`template_control.py validate`: source added to the images,
+templates regenerated, tensor rebuilt twice — with the injected and the
+original templates): module vs image-level f_abs agree to < 0.01 in all
+six detectors. Freeze recommendations (joint statistic, own family at
+α = 0.05, inherited split, common injection window = v1 joint m90 ± 2,
+no catalogue veto, hypotheses v2.1 amendment, ladder design,
+report-level correction, source-excluded template as the QR3 fix) were
+approved in one word.
+
+**Chain.** Amendment v2.1 appended to `hypotheses.md`; freeze
+`configs/joint6_freeze.json`. Joint injections (all 184 pairs, 400
+each, `runs/spherex/v2/injections_joint`) and the ladder (462 groups)
+launched together with 14 + 10 workers — five workers were OOM-killed
+(a 3636 × 3636-node template grid × epochs at 20 GB, injection workers
+holding ~1,200 deep-field flux maps at 11 GB); both pools stopped, the
+ladder rewritten to sample only nodes within 15″ of the ladder tracks
+(identical results, 1.2 GB peak, 3 s per group) and finished with 6
+workers, the 13 remaining heavy injection pairs with 3. Dev nulls
+exposed a degenerate cell: proxima-cen/rx (over-subtracted Galactic-
+plane field, every joint S_max negative, T = 0.057, q95 = −12.3) set
+R̃_FWER = 5.26; amendment (a) — q95 ≤ 0 → void — recorded in the
+hypotheses and the re-hashed freeze before the confirmatory run
+(R̃_FWER 1.589 after). Confirmatory once: 122 cells, 3 void, R̃_FWER
+2.249, 11 R > 1 vs 12.7, **0 candidates**. Completeness: persistent
+m90 20.93 (dev 21.39), worst-of-four 19.15; 2,816 constraints;
+`report_tables.md` reconciled.
+
+**Absorption result.** 1,056 cells, 29,537 measurements: median f_abs
+0.49 (p10–p90 0.25–0.72), Δm 0.73 (p90 1.3–1.9 by detector); 7.6 % of
+cells above 75 %, 0.6 % above 90 % (Ross 154, Ross 128, GJ 581, GJ 1111
+corridors — a source present in a node's only visit is a star to the
+fit); deep-field gj-687 5–10 %; rank correlation with epoch count
+−0.65; no µ or magnitude dependence (clip non-linearity 0.44 vs 0.47 at
+m90 −1.5). Corrected persistent medians (confirmatory): D1 19.30, D2
+19.20, D3 19.43, D4 19.44, D5 18.75, D6 18.24, joint 20.02
+(`surveys/spherex/results/template_absorption{,_corrected}.md`). Report
+`report/spherex_joint6.md`; `report/spherex_survey.md` status and
+caveats updated; plan §4.3, §5.15 O3/O8, status line; learnings §13.
+Engine change: `ArchiveProfile.inj_subdir` (generic, was WISE-only).
+Nothing committed to git.

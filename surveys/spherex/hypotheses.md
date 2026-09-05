@@ -92,3 +92,62 @@ The executed decision rule was:
    confusion class, seed 20260822; confirmatory set analysed once.
 8. **Scope.** Targeted coverage of the frozen 88-endpoint portfolio in
    QR2; no population inference.
+
+# Amendment v2.1 — six-detector joint cell (frozen 2026-09-04)
+
+> Added after the v2.0 confirmatory run and before any joint-cell
+> statistic was evaluated on the confirmatory set. The v2.0 rule, its
+> freeze (`configs/v2_freeze.json`) and its results are unchanged; this
+> amendment adds one dependent family on the same data. Hash in
+> `configs/joint6_freeze.json`. Implementation `surveys/spherex/joint6.py`.
+
+1. **Statistic.** One cell per endpoint × role (band label `J6`):
+   S_J(z, µ) = Σ_b A_b / √(Σ_b B_b) over D1–D6 from the stored v2
+   per-trajectory accumulators (per-frame cap, |S_e| ≤ 5 clip and the
+   v3 template subtraction inherited per detector), on the common
+   96 × 3 × 3 grid — the declared flat-Fν SED gives equal weight to every
+   detector. n_J = Σ_b n_b ≥ 5; a cell exists when ≥ 2 detectors have
+   n_epochs_ok ≥ 5. Cross-track variants are combined per trajectory by
+   the larger S_max (the v2.0 rule).
+2. **Null and candidate rule.** As v2.0: 48-offset ring, R = S_max/T
+   (8 designated), R̃ = R/q95, heavy-tail / inner–outer KS void flags;
+   phase scramble and trajectory donors as annotations. R̃ ≥ R̃_FWER at
+   α = 0.05 over the joint family of the set — a second, dependent
+   family on the same data (the PS1 + ZTF joint-stage precedent); the
+   survey-wide FWER across the per-detector and joint families is ≤ 0.10.
+3. **Rejection tests.** None from catalogues (v2.0). A surviving cell is
+   `retained-ambiguous` with annotations: per-detector S and fitted flux
+   at the joint node with a flat-Fν χ² (annotation, not a veto), phase
+   split, p_phase, p_trajectory, nearest 2MASS / CatWISE source.
+4. **Completeness.** The v2 injection chain re-run once with a common
+   magnitude window per pair — the v1 six-detector joint m90
+   (`calib_v4/m90_curves.npz`, `ALL`, median over z) ± 2 — so the j-th
+   injection is one physical source in all six detectors
+   (`runs/spherex/v2/injections_joint`); 400 per pair; the six window
+   sums combined exactly as the accumulators; bright limit = the
+   brightest of the six single-epoch clip magnitudes. The visit / block
+   on-patterns are drawn per detector (an inherited property of the
+   chain, recorded as a caveat).
+5. **Hold-out.** The v2.0 corridor split inherited unchanged; dev set
+   first under all three masks, confirmatory once under primary.
+6. **Template-absorption control (not a search rule).** Measured
+   alongside: for a ladder of persistent sources on the real track (8
+   z-interval centres × 3 magnitudes at µ = 0; µ = ±1″/yr at the two
+   most distant z), the template is refitted with the source present and
+   the absorbed fraction f_abs at the track is recorded; Δm = −2.5
+   log10(1 − f_abs) is reported per cell and z interval as a correction
+   to the injection-calibrated m90 (report-level; frozen records
+   unchanged but flagged). `surveys/spherex/scripts/template_absorb.py`.
+
+**Dev-driven amendment (a), 2026-09-04, before the confirmatory run.**
+The dev nulls exposed a degenerate cell: proxima-cen/rx lies in an
+over-subtracted Galactic-plane field where every trajectory's joint
+S_max is negative, so T = 0.057 and the ring q95 = −12.3; dividing by a
+negative normaliser turned the most negative ring values into the
+largest R̃ of the family and set R̃_FWER = 5.26 for all 52 usable cells.
+Rule added: a cell whose ring normaliser is not a positive scale
+(q95 ≤ 0) is void (`null_degenerate`); the heavy-tail test is evaluated
+only for q95 > 0. The v2.0 per-detector engine has no such guard (its
+degenerate cells happened to be caught by the heavy-tail rule); noted
+for the QR3 re-run. Freeze re-hashed with the amendment recorded
+(`supersedes_freeze` keeps the pre-amendment hash).

@@ -1,7 +1,7 @@
 ---
 title: "SPHEREx survey (frozen decision rule, blind confirmatory run)"
 date: 2026-08-24
-status: "complete for QR2 — confirmatory 61 endpoints / 732 detector cells: 0 candidates at family-wise α = 0.05; development 27 / 323: 0 candidates; 16,896 injection-calibrated constraints; supersedes the v1 report (removed in the v1 retirement, 2026-08-24; git history); re-run planned when the next quick release adds a parallax phase"
+status: "complete for QR2 — confirmatory 61 endpoints / 732 detector cells: 0 candidates at family-wise α = 0.05; development 27 / 323: 0 candidates; 16,896 injection-calibrated constraints; supersedes the v1 report (removed in the v1 retirement, 2026-08-24; git history). Deferred controls done 2026-09-04 (report/spherex_joint6.md): six-detector joint cell 0 candidates (122 confirmatory cells, persistent m90 20.93); template-absorption control — the static template absorbs a median 49 % of a slow source's flux, so the per-detector persistent limits below are overstated by a median 0.7 mag (corrected 19.2–19.4 D1–D4, 18.8 D5, 18.2 D6; joint 20.02). Re-run planned when the next quick release adds a parallax phase"
 ---
 
 # SPHEREx survey
@@ -68,19 +68,36 @@ and 0 candidates.
 than the single-epoch clip limit). v1's headline 20.75 AB was the
 six-detector joint stack without error control; the v2 per-detector
 figures carry the family-wise threshold and the temporal-model floor.
-The six-detector joint cell can be formed from the stored per-tensor
-accumulators and is deferred to the QR3 re-run.
+
+**Deferred controls (2026-09-04, `report/spherex_joint6.md`).** (i) The
+six-detector joint cell (hypotheses v2.1, from the stored accumulators,
+own family at α = 0.05): confirmatory 122 cells, 0 candidates, median
+persistent m90 20.93 AB, worst-of-four 19.15. (ii) **Template
+absorption.** The static template was fitted with any real source
+present; refitting it with a persistent source injected on every real
+track shows it absorbs a median 49 % of the source's stacked flux
+(cadence-driven: 2–3 visits per node; 5–10 % in the deep field, 80–90 %
+in single-visit corridors; independent of z, µ and magnitude). The
+table above is therefore overstated for slow sources by a median 0.70
+mag (p90 1.2–1.6): corrected persistent medians D1 19.30, D2 19.20, D3
+19.43, D4 19.44, D5 18.75, D6 18.24 (joint 20.02). The frozen constraint
+records are unchanged and flagged; per cell × z interval corrections in
+`surveys/spherex/results/template_absorption_corrected.json`.
 
 ## Geometry and caveats
 
 Cross-track dimension for 3 of 176 cells (ε Ind Ba/Bb rx/tx, EZ Aqr
 tx), as WISE. Caveats: the static template was fitted without the
-injected sources, so partial absorption of a slow (z ~ 10,000 AU) real
-source into the template is not captured by the injections; no moving
-positive control has been run through the spectral path (the v1 star
-control validated photometry only) — both are queued for the QR3
-cycle, when the added parallax phase also makes the phase-coherence
-scramble informative.
+injected sources, so absorption of a real source into the template is
+not captured by the injections — now measured (median 49 %, see the
+deferred controls above; the absorption is set by the visit count per
+node, not by z); no moving positive control has been run through the
+spectral path (the v1 star control validated photometry only) — queued
+for the QR3 cycle, when the added parallax phase also makes the
+phase-coherence scramble informative. The v3 templates were lost in the
+v1 retirement (dangling `calib_v4/templates` link) and regenerated from
+the cutouts on 2026-09-04; a rebuilt van Maanen tensor matches the
+stored one to < 0.05σ per epoch.
 
 ## Scope
 
