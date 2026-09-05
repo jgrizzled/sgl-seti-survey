@@ -35,6 +35,13 @@ same request with a per-epoch observer (plan §11.2 step 4):
   -234) fetched by ``--fetch-observer stereoa``; heliocentric ~0.96 AU
   orbit leading Earth, so Earth-center is invalid at every rung (plan
   §5.15 O2, STEREO-A HI-1 sunward survey).
+* ``--observer psp`` — a JPL Horizons SSB vector table (spacecraft
+  -96) fetched by ``--fetch-observer psp`` at **10-min** sampling in
+  yearly chunks (the 0.046–0.7 AU orbit sweeps ~34° of heliocentric
+  longitude per 6 h at perihelion, so the 6 h default is useless
+  there). The observer's star-side and anti-star-side minima can be
+  only ~2 d apart around perihelion, so the list is built with
+  ``--coarse-step-days 0.5`` (plan §5.15 O5, PSP/WISPR geometry pass).
 * ``--observer soho`` — a JPL Horizons SSB vector table (spacecraft
   -21) fetched by ``--fetch-observer soho``. SOHO's L1 halo orbit has
   ~0.9 R_sun transverse amplitude (measured directly in the LASCO
@@ -96,27 +103,33 @@ OBSERVER_DEFAULTS = {
     # orbit (0.96 AU), so Earth-center is invalid at every rung
     # (plan §5.15 O2)
     "stereoa": ("2007-01-01", "2026-12-01", "stereoa_v1"),
+    # Parker Solar Probe: launch 2018-08-12, WISPR first light 2018-09,
+    # first perihelion (E1) 2018-11-06; stop bounded by the Horizons -96
+    # SPK end — extend at refresh. Heliocentric 0.046-0.73 AU orbit
+    # (period 88-150 d): Earth-center is meaningless at every rung
+    # (plan §5.15 O5)
+    "psp": ("2018-08-15", "2026-12-01", "psp_v1"),
 }
 HORIZONS_IDS = {"tess": "-95", "soho": "-21", "kepler": "-227",
-                "stereoa": "-234"}
+                "stereoa": "-234", "psp": "-96"}
+#: per-observer Horizons sampling step (default 6 h); PSP needs 10 min
+OBSERVER_FETCH_STEP = {"psp": "10m"}
+#: longest single Horizons request (rows are capped server-side at ~90k)
+FETCH_CHUNK_DAYS = 365
+#: raw responses larger than this are stored gzipped (sha of the .gz)
+RAW_GZIP_BYTES = 20_000_000
 
 
 def _sha256(path: Path) -> str:
     return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def fetch_horizons_table(observer: str, start: str, stop: str,
-                         step: str = "6h") -> Path:
-    """Fetch an SSB ICRF position table for a spacecraft from JPL
-    Horizons into ``crossings/observers/`` (raw response retained, npz
-    keyed by MJD UTC). Returns the npz path."""
-    import numpy as np
+def _horizons_vectors(command: str, start: str, stop: str, step: str) -> str:
     import requests
 
-    OBSERVER_TABLE_DIR.mkdir(parents=True, exist_ok=True)
     resp = requests.get(
         "https://ssd.jpl.nasa.gov/api/horizons.api",
-        params={"format": "text", "COMMAND": f"'{HORIZONS_IDS[observer]}'",
+        params={"format": "text", "COMMAND": f"'{command}'",
                 "EPHEM_TYPE": "VECTORS", "CENTER": "'500@0'",
                 "START_TIME": f"'{start}'", "STOP_TIME": f"'{stop}'",
                 "STEP_SIZE": f"'{step}'", "REF_PLANE": "'FRAME'",
@@ -127,15 +140,50 @@ def fetch_horizons_table(observer: str, start: str, stop: str,
     if "$$SOE" not in txt:
         raise RuntimeError("Horizons returned no vector block:\n"
                            + txt[:1000])
+    return txt
+
+
+def fetch_horizons_table(observer: str, start: str, stop: str,
+                         step: str | None = None) -> Path:
+    """Fetch an SSB ICRF position table for a spacecraft from JPL
+    Horizons into ``crossings/observers/`` (raw response retained, npz
+    keyed by MJD UTC). Requests longer than ``FETCH_CHUNK_DAYS`` are
+    split into consecutive chunks (Horizons caps a response at ~90k
+    rows) and concatenated; the raw file keeps every chunk's response.
+    Returns the npz path."""
+    import numpy as np
+
+    step = step or OBSERVER_FETCH_STEP.get(observer, "6h")
+    OBSERVER_TABLE_DIR.mkdir(parents=True, exist_ok=True)
+    t0, t1 = Time(start, scale="utc"), Time(stop, scale="utc")
+    edges = np.arange(t0.mjd, t1.mjd, FETCH_CHUNK_DAYS)
+    edges = np.append(edges, t1.mjd)
+    chunks, rows = [], []
+    for lo, hi in zip(edges[:-1], edges[1:]):
+        a = Time(lo, format="mjd", scale="utc").isot[:19]
+        b = Time(hi, format="mjd", scale="utc").isot[:19]
+        txt = _horizons_vectors(HORIZONS_IDS[observer], a, b, step)
+        chunks.append(txt)
+        n0 = len(rows)
+        for line in txt.split("$$SOE")[1].split("$$EOE")[0].strip().splitlines():
+            parts = [p.strip() for p in line.split(",")]
+            if len(parts) < 5:
+                continue
+            jd = float(parts[0])
+            if rows and jd <= rows[-1][0]:
+                continue      # chunk boundary epoch repeated
+            rows.append((jd, float(parts[2]), float(parts[3]),
+                         float(parts[4])))
+        print(f"  {a} -> {b}: {len(rows) - n0} rows", file=sys.stderr)
     raw = OBSERVER_TABLE_DIR / f"{observer}_horizons_response.txt"
-    raw.write_text(txt)
-    rows = []
-    for line in txt.split("$$SOE")[1].split("$$EOE")[0].strip().splitlines():
-        parts = [p.strip() for p in line.split(",")]
-        if len(parts) < 5:
-            continue
-        rows.append((float(parts[0]), float(parts[2]), float(parts[3]),
-                     float(parts[4])))
+    text = "\n".join(chunks)
+    if len(text) > RAW_GZIP_BYTES:       # 10-min tables run to ~50 MB
+        import gzip
+        raw = raw.with_suffix(".txt.gz")
+        with gzip.open(raw, "wt", compresslevel=9) as fh:
+            fh.write(text)
+    else:
+        raw.write_text(text)
     arr = np.array(rows)
     t = Time(arr[:, 0], format="jd", scale="tdb")
     mjd_utc = t.utc.mjd
@@ -144,7 +192,7 @@ def fetch_horizons_table(observer: str, start: str, stop: str,
     meta = {"observer": observer, "horizons_command": HORIZONS_IDS[observer],
             "center": "500@0 (SSB)", "ref_plane": "FRAME (ICRF)",
             "start": start, "stop": stop, "step": step,
-            "n_rows": int(len(rows)),
+            "n_chunks": len(chunks), "n_rows": int(len(rows)),
             "mjd_utc_range": [float(mjd_utc.min()), float(mjd_utc.max())],
             "raw_response": raw.name, "raw_sha256": _sha256(raw),
             "table_sha256": _sha256(npz)}
@@ -257,6 +305,26 @@ def resolve_observer(name: str):
             "crossing epochs shift by the leading angle (weeks to months) "
             "and the Sun-star axis is sampled at a different heliocentric "
             "radius"}
+    if name == "psp":
+        npz = OBSERVER_TABLE_DIR / "psp_sc_ephemeris.npz"
+        if not npz.exists():
+            raise SystemExit("no PSP table; run --fetch-observer psp first")
+        tab = np.load(npz)
+        ident = _sha256(npz)
+        obs = register_spacecraft_table_observer(
+            "psp-spacecraft", tab["mjd_utc"], tab["xyz_au"], ident,
+            max_gap_days=0.5)
+        return obs, {
+            "observer_table": str(npz.relative_to(REPO)),
+            "observer_table_sha256": ident,
+            "observer_accuracy": "JPL Horizons -96 SSB vectors at 10 min "
+            "sampling (yearly chunks); at the 0.046 AU perihelion the "
+            "chord sagitta over one step is ~2e-6 AU = 0.0003 R_sun, "
+            "negligible. Heliocentric 0.046-0.73 AU orbit (period "
+            "88-150 d, Venus-flyby shrinking): the Earth-center list is "
+            "meaningless for PSP at every rung; the observer crosses "
+            "each Sun-star axis twice per orbit at whatever heliocentric "
+            "radius the orbit has at the star's (anti-)longitude"}
     raise ValueError(name)
 
 
@@ -287,7 +355,12 @@ def main(argv=None) -> int:
                          "and exit")
     ap.add_argument("--start", default=None)
     ap.add_argument("--stop", default=None)
-    ap.add_argument("--coarse-step-days", type=float, default=10.0)
+    ap.add_argument("--coarse-step-days", type=float, default=10.0,
+                    help="coarse-scan step of the minimum bracketing; "
+                         "10 d for 1-AU-class observers, 0.5 d for PSP")
+    ap.add_argument("--step", default=None,
+                    help="Horizons sampling step for --fetch-observer "
+                         "(default 6h; psp 10m)")
     ap.add_argument("--targets", nargs="*", help="subset of registry IDs (default: all)")
     ap.add_argument("--out", type=Path, default=None)
     a = ap.parse_args(argv)
@@ -296,7 +369,8 @@ def main(argv=None) -> int:
     start, stop = a.start or d_start, a.stop or d_stop
     if a.fetch_observer:
         fs, fe, _ = OBSERVER_DEFAULTS[a.fetch_observer]
-        fetch_horizons_table(a.fetch_observer, a.start or fs, a.stop or fe)
+        fetch_horizons_table(a.fetch_observer, a.start or fs, a.stop or fe,
+                             a.step)
         return 0
     out = a.out or (REPO / "crossings" / d_dir)
 

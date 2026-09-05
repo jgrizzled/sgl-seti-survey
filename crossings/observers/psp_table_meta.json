@@ -1,0 +1,19 @@
+{
+ "observer": "psp",
+ "horizons_command": "-96",
+ "center": "500@0 (SSB)",
+ "ref_plane": "FRAME (ICRF)",
+ "start": "2018-08-15",
+ "stop": "2026-12-01",
+ "step": "10m",
+ "n_chunks": 9,
+ "n_rows": 436321,
+ "mjd_utc_range": [
+  58344.99919927178,
+  61374.99919926984
+ ],
+ "raw_response": "psp_horizons_response.txt.gz",
+ "raw_sha256": "sha256:3a6203e6330722054b27e0121766bab6dfee9a8bc65d97133e59e203f5d28a64",
+ "table_sha256": "sha256:e5b74f1163029886b7aa709e64565aeb54b697dbdd4aa88c83aa4cb8d537c69b",
+ "raw_note": "gzipped after fetch (52 MB text); sha is of the .gz"
+}

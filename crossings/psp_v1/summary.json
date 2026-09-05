@@ -1,0 +1,21 @@
+{
+  "crossings_id": "xng-c339df63a608",
+  "generated_utc": "2026-09-05T17:33:10+00:00",
+  "observer_id": "psp-spacecraft",
+  "n_targets": 88,
+  "n_events": 7448,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:278"
+  ],
+  "files": {
+    "events_ecsv": "crossings/psp_v1/events.ecsv",
+    "windows_ecsv": "crossings/psp_v1/windows.ecsv",
+    "result_json": "crossings/psp_v1/result.json",
+    "manifest_json": "crossings/psp_v1/manifest.json"
+  },
+  "observer_table": "crossings/observers/psp_sc_ephemeris.npz",
+  "observer_table_sha256": "sha256:e5b74f1163029886b7aa709e64565aeb54b697dbdd4aa88c83aa4cb8d537c69b",
+  "observer_accuracy": "JPL Horizons -96 SSB vectors at 10 min sampling (yearly chunks); at the 0.046 AU perihelion the chord sagitta over one step is ~2e-6 AU = 0.0003 R_sun, negligible. Heliocentric 0.046-0.73 AU orbit (period 88-150 d, Venus-flyby shrinking): the Earth-center list is meaningless for PSP at every rung; the observer crosses each Sun-star axis twice per orbit at whatever heliocentric radius the orbit has at the star's (anti-)longitude"
+}
