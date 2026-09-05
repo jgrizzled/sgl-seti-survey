@@ -1,0 +1,5698 @@
+{
+ "stage": "coverage_v1",
+ "events_input": "crossings/stereoa_v1/events.ecsv",
+ "archive": {
+  "ssc_l2_days": 7045,
+  "ssc_first_day": "20061201",
+  "ssc_last_day": "20260830",
+  "ral_l1_days": 7042,
+  "ral_first_day": "20061213",
+  "ral_last_day": "20260831",
+  "n_frames_listed": 234689,
+  "frames_per_year": {
+   "2006": 117,
+   "2007": 10292,
+   "2008": 12924,
+   "2009": 12431,
+   "2010": 12867,
+   "2011": 12831,
+   "2012": 12865,
+   "2013": 12316,
+   "2014": 7275,
+   "2015": 1480,
+   "2016": 12682,
+   "2017": 12832,
+   "2018": 12432,
+   "2019": 12729,
+   "2020": 12843,
+   "2021": 12748,
+   "2022": 12972,
+   "2023": 13553,
+   "2024": 13655,
+   "2025": 13525,
+   "2026": 9320
+  },
+  "day_headers_read": 6675
+ },
+ "pointing": {
+  "n_days": 6675,
+  "nominal_days": 6615,
+  "off_nominal_days": 60,
+  "east_days": 3876,
+  "west_days": 2799,
+  "abs_hpln_centre_median": 13.956963,
+  "hplt_centre_median": 0.076217651,
+  "hplt_centre_range": [
+   -4.6035385,
+   7.0358658
+  ],
+  "transitions": [
+   {
+    "day": "20061222",
+    "side": "east",
+    "centre": [
+     -13.001896,
+     5.3087463
+    ]
+   },
+   {
+    "day": "20151117",
+    "side": "west",
+    "centre": [
+     13.920397,
+     1.7082977
+    ]
+   },
+   {
+    "day": "20230816",
+    "side": "east",
+    "centre": [
+     -13.234837,
+     -4.6035385
+    ]
+   }
+  ],
+  "off_nominal_day_list": [
+   "20061222",
+   "20061223",
+   "20061224",
+   "20061226",
+   "20061227",
+   "20061228",
+   "20061230",
+   "20061231",
+   "20070101",
+   "20070102",
+   "20070103",
+   "20070104",
+   "20070106",
+   "20070107",
+   "20070108",
+   "20070109",
+   "20070111",
+   "20070112",
+   "20070113",
+   "20070114",
+   "20070115",
+   "20070116",
+   "20070117",
+   "20070118",
+   "20070119",
+   "20070120",
+   "20070121",
+   "20070122",
+   "20070123",
+   "20070124",
+   "20070125",
+   "20070126",
+   "20070127",
+   "20070128",
+   "20070129",
+   "20070130",
+   "20070131",
+   "20070201",
+   "20070202",
+   "20070203",
+   "20070204",
+   "20070205",
+   "20070206",
+   "20070207",
+   "20070208",
+   "20070209",
+   "20070210",
+   "20070211",
+   "20070212",
+   "20070213",
+   "20070214",
+   "20070215",
+   "20070216",
+   "20070217",
+   "20070218",
+   "20230816",
+   "20230817",
+   "20230818",
+   "20230819",
+   "20230820"
+  ]
+ },
+ "gaps_ge_3d": [
+  {
+   "from": "2007-03-02",
+   "to": "2007-03-07",
+   "days": 6
+  },
+  {
+   "from": "2007-03-14",
+   "to": "2007-03-27",
+   "days": 14
+  },
+  {
+   "from": "2014-07-07",
+   "to": "2014-07-10",
+   "days": 4
+  },
+  {
+   "from": "2014-08-19",
+   "to": "2015-11-16",
+   "days": 455
+  },
+  {
+   "from": "2018-05-24",
+   "to": "2018-06-05",
+   "days": 13
+  },
+  {
+   "from": "2023-08-07",
+   "to": "2023-08-15",
+   "days": 9
+  }
+ ],
+ "l1_l2_parity": {
+  "sampled_days": 40,
+  "rows": [
+   {
+    "day": "20080507",
+    "n_l1": 27,
+    "n_l2": 27,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20080630",
+    "n_l1": 34,
+    "n_l2": 33,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20080920",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20090919",
+    "n_l1": 35,
+    "n_l2": 35,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20091129",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20110128",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20110206",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20110912",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20121018",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20130306",
+    "n_l1": 35,
+    "n_l2": 35,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20140113",
+    "n_l1": 24,
+    "n_l2": 24,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20151207",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20160203",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20170104",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20170718",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20170731",
+    "n_l1": 31,
+    "n_l2": 30,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20171103",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20171114",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20180205",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20180826",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20181022",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20181211",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20190603",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20190707",
+    "n_l1": 30,
+    "n_l2": 30,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20200609",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20201229",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20210531",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20220825",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20220907",
+    "n_l1": 36,
+    "n_l2": 36,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20230403",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20230719",
+    "n_l1": 71,
+    "n_l2": 71,
+    "l1_not_l2": 0,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20231019",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20240102",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20240204",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20240218",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20240709",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20250628",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20251003",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20251027",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   },
+   {
+    "day": "20260319",
+    "n_l1": 37,
+    "n_l2": 36,
+    "l1_not_l2": 1,
+    "l2_not_l1": 0
+   }
+  ],
+  "total_l1": 1460,
+  "total_l2": 1437,
+  "l1_only": 23,
+  "l2_only": 0
+ },
+ "arc_definition": {
+  "abs_hpln_deg": [
+   4.05,
+   6.0
+  ],
+  "baseline_abs_hpln_deg": [
+   6.0,
+   12.0
+  ],
+  "edge_margin_deg": 0.15984,
+  "footprint_half_widths_deg": [
+   10.128,
+   10.128
+  ]
+ },
+ "aggregates": {
+  "S1": {
+   "gj-1276": {
+    "events": 21,
+    "covered": 20,
+    "median_arc_frames": 66.0,
+    "median_baseline_frames": 204.0
+   },
+   "gj-908": {
+    "events": 21,
+    "covered": 20,
+    "median_arc_frames": 36.0,
+    "median_baseline_frames": 206.0
+   },
+   "ross-128": {
+    "events": 21,
+    "covered": 19,
+    "median_arc_frames": 65.0,
+    "median_baseline_frames": 208.0
+   },
+   "ross-154": {
+    "events": 21,
+    "covered": 20,
+    "median_arc_frames": 59.0,
+    "median_baseline_frames": 202.0
+   },
+   "teegarden": {
+    "events": 21,
+    "covered": 20,
+    "median_arc_frames": 65.0,
+    "median_baseline_frames": 208.0
+   },
+   "van-maanen": {
+    "events": 21,
+    "covered": 20,
+    "median_arc_frames": 66.0,
+    "median_baseline_frames": 205.0
+   },
+   "wolf-359": {
+    "events": 21,
+    "covered": 19,
+    "median_arc_frames": 65.0,
+    "median_baseline_frames": 207.0
+   }
+  },
+  "S2": {
+   "gj-1276": {
+    "events": 21,
+    "covered": 19,
+    "median_arc_frames": 65.0,
+    "median_baseline_frames": 208.0
+   },
+   "gj-908": {
+    "events": 21,
+    "covered": 18,
+    "median_arc_frames": 30.0,
+    "median_baseline_frames": 207.0
+   },
+   "ross-128": {
+    "events": 21,
+    "covered": 20,
+    "median_arc_frames": 66.0,
+    "median_baseline_frames": 205.0
+   },
+   "ross-154": {
+    "events": 22,
+    "covered": 19,
+    "median_arc_frames": 58.0,
+    "median_baseline_frames": 207.5
+   },
+   "teegarden": {
+    "events": 21,
+    "covered": 19,
+    "median_arc_frames": 64.0,
+    "median_baseline_frames": 201.0
+   },
+   "van-maanen": {
+    "events": 21,
+    "covered": 19,
+    "median_arc_frames": 65.0,
+    "median_baseline_frames": 205.0
+   },
+   "wolf-359": {
+    "events": 21,
+    "covered": 20,
+    "median_arc_frames": 66.0,
+    "median_baseline_frames": 204.0
+   }
+  }
+ },
+ "rows": [
+  {
+   "event_id": "evt-ad69292b8675",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2007-08-20T20:09",
+   "b_min_rsun": 0.374,
+   "visible_hours": 44.5,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20070815",
+    "20070816"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ab67338b64ba",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2008-07-30T10:16",
+   "b_min_rsun": 0.372,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20080724",
+    "20080725",
+    "20080726"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c750946ebe5c",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2009-07-09T23:01",
+   "b_min_rsun": 0.371,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20090704",
+    "20090705",
+    "20090706"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6a6141430884",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2010-06-19T11:31",
+   "b_min_rsun": 0.369,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20100613",
+    "20100614",
+    "20100615"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-5184c2b11ce5",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2011-05-30T00:05",
+   "b_min_rsun": 0.368,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20110524",
+    "20110525",
+    "20110526"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d6ae0301bd9b",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2012-05-08T12:56",
+   "b_min_rsun": 0.366,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20120502",
+    "20120503",
+    "20120504"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f5fd1ef4e1b7",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2013-04-18T01:55",
+   "b_min_rsun": 0.364,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20130412",
+    "20130413",
+    "20130414"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6a74e9a2bd41",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2014-03-28T15:18",
+   "b_min_rsun": 0.362,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 152,
+   "arc_days": [
+    "20140322",
+    "20140323",
+    "20140324"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-b359f9d1559e",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2015-03-08T04:38",
+   "b_min_rsun": 0.361,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-db4883d436e0",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2016-02-15T18:10",
+   "b_min_rsun": 0.359,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20160219",
+    "20160220",
+    "20160221"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-b3f86d2b30be",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2017-01-25T07:29",
+   "b_min_rsun": 0.358,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20170129",
+    "20170130"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-dde8c40ca971",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2018-01-04T20:47",
+   "b_min_rsun": 0.356,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 202,
+   "arc_days": [
+    "20180108",
+    "20180109",
+    "20180110"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-42e7423c14e2",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2018-12-15T09:42",
+   "b_min_rsun": 0.355,
+   "visible_hours": 44.3,
+   "n_frames_arc": 60,
+   "n_frames_arc_nominal_pointing": 60,
+   "n_frames_baseline": 195,
+   "arc_days": [
+    "20181219",
+    "20181220",
+    "20181221"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-dbf017d0d658",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2019-11-24T22:26",
+   "b_min_rsun": 0.353,
+   "visible_hours": 44.3,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20191128",
+    "20191129",
+    "20191130"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-69b2d41e86c5",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2020-11-03T10:56",
+   "b_min_rsun": 0.352,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20201107",
+    "20201108",
+    "20201109"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2564124aa245",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2021-10-13T23:33",
+   "b_min_rsun": 0.35,
+   "visible_hours": 44.5,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20211017",
+    "20211018",
+    "20211019"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d1aa29af2493",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2022-09-23T12:53",
+   "b_min_rsun": 0.349,
+   "visible_hours": 44.5,
+   "n_frames_arc": 61,
+   "n_frames_arc_nominal_pointing": 61,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20220927",
+    "20220928",
+    "20220929"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2b195b9bbad0",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2023-09-03T07:48",
+   "b_min_rsun": 0.351,
+   "visible_hours": 44.3,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20230828",
+    "20230829",
+    "20230830"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6520e1a76398",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2024-08-12T14:26",
+   "b_min_rsun": 0.349,
+   "visible_hours": 44.5,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20240806",
+    "20240807",
+    "20240808"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ef17ba4079a5",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2025-07-22T14:24",
+   "b_min_rsun": 0.347,
+   "visible_hours": 44.5,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 179,
+   "arc_days": [
+    "20250716",
+    "20250717",
+    "20250718"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-7e59fa21c447",
+   "target_id": "gj-1276",
+   "channel": "S1",
+   "t_ca_utc": "2026-07-01T13:42",
+   "b_min_rsun": 0.346,
+   "visible_hours": 44.5,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20260625",
+    "20260626",
+    "20260627"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8e6ad3144964",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2007-09-05T06:59",
+   "b_min_rsun": 11.457,
+   "visible_hours": 25.0,
+   "n_frames_arc": 37,
+   "n_frames_arc_nominal_pointing": 37,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20070831",
+    "20070901"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8a9d1c1f2f4d",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2008-08-14T20:57",
+   "b_min_rsun": 11.453,
+   "visible_hours": 25.0,
+   "n_frames_arc": 37,
+   "n_frames_arc_nominal_pointing": 37,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20080810",
+    "20080811"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-007e071f72a2",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2009-07-25T09:39",
+   "b_min_rsun": 11.452,
+   "visible_hours": 25.2,
+   "n_frames_arc": 38,
+   "n_frames_arc_nominal_pointing": 38,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20090720",
+    "20090721"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-46964ebcf80d",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2010-07-04T22:08",
+   "b_min_rsun": 11.451,
+   "visible_hours": 25.2,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20100630",
+    "20100701"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e8bfba843889",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2011-06-14T10:39",
+   "b_min_rsun": 11.45,
+   "visible_hours": 25.2,
+   "n_frames_arc": 37,
+   "n_frames_arc_nominal_pointing": 37,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20110609",
+    "20110610"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-079678bc6b06",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2012-05-23T23:30",
+   "b_min_rsun": 11.448,
+   "visible_hours": 25.2,
+   "n_frames_arc": 37,
+   "n_frames_arc_nominal_pointing": 37,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20120519",
+    "20120520"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ca55ba78e4f5",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2013-05-03T12:28",
+   "b_min_rsun": 11.447,
+   "visible_hours": 25.2,
+   "n_frames_arc": 38,
+   "n_frames_arc_nominal_pointing": 38,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20130428",
+    "20130429"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1bcccf4bb32d",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2014-04-13T01:49",
+   "b_min_rsun": 11.446,
+   "visible_hours": 25.2,
+   "n_frames_arc": 38,
+   "n_frames_arc_nominal_pointing": 38,
+   "n_frames_baseline": 157,
+   "arc_days": [
+    "20140408",
+    "20140409"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-693e55a6d546",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2015-03-23T15:07",
+   "b_min_rsun": 11.445,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-6a7cbebcdb36",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2016-03-02T04:38",
+   "b_min_rsun": 11.443,
+   "visible_hours": 20.5,
+   "n_frames_arc": 29,
+   "n_frames_arc_nominal_pointing": 29,
+   "n_frames_baseline": 182,
+   "arc_days": [
+    "20160306"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f75a47911e8c",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2017-02-09T17:57",
+   "b_min_rsun": 11.442,
+   "visible_hours": 20.7,
+   "n_frames_arc": 31,
+   "n_frames_arc_nominal_pointing": 31,
+   "n_frames_baseline": 175,
+   "arc_days": [
+    "20170213",
+    "20170214"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-bc3d202353b5",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2018-01-20T07:16",
+   "b_min_rsun": 11.441,
+   "visible_hours": 20.7,
+   "n_frames_arc": 30,
+   "n_frames_arc_nominal_pointing": 30,
+   "n_frames_baseline": 196,
+   "arc_days": [
+    "20180124",
+    "20180125"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-67a0c08e0e2f",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2018-12-30T20:11",
+   "b_min_rsun": 11.44,
+   "visible_hours": 20.7,
+   "n_frames_arc": 31,
+   "n_frames_arc_nominal_pointing": 31,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20190103",
+    "20190104"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4fc3d79f65bd",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2019-12-10T08:56",
+   "b_min_rsun": 11.439,
+   "visible_hours": 20.7,
+   "n_frames_arc": 30,
+   "n_frames_arc_nominal_pointing": 30,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20191214",
+    "20191215"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ac6a69575afb",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2020-11-18T21:26",
+   "b_min_rsun": 11.438,
+   "visible_hours": 20.7,
+   "n_frames_arc": 31,
+   "n_frames_arc_nominal_pointing": 31,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20201122",
+    "20201123"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-18b6fca231be",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2021-10-29T10:03",
+   "b_min_rsun": 11.437,
+   "visible_hours": 20.5,
+   "n_frames_arc": 31,
+   "n_frames_arc_nominal_pointing": 31,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20211102",
+    "20211103"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-122a50306843",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2022-10-08T23:27",
+   "b_min_rsun": 11.438,
+   "visible_hours": 20.5,
+   "n_frames_arc": 31,
+   "n_frames_arc_nominal_pointing": 31,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20221012",
+    "20221013"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1a71fcd53c60",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2023-09-18T19:24",
+   "b_min_rsun": 11.461,
+   "visible_hours": 25.0,
+   "n_frames_arc": 37,
+   "n_frames_arc_nominal_pointing": 37,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20230914",
+    "20230915"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4e003f203d32",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2024-08-28T01:02",
+   "b_min_rsun": 11.441,
+   "visible_hours": 25.2,
+   "n_frames_arc": 38,
+   "n_frames_arc_nominal_pointing": 38,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20240823",
+    "20240824"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a149c62277f3",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2025-08-07T00:52",
+   "b_min_rsun": 11.439,
+   "visible_hours": 25.2,
+   "n_frames_arc": 35,
+   "n_frames_arc_nominal_pointing": 35,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20250802",
+    "20250803"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8df991837da2",
+   "target_id": "gj-908",
+   "channel": "S1",
+   "t_ca_utc": "2026-07-17T00:08",
+   "b_min_rsun": 11.437,
+   "visible_hours": 25.2,
+   "n_frames_arc": 37,
+   "n_frames_arc_nominal_pointing": 37,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20260712",
+    "20260713"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f7a71051ff7c",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2007-03-16T08:44",
+   "b_min_rsun": 1.492,
+   "visible_hours": 43.8,
+   "n_frames_arc": 22,
+   "n_frames_arc_nominal_pointing": 22,
+   "n_frames_baseline": 31,
+   "arc_days": [
+    "20070310",
+    "20070311",
+    "20070312"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c975145bcef1",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2008-02-24T00:36",
+   "b_min_rsun": 1.491,
+   "visible_hours": 43.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20080218",
+    "20080219",
+    "20080220"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-927ca31a3091",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2009-02-02T13:37",
+   "b_min_rsun": 1.492,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 181,
+   "arc_days": [
+    "20090127",
+    "20090128",
+    "20090129"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-eb9b478605c7",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2010-01-13T01:55",
+   "b_min_rsun": 1.494,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20100107",
+    "20100108",
+    "20100109"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c09d97c1a451",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2010-12-23T14:27",
+   "b_min_rsun": 1.495,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20101217",
+    "20101218",
+    "20101219"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-766e1d11674c",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2011-12-03T03:07",
+   "b_min_rsun": 1.495,
+   "visible_hours": 43.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 190,
+   "arc_days": [
+    "20111127",
+    "20111128",
+    "20111129"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-aabcb373a554",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2012-11-11T16:10",
+   "b_min_rsun": 1.496,
+   "visible_hours": 43.8,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 198,
+   "arc_days": [
+    "20121105",
+    "20121106",
+    "20121107"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-30976b70dc49",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2013-10-22T05:27",
+   "b_min_rsun": 1.497,
+   "visible_hours": 43.8,
+   "n_frames_arc": 41,
+   "n_frames_arc_nominal_pointing": 41,
+   "n_frames_baseline": 182,
+   "arc_days": [
+    "20131016",
+    "20131017",
+    "20131018"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d6617f4e17cc",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2014-10-01T18:56",
+   "b_min_rsun": 1.499,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-d40d1c859ca7",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2015-09-11T08:30",
+   "b_min_rsun": 1.5,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-e202c95f47e7",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2016-08-20T22:02",
+   "b_min_rsun": 1.5,
+   "visible_hours": 43.3,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20160824",
+    "20160825",
+    "20160826"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e5b850efeb66",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2017-07-31T11:26",
+   "b_min_rsun": 1.501,
+   "visible_hours": 43.3,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20170804",
+    "20170805",
+    "20170806"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-834ee7fdcb34",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2018-07-11T00:33",
+   "b_min_rsun": 1.502,
+   "visible_hours": 43.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20180714",
+    "20180715",
+    "20180716"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-b312d1e1fa01",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2019-06-20T13:24",
+   "b_min_rsun": 1.503,
+   "visible_hours": 43.3,
+   "n_frames_arc": 57,
+   "n_frames_arc_nominal_pointing": 57,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20190624",
+    "20190625",
+    "20190626"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-fd0cf0e03f02",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2020-05-30T01:51",
+   "b_min_rsun": 1.503,
+   "visible_hours": 43.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20200603",
+    "20200604"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-636ac1c1147f",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2021-05-09T14:21",
+   "b_min_rsun": 1.504,
+   "visible_hours": 43.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 184,
+   "arc_days": [
+    "20210513",
+    "20210514",
+    "20210515"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f411d9ff02fc",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2022-04-19T03:00",
+   "b_min_rsun": 1.505,
+   "visible_hours": 43.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20220423",
+    "20220424"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6d6d0e54fb68",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2023-03-29T17:47",
+   "b_min_rsun": 1.507,
+   "visible_hours": 43.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20230402",
+    "20230403",
+    "20230404"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1cb32766390a",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2024-03-08T20:26",
+   "b_min_rsun": 1.509,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20240303",
+    "20240304"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f214fe06ecb1",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2025-02-15T21:20",
+   "b_min_rsun": 1.51,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20250210",
+    "20250211"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-9e24a311c461",
+   "target_id": "ross-128",
+   "channel": "S1",
+   "t_ca_utc": "2026-01-25T20:39",
+   "b_min_rsun": 1.511,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20260120",
+    "20260121"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-78d617adc1b1",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2007-06-24T05:37",
+   "b_min_rsun": 3.609,
+   "visible_hours": 44.7,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 174,
+   "arc_days": [
+    "20070618",
+    "20070619",
+    "20070620"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a545a14be4c8",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2008-06-02T20:11",
+   "b_min_rsun": 3.609,
+   "visible_hours": 44.7,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20080528",
+    "20080529",
+    "20080530"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2607767e1a45",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2009-05-13T09:00",
+   "b_min_rsun": 3.61,
+   "visible_hours": 44.7,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 167,
+   "arc_days": [
+    "20090507",
+    "20090508",
+    "20090509"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-db1520aae398",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2010-04-22T21:29",
+   "b_min_rsun": 3.611,
+   "visible_hours": 44.7,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20100417",
+    "20100418",
+    "20100419"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d0a418ada0a4",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2011-04-02T10:03",
+   "b_min_rsun": 3.612,
+   "visible_hours": 44.7,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 195,
+   "arc_days": [
+    "20110327",
+    "20110328",
+    "20110329"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-efacd94fdb6b",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2012-03-11T22:55",
+   "b_min_rsun": 3.612,
+   "visible_hours": 44.7,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 202,
+   "arc_days": [
+    "20120306",
+    "20120307",
+    "20120308"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-bf23a369d4bd",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2013-02-19T12:02",
+   "b_min_rsun": 3.613,
+   "visible_hours": 44.7,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20130213",
+    "20130214",
+    "20130215"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-aabfbd8c71f9",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2014-01-30T01:26",
+   "b_min_rsun": 3.614,
+   "visible_hours": 44.7,
+   "n_frames_arc": 45,
+   "n_frames_arc_nominal_pointing": 45,
+   "n_frames_baseline": 102,
+   "arc_days": [
+    "20140124",
+    "20140125",
+    "20140126"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-17e99f81cbb1",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2015-01-09T14:52",
+   "b_min_rsun": 3.615,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-267a69a74a33",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2015-12-20T04:25",
+   "b_min_rsun": 3.616,
+   "visible_hours": 39.5,
+   "n_frames_arc": 29,
+   "n_frames_arc_nominal_pointing": 29,
+   "n_frames_baseline": 201,
+   "arc_days": [
+    "20151225"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-850abba99dbd",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2016-11-28T17:44",
+   "b_min_rsun": 3.616,
+   "visible_hours": 39.5,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20161202",
+    "20161203",
+    "20161204"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-04ad45c174fa",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2017-11-08T07:02",
+   "b_min_rsun": 3.617,
+   "visible_hours": 39.5,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20171112",
+    "20171113"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-eacb1f538e12",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2018-10-18T19:53",
+   "b_min_rsun": 3.617,
+   "visible_hours": 39.5,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20181022",
+    "20181023",
+    "20181024"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6e6954db5d5e",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2019-09-28T08:39",
+   "b_min_rsun": 3.618,
+   "visible_hours": 39.5,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20191002",
+    "20191003"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a50c6f5ca4db",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2020-09-06T21:02",
+   "b_min_rsun": 3.618,
+   "visible_hours": 39.5,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 202,
+   "arc_days": [
+    "20200910",
+    "20200911",
+    "20200912"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8618e9916efb",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2021-08-17T09:34",
+   "b_min_rsun": 3.619,
+   "visible_hours": 39.5,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20210821",
+    "20210822"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-9028addb26b8",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2022-07-27T22:35",
+   "b_min_rsun": 3.621,
+   "visible_hours": 39.5,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20220731",
+    "20220801",
+    "20220802"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-7de6ba813e25",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2023-07-07T15:20",
+   "b_min_rsun": 3.624,
+   "visible_hours": 39.3,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 267,
+   "arc_days": [
+    "20230711",
+    "20230712",
+    "20230713"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c062a3be29a6",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2024-06-16T03:41",
+   "b_min_rsun": 3.618,
+   "visible_hours": 44.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20240610",
+    "20240611",
+    "20240612"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-73037d58b43d",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2025-05-26T04:02",
+   "b_min_rsun": 3.618,
+   "visible_hours": 44.8,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 198,
+   "arc_days": [
+    "20250520",
+    "20250521",
+    "20250522"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4d16a68e4030",
+   "target_id": "ross-154",
+   "channel": "S1",
+   "t_ca_utc": "2026-05-05T03:26",
+   "b_min_rsun": 3.618,
+   "visible_hours": 44.8,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20260429",
+    "20260430",
+    "20260501"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-0b98ef28b938",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2007-10-20T11:57",
+   "b_min_rsun": 1.099,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20071014",
+    "20071015",
+    "20071016"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c2b70c4132c3",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2008-09-29T01:37",
+   "b_min_rsun": 1.094,
+   "visible_hours": 44.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20080923",
+    "20080924",
+    "20080925"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e11a9bf5e5f4",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2009-09-08T14:09",
+   "b_min_rsun": 1.091,
+   "visible_hours": 44.3,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 198,
+   "arc_days": [
+    "20090902",
+    "20090903",
+    "20090904"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-7ae71bb63446",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2010-08-19T02:36",
+   "b_min_rsun": 1.087,
+   "visible_hours": 44.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20100813",
+    "20100814",
+    "20100815"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-442ab2a6cfb3",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2011-07-29T15:02",
+   "b_min_rsun": 1.083,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20110723",
+    "20110724",
+    "20110725"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ed5b9933702a",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2012-07-08T03:56",
+   "b_min_rsun": 1.079,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20120702",
+    "20120703",
+    "20120704"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a7b78e9350a9",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2013-06-17T16:54",
+   "b_min_rsun": 1.075,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 190,
+   "arc_days": [
+    "20130612",
+    "20130613"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c31177d6bdec",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2014-05-28T06:15",
+   "b_min_rsun": 1.071,
+   "visible_hours": 44.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 201,
+   "arc_days": [
+    "20140522",
+    "20140523",
+    "20140524"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-544395fa71d1",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2015-05-07T19:36",
+   "b_min_rsun": 1.069,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-9b7310301dd7",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2016-04-16T09:06",
+   "b_min_rsun": 1.063,
+   "visible_hours": 42.7,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20160420",
+    "20160421",
+    "20160422"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-10f0fad5e5d5",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2017-03-26T22:29",
+   "b_min_rsun": 1.059,
+   "visible_hours": 42.7,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20170330",
+    "20170331",
+    "20170401"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c5b2fc5fe90c",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2018-03-06T11:47",
+   "b_min_rsun": 1.055,
+   "visible_hours": 42.7,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20180310",
+    "20180311",
+    "20180312"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-45cde389881c",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2019-02-14T00:48",
+   "b_min_rsun": 1.051,
+   "visible_hours": 42.7,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20190217",
+    "20190218",
+    "20190219"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-303cff4c1296",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2020-01-24T13:35",
+   "b_min_rsun": 1.047,
+   "visible_hours": 42.7,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20200128",
+    "20200129",
+    "20200130"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-94116ddde0c1",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2021-01-03T02:09",
+   "b_min_rsun": 1.043,
+   "visible_hours": 42.7,
+   "n_frames_arc": 46,
+   "n_frames_arc_nominal_pointing": 46,
+   "n_frames_baseline": 126,
+   "arc_days": [
+    "20210107",
+    "20210108"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-11c90f126bfc",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2021-12-13T14:48",
+   "b_min_rsun": 1.04,
+   "visible_hours": 42.7,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20211217",
+    "20211218",
+    "20211219"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-0a209fb7f59b",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2022-11-23T04:23",
+   "b_min_rsun": 1.036,
+   "visible_hours": 42.5,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20221127",
+    "20221128"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-34b7c6a7eb4f",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2023-11-03T04:30",
+   "b_min_rsun": 1.042,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20231028",
+    "20231029",
+    "20231030"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2479a81a7e7f",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2024-10-12T07:58",
+   "b_min_rsun": 1.037,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 313,
+   "arc_days": [
+    "20241006",
+    "20241007",
+    "20241008"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2346dbecebff",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2025-09-21T07:31",
+   "b_min_rsun": 1.033,
+   "visible_hours": 44.3,
+   "n_frames_arc": 116,
+   "n_frames_arc_nominal_pointing": 116,
+   "n_frames_baseline": 264,
+   "arc_days": [
+    "20250915",
+    "20250916",
+    "20250917"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-fa8a9cfd008e",
+   "target_id": "teegarden",
+   "channel": "S1",
+   "t_ca_utc": "2026-08-31T06:42",
+   "b_min_rsun": 1.029,
+   "visible_hours": 44.3,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20260825",
+    "20260826",
+    "20260827"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-77b673474e0c",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2007-09-19T11:52",
+   "b_min_rsun": 0.116,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20070913",
+    "20070914",
+    "20070915"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-35fd087a6a48",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2008-08-29T01:45",
+   "b_min_rsun": 0.113,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20080823",
+    "20080824",
+    "20080825"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-9303ccc3137a",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2009-08-08T14:23",
+   "b_min_rsun": 0.111,
+   "visible_hours": 44.3,
+   "n_frames_arc": 49,
+   "n_frames_arc_nominal_pointing": 49,
+   "n_frames_baseline": 189,
+   "arc_days": [
+    "20090802",
+    "20090803",
+    "20090804"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4c3b8a0e74b5",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2010-07-19T02:51",
+   "b_min_rsun": 0.108,
+   "visible_hours": 44.3,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20100713",
+    "20100714",
+    "20100715"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f9ab874fb3ee",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2011-06-28T15:20",
+   "b_min_rsun": 0.106,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20110622",
+    "20110623",
+    "20110624"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d1b03120e7e9",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2012-06-07T04:12",
+   "b_min_rsun": 0.103,
+   "visible_hours": 44.3,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 203,
+   "arc_days": [
+    "20120601",
+    "20120602",
+    "20120603"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-fe85eaea80cc",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2013-05-17T17:08",
+   "b_min_rsun": 0.1,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20130512",
+    "20130513"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-56cc9ab9bd16",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2014-04-27T06:29",
+   "b_min_rsun": 0.099,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20140421",
+    "20140422",
+    "20140423"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4fe57274563a",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2015-04-06T19:47",
+   "b_min_rsun": 0.097,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-754e54567c71",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2016-03-16T09:18",
+   "b_min_rsun": 0.092,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 203,
+   "arc_days": [
+    "20160320",
+    "20160321",
+    "20160322"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ed83a9d64ebb",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2017-02-23T22:38",
+   "b_min_rsun": 0.09,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20170227",
+    "20170228",
+    "20170301"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2cc6a5818a6a",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2018-02-03T11:56",
+   "b_min_rsun": 0.087,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20180207",
+    "20180208",
+    "20180209"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6099c3e5a93b",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2019-01-14T00:53",
+   "b_min_rsun": 0.085,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20190117",
+    "20190118",
+    "20190119"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-3482afd04139",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2019-12-24T13:38",
+   "b_min_rsun": 0.082,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20191228",
+    "20191229",
+    "20191230"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-7e68f00670ea",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2020-12-03T02:09",
+   "b_min_rsun": 0.08,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 201,
+   "arc_days": [
+    "20201206",
+    "20201207",
+    "20201208"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-5444d0198a39",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2021-11-12T14:47",
+   "b_min_rsun": 0.077,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 202,
+   "arc_days": [
+    "20211116",
+    "20211117",
+    "20211118"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ae779f395fce",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2022-10-23T04:13",
+   "b_min_rsun": 0.074,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20221027",
+    "20221028"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-5a14015b516a",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2023-10-03T01:21",
+   "b_min_rsun": 0.078,
+   "visible_hours": 44.2,
+   "n_frames_arc": 124,
+   "n_frames_arc_nominal_pointing": 124,
+   "n_frames_baseline": 277,
+   "arc_days": [
+    "20230927",
+    "20230928",
+    "20230929"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-268771ae8332",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2024-09-11T06:12",
+   "b_min_rsun": 0.076,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20240905",
+    "20240906",
+    "20240907"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-3f6e9f8f0c33",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2025-08-21T05:56",
+   "b_min_rsun": 0.074,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20250815",
+    "20250816",
+    "20250817"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2d114d186898",
+   "target_id": "van-maanen",
+   "channel": "S1",
+   "t_ca_utc": "2026-07-31T05:09",
+   "b_min_rsun": 0.071,
+   "visible_hours": 44.3,
+   "n_frames_arc": 23,
+   "n_frames_arc_nominal_pointing": 23,
+   "n_frames_baseline": 173,
+   "arc_days": [
+    "20260725",
+    "20260726",
+    "20260727"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-7df9bd19778d",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2007-03-02T15:07",
+   "b_min_rsun": 1.101,
+   "visible_hours": 43.8,
+   "n_frames_arc": 19,
+   "n_frames_arc_nominal_pointing": 19,
+   "n_frames_baseline": 62,
+   "arc_days": [
+    "20070224",
+    "20070225",
+    "20070226"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-632c8f0f1c7b",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2008-02-10T07:22",
+   "b_min_rsun": 1.097,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20080204",
+    "20080205",
+    "20080206"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d294bf4fe171",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2009-01-19T20:24",
+   "b_min_rsun": 1.093,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20090114",
+    "20090115"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d69f4fb9e449",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2009-12-30T08:41",
+   "b_min_rsun": 1.089,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 181,
+   "arc_days": [
+    "20091224",
+    "20091225",
+    "20091226"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-48ad8d5f6017",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2010-12-09T21:11",
+   "b_min_rsun": 1.085,
+   "visible_hours": 44.0,
+   "n_frames_arc": 38,
+   "n_frames_arc_nominal_pointing": 38,
+   "n_frames_baseline": 188,
+   "arc_days": [
+    "20101204",
+    "20101205"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-677663ff94c3",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2011-11-19T09:46",
+   "b_min_rsun": 1.082,
+   "visible_hours": 44.0,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20111113",
+    "20111114",
+    "20111115"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-cb3c987a07c1",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2012-10-28T22:45",
+   "b_min_rsun": 1.078,
+   "visible_hours": 44.0,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20121023",
+    "20121024",
+    "20121025"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-75b4b659721f",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2013-10-08T11:59",
+   "b_min_rsun": 1.075,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20131002",
+    "20131003",
+    "20131004"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f5c2512c3ea7",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2014-09-18T01:26",
+   "b_min_rsun": 1.07,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-3cd246ea20dd",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2015-08-28T14:59",
+   "b_min_rsun": 1.066,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-7319d31b1873",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2016-08-07T04:30",
+   "b_min_rsun": 1.063,
+   "visible_hours": 43.8,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20160811",
+    "20160812"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-0b4482287d95",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2017-07-17T17:53",
+   "b_min_rsun": 1.059,
+   "visible_hours": 43.8,
+   "n_frames_arc": 40,
+   "n_frames_arc_nominal_pointing": 40,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20170721",
+    "20170722",
+    "20170723"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d897632fedff",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2018-06-27T07:01",
+   "b_min_rsun": 1.056,
+   "visible_hours": 43.8,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20180701",
+    "20180702",
+    "20180703"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e26a420faef4",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2019-06-06T19:52",
+   "b_min_rsun": 1.052,
+   "visible_hours": 43.8,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20190610",
+    "20190611",
+    "20190612"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-cf86ab504644",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2020-05-16T08:21",
+   "b_min_rsun": 1.049,
+   "visible_hours": 43.8,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20200520",
+    "20200521",
+    "20200522"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e0da1f55e913",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2021-04-25T20:50",
+   "b_min_rsun": 1.045,
+   "visible_hours": 43.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20210429",
+    "20210430",
+    "20210501"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-73b1962c628d",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2022-04-05T09:27",
+   "b_min_rsun": 1.041,
+   "visible_hours": 43.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20220409",
+    "20220410",
+    "20220411"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-7f40ce8641d2",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2023-03-16T00:01",
+   "b_min_rsun": 1.038,
+   "visible_hours": 43.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20230319",
+    "20230320",
+    "20230321"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e7082de7ba7c",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2024-02-24T03:49",
+   "b_min_rsun": 1.029,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20240218",
+    "20240219",
+    "20240220"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4cda7932ab2d",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2025-02-02T04:48",
+   "b_min_rsun": 1.025,
+   "visible_hours": 44.0,
+   "n_frames_arc": 55,
+   "n_frames_arc_nominal_pointing": 55,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20250127",
+    "20250128",
+    "20250129"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1920797e80cf",
+   "target_id": "wolf-359",
+   "channel": "S1",
+   "t_ca_utc": "2026-01-12T04:05",
+   "b_min_rsun": 1.021,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20260106",
+    "20260107",
+    "20260108"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-3d07ccf6b463",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2007-03-02T03:50",
+   "b_min_rsun": 0.468,
+   "visible_hours": 43.8,
+   "n_frames_arc": 18,
+   "n_frames_arc_nominal_pointing": 18,
+   "n_frames_baseline": 63,
+   "arc_days": [
+    "20070224",
+    "20070225",
+    "20070226"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f51fef9b34e2",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2008-02-09T20:08",
+   "b_min_rsun": 0.464,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20080204",
+    "20080205"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-9dbcb8c29217",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2009-01-19T09:11",
+   "b_min_rsun": 0.463,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20090113",
+    "20090114",
+    "20090115"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-3b477eea02fe",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2009-12-29T21:30",
+   "b_min_rsun": 0.462,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 181,
+   "arc_days": [
+    "20091224",
+    "20091225"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-aa312f201336",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2010-12-09T10:02",
+   "b_min_rsun": 0.46,
+   "visible_hours": 44.0,
+   "n_frames_arc": 31,
+   "n_frames_arc_nominal_pointing": 31,
+   "n_frames_baseline": 202,
+   "arc_days": [
+    "20101203",
+    "20101204",
+    "20101205"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ab081c9ca6b0",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2011-11-18T22:39",
+   "b_min_rsun": 0.458,
+   "visible_hours": 44.0,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20111113",
+    "20111114"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-333d548b27c7",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2012-10-28T11:39",
+   "b_min_rsun": 0.457,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20121022",
+    "20121023",
+    "20121024"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f591b0694a87",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2013-10-08T00:55",
+   "b_min_rsun": 0.454,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20131002",
+    "20131003",
+    "20131004"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6208cce017ad",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2014-09-17T14:23",
+   "b_min_rsun": 0.454,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-7aabbd9f1c75",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2015-08-28T03:58",
+   "b_min_rsun": 0.453,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-c16f782b91f8",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2016-08-06T17:30",
+   "b_min_rsun": 0.451,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20160810",
+    "20160811",
+    "20160812"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4057203934be",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2017-07-17T06:55",
+   "b_min_rsun": 0.45,
+   "visible_hours": 44.0,
+   "n_frames_arc": 40,
+   "n_frames_arc_nominal_pointing": 40,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20170721",
+    "20170722",
+    "20170723"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-123e00d6fc28",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2018-06-26T20:05",
+   "b_min_rsun": 0.448,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20180630",
+    "20180701",
+    "20180702"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-cc82574de544",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2019-06-06T08:57",
+   "b_min_rsun": 0.446,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20190610",
+    "20190611",
+    "20190612"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a3f0db746732",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2020-05-15T21:28",
+   "b_min_rsun": 0.444,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20200519",
+    "20200520",
+    "20200521"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-7c3f9ced1139",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2021-04-25T09:59",
+   "b_min_rsun": 0.443,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20210429",
+    "20210430",
+    "20210501"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-184f5207a129",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2022-04-04T22:37",
+   "b_min_rsun": 0.441,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20220408",
+    "20220409",
+    "20220410"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d2ab0eebbf4b",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2023-03-15T13:13",
+   "b_min_rsun": 0.44,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20230319",
+    "20230320",
+    "20230321"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-84a8a951f37a",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2024-02-23T17:04",
+   "b_min_rsun": 0.441,
+   "visible_hours": 44.0,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20240218",
+    "20240219"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-cf010d585e99",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2025-02-01T18:06",
+   "b_min_rsun": 0.439,
+   "visible_hours": 44.0,
+   "n_frames_arc": 55,
+   "n_frames_arc_nominal_pointing": 55,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20250127",
+    "20250128"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-0deed429776e",
+   "target_id": "gj-1276",
+   "channel": "S2",
+   "t_ca_utc": "2026-01-11T17:24",
+   "b_min_rsun": 0.437,
+   "visible_hours": 44.0,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20260106",
+    "20260107"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-5e0f45d54453",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2007-03-17T21:48",
+   "b_min_rsun": 11.598,
+   "visible_hours": 23.8,
+   "n_frames_arc": 8,
+   "n_frames_arc_nominal_pointing": 8,
+   "n_frames_baseline": 50,
+   "arc_days": [
+    "20070313"
+   ],
+   "side": "pre_tca",
+   "covered": false
+  },
+  {
+   "event_id": "evt-327e70e5690f",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2008-02-25T13:38",
+   "b_min_rsun": 11.586,
+   "visible_hours": 24.0,
+   "n_frames_arc": 35,
+   "n_frames_arc_nominal_pointing": 35,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20080220",
+    "20080221"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-02ce74c3c5df",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2009-02-04T02:38",
+   "b_min_rsun": 11.584,
+   "visible_hours": 24.0,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 182,
+   "arc_days": [
+    "20090130",
+    "20090131"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-827a1087c09d",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2010-01-14T14:56",
+   "b_min_rsun": 11.583,
+   "visible_hours": 24.0,
+   "n_frames_arc": 35,
+   "n_frames_arc_nominal_pointing": 35,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20100109",
+    "20100110"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-b694d0a7dbd1",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2010-12-25T03:28",
+   "b_min_rsun": 11.582,
+   "visible_hours": 24.0,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 201,
+   "arc_days": [
+    "20101220",
+    "20101221"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-868dfeb1c6bc",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2011-12-04T16:08",
+   "b_min_rsun": 11.582,
+   "visible_hours": 24.0,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 191,
+   "arc_days": [
+    "20111129",
+    "20111130"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-9da30cd7f3ad",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2012-11-13T05:10",
+   "b_min_rsun": 11.581,
+   "visible_hours": 24.0,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20121108",
+    "20121109"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-b1cf936aff03",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2013-10-23T18:29",
+   "b_min_rsun": 11.58,
+   "visible_hours": 24.0,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 163,
+   "arc_days": [
+    "20131018",
+    "20131019"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-66c1b7d1a7ca",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2014-10-03T07:58",
+   "b_min_rsun": 11.581,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-68121fa61b3d",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2015-09-12T21:31",
+   "b_min_rsun": 11.579,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-21388df45d54",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2016-08-22T11:02",
+   "b_min_rsun": 11.578,
+   "visible_hours": 19.5,
+   "n_frames_arc": 29,
+   "n_frames_arc_nominal_pointing": 29,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20160826",
+    "20160827"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a5128b9f38d5",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2017-08-02T00:27",
+   "b_min_rsun": 11.576,
+   "visible_hours": 19.5,
+   "n_frames_arc": 29,
+   "n_frames_arc_nominal_pointing": 29,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20170806"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-7066eaf3633e",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2018-07-12T13:33",
+   "b_min_rsun": 11.575,
+   "visible_hours": 19.5,
+   "n_frames_arc": 30,
+   "n_frames_arc_nominal_pointing": 30,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20180716",
+    "20180717"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-20992bdae1cb",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2019-06-22T02:24",
+   "b_min_rsun": 11.573,
+   "visible_hours": 19.5,
+   "n_frames_arc": 29,
+   "n_frames_arc_nominal_pointing": 29,
+   "n_frames_baseline": 175,
+   "arc_days": [
+    "20190626"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6aedc72d5cd5",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2020-05-31T14:50",
+   "b_min_rsun": 11.571,
+   "visible_hours": 19.5,
+   "n_frames_arc": 30,
+   "n_frames_arc_nominal_pointing": 30,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20200604",
+    "20200605"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ea4e8d56df7f",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2021-05-11T03:20",
+   "b_min_rsun": 11.569,
+   "visible_hours": 19.5,
+   "n_frames_arc": 29,
+   "n_frames_arc_nominal_pointing": 29,
+   "n_frames_baseline": 186,
+   "arc_days": [
+    "20210515"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-81224a53fb3c",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2022-04-20T15:58",
+   "b_min_rsun": 11.569,
+   "visible_hours": 19.5,
+   "n_frames_arc": 29,
+   "n_frames_arc_nominal_pointing": 29,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20220424",
+    "20220425"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c3f841243e75",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2023-03-31T06:48",
+   "b_min_rsun": 11.573,
+   "visible_hours": 19.7,
+   "n_frames_arc": 30,
+   "n_frames_arc_nominal_pointing": 30,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20230404",
+    "20230405"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-483186dad8e6",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2024-03-10T09:17",
+   "b_min_rsun": 11.549,
+   "visible_hours": 24.3,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20240305",
+    "20240306"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8da72526971f",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2025-02-17T10:10",
+   "b_min_rsun": 11.545,
+   "visible_hours": 24.3,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20250212",
+    "20250213"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f8286bf57d11",
+   "target_id": "gj-908",
+   "channel": "S2",
+   "t_ca_utc": "2026-01-27T09:29",
+   "b_min_rsun": 11.544,
+   "visible_hours": 24.3,
+   "n_frames_arc": 36,
+   "n_frames_arc_nominal_pointing": 36,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20260122",
+    "20260123"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-5e135c4e5dd5",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2007-09-03T18:13",
+   "b_min_rsun": 1.461,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20070829",
+    "20070830"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-b4d850686d64",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2008-08-13T08:13",
+   "b_min_rsun": 1.461,
+   "visible_hours": 44.3,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20080807",
+    "20080808",
+    "20080809"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-28aa875e12a6",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2009-07-23T20:55",
+   "b_min_rsun": 1.463,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20090718",
+    "20090719",
+    "20090720"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-eddf4339917d",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2010-07-03T09:24",
+   "b_min_rsun": 1.464,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20100627",
+    "20100628",
+    "20100629"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-9776ceef8120",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2011-06-12T21:56",
+   "b_min_rsun": 1.465,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 202,
+   "arc_days": [
+    "20110607",
+    "20110608",
+    "20110609"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-193cb61d18a2",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2012-05-22T10:47",
+   "b_min_rsun": 1.466,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20120516",
+    "20120517",
+    "20120518"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-84a48e04628c",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2013-05-01T23:45",
+   "b_min_rsun": 1.466,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 198,
+   "arc_days": [
+    "20130426",
+    "20130427",
+    "20130428"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-01d54a411220",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2014-04-11T13:07",
+   "b_min_rsun": 1.468,
+   "visible_hours": 44.3,
+   "n_frames_arc": 62,
+   "n_frames_arc_nominal_pointing": 62,
+   "n_frames_baseline": 142,
+   "arc_days": [
+    "20140406",
+    "20140407"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e48eb991c2ce",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2015-03-22T02:25",
+   "b_min_rsun": 1.469,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-b245f80a3d31",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2016-02-29T15:57",
+   "b_min_rsun": 1.469,
+   "visible_hours": 43.7,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 168,
+   "arc_days": [
+    "20160304",
+    "20160305",
+    "20160306"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c538342dbf62",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2017-02-08T05:16",
+   "b_min_rsun": 1.469,
+   "visible_hours": 43.7,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 173,
+   "arc_days": [
+    "20170212",
+    "20170213"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c77970394ba5",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2018-01-18T18:34",
+   "b_min_rsun": 1.47,
+   "visible_hours": 43.7,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 188,
+   "arc_days": [
+    "20180122",
+    "20180123",
+    "20180124"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-753be58933c7",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2018-12-29T07:29",
+   "b_min_rsun": 1.471,
+   "visible_hours": 43.7,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20190102",
+    "20190103"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e21de325070c",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2019-12-08T20:14",
+   "b_min_rsun": 1.472,
+   "visible_hours": 43.7,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20191212",
+    "20191213",
+    "20191214"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-92407bb1433c",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2020-11-17T08:44",
+   "b_min_rsun": 1.473,
+   "visible_hours": 43.7,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20201121",
+    "20201122",
+    "20201123"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e40789452e1d",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2021-10-27T21:22",
+   "b_min_rsun": 1.474,
+   "visible_hours": 43.7,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20211031",
+    "20211101",
+    "20211102"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-605379a67520",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2022-10-07T10:46",
+   "b_min_rsun": 1.475,
+   "visible_hours": 43.7,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20221011",
+    "20221012",
+    "20221013"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1af0b7bb983c",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2023-09-17T06:36",
+   "b_min_rsun": 1.483,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20230911",
+    "20230912",
+    "20230913"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-72085edfdb7c",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2024-08-26T12:20",
+   "b_min_rsun": 1.482,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20240820",
+    "20240821",
+    "20240822"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-9cd4b967d0e8",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2025-08-05T12:11",
+   "b_min_rsun": 1.483,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20250730",
+    "20250731",
+    "20250801"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ef86296c908e",
+   "target_id": "ross-128",
+   "channel": "S2",
+   "t_ca_utc": "2026-07-15T11:27",
+   "b_min_rsun": 1.484,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20260709",
+    "20260710",
+    "20260711"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-86a7dd48dd39",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2007-01-01T00:00",
+   "b_min_rsun": 5.401,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-e5e2787c0c57",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2007-12-13T00:21",
+   "b_min_rsun": 3.642,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 211,
+   "arc_days": [
+    "20071207",
+    "20071208",
+    "20071209"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-52ae6912b14f",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2008-11-21T13:40",
+   "b_min_rsun": 3.642,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20081115",
+    "20081116",
+    "20081117"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6d9232af8c52",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2009-11-01T02:03",
+   "b_min_rsun": 3.643,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 182,
+   "arc_days": [
+    "20091026",
+    "20091027",
+    "20091028"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f5914bc9bb2b",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2010-10-11T14:30",
+   "b_min_rsun": 3.643,
+   "visible_hours": 44.2,
+   "n_frames_arc": 57,
+   "n_frames_arc_nominal_pointing": 57,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20101005",
+    "20101006",
+    "20101007"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-949219549326",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2011-09-21T02:55",
+   "b_min_rsun": 3.645,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20110915",
+    "20110916",
+    "20110917"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c38d2ceba1a9",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2012-08-30T15:49",
+   "b_min_rsun": 3.645,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 201,
+   "arc_days": [
+    "20120825",
+    "20120826"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8ee645372fd7",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2013-08-10T04:53",
+   "b_min_rsun": 3.646,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 211,
+   "arc_days": [
+    "20130804",
+    "20130805",
+    "20130806"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-302c3e8bcad9",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2014-07-20T18:18",
+   "b_min_rsun": 3.647,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 121,
+   "arc_days": [
+    "20140715",
+    "20140716"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a4fa1a7e30a6",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2015-06-30T07:45",
+   "b_min_rsun": 3.65,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-19ebf0e77571",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2016-06-08T21:15",
+   "b_min_rsun": 3.649,
+   "visible_hours": 38.8,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20160612",
+    "20160613",
+    "20160614"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-fd21fde3762a",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2017-05-19T10:41",
+   "b_min_rsun": 3.65,
+   "visible_hours": 38.7,
+   "n_frames_arc": 57,
+   "n_frames_arc_nominal_pointing": 57,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20170523",
+    "20170524",
+    "20170525"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-0a67c5cf0e17",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2018-04-28T23:57",
+   "b_min_rsun": 3.65,
+   "visible_hours": 38.8,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 182,
+   "arc_days": [
+    "20180503",
+    "20180504"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6777268758fc",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2019-04-08T12:56",
+   "b_min_rsun": 3.651,
+   "visible_hours": 38.8,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 202,
+   "arc_days": [
+    "20190412",
+    "20190413",
+    "20190414"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c68daf5236e5",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2020-03-18T01:38",
+   "b_min_rsun": 3.651,
+   "visible_hours": 38.8,
+   "n_frames_arc": 57,
+   "n_frames_arc_nominal_pointing": 57,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20200322",
+    "20200323"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-34b6be2bccb8",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2021-02-25T14:11",
+   "b_min_rsun": 3.651,
+   "visible_hours": 38.8,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 174,
+   "arc_days": [
+    "20210301",
+    "20210302",
+    "20210303"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d5557e0230b7",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2022-02-05T02:49",
+   "b_min_rsun": 3.653,
+   "visible_hours": 38.8,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20220209",
+    "20220210"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-6fc971f595e9",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2023-01-15T16:44",
+   "b_min_rsun": 3.654,
+   "visible_hours": 38.7,
+   "n_frames_arc": 58,
+   "n_frames_arc_nominal_pointing": 58,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20230119",
+    "20230120",
+    "20230121"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-162411d5d5f7",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2023-12-26T21:10",
+   "b_min_rsun": 3.663,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20231221",
+    "20231222",
+    "20231223"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-11cf97d2dc00",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2024-12-04T23:01",
+   "b_min_rsun": 3.662,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20241129",
+    "20241130",
+    "20241201"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4e433d86f410",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2025-11-13T22:22",
+   "b_min_rsun": 3.662,
+   "visible_hours": 44.2,
+   "n_frames_arc": 69,
+   "n_frames_arc_nominal_pointing": 69,
+   "n_frames_baseline": 210,
+   "arc_days": [
+    "20251108",
+    "20251109",
+    "20251110"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-9f7aa003c5b6",
+   "target_id": "ross-154",
+   "channel": "S2",
+   "t_ca_utc": "2026-10-23T21:32",
+   "b_min_rsun": 3.662,
+   "visible_hours": 44.2,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-e3f138d0b540",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2007-05-02T09:10",
+   "b_min_rsun": 1.214,
+   "visible_hours": 44.3,
+   "n_frames_arc": 62,
+   "n_frames_arc_nominal_pointing": 62,
+   "n_frames_baseline": 199,
+   "arc_days": [
+    "20070426",
+    "20070427",
+    "20070428"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-65fb8e975cd1",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2008-04-11T00:14",
+   "b_min_rsun": 1.21,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 199,
+   "arc_days": [
+    "20080405",
+    "20080406",
+    "20080407"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e19f3b1e13ac",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2009-03-21T13:07",
+   "b_min_rsun": 1.206,
+   "visible_hours": 44.3,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 146,
+   "arc_days": [
+    "20090315",
+    "20090316",
+    "20090317"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-66131d571492",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2010-03-01T01:30",
+   "b_min_rsun": 1.203,
+   "visible_hours": 44.3,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 201,
+   "arc_days": [
+    "20100223",
+    "20100224",
+    "20100225"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-ed54b0318b82",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2011-02-08T14:04",
+   "b_min_rsun": 1.199,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 199,
+   "arc_days": [
+    "20110202",
+    "20110203",
+    "20110204"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d01c372c131d",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2012-01-19T02:54",
+   "b_min_rsun": 1.195,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 201,
+   "arc_days": [
+    "20120113",
+    "20120114",
+    "20120115"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a4ad2ba7293e",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2012-12-28T16:03",
+   "b_min_rsun": 1.191,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 187,
+   "arc_days": [
+    "20121222",
+    "20121223",
+    "20121224"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1c650db4635b",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2013-12-08T05:27",
+   "b_min_rsun": 1.187,
+   "visible_hours": 44.3,
+   "n_frames_arc": 60,
+   "n_frames_arc_nominal_pointing": 60,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20131202",
+    "20131203",
+    "20131204"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1c7f6e7b6c78",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2014-11-17T18:57",
+   "b_min_rsun": 1.184,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-b14dd3aa02eb",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2015-10-28T08:31",
+   "b_min_rsun": 1.179,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-50f5315c3663",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2016-10-06T21:57",
+   "b_min_rsun": 1.176,
+   "visible_hours": 42.7,
+   "n_frames_arc": 60,
+   "n_frames_arc_nominal_pointing": 60,
+   "n_frames_baseline": 199,
+   "arc_days": [
+    "20161010",
+    "20161011",
+    "20161012"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c5027575dc27",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2017-09-16T11:18",
+   "b_min_rsun": 1.172,
+   "visible_hours": 42.7,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20170920",
+    "20170921",
+    "20170922"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-5661d8378a22",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2018-08-27T00:17",
+   "b_min_rsun": 1.168,
+   "visible_hours": 42.7,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20180830",
+    "20180831",
+    "20180901"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e540310dcfa9",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2019-08-06T13:06",
+   "b_min_rsun": 1.163,
+   "visible_hours": 42.7,
+   "n_frames_arc": 61,
+   "n_frames_arc_nominal_pointing": 61,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20190810",
+    "20190811",
+    "20190812"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d6e2176c2a4f",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2020-07-16T01:28",
+   "b_min_rsun": 1.159,
+   "visible_hours": 42.7,
+   "n_frames_arc": 61,
+   "n_frames_arc_nominal_pointing": 61,
+   "n_frames_baseline": 201,
+   "arc_days": [
+    "20200720",
+    "20200721"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f26b05bb939e",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2021-06-25T13:57",
+   "b_min_rsun": 1.155,
+   "visible_hours": 42.7,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20210629",
+    "20210630",
+    "20210701"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-a4976dc39655",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2022-06-05T02:43",
+   "b_min_rsun": 1.152,
+   "visible_hours": 42.7,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20220609",
+    "20220610"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e54eb2284f6d",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2023-05-15T18:19",
+   "b_min_rsun": 1.148,
+   "visible_hours": 42.5,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20230519",
+    "20230520",
+    "20230521"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-466dcd739f89",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2024-04-24T14:45",
+   "b_min_rsun": 1.149,
+   "visible_hours": 44.5,
+   "n_frames_arc": 55,
+   "n_frames_arc_nominal_pointing": 55,
+   "n_frames_baseline": 306,
+   "arc_days": [
+    "20240418",
+    "20240419",
+    "20240420"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-eced366716e1",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2025-04-03T15:23",
+   "b_min_rsun": 1.144,
+   "visible_hours": 44.5,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20250328",
+    "20250329",
+    "20250330"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f79705519de3",
+   "target_id": "teegarden",
+   "channel": "S2",
+   "t_ca_utc": "2026-03-13T14:47",
+   "b_min_rsun": 1.14,
+   "visible_hours": 44.5,
+   "n_frames_arc": 130,
+   "n_frames_arc_nominal_pointing": 130,
+   "n_frames_baseline": 378,
+   "arc_days": [
+    "20260307",
+    "20260308",
+    "20260309"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-3f5c35260d02",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2007-04-01T07:01",
+   "b_min_rsun": 0.201,
+   "visible_hours": 44.0,
+   "n_frames_arc": 13,
+   "n_frames_arc_nominal_pointing": 13,
+   "n_frames_baseline": 0,
+   "arc_days": [
+    "20070328"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-0732ee5855c9",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2008-03-10T22:32",
+   "b_min_rsun": 0.199,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 207,
+   "arc_days": [
+    "20080305",
+    "20080306",
+    "20080307"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-316940633afd",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2009-02-18T11:29",
+   "b_min_rsun": 0.196,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20090212",
+    "20090213",
+    "20090214"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-394767825ff1",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2010-01-28T23:48",
+   "b_min_rsun": 0.194,
+   "visible_hours": 44.2,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 203,
+   "arc_days": [
+    "20100123",
+    "20100124",
+    "20100125"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-655cbd8e7fa0",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2011-01-08T12:20",
+   "b_min_rsun": 0.192,
+   "visible_hours": 44.2,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 184,
+   "arc_days": [
+    "20110102",
+    "20110103",
+    "20110104"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-90189db91f84",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2011-12-19T01:04",
+   "b_min_rsun": 0.188,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20111213",
+    "20111214",
+    "20111215"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-100d5b1fb50a",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2012-11-27T14:08",
+   "b_min_rsun": 0.186,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20121121",
+    "20121122",
+    "20121123"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-816a3af9cc06",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2013-11-07T03:28",
+   "b_min_rsun": 0.183,
+   "visible_hours": 44.0,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 159,
+   "arc_days": [
+    "20131101",
+    "20131102",
+    "20131103"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-cc1228c61e0a",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2014-10-17T16:57",
+   "b_min_rsun": 0.181,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-9f047e6555f6",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2015-09-27T06:31",
+   "b_min_rsun": 0.178,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-c6b4376cfcbf",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2016-09-05T20:00",
+   "b_min_rsun": 0.176,
+   "visible_hours": 43.8,
+   "n_frames_arc": 26,
+   "n_frames_arc_nominal_pointing": 26,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20160910",
+    "20160911"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-87e4584763c7",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2017-08-16T09:23",
+   "b_min_rsun": 0.173,
+   "visible_hours": 43.8,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20170820",
+    "20170821",
+    "20170822"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-111d3fee0caa",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2018-07-26T22:27",
+   "b_min_rsun": 0.171,
+   "visible_hours": 43.8,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20180730",
+    "20180731",
+    "20180801"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-5528aa620101",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2019-07-06T11:16",
+   "b_min_rsun": 0.168,
+   "visible_hours": 43.8,
+   "n_frames_arc": 65,
+   "n_frames_arc_nominal_pointing": 65,
+   "n_frames_baseline": 208,
+   "arc_days": [
+    "20190710",
+    "20190711",
+    "20190712"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-c6e3c577b92f",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2020-06-14T23:41",
+   "b_min_rsun": 0.165,
+   "visible_hours": 43.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20200618",
+    "20200619",
+    "20200620"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-110892f05bb9",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2021-05-25T12:10",
+   "b_min_rsun": 0.163,
+   "visible_hours": 43.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 192,
+   "arc_days": [
+    "20210529",
+    "20210530",
+    "20210531"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-fb054365119e",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2022-05-05T00:49",
+   "b_min_rsun": 0.16,
+   "visible_hours": 43.8,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 179,
+   "arc_days": [
+    "20220508",
+    "20220509",
+    "20220510"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1be2a4965ba9",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2023-04-14T15:52",
+   "b_min_rsun": 0.158,
+   "visible_hours": 43.8,
+   "n_frames_arc": 49,
+   "n_frames_arc_nominal_pointing": 49,
+   "n_frames_baseline": 209,
+   "arc_days": [
+    "20230418",
+    "20230419",
+    "20230420"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8234eae39fb5",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2024-03-24T16:43",
+   "b_min_rsun": 0.161,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 171,
+   "arc_days": [
+    "20240319",
+    "20240320"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2454c2d451ab",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2025-03-03T17:30",
+   "b_min_rsun": 0.158,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 206,
+   "arc_days": [
+    "20250226",
+    "20250227"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-b048f74ef0be",
+   "target_id": "van-maanen",
+   "channel": "S2",
+   "t_ca_utc": "2026-02-10T16:51",
+   "b_min_rsun": 0.156,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 196,
+   "arc_days": [
+    "20260205",
+    "20260206"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-572a2f34d19c",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2007-08-21T06:44",
+   "b_min_rsun": 1.151,
+   "visible_hours": 44.5,
+   "n_frames_arc": 59,
+   "n_frames_arc_nominal_pointing": 59,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20070815",
+    "20070816",
+    "20070817"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-3d9b65fd2f16",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2008-07-30T20:50",
+   "b_min_rsun": 1.147,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20080725",
+    "20080726",
+    "20080727"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-668835bbfb4d",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2009-07-10T09:32",
+   "b_min_rsun": 1.143,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20090704",
+    "20090705",
+    "20090706"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-d39c468c8a27",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2010-06-19T22:01",
+   "b_min_rsun": 1.139,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20100614",
+    "20100615",
+    "20100616"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-0421aef15e59",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2011-05-30T10:33",
+   "b_min_rsun": 1.136,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20110524",
+    "20110525",
+    "20110526"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f56e68186557",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2012-05-08T23:23",
+   "b_min_rsun": 1.132,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20120503",
+    "20120504",
+    "20120505"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-dfc6e38e0d14",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2013-04-18T12:20",
+   "b_min_rsun": 1.129,
+   "visible_hours": 44.5,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20130412",
+    "20130413",
+    "20130414"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8b63698dd6aa",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2014-03-29T01:41",
+   "b_min_rsun": 1.125,
+   "visible_hours": 44.5,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 158,
+   "arc_days": [
+    "20140323",
+    "20140324",
+    "20140325"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4ccc19c290db",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2015-03-08T15:00",
+   "b_min_rsun": 1.121,
+   "visible_hours": 0.0,
+   "n_frames_arc": 0,
+   "n_frames_arc_nominal_pointing": 0,
+   "n_frames_baseline": 0,
+   "arc_days": [],
+   "side": null,
+   "covered": false
+  },
+  {
+   "event_id": "evt-be8c6f2ab454",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2016-02-16T04:30",
+   "b_min_rsun": 1.118,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 200,
+   "arc_days": [
+    "20160220",
+    "20160221"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-67499dec5a9c",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2017-01-25T17:47",
+   "b_min_rsun": 1.114,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20170129",
+    "20170130",
+    "20170131"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-5b74f767fc73",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2018-01-05T07:04",
+   "b_min_rsun": 1.11,
+   "visible_hours": 44.2,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 202,
+   "arc_days": [
+    "20180109",
+    "20180110"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-0695a34239c8",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2018-12-15T19:56",
+   "b_min_rsun": 1.107,
+   "visible_hours": 44.3,
+   "n_frames_arc": 61,
+   "n_frames_arc_nominal_pointing": 61,
+   "n_frames_baseline": 195,
+   "arc_days": [
+    "20181219",
+    "20181220",
+    "20181221"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-904cbd5a0c58",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2019-11-25T08:40",
+   "b_min_rsun": 1.103,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20191129",
+    "20191130",
+    "20191201"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-f13167af1032",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2020-11-03T21:07",
+   "b_min_rsun": 1.099,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20201107",
+    "20201108",
+    "20201109"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-2f4e0396447d",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2021-10-14T09:43",
+   "b_min_rsun": 1.095,
+   "visible_hours": 44.3,
+   "n_frames_arc": 64,
+   "n_frames_arc_nominal_pointing": 64,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20211018",
+    "20211019",
+    "20211020"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8ae11f03a340",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2022-09-23T23:02",
+   "b_min_rsun": 1.092,
+   "visible_hours": 44.3,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20220927",
+    "20220928",
+    "20220929"
+   ],
+   "side": "post_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-1f94188cb3e3",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2023-09-03T17:56",
+   "b_min_rsun": 1.087,
+   "visible_hours": 44.3,
+   "n_frames_arc": 63,
+   "n_frames_arc_nominal_pointing": 63,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20230829",
+    "20230830"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-4690f117707f",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2024-08-13T00:31",
+   "b_min_rsun": 1.081,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 205,
+   "arc_days": [
+    "20240807",
+    "20240808",
+    "20240809"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-8c0b70362fa8",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2025-07-23T00:27",
+   "b_min_rsun": 1.077,
+   "visible_hours": 44.5,
+   "n_frames_arc": 66,
+   "n_frames_arc_nominal_pointing": 66,
+   "n_frames_baseline": 180,
+   "arc_days": [
+    "20250717",
+    "20250718",
+    "20250719"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  },
+  {
+   "event_id": "evt-e80de71a2fc3",
+   "target_id": "wolf-359",
+   "channel": "S2",
+   "t_ca_utc": "2026-07-01T23:44",
+   "b_min_rsun": 1.073,
+   "visible_hours": 44.5,
+   "n_frames_arc": 67,
+   "n_frames_arc_nominal_pointing": 67,
+   "n_frames_baseline": 204,
+   "arc_days": [
+    "20260626",
+    "20260627",
+    "20260628"
+   ],
+   "side": "pre_tca",
+   "covered": true
+  }
+ ]
+}

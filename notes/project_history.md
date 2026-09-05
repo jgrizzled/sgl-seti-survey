@@ -1706,3 +1706,120 @@ followed across all 16 VAST_2257-06 epochs
 component within 60″ in any epoch — the maximum of a noise series.
 O1 closed; no residual. Decision §5.5 unchanged. Plan status line,
 §5.5, §5.15, both radio reports updated; nothing committed to git.
+
+## 19. STEREO-A HI-1 sunward survey — observer list, recon, freeze drafts (2026-09-04; plan §5.15 item O2 — at the freeze)
+
+Started per the ledger order (O1 done). Everything data-independent
+ran before stopping at the freeze; nothing at a survey patch has been
+measured. Survey docs: `surveys/stereo-hi-crossings/`.
+
+**Observer list.** `sglsurvey/crossings.py` gained `--observer
+stereoa` (Horizons −234, the Kepler/SOHO pattern); table 29,097 rows
+at 6 h, 2007-01-01 → 2026-12-01 (Horizons predicted-trajectory end
+2026-12-18; sha-pinned). `crossings/stereoa_v1` (`xng-3dd5b764776e`):
+7,516 events, 0 invalid. Earth-center is invalid at every rung
+(|Δt_ca| median 51 d; 1,241 events have no Earth counterpart within
+120 d). Sunward 0.1 AU rungs: S1 147 / S2 148 events over the LASCO
+seven (21 per target — synodic year 346 d); van-maanen S1 min b
+0.09 R☉; grazing rungs 84 / 105 events.
+
+**Recon** (`notes/hi1_recon_2026-09-04.md`). RAL/UKSSDC level-1
+`14h1A` (DN/s, saturation NaN'd, header **celestial WCS**) via an
+anonymous CGI, 7,042 days 2006-12-13 → 2026-08-31, ~2 s per 4.2 MB
+frame; NASA SSC mirrors the level-2 background-subtracted product by
+plain HTTP (Range requests work). Star check on a real frame: header
+WCS sub-pixel (694/698 Hipparcos within 3 px, 0.34 px rms, no offset);
+ZP 11.10 with a +0.60 mag/(B−V) colour term (0.27 → 0.08 mag scatter;
+0.047 mag in the freeze-chain 2-D fit on 611 stars); L2/L1 flux
+parity 1.005 ± 0.010; PSF 1.7 px; single-frame 5σ depth V 12.2 at the
+outer edge but **V 10–10.5 in the sunward arc** (ε 4–6°, the brightest
+F-corona of the field). HI-1's 630–730 nm band excludes the 532 nm
+doubled line — broadband-leakage cell only.
+
+**Geometry (decisive).** HI-1A images a 20° band on one side of the
+Sun (|HPLN| 3.9°–24°): the grazing cones (ε ≤ 0.7°) are never
+visible (`not_constrainable`); every 0.1 AU event has a 44-h ≈
+66-frame arc at ε 4.05°–6.0° and a ~19-d star-fixed transit of the
+same sky direction beforehand (a baseline LASCO could not have). The
+per-day header inventory found the mission's **pointing eras**: east-
+looking 2006-12 → 2014-08-18, the 455-d safe-mode/conjunction gap,
+**west-looking 2015-11-17 → 2023-08-15 (spacecraft rolled 180°)**,
+east again from 2023-08-16 — the census had assumed east throughout
+and was corrected (`hi_geometry.POINTING_ERAS`); west-era arcs fall
+after t_ca. Coverage: **272 of 295 event rows covered** (18–20 of 21
+per unit; median 65–66 arc frames, ~205 baseline frames); 234,689
+frames listed; volume ≈ 70k frames ≈ 300 GB. Two recon frames lie
+inside two confirmatory arcs (gj-1276 S1, wolf-359 S2, 2010-06-19
+events): nothing measured there; the two epochs are excluded from
+those events (hypotheses §11).
+
+**Drafts awaiting the user's freeze decisions** (`hypotheses.md` D1–D9,
+`thresholds.md`, `configs/threshold_freeze_v1.json`): substrate L1;
+ICRS-fixed sky patches with a star-fixed differential (arc minus the
+same patch's own transit, measured differential flat) and 8
+simultaneous parallel-track control patches (HPLT ±1..±4°, same
+frames); S_stack / S_event / S_pulse on all 14 units (42 trials, 4.7
+expected control crossings); dev = gj-908 + ross-154 (S1+S2),
+confirmatory = the five grazing-family targets × S1/S2; positive
+control = a bright-asteroid arc passage from Horizons `@-234`; S2
+1 AU out of scope (ledger: 16 targets, 289 HI-1 transits). Honest
+framing recorded: the plan's "sub-MW downlink cell" needs the grazing
+cones HI-1 cannot see; this survey deepens the 0.1 AU sunward cells
+by ~2 orders of magnitude (expected ~10–100 MW downlink, ~5–20 MW
+uplink) and opens the sunward pulse cell at 40-min resolution.
+
+### §19 continuation — freeze through report (same day, evening)
+
+The user approved D1–D9 as recommended ("Looks good, run the chain");
+the chain ran unattended. Freeze v1.0 sha recorded; dev fetch started
+on level 1 (RAL CGI, ~5,500 frames/h).
+
+**Two pre-confirmatory amendments** (`thresholds.md`, configs
+v1_1/v1_2 sha-pinned; details in
+`surveys/stereo-hi-crossings/notes/dev_machinery_log_2026-09-04.md`):
+a fork-safety bug (lazy npz handles shared by 20 workers → zlib
+errors) was fixed before any science number; **v1.1** after the first
+five complete dev events came out at z = −2 … −10 — on level 1 the
+median high-pass ramps to +16 DN/s in the last 25 CCD columns and the
+annulus background is curvature-biased on the F-corona ridge where
+every source patch sits (145 vs 75 DN/s/px at the flank controls), a
+bias the same-frame differential cannot cancel; the level-2 product
+(per-pixel 1-day running background) removes it (−5.8 → +0.9 on the
+same patch/frame), so the search moved to level 2 (SSC mirror, faster:
+~7,000 frames/h) with a 24-px margin, dev re-run from scratch;
+**v1.2** after the dev reduce — the frame-wide bright-body veto had
+emptied half of gj-908's events; measured scatter with a body > 2°
+from the patches equals clean-epoch scatter, ≤ 2° doubles it → 2°
+proximity veto. Recorded, not amended: the ZP-scatter gate rejects
+ross-154's crowded west-era fields (blending scatter 0.12–0.17 mag).
+
+**Positive control:** Pallas through the arc band from STEREO-A
+(Horizons `@-234`, 10-min ephemeris), two passages, +0.01 ± 0.04 and
+−0.02 ± 0.07 mag vs prediction with the frozen colour term; Ceres
+2007-03 fell to the synoptic gate (25 × 40 s early-mission sums).
+
+**Dev (v1.2):** 12 trials, 2 exceedances vs 1.33 — gj-908 S1 2022-10
+persistent +0.6-unit plateau (extended background elevation in the
+pixels, non-recurrent in 18 windows) and ross-154 S2 2010-10-06
+single-frame +6.4-unit flare-class event (vetoed by persistence).
+gj-908's 13-unit star repeats to 0.2 % — bright-star control passed.
+
+**Confirmatory (blind, once; 40,450 frames, 38,830 usable):** **0
+candidates** — 27 trials over 9 units (ross-128 S1 constraint-only:
+Tycho-blended antipode), 3 exceedances vs 3.0 expected, every
+S_stack null. Adjudicated from the pixels: gj-1276 S2 S_pulse 15.7
+(2009-01-14: a ~10-px-wide band sweeping across the stamp over 2.5 h —
+an extended moving front), teegarden S1 S_pulse 19.6 (2010-08-14: the
+whole stamp lifts 0.8 DN/s for two frames), gj-1276 S2 S_event 8.2
+(2012-10: a +0.39-unit plateau with no point source; the patch's own
+baseline sits at −0.27 — a regional level-2 residual offset; null in
+17 sibling windows). No planet or H < 7 asteroid within 0.5° of any
+(SkyBoT does not know MPC code C49; Horizons per body).
+
+**Completeness** (injections into the real null series, recovery
+above max(T, observed null); stamp response 0.997): recurrence-stack
+m90 V_eq 11.9–12.9 → S1 12–29 MW through the 0.1 AU cone, S2 10-m
+uplink 3–61 MW; S_event 10.7–13.2; pulse cell V_eq 5.6–8.0 (GW-class,
+T_pulse 7–106 from bright-star control patches). Report
+`report/stereo_hi_crossings.md`; plan §5.16 + §5.15 O2 + status line;
+learnings §12. Nothing committed to git.

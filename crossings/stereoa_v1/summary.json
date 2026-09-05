@@ -1,0 +1,21 @@
+{
+  "crossings_id": "xng-3dd5b764776e",
+  "generated_utc": "2026-09-04T18:36:41+00:00",
+  "observer_id": "stereoa-spacecraft",
+  "n_targets": 88,
+  "n_events": 7516,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:195"
+  ],
+  "files": {
+    "events_ecsv": "/home/jgreene/code/sgl-seti-survey/crossings/stereoa_v1/events.ecsv",
+    "windows_ecsv": "/home/jgreene/code/sgl-seti-survey/crossings/stereoa_v1/windows.ecsv",
+    "result_json": "/home/jgreene/code/sgl-seti-survey/crossings/stereoa_v1/result.json",
+    "manifest_json": "/home/jgreene/code/sgl-seti-survey/crossings/stereoa_v1/manifest.json"
+  },
+  "observer_table": "crossings/observers/stereoa_sc_ephemeris.npz",
+  "observer_table_sha256": "sha256:ad6acfffa7b752fc611a7095064579dcae3bff026890eb8aa63e9b0636ce9ba1",
+  "observer_accuracy": "JPL Horizons -234 SSB vectors at 6 h sampling; heliocentric orbit at ~0.96 AU (period ~346 d) leading Earth by ~22 deg/yr (full circuit 2006-2023), so linear-interpolation error is negligible and the Earth-center list is invalid for STEREO-A at every rung; crossing epochs shift by the leading angle (weeks to months) and the Sun-star axis is sampled at a different heliocentric radius"
+}

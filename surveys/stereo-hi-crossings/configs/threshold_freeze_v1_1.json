@@ -1,0 +1,682 @@
+{
+ "survey": "stereo-hi-crossings",
+ "version": "threshold_freeze_v1.1",
+ "drafted": "2026-09-04",
+ "frozen": "2026-09-04 (amendment v1.1, dev-driven, before any confirmatory pixel)",
+ "inputs": {
+  "events": "crossings/stereoa_v1/events.ecsv",
+  "crossings_id": "xng-3dd5b764776e",
+  "coverage": "surveys/stereo-hi-crossings/results/coverage_v1.json",
+  "census": "surveys/stereo-hi-crossings/results/stereoa_census_v1.json",
+  "hypotheses": "surveys/stereo-hi-crossings/hypotheses.md (v1.0 D1-D9)"
+ },
+ "seed": 20260904,
+ "substrate": {
+  "primary": "SSC L2 24h1A_br01 (RAL level-2: level-1 minus the per-pixel 1-day running lowest-quartile background) via stereo-ssc.nascom.nasa.gov",
+  "validation": "RAL L1 14h1A (astrometry/ZP parity, recon)",
+  "fallback": null,
+  "frame_bytes": 4219200
+ },
+ "era": {
+  "start": "2007-01-01",
+  "end": "2026-08-31 (RAL currency at coverage)",
+  "pointing_eras": [
+   [
+    "2006-12-13",
+    "2014-08-18",
+    "east"
+   ],
+   [
+    "2014-08-19",
+    "2015-11-16",
+    "gap"
+   ],
+   [
+    "2015-11-17",
+    "2023-08-15",
+    "west"
+   ],
+   [
+    "2023-08-16",
+    "2026-08-31",
+    "east"
+   ]
+  ]
+ },
+ "geometry": {
+  "arc_abs_hpln_deg": [
+   4.05,
+   6.0
+  ],
+  "baseline_abs_hpln_deg": [
+   6.0,
+   12.0
+  ],
+  "in_beam_radius_au": 0.1,
+  "footprint_margin_px": 24,
+  "source": {
+   "S1": "star antipode (fixed ICRS)",
+   "S2": "star, PM-propagated (fixed ICRS)"
+  }
+ },
+ "chain": {
+  "highpass_median_px": 31,
+  "aperture_px": 2.5,
+  "annulus_px": [
+   5.0,
+   9.0
+  ],
+  "zp": {
+   "model": "quadratic in x,y",
+   "calibrators": "Hipparcos V<=9.5, 4.5<V, -0.3<=B-V<=1.6, S/N>=10",
+   "colour_coeff_mag_per_bv": 0.595,
+   "bv_ref": 0.65,
+   "zp_ref": 11.1,
+   "min_calibrators": 100,
+   "max_mad_mag": 0.12
+  },
+  "astrometry": {
+   "min_stars": 50,
+   "max_rms_px": 0.6,
+   "match_px": 2.0
+  },
+  "differential_flat": "ensemble ratio g(HPLN,HPLT) of static-star aperture flux, arc region vs baseline region; measured at dev, frozen as a map",
+  "footprint_margin_px": 24
+ },
+ "controls": {
+  "type": "parallel_track_sky_patches",
+  "hplt_offsets_deg": [
+   1,
+   -1,
+   2,
+   -2,
+   3,
+   -3,
+   4,
+   -4
+  ],
+  "min_controls_per_epoch": 5,
+  "T": "max over the 8 control patches of the identical statistic",
+  "secondary_reported": "source patch own-baseline pseudo-arcs (3 x 1.9 d at |HPLN| 6-12 deg), never T"
+ },
+ "statistics": {
+  "per_event": "z = mean(D_arc) / SE(D_arc), D = (F_src - g B_src) - median_k(F_k - g B_k)",
+  "S_stack": "sum z / sqrt(n)",
+  "S_event": "max z",
+  "S_pulse": "max single-frame D_src / robust epoch scatter",
+  "rule": "S > max(T, 0)",
+  "trials_per_unit": 3
+ },
+ "gates": {
+  "frame": {
+   "n_images": 30,
+   "exptime_s": [
+    1140,
+    1260
+   ],
+   "nmissing": 0,
+   "shape": [
+    1024,
+    1024
+   ]
+  },
+  "epoch": {
+   "aperture_valid_fraction": 0.9,
+   "planet_proximity_px": 10,
+   "bright_body_infov_veto": [
+    "earth",
+    "moon",
+    "venus",
+    "jupiter"
+   ],
+   "planet_list": [
+    "mercury",
+    "venus",
+    "earth",
+    "moon",
+    "mars",
+    "jupiter",
+    "saturn"
+   ]
+  },
+  "patch": {
+   "tycho2_vt_max": 9.0,
+   "tycho2_proximity_px": 3.0,
+   "s2_source_exempt": true
+  },
+  "event": {
+   "min_arc_epochs": 10,
+   "min_baseline_epochs": 30
+  },
+  "unit": {
+   "min_events_for_stack": 8
+  },
+  "pulse": {
+   "min_consecutive_frames": 2,
+   "s2_flare_rule": "candidate only if > max off-window pulse of the star over its baseline transits"
+  }
+ },
+ "recon_exclusions": {
+  "evt-6a6141430884": [
+   "2010-06-15T00:09:01",
+   "2010-06-15T00:49:01"
+  ],
+  "evt-d39c468c8a27": [
+   "2010-06-15T00:09:01",
+   "2010-06-15T00:49:01"
+  ]
+ },
+ "split": {
+  "dev": [
+   "gj-908",
+   "ross-154"
+  ],
+  "confirmatory": [
+   "van-maanen",
+   "wolf-359",
+   "teegarden",
+   "gj-1276",
+   "ross-128"
+  ]
+ },
+ "trials": {
+  "dev": 12,
+  "confirmatory": 30,
+  "total": 42,
+  "expected_control_crossings": {
+   "dev": 1.33,
+   "confirmatory": 3.33,
+   "total": 4.67
+  }
+ },
+ "positive_control": {
+  "primary": "bright-asteroid arc passage (Vesta/Ceres/Pallas), Horizons @-234, <= 0.2 mag",
+  "in_situ": [
+   "gj-908 null star-fixed differential",
+   "Hipparcos ensemble era stability"
+  ]
+ },
+ "units": [
+  {
+   "unit": "S1_0.1AU",
+   "channel": "S1",
+   "rung_au": 0.1,
+   "target_id": "gj-1276",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 20,
+   "median_arc_frames": 66.0,
+   "median_baseline_frames": 204.0,
+   "event_ids_covered": [
+    "evt-ad69292b8675",
+    "evt-ab67338b64ba",
+    "evt-c750946ebe5c",
+    "evt-6a6141430884",
+    "evt-5184c2b11ce5",
+    "evt-d6ae0301bd9b",
+    "evt-f5fd1ef4e1b7",
+    "evt-6a74e9a2bd41",
+    "evt-db4883d436e0",
+    "evt-b3f86d2b30be",
+    "evt-dde8c40ca971",
+    "evt-42e7423c14e2",
+    "evt-dbf017d0d658",
+    "evt-69b2d41e86c5",
+    "evt-2564124aa245",
+    "evt-d1aa29af2493",
+    "evt-2b195b9bbad0",
+    "evt-6520e1a76398",
+    "evt-ef17ba4079a5",
+    "evt-7e59fa21c447"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S1_0.1AU",
+   "channel": "S1",
+   "rung_au": 0.1,
+   "target_id": "gj-908",
+   "role": "dev",
+   "events_in_era": 21,
+   "events_covered": 20,
+   "median_arc_frames": 36.0,
+   "median_baseline_frames": 206.0,
+   "event_ids_covered": [
+    "evt-8e6ad3144964",
+    "evt-8a9d1c1f2f4d",
+    "evt-007e071f72a2",
+    "evt-46964ebcf80d",
+    "evt-e8bfba843889",
+    "evt-079678bc6b06",
+    "evt-ca55ba78e4f5",
+    "evt-1bcccf4bb32d",
+    "evt-6a7cbebcdb36",
+    "evt-f75a47911e8c",
+    "evt-bc3d202353b5",
+    "evt-67a0c08e0e2f",
+    "evt-4fc3d79f65bd",
+    "evt-ac6a69575afb",
+    "evt-18b6fca231be",
+    "evt-122a50306843",
+    "evt-1a71fcd53c60",
+    "evt-4e003f203d32",
+    "evt-a149c62277f3",
+    "evt-8df991837da2"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S1_0.1AU",
+   "channel": "S1",
+   "rung_au": 0.1,
+   "target_id": "ross-128",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 19,
+   "median_arc_frames": 65.0,
+   "median_baseline_frames": 208.0,
+   "event_ids_covered": [
+    "evt-f7a71051ff7c",
+    "evt-c975145bcef1",
+    "evt-927ca31a3091",
+    "evt-eb9b478605c7",
+    "evt-c09d97c1a451",
+    "evt-766e1d11674c",
+    "evt-aabcb373a554",
+    "evt-30976b70dc49",
+    "evt-e202c95f47e7",
+    "evt-e5b850efeb66",
+    "evt-834ee7fdcb34",
+    "evt-b312d1e1fa01",
+    "evt-fd0cf0e03f02",
+    "evt-636ac1c1147f",
+    "evt-f411d9ff02fc",
+    "evt-6d6d0e54fb68",
+    "evt-1cb32766390a",
+    "evt-f214fe06ecb1",
+    "evt-9e24a311c461"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S1_0.1AU",
+   "channel": "S1",
+   "rung_au": 0.1,
+   "target_id": "ross-154",
+   "role": "dev",
+   "events_in_era": 21,
+   "events_covered": 20,
+   "median_arc_frames": 59.0,
+   "median_baseline_frames": 202.0,
+   "event_ids_covered": [
+    "evt-78d617adc1b1",
+    "evt-a545a14be4c8",
+    "evt-2607767e1a45",
+    "evt-db1520aae398",
+    "evt-d0a418ada0a4",
+    "evt-efacd94fdb6b",
+    "evt-bf23a369d4bd",
+    "evt-aabfbd8c71f9",
+    "evt-267a69a74a33",
+    "evt-850abba99dbd",
+    "evt-04ad45c174fa",
+    "evt-eacb1f538e12",
+    "evt-6e6954db5d5e",
+    "evt-a50c6f5ca4db",
+    "evt-8618e9916efb",
+    "evt-9028addb26b8",
+    "evt-7de6ba813e25",
+    "evt-c062a3be29a6",
+    "evt-73037d58b43d",
+    "evt-4d16a68e4030"
+   ],
+   "high_background": true
+  },
+  {
+   "unit": "S1_0.1AU",
+   "channel": "S1",
+   "rung_au": 0.1,
+   "target_id": "teegarden",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 20,
+   "median_arc_frames": 65.0,
+   "median_baseline_frames": 208.0,
+   "event_ids_covered": [
+    "evt-0b98ef28b938",
+    "evt-c2b70c4132c3",
+    "evt-e11a9bf5e5f4",
+    "evt-7ae71bb63446",
+    "evt-442ab2a6cfb3",
+    "evt-ed5b9933702a",
+    "evt-a7b78e9350a9",
+    "evt-c31177d6bdec",
+    "evt-9b7310301dd7",
+    "evt-10f0fad5e5d5",
+    "evt-c5b2fc5fe90c",
+    "evt-45cde389881c",
+    "evt-303cff4c1296",
+    "evt-94116ddde0c1",
+    "evt-11c90f126bfc",
+    "evt-0a209fb7f59b",
+    "evt-34b7c6a7eb4f",
+    "evt-2479a81a7e7f",
+    "evt-2346dbecebff",
+    "evt-fa8a9cfd008e"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S1_0.1AU",
+   "channel": "S1",
+   "rung_au": 0.1,
+   "target_id": "van-maanen",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 20,
+   "median_arc_frames": 66.0,
+   "median_baseline_frames": 205.0,
+   "event_ids_covered": [
+    "evt-77b673474e0c",
+    "evt-35fd087a6a48",
+    "evt-9303ccc3137a",
+    "evt-4c3b8a0e74b5",
+    "evt-f9ab874fb3ee",
+    "evt-d1b03120e7e9",
+    "evt-fe85eaea80cc",
+    "evt-56cc9ab9bd16",
+    "evt-754e54567c71",
+    "evt-ed83a9d64ebb",
+    "evt-2cc6a5818a6a",
+    "evt-6099c3e5a93b",
+    "evt-3482afd04139",
+    "evt-7e68f00670ea",
+    "evt-5444d0198a39",
+    "evt-ae779f395fce",
+    "evt-5a14015b516a",
+    "evt-268771ae8332",
+    "evt-3f6e9f8f0c33",
+    "evt-2d114d186898"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S1_0.1AU",
+   "channel": "S1",
+   "rung_au": 0.1,
+   "target_id": "wolf-359",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 19,
+   "median_arc_frames": 65.0,
+   "median_baseline_frames": 207.0,
+   "event_ids_covered": [
+    "evt-7df9bd19778d",
+    "evt-632c8f0f1c7b",
+    "evt-d294bf4fe171",
+    "evt-d69f4fb9e449",
+    "evt-48ad8d5f6017",
+    "evt-677663ff94c3",
+    "evt-cb3c987a07c1",
+    "evt-75b4b659721f",
+    "evt-7319d31b1873",
+    "evt-0b4482287d95",
+    "evt-d897632fedff",
+    "evt-e26a420faef4",
+    "evt-cf86ab504644",
+    "evt-e0da1f55e913",
+    "evt-73b1962c628d",
+    "evt-7f40ce8641d2",
+    "evt-e7082de7ba7c",
+    "evt-4cda7932ab2d",
+    "evt-1920797e80cf"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S2_0.1AU",
+   "channel": "S2",
+   "rung_au": 0.1,
+   "target_id": "gj-1276",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 19,
+   "median_arc_frames": 65.0,
+   "median_baseline_frames": 208.0,
+   "event_ids_covered": [
+    "evt-3d07ccf6b463",
+    "evt-f51fef9b34e2",
+    "evt-9dbcb8c29217",
+    "evt-3b477eea02fe",
+    "evt-aa312f201336",
+    "evt-ab081c9ca6b0",
+    "evt-333d548b27c7",
+    "evt-f591b0694a87",
+    "evt-c16f782b91f8",
+    "evt-4057203934be",
+    "evt-123e00d6fc28",
+    "evt-cc82574de544",
+    "evt-a3f0db746732",
+    "evt-7c3f9ced1139",
+    "evt-184f5207a129",
+    "evt-d2ab0eebbf4b",
+    "evt-84a8a951f37a",
+    "evt-cf010d585e99",
+    "evt-0deed429776e"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S2_0.1AU",
+   "channel": "S2",
+   "rung_au": 0.1,
+   "target_id": "gj-908",
+   "role": "dev",
+   "events_in_era": 21,
+   "events_covered": 18,
+   "median_arc_frames": 30.0,
+   "median_baseline_frames": 207.0,
+   "event_ids_covered": [
+    "evt-327e70e5690f",
+    "evt-02ce74c3c5df",
+    "evt-827a1087c09d",
+    "evt-b694d0a7dbd1",
+    "evt-868dfeb1c6bc",
+    "evt-9da30cd7f3ad",
+    "evt-b1cf936aff03",
+    "evt-21388df45d54",
+    "evt-a5128b9f38d5",
+    "evt-7066eaf3633e",
+    "evt-20992bdae1cb",
+    "evt-6aedc72d5cd5",
+    "evt-ea4e8d56df7f",
+    "evt-81224a53fb3c",
+    "evt-c3f841243e75",
+    "evt-483186dad8e6",
+    "evt-8da72526971f",
+    "evt-f8286bf57d11"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S2_0.1AU",
+   "channel": "S2",
+   "rung_au": 0.1,
+   "target_id": "ross-128",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 20,
+   "median_arc_frames": 66.0,
+   "median_baseline_frames": 205.0,
+   "event_ids_covered": [
+    "evt-5e135c4e5dd5",
+    "evt-b4d850686d64",
+    "evt-28aa875e12a6",
+    "evt-eddf4339917d",
+    "evt-9776ceef8120",
+    "evt-193cb61d18a2",
+    "evt-84a48e04628c",
+    "evt-01d54a411220",
+    "evt-b245f80a3d31",
+    "evt-c538342dbf62",
+    "evt-c77970394ba5",
+    "evt-753be58933c7",
+    "evt-e21de325070c",
+    "evt-92407bb1433c",
+    "evt-e40789452e1d",
+    "evt-605379a67520",
+    "evt-1af0b7bb983c",
+    "evt-72085edfdb7c",
+    "evt-9cd4b967d0e8",
+    "evt-ef86296c908e"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S2_0.1AU",
+   "channel": "S2",
+   "rung_au": 0.1,
+   "target_id": "ross-154",
+   "role": "dev",
+   "events_in_era": 22,
+   "events_covered": 19,
+   "median_arc_frames": 58.0,
+   "median_baseline_frames": 207.5,
+   "event_ids_covered": [
+    "evt-e5e2787c0c57",
+    "evt-52ae6912b14f",
+    "evt-6d9232af8c52",
+    "evt-f5914bc9bb2b",
+    "evt-949219549326",
+    "evt-c38d2ceba1a9",
+    "evt-8ee645372fd7",
+    "evt-302c3e8bcad9",
+    "evt-19ebf0e77571",
+    "evt-fd21fde3762a",
+    "evt-0a67c5cf0e17",
+    "evt-6777268758fc",
+    "evt-c68daf5236e5",
+    "evt-34b6be2bccb8",
+    "evt-d5557e0230b7",
+    "evt-6fc971f595e9",
+    "evt-162411d5d5f7",
+    "evt-11cf97d2dc00",
+    "evt-4e433d86f410"
+   ],
+   "high_background": true
+  },
+  {
+   "unit": "S2_0.1AU",
+   "channel": "S2",
+   "rung_au": 0.1,
+   "target_id": "teegarden",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 19,
+   "median_arc_frames": 64.0,
+   "median_baseline_frames": 201.0,
+   "event_ids_covered": [
+    "evt-e3f138d0b540",
+    "evt-65fb8e975cd1",
+    "evt-e19f3b1e13ac",
+    "evt-66131d571492",
+    "evt-ed54b0318b82",
+    "evt-d01c372c131d",
+    "evt-a4ad2ba7293e",
+    "evt-1c650db4635b",
+    "evt-50f5315c3663",
+    "evt-c5027575dc27",
+    "evt-5661d8378a22",
+    "evt-e540310dcfa9",
+    "evt-d6e2176c2a4f",
+    "evt-f26b05bb939e",
+    "evt-a4976dc39655",
+    "evt-e54eb2284f6d",
+    "evt-466dcd739f89",
+    "evt-eced366716e1",
+    "evt-f79705519de3"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S2_0.1AU",
+   "channel": "S2",
+   "rung_au": 0.1,
+   "target_id": "van-maanen",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 19,
+   "median_arc_frames": 65.0,
+   "median_baseline_frames": 205.0,
+   "event_ids_covered": [
+    "evt-3f5c35260d02",
+    "evt-0732ee5855c9",
+    "evt-316940633afd",
+    "evt-394767825ff1",
+    "evt-655cbd8e7fa0",
+    "evt-90189db91f84",
+    "evt-100d5b1fb50a",
+    "evt-816a3af9cc06",
+    "evt-c6b4376cfcbf",
+    "evt-87e4584763c7",
+    "evt-111d3fee0caa",
+    "evt-5528aa620101",
+    "evt-c6e3c577b92f",
+    "evt-110892f05bb9",
+    "evt-fb054365119e",
+    "evt-1be2a4965ba9",
+    "evt-8234eae39fb5",
+    "evt-2454c2d451ab",
+    "evt-b048f74ef0be"
+   ],
+   "high_background": false
+  },
+  {
+   "unit": "S2_0.1AU",
+   "channel": "S2",
+   "rung_au": 0.1,
+   "target_id": "wolf-359",
+   "role": "confirmatory",
+   "events_in_era": 21,
+   "events_covered": 20,
+   "median_arc_frames": 66.0,
+   "median_baseline_frames": 204.0,
+   "event_ids_covered": [
+    "evt-572a2f34d19c",
+    "evt-3d9b65fd2f16",
+    "evt-668835bbfb4d",
+    "evt-d39c468c8a27",
+    "evt-0421aef15e59",
+    "evt-f56e68186557",
+    "evt-dfc6e38e0d14",
+    "evt-8b63698dd6aa",
+    "evt-be8c6f2ab454",
+    "evt-67499dec5a9c",
+    "evt-5b74f767fc73",
+    "evt-0695a34239c8",
+    "evt-904cbd5a0c58",
+    "evt-f13167af1032",
+    "evt-2f4e0396447d",
+    "evt-8ae11f03a340",
+    "evt-1f94188cb3e3",
+    "evt-4690f117707f",
+    "evt-8c0b70362fa8",
+    "evt-e80de71a2fc3"
+   ],
+   "high_background": false
+  }
+ ],
+ "amendments": [
+  {
+   "version": "v1.1",
+   "date": "2026-09-04",
+   "stage": "dev (5 complete unit-events measured on L1; no confirmatory pixel)",
+   "finding": "On L1 the 31-px median high-pass residual ramps to +16 DN/s within 25 px of the CCD inner edge and the local-annulus background is curvature-biased on the F-corona ridge (ecliptic), where every source patch sits while its HPLT-offset controls sit on the flanks (145 vs 75 DN/s/px): the same-frame differential cannot cancel a ridge-dependent bias (first complete events z = -2 to -10, source arc flux to -5.8 units at |HPLN| 4.2 deg). On the L2 product the static F-corona is removed per pixel and the same patch reads +0.9 on a flat residual.",
+   "rules": [
+    "search substrate = L2 24h1A_br01 (same frames, same header WCS, L2/L1 star-flux parity 1.005 +- 0.010 at recon); no L1 fallback (frames missing from the SSC tree are recorded as uncovered)",
+    "footprint edge margin 24 px for every patch (arc inner limit |HPLN| >= 4.37 deg)",
+    "all other constructions, gates, controls, split and seed unchanged; the L1 dev measurements are discarded"
+   ]
+  }
+ ]
+}

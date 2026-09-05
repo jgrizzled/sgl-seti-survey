@@ -31,6 +31,10 @@ same request with a per-epoch observer (plan §11.2 step 4):
 * ``--observer kepler`` — a JPL Horizons SSB vector table (spacecraft
   -227) fetched by ``--fetch-observer kepler``; Earth-trailing
   heliocentric orbit, up to ~1 AU from Earth (plan §5.8 item 8).
+* ``--observer stereoa`` — a JPL Horizons SSB vector table (spacecraft
+  -234) fetched by ``--fetch-observer stereoa``; heliocentric ~0.96 AU
+  orbit leading Earth, so Earth-center is invalid at every rung (plan
+  §5.15 O2, STEREO-A HI-1 sunward survey).
 * ``--observer soho`` — a JPL Horizons SSB vector table (spacecraft
   -21) fetched by ``--fetch-observer soho``. SOHO's L1 halo orbit has
   ~0.9 R_sun transverse amplitude (measured directly in the LASCO
@@ -85,8 +89,16 @@ OBSERVER_DEFAULTS = {
     # drifts ~0.1 AU/yr from Earth, so Earth-center is invalid at every
     # rung (plan §5.8 item 8 footprint intersect)
     "kepler": ("2009-05-01", "2018-11-01", "kepler_v1"),
+    # STEREO-A SECCHI/HI science era (HI-1A first light 2006-12, routine
+    # synoptic imaging from 2007-01); stop bounded by the Horizons -234
+    # predicted-trajectory end (2026-12-18) — extend at refresh. The
+    # spacecraft drifts ~22 deg/yr ahead of Earth on a 346-d heliocentric
+    # orbit (0.96 AU), so Earth-center is invalid at every rung
+    # (plan §5.15 O2)
+    "stereoa": ("2007-01-01", "2026-12-01", "stereoa_v1"),
 }
-HORIZONS_IDS = {"tess": "-95", "soho": "-21", "kepler": "-227"}
+HORIZONS_IDS = {"tess": "-95", "soho": "-21", "kepler": "-227",
+                "stereoa": "-234"}
 
 
 def _sha256(path: Path) -> str:
@@ -224,6 +236,27 @@ def resolve_observer(name: str):
             "was 0.04 AU (2009) to 1.14 AU (2018) from Earth, so the "
             "Earth-center list is invalid for Kepler at every rung; the "
             "crossing epochs shift by the trailing angle (weeks to months)"}
+    if name == "stereoa":
+        npz = OBSERVER_TABLE_DIR / "stereoa_sc_ephemeris.npz"
+        if not npz.exists():
+            raise SystemExit("no STEREO-A table; run --fetch-observer "
+                             "stereoa first")
+        tab = np.load(npz)
+        ident = _sha256(npz)
+        obs = register_spacecraft_table_observer(
+            "stereoa-spacecraft", tab["mjd_utc"], tab["xyz_au"], ident,
+            max_gap_days=1.0)
+        return obs, {
+            "observer_table": str(npz.relative_to(REPO)),
+            "observer_table_sha256": ident,
+            "observer_accuracy": "JPL Horizons -234 SSB vectors at 6 h "
+            "sampling; heliocentric orbit at ~0.96 AU (period ~346 d) "
+            "leading Earth by ~22 deg/yr (full circuit 2006-2023), so "
+            "linear-interpolation error is negligible and the "
+            "Earth-center list is invalid for STEREO-A at every rung; "
+            "crossing epochs shift by the leading angle (weeks to months) "
+            "and the Sun-star axis is sampled at a different heliocentric "
+            "radius"}
     raise ValueError(name)
 
 

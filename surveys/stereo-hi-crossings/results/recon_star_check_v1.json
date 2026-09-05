@@ -1,0 +1,156 @@
+{
+ "frames": {
+  "l1": "20100615_000901_14h1A.fts",
+  "l2": "20100615_000901_24h1A_br01.fts",
+  "date_avg": "2010-06-15T00:23:51.004",
+  "exptime_s": 1199.94,
+  "n_images": 30,
+  "bunit": "DN/s/CCDPIX",
+  "cdelt_deg": 0.019979876,
+  "nan_pixels_l1": 5120
+ },
+ "astrometry_header_wcs_vs_hipparcos": {
+  "hip_in_fov": 698,
+  "matched_3px": 694,
+  "median_resid_px": 0.40321871360672384,
+  "mean_offset_px": [
+   0.006246169413156765,
+   0.03957268391617162
+  ],
+  "rms_px": [
+   0.33937285074568535,
+   0.320835353033758
+  ]
+ },
+ "photometry": {
+  "n_calibrators_snr10": 668,
+  "zp0_at_bv0.65": 11.103329513688207,
+  "colour_coeff_mag_per_bv": 0.5950691124028534,
+  "scatter_mad_no_colour": 0.26908141272017305,
+  "scatter_mad_with_colour": 0.08168886096019426,
+  "zp_by_vbin": {
+   "5-6": {
+    "n": 21,
+    "zp_median": 11.248704602588937,
+    "resid_median": -0.059541991467112254
+   },
+   "6-7": {
+    "n": 65,
+    "zp_median": 11.025462533023056,
+    "resid_median": -0.041449185263882526
+   },
+   "7-8": {
+    "n": 170,
+    "zp_median": 11.200510268887603,
+    "resid_median": -0.0444172567948673
+   },
+   "8-9": {
+    "n": 276,
+    "zp_median": 11.163809233675737,
+    "resid_median": -0.034436250711905814
+   },
+   "9-10": {
+    "n": 128,
+    "zp_median": 11.091713832131106,
+    "resid_median": -0.023610585947607454
+   }
+  }
+ },
+ "l1_l2_parity": {
+  "n": 668,
+  "median_L2_over_L1": 1.0045956333543178,
+  "mad": 0.009938081768550232
+ },
+ "psf": {
+  "n_stars": 86,
+  "fwhm_px_median": 1.7307928748340924,
+  "fwhm_arcsec_median": 124.61708698805465
+ },
+ "noise_vs_hpln": {
+  "-23.5": {
+   "bg_dn_s": 3.2530094385147095,
+   "hp_sigma_px": 0.016760225057601927,
+   "depth_5sig_V_solar_colour": 12.178917525116905
+  },
+  "-22.3": {
+   "bg_dn_s": 3.612352728843689,
+   "hp_sigma_px": 0.015286039280891417,
+   "depth_5sig_V_solar_colour": 12.278879712132795
+  },
+  "-21.0": {
+   "bg_dn_s": 4.021975994110107,
+   "hp_sigma_px": 0.016081544637680054,
+   "depth_5sig_V_solar_colour": 12.223797738939195
+  },
+  "-19.8": {
+   "bg_dn_s": 4.510129690170288,
+   "hp_sigma_px": 0.018122357869148252,
+   "depth_5sig_V_solar_colour": 12.094080384467567
+  },
+  "-18.5": {
+   "bg_dn_s": 5.091785669326782,
+   "hp_sigma_px": 0.01876728100776672,
+   "depth_5sig_V_solar_colour": 12.056113748152873
+  },
+  "-17.2": {
+   "bg_dn_s": 5.789909601211548,
+   "hp_sigma_px": 0.020805619883537293,
+   "depth_5sig_V_solar_colour": 11.944165491024707
+  },
+  "-15.9": {
+   "bg_dn_s": 6.643209218978882,
+   "hp_sigma_px": 0.022483409786224363,
+   "depth_5sig_V_solar_colour": 11.85996170012138
+  },
+  "-14.7": {
+   "bg_dn_s": 7.684750556945801,
+   "hp_sigma_px": 0.024874874567985532,
+   "depth_5sig_V_solar_colour": 11.750214891587055
+  },
+  "-13.4": {
+   "bg_dn_s": 8.95288610458374,
+   "hp_sigma_px": 0.027748485231399535,
+   "depth_5sig_V_solar_colour": 11.631518939545565
+  },
+  "-12.1": {
+   "bg_dn_s": 10.562274932861328,
+   "hp_sigma_px": 0.03122707586288452,
+   "depth_5sig_V_solar_colour": 11.50328884447601
+  },
+  "-10.8": {
+   "bg_dn_s": 12.57199478149414,
+   "hp_sigma_px": 0.03625143184661865,
+   "depth_5sig_V_solar_colour": 11.341304228149793
+  },
+  "-9.5": {
+   "bg_dn_s": 15.09035873413086,
+   "hp_sigma_px": 0.0699719512939453,
+   "depth_5sig_V_solar_colour": 10.627307177387392
+  },
+  "-8.3": {
+   "bg_dn_s": 18.484235763549805,
+   "hp_sigma_px": 0.05602718954086303,
+   "depth_5sig_V_solar_colour": 10.868620045915682
+  },
+  "-7.0": {
+   "bg_dn_s": 22.8319673538208,
+   "hp_sigma_px": 0.06346651668548584,
+   "depth_5sig_V_solar_colour": 10.73325548273772
+  },
+  "-5.8": {
+   "bg_dn_s": 28.3572416305542,
+   "hp_sigma_px": 0.08153921070098877,
+   "depth_5sig_V_solar_colour": 10.461200882378346
+  },
+  "-4.5": {
+   "bg_dn_s": 35.23047065734863,
+   "hp_sigma_px": 0.13597079429626463,
+   "depth_5sig_V_solar_colour": 9.906003053898472
+  }
+ },
+ "notes": [
+  "aperture r=2.5 px, annulus 5-9 px on a 31-px median high-pass",
+  "depth = 5 sigma on the aperture noise for a B-V=0.65 source, single 40-min frame",
+  "colour coefficient sign: positive = red stars brighter in DN/s than V predicts"
+ ]
+}

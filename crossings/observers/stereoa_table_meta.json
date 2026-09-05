@@ -1,0 +1,17 @@
+{
+ "observer": "stereoa",
+ "horizons_command": "-234",
+ "center": "500@0 (SSB)",
+ "ref_plane": "FRAME (ICRF)",
+ "start": "2007-01-01",
+ "stop": "2026-12-01",
+ "step": "6h",
+ "n_rows": 29097,
+ "mjd_utc_range": [
+  54100.99924555638,
+  61374.99919926984
+ ],
+ "raw_response": "stereoa_horizons_response.txt",
+ "raw_sha256": "sha256:ab0827667567e3c3e3ecd98e09394598f52d4ce618db81ef3736b1a32acdd684",
+ "table_sha256": "sha256:ad6acfffa7b752fc611a7095064579dcae3bff026890eb8aa63e9b0636ce9ba1"
+}

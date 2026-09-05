@@ -470,3 +470,55 @@ catalogs. Lessons from DASCH (`report/dasch_crossings.md` §4):
   = 0.25 d bins at JD 2.46×10⁶ — invisible in a schema description
   that says "Julian date"). A visit list is still worth recording:
   it turns a future data ask into a 56-window request.
+
+## 12. Heliospheric imagers with a drifting observer (STEREO-A HI-1; cf. LASCO §8)
+
+- **Read the per-day pointing history before the census.** STEREO-A
+  flew rolled 180° for eight years (2015-11 → 2023-08): HI-1 looked
+  west instead of east, and every sunward arc moved from before t_ca
+  to after it. A recon frame from one era is not the mission; one
+  8-KB Range request per day (6,675 headers in 10 min) is.
+- **Level-1 heliospheric frames need the instrument team's
+  background removal, not a local one.** A 31-px median high-pass
+  fails within its half-width of the CCD edge on a 2 DN/s/px gradient
+  (+16 DN/s ramps) and a 5–9 px annulus is curvature-biased on the
+  F-corona ridge — and the ridge is exactly where every ecliptic
+  source sits while HPLT-offset controls sit on the flanks, so no
+  same-frame differential cancels it. The level-2 per-pixel running
+  lowest-quartile background removes the static F-corona exactly
+  because the sources drift 54 px/day. Random-position bias tests
+  cannot diagnose this (avoiding detected peaks selects troughs);
+  pixel stamps at the actual patch can.
+- **Frame-wide bright-body vetoes do not scale to 20° fields:** Venus,
+  Jupiter and Earth are inside HI-1 for weeks to years; the measured
+  scatter is unaffected beyond 2° of the patch. Veto by proximity,
+  and measure the radius before freezing it.
+- **ICRS-fixed sky patches + the patch's own transit baseline** are
+  the right construction for a moving-sky imager: no star transits
+  through the aperture during a window, and the static field
+  subtracts itself. The residual is the regional level-2 background
+  offset between the baseline and arc elongations (±0.3 units) — the
+  plateau class of both adjudicated S_event exceedances — a v2 should
+  take the baseline from the same elongation band in other years.
+- **Extended fronts masquerade as pulses.** Both pulse exceedances
+  were CME/streamer fronts sweeping over the patch (a 10-px band at
+  2–3 px/frame; a whole-stamp lift for two frames); the persistence
+  rule alone passes them — the point-source morphology test in the
+  pixels is what vetoes them. Pulse thresholds from control patches
+  that contain bright static stars are 5–100 (their own excursions);
+  match control patches to the source's static content in a v2.
+- Horizons accepts `CENTER='@-234'` for any spacecraft-observer
+  ephemeris; SkyBoT does not know MPC code C49 — keep a bright-
+  asteroid list for known-object censuses from spacecraft. A bright
+  asteroid arc passage is a clean positive control for a moving
+  observer (Pallas: 0.01 mag).
+- A 0.60 mag/(B−V) colour term turns HI-1's 0.27-mag star scatter into
+  0.08 (0.047 with a 2-D ZP); forgetting the sign doubles it — the
+  instrumental magnitude is V − c(B−V − 0.65), red stars brighter.
+- Crowded low-latitude fields (ross-154, b = −13°) blow a per-star ZP
+  MAD gate set on a clean field (0.05 → 0.12–0.17 from blending) even
+  though the ensemble ZP stays good to 0.006 mag; gate on the ensemble
+  precision, or class the target, before the freeze.
+- Fork-safety: `np.load` of a compressed npz is lazy; forked workers
+  sharing the handle corrupt each other's reads ("Error -3 while
+  decompressing"). Copy arrays eagerly at import.

@@ -1,0 +1,1 @@
+sha256:935c74bd13947dbfb5b32866612ddfe334e29cf43f5642bec172c12323096e4b  configs/threshold_freeze_v1.json  frozen 2026-09-04 (user approval: 'Looks good, run the chain.')
