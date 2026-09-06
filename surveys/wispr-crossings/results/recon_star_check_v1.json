@@ -1,0 +1,747 @@
+{
+ "WISPR-I": {
+  "frames": {
+   "l2": "psp_L2_wispr_20241224T000015_V1_1211.fits",
+   "l3": "psp_L3_wispr_20241224T000015_V1_1211.fits",
+   "date_avg": "2024-12-24T00:00:49.488",
+   "xposure_s": 15.36,
+   "nsumexp": 5,
+   "bunit": "MSB",
+   "cdelt_deg": 0.042305,
+   "naxis": [
+    960,
+    1024
+   ],
+   "nan_pixels": 3964,
+   "dsun_au": 0.05852735710094569
+  },
+  "field_model_check": {
+   "centre": {
+    "hpln": 31.37,
+    "hplt": -7.08,
+    "eps": 32.84,
+    "ram_lon": 32.49,
+    "orbit_lat": -5.1
+   },
+   "c00": {
+    "hpln": 8.45,
+    "hplt": -21.42,
+    "eps": 23.32,
+    "ram_lon": 10.69,
+    "orbit_lat": -20.84
+   },
+   "cx0": {
+    "hpln": 46.94,
+    "hplt": -29.27,
+    "eps": 54.11,
+    "ram_lon": 49.1,
+    "orbit_lat": -26.45
+   },
+   "c0y": {
+    "hpln": 17.47,
+    "hplt": 15.26,
+    "eps": 23.54,
+    "ram_lon": 17.18,
+    "orbit_lat": 16.35
+   },
+   "cxy": {
+    "hpln": 52.97,
+    "hplt": 8.33,
+    "eps": 54.16,
+    "ram_lon": 53.32,
+    "orbit_lat": 11.37
+   },
+   "left": {
+    "hpln": 12.72,
+    "hplt": -2.96,
+    "eps": 13.82,
+    "ram_lon": 13.65,
+    "orbit_lat": -2.15
+   },
+   "right": {
+    "hpln": 50.45,
+    "hplt": -10.48,
+    "eps": 52.0,
+    "ram_lon": 51.61,
+    "orbit_lat": -7.53
+   },
+   "bottom": {
+    "hpln": 26.9,
+    "hplt": -26.92,
+    "eps": 37.91,
+    "ram_lon": 29.34,
+    "orbit_lat": -25.16
+   },
+   "top": {
+    "hpln": 35.46,
+    "hplt": 12.69,
+    "eps": 38.05,
+    "ram_lon": 35.44,
+    "orbit_lat": 14.87
+   },
+   "speed_km_s_header_vs_table": [
+    167.41,
+    168.0
+   ],
+   "r_au_header_vs_table": [
+    0.05853,
+    0.05815
+   ]
+  },
+  "astrometry_header_wcs_vs_hipparcos": {
+   "hip_in_fov": 3149,
+   "matched_3px": 191,
+   "median_resid_px": 1.1647304008957862,
+   "mean_offset_px": [
+    -0.14032094887760638,
+    0.6536365864807824
+   ],
+   "rms_px": [
+    0.9304890723240613,
+    1.0295522462230573
+   ],
+   "pixel_arcsec": 152.298
+  },
+  "photometry": {
+   "n_calibrators_snr10": 84,
+   "zp0_at_bv0.65": -20.95986282163479,
+   "colour_coeff_mag_per_bv": 0.26698883855231753,
+   "scatter_mad_no_colour": 0.2958892032208993,
+   "scatter_mad_with_colour": 0.748005589515811,
+   "zp_by_vbin": {
+    "3-4": {
+     "n": 12,
+     "zp_median": -21.516931877841834,
+     "resid_median": -0.539169996108642
+    },
+    "4-5": {
+     "n": 34,
+     "zp_median": -21.509584156995416,
+     "resid_median": -0.49728646846876323
+    },
+    "5-6": {
+     "n": 28,
+     "zp_median": -21.230032246511254,
+     "resid_median": -0.37325676517546036
+    },
+    "8-9": {
+     "n": 5,
+     "zp_median": -17.909442090859446,
+     "resid_median": 2.963553795636493
+    }
+   },
+   "resid_by_elongation": {
+    "20-30": {
+     "n": 28,
+     "resid_median": -0.5809938290646492,
+     "mad": 0.18501910414834846
+    },
+    "30-40": {
+     "n": 27,
+     "resid_median": -0.46476761201542516,
+     "mad": 0.16810827328122305
+    },
+    "40-50": {
+     "n": 25,
+     "resid_median": -0.3596883202224497,
+     "mad": 0.13070199150919906
+    }
+   }
+  },
+  "l2_l3_parity": {
+   "n": 84,
+   "median_L3_over_L2": 0.05941735007192399,
+   "mad": 0.003884390728212959
+  },
+  "psf": {
+   "n_stars": 107,
+   "fwhm_px_median": 3.783473858369058,
+   "fwhm_arcsec_median": 576.2155016818908
+  },
+  "noise_vs_elongation": {
+   "14.2": {
+    "hpln": 13.85,
+    "L2": {
+     "bg_msb": 2.501402696086785e-10,
+     "hp_sigma_px": 1.338886344110987e-12,
+     "depth_5sig_V_solar_colour": 5.601840557440308
+    },
+    "L3": {
+     "bg_msb": 2.620111701386041e-13,
+     "hp_sigma_px": 5.382773851485018e-14,
+     "depth_5sig_V_solar_colour": 9.0911845024462
+    }
+   },
+   "16.6": {
+    "hpln": 16.18,
+    "L2": {
+     "bg_msb": 4.2255807186641903e-10,
+     "hp_sigma_px": 1.9608996426612177e-12,
+     "depth_5sig_V_solar_colour": 5.187561419051878
+    },
+    "L3": {
+     "bg_msb": 3.9879880539377133e-13,
+     "hp_sigma_px": 7.50017174262112e-14,
+     "depth_5sig_V_solar_colour": 8.73102181701206
+    }
+   },
+   "19.1": {
+    "hpln": 18.59,
+    "L2": {
+     "bg_msb": 3.3255255493802593e-10,
+     "hp_sigma_px": 1.3008881138976136e-12,
+     "depth_5sig_V_solar_colour": 5.633099973507921
+    },
+    "L3": {
+     "bg_msb": 3.003596991350138e-13,
+     "hp_sigma_px": 5.019504887421571e-14,
+     "depth_5sig_V_solar_colour": 9.167047633910471
+    }
+   },
+   "21.6": {
+    "hpln": 21.06,
+    "L2": {
+     "bg_msb": 2.7203235497541556e-10,
+     "hp_sigma_px": 9.51942870364153e-13,
+     "depth_5sig_V_solar_colour": 5.9721726236531865
+    },
+    "L3": {
+     "bg_msb": 2.482932479411226e-13,
+     "hp_sigma_px": 3.5463993472829944e-14,
+     "depth_5sig_V_solar_colour": 9.544230741599755
+    }
+   },
+   "24.2": {
+    "hpln": 23.58,
+    "L2": {
+     "bg_msb": 2.2815117156627096e-10,
+     "hp_sigma_px": 7.535052748419701e-13,
+     "depth_5sig_V_solar_colour": 6.225984095251334
+    },
+    "L3": {
+     "bg_msb": 2.0435718818111875e-13,
+     "hp_sigma_px": 2.891582295057749e-14,
+     "depth_5sig_V_solar_colour": 9.765860945171486
+    }
+   },
+   "26.8": {
+    "hpln": 26.14,
+    "L2": {
+     "bg_msb": 1.967337751040965e-10,
+     "hp_sigma_px": 6.395597718089618e-13,
+     "depth_5sig_V_solar_colour": 6.403996990270269
+    },
+    "L3": {
+     "bg_msb": 1.8279892573594414e-13,
+     "hp_sigma_px": 2.5149675758292555e-14,
+     "depth_5sig_V_solar_colour": 9.91736886176043
+    }
+   },
+   "29.4": {
+    "hpln": 28.74,
+    "L2": {
+     "bg_msb": 1.72678517318392e-10,
+     "hp_sigma_px": 5.685753035056251e-13,
+     "depth_5sig_V_solar_colour": 6.531729857852962
+    },
+    "L3": {
+     "bg_msb": 1.7049628717310736e-13,
+     "hp_sigma_px": 2.2555150040975795e-14,
+     "depth_5sig_V_solar_colour": 10.035585536373748
+    }
+   },
+   "32.1": {
+    "hpln": 31.37,
+    "L2": {
+     "bg_msb": 1.5338506159645604e-10,
+     "hp_sigma_px": 5.288034260475526e-13,
+     "depth_5sig_V_solar_colour": 6.610464186939328
+    },
+    "L3": {
+     "bg_msb": 1.6451294807765665e-13,
+     "hp_sigma_px": 2.1035960253985677e-14,
+     "depth_5sig_V_solar_colour": 10.111293983566672
+    }
+   },
+   "34.8": {
+    "hpln": 34.02,
+    "L2": {
+     "bg_msb": 1.382513686865039e-10,
+     "hp_sigma_px": 4.916960380518809e-13,
+     "depth_5sig_V_solar_colour": 6.689458065293277
+    },
+    "L3": {
+     "bg_msb": 1.5901313604608017e-13,
+     "hp_sigma_px": 2.010852872560108e-14,
+     "depth_5sig_V_solar_colour": 10.160249097819186
+    }
+   },
+   "37.4": {
+    "hpln": 36.65,
+    "L2": {
+     "bg_msb": 1.2605863575210208e-10,
+     "hp_sigma_px": 4.602468323122721e-13,
+     "depth_5sig_V_solar_colour": 6.761222817202903
+    },
+    "L3": {
+     "bg_msb": 1.5749149217831465e-13,
+     "hp_sigma_px": 1.9673756894433847e-14,
+     "depth_5sig_V_solar_colour": 10.183981586056213
+    }
+   },
+   "40.0": {
+    "hpln": 39.25,
+    "L2": {
+     "bg_msb": 1.1616112585710603e-10,
+     "hp_sigma_px": 4.356388833004487e-13,
+     "depth_5sig_V_solar_colour": 6.820883247201092
+    },
+    "L3": {
+     "bg_msb": 1.5563192282217614e-13,
+     "hp_sigma_px": 1.933653646544412e-14,
+     "depth_5sig_V_solar_colour": 10.202753121332265
+    }
+   },
+   "42.6": {
+    "hpln": 41.83,
+    "L2": {
+     "bg_msb": 1.080873307524044e-10,
+     "hp_sigma_px": 4.2929657537160714e-13,
+     "depth_5sig_V_solar_colour": 6.836806277509904
+    },
+    "L3": {
+     "bg_msb": 1.5416185309650304e-13,
+     "hp_sigma_px": 1.9624026776948916e-14,
+     "depth_5sig_V_solar_colour": 10.186729518015628
+    }
+   },
+   "45.2": {
+    "hpln": 44.37,
+    "L2": {
+     "bg_msb": 1.0127673352733346e-10,
+     "hp_sigma_px": 4.238647204057866e-13,
+     "depth_5sig_V_solar_colour": 6.85063166155653
+    },
+    "L3": {
+     "bg_msb": 1.5289695507944567e-13,
+     "hp_sigma_px": 2.0104530223225522e-14,
+     "depth_5sig_V_solar_colour": 10.160465013689393
+    }
+   },
+   "47.7": {
+    "hpln": 46.87,
+    "L2": {
+     "bg_msb": 9.695279995503014e-11,
+     "hp_sigma_px": 4.3464098570256124e-13,
+     "depth_5sig_V_solar_colour": 6.8233731451387385
+    },
+    "L3": {
+     "bg_msb": 1.5303019675018056e-13,
+     "hp_sigma_px": 2.1024788558906236e-14,
+     "depth_5sig_V_solar_colour": 10.111870745247998
+    }
+   },
+   "50.1": {
+    "hpln": 49.3,
+    "L2": {
+     "bg_msb": 1.0028728888999972e-10,
+     "hp_sigma_px": 7.653308757571419e-13,
+     "depth_5sig_V_solar_colour": 6.2090767514153065
+    },
+    "L3": {
+     "bg_msb": 1.5653469053735977e-13,
+     "hp_sigma_px": 2.420128725514562e-14,
+     "depth_5sig_V_solar_colour": 9.959103671209839
+    }
+   }
+  }
+ },
+ "WISPR-O": {
+  "frames": {
+   "l2": "psp_L2_wispr_20241224T000205_V1_2222.fits",
+   "l3": "psp_L3_wispr_20241224T000205_V1_2222.fits",
+   "date_avg": "2024-12-24T00:02:43.488",
+   "xposure_s": 24.32,
+   "nsumexp": 5,
+   "bunit": "MSB",
+   "cdelt_deg": 0.0564752,
+   "naxis": [
+    960,
+    1024
+   ],
+   "nan_pixels": 3964,
+   "dsun_au": 0.058466487250610315
+  },
+  "field_model_check": {
+   "centre": {
+    "hpln": 76.01,
+    "hplt": -13.16,
+    "eps": 77.12,
+    "ram_lon": 76.94,
+    "orbit_lat": -9.51
+   },
+   "c00": {
+    "hpln": 38.02,
+    "hplt": -37.95,
+    "eps": 52.1,
+    "ram_lon": 40.95,
+    "orbit_lat": -35.58
+   },
+   "cx0": {
+    "hpln": 110.65,
+    "hplt": -41.98,
+    "eps": 105.77,
+    "ram_lon": 110.31,
+    "orbit_lat": -38.44
+   },
+   "c0y": {
+    "hpln": 49.09,
+    "hplt": 19.11,
+    "eps": 52.43,
+    "ram_lon": 48.9,
+    "orbit_lat": 21.93
+   },
+   "cxy": {
+    "hpln": 105.98,
+    "hplt": 15.95,
+    "eps": 106.05,
+    "ram_lon": 107.06,
+    "orbit_lat": 19.56
+   },
+   "left": {
+    "hpln": 47.78,
+    "hplt": -10.04,
+    "eps": 49.31,
+    "ram_lon": 48.91,
+    "orbit_lat": -7.25
+   },
+   "right": {
+    "hpln": 104.46,
+    "hplt": -13.21,
+    "eps": 104.8,
+    "ram_lon": 105.02,
+    "orbit_lat": -9.57
+   },
+   "bottom": {
+    "hpln": 73.61,
+    "hplt": -42.79,
+    "eps": 78.63,
+    "ram_lon": 75.26,
+    "orbit_lat": -39.17
+   },
+   "top": {
+    "hpln": 77.69,
+    "hplt": 16.43,
+    "eps": 78.9,
+    "ram_lon": 78.17,
+    "orbit_lat": 20.1
+   },
+   "speed_km_s_header_vs_table": [
+    167.5,
+    168.09
+   ],
+   "r_au_header_vs_table": [
+    0.05847,
+    0.05809
+   ]
+  },
+  "astrometry_header_wcs_vs_hipparcos": {
+   "hip_in_fov": 5963,
+   "matched_3px": 727,
+   "median_resid_px": 0.6982193608100016,
+   "mean_offset_px": [
+    0.37873252536903385,
+    0.09874292736477426
+   ],
+   "rms_px": [
+    0.7270924135180333,
+    0.6901443202182644
+   ],
+   "pixel_arcsec": 203.31072
+  },
+  "photometry": {
+   "n_calibrators_snr10": 226,
+   "zp0_at_bv0.65": -21.708491988556986,
+   "colour_coeff_mag_per_bv": 0.3345538494050417,
+   "scatter_mad_no_colour": 0.4599972742328978,
+   "scatter_mad_with_colour": 0.901015527478289,
+   "zp_by_vbin": {
+    "3-4": {
+     "n": 14,
+     "zp_median": -22.50395579041991,
+     "resid_median": -0.7506883266515718
+    },
+    "4-5": {
+     "n": 58,
+     "zp_median": -22.399017957375975,
+     "resid_median": -0.701882623616763
+    },
+    "5-6": {
+     "n": 88,
+     "zp_median": -22.107312279303045,
+     "resid_median": -0.4950356869391257
+    },
+    "6-7": {
+     "n": 32,
+     "zp_median": -21.48413260373947,
+     "resid_median": -0.017700409730165845
+    },
+    "7-8": {
+     "n": 10,
+     "zp_median": -20.073606661750347,
+     "resid_median": 1.481883757845404
+    },
+    "8-9": {
+     "n": 22,
+     "zp_median": -18.731553475545923,
+     "resid_median": 2.9773612023763736
+    }
+   },
+   "resid_by_elongation": {
+    "50-60": {
+     "n": 42,
+     "resid_median": -0.29931727988309653,
+     "mad": 0.40835855367437246
+    },
+    "60-70": {
+     "n": 35,
+     "resid_median": -0.5867491562467819,
+     "mad": 0.2859337892187961
+    },
+    "70-80": {
+     "n": 37,
+     "resid_median": -0.4787016014406298,
+     "mad": 0.35275844630420633
+    },
+    "80-90": {
+     "n": 38,
+     "resid_median": -0.40396343760853526,
+     "mad": 0.47234681115133614
+    },
+    "90-100": {
+     "n": 55,
+     "resid_median": -0.5490961580981448,
+     "mad": 0.35017887432380773
+    },
+    "100-110": {
+     "n": 19,
+     "resid_median": -0.4838718038554042,
+     "mad": 0.3935569541835903
+    }
+   }
+  },
+  "l2_l3_parity": {
+   "n": 226,
+   "median_L3_over_L2": 0.0586965577453433,
+   "mad": 0.0031644610759948583
+  },
+  "psf": {
+   "n_stars": 245,
+   "fwhm_px_median": 3.8855971288671265,
+   "fwhm_arcsec_median": 789.9835498999083
+  },
+  "noise_vs_elongation": {
+   "50.5": {
+    "hpln": 49.7,
+    "L2": {
+     "bg_msb": 7.844701624404316e-11,
+     "hp_sigma_px": 5.279907053235e-13,
+     "depth_5sig_V_solar_colour": 5.8635049772249275
+    },
+    "L3": {
+     "bg_msb": 2.906928475330476e-14,
+     "hp_sigma_px": 1.6727852734376725e-14,
+     "depth_5sig_V_solar_colour": 9.611470179415889
+    }
+   },
+   "54.3": {
+    "hpln": 53.5,
+    "L2": {
+     "bg_msb": 6.287979859020965e-11,
+     "hp_sigma_px": 3.0725987171242864e-13,
+     "depth_5sig_V_solar_colour": 6.451306058348251
+    },
+    "L3": {
+     "bg_msb": 2.2217936786693947e-14,
+     "hp_sigma_px": 1.2631559724638716e-14,
+     "depth_5sig_V_solar_colour": 9.916428220952405
+    }
+   },
+   "58.0": {
+    "hpln": 57.28,
+    "L2": {
+     "bg_msb": 5.71286871975385e-11,
+     "hp_sigma_px": 2.7298157484478834e-13,
+     "depth_5sig_V_solar_colour": 6.579737333314849
+    },
+    "L3": {
+     "bg_msb": 1.999763642711056e-14,
+     "hp_sigma_px": 1.16889153012235e-14,
+     "depth_5sig_V_solar_colour": 10.00063514129134
+    }
+   },
+   "61.7": {
+    "hpln": 61.05,
+    "L2": {
+     "bg_msb": 5.251544685225262e-11,
+     "hp_sigma_px": 2.593813622220331e-13,
+     "depth_5sig_V_solar_colour": 6.635223753685196
+    },
+    "L3": {
+     "bg_msb": 1.9216497560954962e-14,
+     "hp_sigma_px": 1.1308299065672935e-14,
+     "depth_5sig_V_solar_colour": 10.03657745665819
+    }
+   },
+   "65.4": {
+    "hpln": 64.79,
+    "L2": {
+     "bg_msb": 4.8300054927841174e-11,
+     "hp_sigma_px": 2.4474210158498264e-13,
+     "depth_5sig_V_solar_colour": 6.698298958135194
+    },
+    "L3": {
+     "bg_msb": 1.8572733886316854e-14,
+     "hp_sigma_px": 1.089486785954308e-14,
+     "depth_5sig_V_solar_colour": 10.077015752595866
+    }
+   },
+   "69.1": {
+    "hpln": 68.53,
+    "L2": {
+     "bg_msb": 4.429963340601972e-11,
+     "hp_sigma_px": 2.3039346576381177e-13,
+     "depth_5sig_V_solar_colour": 6.763895276047247
+    },
+    "L3": {
+     "bg_msb": 1.7301927814452386e-14,
+     "hp_sigma_px": 1.0372293487360853e-14,
+     "depth_5sig_V_solar_colour": 10.130383678644336
+    }
+   },
+   "72.7": {
+    "hpln": 72.26,
+    "L2": {
+     "bg_msb": 4.078659805728524e-11,
+     "hp_sigma_px": 2.2320500239758622e-13,
+     "depth_5sig_V_solar_colour": 6.7983108614737375
+    },
+    "L3": {
+     "bg_msb": 1.6507468508168265e-14,
+     "hp_sigma_px": 1.0029872116917496e-14,
+     "depth_5sig_V_solar_colour": 10.16683218131222
+    }
+   },
+   "76.4": {
+    "hpln": 76.01,
+    "L2": {
+     "bg_msb": 3.769971487765922e-11,
+     "hp_sigma_px": 2.0927815834459462e-13,
+     "depth_5sig_V_solar_colour": 6.868260908440966
+    },
+    "L3": {
+     "bg_msb": 1.573640340485436e-14,
+     "hp_sigma_px": 9.481331339704058e-15,
+     "depth_5sig_V_solar_colour": 10.227897360750479
+    }
+   },
+   "80.0": {
+    "hpln": 79.75,
+    "L2": {
+     "bg_msb": 3.491416010470427e-11,
+     "hp_sigma_px": 2.0113037589586378e-13,
+     "depth_5sig_V_solar_colour": 6.9113765074135145
+    },
+    "L3": {
+     "bg_msb": 1.5210131670329897e-14,
+     "hp_sigma_px": 9.117610158082372e-15,
+     "depth_5sig_V_solar_colour": 10.270368122771941
+    }
+   },
+   "83.7": {
+    "hpln": 83.5,
+    "L2": {
+     "bg_msb": 3.228744181738019e-11,
+     "hp_sigma_px": 1.9311890420148357e-13,
+     "depth_5sig_V_solar_colour": 6.955508699377219
+    },
+    "L3": {
+     "bg_msb": 1.4700709115192216e-14,
+     "hp_sigma_px": 8.975456114927281e-15,
+     "depth_5sig_V_solar_colour": 10.287429351081009
+    }
+   },
+   "87.3": {
+    "hpln": 87.27,
+    "L2": {
+     "bg_msb": 3.0024979030818244e-11,
+     "hp_sigma_px": 1.8752759137208307e-13,
+     "depth_5sig_V_solar_colour": 6.987407731761692
+    },
+    "L3": {
+     "bg_msb": 1.4080815676040682e-14,
+     "hp_sigma_px": 8.71853036060448e-15,
+     "depth_5sig_V_solar_colour": 10.318962459984377
+    }
+   },
+   "91.0": {
+    "hpln": 91.05,
+    "L2": {
+     "bg_msb": 2.8005715801970865e-11,
+     "hp_sigma_px": 1.7924092626797615e-13,
+     "depth_5sig_V_solar_colour": 7.036477721671233
+    },
+    "L3": {
+     "bg_msb": 1.3537714667403696e-14,
+     "hp_sigma_px": 8.279287214202271e-15,
+     "depth_5sig_V_solar_colour": 10.375088298499534
+    }
+   },
+   "94.7": {
+    "hpln": 94.86,
+    "L2": {
+     "bg_msb": 2.617955505157532e-11,
+     "hp_sigma_px": 1.772862814886089e-13,
+     "depth_5sig_V_solar_colour": 7.048382843196048
+    },
+    "L3": {
+     "bg_msb": 1.3203979027504292e-14,
+     "hp_sigma_px": 8.128623795388648e-15,
+     "depth_5sig_V_solar_colour": 10.395028109991259
+    }
+   },
+   "98.5": {
+    "hpln": 98.7,
+    "L2": {
+     "bg_msb": 2.4581760238451267e-11,
+     "hp_sigma_px": 1.7828932288854738e-13,
+     "depth_5sig_V_solar_colour": 7.0422573315577495
+    },
+    "L3": {
+     "bg_msb": 1.2862124153288981e-14,
+     "hp_sigma_px": 8.042519110910007e-15,
+     "depth_5sig_V_solar_colour": 10.406590416673623
+    }
+   },
+   "102.2": {
+    "hpln": 102.57,
+    "L2": {
+     "bg_msb": 2.5884310320134496e-11,
+     "hp_sigma_px": 2.8296055082366323e-13,
+     "depth_5sig_V_solar_colour": 6.540755940013895
+    },
+    "L3": {
+     "bg_msb": 1.395738434090089e-14,
+     "hp_sigma_px": 9.293463890699786e-15,
+     "depth_5sig_V_solar_colour": 10.24962663095478
+    }
+   }
+  }
+ },
+ "notes": [
+  "aperture r=2 px, annulus 4-8 px on a 25-px median high-pass",
+  "depth = 5 sigma on the aperture noise for a B-V=0.65 source, one L2 frame",
+  "ZP: V = ZP - 2.5 log10(sum MSB in aperture); colour coefficient positive = red stars brighter",
+  "field_model_check: ram_lon > 0 means the ram side per psp_geometry (t = prograde tangential)"
+ ]
+}

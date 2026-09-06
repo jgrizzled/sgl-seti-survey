@@ -83,6 +83,13 @@ def radec_to_vec(ra_deg, dec_deg) -> np.ndarray:
                      np.sin(dec)], axis=-1)
 
 
+def vec_to_radec(v) -> tuple[np.ndarray, np.ndarray]:
+    v = np.asarray(v, float)
+    v = v / np.linalg.norm(v, axis=-1, keepdims=True)
+    return (np.degrees(np.arctan2(v[..., 1], v[..., 0])) % 360.0,
+            np.degrees(np.arcsin(np.clip(v[..., 2], -1, 1))))
+
+
 def source_direction(ev: dict, channel: str) -> np.ndarray:
     a = radec_to_vec(ev["star_icrs_ra_deg"], ev["star_icrs_dec_deg"])
     return a if channel == "S2" else -a

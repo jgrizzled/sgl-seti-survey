@@ -638,3 +638,33 @@ barycentric grid does *not* see.
   headers are date-stripped (BJD rounded to the day); CARMENES DR1 zip
   members carry an `_A` suffix and the Karmn `+` must be
   percent-encoded.
+
+## §14 — WISPR survey (2026-09-06): template-based static removal on a fast observer
+
+- **Static content dominates the exceedance budget when the template
+  is incomplete.** 9 of 15 blind exceedances were static flux in the
+  source aperture that Tycho-2/Hipparcos missed (G 10–12.5 stars,
+  bright neighbours 2–3 px off-centre, a high-PM star counted twice
+  because Tycho positions were not PM-propagated); Gaia DR3 accounted
+  for each to ~20 %. Rule: any aperture-template construction must be
+  built from Gaia with proper motions and a measured encircled-fraction
+  curve — and the Gaia check belongs in the adjudication ladder.
+- **Ridge curvature recurs in every field with a brightness ridge**
+  (HI-1 H1 in ecliptic latitude, WISPR in orbit latitude): symmetric
+  ±offset controls straddle the ridge and their median under-predicts
+  the source's background. Quadratic interpolation through the control
+  ladder removes it (van-maanen S1 S_stack 17 → 5).
+- **Gate on the quantity that matters**: a per-star ZP-scatter gate
+  rejected 87 % of perihelion frames although the ZP itself was
+  determined to 0.05–0.14 mag; the uncertainty gate (MAD/√n) kept them.
+  Likewise, single-frame pulse statistics on summed-exposure images are
+  particle-hit-limited (control thresholds 57–410σ); persistence
+  belongs in the statistic.
+- **Bright in-patch stars are systematics-limited at a few percent**
+  (V 4.7 at S/N 100 → ±10σ per event); self-calibration per exposure
+  regime helps but cannot remove monotonic drifts. Declare the class.
+- **Process hygiene**: long runs must be launched detached (`setsid
+  nohup … &`) — a session restart and a power outage each killed the
+  confirmatory run (append-only measurement files made resumption
+  lossless); `pkill -f "<pattern>"` from a shell whose command line
+  contains the pattern kills that shell (use `"[p]attern"`).

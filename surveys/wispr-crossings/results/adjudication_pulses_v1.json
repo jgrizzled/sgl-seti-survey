@@ -1,0 +1,206 @@
+{
+ "gj-514:S2": {
+  "event": "evt-6b33cadc76ab",
+  "encounter": "E26",
+  "utc": "2025-12-11 19:30",
+  "pair_min_sigma": 5.76,
+  "source_x": [
+   3.7,
+   3.3,
+   5.8,
+   7.4,
+   0.7
+  ],
+  "ctrl_median_x": [
+   0.1,
+   0.1,
+   -0.0,
+   0.0,
+   0.2
+  ],
+  "census": {
+   "planets": {
+    "mercury": 16.999,
+    "venus": 47.774,
+    "earth": 111.626,
+    "mars": 73.406,
+    "jupiter": 88.412,
+    "saturn": 157.325,
+    "uranus": 134.372,
+    "neptune": 156.821
+   },
+   "asteroids": {}
+  }
+ },
+ "van-maanen:S1": {
+  "event": "evt-bb5a3c560833",
+  "encounter": "E17",
+  "utc": "2023-09-25 00:00",
+  "pair_min_sigma": 7.34,
+  "source_x": [
+   5.7,
+   4.8,
+   7.8,
+   7.3,
+   6.0,
+   7.0
+  ],
+  "ctrl_median_x": [
+   1.1,
+   1.9,
+   2.5,
+   4.4,
+   2.9,
+   1.8
+  ],
+  "census": {
+   "planets": {
+    "mercury": 73.997,
+    "venus": 165.668,
+    "earth": 162.622,
+    "mars": 15.266,
+    "jupiter": 156.467,
+    "saturn": 140.142,
+    "uranus": 143.047,
+    "neptune": 162.342
+   },
+   "asteroids": {}
+  }
+ },
+ "wolf-1061:S1": {
+  "event": "evt-2c9c8383c969",
+  "encounter": "E22",
+  "utc": "2024-12-26 16:06",
+  "pair_min_sigma": 6.77,
+  "source_x": [
+   2.9,
+   5.9,
+   6.8,
+   6.8,
+   3.8,
+   0.3
+  ],
+  "ctrl_median_x": [
+   -0.2,
+   0.0,
+   0.2,
+   0.3,
+   0.1,
+   -0.1
+  ],
+  "census": {
+   "planets": {
+    "mercury": 95.235,
+    "venus": 20.489,
+    "earth": 26.948,
+    "mars": 37.907,
+    "jupiter": 12.977,
+    "saturn": 77.594,
+    "uranus": 15.119,
+    "neptune": 68.901
+   },
+   "asteroids": {}
+  }
+ },
+ "gj-1087:S2": {
+  "event": "evt-c78f453dd3c1",
+  "encounter": "E20",
+  "utc": "2024-07-05 05:00",
+  "pair_min_sigma": 3.84,
+  "source_x": [
+   -1.5,
+   -0.2,
+   3.8,
+   4.4
+  ],
+  "ctrl_median_x": [
+   0.2,
+   0.2,
+   -0.1,
+   -0.2
+  ],
+  "census": {
+   "planets": {
+    "mercury": 71.355,
+    "venus": 35.104,
+    "earth": 157.26,
+    "mars": 67.46,
+    "jupiter": 30.152,
+    "saturn": 102.86,
+    "uranus": 38.862,
+    "neptune": 90.463
+   },
+   "asteroids": {}
+  }
+ },
+ "gj-783:S2": {
+  "event": "evt-bd738221c1b6",
+  "encounter": "E14",
+  "utc": "2022-12-11 10:53",
+  "pair_min_sigma": 17.0,
+  "source_x": [
+   0.6,
+   2.0,
+   17.0,
+   19.1,
+   -0.4,
+   -0.8
+  ],
+  "ctrl_median_x": [
+   -0.1,
+   0.4,
+   -0.2,
+   -0.2,
+   0.2,
+   0.2
+  ],
+  "census": {
+   "planets": {
+    "mercury": 26.432,
+    "venus": 15.368,
+    "earth": 136.383,
+    "mars": 136.298,
+    "jupiter": 72.994,
+    "saturn": 31.309,
+    "uranus": 108.859,
+    "neptune": 58.114
+   },
+   "asteroids": {}
+  }
+ },
+ "gj-667-c:S2": {
+  "event": "evt-80e90df5e1ef",
+  "encounter": "E01",
+  "utc": "2018-11-03 08:37",
+  "pair_min_sigma": 19.61,
+  "source_x": [
+   0.3,
+   0.0,
+   1.3,
+   1.5,
+   -0.1,
+   0.6
+  ],
+  "ctrl_median_x": [
+   0.1,
+   -0.2,
+   -0.5,
+   0.1,
+   0.4,
+   0.4
+  ],
+  "census": {
+   "planets": {
+    "mercury": 39.345,
+    "venus": 127.989,
+    "earth": 127.785,
+    "mars": 96.689,
+    "jupiter": 22.166,
+    "saturn": 21.806,
+    "uranus": 127.348,
+    "neptune": 83.329
+   },
+   "asteroids": {}
+  }
+ }
+}

@@ -1,0 +1,1910 @@
+{
+ "survey": "wispr-crossings",
+ "version": "threshold_freeze_v1.4",
+ "drafted": "2026-09-05",
+ "frozen": "2026-09-05 (v1.0); v1.1 amendment 2026-09-05 pre-dev, before any survey frame was measured",
+ "inputs": {
+  "events": "crossings/psp_v1/events.ecsv",
+  "crossings_id": "xng-c339df63a608",
+  "observer_table_sha256": "sha256:e5b74f1163029886b7aa709e64565aeb54b697dbdd4aa88c83aa4cb8d537c69b",
+  "census": "surveys/wispr-crossings/results/psp_census_v1.json",
+  "coverage": "surveys/wispr-crossings/results/coverage_v1.json",
+  "inventory": "runs/wispr-crossings/coverage/l2_inventory.json (snapshot 2026-09-05T23:32:16Z)",
+  "recon": [
+   "surveys/wispr-crossings/results/recon_star_check_v1.json",
+   "surveys/wispr-crossings/results/recon_depth_v1.json"
+  ],
+  "hypotheses": "surveys/wispr-crossings/hypotheses.md (v1.0 D0-D10)"
+ },
+ "seed": 20260905,
+ "substrate": {
+  "primary": "NRL L3 synoptic WISPR-I (wispr.nrl.navy.mil/data/rel/fits/L3/orbitNN/YYYYMMDD/), rescaled to L2 units by (DSUN_OBS/0.2 AU)^-2.3",
+  "parity": "NRL L2 same stems, per-encounter sample, gate 0.90-1.05",
+  "fallback": "L2 minus own model only by amendment",
+  "secondary_ledger": "WISPR-O synoptic (2XYZ) \u2014 ledger + off-beam baseline, not searched",
+  "frame_bytes": 3954240,
+  "synoptic_codes_I": [
+   "1211",
+   "1221",
+   "1141",
+   "1301"
+  ],
+  "region_digits": [
+   "1",
+   "2"
+  ]
+ },
+ "era": {
+  "start": "2018-10-31 (E01)",
+  "end": "2026-03-17 (E27 release currency)",
+  "encounters_released": 27,
+  "q_groups_rsun": {
+   "E01-E03": 35.7,
+   "E04-E05": 27.9,
+   "E06-E07": 20.4,
+   "E08-E09": 16.0,
+   "E10-E16": 13.3,
+   "E17-E21": 11.4,
+   "E22-E27": 9.85
+  },
+  "geometry_source": "Horizons -96 table only (header DSUN_OBS off by up to 0.65 % in E22)"
+ },
+ "geometry": {
+  "in_beam_radius_au": 0.1,
+  "fov_test": "per-frame header celestial WCS (pixel inside 12-px margin)",
+  "fov_model_for_planning": {
+   "WISPR_I": {
+    "ram_lon_deg": [
+     13.5,
+     53.5
+    ],
+    "half_height_deg": 20.0
+   },
+   "WISPR_O": {
+    "ram_lon_deg": [
+     50.5,
+     108.5
+    ],
+    "half_height_deg": 26.5
+   }
+  },
+  "source": {
+   "S1": "star antipode (fixed ICRS)",
+   "S2": "star, PM-propagated (fixed ICRS)"
+  },
+  "arc": "in-beam AND in WISPR-I field AND inside an encounter (r<0.25 AU) or a released extended-campaign frame",
+  "ram_side_rule": "post-t_ca half only (measured: 0.99 post / 0.02 pre)"
+ },
+ "chain": {
+  "astrometry": "header RA/DEC-ZPN ('A') refined by Hipparcos match: translation then a 2x3 affine on >=30 matched V<=7.5 stars, rms<=1.5 px (recon frames 0.62-0.75 px); else no_astrometry",
+  "rescale": "divide L3 by (DSUN_OBS/0.2 AU)^2.3 (header value the pipeline used)",
+  "highpass": "15-px median filter",
+  "aperture": {
+   "r_px": 3.0,
+   "annulus_px": [
+    5.0,
+    9.0
+   ],
+   "psf_fwhm_px": 1.6,
+   "encircled_r3": 0.97
+  },
+  "zp": {
+   "calibrators": "Hipparcos V<=8, aperture S/N>=15",
+   "form": "2-D quadratic (>=60 calibrators) or linear (30-59) + colour term (ensemble coefficient, recon +0.23..+0.31 mag/(B-V))",
+   "gate": {
+    "min_calibrators": 30,
+    "quadratic_surface_min": 60,
+    "max_mad_mag": 0.35
+   },
+   "zp_ref": -21.35
+  },
+  "static_removal": "stellar template: Tycho-2 VT<=11 UNION Hipparcos V<=9.5 (de-duplicated within 10 arcsec; Tycho-2 lacks the brightest and the high-PM stars) within r+2 px, PSF-weighted encircled fraction, through the frame ZP and colour system; S2 target star from s2_stellar_template",
+  "secondary": "star-fixed differential (arc minus own off-beam WISPR-I baseline) where >=30 baseline frames exist; reported, never S",
+  "flux_unit": "1e-12 of the MSB-based scale; ZP_REF (V-equivalent of 1 unit) = 8.65",
+  "template_response": "E = F - (a + b T): a, b fitted at reduce on the control-patch ensemble (<F_arc> medians in template-brightness bins, >= 15 patches per bin, weighted line); source patches excluded from the fit; reported with the bins"
+ },
+ "controls": {
+  "type": "parallel_track_sky_patches",
+  "orbit_lat_offsets_deg": [
+   1.5,
+   -1.5,
+   3.0,
+   -3.0,
+   4.5,
+   -4.5,
+   6.0,
+   -6.0
+  ],
+  "far_north_ladder": "sources at orbit latitude > +9 deg: one-sided [-1.5,-3,-4.5,-6,-7.5,-9,-10.5,-12]",
+  "min_controls_per_epoch": 5,
+  "T": "max over the 8 control patches of the identical statistic"
+ },
+ "statistics": {
+  "per_event": "z = mean(D_arc)/SE(D_arc), D_src = E_src - median_k E_k, E = F - F_template (same frame)",
+  "S_stack": "sum z / sqrt(n)",
+  "S_event": "max z",
+  "S_pulse": "max single-frame D_src / robust epoch scatter",
+  "rule": "S > max(T, 0)",
+  "trials_per_unit": 3
+ },
+ "gates": {
+  "frame": {
+   "region": "Z in {1,2}, OBJECT InnerFFV, 960x1024",
+   "nsumexp_min": 5,
+   "astrometry": "refined (chain)",
+   "zp": "gate (chain)"
+  },
+  "epoch": {
+   "aperture_finite_frac_min": 0.9,
+   "body_proximity_px": 12,
+   "bodies": [
+    "mercury",
+    "venus",
+    "earth",
+    "mars",
+    "jupiter",
+    "saturn",
+    "bright asteroids H<7",
+    "comets (Horizons @-96 / WISPR summaries)"
+   ],
+   "recon_exclusion": "frames listed in recon_exclusions dropped for those events",
+   "bright_body_proximity_deg": {
+    "mercury": 10.0,
+    "venus": 10.0,
+    "earth": 5.0,
+    "jupiter": 5.0
+   },
+   "bright_body_in_fov_veto_retired": [
+    "venus",
+    "mercury",
+    "earth",
+    "jupiter"
+   ]
+  },
+  "patch": {
+   "tycho_vt_mask": 7.0,
+   "mask_radius_px": 4,
+   "s2_source_exempt": true
+  },
+  "event": {
+   "min_usable_arc_epochs": 10
+  },
+  "unit": {
+   "min_events_for_stack": 8
+  }
+ },
+ "recon_exclusions": {
+  "evt-f7aef2bb4d83": [
+   {
+    "frame_stamp": "20241221T233014_1211",
+    "utc": "2024-12-21T23:30:14",
+    "telescope": "I",
+    "role": "arc"
+   },
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-e879e818d351": [
+   {
+    "frame_stamp": "20241221T233014_1211",
+    "utc": "2024-12-21T23:30:14",
+    "telescope": "I",
+    "role": "arc"
+   },
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-195cb9068967": [
+   {
+    "frame_stamp": "20241227T003010_1211",
+    "utc": "2024-12-27T00:30:10",
+    "telescope": "I",
+    "role": "arc"
+   }
+  ],
+  "evt-39be1f1b8208": [
+   {
+    "frame_stamp": "20241221T233014_1211",
+    "utc": "2024-12-21T23:30:14",
+    "telescope": "I",
+    "role": "arc"
+   },
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-3e25aba05019": [
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-ddca31170305": [
+   {
+    "frame_stamp": "20241224T000015_1211",
+    "utc": "2024-12-24T00:00:15",
+    "telescope": "I",
+    "role": "arc"
+   }
+  ],
+  "evt-690c7a1c5a4f": [
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-2c9c8383c969": [
+   {
+    "frame_stamp": "20241227T003010_1211",
+    "utc": "2024-12-27T00:30:10",
+    "telescope": "I",
+    "role": "arc"
+   }
+  ],
+  "evt-fd9296ecefcc": [
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-a9a332746921": [
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-b919352afc76": [
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-2121a5de0274": [
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-e169cd390481": [
+   {
+    "frame_stamp": "20241224T000015_1211",
+    "utc": "2024-12-24T00:00:15",
+    "telescope": "I",
+    "role": "arc"
+   }
+  ],
+  "evt-5a341288946e": [
+   {
+    "frame_stamp": "20241221T233014_1211",
+    "utc": "2024-12-21T23:30:14",
+    "telescope": "I",
+    "role": "arc"
+   },
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ],
+  "evt-4053b8772500": [
+   {
+    "frame_stamp": "20241227T003010_1211",
+    "utc": "2024-12-27T00:30:10",
+    "telescope": "I",
+    "role": "baseline"
+   }
+  ],
+  "evt-fe6fce1928c3": [
+   {
+    "frame_stamp": "20241224T000015_1211",
+    "utc": "2024-12-24T00:00:15",
+    "telescope": "I",
+    "role": "arc"
+   }
+  ],
+  "evt-73d5fc799dfb": [
+   {
+    "frame_stamp": "20241221T233014_1211",
+    "utc": "2024-12-21T23:30:14",
+    "telescope": "I",
+    "role": "arc"
+   },
+   {
+    "frame_stamp": "20241224T000205_2222",
+    "utc": "2024-12-24T00:02:05",
+    "telescope": "O",
+    "role": "arc"
+   }
+  ]
+ },
+ "split": {
+  "dev": [
+   "gj-908:S1",
+   "gj-908:S2",
+   "ross-154:S2",
+   "61-vir:S1",
+   "61-vir:S2"
+  ],
+  "confirmatory": [
+   "ez-aqr:S2",
+   "fomalhaut:S2",
+   "gj-1002:S1",
+   "gj-1002:S2",
+   "gj-1087:S1",
+   "gj-1087:S2",
+   "gj-1111:S1",
+   "gj-1276:S2",
+   "gj-251:S1",
+   "gj-514:S1",
+   "gj-514:S2",
+   "gj-518:S1",
+   "gj-518:S2",
+   "gj-54:S1",
+   "gj-54:S2",
+   "gj-581:S1",
+   "gj-581:S2",
+   "gj-667-c:S1",
+   "gj-667-c:S2",
+   "gj-783:S2",
+   "gj-876:S2",
+   "lacaille-8760:S2",
+   "luyten-star:S1",
+   "procyon-a:S1",
+   "procyon-b:S1",
+   "ross-128:S1",
+   "ross-128:S2",
+   "teegarden:S1",
+   "teegarden:S2",
+   "van-maanen:S1",
+   "van-maanen:S2",
+   "wolf-1061:S1",
+   "wolf-1061:S2",
+   "wolf-359:S1",
+   "wolf-437:S1",
+   "wolf-437:S2"
+  ],
+  "cross_substrate_family": [
+   "gj-1276:S2",
+   "ross-128:S1",
+   "ross-128:S2",
+   "teegarden:S1",
+   "teegarden:S2",
+   "van-maanen:S1",
+   "van-maanen:S2",
+   "wolf-359:S1"
+  ]
+ },
+ "trials": {
+  "dev": 15,
+  "confirmatory": 108,
+  "total": 123,
+  "expected_control_crossings": {
+   "dev": 1.67,
+   "confirmatory": 12.0,
+   "total": 13.67
+  }
+ },
+ "positive_control": {
+  "in_situ": [
+   "61-vir S2 template null (V 4.7, dev)",
+   "gj-908 S2 template null (V 9.0, dev)",
+   "Hipparcos ensemble era stability per encounter"
+  ],
+  "moving_body": "brightest of Vesta/Ceres/Pallas or a catalogued comet with V<=7 in a WISPR-I arc band (Horizons @-96), chosen at dev; recovery <= 0.2 mag",
+  "completeness": "stamp-response injections into real frames (sglsurvey.inject.stamp_response), C1-normalised"
+ },
+ "units": {
+  "61-vir:S1": {
+   "covered_events": 25,
+   "encounters": [
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 226.0,
+   "min_arc_frames": 50,
+   "median_baseline_frames": 70.0,
+   "total_arc_frames": 5998
+  },
+  "61-vir:S2": {
+   "covered_events": 22,
+   "encounters": [
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 269.0,
+   "min_arc_frames": 89,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 5517
+  },
+  "ez-aqr:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 117.0,
+   "min_arc_frames": 49,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2843
+  },
+  "fomalhaut:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 113.0,
+   "min_arc_frames": 38,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2737
+  },
+  "gj-1002:S1": {
+   "covered_events": 20,
+   "encounters": [
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 328.0,
+   "min_arc_frames": 91,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 7374
+  },
+  "gj-1002:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 166.0,
+   "min_arc_frames": 35,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 4142
+  },
+  "gj-1087:S1": {
+   "covered_events": 27,
+   "encounters": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 92.0,
+   "min_arc_frames": 13,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2351
+  },
+  "gj-1087:S2": {
+   "covered_events": 10,
+   "encounters": [
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 21.0,
+   "min_arc_frames": 13,
+   "median_baseline_frames": 142.0,
+   "total_arc_frames": 205
+  },
+  "gj-1111:S1": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 92.0,
+   "min_arc_frames": 44,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2343
+  },
+  "gj-1276:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 126.0,
+   "min_arc_frames": 46,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 3098
+  },
+  "gj-251:S1": {
+   "covered_events": 27,
+   "encounters": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 88.0,
+   "min_arc_frames": 39,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2430
+  },
+  "gj-514:S1": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 208.5,
+   "min_arc_frames": 20,
+   "median_baseline_frames": 30.0,
+   "total_arc_frames": 5806
+  },
+  "gj-514:S2": {
+   "covered_events": 22,
+   "encounters": [
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 293.0,
+   "min_arc_frames": 48,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 6561
+  },
+  "gj-518:S1": {
+   "covered_events": 25,
+   "encounters": [
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 224.0,
+   "min_arc_frames": 55,
+   "median_baseline_frames": 44.0,
+   "total_arc_frames": 6048
+  },
+  "gj-518:S2": {
+   "covered_events": 22,
+   "encounters": [
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 275.5,
+   "min_arc_frames": 100,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 6120
+  },
+  "gj-54:S1": {
+   "covered_events": 20,
+   "encounters": [
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 368.0,
+   "min_arc_frames": 147,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 7351
+  },
+  "gj-54:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 194.5,
+   "min_arc_frames": 18,
+   "median_baseline_frames": 8.0,
+   "total_arc_frames": 5068
+  },
+  "gj-581:S1": {
+   "covered_events": 24,
+   "encounters": [
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 165.5,
+   "min_arc_frames": 49,
+   "median_baseline_frames": 210.0,
+   "total_arc_frames": 5303
+  },
+  "gj-581:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 148.0,
+   "min_arc_frames": 20,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 3553
+  },
+  "gj-667-c:S1": {
+   "covered_events": 11,
+   "encounters": [
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 123.0,
+   "min_arc_frames": 61,
+   "median_baseline_frames": 112.0,
+   "total_arc_frames": 1263
+  },
+  "gj-667-c:S2": {
+   "covered_events": 27,
+   "encounters": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 96.0,
+   "min_arc_frames": 16,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2450
+  },
+  "gj-783:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 89.0,
+   "min_arc_frames": 43,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2297
+  },
+  "gj-876:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 122.5,
+   "min_arc_frames": 48,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2962
+  },
+  "gj-908:S1": {
+   "covered_events": 20,
+   "encounters": [
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 377.0,
+   "min_arc_frames": 84,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 7972
+  },
+  "gj-908:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 164.0,
+   "min_arc_frames": 35,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 4142
+  },
+  "lacaille-8760:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 91.5,
+   "min_arc_frames": 45,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2332
+  },
+  "luyten-star:S1": {
+   "covered_events": 27,
+   "encounters": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 87.0,
+   "min_arc_frames": 32,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2316
+  },
+  "procyon-a:S1": {
+   "covered_events": 27,
+   "encounters": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 86.0,
+   "min_arc_frames": 20,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2280
+  },
+  "procyon-b:S1": {
+   "covered_events": 27,
+   "encounters": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 86.0,
+   "min_arc_frames": 20,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2280
+  },
+  "ross-128:S1": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 161.5,
+   "min_arc_frames": 37,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 4028
+  },
+  "ross-128:S2": {
+   "covered_events": 20,
+   "encounters": [
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 260.0,
+   "min_arc_frames": 83,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 6013
+  },
+  "ross-154:S2": {
+   "covered_events": 27,
+   "encounters": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 89.0,
+   "min_arc_frames": 38,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2456
+  },
+  "teegarden:S1": {
+   "covered_events": 25,
+   "encounters": [
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 167.0,
+   "min_arc_frames": 41,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 3775
+  },
+  "teegarden:S2": {
+   "covered_events": 24,
+   "encounters": [
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 178.5,
+   "min_arc_frames": 57,
+   "median_baseline_frames": 176.5,
+   "total_arc_frames": 5651
+  },
+  "van-maanen:S1": {
+   "covered_events": 22,
+   "encounters": [
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 301.5,
+   "min_arc_frames": 96,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 7026
+  },
+  "van-maanen:S2": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 208.0,
+   "min_arc_frames": 28,
+   "median_baseline_frames": 17.0,
+   "total_arc_frames": 5636
+  },
+  "wolf-1061:S1": {
+   "covered_events": 22,
+   "encounters": [
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 136.0,
+   "min_arc_frames": 28,
+   "median_baseline_frames": 204.0,
+   "total_arc_frames": 3370
+  },
+  "wolf-1061:S2": {
+   "covered_events": 27,
+   "encounters": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 115.0,
+   "min_arc_frames": 37,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 2888
+  },
+  "wolf-359:S1": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 128.0,
+   "min_arc_frames": 46,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 3124
+  },
+  "wolf-437:S1": {
+   "covered_events": 26,
+   "encounters": [
+    "E01",
+    "E02",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 193.5,
+   "min_arc_frames": 32,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 4940
+  },
+  "wolf-437:S2": {
+   "covered_events": 20,
+   "encounters": [
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12",
+    "E13",
+    "E14",
+    "E15",
+    "E16",
+    "E17",
+    "E18",
+    "E19",
+    "E20",
+    "E21",
+    "E22",
+    "E23",
+    "E24",
+    "E25",
+    "E26",
+    "E27"
+   ],
+   "median_arc_frames": 384.0,
+   "min_arc_frames": 161,
+   "median_baseline_frames": 0.0,
+   "total_arc_frames": 7667
+  }
+ },
+ "amendments": [
+  {
+   "version": "v1.1",
+   "date": "2026-09-05",
+   "stage": "pre-dev machinery (no survey frame measured)",
+   "items": [
+    "affine (2x3) WCS refinement after the translation: a 0.3-deg rotation on the 2024-12-27 recon frame left 1.8 px rms with translation only, 0.75 px after the affine",
+    "calibrator S/N >= 15 (was 8), >= 30 calibrators with a linear ZP surface below 60 (was >= 60 quadratic), ZP-scatter gate MAD <= 0.35 mag (was 0.25): at perihelion exposures (15 s) only ~40 Hipparcos V <= 8 stars reach S/N 15, and admitting fainter ones biases the ZP (-21.40 at S/N>=15, -21.28 at >=10, -21.05 at >=8 on the 2024-12-25 04:50 frame: noise-boosted selection); the frozen gates would have dropped most perihelion frames"
+   ]
+  },
+  {
+   "version": "v1.2",
+   "date": "2026-09-05",
+   "stage": "dev-driven, before any confirmatory pixel",
+   "items": [
+    "stellar template = Tycho-2 UNION Hipparcos + the S2 target star table: the Tycho-2 VT<=11 extract lacks 61 Vir (V 4.7) and gj-908 (V 9.0, PM 1.4 arcsec/yr), so the dev S2 source patches carried the whole star as excess (61-vir S2 z ~ +120 per event, gj-908 S2 z ~ +5)",
+    "flux unit 1e-12 (ZP_REF 8.65): the stored series/calibrator dumps had been rounded to zero at the 1e-13 scale (colour-system fit had n = 0)"
+   ]
+  },
+  {
+   "version": "v1.3",
+   "date": "2026-09-05",
+   "stage": "dev-driven (partial dev reduce, 6k frames), before any confirmatory pixel",
+   "items": [
+    "bright-body veto = proximity (Mercury/Venus 10 deg, Earth/Jupiter 5 deg to any of the event's patches), the frame-wide in-FOV veto retired: control same-frame-differential MAD by class - clean 1.35; Mercury 2-10 deg 3.2-4.9, >10 deg 1.49; Venus 5-10 deg 1.42, >10 deg 1.73; Jupiter 2-5 deg 1.51, 5-10 deg 1.35, >10 deg 2.33 (an encounter confound: E12-E14 in-field epochs 2.3-4.3 vs clean 1.2-1.4, other encounters equal); the frame-wide veto had flagged 36 % of arc epochs",
+    "bright-star S2 class: 61-vir S2 (V 4.74) reads 0.95 -> 0.88 of its template across E06-E14 (z -7 to -21 per event at S/N ~100): a few-percent ZP-surface/linearity error on a bright star exceeds the arc noise; units with 3 <= V < 8 use a self-calibrated template (unit median ratio), V < 3 is declared unsearchable; gj-908 S2 (V 9.0) ratios 0.65-1.04 with z within +-2.6 - the faint-star template null holds"
+   ]
+  },
+  {
+   "version": "v1.4",
+   "date": "2026-09-05",
+   "stage": "dev-driven (partial dev reduce), before any confirmatory pixel",
+   "items": [
+    "template response: on the dev control-patch ensemble the measured arc flux is a + b T with b ~ 0.85-0.9 (V 6-8 template patches read 0.885 of the template, MAD 0.08) and a ~ -0.07 units (blank patches read below zero: the high-pass/annulus zero point in star fields); V 8-11 patches read 0.2-0.5 units low, i.e. more than the per-event arc noise (~0.13) - an uncorrected template would bias every z negative and cap the stack sensitivity; the response is measured from the controls and applied to source and controls alike (the HI-1 differential-flat pattern)",
+    "bright-star self-calibration per q-group (>= 3 events), else per unit: 61-vir S2's ratio drifts 0.95 -> 0.88 between E06-E08 and E11-E14"
+   ]
+  }
+ ],
+ "s2_stellar_template": {
+  "targets_v_bv": {
+   "61-vir": [
+    4.74,
+    0.7
+   ],
+   "ez-aqr": [
+    12.38,
+    1.95
+   ],
+   "fomalhaut": [
+    1.16,
+    0.09
+   ],
+   "gj-1002": [
+    13.84,
+    1.9
+   ],
+   "gj-1087": [
+    14.13,
+    0.64
+   ],
+   "gj-1276": [
+    15.66,
+    1.87
+   ],
+   "gj-514": [
+    9.03,
+    1.49
+   ],
+   "gj-518": [
+    14.9,
+    0.75
+   ],
+   "gj-54": [
+    12.07,
+    1.81
+   ],
+   "gj-581": [
+    10.56,
+    1.2
+   ],
+   "gj-667-c": [
+    10.22,
+    1.57
+   ],
+   "gj-783": [
+    5.32,
+    0.12
+   ],
+   "gj-876": [
+    10.19,
+    1.56
+   ],
+   "gj-908": [
+    8.99,
+    1.43
+   ],
+   "lacaille-8760": [
+    6.68,
+    1.38
+   ],
+   "ross-128": [
+    11.15,
+    1.75
+   ],
+   "ross-154": [
+    10.43,
+    1.76
+   ],
+   "teegarden": [
+    15.14,
+    2.07
+   ],
+   "van-maanen": [
+    12.37,
+    0.55
+   ],
+   "wolf-1061": [
+    10.07,
+    1.57
+   ],
+   "wolf-437": [
+    11.39,
+    1.56
+   ]
+  },
+  "source": "Simbad TAP allfluxes (V, B) matched to the registry positions by J2000 position + proper motion, 2026-09-05 (results/s2_star_table_simbad.json); gj-1002 B-V, gj-518 V/B-V (Wolf 489, B 15.66) and van-maanen B-V from the LASCO table / spectral type",
+  "note": "the S2 source patch template includes the target star explicitly; catalogue stars within 20 arcsec of the patch centre are dropped to avoid double counting"
+ },
+ "bright_star_class": {
+  "v_self_calibrated": 8.0,
+  "v_unsearchable": 3.0,
+  "rule": "S2 units whose target star has 3 <= V < 8: the source template is scaled by the unit's own median <F_src>/T_src over its events (a signal present at the same level in every encounter is absorbed - declared); V < 3 (fomalhaut): not searchable; the scale is per encounter q-group when the group has >= 3 events (the bright-star ratio drifts 0.95 -> 0.88 from E06 to E14 with the exposure regime), else the unit value"
+ }
+}

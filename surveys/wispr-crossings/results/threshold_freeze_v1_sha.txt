@@ -1,0 +1,1 @@
+sha256:a2007a7acdf0017dd5646b971e4c2e7daa5cda8b9e1a12ca094c29feca2e7679  configs/threshold_freeze_v1.json  frozen 2026-09-05 (user approval of D0-D10 as recommended)

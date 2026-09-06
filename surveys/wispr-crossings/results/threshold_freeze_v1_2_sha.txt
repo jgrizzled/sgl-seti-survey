@@ -1,0 +1,1 @@
+sha256:1d425df271bb910b1443195990becb339c9d16c7077a748191604f750ddae573  configs/threshold_freeze_v1_2.json  amendment v1.2 2026-09-05 (dev-driven, pre-confirmatory)

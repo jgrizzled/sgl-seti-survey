@@ -2013,3 +2013,57 @@ the continuum. Report `report/spectral_archives.md`; plan §5.15 O4 →
 complete, new §5.17, §3.6 row 10, §5.7 refresh item, status line;
 learnings §14. Runs: `runs/spectral-archives/v1/` (data 12 GB,
 ensembles, logs, manifest). Nothing committed to git.
+
+## 22. PSP/WISPR — observer-geometry pass and sunward survey (2026-09-05 → 09-06; plan §5.15 items O5, O14 — complete)
+
+**O5 geometry pass (2026-09-05).** `crossings/psp_v1` (Horizons −96,
+10-min sampling in yearly chunks, 0.5-d coarse bracketing — both
+orbit-forced; 7,448 events). ε = atan(b_e / r_along): the grazing
+cones never enter WISPR (1.2 R☉ ≤ 6.9°; 2.5 R☉ 13.3°–13.7° for
+gj-1111/wolf-359 at the E22+ perihelia, minutes at the rung edge →
+`not_constrainable`); the 0.1 AU rungs are open every encounter
+(median 23 h per event in WISPR-I on 21 targets per channel; the
+post-t_ca half of every window is the ram-side half). WISPR survey
+queued as O14. Note `surveys/wispr-crossings/notes/psp_wispr_geometry_pass_2026-09-05.md`.
+
+**O14 recon + freeze (2026-09-05).** NRL tree snapshot (106,752 L2 /
+84,732 L3 files), header field-model check (ram side confirmed,
+WISPR-I ram-longitude 13.7°–51.6°, offset ~5° south), astrometry
+~1 px, ZP stable to 0.04 mag across a 3× exposure change, single-
+frame depth V 5.4–6.3 at 0.058 AU / 7.1–7.9 at 0.157 AU; L3 = (L2 −
+model) × (r/0.2)^2.3 rescaled exactly; 41 units ≥ 10 covered events;
+no off-beam baseline at perihelion crossings → stellar-template
+construction. Hypotheses D0–D10 and threshold freeze v1.0 approved by
+the user (D0 = run at LASCO-class depth for the inner-cone, pulse,
+new-target and in-band-532 nm cells).
+
+**Dev (2026-09-05 → 06).** Amendments, all frozen before any
+confirmatory pixel: v1.1 affine WCS refinement + calibrator S/N ≥ 15
+(pre-dev); v1.2 template = Tycho ∪ Hipparcos + S2 star table (Tycho
+extract lacks bright and high-PM stars) + flux unit 1e-12; v1.3
+proximity bright-body veto (Mercury/Venus 10°, Earth/Jupiter 5°) +
+bright-star S2 class (self-calibrated, V < 3 unsearchable); v1.4
+measured template response E = F − (a + b T); v1.5 ZP uncertainty gate
+(the MAD gate had rejected 87 % of frames inside 0.06 AU) + two-frame
+persistence in S_pulse (particle hits set control thresholds at
+57–410σ). Machinery: E2 frames unbinned (binned on load); urllib
+fetch hung in a TLS handshake → `requests` with timeouts, forkserver
+pool; the `pkill -f` self-kill lesson. Dev result 15 trials / 1
+exceedance vs 1.67 (61-vir S2 bright-star drift); gj-908 S2 template
+null; Vesta E22 recovered at −0.19 ± 0.32 mag.
+
+**Confirmatory (2026-09-06; blind, once).** 38,270 frames (two
+interruptions — a session restart and a power outage — resumed
+without loss; one truncated line skipped), 30 searched units / 588
+events / 90 trials, **15 exceedances vs 10.0 expected, all
+adjudicated, 0 candidates**: 9 static-content or latitude-curvature
+systematics (Gaia DR3 accounts for the missing static flux to ~20 %;
+quadratic-in-latitude controls remove the ridge bias), 3 bright-star
+class (gj-783 S2), 2 arc-exit ramps, 1 extended coronal front
+(wolf-1061 S1, pixels flat). Family stacks null. Completeness:
+S_stack m90 V_eq 7.8–12.0 (median 9.3) → downlink 0.08–3.9 GW (median
+1.2 GW), 10-m uplink 0.07–4.4 GW; ±0.3 mag flux-scale systematic
+declared. 5 units not covered (sources above the field's +15° north
+edge); fomalhaut S2 unsearchable. Report `report/wispr_crossings.md`.
+Lessons for a v2: Gaia template with PM propagation, quadratic
+latitude interpolation, measured field extent.
