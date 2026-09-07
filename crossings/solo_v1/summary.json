@@ -1,0 +1,21 @@
+{
+  "crossings_id": "xng-dea7100a725c",
+  "generated_utc": "2026-09-06T21:19:23+00:00",
+  "observer_id": "solo-spacecraft",
+  "n_targets": 88,
+  "n_events": 4624,
+  "n_invalid": 0,
+  "warnings": [
+    "uncertainty_not_propagated",
+    "degraded_event_count:98"
+  ],
+  "files": {
+    "events_ecsv": "/home/jgreene/code/sgl-seti-survey/crossings/solo_v1/events.ecsv",
+    "windows_ecsv": "/home/jgreene/code/sgl-seti-survey/crossings/solo_v1/windows.ecsv",
+    "result_json": "/home/jgreene/code/sgl-seti-survey/crossings/solo_v1/result.json",
+    "manifest_json": "/home/jgreene/code/sgl-seti-survey/crossings/solo_v1/manifest.json"
+  },
+  "observer_table": "crossings/observers/solo_sc_ephemeris.npz",
+  "observer_table_sha256": "sha256:d1dd6486b3d5772c4eeb971e9df3f641e48a0fb2099b3b062fe0cae148cbb234",
+  "observer_accuracy": "JPL Horizons -144 SSB vectors at 10 min sampling (yearly chunks); at the 0.28 AU perihelion the chord sagitta over one step is ~5e-8 AU, negligible. Heliocentric 0.28-1.0 AU orbit (period ~150-180 d, Venus-resonant): the Earth-center list is meaningless for Solar Orbiter at every rung; the observer crosses each Sun-star axis twice per orbit at whatever heliocentric radius the orbit has at the star's (anti-)longitude"
+}

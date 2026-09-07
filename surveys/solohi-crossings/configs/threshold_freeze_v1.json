@@ -1,0 +1,1045 @@
+{
+ "survey": "solohi-crossings",
+ "version": "threshold_freeze_v1.0",
+ "drafted": "2026-09-06",
+ "frozen": "2026-09-06 (user approval of hypotheses D0-D9 and this construction in one decision; drafted after the coverage intersect, before any survey frame is fetched)",
+ "inputs": {
+  "events": "crossings/solo_v1/events.ecsv",
+  "crossings_id": "xng-dea7100a725c",
+  "observer_table_sha256": "sha256:d1dd6486b3d5772c4eeb971e9df3f641e48a0fb2099b3b062fe0cae148cbb234",
+  "census": "surveys/solohi-crossings/results/solo_census_v1.json",
+  "coverage": "surveys/solohi-crossings/results/coverage_v1.json",
+  "inventory": "runs/solohi-crossings/coverage/soar_l2_inventory.json (snapshot 2026-09-06T20:50:55Z)",
+  "recon": [
+   "surveys/solohi-crossings/results/recon_star_check_v1.json",
+   "surveys/solohi-crossings/results/recon_depth_vs_eps_v1.json"
+  ],
+  "hypotheses": "surveys/solohi-crossings/hypotheses.md (v1.0 D0-D9)"
+ },
+ "seed": 20260906,
+ "substrate": {
+  "primary": "SoloHI L2 inner tiles solohi-1ft / solohi-2ft (SOAR inventory of record; NRL so_data/L2/YYYYMMDD/ and the SOAR data service as fetch routes)",
+  "baseline_only": "outer tiles 3ft/3fg/4ft/4fg (not indexed in v1.0: the same-tile baseline suffices for every covered event)",
+  "frame_bytes": 3960000,
+  "no_background_subtracted_product": true
+ },
+ "era": {
+  "start": "2022-01 (P04)",
+  "end": "2026-04-10 (release currency; P12)",
+  "orbits_covered": [
+   "P04",
+   "P05",
+   "P06",
+   "P07",
+   "P08",
+   "P09",
+   "P10",
+   "P11",
+   "P12"
+  ],
+  "inclination_groups": {
+   "P04-P05": "pre 2022-09 flyby",
+   "P06-P09": "2022-09 to 2025-02",
+   "P10-P12": "post 2025-02 flyby"
+  },
+  "geometry_source": "Horizons -144 table only"
+ },
+ "geometry": {
+  "in_beam_radius_au": 0.1,
+  "fov_test": "per-frame header celestial WCS refined by the Hipparcos match; pixel inside DSTART/DSTOP with a 12-px margin",
+  "fov_model_for_planning": {
+   "1": {
+    "lam_deg": [
+     -25.6,
+     -5.2
+    ],
+    "bet_deg": [
+     -19.3,
+     -0.2
+    ]
+   },
+   "2": {
+    "lam_deg": [
+     -24.3,
+     -5.1
+    ],
+    "bet_deg": [
+     0.2,
+     20.5
+    ]
+   },
+   "3": {
+    "lam_deg": [
+     -45.0,
+     -24.7
+    ],
+    "bet_deg": [
+     0.3,
+     19.3
+    ]
+   },
+   "4": {
+    "lam_deg": [
+     -45.1,
+     -26.0
+    ],
+    "bet_deg": [
+     -20.5,
+     -0.1
+    ]
+   }
+  },
+  "source": {
+   "S1": "star antipode (fixed ICRS)",
+   "S2": "star, PM-propagated (fixed ICRS)"
+  },
+  "arc": "in-beam AND inside the source's nominal inner tile (index) AND inside the frame footprint (measure)",
+  "anti_ram_rule": "pre-t_ca half only (measured: 1.00 pre / 0.00 post)",
+  "seam_rule": "sources within 0.25 deg of the orbital plane are in the tile-1/2 seam (ross-128 P05-P09): ledger rows, never indexed"
+ },
+ "chain": {
+  "astrometry": "header RA/DEC-ZPN ('A') refined by Hipparcos match: translation then a 2x3 affine on >=30 matched V<=8 stars, rms<=1.5 px (recon 0.5-1.1 px); else no_astrometry",
+  "highpass": "25-px median filter on L2",
+  "aperture": {
+   "r_px": 3.0,
+   "annulus_px": [
+    5.0,
+    9.0
+   ],
+   "psf_fwhm_px": 1.8
+  },
+  "zp": {
+   "calibrators": "Hipparcos 3<=V<=9, aperture S/N>=15",
+   "form": "2-D quadratic (>=60 calibrators) or linear (30-59) + colour term (ensemble coefficient, recon +0.30..+0.47 mag/(B-V), frozen 0.38 then re-measured)",
+   "gate": {
+    "min_calibrators": 30,
+    "quadratic_surface_min": 60,
+    "max_zp_uncertainty_mag": 0.1
+   },
+   "zp_ref": 10.05,
+   "flux_unit": "1e-12 of the MSB scale; V_eq = 10.05 - 2.5 log10 F"
+  },
+  "static_removal_primary": "star-fixed differential: E' = F_arc - median(F_base) per patch, F_base = the same patch on the same-tile off-beam frames before the arc (index cap 100 frames nearest the arc); event needs >= 10 baseline epochs on the source and >= 5 controls, else no_baseline (dropped from the stack)",
+  "static_removal_secondary": "Gaia DR3 stellar template (G<15, PM-propagated from J2016.0, EDR3 G->V transformation, B-V ~ 0.75 BP-RP - 0.10) within r+2 px, PSF-weighted encircled fraction, through the frame ZP and colour system; S2 target star from s2_stellar_template; E = F - (a + b T) with (a, b) fitted at reduce on the control ensemble; reported per event as z_template, never S",
+  "control_interpolation": "quadratic in orbit latitude over the available controls (linear with < 4, median with < 3), evaluated at the source offset (0) or at the control's own offset from the other seven"
+ },
+ "controls": {
+  "type": "parallel_track_sky_patches",
+  "orbit_lat_offsets_deg": [
+   1.5,
+   -1.5,
+   3.0,
+   -3.0,
+   4.5,
+   -4.5,
+   6.0,
+   -6.0
+  ],
+  "one_sided_ladder": "when the two-sided ladder would leave the tile (within 6.3 deg of the seam or the outer latitude edge): [1.5..12] toward the tile interior",
+  "min_controls_per_epoch": 5,
+  "T": "max over the 8 control patches of the identical statistic"
+ },
+ "statistics": {
+  "per_event": "z = mean(D_arc)/SE(D_arc), D_src = E'_src - Q(E'_controls) (same frame)",
+  "S_stack": "sum z / sqrt(n)",
+  "S_event": "max z",
+  "S_pulse": "max over consecutive frame pairs of min(x_i, x_i+1), x = (D_src - median)/robust scatter",
+  "rule": "S > max(T, 0)",
+  "trials_per_unit": 3
+ },
+ "gates": {
+  "frame": {
+   "tiles": [
+    "1",
+    "2"
+   ],
+   "shape": "1024x960",
+   "nbin": 4,
+   "nsumexp_min": 5,
+   "level": "L2",
+   "astrometry": "refined (chain)",
+   "zp": "gate (chain)"
+  },
+  "epoch": {
+   "aperture_finite_frac_min": 0.9,
+   "body_proximity_px": 12,
+   "bodies": [
+    "mercury",
+    "venus",
+    "earth",
+    "mars",
+    "jupiter",
+    "saturn"
+   ],
+   "bright_body_proximity_deg": {
+    "mercury": 10.0,
+    "venus": 10.0,
+    "earth": 5.0,
+    "jupiter": 5.0
+   },
+   "recon_exclusion": "frames listed in recon_exclusions dropped for those events"
+  },
+  "patch": {
+   "gaia_g_mask": 6.0,
+   "mask_radius_px": 4,
+   "s2_source_exempt": true
+  },
+  "event": {
+   "min_usable_arc_epochs": 10,
+   "min_base_epochs": 10
+  },
+  "unit": {
+   "min_events_for_stack": 3
+  }
+ },
+ "bright_star_class": {
+  "v_self_calibrated": 8.0,
+  "v_unsearchable": 3.0,
+  "note": "star-fixed route: the star's own baseline is its template; the class is recorded (61-vir S2) for the template-route check only"
+ },
+ "s2_stellar_template": {
+  "targets_v_bv": {
+   "61-vir": [
+    4.74,
+    0.7
+   ],
+   "ez-aqr": [
+    12.38,
+    1.95
+   ],
+   "gj-1002": [
+    13.837,
+    1.9
+   ],
+   "gj-1111": [
+    14.9,
+    2.0
+   ],
+   "gj-1276": [
+    15.66,
+    1.87
+   ],
+   "gj-251": [
+    9.89,
+    1.58
+   ],
+   "gj-876": [
+    10.192,
+    1.56
+   ],
+   "gj-908": [
+    8.993,
+    1.43
+   ],
+   "ross-128": [
+    11.153,
+    1.75
+   ],
+   "ross-154": [
+    10.43,
+    1.76
+   ],
+   "teegarden": [
+    15.14,
+    2.07
+   ],
+   "van-maanen": [
+    12.374,
+    0.55
+   ],
+   "wolf-359": [
+    13.54,
+    2.03
+   ]
+  },
+  "sources": "WISPR Simbad table + literature fills (gj-1111, gj-251, wolf-359; gj-1002 B-V)"
+ },
+ "volume": {
+  "baseline_cap_frames": 100,
+  "index_window_days": [
+   -12,
+   1
+  ],
+  "expected_frames": "~29k arc + ~20k baseline"
+ },
+ "split": {
+  "dev": [
+   "gj-908:S1",
+   "gj-908:S2",
+   "61-vir:S1",
+   "61-vir:S2",
+   "ross-154:S1"
+  ],
+  "confirmatory": [
+   "ez-aqr:S1",
+   "ez-aqr:S2",
+   "gj-1002:S1",
+   "gj-1002:S2",
+   "gj-1111:S1",
+   "gj-1111:S2",
+   "gj-1276:S1",
+   "gj-1276:S2",
+   "gj-251:S2",
+   "gj-581:S1",
+   "gj-588:S1",
+   "gj-667-c:S1",
+   "gj-674:S1",
+   "gj-682:S1",
+   "gj-783:S1",
+   "gj-876:S1",
+   "gj-876:S2",
+   "ross-128:S1",
+   "ross-128:S2",
+   "ross-154:S2",
+   "teegarden:S1",
+   "teegarden:S2",
+   "van-maanen:S1",
+   "van-maanen:S2",
+   "wolf-1061:S1",
+   "wolf-359:S1",
+   "wolf-359:S2"
+  ],
+  "seed": 20260906,
+  "note": "dev = the two template/baseline tests (61-vir S1+S2, gj-908 S1+S2) + the flare star at its best S1 geometry (ross-154 S1); confirmatory = the other 27 covered units (81 trials, 9.0 expected control crossings)"
+ },
+ "recon_exclusions": {
+  "evt-f2b9d79fedb6": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250320T000259_V01.fits",
+    "utc": "2025-03-20T00:02:59",
+    "role": "arc",
+    "unit": "61-vir:S1"
+   }
+  ],
+  "evt-f5a63df20430": [
+   {
+    "frame": "solo_L2_solohi-2ft_20230418T000307_V01.fits",
+    "utc": "2023-04-18T00:03:07",
+    "role": "baseline",
+    "unit": "ez-aqr:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-2ft_20230418T001507_V01.fits",
+    "utc": "2023-04-18T00:15:07",
+    "role": "baseline",
+    "unit": "ez-aqr:S1"
+   }
+  ],
+  "evt-8f24c1b006ba": [
+   {
+    "frame": "solo_L2_solohi-1ft_20210423T035956_V02.fits",
+    "utc": "2021-04-23T03:59:56",
+    "role": "baseline",
+    "unit": "gj-1111:S1"
+   }
+  ],
+  "evt-0e6808d4e6d7": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230218T210735_V02.fits",
+    "utc": "2023-02-18T21:07:35",
+    "role": "baseline",
+    "unit": "gj-1111:S1"
+   }
+  ],
+  "evt-f7d9ba0188c7": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240214T091231_V01.fits",
+    "utc": "2024-02-14T09:12:31",
+    "role": "arc",
+    "unit": "gj-1111:S1"
+   }
+  ],
+  "evt-19dcf7a8c55f": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250201T113640_V01.fits",
+    "utc": "2025-02-01T11:36:40",
+    "role": "baseline",
+    "unit": "gj-1111:S1"
+   }
+  ],
+  "evt-ee805c5dd867": [
+   {
+    "frame": "solo_L2_solohi-1ft_20260104T042211_V01.fits",
+    "utc": "2026-01-04T04:22:11",
+    "role": "baseline",
+    "unit": "gj-1111:S1"
+   }
+  ],
+  "evt-c0d7e81ab944": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220410T062216_V02.fits",
+    "utc": "2022-04-10T06:22:16",
+    "role": "arc",
+    "unit": "gj-1276:S1"
+   }
+  ],
+  "evt-4c811d7cd20f": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230418T001307_V01.fits",
+    "utc": "2023-04-18T00:13:07",
+    "role": "baseline",
+    "unit": "gj-1276:S1"
+   }
+  ],
+  "evt-72ea49d95821": [
+   {
+    "frame": "solo_L2_solohi-1ft_20231017T063737_V01.fits",
+    "utc": "2023-10-17T06:37:37",
+    "role": "arc",
+    "unit": "gj-1276:S1"
+   }
+  ],
+  "evt-15a48e36ed12": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240415T001406_V01.fits",
+    "utc": "2024-04-15T00:14:06",
+    "role": "arc",
+    "unit": "gj-1276:S1"
+   }
+  ],
+  "evt-f73b04c4fa33": [
+   {
+    "frame": "solo_L2_solohi-1ft_20251215T040208_V01.fits",
+    "utc": "2025-12-15T04:02:08",
+    "role": "baseline",
+    "unit": "gj-251:S1"
+   }
+  ],
+  "evt-17f50f1da09b": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220311T053411_V03.fits",
+    "utc": "2022-03-11T05:34:11",
+    "role": "baseline",
+    "unit": "gj-518:S1"
+   }
+  ],
+  "evt-6ad8cf59f52f": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240924T100029_V01.fits",
+    "utc": "2024-09-24T10:00:29",
+    "role": "arc",
+    "unit": "gj-581:S1"
+   }
+  ],
+  "evt-b0c46e6b6209": [
+   {
+    "frame": "solo_L2_solohi-2ft_20220326T000208_V02.fits",
+    "utc": "2022-03-26T00:02:08",
+    "role": "arc",
+    "unit": "gj-667-c:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-2ft_20220326T002608_V02.fits",
+    "utc": "2022-03-26T00:26:08",
+    "role": "arc",
+    "unit": "gj-667-c:S1"
+   }
+  ],
+  "evt-2e12833931a8": [
+   {
+    "frame": "solo_L2_solohi-2ft_20221010T000236_V02.fits",
+    "utc": "2022-10-10T00:02:36",
+    "role": "arc",
+    "unit": "gj-667-c:S1"
+   }
+  ],
+  "evt-62174c34c5c5": [
+   {
+    "frame": "solo_L2_solohi-2ft_20231006T000330_V01.fits",
+    "utc": "2023-10-06T00:03:30",
+    "role": "arc",
+    "unit": "gj-667-c:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-2ft_20231006T000930_V01.fits",
+    "utc": "2023-10-06T00:09:30",
+    "role": "arc",
+    "unit": "gj-667-c:S1"
+   }
+  ],
+  "evt-0d9a576d2a8e": [
+   {
+    "frame": "solo_L2_solohi-2ft_20240402T211559_V01.fits",
+    "utc": "2024-04-02T21:15:59",
+    "role": "arc",
+    "unit": "gj-667-c:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-2ft_20240402T212759_V01.fits",
+    "utc": "2024-04-02T21:27:59",
+    "role": "arc",
+    "unit": "gj-667-c:S1"
+   }
+  ],
+  "evt-9d95a1287741": [
+   {
+    "frame": "solo_L2_solohi-2ft_20250328T000456_V01.fits",
+    "utc": "2025-03-28T00:04:56",
+    "role": "arc",
+    "unit": "gj-667-c:S1"
+   }
+  ],
+  "evt-cdd2b1575a1d": [
+   {
+    "frame": "solo_L2_solohi-2ft_20250328T000456_V01.fits",
+    "utc": "2025-03-28T00:04:56",
+    "role": "baseline",
+    "unit": "gj-674:S1"
+   }
+  ],
+  "evt-0371029e9e0b": [
+   {
+    "frame": "solo_L2_solohi-2ft_20221010T000236_V02.fits",
+    "utc": "2022-10-10T00:02:36",
+    "role": "baseline",
+    "unit": "gj-682:S1"
+   }
+  ],
+  "evt-d32cf42e053a": [
+   {
+    "frame": "solo_L2_solohi-2ft_20231006T000330_V01.fits",
+    "utc": "2023-10-06T00:03:30",
+    "role": "arc",
+    "unit": "gj-682:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-2ft_20231006T000930_V01.fits",
+    "utc": "2023-10-06T00:09:30",
+    "role": "arc",
+    "unit": "gj-682:S1"
+   }
+  ],
+  "evt-c07628028f88": [
+   {
+    "frame": "solo_L2_solohi-2ft_20240402T211559_V01.fits",
+    "utc": "2024-04-02T21:15:59",
+    "role": "arc",
+    "unit": "gj-682:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-2ft_20240402T212759_V01.fits",
+    "utc": "2024-04-02T21:27:59",
+    "role": "arc",
+    "unit": "gj-682:S1"
+   }
+  ],
+  "evt-a35906055be9": [
+   {
+    "frame": "solo_L2_solohi-2ft_20250328T000456_V01.fits",
+    "utc": "2025-03-28T00:04:56",
+    "role": "baseline",
+    "unit": "gj-682:S1"
+   }
+  ],
+  "evt-1a379bce02c9": [
+   {
+    "frame": "solo_L2_solohi-2ft_20230418T000307_V01.fits",
+    "utc": "2023-04-18T00:03:07",
+    "role": "baseline",
+    "unit": "gj-876:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-2ft_20230418T001507_V01.fits",
+    "utc": "2023-04-18T00:15:07",
+    "role": "baseline",
+    "unit": "gj-876:S1"
+   }
+  ],
+  "evt-f700d7150098": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220410T062216_V02.fits",
+    "utc": "2022-04-10T06:22:16",
+    "role": "baseline",
+    "unit": "gj-908:S1"
+   }
+  ],
+  "evt-3bb29ec824f1": [
+   {
+    "frame": "solo_L2_solohi-1ft_20221027T122446_V02.fits",
+    "utc": "2022-10-27T12:24:46",
+    "role": "arc",
+    "unit": "gj-908:S1"
+   }
+  ],
+  "evt-b7822818a862": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240415T001406_V01.fits",
+    "utc": "2024-04-15T00:14:06",
+    "role": "baseline",
+    "unit": "gj-908:S1"
+   }
+  ],
+  "evt-34d0641a1c07": [
+   {
+    "frame": "solo_L2_solohi-1ft_20241014T100234_V01.fits",
+    "utc": "2024-10-14T10:02:34",
+    "role": "arc",
+    "unit": "gj-908:S1"
+   }
+  ],
+  "evt-10df2c03031c": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250827T032550_V01.fits",
+    "utc": "2025-08-27T03:25:50",
+    "role": "arc",
+    "unit": "ross-128:S1"
+   }
+  ],
+  "evt-586ea31b8e5a": [
+   {
+    "frame": "solo_L2_solohi-1ft_20231007T063733_V01.fits",
+    "utc": "2023-10-07T06:37:33",
+    "role": "arc",
+    "unit": "ross-154:S1"
+   }
+  ],
+  "evt-bcb718916497": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240404T104759_V01.fits",
+    "utc": "2024-04-04T10:47:59",
+    "role": "arc",
+    "unit": "ross-154:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-1ft_20240402T212559_V01.fits",
+    "utc": "2024-04-02T21:25:59",
+    "role": "baseline",
+    "unit": "ross-154:S1"
+   }
+  ],
+  "evt-95b42a074fb8": [
+   {
+    "frame": "solo_L2_solohi-1ft_20241001T012527_V01.fits",
+    "utc": "2024-10-01T01:25:27",
+    "role": "arc",
+    "unit": "ross-154:S1"
+   }
+  ],
+  "evt-6fefef4fe9bd": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250916T033953_V01.fits",
+    "utc": "2025-09-16T03:39:53",
+    "role": "arc",
+    "unit": "ross-154:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-1ft_20250915T000353_V01.fits",
+    "utc": "2025-09-15T00:03:53",
+    "role": "baseline",
+    "unit": "ross-154:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-1ft_20250915T001553_V01.fits",
+    "utc": "2025-09-15T00:15:53",
+    "role": "baseline",
+    "unit": "ross-154:S1"
+   }
+  ],
+  "evt-b83c02e194ff": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220510T064252_V02.fits",
+    "utc": "2022-05-10T06:42:52",
+    "role": "baseline",
+    "unit": "teegarden:S1"
+   }
+  ],
+  "evt-59b5786f3c21": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220420T062225_V02.fits",
+    "utc": "2022-04-20T06:22:25",
+    "role": "baseline",
+    "unit": "van-maanen:S1"
+   }
+  ],
+  "evt-33e4c32e46ee": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220321T055807_V02.fits",
+    "utc": "2022-03-21T05:58:07",
+    "role": "baseline",
+    "unit": "wolf-1061:S1"
+   }
+  ],
+  "evt-d29b8c9978e1": [
+   {
+    "frame": "solo_L2_solohi-1ft_20221007T122237_V02.fits",
+    "utc": "2022-10-07T12:22:37",
+    "role": "baseline",
+    "unit": "wolf-1061:S1"
+   }
+  ],
+  "evt-e38c9ddd6974": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250303T120111_V01.fits",
+    "utc": "2025-03-03T12:01:11",
+    "role": "baseline",
+    "unit": "wolf-359:S1"
+   }
+  ],
+  "evt-262487f36491": [
+   {
+    "frame": "solo_L2_solohi-1ft_20260201T002215_V01.fits",
+    "utc": "2026-02-01T00:22:15",
+    "role": "baseline",
+    "unit": "wolf-359:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-1ft_20260201T011015_V01.fits",
+    "utc": "2026-02-01T01:10:15",
+    "role": "baseline",
+    "unit": "wolf-359:S1"
+   },
+   {
+    "frame": "solo_L2_solohi-1ft_20260203T042616_V01.fits",
+    "utc": "2026-02-03T04:26:16",
+    "role": "baseline",
+    "unit": "wolf-359:S1"
+   }
+  ],
+  "evt-367069b62c40": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220311T053411_V03.fits",
+    "utc": "2022-03-11T05:34:11",
+    "role": "baseline",
+    "unit": "wolf-437:S1"
+   }
+  ],
+  "evt-0ad45cd153f0": [
+   {
+    "frame": "solo_L2_solohi-1ft_20231027T063745_V01.fits",
+    "utc": "2023-10-27T06:37:45",
+    "role": "baseline",
+    "unit": "61-vir:S2"
+   }
+  ],
+  "evt-057b3098f406": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240425T014814_V01.fits",
+    "utc": "2024-04-25T01:48:14",
+    "role": "baseline",
+    "unit": "61-vir:S2"
+   }
+  ],
+  "evt-27d60abe833f": [
+   {
+    "frame": "solo_L2_solohi-1ft_20241024T100247_V01.fits",
+    "utc": "2024-10-24T10:02:47",
+    "role": "baseline",
+    "unit": "61-vir:S2"
+   }
+  ],
+  "evt-2e189aac2f44": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220219T013030_V02.fits",
+    "utc": "2022-02-19T01:30:30",
+    "role": "baseline",
+    "unit": "ez-aqr:S2"
+   }
+  ],
+  "evt-df3e64767b49": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220907T104300_V02.fits",
+    "utc": "2022-09-07T10:43:00",
+    "role": "baseline",
+    "unit": "ez-aqr:S2"
+   }
+  ],
+  "evt-da4e2a15f8c5": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230310T224322_V02.fits",
+    "utc": "2023-03-10T22:43:22",
+    "role": "baseline",
+    "unit": "ez-aqr:S2"
+   }
+  ],
+  "evt-d51c79032a90": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230907T045949_V01.fits",
+    "utc": "2023-09-07T04:59:49",
+    "role": "baseline",
+    "unit": "ez-aqr:S2"
+   }
+  ],
+  "evt-1bd06ba2f1ed": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240305T100014_V01.fits",
+    "utc": "2024-03-05T10:00:14",
+    "role": "baseline",
+    "unit": "ez-aqr:S2"
+   }
+  ],
+  "evt-6f7eda0be36e": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240904T081242_V02.fits",
+    "utc": "2024-09-04T08:12:42",
+    "role": "arc",
+    "unit": "ez-aqr:S2"
+   }
+  ],
+  "evt-46e07d1f09dd": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230320T224711_V01.fits",
+    "utc": "2023-03-20T22:47:11",
+    "role": "baseline",
+    "unit": "gj-1002:S2"
+   }
+  ],
+  "evt-2ec57e5402ff": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230917T063539_V01.fits",
+    "utc": "2023-09-17T06:35:39",
+    "role": "baseline",
+    "unit": "gj-1002:S2"
+   }
+  ],
+  "evt-30c682d75cb1": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240315T100207_V01.fits",
+    "utc": "2024-03-15T10:02:07",
+    "role": "baseline",
+    "unit": "gj-1002:S2"
+   }
+  ],
+  "evt-ca9a71bf1869": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250303T120111_V01.fits",
+    "utc": "2025-03-03T12:01:11",
+    "role": "baseline",
+    "unit": "gj-1276:S2"
+   }
+  ],
+  "evt-1c97b8289356": [
+   {
+    "frame": "solo_L2_solohi-1ft_20260201T002215_V01.fits",
+    "utc": "2026-02-01T00:22:15",
+    "role": "baseline",
+    "unit": "gj-1276:S2"
+   },
+   {
+    "frame": "solo_L2_solohi-1ft_20260201T011015_V01.fits",
+    "utc": "2026-02-01T01:10:15",
+    "role": "baseline",
+    "unit": "gj-1276:S2"
+   },
+   {
+    "frame": "solo_L2_solohi-1ft_20260203T042616_V01.fits",
+    "utc": "2026-02-03T04:26:16",
+    "role": "baseline",
+    "unit": "gj-1276:S2"
+   }
+  ],
+  "evt-f3004245cd36": [
+   {
+    "frame": "solo_L2_solohi-2ft_20241001T011627_V01.fits",
+    "utc": "2024-10-01T01:16:27",
+    "role": "arc",
+    "unit": "gj-251:S2"
+   },
+   {
+    "frame": "solo_L2_solohi-2ft_20241001T012227_V01.fits",
+    "utc": "2024-10-01T01:22:27",
+    "role": "arc",
+    "unit": "gj-251:S2"
+   }
+  ],
+  "evt-df4b112ecf48": [
+   {
+    "frame": "solo_L2_solohi-2ft_20250915T000553_V01.fits",
+    "utc": "2025-09-15T00:05:53",
+    "role": "baseline",
+    "unit": "gj-251:S2"
+   }
+  ],
+  "evt-dc3e6e7878b0": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220301T015422_V03.fits",
+    "utc": "2022-03-01T01:54:22",
+    "role": "arc",
+    "unit": "gj-876:S2"
+   }
+  ],
+  "evt-b2bf00a20d67": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220917T113047_V02.fits",
+    "utc": "2022-09-17T11:30:47",
+    "role": "arc",
+    "unit": "gj-876:S2"
+   }
+  ],
+  "evt-4b82d949dceb": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230310T224322_V02.fits",
+    "utc": "2023-03-10T22:43:22",
+    "role": "baseline",
+    "unit": "gj-876:S2"
+   }
+  ],
+  "evt-5e589bf6cfd0": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230907T045949_V01.fits",
+    "utc": "2023-09-07T04:59:49",
+    "role": "baseline",
+    "unit": "gj-876:S2"
+   }
+  ],
+  "evt-5b3b110181c0": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240305T100014_V01.fits",
+    "utc": "2024-03-05T10:00:14",
+    "role": "baseline",
+    "unit": "gj-876:S2"
+   }
+  ],
+  "evt-df8e0fb86ee5": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240904T081242_V02.fits",
+    "utc": "2024-09-04T08:12:42",
+    "role": "baseline",
+    "unit": "gj-876:S2"
+   }
+  ],
+  "evt-0d7e1be18aa1": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250313T120301_V01.fits",
+    "utc": "2025-03-13T12:03:01",
+    "role": "arc",
+    "unit": "gj-908:S2"
+   }
+  ],
+  "evt-6a28a4488071": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250827T032550_V01.fits",
+    "utc": "2025-08-27T03:25:50",
+    "role": "baseline",
+    "unit": "gj-908:S2"
+   }
+  ],
+  "evt-d263eba6fa16": [
+   {
+    "frame": "solo_L2_solohi-1ft_20260213T042709_V01.fits",
+    "utc": "2026-02-13T04:27:09",
+    "role": "arc",
+    "unit": "gj-908:S2"
+   }
+  ],
+  "evt-5c7ff6d38924": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220410T062216_V02.fits",
+    "utc": "2022-04-10T06:22:16",
+    "role": "baseline",
+    "unit": "ross-128:S2"
+   }
+  ],
+  "evt-395453f09031": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240325T102400_V01.fits",
+    "utc": "2024-03-25T10:24:00",
+    "role": "baseline",
+    "unit": "teegarden:S2"
+   }
+  ],
+  "evt-f4856c47624f": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240924T100029_V01.fits",
+    "utc": "2024-09-24T10:00:29",
+    "role": "arc",
+    "unit": "teegarden:S2"
+   }
+  ],
+  "evt-560d81ff9a80": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250323T122457_V01.fits",
+    "utc": "2025-03-23T12:24:57",
+    "role": "baseline",
+    "unit": "teegarden:S2"
+   }
+  ],
+  "evt-c984aa0f13aa": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250906T033751_V01.fits",
+    "utc": "2025-09-06T03:37:51",
+    "role": "baseline",
+    "unit": "teegarden:S2"
+   }
+  ],
+  "evt-8558485012e1": [
+   {
+    "frame": "solo_L2_solohi-1ft_20260223T045019_V01.fits",
+    "utc": "2026-02-23T04:50:19",
+    "role": "baseline",
+    "unit": "teegarden:S2"
+   }
+  ],
+  "evt-c33c367330e1": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220927T121841_V02.fits",
+    "utc": "2022-09-27T12:18:41",
+    "role": "baseline",
+    "unit": "van-maanen:S2"
+   }
+  ],
+  "evt-0ea675be4c60": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240914T094832_V01.fits",
+    "utc": "2024-09-14T09:48:32",
+    "role": "baseline",
+    "unit": "van-maanen:S2"
+   }
+  ],
+  "evt-0bca7f868ba9": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250313T120301_V01.fits",
+    "utc": "2025-03-13T12:03:01",
+    "role": "baseline",
+    "unit": "van-maanen:S2"
+   }
+  ],
+  "evt-e15b99efed09": [
+   {
+    "frame": "solo_L2_solohi-1ft_20250827T032550_V01.fits",
+    "utc": "2025-08-27T03:25:50",
+    "role": "baseline",
+    "unit": "van-maanen:S2"
+   }
+  ],
+  "evt-e3ce6a19b821": [
+   {
+    "frame": "solo_L2_solohi-1ft_20260213T042709_V01.fits",
+    "utc": "2026-02-13T04:27:09",
+    "role": "baseline",
+    "unit": "van-maanen:S2"
+   }
+  ],
+  "evt-9f31df68e20d": [
+   {
+    "frame": "solo_L2_solohi-1ft_20220410T062216_V02.fits",
+    "utc": "2022-04-10T06:22:16",
+    "role": "arc",
+    "unit": "wolf-359:S2"
+   }
+  ],
+  "evt-053f59e09e3d": [
+   {
+    "frame": "solo_L2_solohi-1ft_20230418T001307_V01.fits",
+    "utc": "2023-04-18T00:13:07",
+    "role": "baseline",
+    "unit": "wolf-359:S2"
+   }
+  ],
+  "evt-bf3113ad97b9": [
+   {
+    "frame": "solo_L2_solohi-1ft_20231017T063737_V01.fits",
+    "utc": "2023-10-17T06:37:37",
+    "role": "arc",
+    "unit": "wolf-359:S2"
+   }
+  ],
+  "evt-5f261d9cf8ae": [
+   {
+    "frame": "solo_L2_solohi-1ft_20240415T001406_V01.fits",
+    "utc": "2024-04-15T00:14:06",
+    "role": "arc",
+    "unit": "wolf-359:S2"
+   }
+  ]
+ }
+}

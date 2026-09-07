@@ -1,0 +1,3858 @@
+{
+ "frames": {
+  "solo_L2_solohi-1ft_20221010T000035_V02.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-1ft_20221010T000035_V02.fits",
+    "date_avg": "2022-10-10T00:00:45.164",
+    "xposure_s": 16.187,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     1024,
+     960
+    ],
+    "nan_pixels": 3100,
+    "dsun_au": 0.29966547355543344,
+    "obs_mode": "HI_SYN_NEAR",
+    "gainmode": "HIGH",
+    "detector": "1",
+    "version": "       1",
+    "vers_cal": "0x111d",
+    "datasat": 1,
+    "datamax": 2.57186e-10
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -13.98,
+     "hplt": -11.29,
+     "eps": 17.98,
+     "ram_lon": -15.11,
+     "orbit_lat": -9.87
+    },
+    "c00": {
+     "hpln": -23.47,
+     "hplt": -21.71,
+     "eps": 31.65,
+     "ram_lon": -25.61,
+     "orbit_lat": -19.26
+    },
+    "cx0": {
+     "hpln": -3.16,
+     "hplt": -18.61,
+     "eps": 19.02,
+     "ram_lon": -5.23,
+     "orbit_lat": -18.31
+    },
+    "c0y": {
+     "hpln": -25.4,
+     "hplt": -2.74,
+     "eps": 25.54,
+     "ram_lon": -25.53,
+     "orbit_lat": -0.2
+    },
+    "cxy": {
+     "hpln": -5.18,
+     "hplt": -0.67,
+     "eps": 5.23,
+     "ram_lon": -5.22,
+     "orbit_lat": -0.26
+    },
+    "left": {
+     "hpln": -24.45,
+     "hplt": -12.47,
+     "eps": 27.33,
+     "ram_lon": -25.57,
+     "orbit_lat": -9.98
+    },
+    "right": {
+     "hpln": -4.18,
+     "hplt": -9.85,
+     "eps": 10.83,
+     "ram_lon": -5.24,
+     "orbit_lat": -9.49
+    },
+    "bottom": {
+     "hpln": -12.94,
+     "hplt": -20.4,
+     "eps": 24.14,
+     "ram_lon": -15.12,
+     "orbit_lat": -19.04
+    },
+    "top": {
+     "hpln": -14.99,
+     "hplt": -1.7,
+     "eps": 15.09,
+     "ram_lon": -15.09,
+     "orbit_lat": -0.23
+    },
+    "speed_km_s_header_vs_table": [
+     67.06,
+     67.07
+    ],
+    "r_au_header_vs_table": [
+     0.29967,
+     0.29967
+    ],
+    "sc_roll_deg": 5.89772,
+    "hglt_obs_deg": -5.41674735729
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 832,
+    "matched_3px": 349,
+    "median_resid_px": 2.1227912951571946,
+    "mean_offset_px": [
+     1.4806771773163505,
+     -0.6344555424818492
+    ],
+    "rms_px": [
+     1.0335130667788501,
+     1.0647696184618132
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 255,
+    "zp0_at_bv0.65": -19.886405870990956,
+    "colour_coeff_mag_per_bv": 0.3700048850828693,
+    "scatter_mad_no_colour": 0.3036934021747164,
+    "scatter_mad_with_colour": 0.17308701115903824,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 8,
+      "zp_median": -20.080364484305623,
+      "resid_median": -0.1857501078575563
+     },
+     "5-6": {
+      "n": 19,
+      "zp_median": -20.181573063165526,
+      "resid_median": -0.08143290281050142
+     },
+     "6-7": {
+      "n": 44,
+      "zp_median": -20.011081876366475,
+      "resid_median": -0.07112968739245673
+     },
+     "7-8": {
+      "n": 79,
+      "zp_median": -19.995901503811357,
+      "resid_median": -0.0792367518960937
+     },
+     "8-9": {
+      "n": 100,
+      "zp_median": -19.917666607106185,
+      "resid_median": -0.02449670600026188
+     },
+     "9-10": {
+      "n": 5,
+      "zp_median": -19.30741041935225,
+      "resid_median": 0.5667852904309711
+     }
+    },
+    "resid_by_elongation": {
+     "15-20": {
+      "n": 35,
+      "resid_median": -0.07772550549009338,
+      "mad": 0.11408402872951998
+     },
+     "20-25": {
+      "n": 141,
+      "resid_median": -0.0673803416018437,
+      "mad": 0.13837232380651598
+     },
+     "25-30": {
+      "n": 75,
+      "resid_median": -0.03975829568970468,
+      "mad": 0.13810938682145574
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 43,
+    "fwhm_px_median": 1.993581513169463,
+    "fwhm_arcsec_median": 147.92582160194783
+   },
+   "noise_vs_elongation": {
+    "26.7": {
+     "hpln": -23.78,
+     "bg_msb": 9.40128010162855e-12,
+     "hp_sigma_px": 8.017065579110637e-14,
+     "depth_5sig_V_solar_colour": 9.732118197855218
+    },
+    "25.4": {
+     "hpln": -22.46,
+     "bg_msb": 1.0340710059064673e-11,
+     "hp_sigma_px": 7.615784721609619e-14,
+     "depth_5sig_V_solar_colour": 9.787870140200077
+    },
+    "24.2": {
+     "hpln": -21.14,
+     "bg_msb": 1.1258231326360946e-11,
+     "hp_sigma_px": 7.916504249014244e-14,
+     "depth_5sig_V_solar_colour": 9.74582316513741
+    },
+    "23.0": {
+     "hpln": -19.82,
+     "bg_msb": 1.2355874136338318e-11,
+     "hp_sigma_px": 8.180702781857007e-14,
+     "depth_5sig_V_solar_colour": 9.710180252321251
+    },
+    "21.9": {
+     "hpln": -18.51,
+     "bg_msb": 1.3553248801034812e-11,
+     "hp_sigma_px": 8.601915872305521e-14,
+     "depth_5sig_V_solar_colour": 9.655668811165178
+    },
+    "20.7": {
+     "hpln": -17.21,
+     "bg_msb": 1.491924812857537e-11,
+     "hp_sigma_px": 8.733886543675628e-14,
+     "depth_5sig_V_solar_colour": 9.639137923189882
+    },
+    "19.6": {
+     "hpln": -15.91,
+     "bg_msb": 1.6470052752182163e-11,
+     "hp_sigma_px": 9.302887496800971e-14,
+     "depth_5sig_V_solar_colour": 9.570612365871973
+    },
+    "18.4": {
+     "hpln": -14.62,
+     "bg_msb": 1.8282898632537847e-11,
+     "hp_sigma_px": 9.921365395904046e-14,
+     "depth_5sig_V_solar_colour": 9.500728176530849
+    },
+    "17.4": {
+     "hpln": -13.34,
+     "bg_msb": 2.0264089017896225e-11,
+     "hp_sigma_px": 1.0814329431951818e-13,
+     "depth_5sig_V_solar_colour": 9.407157800255128
+    },
+    "16.3": {
+     "hpln": -12.08,
+     "bg_msb": 2.2384807549236108e-11,
+     "hp_sigma_px": 1.142477014035026e-13,
+     "depth_5sig_V_solar_colour": 9.347538110440208
+    },
+    "15.3": {
+     "hpln": -10.82,
+     "bg_msb": 2.469116230918722e-11,
+     "hp_sigma_px": 1.236492856021565e-13,
+     "depth_5sig_V_solar_colour": 9.26167775934466
+    },
+    "14.3": {
+     "hpln": -9.58,
+     "bg_msb": 2.7371871262615866e-11,
+     "hp_sigma_px": 1.359133956421732e-13,
+     "depth_5sig_V_solar_colour": 9.159001130732996
+    },
+    "13.4": {
+     "hpln": -8.35,
+     "bg_msb": 3.2446231465477204e-11,
+     "hp_sigma_px": 1.916143421015759e-13,
+     "depth_5sig_V_solar_colour": 8.786086757202828
+    },
+    "12.5": {
+     "hpln": -7.13,
+     "bg_msb": 5.774017722282032e-11,
+     "hp_sigma_px": 3.5358752488445775e-13,
+     "depth_5sig_V_solar_colour": 8.120914453068028
+    },
+    "11.7": {
+     "hpln": -5.93,
+     "bg_msb": 1.0369421293843217e-10,
+     "hp_sigma_px": 9.783305748856108e-13,
+     "depth_5sig_V_solar_colour": 7.015942722259936
+    },
+    "11.0": {
+     "hpln": -4.75,
+     "bg_msb": 1.1886400197447244e-10,
+     "hp_sigma_px": 1.3073178664613216e-12,
+     "depth_5sig_V_solar_colour": 6.701203796875468
+    }
+   }
+  },
+  "solo_L2_solohi-2ft_20221010T000236_V02.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-2ft_20221010T000236_V02.fits",
+    "date_avg": "2022-10-10T00:02:45.381",
+    "xposure_s": 16.187,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     960,
+     1024
+    ],
+    "nan_pixels": 2761,
+    "dsun_au": 0.29965860541355954,
+    "obs_mode": "HI_SYN_NEAR",
+    "gainmode": "HIGH",
+    "detector": "2",
+    "version": "       1",
+    "vers_cal": "0x111d",
+    "datasat": 1,
+    "datamax": 2.45427e-10
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -15.48,
+     "hplt": 9.08,
+     "eps": 17.8,
+     "ram_lon": -14.42,
+     "orbit_lat": 10.54
+    },
+    "c00": {
+     "hpln": -24.17,
+     "hplt": -2.11,
+     "eps": 24.25,
+     "ram_lon": -24.25,
+     "orbit_lat": 0.3
+    },
+    "cx0": {
+     "hpln": -5.25,
+     "hplt": -0.19,
+     "eps": 5.24,
+     "ram_lon": -5.24,
+     "orbit_lat": 0.23
+    },
+    "c0y": {
+     "hpln": -26.18,
+     "hplt": 18.02,
+     "eps": 31.31,
+     "ram_lon": -24.17,
+     "orbit_lat": 20.53
+    },
+    "cxy": {
+     "hpln": -7.29,
+     "hplt": 18.88,
+     "eps": 20.04,
+     "ram_lon": -5.13,
+     "orbit_lat": 19.4
+    },
+    "left": {
+     "hpln": -25.17,
+     "hplt": 8.27,
+     "eps": 26.35,
+     "ram_lon": -24.21,
+     "orbit_lat": 10.74
+    },
+    "right": {
+     "hpln": -6.28,
+     "hplt": 9.62,
+     "eps": 11.34,
+     "ram_lon": -5.19,
+     "orbit_lat": 10.09
+    },
+    "bottom": {
+     "hpln": -14.43,
+     "hplt": -1.14,
+     "eps": 14.47,
+     "ram_lon": -14.47,
+     "orbit_lat": 0.27
+    },
+    "top": {
+     "hpln": -16.51,
+     "hplt": 18.68,
+     "eps": 24.61,
+     "ram_lon": -14.36,
+     "orbit_lat": 20.2
+    },
+    "speed_km_s_header_vs_table": [
+     67.06,
+     67.07
+    ],
+    "r_au_header_vs_table": [
+     0.29966,
+     0.29966
+    ],
+    "sc_roll_deg": 5.89874,
+    "hglt_obs_deg": -5.41569708257
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 876,
+    "matched_3px": 385,
+    "median_resid_px": 2.260784625913203,
+    "mean_offset_px": [
+     1.5032832909642726,
+     0.7648008777504174
+    ],
+    "rms_px": [
+     1.1733691154766077,
+     0.8619981166081088
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 253,
+    "zp0_at_bv0.65": -19.869549612268084,
+    "colour_coeff_mag_per_bv": 0.34610569079801645,
+    "scatter_mad_no_colour": 0.32595583194264627,
+    "scatter_mad_with_colour": 0.199340817873128,
+    "zp_by_vbin": {
+     "5-6": {
+      "n": 15,
+      "zp_median": -20.04824523633215,
+      "resid_median": -0.07703647358644261
+     },
+     "6-7": {
+      "n": 59,
+      "zp_median": -19.92655509568133,
+      "resid_median": -0.11993110769833848
+     },
+     "7-8": {
+      "n": 93,
+      "zp_median": -19.998249933041134,
+      "resid_median": -0.10617871271568902
+     },
+     "8-9": {
+      "n": 73,
+      "zp_median": -19.851157433662028,
+      "resid_median": -0.02446730127952179
+     },
+     "9-10": {
+      "n": 9,
+      "zp_median": -19.1550105283726,
+      "resid_median": 0.7449963846857095
+     }
+    },
+    "resid_by_elongation": {
+     "10-15": {
+      "n": 9,
+      "resid_median": 0.07925004252704682,
+      "mad": 0.20408069046585456
+     },
+     "15-20": {
+      "n": 71,
+      "resid_median": -0.10543198746164606,
+      "mad": 0.1540972319528691
+     },
+     "20-25": {
+      "n": 143,
+      "resid_median": -0.09613531891318061,
+      "mad": 0.15683756956194272
+     },
+     "25-30": {
+      "n": 30,
+      "resid_median": -0.07445853878425446,
+      "mad": 0.14663948144927363
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 44,
+    "fwhm_px_median": 2.1781655151197654,
+    "fwhm_arcsec_median": 161.62214651402232
+   },
+   "noise_vs_elongation": {
+    "25.8": {
+     "hpln": -24.52,
+     "bg_msb": 1.112596473284988e-11,
+     "hp_sigma_px": 8.173887244139476e-14,
+     "depth_5sig_V_solar_colour": 9.727941440665887
+    },
+    "24.6": {
+     "hpln": -23.22,
+     "bg_msb": 1.23289590342468e-11,
+     "hp_sigma_px": 8.405872716638063e-14,
+     "depth_5sig_V_solar_colour": 9.697556022995318
+    },
+    "23.5": {
+     "hpln": -21.92,
+     "bg_msb": 1.3581202135126702e-11,
+     "hp_sigma_px": 8.975484496256957e-14,
+     "depth_5sig_V_solar_colour": 9.62636829416406
+    },
+    "22.3": {
+     "hpln": -20.62,
+     "bg_msb": 1.496459119815219e-11,
+     "hp_sigma_px": 9.58830421310397e-14,
+     "depth_5sig_V_solar_colour": 9.554658535197674
+    },
+    "21.2": {
+     "hpln": -19.33,
+     "bg_msb": 1.6487159727740508e-11,
+     "hp_sigma_px": 1.0307664929931625e-13,
+     "depth_5sig_V_solar_colour": 9.47611231549433
+    },
+    "20.0": {
+     "hpln": -18.04,
+     "bg_msb": 1.8097749861223367e-11,
+     "hp_sigma_px": 1.10622606908084e-13,
+     "depth_5sig_V_solar_colour": 9.399403325008702
+    },
+    "19.0": {
+     "hpln": -16.75,
+     "bg_msb": 1.9901659313592557e-11,
+     "hp_sigma_px": 1.147804064034058e-13,
+     "depth_5sig_V_solar_colour": 9.359343651559932
+    },
+    "17.9": {
+     "hpln": -15.48,
+     "bg_msb": 2.1965727847739203e-11,
+     "hp_sigma_px": 1.23646713701131e-13,
+     "depth_5sig_V_solar_colour": 9.278556601579329
+    },
+    "16.9": {
+     "hpln": -14.21,
+     "bg_msb": 2.4332132662896466e-11,
+     "hp_sigma_px": 1.3385716077229935e-13,
+     "depth_5sig_V_solar_colour": 9.19240902436782
+    },
+    "15.9": {
+     "hpln": -12.96,
+     "bg_msb": 2.715147551235475e-11,
+     "hp_sigma_px": 1.4317258628659956e-13,
+     "depth_5sig_V_solar_colour": 9.119363371421205
+    },
+    "14.9": {
+     "hpln": -11.71,
+     "bg_msb": 3.002700865728514e-11,
+     "hp_sigma_px": 1.6197832658493283e-13,
+     "depth_5sig_V_solar_colour": 8.985370777085851
+    },
+    "14.0": {
+     "hpln": -10.48,
+     "bg_msb": 3.4056209241573043e-11,
+     "hp_sigma_px": 2.422306402335983e-13,
+     "depth_5sig_V_solar_colour": 8.548440354236288
+    },
+    "13.2": {
+     "hpln": -9.26,
+     "bg_msb": 4.7734427521817224e-11,
+     "hp_sigma_px": 3.209320975638974e-13,
+     "depth_5sig_V_solar_colour": 8.242980160344125
+    },
+    "12.5": {
+     "hpln": -8.05,
+     "bg_msb": 6.582180633873946e-11,
+     "hp_sigma_px": 6.686351129020495e-13,
+     "depth_5sig_V_solar_colour": 7.446040098053594
+    },
+    "11.8": {
+     "hpln": -6.86,
+     "bg_msb": 9.266428596665932e-11,
+     "hp_sigma_px": 1.27456342095128e-12,
+     "depth_5sig_V_solar_colour": 6.7456094209016335
+    }
+   }
+  },
+  "solo_L2_solohi-3ft_20221010T000524_V02.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-3ft_20221010T000524_V02.fits",
+    "date_avg": "2022-10-10T00:06:34.729",
+    "xposure_s": 137.708,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     1024,
+     960
+    ],
+    "nan_pixels": 7235,
+    "dsun_au": 0.29964551123921845,
+    "obs_mode": "HI_SYN_NEAR",
+    "gainmode": "HIGH",
+    "detector": "3",
+    "version": "       1",
+    "vers_cal": "0x111d",
+    "datasat": 1,
+    "datamax": 2.68213e-11
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -35.89,
+     "hplt": 6.46,
+     "eps": 36.35,
+     "ram_lon": -35.14,
+     "orbit_lat": 9.96
+    },
+    "c00": {
+     "hpln": -44.89,
+     "hplt": -3.97,
+     "eps": 45.02,
+     "ram_lon": -45.02,
+     "orbit_lat": 0.33
+    },
+    "cx0": {
+     "hpln": -24.65,
+     "hplt": -2.19,
+     "eps": 24.74,
+     "ram_lon": -24.74,
+     "orbit_lat": 0.27
+    },
+    "c0y": {
+     "hpln": -46.32,
+     "hplt": 13.99,
+     "eps": 47.86,
+     "ram_lon": -45.01,
+     "orbit_lat": 18.35
+    },
+    "cxy": {
+     "hpln": -26.53,
+     "hplt": 16.77,
+     "eps": 30.96,
+     "ram_lon": -24.67,
+     "orbit_lat": 19.33
+    },
+    "left": {
+     "hpln": -45.6,
+     "hplt": 5.24,
+     "eps": 45.8,
+     "ram_lon": -45.01,
+     "orbit_lat": 9.57
+    },
+    "right": {
+     "hpln": -25.6,
+     "hplt": 7.56,
+     "eps": 26.55,
+     "ram_lon": -24.7,
+     "orbit_lat": 10.07
+    },
+    "bottom": {
+     "hpln": -35.04,
+     "hplt": -3.15,
+     "eps": 35.16,
+     "ram_lon": -35.16,
+     "orbit_lat": 0.31
+    },
+    "top": {
+     "hpln": -36.74,
+     "hplt": 15.56,
+     "eps": 39.39,
+     "ram_lon": -35.13,
+     "orbit_lat": 19.09
+    },
+    "speed_km_s_header_vs_table": [
+     67.07,
+     67.07
+    ],
+    "r_au_header_vs_table": [
+     0.29965,
+     0.29965
+    ],
+    "sc_roll_deg": 5.90066,
+    "hglt_obs_deg": -5.41369277801
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 885,
+    "matched_3px": 873,
+    "median_resid_px": 1.4442691243937336,
+    "mean_offset_px": [
+     -0.28284640887129536,
+     1.0938851098662372
+    ],
+    "rms_px": [
+     0.7607791223270567,
+     0.8140045593902722
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 849,
+    "zp0_at_bv0.65": -19.996654753549617,
+    "colour_coeff_mag_per_bv": 0.3059586519529757,
+    "scatter_mad_no_colour": 0.2209052433332823,
+    "scatter_mad_with_colour": 0.11672912756363792,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 7,
+      "zp_median": -20.97074668880383,
+      "resid_median": -1.1261643741449987
+     },
+     "5-6": {
+      "n": 24,
+      "zp_median": -20.462293965385754,
+      "resid_median": -0.578756364268294
+     },
+     "6-7": {
+      "n": 114,
+      "zp_median": -20.0901354792163,
+      "resid_median": -0.104301059504877
+     },
+     "7-8": {
+      "n": 241,
+      "zp_median": -19.952635551226646,
+      "resid_median": 0.045477304237653726
+     },
+     "8-9": {
+      "n": 330,
+      "zp_median": -19.971132486217655,
+      "resid_median": 0.04593047652114102
+     },
+     "9-10": {
+      "n": 131,
+      "zp_median": -19.95539779807082,
+      "resid_median": 0.0787327179034385
+     }
+    },
+    "resid_by_elongation": {
+     "25-30": {
+      "n": 141,
+      "resid_median": 0.025554419232104664,
+      "mad": 0.1089641385704235
+     },
+     "30-35": {
+      "n": 235,
+      "resid_median": 0.042278725591085475,
+      "mad": 0.1036697331322907
+     },
+     "35-40": {
+      "n": 231,
+      "resid_median": 0.05044951684254784,
+      "mad": 0.11900887511777823
+     },
+     "40-45": {
+      "n": 203,
+      "resid_median": 0.024039919204817295,
+      "mad": 0.09091147536690755
+     },
+     "45-50": {
+      "n": 39,
+      "resid_median": -0.08287444729450044,
+      "mad": 0.19169023414482683
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 76,
+    "fwhm_px_median": 1.842938930450408,
+    "fwhm_arcsec_median": 136.74798529590794
+   },
+   "noise_vs_elongation": {
+    "45.3": {
+     "hpln": -45.02,
+     "bg_msb": 4.493864481924792e-12,
+     "hp_sigma_px": 3.4684014254410255e-14,
+     "depth_5sig_V_solar_colour": 10.5315845154892
+    },
+    "44.1": {
+     "hpln": -43.85,
+     "bg_msb": 3.944129311345135e-12,
+     "hp_sigma_px": 2.1260459083342898e-14,
+     "depth_5sig_V_solar_colour": 11.062976310240352
+    },
+    "43.0": {
+     "hpln": -42.66,
+     "bg_msb": 4.0821116018691095e-12,
+     "hp_sigma_px": 2.18153467295909e-14,
+     "depth_5sig_V_solar_colour": 11.035002605622928
+    },
+    "41.8": {
+     "hpln": -41.46,
+     "bg_msb": 4.356218510914722e-12,
+     "hp_sigma_px": 2.340429933189725e-14,
+     "depth_5sig_V_solar_colour": 10.958668795752903
+    },
+    "40.6": {
+     "hpln": -40.24,
+     "bg_msb": 4.657220789572314e-12,
+     "hp_sigma_px": 2.4721112656944653e-14,
+     "depth_5sig_V_solar_colour": 10.899237871225978
+    },
+    "39.4": {
+     "hpln": -39.02,
+     "bg_msb": 4.996175565277761e-12,
+     "hp_sigma_px": 2.589100613591133e-14,
+     "depth_5sig_V_solar_colour": 10.849035586488196
+    },
+    "38.2": {
+     "hpln": -37.77,
+     "bg_msb": 5.37074703287066e-12,
+     "hp_sigma_px": 2.7163775655897336e-14,
+     "depth_5sig_V_solar_colour": 10.796932568093457
+    },
+    "37.0": {
+     "hpln": -36.52,
+     "bg_msb": 5.793953858357348e-12,
+     "hp_sigma_px": 2.888759231822746e-14,
+     "depth_5sig_V_solar_colour": 10.730129539591307
+    },
+    "35.8": {
+     "hpln": -35.26,
+     "bg_msb": 6.20932884103087e-12,
+     "hp_sigma_px": 3.00385180271312e-14,
+     "depth_5sig_V_solar_colour": 10.687711649042964
+    },
+    "34.6": {
+     "hpln": -33.99,
+     "bg_msb": 6.680448295243169e-12,
+     "hp_sigma_px": 3.17276140256173e-14,
+     "depth_5sig_V_solar_colour": 10.628314371602567
+    },
+    "33.3": {
+     "hpln": -32.71,
+     "bg_msb": 7.222253177452398e-12,
+     "hp_sigma_px": 3.290458023240406e-14,
+     "depth_5sig_V_solar_colour": 10.58876701851866
+    },
+    "32.1": {
+     "hpln": -31.42,
+     "bg_msb": 7.822802301771237e-12,
+     "hp_sigma_px": 3.543436637859498e-14,
+     "depth_5sig_V_solar_colour": 10.508346227311865
+    },
+    "30.9": {
+     "hpln": -30.13,
+     "bg_msb": 8.532714899228688e-12,
+     "hp_sigma_px": 3.7143394610028575e-14,
+     "depth_5sig_V_solar_colour": 10.457203924908953
+    },
+    "29.6": {
+     "hpln": -28.83,
+     "bg_msb": 9.299385046734887e-12,
+     "hp_sigma_px": 4.027275518278528e-14,
+     "depth_5sig_V_solar_colour": 10.369379550477152
+    },
+    "28.4": {
+     "hpln": -27.53,
+     "bg_msb": 1.0182829406069072e-11,
+     "hp_sigma_px": 4.3159071108633814e-14,
+     "depth_5sig_V_solar_colour": 10.294227683068033
+    },
+    "27.2": {
+     "hpln": -26.23,
+     "bg_msb": 1.0997891833341988e-11,
+     "hp_sigma_px": 5.4778919941766976e-14,
+     "depth_5sig_V_solar_colour": 10.035374242686128
+    }
+   }
+  },
+  "solo_L2_solohi-1ft_20250320T000259_V01.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-1ft_20250320T000259_V01.fits",
+    "date_avg": "2025-03-20T00:03:15.397",
+    "xposure_s": 28.76,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     1024,
+     960
+    ],
+    "nan_pixels": 3617,
+    "dsun_au": 0.3845741955075835,
+    "obs_mode": "HI_SYN_NEAR",
+    "gainmode": "HIGH",
+    "detector": "1",
+    "version": "01",
+    "vers_cal": "0x1124",
+    "datasat": 1,
+    "datamax": 1.44013e-10
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -15.63,
+     "hplt": -8.82,
+     "eps": 17.98,
+     "ram_lon": -15.1,
+     "orbit_lat": -9.87
+    },
+    "c00": {
+     "hpln": -26.59,
+     "hplt": -17.62,
+     "eps": 31.64,
+     "ram_lon": -25.6,
+     "orbit_lat": -19.26
+    },
+    "cx0": {
+     "hpln": -6.32,
+     "hplt": -17.81,
+     "eps": 19.01,
+     "ram_lon": -5.22,
+     "orbit_lat": -18.31
+    },
+    "c0y": {
+     "hpln": -25.49,
+     "hplt": 1.41,
+     "eps": 25.52,
+     "ram_lon": -25.52,
+     "orbit_lat": -0.2
+    },
+    "cxy": {
+     "hpln": -5.21,
+     "hplt": 0.21,
+     "eps": 5.22,
+     "ram_lon": -5.21,
+     "orbit_lat": -0.26
+    },
+    "left": {
+     "hpln": -26.04,
+     "hplt": -8.35,
+     "eps": 27.32,
+     "ram_lon": -25.56,
+     "orbit_lat": -9.98
+    },
+    "right": {
+     "hpln": -5.77,
+     "hplt": -9.01,
+     "eps": 10.83,
+     "ram_lon": -5.23,
+     "orbit_lat": -9.49
+    },
+    "bottom": {
+     "hpln": -16.19,
+     "hplt": -17.97,
+     "eps": 24.13,
+     "ram_lon": -15.11,
+     "orbit_lat": -19.04
+    },
+    "top": {
+     "hpln": -15.06,
+     "hplt": 0.8,
+     "eps": 15.08,
+     "ram_lon": -15.08,
+     "orbit_lat": -0.23
+    },
+    "speed_km_s_header_vs_table": [
+     55.93,
+     55.94
+    ],
+    "r_au_header_vs_table": [
+     0.38457,
+     0.38457
+    ],
+    "sc_roll_deg": -3.74602,
+    "hglt_obs_deg": -16.4321298965
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 619,
+    "matched_3px": 345,
+    "median_resid_px": 1.883238613854261,
+    "mean_offset_px": [
+     1.1878896060067072,
+     -0.7341764199331183
+    ],
+    "rms_px": [
+     1.027390443766211,
+     1.0149384318339596
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 279,
+    "zp0_at_bv0.65": -19.911802568721704,
+    "colour_coeff_mag_per_bv": 0.4298656841219258,
+    "scatter_mad_no_colour": 0.21863911846657097,
+    "scatter_mad_with_colour": 0.14860661517073684,
+    "zp_by_vbin": {
+     "5-6": {
+      "n": 20,
+      "zp_median": -20.03365598516895,
+      "resid_median": -0.10076412605264551
+     },
+     "6-7": {
+      "n": 33,
+      "zp_median": -20.007853267314164,
+      "resid_median": -0.05422205396375546
+     },
+     "7-8": {
+      "n": 62,
+      "zp_median": -19.978889713691295,
+      "resid_median": -0.05020692179866515
+     },
+     "8-9": {
+      "n": 127,
+      "zp_median": -19.942144845249608,
+      "resid_median": -0.045917362458890665
+     },
+     "9-10": {
+      "n": 34,
+      "zp_median": -19.938136282758414,
+      "resid_median": -0.02609720063700216
+     }
+    },
+    "resid_by_elongation": {
+     "10-15": {
+      "n": 20,
+      "resid_median": -0.08102883656925819,
+      "mad": 0.1399059660861539
+     },
+     "15-20": {
+      "n": 73,
+      "resid_median": -0.03530384808918896,
+      "mad": 0.14973638008331855
+     },
+     "20-25": {
+      "n": 127,
+      "resid_median": -0.06236232983414425,
+      "mad": 0.10557135283290713
+     },
+     "25-30": {
+      "n": 58,
+      "resid_median": -0.02650110389245164,
+      "mad": 0.12976988054141544
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 36,
+    "fwhm_px_median": 1.729311001954875,
+    "fwhm_arcsec_median": 128.31667482849375
+   },
+   "noise_vs_elongation": {
+    "26.6": {
+     "hpln": -25.39,
+     "bg_msb": 5.682481828833685e-12,
+     "hp_sigma_px": 4.121278500759939e-14,
+     "depth_5sig_V_solar_colour": 10.429180181582517
+    },
+    "25.4": {
+     "hpln": -24.08,
+     "bg_msb": 6.269925550972388e-12,
+     "hp_sigma_px": 4.102149986882908e-14,
+     "depth_5sig_V_solar_colour": 10.434231251838316
+    },
+    "24.2": {
+     "hpln": -22.77,
+     "bg_msb": 6.81258304977006e-12,
+     "hp_sigma_px": 4.367216536321772e-14,
+     "depth_5sig_V_solar_colour": 10.366248276053653
+    },
+    "23.0": {
+     "hpln": -21.46,
+     "bg_msb": 7.431091766235687e-12,
+     "hp_sigma_px": 4.559771551223418e-14,
+     "depth_5sig_V_solar_colour": 10.319402378776068
+    },
+    "21.9": {
+     "hpln": -20.15,
+     "bg_msb": 8.12198832494948e-12,
+     "hp_sigma_px": 4.722974745671737e-14,
+     "depth_5sig_V_solar_colour": 10.281221032018706
+    },
+    "20.7": {
+     "hpln": -18.85,
+     "bg_msb": 8.900501429626173e-12,
+     "hp_sigma_px": 5.017843198243388e-14,
+     "depth_5sig_V_solar_colour": 10.215467375426101
+    },
+    "19.6": {
+     "hpln": -17.56,
+     "bg_msb": 9.792135852171313e-12,
+     "hp_sigma_px": 5.32389942027589e-14,
+     "depth_5sig_V_solar_colour": 10.151185485064339
+    },
+    "18.4": {
+     "hpln": -16.27,
+     "bg_msb": 1.0829611079427037e-11,
+     "hp_sigma_px": 5.732317303122625e-14,
+     "depth_5sig_V_solar_colour": 10.070934535268137
+    },
+    "17.3": {
+     "hpln": -14.99,
+     "bg_msb": 1.1927664151506479e-11,
+     "hp_sigma_px": 6.230398085470267e-14,
+     "depth_5sig_V_solar_colour": 9.980470599444992
+    },
+    "16.3": {
+     "hpln": -13.72,
+     "bg_msb": 1.3087534528333222e-11,
+     "hp_sigma_px": 6.586702823788148e-14,
+     "depth_5sig_V_solar_colour": 9.920089916511717
+    },
+    "15.3": {
+     "hpln": -12.46,
+     "bg_msb": 1.4445522902861718e-11,
+     "hp_sigma_px": 7.114264021640393e-14,
+     "depth_5sig_V_solar_colour": 9.836435144143046
+    },
+    "14.3": {
+     "hpln": -11.21,
+     "bg_msb": 1.5982053354346437e-11,
+     "hp_sigma_px": 7.79041680123993e-14,
+     "depth_5sig_V_solar_colour": 9.737858355845336
+    },
+    "13.4": {
+     "hpln": -9.97,
+     "bg_msb": 1.9215790417193013e-11,
+     "hp_sigma_px": 1.1091419618684816e-13,
+     "depth_5sig_V_solar_colour": 9.354292250036877
+    },
+    "12.5": {
+     "hpln": -8.75,
+     "bg_msb": 3.666808870428362e-11,
+     "hp_sigma_px": 2.2903132268319023e-13,
+     "depth_5sig_V_solar_colour": 8.56702288741873
+    },
+    "11.7": {
+     "hpln": -7.54,
+     "bg_msb": 6.67833427447917e-11,
+     "hp_sigma_px": 5.252580604839241e-13,
+     "depth_5sig_V_solar_colour": 7.665828276141024
+    },
+    "11.0": {
+     "hpln": -6.35,
+     "bg_msb": 7.758866812923593e-11,
+     "hp_sigma_px": 7.453416591275512e-13,
+     "depth_5sig_V_solar_colour": 7.285871600955048
+    }
+   }
+  },
+  "solo_L2_solohi-2ft_20250320T000459_V01.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-2ft_20250320T000459_V01.fits",
+    "date_avg": "2025-03-20T00:05:15.500",
+    "xposure_s": 28.76,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     960,
+     1024
+    ],
+    "nan_pixels": 3632,
+    "dsun_au": 0.3845568289054531,
+    "obs_mode": "HI_SYN_NEAR",
+    "gainmode": "HIGH",
+    "detector": "2",
+    "version": "01",
+    "vers_cal": "0x1124",
+    "datasat": 1,
+    "datamax": 1.38362e-10
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -13.77,
+     "hplt": 11.52,
+     "eps": 17.79,
+     "ram_lon": -14.41,
+     "orbit_lat": 10.54
+    },
+    "c00": {
+     "hpln": -24.18,
+     "hplt": 1.84,
+     "eps": 24.24,
+     "ram_lon": -24.24,
+     "orbit_lat": 0.3
+    },
+    "cx0": {
+     "hpln": -5.2,
+     "hplt": 0.69,
+     "eps": 5.23,
+     "ram_lon": -5.23,
+     "orbit_lat": 0.23
+    },
+    "c0y": {
+     "hpln": -22.96,
+     "hplt": 22.04,
+     "eps": 31.3,
+     "ram_lon": -24.16,
+     "orbit_lat": 20.53
+    },
+    "cxy": {
+     "hpln": -3.9,
+     "hplt": 19.82,
+     "eps": 20.04,
+     "ram_lon": -5.12,
+     "orbit_lat": 19.4
+    },
+    "left": {
+     "hpln": -23.57,
+     "hplt": 12.26,
+     "eps": 26.34,
+     "ram_lon": -24.2,
+     "orbit_lat": 10.73
+    },
+    "right": {
+     "hpln": -4.56,
+     "hplt": 10.53,
+     "eps": 11.33,
+     "ram_lon": -5.18,
+     "orbit_lat": 10.09
+    },
+    "bottom": {
+     "hpln": -14.41,
+     "hplt": 1.27,
+     "eps": 14.46,
+     "ram_lon": -14.46,
+     "orbit_lat": 0.27
+    },
+    "top": {
+     "hpln": -13.11,
+     "hplt": 21.16,
+     "eps": 24.6,
+     "ram_lon": -14.35,
+     "orbit_lat": 20.2
+    },
+    "speed_km_s_header_vs_table": [
+     55.93,
+     55.94
+    ],
+    "r_au_header_vs_table": [
+     0.38456,
+     0.38456
+    ],
+    "sc_roll_deg": -3.74422,
+    "hglt_obs_deg": -16.4325328496
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 775,
+    "matched_3px": 444,
+    "median_resid_px": 2.105321917916779,
+    "mean_offset_px": [
+     1.330620815579168,
+     0.8455866353159912
+    ],
+    "rms_px": [
+     0.9992152402533361,
+     0.9414402455924565
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 372,
+    "zp0_at_bv0.65": -19.939029996551014,
+    "colour_coeff_mag_per_bv": 0.3909808004668911,
+    "scatter_mad_no_colour": 0.2424839549836115,
+    "scatter_mad_with_colour": 0.130609228732289,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 6,
+      "zp_median": -20.388236538031197,
+      "resid_median": -0.4609191586592658
+     },
+     "5-6": {
+      "n": 11,
+      "zp_median": -20.08240193103465,
+      "resid_median": -0.00851615500513958
+     },
+     "6-7": {
+      "n": 46,
+      "zp_median": -19.905162871987045,
+      "resid_median": -0.042331679162341374
+     },
+     "7-8": {
+      "n": 102,
+      "zp_median": -19.963858955805804,
+      "resid_median": -0.04252419962530496
+     },
+     "8-9": {
+      "n": 182,
+      "zp_median": -19.90271403834209,
+      "resid_median": -0.03617587113793164
+     },
+     "9-10": {
+      "n": 24,
+      "zp_median": -19.863258361041865,
+      "resid_median": -0.02539581217877185
+     }
+    },
+    "resid_by_elongation": {
+     "10-15": {
+      "n": 36,
+      "resid_median": -0.018201495434700732,
+      "mad": 0.19454278539595765
+     },
+     "15-20": {
+      "n": 105,
+      "resid_median": -0.03616994438065291,
+      "mad": 0.09525380361835283
+     },
+     "20-25": {
+      "n": 162,
+      "resid_median": -0.04206018263161049,
+      "mad": 0.11295292279269661
+     },
+     "25-30": {
+      "n": 66,
+      "resid_median": -0.03214616651755442,
+      "mad": 0.13578656519570761
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 35,
+    "fwhm_px_median": 1.6742845291713264,
+    "fwhm_arcsec_median": 124.23365332042273
+   },
+   "noise_vs_elongation": {
+    "25.8": {
+     "hpln": -22.91,
+     "bg_msb": 5.714338073906089e-12,
+     "hp_sigma_px": 4.502562827787826e-14,
+     "depth_5sig_V_solar_colour": 10.305883208618528
+    },
+    "24.6": {
+     "hpln": -21.59,
+     "bg_msb": 6.342570782816304e-12,
+     "hp_sigma_px": 4.569239361873478e-14,
+     "depth_5sig_V_solar_colour": 10.289922889121879
+    },
+    "23.4": {
+     "hpln": -20.27,
+     "bg_msb": 7.030235768534787e-12,
+     "hp_sigma_px": 4.828133348851182e-14,
+     "depth_5sig_V_solar_colour": 10.230084521512616
+    },
+    "22.3": {
+     "hpln": -18.95,
+     "bg_msb": 7.757526392093705e-12,
+     "hp_sigma_px": 5.1233554378138364e-14,
+     "depth_5sig_V_solar_colour": 10.165646446262276
+    },
+    "21.2": {
+     "hpln": -17.65,
+     "bg_msb": 8.58423575278433e-12,
+     "hp_sigma_px": 5.433655296538386e-14,
+     "depth_5sig_V_solar_colour": 10.10180245277213
+    },
+    "20.0": {
+     "hpln": -16.34,
+     "bg_msb": 9.508971735017191e-12,
+     "hp_sigma_px": 5.771217306133059e-14,
+     "depth_5sig_V_solar_colour": 10.036364094346624
+    },
+    "18.9": {
+     "hpln": -15.05,
+     "bg_msb": 1.0593502637601393e-11,
+     "hp_sigma_px": 6.181178329595083e-14,
+     "depth_5sig_V_solar_colour": 9.961854479203645
+    },
+    "17.9": {
+     "hpln": -13.77,
+     "bg_msb": 1.1827774003270175e-11,
+     "hp_sigma_px": 6.673633078449481e-14,
+     "depth_5sig_V_solar_colour": 9.878626849766572
+    },
+    "16.9": {
+     "hpln": -12.5,
+     "bg_msb": 1.3216969619450625e-11,
+     "hp_sigma_px": 7.21013163236528e-14,
+     "depth_5sig_V_solar_colour": 9.794674678768864
+    },
+    "15.9": {
+     "hpln": -11.23,
+     "bg_msb": 1.4879008615464873e-11,
+     "hp_sigma_px": 7.943959292461277e-14,
+     "depth_5sig_V_solar_colour": 9.689440137528898
+    },
+    "14.9": {
+     "hpln": -9.99,
+     "bg_msb": 1.671789703200366e-11,
+     "hp_sigma_px": 9.14477988125939e-14,
+     "depth_5sig_V_solar_colour": 9.53659952186787
+    },
+    "14.0": {
+     "hpln": -8.75,
+     "bg_msb": 1.9483043650625476e-11,
+     "hp_sigma_px": 1.3410406327074576e-13,
+     "depth_5sig_V_solar_colour": 9.12092782031382
+    },
+    "13.2": {
+     "hpln": -7.53,
+     "bg_msb": 2.937901658062181e-11,
+     "hp_sigma_px": 1.9456817042934338e-13,
+     "depth_5sig_V_solar_colour": 8.716853174722832
+    },
+    "12.4": {
+     "hpln": -6.32,
+     "bg_msb": 4.2571118505363437e-11,
+     "hp_sigma_px": 4.242402179555071e-13,
+     "depth_5sig_V_solar_colour": 7.870503069502572
+    },
+    "11.8": {
+     "hpln": -5.13,
+     "bg_msb": 6.212683839601496e-11,
+     "hp_sigma_px": 8.029317472620783e-13,
+     "depth_5sig_V_solar_colour": 7.17783608782565
+    }
+   }
+  },
+  "solo_L2_solohi-3fg_20250320T000920_V01.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-3fg_20250320T000920_V01.fits",
+    "date_avg": "2025-03-20T00:09:45.867",
+    "xposure_s": 48.9576,
+    "nsumexp": 1,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     1024,
+     960
+    ],
+    "nan_pixels": 6323,
+    "dsun_au": 0.38451773665987077,
+    "obs_mode": "HI_SYN_NEAR",
+    "gainmode": "HIGH",
+    "detector": "3",
+    "version": "01",
+    "vers_cal": "0x1124",
+    "datasat": 1,
+    "datamax": 1.72439e-11
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -34.6,
+     "hplt": 12.03,
+     "eps": 36.34,
+     "ram_lon": -35.13,
+     "orbit_lat": 9.95
+    },
+    "c00": {
+     "hpln": -44.94,
+     "hplt": 2.84,
+     "eps": 45.01,
+     "ram_lon": -45.01,
+     "orbit_lat": 0.32
+    },
+    "cx0": {
+     "hpln": -24.67,
+     "hplt": 1.84,
+     "eps": 24.73,
+     "ram_lon": -24.73,
+     "orbit_lat": 0.27
+    },
+    "c0y": {
+     "hpln": -44.17,
+     "hplt": 20.85,
+     "eps": 47.85,
+     "ram_lon": -45.0,
+     "orbit_lat": 18.35
+    },
+    "cxy": {
+     "hpln": -23.54,
+     "hplt": 20.86,
+     "eps": 30.95,
+     "ram_lon": -24.66,
+     "orbit_lat": 19.33
+    },
+    "left": {
+     "hpln": -44.55,
+     "hplt": 12.08,
+     "eps": 45.79,
+     "ram_lon": -45.0,
+     "orbit_lat": 9.57
+    },
+    "right": {
+     "hpln": -24.1,
+     "hplt": 11.62,
+     "eps": 26.55,
+     "ram_lon": -24.69,
+     "orbit_lat": 10.07
+    },
+    "bottom": {
+     "hpln": -35.08,
+     "hplt": 2.39,
+     "eps": 35.15,
+     "ram_lon": -35.15,
+     "orbit_lat": 0.31
+    },
+    "top": {
+     "hpln": -34.12,
+     "hplt": 21.16,
+     "eps": 39.38,
+     "ram_lon": -35.12,
+     "orbit_lat": 19.09
+    },
+    "speed_km_s_header_vs_table": [
+     55.93,
+     55.95
+    ],
+    "r_au_header_vs_table": [
+     0.38452,
+     0.38452
+    ],
+    "sc_roll_deg": -3.73998,
+    "hglt_obs_deg": -16.433439367
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 921,
+    "matched_3px": 905,
+    "median_resid_px": 1.6362840257476483,
+    "mean_offset_px": [
+     -0.7533050603738586,
+     1.1195464651428217
+    ],
+    "rms_px": [
+     0.7755733349100262,
+     0.7810960130721775
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 885,
+    "zp0_at_bv0.65": -20.029417685093577,
+    "colour_coeff_mag_per_bv": 0.30470075659307577,
+    "scatter_mad_no_colour": 0.2863229997765561,
+    "scatter_mad_with_colour": 0.20493681707188388,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 16,
+      "zp_median": -21.35425849712074,
+      "resid_median": -1.3840882943779569
+     },
+     "5-6": {
+      "n": 32,
+      "zp_median": -20.913052626104715,
+      "resid_median": -0.8544784430826606
+     },
+     "6-7": {
+      "n": 99,
+      "zp_median": -20.31724206608765,
+      "resid_median": -0.29288607044530934
+     },
+     "7-8": {
+      "n": 291,
+      "zp_median": -20.021079545897685,
+      "resid_median": 0.04602667825686524
+     },
+     "8-9": {
+      "n": 334,
+      "zp_median": -19.911089332159598,
+      "resid_median": 0.11589942726975444
+     },
+     "9-10": {
+      "n": 111,
+      "zp_median": -19.912801125529242,
+      "resid_median": 0.12022105834900287
+     }
+    },
+    "resid_by_elongation": {
+     "25-30": {
+      "n": 125,
+      "resid_median": 0.045451447222639274,
+      "mad": 0.14652902067832815
+     },
+     "30-35": {
+      "n": 249,
+      "resid_median": 0.04988358811148785,
+      "mad": 0.16852970915021442
+     },
+     "35-40": {
+      "n": 222,
+      "resid_median": 0.07376935748546742,
+      "mad": 0.16944262028426496
+     },
+     "40-45": {
+      "n": 243,
+      "resid_median": 0.0634330606381468,
+      "mad": 0.22167868855959677
+     },
+     "45-50": {
+      "n": 46,
+      "resid_median": -0.0556007477297662,
+      "mad": 0.4065568310548289
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 83,
+    "fwhm_px_median": 1.993845317771083,
+    "fwhm_arcsec_median": 147.94539617774484
+   },
+   "noise_vs_elongation": {
+    "45.3": {
+     "hpln": -43.96,
+     "bg_msb": 2.292078311004475e-12,
+     "hp_sigma_px": 3.0281482302132316e-14,
+     "depth_5sig_V_solar_colour": 10.646202148035364
+    },
+    "44.1": {
+     "hpln": -42.75,
+     "bg_msb": 2.009716828718644e-12,
+     "hp_sigma_px": 2.1855452311207028e-14,
+     "depth_5sig_V_solar_colour": 11.000245476804295
+    },
+    "43.0": {
+     "hpln": -41.53,
+     "bg_msb": 2.0776597673202724e-12,
+     "hp_sigma_px": 2.2721700725352595e-14,
+     "depth_5sig_V_solar_colour": 10.958042885755521
+    },
+    "41.8": {
+     "hpln": -40.3,
+     "bg_msb": 2.2126019549525977e-12,
+     "hp_sigma_px": 2.3590440668616595e-14,
+     "depth_5sig_V_solar_colour": 10.917304840120547
+    },
+    "40.6": {
+     "hpln": -39.05,
+     "bg_msb": 2.365785627296557e-12,
+     "hp_sigma_px": 2.4217823775020407e-14,
+     "depth_5sig_V_solar_colour": 10.888807187401365
+    },
+    "39.4": {
+     "hpln": -37.79,
+     "bg_msb": 2.5392875736135467e-12,
+     "hp_sigma_px": 2.494808292244355e-14,
+     "depth_5sig_V_solar_colour": 10.856552026814782
+    },
+    "38.2": {
+     "hpln": -36.52,
+     "bg_msb": 2.7216119982687026e-12,
+     "hp_sigma_px": 2.5533833380997348e-14,
+     "depth_5sig_V_solar_colour": 10.831354923784989
+    },
+    "37.0": {
+     "hpln": -35.24,
+     "bg_msb": 2.9382225819052366e-12,
+     "hp_sigma_px": 2.615108962711332e-14,
+     "depth_5sig_V_solar_colour": 10.805420501146795
+    },
+    "35.8": {
+     "hpln": -33.95,
+     "bg_msb": 3.1523822181106498e-12,
+     "hp_sigma_px": 2.6889546709055188e-14,
+     "depth_5sig_V_solar_colour": 10.775186271140903
+    },
+    "34.6": {
+     "hpln": -32.65,
+     "bg_msb": 3.3919967529216777e-12,
+     "hp_sigma_px": 2.7570136017923684e-14,
+     "depth_5sig_V_solar_colour": 10.74804770225564
+    },
+    "33.3": {
+     "hpln": -31.34,
+     "bg_msb": 3.674109844489792e-12,
+     "hp_sigma_px": 2.830795012460918e-14,
+     "depth_5sig_V_solar_colour": 10.719373919647815
+    },
+    "32.1": {
+     "hpln": -30.03,
+     "bg_msb": 3.981672630493094e-12,
+     "hp_sigma_px": 2.937528905018472e-14,
+     "depth_5sig_V_solar_colour": 10.679189602240754
+    },
+    "30.9": {
+     "hpln": -28.71,
+     "bg_msb": 4.347920894848256e-12,
+     "hp_sigma_px": 3.010860233007562e-14,
+     "depth_5sig_V_solar_colour": 10.652418484993177
+    },
+    "29.6": {
+     "hpln": -27.39,
+     "bg_msb": 4.7404237653314585e-12,
+     "hp_sigma_px": 3.15887313702412e-14,
+     "depth_5sig_V_solar_colour": 10.6003145124705
+    },
+    "28.4": {
+     "hpln": -26.07,
+     "bg_msb": 5.184588435652726e-12,
+     "hp_sigma_px": 3.285796452631717e-14,
+     "depth_5sig_V_solar_colour": 10.557543333014266
+    },
+    "27.2": {
+     "hpln": -24.75,
+     "bg_msb": 5.6250993446527175e-12,
+     "hp_sigma_px": 3.843159553616748e-14,
+     "depth_5sig_V_solar_colour": 10.38742393623405
+    }
+   }
+  },
+  "solo_L2_solohi-4fg_20250320T002120_V01.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-4fg_20250320T002120_V01.fits",
+    "date_avg": "2025-03-20T00:21:45.779",
+    "xposure_s": 48.9576,
+    "nsumexp": 1,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     960,
+     1024
+    ],
+    "nan_pixels": 3175,
+    "dsun_au": 0.3844136595588589,
+    "obs_mode": "HI_SYN_NEAR",
+    "gainmode": "HIGH",
+    "detector": "4",
+    "version": "01",
+    "vers_cal": "0x1124",
+    "datasat": 1,
+    "datamax": 1.65933e-11
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -36.24,
+     "hplt": -8.3,
+     "eps": 37.1,
+     "ram_lon": -35.81,
+     "orbit_lat": -10.42
+    },
+    "c00": {
+     "hpln": -45.84,
+     "hplt": -16.76,
+     "eps": 48.23,
+     "ram_lon": -45.1,
+     "orbit_lat": -19.29
+    },
+    "cx0": {
+     "hpln": -27.14,
+     "hplt": -18.79,
+     "eps": 32.7,
+     "ram_lon": -26.09,
+     "orbit_lat": -20.45
+    },
+    "c0y": {
+     "hpln": -44.94,
+     "hplt": 2.37,
+     "eps": 44.99,
+     "ram_lon": -44.99,
+     "orbit_lat": -0.14
+    },
+    "cxy": {
+     "hpln": -25.97,
+     "hplt": 1.41,
+     "eps": 26.01,
+     "ram_lon": -26.01,
+     "orbit_lat": -0.21
+    },
+    "left": {
+     "hpln": -45.38,
+     "hplt": -7.45,
+     "eps": 45.89,
+     "ram_lon": -45.04,
+     "orbit_lat": -9.97
+    },
+    "right": {
+     "hpln": -26.56,
+     "hplt": -8.98,
+     "eps": 27.99,
+     "ram_lon": -26.05,
+     "orbit_lat": -10.63
+    },
+    "bottom": {
+     "hpln": -36.78,
+     "hplt": -17.96,
+     "eps": 40.45,
+     "ram_lon": -35.87,
+     "orbit_lat": -20.1
+    },
+    "top": {
+     "hpln": -35.72,
+     "hplt": 1.93,
+     "eps": 35.77,
+     "ram_lon": -35.77,
+     "orbit_lat": -0.18
+    },
+    "speed_km_s_header_vs_table": [
+     55.94,
+     55.96
+    ],
+    "r_au_header_vs_table": [
+     0.38441,
+     0.38441
+    ],
+    "sc_roll_deg": -3.72923,
+    "hglt_obs_deg": -16.4358492436
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 685,
+    "matched_3px": 506,
+    "median_resid_px": 1.962355099514467,
+    "mean_offset_px": [
+     -0.760242319240036,
+     -1.292057434233374
+    ],
+    "rms_px": [
+     0.8922748836680994,
+     0.9551695427630783
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 500,
+    "zp0_at_bv0.65": -20.117441185274572,
+    "colour_coeff_mag_per_bv": 0.43859123650762116,
+    "scatter_mad_no_colour": 0.2268917547822849,
+    "scatter_mad_with_colour": 0.25381399363087886,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 7,
+      "zp_median": -21.49715336052266,
+      "resid_median": -1.2470029668436275
+     },
+     "5-6": {
+      "n": 29,
+      "zp_median": -20.913948771118733,
+      "resid_median": -0.6037698512165015
+     },
+     "6-7": {
+      "n": 60,
+      "zp_median": -20.2966628679822,
+      "resid_median": -0.1851985210744136
+     },
+     "7-8": {
+      "n": 131,
+      "zp_median": -20.012152974855923,
+      "resid_median": 0.10830390160319325
+     },
+     "8-9": {
+      "n": 212,
+      "zp_median": -19.984375950253643,
+      "resid_median": 0.1622798844153266
+     },
+     "9-10": {
+      "n": 57,
+      "zp_median": -19.97614775927351,
+      "resid_median": 0.14436395566612958
+     }
+    },
+    "resid_by_elongation": {
+     "25-30": {
+      "n": 64,
+      "resid_median": 0.09913871027690391,
+      "mad": 0.13093603402013507
+     },
+     "30-35": {
+      "n": 140,
+      "resid_median": 0.11281685028499311,
+      "mad": 0.11988745360041243
+     },
+     "35-40": {
+      "n": 159,
+      "resid_median": 0.13431928651996117,
+      "mad": 0.12288456622360715
+     },
+     "40-45": {
+      "n": 133,
+      "resid_median": 0.13504398503601678,
+      "mad": 0.13314343062205597
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 64,
+    "fwhm_px_median": 2.0141911566421005,
+    "fwhm_arcsec_median": 149.45507858164675
+   },
+   "noise_vs_elongation": {
+    "45.3": {
+     "hpln": -44.8,
+     "bg_msb": 2.1573025484056263e-12,
+     "hp_sigma_px": 2.461805577913447e-14,
+     "depth_5sig_V_solar_colour": 10.782987095437615
+    },
+    "44.1": {
+     "hpln": -43.62,
+     "bg_msb": 1.952958411308159e-12,
+     "hp_sigma_px": 1.9195383303693968e-14,
+     "depth_5sig_V_solar_colour": 11.053129501945726
+    },
+    "43.0": {
+     "hpln": -42.42,
+     "bg_msb": 2.0230694289941065e-12,
+     "hp_sigma_px": 1.8913599397589462e-14,
+     "depth_5sig_V_solar_colour": 11.069186008466772
+    },
+    "41.8": {
+     "hpln": -41.21,
+     "bg_msb": 2.160100657372377e-12,
+     "hp_sigma_px": 1.959459056599319e-14,
+     "depth_5sig_V_solar_colour": 11.030780990822532
+    },
+    "40.6": {
+     "hpln": -39.99,
+     "bg_msb": 2.3069310134057885e-12,
+     "hp_sigma_px": 2.004322655112592e-14,
+     "depth_5sig_V_solar_colour": 11.006202385391287
+    },
+    "39.5": {
+     "hpln": -38.75,
+     "bg_msb": 2.4639544961638227e-12,
+     "hp_sigma_px": 2.0605106553286955e-14,
+     "depth_5sig_V_solar_colour": 10.976184312124236
+    },
+    "38.3": {
+     "hpln": -37.5,
+     "bg_msb": 2.630364025549281e-12,
+     "hp_sigma_px": 2.134147396564562e-14,
+     "depth_5sig_V_solar_colour": 10.938060446324052
+    },
+    "37.1": {
+     "hpln": -36.24,
+     "bg_msb": 2.819977541410057e-12,
+     "hp_sigma_px": 2.1908417397950573e-14,
+     "depth_5sig_V_solar_colour": 10.909593957633014
+    },
+    "35.8": {
+     "hpln": -34.97,
+     "bg_msb": 3.0224670422712707e-12,
+     "hp_sigma_px": 2.26610199355326e-14,
+     "depth_5sig_V_solar_colour": 10.87292284172452
+    },
+    "34.6": {
+     "hpln": -33.69,
+     "bg_msb": 3.247029381481248e-12,
+     "hp_sigma_px": 2.3312996845492593e-14,
+     "depth_5sig_V_solar_colour": 10.842126211570335
+    },
+    "33.4": {
+     "hpln": -32.4,
+     "bg_msb": 3.493652632816091e-12,
+     "hp_sigma_px": 2.4125878313359382e-14,
+     "depth_5sig_V_solar_colour": 10.804913641387934
+    },
+    "32.2": {
+     "hpln": -31.11,
+     "bg_msb": 3.758314406215879e-12,
+     "hp_sigma_px": 2.5132938308650154e-14,
+     "depth_5sig_V_solar_colour": 10.760513310808903
+    },
+    "31.0": {
+     "hpln": -29.81,
+     "bg_msb": 4.043904750991589e-12,
+     "hp_sigma_px": 2.6255090874831298e-14,
+     "depth_5sig_V_solar_colour": 10.71308765931402
+    },
+    "29.7": {
+     "hpln": -28.5,
+     "bg_msb": 4.343007507442986e-12,
+     "hp_sigma_px": 2.7459544273827905e-14,
+     "depth_5sig_V_solar_colour": 10.664388160633973
+    },
+    "28.5": {
+     "hpln": -27.2,
+     "bg_msb": 4.6204576623076754e-12,
+     "hp_sigma_px": 2.9961521740180794e-14,
+     "depth_5sig_V_solar_colour": 10.569711805546525
+    }
+   }
+  },
+  "solo_L2_solohi-1ft_20260201T002215_V01.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-1ft_20260201T002215_V01.fits",
+    "date_avg": "2026-02-01T00:22:49.470",
+    "xposure_s": 65.0,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     1024,
+     960
+    ],
+    "nan_pixels": 3951,
+    "dsun_au": 0.6204849322504429,
+    "obs_mode": "HI_SYN_FAR",
+    "gainmode": "HIGH",
+    "detector": "1",
+    "version": "01",
+    "vers_cal": "0x1224",
+    "datasat": 2,
+    "datamax": 6.35793e-11
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -16.26,
+     "hplt": -7.58,
+     "eps": 17.98,
+     "ram_lon": -13.82,
+     "orbit_lat": -11.62
+    },
+    "c00": {
+     "hpln": -27.8,
+     "hplt": -15.56,
+     "eps": 31.65,
+     "ram_lon": -23.19,
+     "orbit_lat": -22.16
+    },
+    "cx0": {
+     "hpln": -7.75,
+     "hplt": -17.26,
+     "eps": 19.02,
+     "ram_lon": -2.88,
+     "orbit_lat": -18.81
+    },
+    "c0y": {
+     "hpln": -25.33,
+     "hplt": 3.35,
+     "eps": 25.53,
+     "ram_lon": -25.34,
+     "orbit_lat": -3.21
+    },
+    "cxy": {
+     "hpln": -5.19,
+     "hplt": 0.62,
+     "eps": 5.23,
+     "ram_lon": -5.15,
+     "orbit_lat": -0.89
+    },
+    "left": {
+     "hpln": -26.57,
+     "hplt": -6.35,
+     "eps": 27.33,
+     "ram_lon": -24.28,
+     "orbit_lat": -12.93
+    },
+    "right": {
+     "hpln": -6.48,
+     "hplt": -8.53,
+     "eps": 10.83,
+     "ram_lon": -4.03,
+     "orbit_lat": -10.06
+    },
+    "bottom": {
+     "hpln": -17.54,
+     "hplt": -16.66,
+     "eps": 24.14,
+     "ram_lon": -12.65,
+     "orbit_lat": -20.72
+    },
+    "top": {
+     "hpln": -14.96,
+     "hplt": 1.97,
+     "eps": 15.09,
+     "ram_lon": -14.95,
+     "orbit_lat": -2.05
+    },
+    "speed_km_s_header_vs_table": [
+     37.06,
+     37.06
+    ],
+    "r_au_header_vs_table": [
+     0.62048,
+     0.62048
+    ],
+    "sc_roll_deg": -8.25958,
+    "hglt_obs_deg": -7.22376557806
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 701,
+    "matched_3px": 425,
+    "median_resid_px": 1.8496019745998602,
+    "mean_offset_px": [
+     1.1487043522868143,
+     -0.7425441604095199
+    ],
+    "rms_px": [
+     0.9461848296647277,
+     1.0373556994684243
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 391,
+    "zp0_at_bv0.65": -19.991924565797504,
+    "colour_coeff_mag_per_bv": 0.37159389697905365,
+    "scatter_mad_no_colour": 0.21637286570241657,
+    "scatter_mad_with_colour": 0.09320884472513077,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 9,
+      "zp_median": -20.653554934694753,
+      "resid_median": -0.5292990181013515
+     },
+     "5-6": {
+      "n": 16,
+      "zp_median": -20.05951335920753,
+      "resid_median": -0.035145685219561074
+     },
+     "6-7": {
+      "n": 39,
+      "zp_median": -19.952589618066295,
+      "resid_median": 0.0002886776100119448
+     },
+     "7-8": {
+      "n": 97,
+      "zp_median": -19.89429491066271,
+      "resid_median": 0.011783198866204714
+     },
+     "8-9": {
+      "n": 169,
+      "zp_median": -19.959937262705743,
+      "resid_median": 0.011536833803614144
+     },
+     "9-10": {
+      "n": 60,
+      "zp_median": -19.960492782994578,
+      "resid_median": -0.011298602415168446
+     }
+    },
+    "resid_by_elongation": {
+     "10-15": {
+      "n": 48,
+      "resid_median": 0.018242923364109487,
+      "mad": 0.11130845731867102
+     },
+     "15-20": {
+      "n": 98,
+      "resid_median": 0.01121752954441213,
+      "mad": 0.07738229132137762
+     },
+     "20-25": {
+      "n": 164,
+      "resid_median": -0.010897209329408852,
+      "mad": 0.08573385267699418
+     },
+     "25-30": {
+      "n": 78,
+      "resid_median": -0.0018970252519459052,
+      "mad": 0.12482606855538456
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 45,
+    "fwhm_px_median": 1.5176365311030067,
+    "fwhm_arcsec_median": 112.61020894983542
+   },
+   "noise_vs_elongation": {
+    "26.7": {
+     "hpln": -25.93,
+     "bg_msb": 2.247439647579119e-12,
+     "hp_sigma_px": 1.8348906378681804e-14,
+     "depth_5sig_V_solar_colour": 11.227612631381927
+    },
+    "25.4": {
+     "hpln": -24.63,
+     "bg_msb": 2.4673329785535048e-12,
+     "hp_sigma_px": 1.8462070023803068e-14,
+     "depth_5sig_V_solar_colour": 11.220937108718182
+    },
+    "24.2": {
+     "hpln": -23.33,
+     "bg_msb": 2.6635484182829794e-12,
+     "hp_sigma_px": 1.9463905845135826e-14,
+     "depth_5sig_V_solar_colour": 11.1635631056648
+    },
+    "23.0": {
+     "hpln": -22.04,
+     "bg_msb": 2.8850973259747503e-12,
+     "hp_sigma_px": 2.0155666849083762e-14,
+     "depth_5sig_V_solar_colour": 11.125645164997735
+    },
+    "21.9": {
+     "hpln": -20.75,
+     "bg_msb": 3.1423343744771404e-12,
+     "hp_sigma_px": 2.1136686346491516e-14,
+     "depth_5sig_V_solar_colour": 11.074045836265064
+    },
+    "20.7": {
+     "hpln": -19.46,
+     "bg_msb": 3.4274102653220062e-12,
+     "hp_sigma_px": 2.1991843437464685e-14,
+     "depth_5sig_V_solar_colour": 11.030984005703282
+    },
+    "19.6": {
+     "hpln": -18.17,
+     "bg_msb": 3.7604218783987564e-12,
+     "hp_sigma_px": 2.3623232406691506e-14,
+     "depth_5sig_V_solar_colour": 10.953289786861905
+    },
+    "18.4": {
+     "hpln": -16.9,
+     "bg_msb": 4.148378689172727e-12,
+     "hp_sigma_px": 2.5215560629093802e-14,
+     "depth_5sig_V_solar_colour": 10.882466522158904
+    },
+    "17.4": {
+     "hpln": -15.63,
+     "bg_msb": 4.565945278117711e-12,
+     "hp_sigma_px": 2.6928125224437436e-14,
+     "depth_5sig_V_solar_colour": 10.811122797721392
+    },
+    "16.3": {
+     "hpln": -14.37,
+     "bg_msb": 5.047353594106463e-12,
+     "hp_sigma_px": 2.863554601773011e-14,
+     "depth_5sig_V_solar_colour": 10.744374421880448
+    },
+    "15.3": {
+     "hpln": -13.12,
+     "bg_msb": 5.573335629810439e-12,
+     "hp_sigma_px": 3.173725865446286e-14,
+     "depth_5sig_V_solar_colour": 10.632714565064688
+    },
+    "14.3": {
+     "hpln": -11.88,
+     "bg_msb": 6.20932450422218e-12,
+     "hp_sigma_px": 3.429051339751132e-14,
+     "depth_5sig_V_solar_colour": 10.54870312478507
+    },
+    "13.4": {
+     "hpln": -10.65,
+     "bg_msb": 7.934516758900667e-12,
+     "hp_sigma_px": 5.069875970865195e-14,
+     "depth_5sig_V_solar_colour": 10.12414475606052
+    },
+    "12.5": {
+     "hpln": -9.44,
+     "bg_msb": 2.3277104202468202e-11,
+     "hp_sigma_px": 1.5068510918203603e-13,
+     "depth_5sig_V_solar_colour": 8.941462250530982
+    },
+    "11.7": {
+     "hpln": -8.23,
+     "bg_msb": 4.85868220656549e-11,
+     "hp_sigma_px": 1.9931718567289812e-13,
+     "depth_5sig_V_solar_colour": 8.637776227402348
+    },
+    "11.0": {
+     "hpln": -7.05,
+     "bg_msb": 5.671920572103417e-11,
+     "hp_sigma_px": 2.1134580602526903e-13,
+     "depth_5sig_V_solar_colour": 8.57415400820441
+    }
+   }
+  },
+  "solo_L2_solohi-2ft_20260201T003015_V01.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-2ft_20260201T003015_V01.fits",
+    "date_avg": "2026-02-01T00:30:49.470",
+    "xposure_s": 65.0,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     960,
+     1024
+    ],
+    "nan_pixels": 2927,
+    "dsun_au": 0.6204247328494896,
+    "obs_mode": "HI_SYN_FAR",
+    "gainmode": "HIGH",
+    "detector": "2",
+    "version": "01",
+    "vers_cal": "0x1224",
+    "datasat": 1,
+    "datamax": 6.12945e-11
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -12.84,
+     "hplt": 12.56,
+     "eps": 17.8,
+     "ram_lon": -15.57,
+     "orbit_lat": 8.72
+    },
+    "c00": {
+     "hpln": -23.99,
+     "hplt": 3.69,
+     "eps": 24.25,
+     "ram_lon": -24.12,
+     "orbit_lat": -2.57
+    },
+    "cx0": {
+     "hpln": -5.14,
+     "hplt": 1.1,
+     "eps": 5.24,
+     "ram_lon": -5.23,
+     "orbit_lat": -0.41
+    },
+    "c0y": {
+     "hpln": -21.21,
+     "hplt": 23.74,
+     "eps": 31.31,
+     "ram_lon": -26.36,
+     "orbit_lat": 17.54
+    },
+    "cxy": {
+     "hpln": -2.28,
+     "hplt": 20.06,
+     "eps": 20.04,
+     "ram_lon": -7.53,
+     "orbit_lat": 18.62
+    },
+    "left": {
+     "hpln": -22.61,
+     "hplt": 14.03,
+     "eps": 26.35,
+     "ram_lon": -25.25,
+     "orbit_lat": 7.8
+    },
+    "right": {
+     "hpln": -3.72,
+     "hplt": 10.86,
+     "eps": 11.34,
+     "ram_lon": -6.39,
+     "orbit_lat": 9.38
+    },
+    "bottom": {
+     "hpln": -14.28,
+     "hplt": 2.39,
+     "eps": 14.47,
+     "ram_lon": -14.39,
+     "orbit_lat": -1.48
+    },
+    "top": {
+     "hpln": -11.37,
+     "hplt": 22.11,
+     "eps": 24.61,
+     "ram_lon": -16.72,
+     "orbit_lat": 18.32
+    },
+    "speed_km_s_header_vs_table": [
+     37.07,
+     37.06
+    ],
+    "r_au_header_vs_table": [
+     0.62042,
+     0.62042
+    ],
+    "sc_roll_deg": -8.2584,
+    "hglt_obs_deg": -7.2262582443
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 633,
+    "matched_3px": 419,
+    "median_resid_px": 2.0916409131029017,
+    "mean_offset_px": [
+     1.2537157083055908,
+     0.9277257110993745
+    ],
+    "rms_px": [
+     1.0535981710272067,
+     0.9522278527178357
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 374,
+    "zp0_at_bv0.65": -20.018087565952374,
+    "colour_coeff_mag_per_bv": 0.47427830228323653,
+    "scatter_mad_no_colour": 0.219462425374341,
+    "scatter_mad_with_colour": 0.13147779345054822,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 5,
+      "zp_median": -20.681510595641374,
+      "resid_median": -0.5739197960543336
+     },
+     "5-6": {
+      "n": 12,
+      "zp_median": -20.133429452975506,
+      "resid_median": -0.10893738366975292
+     },
+     "6-7": {
+      "n": 40,
+      "zp_median": -19.988137803592856,
+      "resid_median": 0.06528213165818642
+     },
+     "7-8": {
+      "n": 99,
+      "zp_median": -20.028947937428512,
+      "resid_median": 0.021513982155653366
+     },
+     "8-9": {
+      "n": 148,
+      "zp_median": -19.951599714333888,
+      "resid_median": 0.04886156063141378
+     },
+     "9-10": {
+      "n": 67,
+      "zp_median": -19.844448663795312,
+      "resid_median": 0.042090351175481544
+     }
+    },
+    "resid_by_elongation": {
+     "5-10": {
+      "n": 7,
+      "resid_median": -0.10676500703274527,
+      "mad": 0.3263505171215448
+     },
+     "10-15": {
+      "n": 68,
+      "resid_median": 0.09552813300692264,
+      "mad": 0.1325347530201959
+     },
+     "15-20": {
+      "n": 108,
+      "resid_median": 0.040529650180522125,
+      "mad": 0.1026498307521135
+     },
+     "20-25": {
+      "n": 146,
+      "resid_median": 0.022797516384214234,
+      "mad": 0.11155916288044343
+     },
+     "25-30": {
+      "n": 45,
+      "resid_median": -0.012749692104716104,
+      "mad": 0.1435268607176463
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 42,
+    "fwhm_px_median": 1.5575660280092087,
+    "fwhm_arcsec_median": 115.57301914695242
+   },
+   "noise_vs_elongation": {
+    "25.8": {
+     "hpln": -21.95,
+     "bg_msb": 1.857790939314985e-12,
+     "hp_sigma_px": 1.7617843512188202e-14,
+     "depth_5sig_V_solar_colour": 11.245593222898115
+    },
+    "24.6": {
+     "hpln": -20.63,
+     "bg_msb": 2.054952345439953e-12,
+     "hp_sigma_px": 1.81926633913837e-14,
+     "depth_5sig_V_solar_colour": 11.210734382972145
+    },
+    "23.5": {
+     "hpln": -19.31,
+     "bg_msb": 2.256828079451323e-12,
+     "hp_sigma_px": 1.9100062221936998e-14,
+     "depth_5sig_V_solar_colour": 11.157888138071126
+    },
+    "22.3": {
+     "hpln": -18.0,
+     "bg_msb": 2.471676400876699e-12,
+     "hp_sigma_px": 2.0368813146570686e-14,
+     "depth_5sig_V_solar_colour": 11.088060782696225
+    },
+    "21.2": {
+     "hpln": -16.7,
+     "bg_msb": 2.7108820830484825e-12,
+     "hp_sigma_px": 2.148984050605318e-14,
+     "depth_5sig_V_solar_colour": 11.02989211257118
+    },
+    "20.0": {
+     "hpln": -15.4,
+     "bg_msb": 2.9873464812979478e-12,
+     "hp_sigma_px": 2.286757573664172e-14,
+     "depth_5sig_V_solar_colour": 10.962424777859507
+    },
+    "18.9": {
+     "hpln": -14.12,
+     "bg_msb": 3.2890333252072468e-12,
+     "hp_sigma_px": 2.4065277895446433e-14,
+     "depth_5sig_V_solar_colour": 10.906997890460861
+    },
+    "17.9": {
+     "hpln": -12.84,
+     "bg_msb": 3.646365978257626e-12,
+     "hp_sigma_px": 2.5852106132900897e-14,
+     "depth_5sig_V_solar_colour": 10.829235267676903
+    },
+    "16.9": {
+     "hpln": -11.58,
+     "bg_msb": 4.039635813357645e-12,
+     "hp_sigma_px": 2.7784889753551532e-14,
+     "depth_5sig_V_solar_colour": 10.750953398413099
+    },
+    "15.9": {
+     "hpln": -10.33,
+     "bg_msb": 4.503820493634292e-12,
+     "hp_sigma_px": 3.0800122218302414e-14,
+     "depth_5sig_V_solar_colour": 10.639093993598571
+    },
+    "14.9": {
+     "hpln": -9.09,
+     "bg_msb": 5.245356232697063e-12,
+     "hp_sigma_px": 3.622361850579014e-14,
+     "depth_5sig_V_solar_colour": 10.462995514775198
+    },
+    "14.0": {
+     "hpln": -7.86,
+     "bg_msb": 8.047282892137408e-12,
+     "hp_sigma_px": 6.048468236680149e-14,
+     "depth_5sig_V_solar_colour": 9.906361582410447
+    },
+    "13.2": {
+     "hpln": -6.65,
+     "bg_msb": 1.6499118911383892e-11,
+     "hp_sigma_px": 1.179936752471189e-13,
+     "depth_5sig_V_solar_colour": 9.180828271501344
+    },
+    "12.5": {
+     "hpln": -5.46,
+     "bg_msb": 3.093318136360157e-11,
+     "hp_sigma_px": 2.5659856531246024e-13,
+     "depth_5sig_V_solar_colour": 8.337339533607075
+    },
+    "11.8": {
+     "hpln": -4.29,
+     "bg_msb": 5.330584237905889e-11,
+     "hp_sigma_px": 1.9402935716450463e-13,
+     "depth_5sig_V_solar_colour": 8.640806481112492
+    }
+   }
+  },
+  "solo_L2_solohi-3ft_20260201T004005_V01.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-3ft_20260201T004005_V01.fits",
+    "date_avg": "2026-02-01T00:44:42.181",
+    "xposure_s": 550.288,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     1024,
+     960
+    ],
+    "nan_pixels": 6302,
+    "dsun_au": 0.6203202819911526,
+    "obs_mode": "HI_SYN_FAR",
+    "gainmode": "HIGH",
+    "detector": "3",
+    "version": "01",
+    "vers_cal": "0x1224",
+    "datasat": 1,
+    "datamax": 7.29411e-12
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -33.72,
+     "hplt": 14.57,
+     "eps": 36.35,
+     "ram_lon": -35.93,
+     "orbit_lat": 5.88
+    },
+    "c00": {
+     "hpln": -44.71,
+     "hplt": 6.03,
+     "eps": 45.02,
+     "ram_lon": -44.84,
+     "orbit_lat": -4.62
+    },
+    "cx0": {
+     "hpln": -24.48,
+     "hplt": 3.72,
+     "eps": 24.74,
+     "ram_lon": -24.61,
+     "orbit_lat": -2.65
+    },
+    "c0y": {
+     "hpln": -42.83,
+     "hplt": 23.96,
+     "eps": 47.86,
+     "ram_lon": -46.4,
+     "orbit_lat": 13.33
+    },
+    "cxy": {
+     "hpln": -21.89,
+     "hplt": 22.61,
+     "eps": 30.96,
+     "ram_lon": -26.7,
+     "orbit_lat": 16.29
+    },
+    "left": {
+     "hpln": -43.77,
+     "hplt": 15.22,
+     "eps": 45.8,
+     "ram_lon": -45.62,
+     "orbit_lat": 4.58
+    },
+    "right": {
+     "hpln": -23.19,
+     "hplt": 13.43,
+     "eps": 26.55,
+     "ram_lon": -25.66,
+     "orbit_lat": 7.08
+    },
+    "bottom": {
+     "hpln": -34.85,
+     "hplt": 4.98,
+     "eps": 35.16,
+     "ram_lon": -34.99,
+     "orbit_lat": -3.72
+    },
+    "top": {
+     "hpln": -32.57,
+     "hplt": 23.64,
+     "eps": 39.39,
+     "ram_lon": -36.87,
+     "orbit_lat": 14.97
+    },
+    "speed_km_s_header_vs_table": [
+     37.07,
+     37.07
+    ],
+    "r_au_header_vs_table": [
+     0.62032,
+     0.62032
+    ],
+    "sc_roll_deg": -8.25644,
+    "hglt_obs_deg": -7.2305832673
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 644,
+    "matched_3px": 625,
+    "median_resid_px": 1.8169580868749478,
+    "mean_offset_px": [
+     -0.9014941645118595,
+     1.1897734375483184
+    ],
+    "rms_px": [
+     0.7957796128065675,
+     0.8388627594641582
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 617,
+    "zp0_at_bv0.65": -20.211276195873218,
+    "colour_coeff_mag_per_bv": 0.2285806365105724,
+    "scatter_mad_no_colour": 0.30442307276672537,
+    "scatter_mad_with_colour": 0.38241363885646434,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 8,
+      "zp_median": -22.002534316877455,
+      "resid_median": -1.888807519048699
+     },
+     "5-6": {
+      "n": 24,
+      "zp_median": -21.371188673151373,
+      "resid_median": -1.1522933024264717
+     },
+     "6-7": {
+      "n": 59,
+      "zp_median": -20.72170221205659,
+      "resid_median": -0.49248426498938613
+     },
+     "7-8": {
+      "n": 153,
+      "zp_median": -20.238634746330597,
+      "resid_median": -0.03955932502941906
+     },
+     "8-9": {
+      "n": 282,
+      "zp_median": -19.95720725196533,
+      "resid_median": 0.24805821084266988
+     },
+     "9-10": {
+      "n": 90,
+      "zp_median": -19.858573322762616,
+      "resid_median": 0.3204810504599749
+     }
+    },
+    "resid_by_elongation": {
+     "25-30": {
+      "n": 92,
+      "resid_median": 0.12020669573339227,
+      "mad": 0.32294152597296966
+     },
+     "30-35": {
+      "n": 176,
+      "resid_median": 0.16561462044965403,
+      "mad": 0.22676829278521027
+     },
+     "35-40": {
+      "n": 162,
+      "resid_median": 0.18494520702814832,
+      "mad": 0.21607739067622847
+     },
+     "40-45": {
+      "n": 165,
+      "resid_median": 0.16579229821101293,
+      "mad": 0.2975566275269909
+     },
+     "45-50": {
+      "n": 22,
+      "resid_median": 0.1806823253771519,
+      "mad": 0.22081575445652013
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 49,
+    "fwhm_px_median": 2.056995366686429,
+    "fwhm_arcsec_median": 152.63119548331437
+   },
+   "noise_vs_elongation": {
+    "45.3": {
+     "hpln": -43.17,
+     "bg_msb": 7.866871216954952e-13,
+     "hp_sigma_px": 8.183226459738263e-15,
+     "depth_5sig_V_solar_colour": 11.884975038620283
+    },
+    "44.1": {
+     "hpln": -41.95,
+     "bg_msb": 6.922221042898746e-13,
+     "hp_sigma_px": 5.101767543581187e-15,
+     "depth_5sig_V_solar_colour": 12.39798479682198
+    },
+    "43.0": {
+     "hpln": -40.72,
+     "bg_msb": 7.091985961167613e-13,
+     "hp_sigma_px": 5.052338820747681e-15,
+     "depth_5sig_V_solar_colour": 12.408555294295674
+    },
+    "41.8": {
+     "hpln": -39.48,
+     "bg_msb": 7.520348818505773e-13,
+     "hp_sigma_px": 5.338663739600305e-15,
+     "depth_5sig_V_solar_colour": 12.348705045004152
+    },
+    "40.6": {
+     "hpln": -38.22,
+     "bg_msb": 7.991714928712312e-13,
+     "hp_sigma_px": 5.480078110048358e-15,
+     "depth_5sig_V_solar_colour": 12.320319591445447
+    },
+    "39.4": {
+     "hpln": -36.95,
+     "bg_msb": 8.535769747269883e-13,
+     "hp_sigma_px": 5.750288461538189e-15,
+     "depth_5sig_V_solar_colour": 12.268062384529827
+    },
+    "38.2": {
+     "hpln": -35.66,
+     "bg_msb": 9.124357085860124e-13,
+     "hp_sigma_px": 5.96407773428148e-15,
+     "depth_5sig_V_solar_colour": 12.228428225003277
+    },
+    "37.0": {
+     "hpln": -34.37,
+     "bg_msb": 9.8052447237984e-13,
+     "hp_sigma_px": 6.063738899018956e-15,
+     "depth_5sig_V_solar_colour": 12.21043523184614
+    },
+    "35.8": {
+     "hpln": -33.07,
+     "bg_msb": 1.046815303711035e-12,
+     "hp_sigma_px": 6.350907722895565e-15,
+     "depth_5sig_V_solar_colour": 12.160196956772943
+    },
+    "34.6": {
+     "hpln": -31.77,
+     "bg_msb": 1.120860403189955e-12,
+     "hp_sigma_px": 6.578601335557876e-15,
+     "depth_5sig_V_solar_colour": 12.121952541084866
+    },
+    "33.3": {
+     "hpln": -30.45,
+     "bg_msb": 1.2076085032126926e-12,
+     "hp_sigma_px": 6.972182564363855e-15,
+     "depth_5sig_V_solar_colour": 12.058864587137776
+    },
+    "32.1": {
+     "hpln": -29.13,
+     "bg_msb": 1.3016192399080417e-12,
+     "hp_sigma_px": 7.45369065947854e-15,
+     "depth_5sig_V_solar_colour": 11.986358051132335
+    },
+    "30.9": {
+     "hpln": -27.81,
+     "bg_msb": 1.4117747769437639e-12,
+     "hp_sigma_px": 7.639590880476749e-15,
+     "depth_5sig_V_solar_colour": 11.959611209198442
+    },
+    "29.6": {
+     "hpln": -26.49,
+     "bg_msb": 1.5388224548773533e-12,
+     "hp_sigma_px": 8.09168285761247e-15,
+     "depth_5sig_V_solar_colour": 11.897189331116486
+    },
+    "28.4": {
+     "hpln": -25.16,
+     "bg_msb": 1.6726720377703563e-12,
+     "hp_sigma_px": 8.666502736807968e-15,
+     "depth_5sig_V_solar_colour": 11.822676767008062
+    },
+    "27.2": {
+     "hpln": -23.84,
+     "bg_msb": 1.8066227767260523e-12,
+     "hp_sigma_px": 1.0411698326412422e-14,
+     "depth_5sig_V_solar_colour": 11.62348252285678
+    }
+   }
+  },
+  "solo_L2_solohi-1ft_20211227T002044_V02.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-1ft_20211227T002044_V02.fits",
+    "date_avg": "2021-12-27T00:21:58.349",
+    "xposure_s": 144.995,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     1024,
+     960
+    ],
+    "nan_pixels": 4094,
+    "dsun_au": 1.0069941029381242,
+    "obs_mode": "HI_SYN_FAR",
+    "gainmode": "HIGH",
+    "detector": "1",
+    "version": "       1",
+    "vers_cal": "0x111d",
+    "datasat": 1,
+    "datamax": 2.83747e-11
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -15.72,
+     "hplt": -8.66,
+     "eps": 17.98,
+     "ram_lon": -15.11,
+     "orbit_lat": -9.87
+    },
+    "c00": {
+     "hpln": -26.76,
+     "hplt": -17.36,
+     "eps": 31.65,
+     "ram_lon": -25.61,
+     "orbit_lat": -19.26
+    },
+    "cx0": {
+     "hpln": -6.52,
+     "hplt": -17.75,
+     "eps": 19.02,
+     "ram_lon": -5.23,
+     "orbit_lat": -18.31
+    },
+    "c0y": {
+     "hpln": -25.48,
+     "hplt": 1.66,
+     "eps": 25.54,
+     "ram_lon": -25.53,
+     "orbit_lat": -0.2
+    },
+    "cxy": {
+     "hpln": -5.22,
+     "hplt": 0.26,
+     "eps": 5.23,
+     "ram_lon": -5.22,
+     "orbit_lat": -0.26
+    },
+    "left": {
+     "hpln": -26.13,
+     "hplt": -8.09,
+     "eps": 27.33,
+     "ram_lon": -25.57,
+     "orbit_lat": -9.98
+    },
+    "right": {
+     "hpln": -5.87,
+     "hplt": -8.95,
+     "eps": 10.83,
+     "ram_lon": -5.24,
+     "orbit_lat": -9.49
+    },
+    "bottom": {
+     "hpln": -16.38,
+     "hplt": -17.81,
+     "eps": 24.14,
+     "ram_lon": -15.12,
+     "orbit_lat": -19.04
+    },
+    "top": {
+     "hpln": -15.06,
+     "hplt": 0.96,
+     "eps": 15.09,
+     "ram_lon": -15.09,
+     "orbit_lat": -0.23
+    },
+    "speed_km_s_header_vs_table": [
+     20.87,
+     20.88
+    ],
+    "r_au_header_vs_table": [
+     1.00699,
+     1.00699
+    ],
+    "sc_roll_deg": -4.33037,
+    "hglt_obs_deg": -0.135257738606
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 1033,
+    "matched_3px": 665,
+    "median_resid_px": 1.6439120409983985,
+    "mean_offset_px": [
+     0.6366376244101739,
+     -0.7950403393643303
+    ],
+    "rms_px": [
+     1.0273880852777193,
+     1.0629652148501747
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 620,
+    "zp0_at_bv0.65": -19.93931244421886,
+    "colour_coeff_mag_per_bv": 0.43219823837609,
+    "scatter_mad_no_colour": 0.24541763647196496,
+    "scatter_mad_with_colour": 0.14353026505481187,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 7,
+      "zp_median": -20.695866471280862,
+      "resid_median": -0.7215459697535387
+     },
+     "5-6": {
+      "n": 17,
+      "zp_median": -20.35082238663434,
+      "resid_median": -0.34494340061175066
+     },
+     "6-7": {
+      "n": 72,
+      "zp_median": -20.024147630029113,
+      "resid_median": -0.06751398409856257
+     },
+     "7-8": {
+      "n": 128,
+      "zp_median": -19.91640716490215,
+      "resid_median": 0.019139520850337988
+     },
+     "8-9": {
+      "n": 248,
+      "zp_median": -19.872262884449633,
+      "resid_median": 0.01910635952993367
+     },
+     "9-10": {
+      "n": 145,
+      "zp_median": -19.825834157224122,
+      "resid_median": 0.060863231076922375
+     }
+    },
+    "resid_by_elongation": {
+     "5-10": {
+      "n": 9,
+      "resid_median": -0.09674227230005883,
+      "mad": 0.4134007120954437
+     },
+     "10-15": {
+      "n": 87,
+      "resid_median": 0.07704855312343284,
+      "mad": 0.20569019599201385
+     },
+     "15-20": {
+      "n": 190,
+      "resid_median": 0.019241293301659468,
+      "mad": 0.1514988304615874
+     },
+     "20-25": {
+      "n": 236,
+      "resid_median": -0.007851046728656996,
+      "mad": 0.12214843620334515
+     },
+     "25-30": {
+      "n": 93,
+      "resid_median": 0.009709574925949482,
+      "mad": 0.11524985665364006
+     },
+     "30-35": {
+      "n": 5,
+      "resid_median": 0.023914829939645443,
+      "mad": 0.04345703189351721
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 53,
+    "fwhm_px_median": 1.9653616549381077,
+    "fwhm_arcsec_median": 145.8318787725287
+   },
+   "noise_vs_elongation": {
+    "26.7": {
+     "hpln": -25.47,
+     "bg_msb": 8.019050918087189e-13,
+     "hp_sigma_px": 1.5254266469769127e-14,
+     "depth_5sig_V_solar_colour": 11.480771893389392
+    },
+    "25.4": {
+     "hpln": -24.16,
+     "bg_msb": 8.726193595834375e-13,
+     "hp_sigma_px": 1.628656324387245e-14,
+     "depth_5sig_V_solar_colour": 11.409676589729926
+    },
+    "24.2": {
+     "hpln": -22.85,
+     "bg_msb": 9.43108546987148e-13,
+     "hp_sigma_px": 1.7643562522443033e-14,
+     "depth_5sig_V_solar_colour": 11.322784512976785
+    },
+    "23.0": {
+     "hpln": -21.55,
+     "bg_msb": 1.0198982500556064e-12,
+     "hp_sigma_px": 1.9260605106262082e-14,
+     "depth_5sig_V_solar_colour": 11.227575397066989
+    },
+    "21.9": {
+     "hpln": -20.24,
+     "bg_msb": 1.1111425906977501e-12,
+     "hp_sigma_px": 2.0384164180816536e-14,
+     "depth_5sig_V_solar_colour": 11.166017943360753
+    },
+    "20.7": {
+     "hpln": -18.94,
+     "bg_msb": 1.220891877179442e-12,
+     "hp_sigma_px": 2.2186986427773225e-14,
+     "depth_5sig_V_solar_colour": 11.074004420652514
+    },
+    "19.6": {
+     "hpln": -17.65,
+     "bg_msb": 1.3414866548329407e-12,
+     "hp_sigma_px": 2.535942634270677e-14,
+     "depth_5sig_V_solar_colour": 10.928901652123344
+    },
+    "18.4": {
+     "hpln": -16.36,
+     "bg_msb": 1.4830199785223486e-12,
+     "hp_sigma_px": 2.857574931888762e-14,
+     "depth_5sig_V_solar_colour": 10.799256146484776
+    },
+    "17.4": {
+     "hpln": -15.09,
+     "bg_msb": 1.6475651138520009e-12,
+     "hp_sigma_px": 3.1098462737258466e-14,
+     "depth_5sig_V_solar_colour": 10.707402911255276
+    },
+    "16.3": {
+     "hpln": -13.82,
+     "bg_msb": 1.840758231605455e-12,
+     "hp_sigma_px": 3.296100131115059e-14,
+     "depth_5sig_V_solar_colour": 10.644249223635516
+    },
+    "15.3": {
+     "hpln": -12.56,
+     "bg_msb": 2.0655092219934446e-12,
+     "hp_sigma_px": 3.595935567542174e-14,
+     "depth_5sig_V_solar_colour": 10.549720461453756
+    },
+    "14.3": {
+     "hpln": -11.31,
+     "bg_msb": 2.356903084158035e-12,
+     "hp_sigma_px": 4.106128396281702e-14,
+     "depth_5sig_V_solar_colour": 10.405668901447346
+    },
+    "13.4": {
+     "hpln": -10.07,
+     "bg_msb": 3.190252749474265e-12,
+     "hp_sigma_px": 5.3970780416415925e-14,
+     "depth_5sig_V_solar_colour": 10.108853469912912
+    },
+    "12.5": {
+     "hpln": -8.85,
+     "bg_msb": 1.611705907622607e-11,
+     "hp_sigma_px": 1.084930728589839e-13,
+     "depth_5sig_V_solar_colour": 9.350745190077873
+    },
+    "11.7": {
+     "hpln": -7.64,
+     "bg_msb": 2.475112649558131e-11,
+     "hp_sigma_px": 6.146071880597237e-14,
+     "depth_5sig_V_solar_colour": 9.967756126949464
+    },
+    "11.0": {
+     "hpln": -6.45,
+     "bg_msb": 2.5626905111875153e-11,
+     "hp_sigma_px": 7.604854142251316e-14,
+     "depth_5sig_V_solar_colour": 9.736522992682826
+    }
+   }
+  },
+  "solo_L2_solohi-2ft_20211227T031444_V02.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-2ft_20211227T031444_V02.fits",
+    "date_avg": "2021-12-27T03:15:58.285",
+    "xposure_s": 144.995,
+    "nsumexp": 5,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     960,
+     1024
+    ],
+    "nan_pixels": 2521,
+    "dsun_au": 1.0068053477983092,
+    "obs_mode": "HI_SYN_FAR",
+    "gainmode": "HIGH",
+    "detector": "2",
+    "version": "       1",
+    "vers_cal": "0x111d",
+    "datasat": 1,
+    "datamax": 2.73829e-11
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -13.66,
+     "hplt": 11.66,
+     "eps": 17.8,
+     "ram_lon": -14.42,
+     "orbit_lat": 10.54
+    },
+    "c00": {
+     "hpln": -24.17,
+     "hplt": 2.09,
+     "eps": 24.25,
+     "ram_lon": -24.25,
+     "orbit_lat": 0.3
+    },
+    "cx0": {
+     "hpln": -5.2,
+     "hplt": 0.75,
+     "eps": 5.24,
+     "ram_lon": -5.24,
+     "orbit_lat": 0.23
+    },
+    "c0y": {
+     "hpln": -22.75,
+     "hplt": 22.27,
+     "eps": 31.31,
+     "ram_lon": -24.17,
+     "orbit_lat": 20.53
+    },
+    "cxy": {
+     "hpln": -3.7,
+     "hplt": 19.86,
+     "eps": 20.04,
+     "ram_lon": -5.13,
+     "orbit_lat": 19.4
+    },
+    "left": {
+     "hpln": -23.46,
+     "hplt": 12.49,
+     "eps": 26.35,
+     "ram_lon": -24.21,
+     "orbit_lat": 10.74
+    },
+    "right": {
+     "hpln": -4.46,
+     "hplt": 10.58,
+     "eps": 11.34,
+     "ram_lon": -5.19,
+     "orbit_lat": 10.09
+    },
+    "bottom": {
+     "hpln": -14.4,
+     "hplt": 1.42,
+     "eps": 14.47,
+     "ram_lon": -14.47,
+     "orbit_lat": 0.27
+    },
+    "top": {
+     "hpln": -12.9,
+     "hplt": 21.29,
+     "eps": 24.61,
+     "ram_lon": -14.36,
+     "orbit_lat": 20.2
+    },
+    "speed_km_s_header_vs_table": [
+     20.88,
+     20.88
+    ],
+    "r_au_header_vs_table": [
+     1.00681,
+     1.0068
+    ],
+    "sc_roll_deg": -4.3301,
+    "hglt_obs_deg": -0.141463377841
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 758,
+    "matched_3px": 585,
+    "median_resid_px": 1.8005553883279735,
+    "mean_offset_px": [
+     0.8848983031156821,
+     1.0629733717861598
+    ],
+    "rms_px": [
+     0.9936168806803273,
+     0.8871605163557558
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 545,
+    "zp0_at_bv0.65": -19.97369989141716,
+    "colour_coeff_mag_per_bv": 0.3525334458518393,
+    "scatter_mad_no_colour": 0.32338759756042734,
+    "scatter_mad_with_colour": 0.19371887917157418,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 7,
+      "zp_median": -20.94423256628162,
+      "resid_median": -1.0996686294767244
+     },
+     "5-6": {
+      "n": 34,
+      "zp_median": -20.435048003985813,
+      "resid_median": -0.490017765626785
+     },
+     "6-7": {
+      "n": 86,
+      "zp_median": -20.006728601710982,
+      "resid_median": -0.030567097021100054
+     },
+     "7-8": {
+      "n": 161,
+      "zp_median": -19.911516009934118,
+      "resid_median": 0.05712234484828471
+     },
+     "8-9": {
+      "n": 186,
+      "zp_median": -19.91922572165237,
+      "resid_median": 0.052731482772768956
+     },
+     "9-10": {
+      "n": 67,
+      "zp_median": -19.87205432570427,
+      "resid_median": 0.09127114066764719
+     }
+    },
+    "resid_by_elongation": {
+     "5-10": {
+      "n": 17,
+      "resid_median": -0.45922357792269963,
+      "mad": 0.5805964665365808
+     },
+     "10-15": {
+      "n": 111,
+      "resid_median": 0.07490283139807374,
+      "mad": 0.27756698898114734
+     },
+     "15-20": {
+      "n": 177,
+      "resid_median": 0.055295429612836955,
+      "mad": 0.16772816367067625
+     },
+     "20-25": {
+      "n": 189,
+      "resid_median": 0.015197997147314624,
+      "mad": 0.1362732552863093
+     },
+     "25-30": {
+      "n": 51,
+      "resid_median": 0.03605731026239667,
+      "mad": 0.16091790561125938
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 76,
+    "fwhm_px_median": 2.0282792422697167,
+    "fwhm_arcsec_median": 150.50042918682493
+   },
+   "noise_vs_elongation": {
+    "25.8": {
+     "hpln": -22.8,
+     "bg_msb": 8.057992749617438e-13,
+     "hp_sigma_px": 2.4978061643771837e-14,
+     "depth_5sig_V_solar_colour": 10.91096593502946
+    },
+    "24.6": {
+     "hpln": -21.48,
+     "bg_msb": 8.821468403842625e-13,
+     "hp_sigma_px": 2.5851704273365665e-14,
+     "depth_5sig_V_solar_colour": 10.873639819631524
+    },
+    "23.5": {
+     "hpln": -20.16,
+     "bg_msb": 9.605635514428612e-13,
+     "hp_sigma_px": 2.9246573441049987e-14,
+     "depth_5sig_V_solar_colour": 10.739675290200982
+    },
+    "22.3": {
+     "hpln": -18.85,
+     "bg_msb": 1.045438421162087e-12,
+     "hp_sigma_px": 3.1568236533944385e-14,
+     "depth_5sig_V_solar_colour": 10.656736962728687
+    },
+    "21.2": {
+     "hpln": -17.54,
+     "bg_msb": 1.1256555583483152e-12,
+     "hp_sigma_px": 3.381820788575344e-14,
+     "depth_5sig_V_solar_colour": 10.581986294004249
+    },
+    "20.0": {
+     "hpln": -16.24,
+     "bg_msb": 1.2338342153528359e-12,
+     "hp_sigma_px": 3.847724677936981e-14,
+     "depth_5sig_V_solar_colour": 10.441852795846039
+    },
+    "19.0": {
+     "hpln": -14.94,
+     "bg_msb": 1.3268114363272632e-12,
+     "hp_sigma_px": 3.575713995729312e-14,
+     "depth_5sig_V_solar_colour": 10.521455831781815
+    },
+    "17.9": {
+     "hpln": -13.66,
+     "bg_msb": 1.4496143543353546e-12,
+     "hp_sigma_px": 3.3230890175012236e-14,
+     "depth_5sig_V_solar_colour": 10.601007829887212
+    },
+    "16.9": {
+     "hpln": -12.39,
+     "bg_msb": 1.6699561655383888e-12,
+     "hp_sigma_px": 3.3193276122514547e-14,
+     "depth_5sig_V_solar_colour": 10.60223747100267
+    },
+    "15.9": {
+     "hpln": -11.13,
+     "bg_msb": 1.8559412904087247e-12,
+     "hp_sigma_px": 3.705514625609168e-14,
+     "depth_5sig_V_solar_colour": 10.48274143831567
+    },
+    "14.9": {
+     "hpln": -9.88,
+     "bg_msb": 2.0672251887718374e-12,
+     "hp_sigma_px": 3.7943336200860905e-14,
+     "depth_5sig_V_solar_colour": 10.457023982835612
+    },
+    "14.0": {
+     "hpln": -8.65,
+     "bg_msb": 3.634881675165791e-12,
+     "hp_sigma_px": 5.494400383884018e-14,
+     "depth_5sig_V_solar_colour": 10.05506200815465
+    },
+    "13.2": {
+     "hpln": -7.43,
+     "bg_msb": 9.774346262925171e-12,
+     "hp_sigma_px": 8.135694513911052e-14,
+     "depth_5sig_V_solar_colour": 9.628876185324447
+    },
+    "12.5": {
+     "hpln": -6.22,
+     "bg_msb": 2.0584541883528207e-11,
+     "hp_sigma_px": 9.1317917810807e-14,
+     "depth_5sig_V_solar_colour": 9.503472766845388
+    },
+    "11.8": {
+     "hpln": -5.03,
+     "bg_msb": 2.4125583475420598e-11,
+     "hp_sigma_px": 6.673697375975118e-14,
+     "depth_5sig_V_solar_colour": 9.843946494359017
+    }
+   }
+  },
+  "solo_L2_solohi-3fg_20211227T033213_V02.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-3fg_20211227T033213_V02.fits",
+    "date_avg": "2021-12-27T03:33:58.121",
+    "xposure_s": 207.258,
+    "nsumexp": 1,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     1024,
+     960
+    ],
+    "nan_pixels": 4851,
+    "dsun_au": 1.0067856992833522,
+    "obs_mode": "HI_SYN_FAR",
+    "gainmode": "HIGH",
+    "detector": "3",
+    "version": "       1",
+    "vers_cal": "0x111d",
+    "datasat": 1,
+    "datamax": 4.0367e-12
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -34.5,
+     "hplt": 12.37,
+     "eps": 36.35,
+     "ram_lon": -35.14,
+     "orbit_lat": 9.96
+    },
+    "c00": {
+     "hpln": -44.93,
+     "hplt": 3.26,
+     "eps": 45.02,
+     "ram_lon": -45.02,
+     "orbit_lat": 0.33
+    },
+    "cx0": {
+     "hpln": -24.66,
+     "hplt": 2.08,
+     "eps": 24.74,
+     "ram_lon": -24.74,
+     "orbit_lat": 0.27
+    },
+    "c0y": {
+     "hpln": -44.02,
+     "hplt": 21.26,
+     "eps": 47.86,
+     "ram_lon": -45.01,
+     "orbit_lat": 18.35
+    },
+    "cxy": {
+     "hpln": -23.34,
+     "hplt": 21.1,
+     "eps": 30.96,
+     "ram_lon": -24.67,
+     "orbit_lat": 19.33
+    },
+    "left": {
+     "hpln": -44.47,
+     "hplt": 12.49,
+     "eps": 45.8,
+     "ram_lon": -45.01,
+     "orbit_lat": 9.57
+    },
+    "right": {
+     "hpln": -24.0,
+     "hplt": 11.86,
+     "eps": 26.55,
+     "ram_lon": -24.7,
+     "orbit_lat": 10.07
+    },
+    "bottom": {
+     "hpln": -35.07,
+     "hplt": 2.73,
+     "eps": 35.16,
+     "ram_lon": -35.16,
+     "orbit_lat": 0.31
+    },
+    "top": {
+     "hpln": -33.94,
+     "hplt": 21.49,
+     "eps": 39.39,
+     "ram_lon": -35.13,
+     "orbit_lat": 19.09
+    },
+    "speed_km_s_header_vs_table": [
+     20.88,
+     20.88
+    ],
+    "r_au_header_vs_table": [
+     1.00679,
+     1.00679
+    ],
+    "sc_roll_deg": -4.33009,
+    "hglt_obs_deg": -0.142105364074
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 713,
+    "matched_3px": 606,
+    "median_resid_px": 2.137413650270942,
+    "mean_offset_px": [
+     -1.2294853127130743,
+     0.9225777184411088
+    ],
+    "rms_px": [
+     1.0746750667401248,
+     1.0401924036689765
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 566,
+    "zp0_at_bv0.65": -20.510115420239785,
+    "colour_coeff_mag_per_bv": 0.4052364238222077,
+    "scatter_mad_no_colour": 0.5401166422991922,
+    "scatter_mad_with_colour": 0.6268353226854766,
+    "zp_by_vbin": {
+     "5-6": {
+      "n": 23,
+      "zp_median": -21.85656658481702,
+      "resid_median": -1.2915752990841263
+     },
+     "6-7": {
+      "n": 59,
+      "zp_median": -21.06671058098688,
+      "resid_median": -0.6275391564096147
+     },
+     "7-8": {
+      "n": 168,
+      "zp_median": -20.517738974216165,
+      "resid_median": -0.02861508115272926
+     },
+     "8-9": {
+      "n": 233,
+      "zp_median": -20.060618674345555,
+      "resid_median": 0.387108608291733
+     },
+     "9-10": {
+      "n": 77,
+      "zp_median": -19.849161850362552,
+      "resid_median": 0.592687838466798
+     }
+    },
+    "resid_by_elongation": {
+     "25-30": {
+      "n": 107,
+      "resid_median": 0.30453065595237305,
+      "mad": 0.3917697226477809
+     },
+     "30-35": {
+      "n": 164,
+      "resid_median": 0.33884108647732347,
+      "mad": 0.3935628597638854
+     },
+     "35-40": {
+      "n": 159,
+      "resid_median": 0.15851126640971813,
+      "mad": 0.47702985355135985
+     },
+     "40-45": {
+      "n": 130,
+      "resid_median": 0.010460459065599892,
+      "mad": 0.5078872023035963
+     },
+     "45-50": {
+      "n": 6,
+      "resid_median": 0.23337459803663307,
+      "mad": 0.07437097663332784
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 51,
+    "fwhm_px_median": 2.6172358290096156,
+    "fwhm_arcsec_median": 194.20162043777563
+   },
+   "noise_vs_elongation": {
+    "45.3": {
+     "hpln": -43.87,
+     "bg_msb": 3.7167775909958956e-13,
+     "hp_sigma_px": 9.863401176542219e-15,
+     "depth_5sig_V_solar_colour": 11.383380494769693
+    },
+    "44.1": {
+     "hpln": -42.67,
+     "bg_msb": 3.319933032912975e-13,
+     "hp_sigma_px": 7.966583984294825e-15,
+     "depth_5sig_V_solar_colour": 11.615266891736901
+    },
+    "43.0": {
+     "hpln": -41.45,
+     "bg_msb": 3.3737479498453793e-13,
+     "hp_sigma_px": 8.457927591534308e-15,
+     "depth_5sig_V_solar_colour": 11.550287331832152
+    },
+    "41.8": {
+     "hpln": -40.21,
+     "bg_msb": 3.566843272562875e-13,
+     "hp_sigma_px": 9.223962284081455e-15,
+     "depth_5sig_V_solar_colour": 11.456153442640598
+    },
+    "40.6": {
+     "hpln": -38.96,
+     "bg_msb": 3.782883836907225e-13,
+     "hp_sigma_px": 9.628654929036591e-15,
+     "depth_5sig_V_solar_colour": 11.409533181957912
+    },
+    "39.4": {
+     "hpln": -37.7,
+     "bg_msb": 4.034069221248507e-13,
+     "hp_sigma_px": 1.0082635645987901e-14,
+     "depth_5sig_V_solar_colour": 11.359512055223963
+    },
+    "38.2": {
+     "hpln": -36.43,
+     "bg_msb": 4.2893184663828077e-13,
+     "hp_sigma_px": 1.0476397711584733e-14,
+     "depth_5sig_V_solar_colour": 11.317917296327987
+    },
+    "37.0": {
+     "hpln": -35.15,
+     "bg_msb": 4.582824462799617e-13,
+     "hp_sigma_px": 1.0426687687076566e-14,
+     "depth_5sig_V_solar_colour": 11.323081325854176
+    },
+    "35.8": {
+     "hpln": -33.85,
+     "bg_msb": 4.885837828066952e-13,
+     "hp_sigma_px": 1.1354621539880205e-14,
+     "depth_5sig_V_solar_colour": 11.230515580499816
+    },
+    "34.6": {
+     "hpln": -32.55,
+     "bg_msb": 5.201575118980034e-13,
+     "hp_sigma_px": 1.2135896755301016e-14,
+     "depth_5sig_V_solar_colour": 11.158267556178266
+    },
+    "33.3": {
+     "hpln": -31.25,
+     "bg_msb": 5.540327040459009e-13,
+     "hp_sigma_px": 1.28745547670105e-14,
+     "depth_5sig_V_solar_colour": 11.09411669132286
+    },
+    "32.1": {
+     "hpln": -29.93,
+     "bg_msb": 5.951892624589394e-13,
+     "hp_sigma_px": 1.4438330869434578e-14,
+     "depth_5sig_V_solar_colour": 10.96965476413483
+    },
+    "30.9": {
+     "hpln": -28.61,
+     "bg_msb": 6.407094906707433e-13,
+     "hp_sigma_px": 1.6635698808081798e-14,
+     "depth_5sig_V_solar_colour": 10.815844616905466
+    },
+    "29.6": {
+     "hpln": -27.29,
+     "bg_msb": 6.880007631313023e-13,
+     "hp_sigma_px": 1.716774073975188e-14,
+     "depth_5sig_V_solar_colour": 10.781664373561256
+    },
+    "28.4": {
+     "hpln": -25.97,
+     "bg_msb": 7.466918251243515e-13,
+     "hp_sigma_px": 1.9511767315781927e-14,
+     "depth_5sig_V_solar_colour": 10.64270571831113
+    },
+    "27.2": {
+     "hpln": -24.64,
+     "bg_msb": 8.005831240998074e-13,
+     "hp_sigma_px": 2.3228485785233357e-14,
+     "depth_5sig_V_solar_colour": 10.453394988880909
+    }
+   }
+  },
+  "solo_L2_solohi-4fg_20211227T001213_V02.fits": {
+   "frame": {
+    "l2": "solo_L2_solohi-4fg_20211227T001213_V02.fits",
+    "date_avg": "2021-12-27T00:13:58.288",
+    "xposure_s": 207.258,
+    "nsumexp": 1,
+    "bunit": "MSB",
+    "cdelt_deg": 0.0206114,
+    "naxis": [
+     960,
+     1024
+    ],
+    "nan_pixels": 3210,
+    "dsun_au": 1.0070027298323037,
+    "obs_mode": "HI_SYN_FAR",
+    "gainmode": "HIGH",
+    "detector": "4",
+    "version": "       1",
+    "vers_cal": "0x111d",
+    "datasat": 1,
+    "datamax": 4.06615e-12
+   },
+   "field_model_check": {
+    "centre": {
+     "hpln": -36.32,
+     "hplt": -7.94,
+     "eps": 37.11,
+     "ram_lon": -35.82,
+     "orbit_lat": -10.42
+    },
+    "c00": {
+     "hpln": -45.97,
+     "hplt": -16.33,
+     "eps": 48.23,
+     "ram_lon": -45.11,
+     "orbit_lat": -19.29
+    },
+    "cx0": {
+     "hpln": -27.33,
+     "hplt": -18.51,
+     "eps": 32.71,
+     "ram_lon": -26.1,
+     "orbit_lat": -20.45
+    },
+    "c0y": {
+     "hpln": -44.93,
+     "hplt": 2.79,
+     "eps": 45.0,
+     "ram_lon": -45.0,
+     "orbit_lat": -0.14
+    },
+    "cxy": {
+     "hpln": -25.97,
+     "hplt": 1.68,
+     "eps": 26.02,
+     "ram_lon": -26.02,
+     "orbit_lat": -0.21
+    },
+    "left": {
+     "hpln": -45.44,
+     "hplt": -7.02,
+     "eps": 45.9,
+     "ram_lon": -45.05,
+     "orbit_lat": -9.97
+    },
+    "right": {
+     "hpln": -26.66,
+     "hplt": -8.71,
+     "eps": 28.0,
+     "ram_lon": -26.06,
+     "orbit_lat": -10.63
+    },
+    "bottom": {
+     "hpln": -36.94,
+     "hplt": -17.6,
+     "eps": 40.46,
+     "ram_lon": -35.88,
+     "orbit_lat": -20.1
+    },
+    "top": {
+     "hpln": -35.71,
+     "hplt": 2.28,
+     "eps": 35.78,
+     "ram_lon": -35.77,
+     "orbit_lat": -0.18
+    },
+    "speed_km_s_header_vs_table": [
+     20.87,
+     20.88
+    ],
+    "r_au_header_vs_table": [
+     1.007,
+     1.007
+    ],
+    "sc_roll_deg": -4.33033,
+    "hglt_obs_deg": -0.134972433053
+   },
+   "astrometry_header_wcs_vs_hipparcos": {
+    "hip_in_fov": 793,
+    "matched_3px": 535,
+    "median_resid_px": 2.0994230411824946,
+    "mean_offset_px": [
+     -1.0172647926243248,
+     -0.7411418121680357
+    ],
+    "rms_px": [
+     1.2071684993553926,
+     1.1843126244290214
+    ],
+    "pixel_arcsec": 74.20103999999999
+   },
+   "photometry": {
+    "n_calibrators_snr10": 497,
+    "zp0_at_bv0.65": -20.488426817586642,
+    "colour_coeff_mag_per_bv": 0.32276429637190074,
+    "scatter_mad_no_colour": 0.507319245538747,
+    "scatter_mad_with_colour": 0.6966439056167243,
+    "zp_by_vbin": {
+     "4-5": {
+      "n": 10,
+      "zp_median": -22.539452227144494,
+      "resid_median": -2.0936266920125277
+     },
+     "5-6": {
+      "n": 11,
+      "zp_median": -21.73223185073244,
+      "resid_median": -1.2876329826423891
+     },
+     "6-7": {
+      "n": 49,
+      "zp_median": -21.055524031725074,
+      "resid_median": -0.5634501008657189
+     },
+     "7-8": {
+      "n": 120,
+      "zp_median": -20.469302301658413,
+      "resid_median": -0.051093417415200904
+     },
+     "8-9": {
+      "n": 182,
+      "zp_median": -20.055795716540636,
+      "resid_median": 0.3900524694154459
+     },
+     "9-10": {
+      "n": 125,
+      "zp_median": -19.87809205919534,
+      "resid_median": 0.5679699712757191
+     }
+    },
+    "resid_by_elongation": {
+     "25-30": {
+      "n": 71,
+      "resid_median": 0.23127281032139635,
+      "mad": 0.35150586284793867
+     },
+     "30-35": {
+      "n": 190,
+      "resid_median": 0.29492101690048855,
+      "mad": 0.41640057315723633
+     },
+     "35-40": {
+      "n": 163,
+      "resid_median": 0.33096055055494134,
+      "mad": 0.4536040583626974
+     },
+     "40-45": {
+      "n": 69,
+      "resid_median": -0.04644331865307194,
+      "mad": 0.8165424663972587
+     }
+    }
+   },
+   "psf": {
+    "n_stars": 40,
+    "fwhm_px_median": 2.7480283191744883,
+    "fwhm_arcsec_median": 203.90655923219896
+   },
+   "noise_vs_elongation": {
+    "45.3": {
+     "hpln": -44.86,
+     "bg_msb": 3.579625474075393e-13,
+     "hp_sigma_px": 7.518510602511421e-15,
+     "depth_5sig_V_solar_colour": 11.699806300297567
+    },
+    "44.2": {
+     "hpln": -43.68,
+     "bg_msb": 3.2284124104522277e-13,
+     "hp_sigma_px": 6.096249335419204e-15,
+     "depth_5sig_V_solar_colour": 11.927479038407832
+    },
+    "43.0": {
+     "hpln": -42.49,
+     "bg_msb": 3.262667507041364e-13,
+     "hp_sigma_px": 6.5017657924215654e-15,
+     "depth_5sig_V_solar_colour": 11.857557538492742
+    },
+    "41.8": {
+     "hpln": -41.28,
+     "bg_msb": 3.4195515614000166e-13,
+     "hp_sigma_px": 6.8387250127133895e-15,
+     "depth_5sig_V_solar_colour": 11.802697989130138
+    },
+    "40.7": {
+     "hpln": -40.06,
+     "bg_msb": 3.6172101555362324e-13,
+     "hp_sigma_px": 7.279585015839382e-15,
+     "depth_5sig_V_solar_colour": 11.734869285594122
+    },
+    "39.5": {
+     "hpln": -38.83,
+     "bg_msb": 3.8193017813051983e-13,
+     "hp_sigma_px": 7.623195011439293e-15,
+     "depth_5sig_V_solar_colour": 11.684793267193186
+    },
+    "38.3": {
+     "hpln": -37.58,
+     "bg_msb": 4.0344991074098974e-13,
+     "hp_sigma_px": 8.019247676386946e-15,
+     "depth_5sig_V_solar_colour": 11.62980177411437
+    },
+    "37.1": {
+     "hpln": -36.32,
+     "bg_msb": 4.294447962386108e-13,
+     "hp_sigma_px": 8.262392788178919e-15,
+     "depth_5sig_V_solar_colour": 11.597371248603238
+    },
+    "35.9": {
+     "hpln": -35.05,
+     "bg_msb": 4.577674502480311e-13,
+     "hp_sigma_px": 8.511043375603564e-15,
+     "depth_5sig_V_solar_colour": 11.56517883190675
+    },
+    "34.6": {
+     "hpln": -33.78,
+     "bg_msb": 4.883312179106147e-13,
+     "hp_sigma_px": 9.22834255301548e-15,
+     "depth_5sig_V_solar_colour": 11.477326574007137
+    },
+    "33.4": {
+     "hpln": -32.49,
+     "bg_msb": 5.186297626167541e-13,
+     "hp_sigma_px": 9.698940161748624e-15,
+     "depth_5sig_V_solar_colour": 11.423325141718145
+    },
+    "32.2": {
+     "hpln": -31.2,
+     "bg_msb": 5.546977265534492e-13,
+     "hp_sigma_px": 1.0671862189521457e-14,
+     "depth_5sig_V_solar_colour": 11.319535320616009
+    },
+    "31.0": {
+     "hpln": -29.9,
+     "bg_msb": 5.923351273449257e-13,
+     "hp_sigma_px": 1.101955105940397e-14,
+     "depth_5sig_V_solar_colour": 11.284726087650814
+    },
+    "29.7": {
+     "hpln": -28.6,
+     "bg_msb": 6.258327731913094e-13,
+     "hp_sigma_px": 1.107042647656431e-14,
+     "depth_5sig_V_solar_colour": 11.27972496169512
+    },
+    "28.5": {
+     "hpln": -27.29,
+     "bg_msb": 6.579544038504831e-13,
+     "hp_sigma_px": 1.211582387151619e-14,
+     "depth_5sig_V_solar_colour": 11.181753463193541
+    }
+   }
+  }
+ },
+ "notes": [
+  "aperture r=2 px, annulus 4-8 px on a 25-px median high-pass",
+  "depth = 5 sigma on the aperture noise for a B-V=0.65 source, one L2 frame",
+  "ZP: V = ZP - 2.5 log10(sum MSB in aperture); colour coefficient positive = red stars brighter",
+  "field_model_check: ram_lon < 0 means the anti-ram side per solo_geometry (t = prograde tangential)"
+ ]
+}

@@ -1160,11 +1160,45 @@ machinery (`--observer solo`, Horizons −144) with the PSP lessons —
 Gaia template with proper-motion propagation, quadratic-in-latitude
 controls, measured field extent.
 
-**Status.** Not started; named as the hand-off of the WISPR geometry
-pass (§5.18) and survey (§5.19).
+**Status.** **COMPLETE 2026-09-06** — `report/solohi_crossings.md`;
+survey docs `surveys/solohi-crossings/` (geometry pass + recon note,
+hypotheses D0–D9, thresholds v1.0 + amendments v1.1–v1.2, dev
+machinery log, dev/confirmatory tables, completeness, controls);
+execution record `notes/project_history.md` §23. Observer list
+`crossings/solo_v1` (`xng-dea7100a725c`, 4,624 events). Chain in one
+day: observer list → geometry pass + recon (field model measured from
+headers: anti-ram side, orbit-plane frame, 0.49° seams; grazing cones
+`not_constrainable`; 0.1 AU rungs open every orbit, pre-t_ca half,
+with an off-beam same-tile baseline before every arc) → freeze
+(user-approved) → dev with two pre-confirmatory amendments
+(saturation mask at 0.85 DSATVAL; structure-noise epoch gate
+err ≤ 1.5 units + colour calibrators V ≥ 4.5) → blind confirmatory
+once → adjudication with pixel stamps, the Horizons `@-144` census,
+aligned stacks and a post-blind median-interpolation diagnostic →
+completeness → report.
 
-**Trigger.** None scheduled. Recon-first, like WISPR: an observer list
-and a census of which rungs enter the field, then a freeze.
+**Result.** **0 candidates blind**: 18 searched units (of 27), 75
+events, 54 trials, 8 exceedances vs 6.0 expected, all adjudicated
+non-promotable — 4 control-interpolation artifacts (a bright control
+star losing its core to the saturation mask, extrapolated into the
+source by the frozen quadratic on one-sided ladders: gj-1111 S2 ×3,
+gj-251 S2), 2 uncatalogued moving objects through the patch
+(teegarden S2), 2 extended level offsets of alternating sign (gj-876
+S1). The LASCO/HI-1/WISPR family stacks are null (van-maanen S1/S2,
+wolf-359 S2, ross-128 S2, gj-1276 S1, teegarden S2). Completeness:
+recurrence-stack m90 V_eq 9.1–13.9 (median 10.5) → **downlink
+14 MW – 1.2 GW through the 0.1 AU cone (median 340 MW), 10-m uplink
+33–350 MW (median 89 MW)** — LASCO-class, ~1 mag deeper than WISPR's
+stacks (±0.3 mag flux-scale systematic); pulse cell opened but
+systematics-limited (V_eq 4.8–7.9). Vesta recovered at −0.05 ± 0.14
+mag. 9 units `constraint_only` (arcs inside the sunward-edge band:
+saturation plateau in the ≥ 45-s regime, unresolved corona structure
+inside ε ≈ 8°); 61-vir S2 saturated. Honest framing: the survey
+confirms the 0.1 AU sunward cells at LASCO class from a fourth
+instrument, at the other window phase, and extends them to 13 new
+targets; the machinery lessons (robust control interpolation, a
+brighter control-star mask under saturation, the edge band) are the
+hand-off for any v2, with P13+ at the yearly refresh.
 
 ### 5.24 SPHEREx crossings
 
@@ -1224,8 +1258,8 @@ extend, and the items that ride on it:
   reach the public archive. The v2-style null-ensemble redesign is the
   designated route should the d = 1 wide-beam rung ever be searched
   with calibrated error rates.
-- Heliospheric: refresh `stereoa_v1` and `psp_v1` (SPK end 2026-12-01;
-  WISPR E28+ public L2).
+- Heliospheric: refresh `stereoa_v1`, `psp_v1` and `solo_v1` (SPK ends 2026-12-01 / 2030-11-20;
+  WISPR E28+ public L2; SoloHI P13+ — perihelion 2026-08-19 — public L2 after 2026-04-10).
 - Spectral archives (§5.17): pull the newly public
   NIRPS/SPIRou/ESPRESSO/HARPS epochs of the 2026–27 windows (ensembles
   and thresholds cached in `runs/spectral-archives/v1/`) and re-check

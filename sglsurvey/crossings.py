@@ -42,6 +42,11 @@ same request with a per-epoch observer (plan §11.2 step 4):
   there). The observer's star-side and anti-star-side minima can be
   only ~2 d apart around perihelion, so the list is built with
   ``--coarse-step-days 0.5`` (plan §5.15 O5, PSP/WISPR geometry pass).
+* ``--observer solo`` — a JPL Horizons SSB vector table (spacecraft
+  -144, Solar Orbiter) fetched by ``--fetch-observer solo`` at 10-min
+  sampling like PSP; heliocentric 0.28-1.0 AU (period ~150-180 d,
+  Venus-resonant), so the same fast-observer settings apply
+  (``--coarse-step-days 0.5``; plan §5.23, SoloHI sunward survey).
 * ``--observer soho`` — a JPL Horizons SSB vector table (spacecraft
   -21) fetched by ``--fetch-observer soho``. SOHO's L1 halo orbit has
   ~0.9 R_sun transverse amplitude (measured directly in the LASCO
@@ -109,11 +114,20 @@ OBSERVER_DEFAULTS = {
     # (period 88-150 d): Earth-center is meaningless at every rung
     # (plan §5.15 O5)
     "psp": ("2018-08-15", "2026-12-01", "psp_v1"),
+    # Solar Orbiter: launch 2020-02-10, SoloHI first light 2020-05
+    # (cruise-phase remote-sensing checkouts), nominal mission from the
+    # 2021-11-27 Earth flyby; the Horizons -144 SPK runs to 2030-11-20
+    # so the era extends to the universal window end. Heliocentric
+    # 0.28-1.0 AU, period ~150-180 d (Venus-resonant, inclination rising
+    # to ~24 deg by 2029): Earth-center is meaningless at every rung
+    # (plan §5.23)
+    "solo": ("2020-05-01", "2028-01-01", "solo_v1"),
 }
 HORIZONS_IDS = {"tess": "-95", "soho": "-21", "kepler": "-227",
-                "stereoa": "-234", "psp": "-96"}
-#: per-observer Horizons sampling step (default 6 h); PSP needs 10 min
-OBSERVER_FETCH_STEP = {"psp": "10m"}
+                "stereoa": "-234", "psp": "-96", "solo": "-144"}
+#: per-observer Horizons sampling step (default 6 h); the inner-
+#: heliosphere observers (PSP, Solar Orbiter) need 10 min
+OBSERVER_FETCH_STEP = {"psp": "10m", "solo": "10m"}
 #: longest single Horizons request (rows are capped server-side at ~90k)
 FETCH_CHUNK_DAYS = 365
 #: raw responses larger than this are stored gzipped (sha of the .gz)
@@ -325,6 +339,27 @@ def resolve_observer(name: str):
             "meaningless for PSP at every rung; the observer crosses "
             "each Sun-star axis twice per orbit at whatever heliocentric "
             "radius the orbit has at the star's (anti-)longitude"}
+    if name == "solo":
+        npz = OBSERVER_TABLE_DIR / "solo_sc_ephemeris.npz"
+        if not npz.exists():
+            raise SystemExit("no Solar Orbiter table; run --fetch-observer "
+                             "solo first")
+        tab = np.load(npz)
+        ident = _sha256(npz)
+        obs = register_spacecraft_table_observer(
+            "solo-spacecraft", tab["mjd_utc"], tab["xyz_au"], ident,
+            max_gap_days=0.5)
+        return obs, {
+            "observer_table": str(npz.relative_to(REPO)),
+            "observer_table_sha256": ident,
+            "observer_accuracy": "JPL Horizons -144 SSB vectors at 10 min "
+            "sampling (yearly chunks); at the 0.28 AU perihelion the "
+            "chord sagitta over one step is ~5e-8 AU, negligible. "
+            "Heliocentric 0.28-1.0 AU orbit (period ~150-180 d, "
+            "Venus-resonant): the Earth-center list is meaningless for "
+            "Solar Orbiter at every rung; the observer crosses each "
+            "Sun-star axis twice per orbit at whatever heliocentric "
+            "radius the orbit has at the star's (anti-)longitude"}
     raise ValueError(name)
 
 
@@ -357,10 +392,10 @@ def main(argv=None) -> int:
     ap.add_argument("--stop", default=None)
     ap.add_argument("--coarse-step-days", type=float, default=10.0,
                     help="coarse-scan step of the minimum bracketing; "
-                         "10 d for 1-AU-class observers, 0.5 d for PSP")
+                         "10 d for 1-AU-class observers, 0.5 d for PSP and Solar Orbiter")
     ap.add_argument("--step", default=None,
                     help="Horizons sampling step for --fetch-observer "
-                         "(default 6h; psp 10m)")
+                         "(default 6h; psp and solo 10m)")
     ap.add_argument("--targets", nargs="*", help="subset of registry IDs (default: all)")
     ap.add_argument("--out", type=Path, default=None)
     a = ap.parse_args(argv)

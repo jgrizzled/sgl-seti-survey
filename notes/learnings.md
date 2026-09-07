@@ -668,3 +668,47 @@ barycentric grid does *not* see.
   confirmatory run (append-only measurement files made resumption
   lossless); `pkill -f "<pattern>"` from a shell whose command line
   contains the pattern kills that shell (use `"[p]attern"`).
+
+## §15 — SoloHI survey (2026-09-06): a star-fixed baseline on a fast observer, and its edges
+
+- **Measure the field model from the headers, never from the
+  literature.** SoloHI's tiles are fixed in the *orbit-plane* frame
+  (the spacecraft rolls to keep them there) and sit on the anti-ram
+  side — the opposite of WISPR; a solar-north field model would have
+  wandered by ±5°. The 0.49° detector seams matter physically: the
+  inner seam lies on the orbital plane, exactly where the deepest
+  in-plane crossings (ross-128, b 0.13 R☉) put their sources.
+- **A fixed source entering a field from larger elongation carries
+  its own baseline.** Because the SoloHI source approaches the Sun
+  through the field, every arc is preceded by 60–240 h of off-beam
+  same-tile frames — the HI-1 star-fixed differential worked on an
+  inner-heliosphere substrate and removed the template systematics
+  that dominated WISPR's exceedance budget (0 static-content
+  exceedances here).
+- **Saturation hides as a plateau, not as DSATVAL.** The F-corona
+  along the sunward edge saturates at 0.90–0.92 × the header DSATVAL
+  in the ≥ 45-s exposure regime and erases stars without any flag;
+  mask at 0.85 DSATVAL and let the validity gate remove the epochs.
+  The same plateau removes any bright control star's core
+  intermittently — control patches need a brighter mask (G ≤ 8) than
+  source patches wherever saturation can bite.
+- **Gate on measured per-epoch noise, not on geometry.** The inner
+  ~120 px (ε ≲ 8°) of every arc has 6–11 units of unresolved corona
+  structure per frame (against 0.5 outside), and it biases, not just
+  scatters; the annulus noise `err` tracks it, and an absolute gate
+  (err ≤ 1.5 units) turned control thresholds of 30–190 into 3–17.
+- **Quadratic control interpolation is not robust.** The WISPR v2
+  lesson (quadratic in latitude removes ridge curvature) was applied
+  from the start here, and on one-sided ladders (125 of 178
+  unit-events) it *extrapolates*: one control excursion of −50 units
+  became +60 on the source. Half the blind exceedances were this. A
+  robust interpolation (median or clipped quadratic) and the
+  curvature correction are both needed; declare the ladder geometry
+  per unit-event.
+- **Movers set the pulse cell.** With 12–48-min cadence, uncatalogued
+  objects crossing a fixed patch persist for 2–3 frames and pass the
+  pair-min persistence rule; the pixel test (a peak that moves between
+  frames) is the discriminator, and belongs in the ladder.
+- **Process hygiene, again**: `pkill -f` from a shell whose command
+  contains the pattern kills that shell (twice in one session) — kill
+  by PID from `pgrep -f '^python …'`.

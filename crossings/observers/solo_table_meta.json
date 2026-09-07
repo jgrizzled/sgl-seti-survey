@@ -1,0 +1,18 @@
+{
+ "observer": "solo",
+ "horizons_command": "-144",
+ "center": "500@0 (SSB)",
+ "ref_plane": "FRAME (ICRF)",
+ "start": "2020-05-01",
+ "stop": "2028-01-01",
+ "step": "10m",
+ "n_chunks": 8,
+ "n_rows": 403345,
+ "mjd_utc_range": [
+  58969.99919924194,
+  61770.99919926022
+ ],
+ "raw_response": "solo_horizons_response.txt.gz",
+ "raw_sha256": "sha256:995a28c120c5266cc7e7d7a25ab76e106a747772c72163d61c8119febdd6eb06",
+ "table_sha256": "sha256:d1dd6486b3d5772c4eeb971e9df3f641e48a0fb2099b3b062fe0cae148cbb234"
+}

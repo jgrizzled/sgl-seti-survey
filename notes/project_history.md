@@ -2067,3 +2067,81 @@ declared. 5 units not covered (sources above the field's +15° north
 edge); fomalhaut S2 unsearchable. Report `report/wispr_crossings.md`.
 Lessons for a v2: Gaia template with PM propagation, quadratic
 latitude interpolation, measured field extent.
+
+## 23. Solar Orbiter / SoloHI — observer-geometry pass, recon and sunward survey (2026-09-06; plan §5.23 — complete)
+
+**Observer list.** `solo` added to `sglsurvey/crossings.py` (Horizons
+−144; the PSP fast-observer settings: 10-min sampling in yearly
+chunks, 403,345 rows, `--coarse-step-days 0.5`; era 2020-05-01 →
+2028-01-01, the SPK runs to 2030-11-20). `crossings/solo_v1`
+(`xng-dea7100a725c`, 4,624 events, 98 degraded; 39 min).
+
+**Geometry pass + recon (one day, one note:
+`surveys/solohi-crossings/notes/solo_solohi_geometry_pass_2026-09-06.md`).**
+SOAR TAP inventory (193,900 L2 items, 2021-04 → 2026-04-10; near-
+continuous from 2021-12 with June–July gaps; inner tiles every
+12–48 min); 48 frames at 12 epochs + 125 sampled headers. Field model
+**measured from the headers**, not the literature: four tiles stable
+in the orbit-plane frame at every epoch (the spacecraft rolls to keep
+the mosaic on its orbital plane), **anti-ram side** (helioprojective
+longitude −5° to −45°, the opposite of WISPR), inner edge 5.2°,
+0.49° seams with no overlap, the inner seam on the orbital plane;
+83 % of frames at the nominal pointing, roll campaigns elsewhere →
+per-frame WCS footprints at the survey stage. ε = atan(b_e/r):
+grazing cones ≤ 1.1° / 2.4° vs the 5.2° edge → `not_constrainable`
+by a factor 2–5; the **0.1 AU rungs are open every orbit** — 402 of
+450 event-rungs have an inner-tile arc (median 42 h, the **pre-t_ca
+half** of the window, ε 14.5° → 7.2°, b_e 21.5 → 13 R☉: the outer half
+of the cone), 227 covered by public L2 over P04–P12 (median 114
+frames per arc), **32 units** (19 S1 + 13 S2, 217 events, ~29k
+frames); the in-plane ross-128 crossings (b 0.13 R☉, P05–P09) fall in
+the seam. **Off-beam in-field baselines precede 224 of 227 arcs**
+(median 135 covered hours at ε 15°–45°) — the HI-1 star-fixed
+differential is available, which WISPR lacked. Star check on 14
+frames: header WCS ~1 px, ZP −19.9 to −20.0 stable across 16–145 s
+exposures, colour +0.30 to +0.47 mag/(B−V), PSF 1.5–2.2 px; single-
+frame 5σ depth **in the arc band V 7–9 near perihelion, V 8–10
+outside 0.5 AU** (F-corona-gradient-limited inward of ε 12°) —
+1.5–2 mag deeper than WISPR per frame, LASCO C3 class. No background-
+subtracted science product (the NRL "L3a" mosaics are 8-bit display
+files); NRL plain-HTTP tree with Range as the fetch route.
+
+**Freeze (2026-09-06).** Hypotheses D0–D9 approved by the user as
+recommended (D0 run at LASCO-class depth; D3 star-fixed differential
+primary with a Gaia DR3 template secondary and quadratic-in-latitude
+controls; D8 dev = gj-908 S1+S2, 61-vir S1+S2, ross-154 S1,
+confirmatory 27 units). Threshold freeze v1.0 (seed 20260906);
+coverage intersect 32 units / 217 events / 29,243 arc frames; 96
+recon frame-event contacts excluded.
+
+**Dev (2026-09-06).** Chain ported from WISPR (`solohi_lib.py`,
+`series.py`; L2, no rescale; shape-agnostic tiles — tile 2 is
+960 × 1024; NRL + SOAR alternating fetch at ~140 frames/min; Gaia
+cone queries cached per patch). Two amendments, both frozen before
+any confirmatory pixel: **v1.1** saturation mask at 0.85 × DSATVAL
+(the F-corona plateau along the sunward edge in the ≥ 45-s regime
+erased 61-vir: 14 vs 105 units; dev re-measured from scratch);
+**v1.2** structure-noise epoch gate err ≤ 1.5 units + colour
+calibrators V ≥ 4.5 (the inner ~120 px of every arc scatter 6–11
+units per frame and bias; control thresholds 30–190 → 3–17). Dev
+result 12 trials / 0 exceedances (1.33 expected); gj-908 S2 baseline
+null; 61-vir S2 `bright_star_saturated`; Vesta 2022-08 recovered at
+−0.05 ± 0.14 mag (118 frames); Ceres 2024-06 unusable (edge band).
+`notes/dev_machinery_log_2026-09-06.md`.
+
+**Confirmatory (2026-09-06; blind, once).** 28,056 frames (416 days,
+178 unit-events; 27,973 usable), 18 searched units / 75 events / 54
+trials, **8 exceedances vs 6.0 expected, all adjudicated, 0
+candidates**: 4 control-interpolation artifacts (gj-1111 S2 ×3,
+gj-251 S2 — a bright control star losing its core to the saturation
+mask, extrapolated into the source by the frozen quadratic on a
+one-sided ladder; source pixels flat; the post-blind median
+diagnostic gives 4 vs 6.0 with the same 0 candidates), 2 uncatalogued
+movers through the teegarden S2 patch (peaks displaced 4 px between
+consecutive frames), 2 extended level offsets on gj-876 S1
+(alternating sign over P09–P11, no point-source shape in 79–169-frame
+stacks). Family stacks null. Completeness: S_stack m90 V_eq 9.1–13.9
+(median 10.5) → downlink 14 MW – 1.2 GW (median 340 MW), 10-m uplink
+33–350 MW (median 89 MW); pulse V_eq 4.8–7.9. 9 units
+`constraint_only` (edge band). Report `report/solohi_crossings.md`;
+lessons `notes/learnings.md` §15.
