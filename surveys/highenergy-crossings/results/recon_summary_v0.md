@@ -1,0 +1,832 @@
+# High-energy recon — summary tables (v0, 2026-09-07)
+
+## Pointed X-ray missions (HEASARC master tables, era-mean channel positions)
+
+| Channel | Target | Chandra (25′) | XMM pointed (20′) | Swift (15′) |
+|---|---|---|---|---|
+| A | gj-1276 | 0 | 0 | 0 |
+| A | gj-908 | 0 | 3 | 1 |
+| A | ross-128 | 1 | 0 | 4 |
+| A | ross-154 | 2 | 2 | 16 |
+| A | teegarden | 1 | 1 | 17 |
+| A | van-maanen | 0 | 0 | 0 |
+| A | wolf-359 | 7 | 10 | 113 |
+| B | gj-1276 | 0 | 0 | 0 |
+| B | gj-908 | 0 | 0 | 1 |
+| B | ross-128 | 0 | 0 | 1 |
+| B | ross-154 | 0 | 0 | 0 |
+| B | teegarden | 0 | 0 | 2 |
+| B | van-maanen | 0 | 4 | 2 |
+| B | wolf-359 | 0 | 0 | 0 |
+
+In-window pointed units: **1**
+
+- A wolf-359 0.1AU t_ca 2018-03-03T13:24 (b 0.79 R☉): swiftmastr obsid 00010119025 (CNLeo) 2018-03-06T10:01 → 23:42, +2.9 d from t_ca, XRT 4167 s, pointing offset 3.0′
+
+## XMM-Newton slew survey (XSA `v_slew_exposure` footprint CONTAINS)
+
+| Channel | Target | Slew exposures over the position | Nearest to any t_ca (d) |
+|---|---|---|---|
+| A | gj-1276 | 5 | +73 |
+| A | gj-908 | 4 | +72 |
+| A | ross-128 | 1 | +86 |
+| A | ross-154 | 6 | -76 |
+| A | teegarden | 1 | +94 |
+| A | van-maanen | 1 | -80 |
+| A | wolf-359 | 2 | +86 |
+| B | gj-1276 | 5 | -89 |
+| B | gj-908 | 4 | +84 |
+| B | ross-128 | 0 | — |
+| B | ross-154 | 0 | — |
+| B | teegarden | 3 | -83 |
+| B | van-maanen | 1 | -105 |
+| B | wolf-359 | 0 | — |
+
+In-window slew units: **0**
+
+## Swift/BAT coded-mask coverage of the windows (swiftmastr per-window queries, survey+event exposure, pointing offset ≤ 30° / 20°)
+
+| Channel | Rung | Windows (t_ca ≤ today) | ≥ 1 ks within 30° | ≥ 1 ks within 20° | median s (30°) | p90 s (30°) |
+|---|---|---|---|---|---|---|
+| A | 1.2Rsun | 86 | 45 | 19 | 1068 | 3964 |
+| A | 2.5Rsun | 108 | 79 | 51 | 3673 | 9768 |
+| A | 0.1AU | 151 | 147 | 142 | 40166 | 77728 |
+| B | 1.2Rsun | 88 | 40 | 21 | 924 | 4665 |
+| B | 2.5Rsun | 109 | 76 | 43 | 2706 | 8046 |
+| B | 0.1AU | 153 | 146 | 135 | 32815 | 73314 |
+
+Grazing-family (≤ 2.5 R☉) windows with ≥ 1 ks BAT within 20° (the best-coded subset), per target-channel:
+
+- A gj-1276: 9/22
+- A ross-128: 11/22
+- A teegarden: 11/21
+- A van-maanen: 11/21
+- A wolf-359: 9/22
+- B gj-1276: 9/22
+- B ross-128: 7/21
+- B teegarden: 9/22
+- B van-maanen: 11/22
+- B wolf-359: 7/22
+
+## Fermi-LAT in-FoV livetime in the windows (weekly spacecraft files; θ ≤ 60°, zenith ≤ 100°, DATA_QUAL > 0, LAT_CONFIG = 1)
+
+| Channel | Rung | Windows | livetime min / median / max (ks) | duty median | windows with < 1 ks |
+|---|---|---|---|---|---|
+| A | 1.2Rsun | 73 | 0.0 / 5.3 / 13.6 | 0.14 | 12 |
+| A | 2.5Rsun | 91 | 0.0 / 14.3 / 27.6 | 0.14 | 12 |
+| A | 0.1AU | 91 | 0.0 / 138.7 / 238.6 | 0.14 | 1 |
+| B | 1.2Rsun | 73 | 0.0 / 5.5 / 18.9 | 0.13 | 12 |
+| B | 2.5Rsun | 91 | 0.0 / 15.3 / 45.8 | 0.14 | 14 |
+| B | 0.1AU | 91 | 0.0 / 134.3 / 269.8 | 0.13 | 4 |
+
+Split at the 2018-03-16 solar-array-drive anomaly (the post-anomaly survey profile):
+
+| Era | Channel | Rung | Windows | < 1 ks | median ks |
+|---|---|---|---|---|---|
+| pre | A | 1.2Rsun | 40 | 0 | 6.6 |
+| pre | A | 2.5Rsun | 49 | 0 | 14.9 |
+| pre | A | 0.1AU | 49 | 0 | 150.9 |
+| pre | B | 1.2Rsun | 38 | 0 | 5.7 |
+| pre | B | 2.5Rsun | 48 | 0 | 15.8 |
+| pre | B | 0.1AU | 48 | 0 | 147.5 |
+| post | A | 1.2Rsun | 33 | 12 | 4.6 |
+| post | A | 2.5Rsun | 42 | 12 | 13.4 |
+| post | A | 0.1AU | 42 | 1 | 110.0 |
+| post | B | 1.2Rsun | 35 | 12 | 5.1 |
+| post | B | 2.5Rsun | 43 | 14 | 14.4 |
+| post | B | 0.1AU | 43 | 4 | 120.5 |
+
+Windows with < 1 ks in-FoV livetime at some rung:
+
+- A gj-1276 2018-09-05: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 125371 s (2/2 weeks)
+- A gj-1276 2019-09-05: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (2/2 weeks), 0.1AU 17958 s (2/2 weeks)
+- A gj-1276 2020-09-04: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 42436 s (3/3 weeks)
+- A ross-128 2018-03-17: 2.5Rsun 0 s (0/0 weeks), 0.1AU 22867 s (2/2 weeks)
+- A teegarden 2018-11-08: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (2/2 weeks), 0.1AU 0 s (2/2 weeks)
+- A teegarden 2019-11-08: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 22054 s (3/3 weeks)
+- A teegarden 2020-11-08: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 8173 s (1/1 weeks), 0.1AU 69985 s (3/3 weeks)
+- A van-maanen 2020-10-06: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 809 s (1/1 weeks), 0.1AU 56369 s (3/3 weeks)
+- A van-maanen 2021-10-06: 1.2Rsun 0 s (2/2 weeks), 2.5Rsun 0 s (2/2 weeks), 0.1AU 8756 s (2/2 weeks)
+- A van-maanen 2022-10-07: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 44582 s (2/2 weeks)
+- A wolf-359 2024-03-03: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 55951 s (3/3 weeks)
+- A wolf-359 2025-03-03: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 47143 s (3/3 weeks)
+- A wolf-359 2026-03-03: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 57351 s (3/3 weeks)
+- B gj-1276 2024-03-02: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 49641 s (3/3 weeks)
+- B gj-1276 2025-03-02: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 42820 s (3/3 weeks)
+- B gj-1276 2026-03-03: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 52501 s (3/3 weeks)
+- B ross-128 2023-09-20: 2.5Rsun 0 s (1/1 weeks), 0.1AU 70605 s (2/2 weeks)
+- B ross-128 2024-09-19: 2.5Rsun 0 s (1/1 weeks), 0.1AU 80444 s (2/2 weeks)
+- B ross-128 2025-09-19: 2.5Rsun 0 s (1/1 weeks), 0.1AU 81686 s (3/3 weeks)
+- B teegarden 2022-05-06: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 28141 s (3/3 weeks)
+- B teegarden 2023-05-06: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 0 s (3/3 weeks)
+- B teegarden 2024-05-06: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 0 s (3/3 weeks)
+- B teegarden 2025-05-06: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 0 s (3/3 weeks)
+- B teegarden 2026-05-06: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (2/2 weeks), 0.1AU 0 s (2/2 weeks)
+- B van-maanen 2018-04-03: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 21589 s (2/2 weeks)
+- B wolf-359 2018-09-05: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 4026 s (2/2 weeks), 0.1AU 133450 s (2/2 weeks)
+- B wolf-359 2019-09-05: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 23965 s (2/2 weeks)
+- B wolf-359 2020-09-05: 1.2Rsun 0 s (1/1 weeks), 2.5Rsun 0 s (1/1 weeks), 0.1AU 36836 s (3/3 weeks)
+
+## Fermi-LAT in-FoV livetime in the 0.1 AU windows, all seven targets (`recon_lat01_v0.json`)
+
+| Era | Channel | Windows | < 1 ks | < 10 ks | min / median / max (ks) |
+|---|---|---|---|---|---|
+| all | A | 127 | 1 | 2 | 0.0 / 132.6 / 280.7 |
+| all | B | 127 | 7 | 8 | 0.0 / 127.5 / 269.8 |
+| pre-2018-03 | A | 68 | 0 | 0 | 37.2 / 147.9 / 280.7 |
+| pre-2018-03 | B | 67 | 0 | 0 | 37.5 / 148.0 / 269.8 |
+| post-2018-03 | A | 59 | 1 | 2 | 0.0 / 114.4 / 236.4 |
+| post-2018-03 | B | 60 | 7 | 8 | 0.0 / 92.2 / 242.3 |
+
+0.1 AU windows below 10 ks: A teegarden 2018-11-08 (0 s); A van-maanen 2021-10-06 (8756 s); B gj-908 2018-03-19 (6641 s); B ross-154 2020-01-02 (0 s); B ross-154 2021-01-01 (0 s); B ross-154 2022-01-02 (0 s); B teegarden 2023-05-06 (0 s); B teegarden 2024-05-06 (0 s); B teegarden 2025-05-06 (0 s); B teegarden 2026-05-06 (0 s)
+
+## Catalogue screens on the 88 anti-star corridors (7′) and the 7 deep-family stars (2′; 4FGL 30′, BAT 12′)
+
+| Catalogue | Corridors with ≥ 1 source | Sources total (corridors) | Stars detected | Errors |
+|---|---|---|---|---|
+| erass1hard | 0/88 | 0 | — | 0 |
+| erass1main | 26/88 | 91 | ross-128, wolf-359 | 0 |
+| fermilpsc | 9/88 | 10 | — | 0 |
+| swbat157m | 0/88 | 0 | — | 0 |
+| swift2sxps | 6/88 | 8 | ross-154, teegarden, wolf-359 | 0 |
+| swiftlsxps | 11/88 | 18 | ross-154, teegarden, wolf-359 | 0 |
+| xmmssc | 3/88 | 52 | gj-908, ross-154, teegarden, wolf-359 | 0 |
+| xmmstack | 3/88 | 169 | gj-908, ross-154, teegarden, wolf-359 | 0 |
+| CSC 2.1 (csc21tap) | 2/88 | 18 | ross-154, teegarden | 0 |
+| eRODat DR1_Main | 26/88 | 91 | ross-128, wolf-359 | 0 |
+| eRODat DR2_Main | 34/88 | 187 | ross-128, wolf-359 | 0 |
+
+Corridor matches (any catalogue except 4FGL/BAT wide cones), with separation from the corridor centre:
+
+- alpha-cen-a swiftlsxps: LSXPS J024007.7+604617 at 5.648082240689473′
+- alpha-cen-a swiftlsxps: LSXPS J023917.8+605359 at 4.398327507418709′
+- alpha-cen-b swiftlsxps: LSXPS J024007.7+604617 at 5.781514006591292′
+- alpha-cen-b swiftlsxps: LSXPS J023917.8+605359 at 4.286768221322129′
+- barnard-star erass1main: 1eRASS J055735.6-044641 at 4.562101284066405′
+- ez-aqr erass1main: 1eRASS J103847.3+151901 at 3.172575055444745′
+- fomalhaut erass1main: 1eRASS J105759.1+293303 at 6.056511769023559′
+- fomalhaut erass1main: 1eRASS J105740.5+294325 at 6.006470369008095′
+- fomalhaut erass1main: 1eRASS J105757.7+293713 at 3.90637382154206′
+- fomalhaut erass1main: 1eRASS J105726.6+293912 at 3.371701593178646′
+- gj-11547 swift2sxps: 2SXPS J224823.1+395018 at 6.4076994800402565′
+- gj-11547 swift2sxps: 2SXPS J224808.7+395141 at 4.766596906887251′
+- gj-11547 swift2sxps: 2SXPS J224839.7+395353 at 5.741849687965814′
+- gj-11547 swiftlsxps: LSXPS J224823.1+395020 at 6.376896219575607′
+- gj-11547 swiftlsxps: LSXPS J224808.7+395141 at 4.766671190477591′
+- gj-11547 swiftlsxps: LSXPS J224839.6+395353 at 5.732790174490738′
+- gj-11547 swiftlsxps: LSXPS J224748.3+395624 at 4.685286431868417′
+- gj-1221 xmmssc: 3015325010101976 at 6.8741236451298855′
+- gj-1221 xmmssc: 3015325010103305 at 5.193955569314053′
+- gj-1221 xmmssc: 3015325010106972 at 6.93620646484465′
+- gj-1221 xmmssc: 3015325010109893 at 4.9263250708742525′
+- gj-1221 xmmssc: 3015325010110113 at 3.5953153571951315′
+- gj-1221 xmmssc: 3015325010111763 at 6.96068565901085′
+- gj-1221 xmmssc: 3015325010112216 at 6.614676760170824′
+- gj-1221 xmmssc: 3015325010113817 at 6.095900795825113′
+- gj-1221 xmmstack: 3015325010101976 at 6.8741236451298855′
+- gj-1221 xmmstack: 3015325010101976 at 6.8741236451298855′
+- gj-1221 xmmstack: 3015325010103305 at 5.193955569314053′
+- gj-1221 xmmstack: 3015325010103305 at 5.193955569314053′
+- gj-1221 xmmstack: 3015325010106972 at 6.93620646484465′
+- gj-1221 xmmstack: 3015325010106972 at 6.93620646484465′
+- gj-1221 xmmstack: 3015325010109893 at 4.9263250708742525′
+- gj-1221 xmmstack: 3015325010109893 at 4.9263250708742525′
+- gj-1221 xmmstack: 3015325010110113 at 3.5953153571951315′
+- gj-1221 xmmstack: 3015325010110113 at 3.5953153571951315′
+- gj-1221 xmmstack: 3015325010111763 at 6.96068565901085′
+- gj-1221 xmmstack: 3015325010111763 at 6.96068565901085′
+- gj-1221 xmmstack: 3015325010112216 at 6.614676760170824′
+- gj-1221 xmmstack: 3015325010112216 at 6.614676760170824′
+- gj-1221 xmmstack: 3015325010113817 at 6.095900795825113′
+- gj-1221 xmmstack: 3015325010113817 at 6.095900795825113′
+- gj-1221 erass1main: 1eRASS J054729.2-705719 at 5.035192687297517′
+- gj-1221 erass1main: 1eRASS J054735.3-705922 at 6.689873944776602′
+- gj-1221 erass1main: 1eRASS J054716.6-705501 at 4.185584498075553′
+- gj-1221 erass1main: 1eRASS J054801.6-705421 at 1.3139975696318642′
+- gj-1221 erass1main: 1eRASS J054833.2-705549 at 3.787587728842095′
+- gj-1276 erass1main: 1eRASS J105334.0+064851 at 6.3136795883332315′
+- gj-338-a erass1main: 1eRASS J211413.7-523915 at 1.8559044605953678′
+- gj-338-b erass1main: 1eRASS J211413.7-523915 at 1.93651090019659′
+- gj-625 erass1main: 1eRASS J042503.0-542254 at 5.791427411302019′
+- gj-625 erass1main: 1eRASS J042514.8-542245 at 4.847614962252209′
+- gj-625 erass1main: 1eRASS J042509.3-541932 at 2.765804311455571′
+- gj-625 erass1main: 1eRASS J042508.5-541727 at 2.6235298395765874′
+- gj-625 erass1main: 1eRASS J042450.5-541352 at 6.7105330532794545′
+- gj-625 erass1main: 1eRASS J042511.2-541226 at 6.112869850446461′
+- gj-687 xmmssc: 3069074170100748 at 5.07263161131222′
+- gj-687 xmmssc: 3069074170101451 at 4.9839343768415585′
+- gj-687 xmmssc: 3069074170103846 at 2.2059625577514197′
+- gj-687 xmmssc: 3069074170105088 at 5.29560738868183′
+- gj-687 xmmssc: 3069074170108307 at 6.3835593609330425′
+- gj-687 xmmssc: 3069074170109892 at 5.3447524136360585′
+- gj-687 xmmssc: 3069074170111290 at 3.3467056895855376′
+- gj-687 xmmssc: 3069074170111406 at 5.842853711012723′
+- gj-687 xmmssc: 3069074170112114 at 3.458612547689214′
+- gj-687 xmmssc: 3069074170112667 at 3.7007049664191487′
+- gj-687 xmmssc: 3069074170113338 at 2.4162466193144505′
+- gj-687 xmmssc: 3069074170113909 at 4.612143295917411′
+- gj-687 xmmssc: 3069074170113911 at 2.8527254730449787′
+- gj-687 xmmssc: 3069074170113948 at 5.834142984704414′
+- gj-687 xmmssc: 3069074170114102 at 2.402252976928114′
+- gj-687 xmmssc: 3069074180102872 at 5.273439115578933′
+- gj-687 xmmssc: 3069074180102965 at 5.921238882449487′
+- gj-687 xmmssc: 3069074180104239 at 1.012214494133122′
+- gj-687 xmmssc: 3069074180104317 at 5.454259957019425′
+- gj-687 xmmssc: 3069074180106134 at 5.595147189350268′
+- gj-687 xmmssc: 3069074180107237 at 5.272371026963119′
+- gj-687 xmmssc: 3069074180107529 at 6.255504946981126′
+- gj-687 xmmssc: 3069074180108195 at 1.1699090305296818′
+- gj-687 xmmssc: 3069074180109691 at 5.262256713807839′
+- gj-687 xmmssc: 3069074180110197 at 5.404641195619944′
+- gj-687 xmmssc: 3069074180111035 at 2.6529288868707157′
+- gj-687 xmmssc: 3069074180111376 at 6.079314473129445′
+- gj-687 xmmssc: 3069074180111568 at 6.819265740768914′
+- gj-687 xmmssc: 3069074180111991 at 6.767609561227309′
+- gj-687 xmmssc: 3069074180112931 at 1.7783090285114727′
+- gj-687 xmmssc: 3069074180114138 at 6.271644144563268′
+- gj-687 xmmssc: 3069074380106945 at 6.762658038349049′
+- gj-687 xmmssc: 3069074380113508 at 5.427037788095894′
+- gj-687 xmmssc: 3069074390101490 at 6.389541074023826′
+- gj-687 xmmssc: 3069074390103847 at 6.917098359619117′
+- gj-687 xmmssc: 3069074390107056 at 4.562951607650789′
+- gj-687 xmmssc: 3069074390107516 at 3.9033806998348948′
+- gj-687 xmmssc: 3069074390110153 at 6.012168756683599′
+- gj-687 xmmstack: 3069074170101451 at 4.9839343768415585′
+- gj-687 xmmstack: 3069074170100748 at 5.07263161131222′
+- gj-687 xmmstack: 3069074170100748 at 5.07263161131222′
+- gj-687 xmmstack: 3069074170100748 at 5.07263161131222′
+- gj-687 xmmstack: 3069074170100748 at 5.07263161131222′
+- gj-687 xmmstack: 3069074170100748 at 5.07263161131222′
+- gj-687 xmmstack: 3069074170105088 at 5.29560738868183′
+- gj-687 xmmstack: 3069074170101451 at 4.9839343768415585′
+- gj-687 xmmstack: 3069074170101451 at 4.9839343768415585′
+- gj-687 xmmstack: 3069074170101451 at 4.9839343768415585′
+- gj-687 xmmstack: 3069074170101451 at 4.9839343768415585′
+- gj-687 xmmstack: 3069074170103846 at 2.2059625577514197′
+- gj-687 xmmstack: 3069074170103846 at 2.2059625577514197′
+- gj-687 xmmstack: 3069074170103846 at 2.2059625577514197′
+- gj-687 xmmstack: 3069074170103846 at 2.2059625577514197′
+- gj-687 xmmstack: 3069074170103846 at 2.2059625577514197′
+- gj-687 xmmstack: 3069074170105088 at 5.29560738868183′
+- gj-687 xmmstack: 3069074170105088 at 5.29560738868183′
+- gj-687 xmmstack: 3069074170105088 at 5.29560738868183′
+- gj-687 xmmstack: 3069074170111290 at 3.3467056895855376′
+- gj-687 xmmstack: 3069074170113338 at 2.4162466193144505′
+- gj-687 xmmstack: 3069074170108307 at 6.3835593609330425′
+- gj-687 xmmstack: 3069074170108307 at 6.3835593609330425′
+- gj-687 xmmstack: 3069074170108307 at 6.3835593609330425′
+- gj-687 xmmstack: 3069074170108307 at 6.3835593609330425′
+- gj-687 xmmstack: 3069074170109892 at 5.3447524136360585′
+- gj-687 xmmstack: 3069074170109892 at 5.3447524136360585′
+- gj-687 xmmstack: 3069074170109892 at 5.3447524136360585′
+- gj-687 xmmstack: 3069074170109892 at 5.3447524136360585′
+- gj-687 xmmstack: 3069074180107237 at 5.272371026963119′
+- gj-687 xmmstack: 3069074170109892 at 5.3447524136360585′
+- gj-687 xmmstack: 3069074170111290 at 3.3467056895855376′
+- gj-687 xmmstack: 3069074170111290 at 3.3467056895855376′
+- gj-687 xmmstack: 3069074170111290 at 3.3467056895855376′
+- gj-687 xmmstack: 3069074170111290 at 3.3467056895855376′
+- gj-687 xmmstack: 3069074170111406 at 5.842853711012723′
+- gj-687 xmmstack: 3069074170111406 at 5.842853711012723′
+- gj-687 xmmstack: 3069074170111406 at 5.842853711012723′
+- gj-687 xmmstack: 3069074170111406 at 5.842853711012723′
+- gj-687 xmmstack: 3069074170111406 at 5.842853711012723′
+- gj-687 xmmstack: 3069074170112114 at 3.458612547689214′
+- gj-687 xmmstack: 3069074170112114 at 3.458612547689214′
+- gj-687 xmmstack: 3069074170112114 at 3.458612547689214′
+- gj-687 xmmstack: 3069074170112114 at 3.458612547689214′
+- gj-687 xmmstack: 3069074170112667 at 3.7007049664191487′
+- gj-687 xmmstack: 3069074170112667 at 3.7007049664191487′
+- gj-687 xmmstack: 3069074170112667 at 3.7007049664191487′
+- gj-687 xmmstack: 3069074170112667 at 3.7007049664191487′
+- gj-687 xmmstack: 3069074170112667 at 3.7007049664191487′
+- gj-687 xmmstack: 3069074170113338 at 2.4162466193144505′
+- gj-687 xmmstack: 3069074170113338 at 2.4162466193144505′
+- gj-687 xmmstack: 3069074170113338 at 2.4162466193144505′
+- gj-687 xmmstack: 3069074180104239 at 1.012214494133122′
+- gj-687 xmmstack: 3069074170113909 at 4.612143295917411′
+- gj-687 xmmstack: 3069074170113909 at 4.612143295917411′
+- gj-687 xmmstack: 3069074170113909 at 4.612143295917411′
+- gj-687 xmmstack: 3069074170113909 at 4.612143295917411′
+- gj-687 xmmstack: 3069074170113909 at 4.612143295917411′
+- gj-687 xmmstack: 3069074170113911 at 2.8527254730449787′
+- gj-687 xmmstack: 3069074170113911 at 2.8527254730449787′
+- gj-687 xmmstack: 3069074170113911 at 2.8527254730449787′
+- gj-687 xmmstack: 3069074170113911 at 2.8527254730449787′
+- gj-687 xmmstack: 3069074170113911 at 2.8527254730449787′
+- gj-687 xmmstack: 3069074170113948 at 5.834142984704414′
+- gj-687 xmmstack: 3069074170113948 at 5.834142984704414′
+- gj-687 xmmstack: 3069074170113948 at 5.834142984704414′
+- gj-687 xmmstack: 3069074170113948 at 5.834142984704414′
+- gj-687 xmmstack: 3069074170113948 at 5.834142984704414′
+- gj-687 xmmstack: 3069074170114102 at 2.402252976928114′
+- gj-687 xmmstack: 3069074170114102 at 2.402252976928114′
+- gj-687 xmmstack: 3069074170114102 at 2.402252976928114′
+- gj-687 xmmstack: 3069074170114102 at 2.402252976928114′
+- gj-687 xmmstack: 3069074180102872 at 5.273439115578933′
+- gj-687 xmmstack: 3069074180102872 at 5.273439115578933′
+- gj-687 xmmstack: 3069074180102872 at 5.273439115578933′
+- gj-687 xmmstack: 3069074180102965 at 5.921238882449487′
+- gj-687 xmmstack: 3069074180102965 at 5.921238882449487′
+- gj-687 xmmstack: 3069074180102965 at 5.921238882449487′
+- gj-687 xmmstack: 3069074180104239 at 1.012214494133122′
+- gj-687 xmmstack: 3069074180104239 at 1.012214494133122′
+- gj-687 xmmstack: 3069074180104317 at 5.454259957019425′
+- gj-687 xmmstack: 3069074180104317 at 5.454259957019425′
+- gj-687 xmmstack: 3069074180104317 at 5.454259957019425′
+- gj-687 xmmstack: 3069074180107529 at 6.255504946981126′
+- gj-687 xmmstack: 3069074180106134 at 5.595147189350268′
+- gj-687 xmmstack: 3069074180106134 at 5.595147189350268′
+- gj-687 xmmstack: 3069074180106134 at 5.595147189350268′
+- gj-687 xmmstack: 3069074180107237 at 5.272371026963119′
+- gj-687 xmmstack: 3069074180107237 at 5.272371026963119′
+- gj-687 xmmstack: 3069074180107529 at 6.255504946981126′
+- gj-687 xmmstack: 3069074180107529 at 6.255504946981126′
+- gj-687 xmmstack: 3069074180108195 at 1.1699090305296818′
+- gj-687 xmmstack: 3069074180108195 at 1.1699090305296818′
+- gj-687 xmmstack: 3069074180108195 at 1.1699090305296818′
+- gj-687 xmmstack: 3069074180109691 at 5.262256713807839′
+- gj-687 xmmstack: 3069074180109691 at 5.262256713807839′
+- gj-687 xmmstack: 3069074180109691 at 5.262256713807839′
+- gj-687 xmmstack: 3069074180111991 at 6.767609561227309′
+- gj-687 xmmstack: 3069074180110197 at 5.404641195619944′
+- gj-687 xmmstack: 3069074180110197 at 5.404641195619944′
+- gj-687 xmmstack: 3069074180110197 at 5.404641195619944′
+- gj-687 xmmstack: 3069074180111035 at 2.6529288868707157′
+- gj-687 xmmstack: 3069074180111035 at 2.6529288868707157′
+- gj-687 xmmstack: 3069074180111035 at 2.6529288868707157′
+- gj-687 xmmstack: 3069074180111376 at 6.079314473129445′
+- gj-687 xmmstack: 3069074180111376 at 6.079314473129445′
+- gj-687 xmmstack: 3069074180111376 at 6.079314473129445′
+- gj-687 xmmstack: 3069074180111568 at 6.819265740768914′
+- gj-687 xmmstack: 3069074180111568 at 6.819265740768914′
+- gj-687 xmmstack: 3069074180111568 at 6.819265740768914′
+- gj-687 xmmstack: 3069074180111991 at 6.767609561227309′
+- gj-687 xmmstack: 3069074180111991 at 6.767609561227309′
+- gj-687 xmmstack: 3069074180112931 at 1.7783090285114727′
+- gj-687 xmmstack: 3069074180112931 at 1.7783090285114727′
+- gj-687 xmmstack: 3069074180112931 at 1.7783090285114727′
+- gj-687 xmmstack: 3069074180114138 at 6.271644144563268′
+- gj-687 xmmstack: 3069074180114138 at 6.271644144563268′
+- gj-687 xmmstack: 3069074180114138 at 6.271644144563268′
+- gj-687 xmmstack: 3069074380106945 at 6.762658038349049′
+- gj-687 xmmstack: 3069074380106945 at 6.762658038349049′
+- gj-687 xmmstack: 3069074380106945 at 6.762658038349049′
+- gj-687 xmmstack: 3069074380113508 at 5.427037788095894′
+- gj-687 xmmstack: 3069074380113508 at 5.427037788095894′
+- gj-687 xmmstack: 3069074380113508 at 5.427037788095894′
+- gj-687 xmmstack: 3069074390101490 at 6.389541074023826′
+- gj-687 xmmstack: 3069074390101490 at 6.389541074023826′
+- gj-687 xmmstack: 3069074390103847 at 6.917098359619117′
+- gj-687 xmmstack: 3069074390103847 at 6.917098359619117′
+- gj-687 xmmstack: 3069074390107056 at 4.562951607650789′
+- gj-687 xmmstack: 3069074390107056 at 4.562951607650789′
+- gj-687 xmmstack: 3069074390107516 at 3.9033806998348948′
+- gj-687 xmmstack: 3069074390107516 at 3.9033806998348948′
+- gj-687 xmmstack: 3069074390110153 at 6.012168756683599′
+- gj-687 xmmstack: 3069074390110153 at 6.012168756683599′
+- gj-687 erass1main: 1eRASS J053609.1-682624 at 6.6154525420578825′
+- gj-687 erass1main: 1eRASS J053552.8-682359 at 5.00065640244666′
+- gj-687 erass1main: 1eRASS J053729.9-682105 at 6.119524185474071′
+- gj-687 erass1main: 1eRASS J053526.8-681934 at 5.366820535684898′
+- gj-687 erass1main: 1eRASS J053544.4-682025 at 3.7533105534656763′
+- gj-687 erass1main: 1eRASS J053600.0-681913 at 2.3963478292466016′
+- gj-687 erass1main: 1eRASS J053623.4-681845 at 1.1921118746932275′
+- gj-687 erass1main: 1eRASS J053600.2-681603 at 4.508955688632432′
+- gj-687 erass1main: 1eRASS J053622.3-681532 at 4.4102894357598235′
+- gj-687 erass1main: 1eRASS J053708.0-681531 at 5.961490709877488′
+- gj-687 erass1main: 1eRASS J053636.0-681725 at 2.721806204418963′
+- gj-687 erass1main: 1eRASS J053520.5-681722 at 6.473544406239916′
+- gj-687 erass1main: 1eRASS J053625.5-681707 at 2.822587653914373′
+- gj-687 erass1main: 1eRASS J053629.9-681426 at 5.524262881608129′
+- gj-783 erass1main: 1eRASS J081117.5+360728 at 1.2284141045247372′
+- gj-783 erass1main: 1eRASS J081128.2+360803 at 3.4056412059580685′
+- gj-783 erass1main: 1eRASS J081056.1+360116 at 6.387698697868742′
+- gj-832 swift2sxps: 2SXPS J093334.2+485802 at 2.7732751770835864′
+- gj-832 swiftlsxps: LSXPS J093334.2+485802 at 2.772684132299838′
+- gj-908 swiftlsxps: LSXPS J114929.9-021915 at 5.946805236386508′
+- gj-908 erass1main: 1eRASS J114927.3-022347 at 3.3054035224775635′
+- gj-908 erass1main: 1eRASS J114930.3-021912 at 6.05427778064011′
+- gj-908 erass1main: 1eRASS J114901.5-021738 at 6.823678074516166′
+- gj65-a erass1main: 1eRASS J133916.8+180148 at 5.710167424816773′
+- gj65-b erass1main: 1eRASS J133916.8+180148 at 5.727702522841829′
+- groombridge-34-a erass1main: 1eRASS J121757.5-440259 at 5.509341897149576′
+- groombridge-34-a erass1main: 1eRASS J121859.9-440010 at 6.063680761585237′
+- groombridge-34-a erass1main: 1eRASS J121843.7-440007 at 3.3002630150607533′
+- groombridge-34-a erass1main: 1eRASS J121755.5-440136 at 5.663026267893426′
+- groombridge-34-a erass1main: 1eRASS J121836.1-440112 at 1.663558133047202′
+- groombridge-34-b erass1main: 1eRASS J121757.5-440259 at 5.956099643536666′
+- groombridge-34-b erass1main: 1eRASS J121859.9-440010 at 5.616457041262698′
+- groombridge-34-b erass1main: 1eRASS J121843.7-440007 at 2.9542199075147613′
+- groombridge-34-b erass1main: 1eRASS J121755.5-440136 at 6.183587566257119′
+- groombridge-34-b erass1main: 1eRASS J121836.1-440112 at 1.230168588937533′
+- hd-219134 erass1main: 1eRASS J111344.3-570812 at 3.484361874318846′
+- hd-219134 erass1main: 1eRASS J111305.1-570736 at 3.602343156284683′
+- hd-219134 erass1main: 1eRASS J111341.1-570628 at 4.4590062326711335′
+- lacaille-8760 erass1main: 1eRASS J091732.3+384730 at 6.4559036716457445′
+- lacaille-8760 erass1main: 1eRASS J091648.9+385426 at 4.670608496308372′
+- lacaille-8760 erass1main: 1eRASS J091740.2+384837 at 6.89416053407478′
+- lacaille-9352 erass1main: 1eRASS J110538.9+355530 at 6.355478405104716′
+- luhman16-a swift2sxps: 2SXPS J224946.7+531718 at 4.764074421199484′
+- luhman16-a swiftlsxps: LSXPS J224921.7+531332 at 5.626299525195853′
+- luhman16-a swiftlsxps: LSXPS J224946.7+531718 at 4.769021644544995′
+- luhman16-b swift2sxps: 2SXPS J224946.7+531718 at 4.769628962698421′
+- luhman16-b swiftlsxps: LSXPS J224921.7+531332 at 5.634791461028266′
+- luhman16-b swiftlsxps: LSXPS J224946.7+531718 at 4.774570633457907′
+- luyten-star swift2sxps: 2SXPS J192729.3-051139 at 1.3621457584384569′
+- luyten-star swiftlsxps: LSXPS J192729.3-051138 at 1.3913904197847748′
+- ross-248 erass1main: 1eRASS J114143.6-440802 at 3.046405561520997′
+- ross-248 erass1main: 1eRASS J114153.9-440610 at 4.104467361251893′
+- sigma-dra erass1main: 1eRASS J073227.5-694249 at 3.829011574978014′
+- sigma-dra erass1main: 1eRASS J073206.4-694021 at 2.0440298495141587′
+- sigma-dra erass1main: 1eRASS J073317.9-693948 at 4.74605683246446′
+- sigma-dra erass1main: 1eRASS J073322.7-693621 at 5.744070877153497′
+- sigma-dra erass1main: 1eRASS J073229.5-693732 at 1.5396377641186823′
+- sigma-dra erass1main: 1eRASS J073131.3-693508 at 6.0107287248481125′
+- struve-2398-a erass1main: 1eRASS J064152.8-593936 at 6.597636291272596′
+- struve-2398-a erass1main: 1eRASS J064243.0-593629 at 1.7923657686307706′
+- struve-2398-a erass1main: 1eRASS J064305.4-593324 at 5.5793701642459474′
+- struve-2398-a erass1main: 1eRASS J064309.2-593229 at 6.617755753051644′
+- struve-2398-a erass1main: 1eRASS J064246.8-594418 at 6.032576875515592′
+- struve-2398-a erass1main: 1eRASS J064223.6-594149 at 4.374612640028991′
+- struve-2398-a erass1main: 1eRASS J064213.3-593801 at 3.889825102000951′
+- struve-2398-a erass1main: 1eRASS J064157.4-593736 at 5.9305183564250985′
+- struve-2398-b erass1main: 1eRASS J064152.8-593936 at 6.640590713241023′
+- struve-2398-b erass1main: 1eRASS J064243.0-593629 at 1.5996318870660644′
+- struve-2398-b erass1main: 1eRASS J064305.4-593324 at 5.410804813935106′
+- struve-2398-b erass1main: 1eRASS J064309.2-593229 at 6.448669848038009′
+- struve-2398-b erass1main: 1eRASS J064246.8-594418 at 6.2254671131972295′
+- struve-2398-b erass1main: 1eRASS J064223.6-594149 at 4.5331366922734′
+- struve-2398-b erass1main: 1eRASS J064213.3-593801 at 3.8834672866137785′
+- struve-2398-b erass1main: 1eRASS J064157.4-593736 at 5.913066465584257′
+- tau-cet erass1main: 1eRASS J134410.7+160229 at 6.782839857292002′
+- teegarden swiftlsxps: LSXPS J145306.5-165245 at 1.008581060683925′
+- van-maanen xmmssc: 3074347023100108 at 5.158958966203144′
+- van-maanen xmmssc: 3074347023100170 at 5.05086162407582′
+- van-maanen xmmssc: 3074347023100263 at 6.360828593393633′
+- van-maanen xmmssc: 3074347023100394 at 4.3201829578849065′
+- van-maanen xmmssc: 3074347023100426 at 3.4997297450706983′
+- van-maanen xmmssc: 3074347023100577 at 5.41947964773683′
+- van-maanen xmmstack: 3074347023100426 at 3.4997297450706983′
+- van-maanen xmmstack: 3074347023100426 at 3.4997297450706983′
+- van-maanen xmmstack: 3074347023100108 at 5.158958966203144′
+- van-maanen xmmstack: 3074347023100108 at 5.158958966203144′
+- van-maanen xmmstack: 3074347023100108 at 5.158958966203144′
+- van-maanen xmmstack: 3074347023100108 at 5.158958966203144′
+- van-maanen xmmstack: 3074347023100170 at 5.05086162407582′
+- van-maanen xmmstack: 3074347023100170 at 5.05086162407582′
+- van-maanen xmmstack: 3074347023100170 at 5.05086162407582′
+- van-maanen xmmstack: 3074347023100170 at 5.05086162407582′
+- van-maanen xmmstack: 3074347023100263 at 6.360828593393633′
+- van-maanen xmmstack: 3074347023100263 at 6.360828593393633′
+- van-maanen xmmstack: 3074347023100263 at 6.360828593393633′
+- van-maanen xmmstack: 3074347023100394 at 4.3201829578849065′
+- van-maanen xmmstack: 3074347023100394 at 4.3201829578849065′
+- van-maanen xmmstack: 3074347023100394 at 4.3201829578849065′
+- van-maanen xmmstack: 3074347023100577 at 5.41947964773683′
+- van-maanen xmmstack: 3074347023100577 at 5.41947964773683′
+- van-maanen xmmstack: 3074347023100577 at 5.41947964773683′
+- van-maanen swift2sxps: 2SXPS J124851.1-052351 at 5.219308850022589′
+- van-maanen swiftlsxps: LSXPS J124850.9-052353 at 5.278787323276768′
+- van-maanen erass1main: 1eRASS J124851.2-052357 at 5.224927210685129′
+- wolf-1061 erass1main: 1eRASS J043025.8+123650 at 3.8025229367310796′
+- wolf-1061 erass1main: 1eRASS J043029.7+123359 at 6.758446175225953′
+- wolf-1069 erass1main: 1eRASS J082619.1-583740 at 3.396715595007272′
+- wolf-1069 erass1main: 1eRASS J082653.2-583336 at 6.196450231225729′
+- wolf-1069 erass1main: 1eRASS J082533.0-582916 at 6.954950639709371′
+- wolf-1069 erass1main: 1eRASS J082604.1-583116 at 3.4342971392561545′
+- wolf-437 swiftlsxps: LSXPS J004743.9-094640 at 3.1812331503810563′
+- luhman16-a csc21: 2CXO J224833.3+532028 at 6.699361641649395′
+- luhman16-a csc21: 2CXO J224913.3+531641 at 2.5046071308326083′
+- luhman16-a csc21: 2CXO J224914.1+531527 at 3.709111837892845′
+- luhman16-a csc21: 2CXO J224919.6+531808 at 1.054439018672087′
+- luhman16-a csc21: 2CXO J224925.8+532108 at 2.389502242148126′
+- luhman16-a csc21: 2CXO J224935.4+532117 at 3.462831218747106′
+- luhman16-a csc21: 2CXO J224941.3+531957 at 3.6832073781799997′
+- luhman16-a csc21: 2CXO J224946.9+531719 at 4.778625282373881′
+- luhman16-a csc21: 2CXO J224954.5+531812 at 5.638230262257926′
+- luhman16-b csc21: 2CXO J224833.3+532028 at 6.695159707276981′
+- luhman16-b csc21: 2CXO J224913.3+531641 at 2.5120240379151144′
+- luhman16-b csc21: 2CXO J224914.1+531527 at 3.716958148533322′
+- luhman16-b csc21: 2CXO J224919.6+531808 at 1.0630788366115926′
+- luhman16-b csc21: 2CXO J224925.8+532108 at 2.383955758156715′
+- luhman16-b csc21: 2CXO J224935.4+532117 at 3.459753266559596′
+- luhman16-b csc21: 2CXO J224941.3+531957 at 3.6838975053439325′
+- luhman16-b csc21: 2CXO J224946.9+531719 at 4.784145519232642′
+- luhman16-b csc21: 2CXO J224954.5+531812 at 5.642149952745503′
+- 61-cyg-a eRODat DR2_Main: 3eRASS J090641.5-384400 at 3.9′ (det_like 6.247073173522949)
+- 61-cyg-a eRODat DR2_Main: 3eRASS J090701.2-385217 at 6.5′ (det_like 9.584599494934082)
+- 61-cyg-b eRODat DR2_Main: 3eRASS J090641.5-384400 at 4.0′ (det_like 6.247073173522949)
+- 61-cyg-b eRODat DR2_Main: 3eRASS J090701.2-385217 at 6.9′ (det_like 9.584599494934082)
+- barnard-star eRODat DR1_Main: 1eRASS J055735.6-044641 at 4.6′ (det_like 6.685061454772949)
+- barnard-star eRODat DR2_Main: 3eRASS J055801.5-044839 at 6.3′ (det_like 6.009293556213379)
+- barnard-star eRODat DR2_Main: 3eRASS J055735.8-044647 at 4.6′ (det_like 33.589542388916016)
+- barnard-star eRODat DR2_Main: 3eRASS J055726.9-044034 at 5.9′ (det_like 6.54395866394043)
+- barnard-star eRODat DR2_Main: 3eRASS J055759.5-043708 at 6.8′ (det_like 27.76116371154785)
+- ez-aqr eRODat DR1_Main: 1eRASS J103847.3+151901 at 3.2′ (det_like 9.31673812866211)
+- ez-aqr eRODat DR2_Main: 3eRASS J103818.4+151156 at 6.9′ (det_like 39.088016510009766)
+- ez-aqr eRODat DR2_Main: 3eRASS J103817.4+151821 at 4.6′ (det_like 6.67075252532959)
+- ez-aqr eRODat DR2_Main: 3eRASS J103847.2+151902 at 3.2′ (det_like 10.838773727416992)
+- ez-aqr eRODat DR2_Main: 3eRASS J103841.2+152201 at 4.8′ (det_like 12.085027694702148)
+- fomalhaut eRODat DR1_Main: 1eRASS J105759.1+293303 at 6.1′ (det_like 7.514487266540527)
+- fomalhaut eRODat DR1_Main: 1eRASS J105726.6+293912 at 3.4′ (det_like 6.171210289001465)
+- fomalhaut eRODat DR1_Main: 1eRASS J105757.7+293713 at 3.9′ (det_like 326.6387634277344)
+- fomalhaut eRODat DR1_Main: 1eRASS J105740.5+294325 at 6.0′ (det_like 13.018844604492188)
+- fomalhaut eRODat DR2_Main: 3eRASS J105758.4+293323 at 5.7′ (det_like 12.219673156738281)
+- fomalhaut eRODat DR2_Main: 3eRASS J105726.9+293910 at 3.3′ (det_like 24.21558380126953)
+- fomalhaut eRODat DR2_Main: 3eRASS J105757.6+293714 at 3.9′ (det_like 546.7913818359375)
+- fomalhaut eRODat DR2_Main: 3eRASS J105757.8+294135 at 5.7′ (det_like 6.1496663093566895)
+- fomalhaut eRODat DR2_Main: 3eRASS J105740.5+294325 at 6.0′ (det_like 12.397104263305664)
+- gj-1221 eRODat DR1_Main: 1eRASS J054833.2-705549 at 3.8′ (det_like 10.279587745666504)
+- gj-1221 eRODat DR1_Main: 1eRASS J054801.6-705421 at 1.3′ (det_like 50.04557800292969)
+- gj-1221 eRODat DR1_Main: 1eRASS J054735.3-705922 at 6.7′ (det_like 9.9454345703125)
+- gj-1221 eRODat DR1_Main: 1eRASS J054729.2-705719 at 5.0′ (det_like 8.755956649780273)
+- gj-1221 eRODat DR1_Main: 1eRASS J054716.6-705501 at 4.2′ (det_like 6.266679763793945)
+- gj-1221 eRODat DR2_Main: 3eRASS J054843.4-705510 at 4.0′ (det_like 6.571384429931641)
+- gj-1221 eRODat DR2_Main: 3eRASS J054825.7-705638 at 4.1′ (det_like 14.402145385742188)
+- gj-1221 eRODat DR2_Main: 3eRASS J054832.8-705551 at 3.8′ (det_like 32.490291595458984)
+- gj-1221 eRODat DR2_Main: 3eRASS J054922.5-705313 at 6.6′ (det_like 6.802244186401367)
+- gj-1221 eRODat DR2_Main: 3eRASS J054807.9-705744 at 4.7′ (det_like 10.795218467712402)
+- gj-1221 eRODat DR2_Main: 3eRASS J054801.6-705424 at 1.4′ (det_like 128.91796875)
+- gj-1221 eRODat DR2_Main: 3eRASS J054735.1-705921 at 6.7′ (det_like 22.412620544433594)
+- gj-1221 eRODat DR2_Main: 3eRASS J054729.2-705718 at 5.0′ (det_like 11.792855262756348)
+- gj-1221 eRODat DR2_Main: 3eRASS J054712.5-705832 at 6.8′ (det_like 15.650365829467773)
+- gj-1221 eRODat DR2_Main: 3eRASS J054723.4-705421 at 3.4′ (det_like 9.172398567199707)
+- gj-1221 eRODat DR2_Main: 3eRASS J054810.4-705016 at 2.9′ (det_like 8.838168144226074)
+- gj-1221 eRODat DR2_Main: 3eRASS J054759.6-704934 at 3.5′ (det_like 6.549353122711182)
+- gj-1221 eRODat DR2_Main: 3eRASS J054727.1-705242 at 2.9′ (det_like 6.270146369934082)
+- gj-1221 eRODat DR2_Main: 3eRASS J054715.2-704915 at 5.4′ (det_like 9.542606353759766)
+- gj-1221 eRODat DR2_Main: 3eRASS J054642.2-705429 at 6.7′ (det_like 20.19895362854004)
+- gj-1276 eRODat DR1_Main: 1eRASS J105334.0+064851 at 6.3′ (det_like 6.066918849945068)
+- gj-1276 eRODat DR2_Main: 3eRASS J105333.7+064848 at 6.4′ (det_like 18.964187622070312)
+- gj-1276 eRODat DR2_Main: 3eRASS J105409.2+064350 at 4.3′ (det_like 9.311203002929688)
+- gj-13157 eRODat DR2_Main: 3eRASS J095220.8-592021 at 5.9′ (det_like 26.33613395690918)
+- gj-13157 eRODat DR2_Main: 3eRASS J095119.3-591537 at 3.2′ (det_like 9.525705337524414)
+- gj-338-a eRODat DR1_Main: 1eRASS J211413.7-523915 at 1.9′ (det_like 10.328280448913574)
+- gj-338-a eRODat DR2_Main: 3eRASS J211413.9-524441 at 3.8′ (det_like 8.2337646484375)
+- gj-338-a eRODat DR2_Main: 3eRASS J211413.5-523924 at 1.7′ (det_like 124.62503814697266)
+- gj-338-a eRODat DR2_Main: 3eRASS J211432.6-524205 at 2.4′ (det_like 8.881123542785645)
+- gj-338-b eRODat DR1_Main: 1eRASS J211413.7-523915 at 1.9′ (det_like 10.328280448913574)
+- gj-338-b eRODat DR2_Main: 3eRASS J211413.9-524441 at 3.9′ (det_like 8.2337646484375)
+- gj-338-b eRODat DR2_Main: 3eRASS J211413.5-523924 at 1.8′ (det_like 124.62503814697266)
+- gj-338-b eRODat DR2_Main: 3eRASS J211432.6-524205 at 2.2′ (det_like 8.881123542785645)
+- gj-3512 eRODat DR2_Main: 3eRASS J204048.4-592545 at 5.1′ (det_like 6.019392967224121)
+- gj-54 eRODat DR2_Main: 3eRASS J131227.4+165610 at 3.8′ (det_like 8.741701126098633)
+- gj-54 eRODat DR2_Main: 3eRASS J131229.6+170638 at 6.9′ (det_like 6.068453311920166)
+- gj-54 eRODat DR2_Main: 3eRASS J131245.1+170057 at 3.4′ (det_like 10.436910629272461)
+- gj-625 eRODat DR1_Main: 1eRASS J042514.8-542245 at 4.8′ (det_like 21.330312728881836)
+- gj-625 eRODat DR1_Main: 1eRASS J042503.0-542254 at 5.8′ (det_like 28.607267379760742)
+- gj-625 eRODat DR1_Main: 1eRASS J042509.3-541932 at 2.8′ (det_like 7.546903610229492)
+- gj-625 eRODat DR1_Main: 1eRASS J042508.5-541727 at 2.6′ (det_like 13.404356002807617)
+- gj-625 eRODat DR1_Main: 1eRASS J042450.5-541352 at 6.7′ (det_like 6.432476043701172)
+- gj-625 eRODat DR1_Main: 1eRASS J042511.2-541226 at 6.1′ (det_like 6.850202560424805)
+- gj-625 eRODat DR2_Main: 3eRASS J042514.1-542240 at 4.8′ (det_like 25.200931549072266)
+- gj-625 eRODat DR2_Main: 3eRASS J042502.9-542253 at 5.8′ (det_like 44.76553726196289)
+- gj-625 eRODat DR2_Main: 3eRASS J042546.6-542209 at 5.0′ (det_like 8.208145141601562)
+- gj-625 eRODat DR2_Main: 3eRASS J042532.7-542319 at 5.3′ (det_like 7.0990142822265625)
+- gj-625 eRODat DR2_Main: 3eRASS J042607.6-541955 at 6.3′ (det_like 24.283029556274414)
+- gj-625 eRODat DR2_Main: 3eRASS J042508.8-541934 at 2.8′ (det_like 15.717577934265137)
+- gj-625 eRODat DR2_Main: 3eRASS J042513.6-541825 at 1.8′ (det_like 23.71512222290039)
+- gj-625 eRODat DR2_Main: 3eRASS J042454.5-541730 at 4.6′ (det_like 9.080886840820312)
+- gj-625 eRODat DR2_Main: 3eRASS J042507.9-541527 at 3.8′ (det_like 16.40989875793457)
+- gj-625 eRODat DR2_Main: 3eRASS J042450.5-541357 at 6.7′ (det_like 20.64910316467285)
+- gj-625 eRODat DR2_Main: 3eRASS J042511.0-541230 at 6.1′ (det_like 21.086467742919922)
+- gj-687 eRODat DR1_Main: 1eRASS J053729.9-682105 at 6.1′ (det_like 6.690163612365723)
+- gj-687 eRODat DR1_Main: 1eRASS J053609.1-682624 at 6.6′ (det_like 6.557384014129639)
+- gj-687 eRODat DR1_Main: 1eRASS J053552.8-682359 at 5.0′ (det_like 14.781139373779297)
+- gj-687 eRODat DR1_Main: 1eRASS J053623.4-681845 at 1.2′ (det_like 7.414689064025879)
+- gj-687 eRODat DR1_Main: 1eRASS J053636.0-681725 at 2.7′ (det_like 8.992542266845703)
+- gj-687 eRODat DR1_Main: 1eRASS J053625.5-681707 at 2.8′ (det_like 6.7408294677734375)
+- gj-687 eRODat DR1_Main: 1eRASS J053708.0-681531 at 6.0′ (det_like 8.141338348388672)
+- gj-687 eRODat DR1_Main: 1eRASS J053629.9-681426 at 5.5′ (det_like 9.649636268615723)
+- gj-687 eRODat DR1_Main: 1eRASS J053544.4-682025 at 3.8′ (det_like 10.379472732543945)
+- gj-687 eRODat DR1_Main: 1eRASS J053600.0-681913 at 2.4′ (det_like 9.69328784942627)
+- gj-687 eRODat DR1_Main: 1eRASS J053600.2-681603 at 4.5′ (det_like 62.2017822265625)
+- gj-687 eRODat DR1_Main: 1eRASS J053526.8-681934 at 5.4′ (det_like 20.44161605834961)
+- gj-687 eRODat DR1_Main: 1eRASS J053520.5-681722 at 6.5′ (det_like 11.893428802490234)
+- gj-687 eRODat DR1_Main: 1eRASS J053622.3-681532 at 4.4′ (det_like 9.309852600097656)
+- gj-687 eRODat DR2_Main: 3eRASS J053730.4-682108 at 6.2′ (det_like 8.02461051940918)
+- gj-687 eRODat DR2_Main: 3eRASS J053713.6-682436 at 6.5′ (det_like 12.6089448928833)
+- gj-687 eRODat DR2_Main: 3eRASS J053617.4-682531 at 5.6′ (det_like 17.792009353637695)
+- gj-687 eRODat DR2_Main: 3eRASS J053552.2-682400 at 5.1′ (det_like 42.997066497802734)
+- gj-687 eRODat DR2_Main: 3eRASS J053724.0-681935 at 5.5′ (det_like 6.327604293823242)
+- gj-687 eRODat DR2_Main: 3eRASS J053620.4-681806 at 1.9′ (det_like 6.346324920654297)
+- gj-687 eRODat DR2_Main: 3eRASS J053707.0-681540 at 5.8′ (det_like 16.267719268798828)
+- gj-687 eRODat DR2_Main: 3eRASS J053656.1-681458 at 5.8′ (det_like 7.778639793395996)
+- gj-687 eRODat DR2_Main: 3eRASS J053653.0-681358 at 6.5′ (det_like 14.627349853515625)
+- gj-687 eRODat DR2_Main: 3eRASS J053630.1-681432 at 5.4′ (det_like 13.167998313903809)
+- gj-687 eRODat DR2_Main: 3eRASS J053627.3-681336 at 6.3′ (det_like 10.171422958374023)
+- gj-687 eRODat DR2_Main: 3eRASS J053558.7-681945 at 2.4′ (det_like 13.689098358154297)
+- gj-687 eRODat DR2_Main: 3eRASS J053559.7-681646 at 3.9′ (det_like 65.13357543945312)
+- gj-687 eRODat DR2_Main: 3eRASS J053527.4-681938 at 5.3′ (det_like 45.70771408081055)
+- gj-687 eRODat DR2_Main: 3eRASS J053516.0-681919 at 6.4′ (det_like 8.774177551269531)
+- gj-687 eRODat DR2_Main: 3eRASS J053539.3-681728 at 4.9′ (det_like 12.511808395385742)
+- gj-687 eRODat DR2_Main: 3eRASS J053521.4-681720 at 6.4′ (det_like 25.715972900390625)
+- gj-687 eRODat DR2_Main: 3eRASS J053622.6-681526 at 4.5′ (det_like 9.095460891723633)
+- gj-687 eRODat DR2_Main: 3eRASS J053609.1-681356 at 6.2′ (det_like 6.616369724273682)
+- gj-687 eRODat DR2_Main: 3eRASS J053559.3-681531 at 5.0′ (det_like 61.426605224609375)
+- gj-687 eRODat DR2_Main: 3eRASS J053545.3-681516 at 5.9′ (det_like 12.529040336608887)
+- gj-783 eRODat DR1_Main: 1eRASS J081056.1+360116 at 6.4′ (det_like 14.348377227783203)
+- gj-783 eRODat DR1_Main: 1eRASS J081117.5+360728 at 1.2′ (det_like 24.095481872558594)
+- gj-783 eRODat DR1_Main: 1eRASS J081128.2+360803 at 3.4′ (det_like 10.710920333862305)
+- gj-783 eRODat DR2_Main: 3eRASS J081055.6+360119 at 6.4′ (det_like 27.43256950378418)
+- gj-783 eRODat DR2_Main: 3eRASS J081107.1+360021 at 6.4′ (det_like 9.879592895507812)
+- gj-783 eRODat DR2_Main: 3eRASS J081058.5+361236 at 6.6′ (det_like 7.6607666015625)
+- gj-783 eRODat DR2_Main: 3eRASS J081117.6+360732 at 1.3′ (det_like 234.71673583984375)
+- gj-783 eRODat DR2_Main: 3eRASS J081133.4+360624 at 4.2′ (det_like 6.871182441711426)
+- gj-783 eRODat DR2_Main: 3eRASS J081128.8+360800 at 3.5′ (det_like 20.114704132080078)
+- gj-783 eRODat DR2_Main: 3eRASS J081140.4+360653 at 5.6′ (det_like 10.752029418945312)
+- gj-876 eRODat DR2_Main: 3eRASS J105322.6+141007 at 6.0′ (det_like 6.12284517288208)
+- gj-876 eRODat DR2_Main: 3eRASS J105319.4+142202 at 6.0′ (det_like 7.913696765899658)
+- gj-876 eRODat DR2_Main: 3eRASS J105343.3+141814 at 6.5′ (det_like 13.632606506347656)
+- gj-908 eRODat DR1_Main: 1eRASS J114901.5-021738 at 6.8′ (det_like 16.977771759033203)
+- gj-908 eRODat DR1_Main: 1eRASS J114927.3-022347 at 3.3′ (det_like 6.3067827224731445)
+- gj-908 eRODat DR1_Main: 1eRASS J114930.3-021912 at 6.1′ (det_like 22.760087966918945)
+- gj-908 eRODat DR2_Main: 3eRASS J114901.5-021738 at 6.8′ (det_like 21.76510238647461)
+- gj-908 eRODat DR2_Main: 3eRASS J114923.7-022457 at 2.7′ (det_like 10.24860954284668)
+- gj-908 eRODat DR2_Main: 3eRASS J114930.3-021917 at 6.0′ (det_like 56.9754524230957)
+- gj65-a eRODat DR1_Main: 1eRASS J133916.8+180148 at 5.7′ (det_like 6.458774089813232)
+- gj65-a eRODat DR2_Main: 3eRASS J133846.4+175219 at 6.3′ (det_like 7.587610244750977)
+- gj65-a eRODat DR2_Main: 3eRASS J133842.4+175331 at 6.2′ (det_like 8.444326400756836)
+- gj65-a eRODat DR2_Main: 3eRASS J133838.2+175620 at 6.2′ (det_like 6.881455421447754)
+- gj65-a eRODat DR2_Main: 3eRASS J133916.6+180144 at 5.6′ (det_like 13.607791900634766)
+- gj65-b eRODat DR1_Main: 1eRASS J133916.8+180148 at 5.7′ (det_like 6.458774089813232)
+- gj65-b eRODat DR2_Main: 3eRASS J133846.4+175219 at 6.3′ (det_like 7.587610244750977)
+- gj65-b eRODat DR2_Main: 3eRASS J133842.4+175331 at 6.2′ (det_like 8.444326400756836)
+- gj65-b eRODat DR2_Main: 3eRASS J133838.2+175620 at 6.2′ (det_like 6.881455421447754)
+- gj65-b eRODat DR2_Main: 3eRASS J133916.6+180144 at 5.7′ (det_like 13.607791900634766)
+- groombridge-34-a eRODat DR1_Main: 1eRASS J121757.5-440259 at 5.5′ (det_like 6.43734884262085)
+- groombridge-34-a eRODat DR1_Main: 1eRASS J121755.5-440136 at 5.7′ (det_like 6.076825141906738)
+- groombridge-34-a eRODat DR1_Main: 1eRASS J121836.1-440112 at 1.7′ (det_like 9.383966445922852)
+- groombridge-34-a eRODat DR1_Main: 1eRASS J121843.7-440007 at 3.3′ (det_like 10.291610717773438)
+- groombridge-34-a eRODat DR1_Main: 1eRASS J121859.9-440010 at 6.1′ (det_like 6.257854461669922)
+- groombridge-34-a eRODat DR2_Main: 3eRASS J121757.5-440302 at 5.5′ (det_like 19.721073150634766)
+- groombridge-34-a eRODat DR2_Main: 3eRASS J121755.7-440138 at 5.6′ (det_like 7.054534912109375)
+- groombridge-34-a eRODat DR2_Main: 3eRASS J121836.5-440114 at 1.7′ (det_like 12.943657875061035)
+- groombridge-34-a eRODat DR2_Main: 3eRASS J121843.8-440010 at 3.3′ (det_like 18.433677673339844)
+- groombridge-34-b eRODat DR1_Main: 1eRASS J121757.5-440259 at 6.0′ (det_like 6.43734884262085)
+- groombridge-34-b eRODat DR1_Main: 1eRASS J121755.5-440136 at 6.2′ (det_like 6.076825141906738)
+- groombridge-34-b eRODat DR1_Main: 1eRASS J121836.1-440112 at 1.2′ (det_like 9.383966445922852)
+- groombridge-34-b eRODat DR1_Main: 1eRASS J121843.7-440007 at 3.0′ (det_like 10.291610717773438)
+- groombridge-34-b eRODat DR1_Main: 1eRASS J121859.9-440010 at 5.6′ (det_like 6.257854461669922)
+- groombridge-34-b eRODat DR2_Main: 3eRASS J121757.5-440302 at 6.0′ (det_like 19.721073150634766)
+- groombridge-34-b eRODat DR2_Main: 3eRASS J121755.7-440138 at 6.1′ (det_like 7.054534912109375)
+- groombridge-34-b eRODat DR2_Main: 3eRASS J121836.5-440114 at 1.3′ (det_like 12.943657875061035)
+- groombridge-34-b eRODat DR2_Main: 3eRASS J121843.8-440010 at 2.9′ (det_like 18.433677673339844)
+- hd-219134 eRODat DR1_Main: 1eRASS J111341.1-570628 at 4.5′ (det_like 31.159772872924805)
+- hd-219134 eRODat DR1_Main: 1eRASS J111344.3-570812 at 3.5′ (det_like 13.163106918334961)
+- hd-219134 eRODat DR1_Main: 1eRASS J111305.1-570736 at 3.6′ (det_like 8.328004837036133)
+- hd-219134 eRODat DR2_Main: 3eRASS J111341.9-570632 at 4.5′ (det_like 73.89225769042969)
+- hd-219134 eRODat DR2_Main: 3eRASS J111344.1-570811 at 3.5′ (det_like 28.393503189086914)
+- hd-219134 eRODat DR2_Main: 3eRASS J111303.9-570502 at 5.8′ (det_like 6.1576433181762695)
+- hd-219134 eRODat DR2_Main: 3eRASS J111305.3-570735 at 3.6′ (det_like 16.300548553466797)
+- hd-219134 eRODat DR2_Main: 3eRASS J111236.8-571010 at 6.3′ (det_like 6.35135555267334)
+- lacaille-8760 eRODat DR1_Main: 1eRASS J091648.9+385426 at 4.7′ (det_like 37.218353271484375)
+- lacaille-8760 eRODat DR1_Main: 1eRASS J091740.2+384837 at 6.9′ (det_like 19.164810180664062)
+- lacaille-8760 eRODat DR1_Main: 1eRASS J091732.3+384730 at 6.5′ (det_like 69.13272857666016)
+- lacaille-8760 eRODat DR2_Main: 3eRASS J091648.7+385427 at 4.7′ (det_like 126.77716827392578)
+- lacaille-8760 eRODat DR2_Main: 3eRASS J091718.1+384853 at 3.8′ (det_like 8.858044624328613)
+- lacaille-8760 eRODat DR2_Main: 3eRASS J091739.9+384841 at 6.8′ (det_like 24.944347381591797)
+- lacaille-8760 eRODat DR2_Main: 3eRASS J091729.1+384824 at 5.4′ (det_like 9.198226928710938)
+- lacaille-8760 eRODat DR2_Main: 3eRASS J091737.6+384805 at 6.8′ (det_like 61.581607818603516)
+- lacaille-8760 eRODat DR2_Main: 3eRASS J091732.6+384727 at 6.5′ (det_like 142.23036193847656)
+- lacaille-9352 eRODat DR1_Main: 1eRASS J110538.9+355530 at 6.4′ (det_like 8.166877746582031)
+- lacaille-9352 eRODat DR2_Main: 3eRASS J110602.9+355157 at 1.2′ (det_like 15.884923934936523)
+- lacaille-9352 eRODat DR2_Main: 3eRASS J110609.0+355224 at 2.4′ (det_like 6.264089584350586)
+- lacaille-9352 eRODat DR2_Main: 3eRASS J110616.4+355543 at 5.9′ (det_like 7.725243091583252)
+- lacaille-9352 eRODat DR2_Main: 3eRASS J110630.9+355206 at 6.3′ (det_like 8.313570022583008)
+- ross-154 eRODat DR2_Main: 3eRASS J064959.1+235136 at 2.5′ (det_like 6.056125640869141)
+- ross-248 eRODat DR1_Main: 1eRASS J114143.6-440802 at 3.0′ (det_like 6.805853843688965)
+- ross-248 eRODat DR1_Main: 1eRASS J114153.9-440610 at 4.1′ (det_like 13.319379806518555)
+- ross-248 eRODat DR2_Main: 3eRASS J114152.4-441110 at 1.0′ (det_like 10.798761367797852)
+- ross-248 eRODat DR2_Main: 3eRASS J114205.6-440852 at 2.3′ (det_like 7.068676948547363)
+- ross-248 eRODat DR2_Main: 3eRASS J114154.8-440613 at 4.0′ (det_like 29.309158325195312)
+- sigma-dra eRODat DR1_Main: 1eRASS J073317.9-693948 at 4.7′ (det_like 11.671625137329102)
+- sigma-dra eRODat DR1_Main: 1eRASS J073322.7-693621 at 5.7′ (det_like 7.458487510681152)
+- sigma-dra eRODat DR1_Main: 1eRASS J073229.5-693732 at 1.5′ (det_like 87.3803482055664)
+- sigma-dra eRODat DR1_Main: 1eRASS J073227.5-694249 at 3.8′ (det_like 43.960411071777344)
+- sigma-dra eRODat DR1_Main: 1eRASS J073206.4-694021 at 2.0′ (det_like 9.16273021697998)
+- sigma-dra eRODat DR1_Main: 1eRASS J073131.3-693508 at 6.0′ (det_like 13.692188262939453)
+- sigma-dra eRODat DR2_Main: 3eRASS J073259.7-694222 at 4.6′ (det_like 6.2831339836120605)
+- sigma-dra eRODat DR2_Main: 3eRASS J073242.8-694412 at 5.5′ (det_like 6.779812812805176)
+- sigma-dra eRODat DR2_Main: 3eRASS J073236.4-694326 at 4.6′ (det_like 7.250485897064209)
+- sigma-dra eRODat DR2_Main: 3eRASS J073317.5-693945 at 4.7′ (det_like 12.750970840454102)
+- sigma-dra eRODat DR2_Main: 3eRASS J073320.4-693622 at 5.6′ (det_like 8.607172012329102)
+- sigma-dra eRODat DR2_Main: 3eRASS J073229.7-693730 at 1.6′ (det_like 293.6163024902344)
+- sigma-dra eRODat DR2_Main: 3eRASS J073231.7-694154 at 3.0′ (det_like 7.770199775695801)
+- sigma-dra eRODat DR2_Main: 3eRASS J073227.1-694253 at 3.9′ (det_like 90.34478759765625)
+- sigma-dra eRODat DR2_Main: 3eRASS J073215.9-694008 at 1.3′ (det_like 11.153018951416016)
+- sigma-dra eRODat DR2_Main: 3eRASS J073206.4-694020 at 2.0′ (det_like 11.756614685058594)
+- sigma-dra eRODat DR2_Main: 3eRASS J073214.7-693319 at 5.7′ (det_like 36.93116760253906)
+- sigma-dra eRODat DR2_Main: 3eRASS J073203.1-693409 at 5.2′ (det_like 6.304305076599121)
+- sigma-dra eRODat DR2_Main: 3eRASS J073139.5-693543 at 5.1′ (det_like 18.8465633392334)
+- sigma-dra eRODat DR2_Main: 3eRASS J073143.2-694443 at 6.7′ (det_like 17.559635162353516)
+- sigma-dra eRODat DR2_Main: 3eRASS J073137.1-694147 at 4.9′ (det_like 8.714238166809082)
+- sigma-dra eRODat DR2_Main: 3eRASS J073140.7-693928 at 3.8′ (det_like 6.850729942321777)
+- sigma-dra eRODat DR2_Main: 3eRASS J073128.5-693624 at 5.5′ (det_like 15.601766586303711)
+- sigma-dra eRODat DR2_Main: 3eRASS J073108.3-693716 at 6.8′ (det_like 7.517570495605469)
+- struve-2398-a eRODat DR1_Main: 1eRASS J064309.2-593229 at 6.6′ (det_like 6.920895576477051)
+- struve-2398-a eRODat DR1_Main: 1eRASS J064305.4-593324 at 5.6′ (det_like 7.9352617263793945)
+- struve-2398-a eRODat DR1_Main: 1eRASS J064246.8-594418 at 6.0′ (det_like 20.696331024169922)
+- struve-2398-a eRODat DR1_Main: 1eRASS J064223.6-594149 at 4.4′ (det_like 11.497781753540039)
+- struve-2398-a eRODat DR1_Main: 1eRASS J064243.0-593629 at 1.8′ (det_like 28.67909049987793)
+- struve-2398-a eRODat DR1_Main: 1eRASS J064213.3-593801 at 3.9′ (det_like 20.157094955444336)
+- struve-2398-a eRODat DR1_Main: 1eRASS J064152.8-593936 at 6.6′ (det_like 15.133200645446777)
+- struve-2398-a eRODat DR1_Main: 1eRASS J064157.4-593736 at 5.9′ (det_like 10.353893280029297)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064309.0-594034 at 3.9′ (det_like 6.050601482391357)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064319.6-593632 at 4.8′ (det_like 7.65118408203125)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064305.2-593321 at 5.6′ (det_like 9.801643371582031)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064247.0-594420 at 6.1′ (det_like 24.870969772338867)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064233.7-594307 at 5.0′ (det_like 9.933233261108398)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064223.9-594142 at 4.3′ (det_like 8.423741340637207)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064242.9-593627 at 1.8′ (det_like 123.60228729248047)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064212.9-593803 at 3.9′ (det_like 82.73763275146484)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064152.0-593943 at 6.7′ (det_like 39.920997619628906)
+- struve-2398-a eRODat DR2_Main: 3eRASS J064157.4-593744 at 5.9′ (det_like 9.776013374328613)
+- struve-2398-b eRODat DR1_Main: 1eRASS J064309.2-593229 at 6.4′ (det_like 6.920895576477051)
+- struve-2398-b eRODat DR1_Main: 1eRASS J064305.4-593324 at 5.4′ (det_like 7.9352617263793945)
+- struve-2398-b eRODat DR1_Main: 1eRASS J064246.8-594418 at 6.2′ (det_like 20.696331024169922)
+- struve-2398-b eRODat DR1_Main: 1eRASS J064223.6-594149 at 4.5′ (det_like 11.497781753540039)
+- struve-2398-b eRODat DR1_Main: 1eRASS J064243.0-593629 at 1.6′ (det_like 28.67909049987793)
+- struve-2398-b eRODat DR1_Main: 1eRASS J064213.3-593801 at 3.9′ (det_like 20.157094955444336)
+- struve-2398-b eRODat DR1_Main: 1eRASS J064152.8-593936 at 6.6′ (det_like 15.133200645446777)
+- struve-2398-b eRODat DR1_Main: 1eRASS J064157.4-593736 at 5.9′ (det_like 10.353893280029297)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064309.0-594034 at 4.0′ (det_like 6.050601482391357)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064319.6-593632 at 4.8′ (det_like 7.65118408203125)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064305.2-593321 at 5.4′ (det_like 9.801643371582031)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064247.0-594420 at 6.3′ (det_like 24.870969772338867)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064233.7-594307 at 5.2′ (det_like 9.933233261108398)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064223.9-594142 at 4.4′ (det_like 8.423741340637207)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064242.9-593627 at 1.6′ (det_like 123.60228729248047)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064212.9-593803 at 3.9′ (det_like 82.73763275146484)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064152.0-593943 at 6.8′ (det_like 39.920997619628906)
+- struve-2398-b eRODat DR2_Main: 3eRASS J064157.4-593744 at 5.9′ (det_like 9.776013374328613)
+- tau-cet eRODat DR1_Main: 1eRASS J134410.7+160229 at 6.8′ (det_like 12.400869369506836)
+- tau-cet eRODat DR2_Main: 3eRASS J134349.0+155150 at 5.2′ (det_like 19.676355361938477)
+- tau-cet eRODat DR2_Main: 3eRASS J134402.1+155738 at 1.6′ (det_like 10.683051109313965)
+- tau-cet eRODat DR2_Main: 3eRASS J134425.9+155504 at 5.8′ (det_like 6.292987823486328)
+- tau-cet eRODat DR2_Main: 3eRASS J134426.9+155723 at 6.1′ (det_like 9.22576904296875)
+- tau-cet eRODat DR2_Main: 3eRASS J134410.7+160231 at 6.8′ (det_like 24.517871856689453)
+- teegarden eRODat DR2_Main: 3eRASS J145247.1-165533 at 5.6′ (det_like 13.317329406738281)
+- teegarden eRODat DR2_Main: 3eRASS J145239.0-165408 at 6.6′ (det_like 34.954341888427734)
+- teegarden eRODat DR2_Main: 3eRASS J145306.7-165249 at 1.1′ (det_like 6.722804546356201)
+- van-maanen eRODat DR1_Main: 1eRASS J124851.2-052357 at 5.2′ (det_like 48.47196960449219)
+- van-maanen eRODat DR2_Main: 3eRASS J124850.8-052352 at 5.3′ (det_like 132.85134887695312)
+- van-maanen eRODat DR2_Main: 3eRASS J124920.4-051708 at 5.8′ (det_like 6.883495807647705)
+- wolf-1061 eRODat DR1_Main: 1eRASS J043029.7+123359 at 6.8′ (det_like 6.829663276672363)
+- wolf-1061 eRODat DR1_Main: 1eRASS J043025.8+123650 at 3.8′ (det_like 15.670511245727539)
+- wolf-1061 eRODat DR2_Main: 3eRASS J043029.9+123402 at 6.7′ (det_like 8.057104110717773)
+- wolf-1061 eRODat DR2_Main: 3eRASS J043025.9+123651 at 3.8′ (det_like 20.85860824584961)
+- wolf-1061 eRODat DR2_Main: 3eRASS J043028.6+124443 at 5.3′ (det_like 6.45695686340332)
+- wolf-1069 eRODat DR1_Main: 1eRASS J082653.2-583336 at 6.2′ (det_like 30.519559860229492)
+- wolf-1069 eRODat DR1_Main: 1eRASS J082619.1-583740 at 3.4′ (det_like 12.728185653686523)
+- wolf-1069 eRODat DR1_Main: 1eRASS J082604.1-583116 at 3.4′ (det_like 7.125391006469727)
+- wolf-1069 eRODat DR1_Main: 1eRASS J082533.0-582916 at 7.0′ (det_like 70.97642517089844)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082653.5-583338 at 6.2′ (det_like 215.26092529296875)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082645.1-583214 at 5.6′ (det_like 9.255859375)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082646.8-583732 at 6.0′ (det_like 9.677774429321289)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082618.3-583733 at 3.3′ (det_like 55.84101486206055)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082601.6-583232 at 2.2′ (det_like 7.676135540008545)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082620.0-583846 at 4.4′ (det_like 6.796154022216797)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082603.3-584105 at 6.4′ (det_like 19.30476188659668)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082602.1-583626 at 1.8′ (det_like 15.345338821411133)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082533.3-583936 at 6.5′ (det_like 9.286890983581543)
+- wolf-1069 eRODat DR2_Main: 3eRASS J082533.0-582913 at 7.0′ (det_like 180.70936584472656)
+- alpha-cen-a fermilpsc (wide): 4FGL J0240.5+6113 at 24.9′
+- alpha-cen-b fermilpsc (wide): 4FGL J0240.5+6113 at 24.9′
+- gj-13157 fermilpsc (wide): 4FGL J0951.8-5944 at 27.3′
+- gj-2066 fermilpsc (wide): 4FGL J2015.2-0137 at 23.5′
+- gj-2066 fermilpsc (wide): 4FGL J2017.9-0114 at 27.4′
+- gj-229-a fermilpsc (wide): 4FGL J1810.1+2156 at 7.1′
+- lacaille-8760 fermilpsc (wide): 4FGL J0916.7+3856 at 6.6′
+- lalande-21185 fermilpsc (wide): 4FGL J2302.4-3545 at 15.8′
+- ltt-1445-a fermilpsc (wide): 4FGL J1503.3+1651 at 26.4′
+- van-maanen fermilpsc (wide): 4FGL J1249.3-0545 at 23.3′
+
+### eRODat upper limits (multi API)
+
+- DR1_eRASS1 band 024: 36/88 corridors in the DE sky; exposure median 132 s (min 73, max 1593); UL_B median 7.05e-14 erg/cm²/s (min 1.1e-14, max 1.5e-13); counts median 0, max 30
+- DR1_eRASS1 band 021: 36/88 corridors in the DE sky; exposure median 134 s (min 75, max 1615); UL_B median 7.02e-14 erg/cm²/s (min 8.9e-15, max 1.5e-13); counts median 0, max 8
+- DR2_eRASSc3 band 024: 36/88 corridors in the DE sky; exposure median 347 s (min 196, max 4378); UL_B median 3.35e-14 erg/cm²/s (min 5.5e-15, max 6.3e-14) (no counts field)
+- DE-sky corridors (36): 61-cyg-a, 61-cyg-b, barnard-star, ez-aqr, fomalhaut, gj-1002, gj-1221, gj-1276, gj-13157, gj-2012, gj-338-a, gj-338-b, gj-3512, gj-54, gj-625, gj-687, gj-783, gj-876, gj-908, gj65-a, gj65-b, groombridge-34-a, groombridge-34-b, hd-219134, lacaille-8760, lacaille-9352, ross-154, ross-248, sigma-dra, struve-2398-a, struve-2398-b, tau-cet, teegarden, van-maanen, wolf-1061, wolf-1069
+- Deep-family stars (DR1 eRASS1 band 024): gj-1276 RU; gj-908 RU; ross-128 DE 14 ct / 96 s; ross-154 RU; teegarden RU; van-maanen RU; wolf-359 DE 23 ct / 70 s
+
+## Data-product routes
+
+| Probe | HTTP | Content |
+|---|---|---|
+| chandra cdaftp primary listing | 200 | text/html;charset=ISO-8859-1 1049 |
+| chandra cxctap ObsCore | 500 | text/xml;charset=ISO-8859-1 None |
+| xmm nxsa AIO PPS listing | 200 | image/fits None |
+| xmm XSA TAP public obs | 200 | text/csv None |
+| swift heasarc obs tree | 200 | text/html;charset=ISO-8859-1 1167 |
+| swift heasarc xrt event dir | 200 | text/html;charset=ISO-8859-1 1949 |
+| swift heasarc bat survey dir | 200 | text/html;charset=ISO-8859-1 1489 |
+| swift UKSSDC swifttools API root | 200 | text/html; charset=UTF-8 None |
+| swift LSXPS upper-limit server page | 200 | text/html; charset=UTF-8 None |
+| fermi weekly photon HEAD | 200 | application/fits 190152000 |
+| fermi LAT data server form | 200 | text/html; charset=ISO-8859-1 None |
+| erosita skytile api (van-maanen antipode) | 200 | application/json 317 |
+| erosita DR1 download tree (tile) | 200 | text/html; charset=utf-8 None |
+| erosita DR1 download EXP_010 (tile) | 200 | text/html; charset=utf-8 None |
+| erosita DR1 event list HEAD (tile) | 200 | application/fits 14696528 |

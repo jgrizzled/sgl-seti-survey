@@ -1,12 +1,12 @@
 ---
-title: "sgl-seti-survey — Project Plan"
+
+## title: "sgl-seti-survey — Project Plan"
 date: 2026-09-06
 tags:
   - SETI
   - technosignatures
   - solar-gravitational-lens
   - archival-search
----
 
 # sgl-seti-survey — Project Plan
 
@@ -26,11 +26,11 @@ neighboring systems. For the Sun, the focal line for rays grazing the
 photosphere begins near 547.8 AU, so a relay serving a target star would
 sit roughly on the anti-star ray at ~550–10,000 AU heliocentric distance.
 
-This hypothesis is unusually testable for SETI: it predicts _where_ on
-the sky a relay associated with a given star should appear, _how_ that
+This hypothesis is unusually testable for SETI: it predicts *where* on
+the sky a relay associated with a given star should appear, *how* that
 position moves (a huge annual parallax of ~20–375 arcsec depending on
 distance, plus secular drift opposite the target star's proper motion),
-and _when_ Earth crosses hypothesized beam geometries between the Sun and
+and *when* Earth crosses hypothesized beam geometries between the Sun and
 nearby stars. The strategy, signal classes, and prior art (Gillon,
 Hippke, Tusay et al., Marcy et al.) are laid out in the sglseti repo
 under `notes/seti_strategies_for_sgl_technosignatures.md`.
@@ -62,19 +62,19 @@ for this project.
 The resulting package boundary provides:
 
 - **Historical and interval target generation** — exact archival point
-  epochs or observation intervals, keyed by caller-supplied IDs, with
-  adaptive Rx/Tx loci over relay distance and conservative swept regions.
+epochs or observation intervals, keyed by caller-supplied IDs, with
+adaptive Rx/Tx loci over relay distance and conservative swept regions.
 - **Versioned target-state models** — linear astrometry, acceleration,
-  orbital solutions, and externally sampled ephemerides, with full
-  endpoint identity and provenance.
+orbital solutions, and externally sampled ephemerides, with full
+endpoint identity and provenance.
 - **Uncertainty products** — propagated role- and epoch-dependent
-  uncertainty kept distinct from assumed search padding.
+uncertainty kept distinct from assumed search padding.
 - **Observer-state models** — Earth center, terrestrial sites, and
-  time-dependent spacecraft states from pinned kernels or state tables.
+time-dependent spacecraft states from pinned kernels or state tables.
 - **Beam-crossing geometry** — closest approach, impact parameter,
-  transverse speed, side of axis, and parameterized windows.
+transverse speed, side of axis, and parameterized windows.
 - **Reproducibility** — pinned resources, checksummed scientific inputs,
-  versioned models, and manifests.
+versioned models, and manifests.
 
 `sglseti` still deliberately ends at generic target products. It does not
 query archives, interpret detector footprints, run signal searches, manage
@@ -84,20 +84,20 @@ responsibilities begin here.
 ## 2. Goals
 
 1. Determine which existing public archival observations intersect
-   uncertainty-aware SGL relay corridors in space and time, or pass close
+  uncertainty-aware SGL relay corridors in space and time, or pass close
    to a hypothesized beam axis, for a curated set of nearby endpoints.
 2. Search the usable intersecting data for SGL-consistent signatures,
-   especially sources that recur along the predicted parallax,
+  especially sources that recur along the predicted parallax,
    anti-target-motion, and role-dependent track.
 3. Measure the end-to-end sensitivity and false-positive behavior of each
-   search through synthetic-source injection, positive controls, and
+  search through synthetic-source injection, positive controls, and
    matched control corridors.
 4. Publish reproducible per-target, per-archive reports with
-   completeness-qualified constraints, for example: "persistent point
+  completeness-qualified constraints, for example: "persistent point
    sources following model M were recovered with at least 90% probability
    above flux F over these relay-distance intervals and epochs."
 5. Emit stable observation, intersection, analysis-run, constraint, and
-   candidate records suitable for a future coverage ledger without
+  candidate records suitable for a future coverage ledger without
    building the ledger service in this project.
 
 Non-goals for now: new telescope observations, a public
@@ -105,6 +105,8 @@ coverage-ledger service, candidate follow-up campaigns beyond basic
 vetting.
 
 ## 3. Scientific scope and methodology
+
+
 
 ### 3.1 Baseline hypothesis and search grid
 
@@ -136,6 +138,7 @@ as coverage of the others.
 The pipeline distinguishes discovery, geometry, analysis, and scientific
 constraint:
 
+
 | Record/state            | Meaning                                                                   |
 | ----------------------- | ------------------------------------------------------------------------- |
 | Observation             | Immutable archive metadata and data-product identity                      |
@@ -144,6 +147,7 @@ constraint:
 | Analysis run            | A versioned pipeline actually searched specified data and parameter space |
 | Constraint              | Injection-calibrated sensitivity or a qualified null result               |
 | Candidate               | A retained event or track with its competing-model tests                  |
+
 
 Coarse-pass misses remain useful audit records but are not scientific
 coverage. A footprint hit is not coverage until the relevant data are
@@ -159,12 +163,12 @@ that has a documented angular error bound.
 Two-pass join:
 
 1. **Coarse discovery.** Represent the discovery envelope as a spatial MOC
-   or another conservative index and query archive metadata. Use a generic
+  or another conservative index and query archive metadata. Use a generic
    ObsCore/SIA/TAP adapter where the archive implements those semantics
    adequately, and archive-specific adapters otherwise. Preserve the raw
    response alongside the normalized observation record.
 2. **Precise intersection.** Evaluate the adaptive or swept SGL locus over
-   each observation's start-to-stop interval and intersect it with the
+  each observation's start-to-stop interval and intersect it with the
    detector's exact spherical WCS footprint. Account for distortion, chip
    gaps, dithers, masks, and spatially varying usable response. Return all
    intersected relay-distance intervals, which may be disjoint.
@@ -178,18 +182,18 @@ do not replace exact WCS and valid-pixel tests.
 Use a layered search:
 
 1. query source, reject, variability, and moving-object tables for cheap
-   candidate screening;
+  candidate screening;
 2. perform forced photometry or source extraction at the predicted
-   positions;
+  positions;
 3. use difference imaging and trajectory-aware shift-and-stack when the
-   source may lie below single-exposure thresholds;
+  source may lie below single-exposure thresholds;
 4. fit the continuous relay distance and bounded residual motion rather
-   than testing only a fixed grid;
+  than testing only a fixed grid;
 5. compare the SGL hypothesis with inertial-background, ordinary stellar
-   parallax/proper-motion, Keplerian Solar-System orbit, and instrumental
+  parallax/proper-motion, Keplerian Solar-System orbit, and instrumental
    models; and
 6. require successful prediction of held-out epochs for a persistent
-   candidate.
+  candidate.
 
 A real source may be absent from a static catalog, split into multiple
 catalog entries, present as a high-motion or poor-fit source, or retained
@@ -225,6 +229,8 @@ visibility, and detector response; temporal coincidence alone does not make
 an observation constraining.
 
 ## 4. Pipeline A surveys
+
+
 
 ### 4.1 WISE/NEOWISE
 
@@ -410,7 +416,7 @@ image-level re-run (§5.21) shares the adapter.
 ### 4.9 Gaia DR4 astrometric SGL-track test (future; former §6 / ledger item O12)
 
 **Description.** Gaia DR4 publishes all per-transit epoch photometry
-_and astrometry_ for every source — a qualitatively new Pipeline A
+*and astrometry* for every source — a qualitatively new Pipeline A
 test: astrometric SGL-track fitting against the 20–375″ relay parallax
 and the anti-target-motion drift, rather than a photometric stack. The
 matching Pipeline B product (an L2-observer crossing list) is §5.22.
@@ -465,6 +471,8 @@ controls of §4.4, §4.5, §5.9 and §5.13).
 **Trigger.** A candidate that survives a confirmatory run — none has.
 
 ## 5. Pipeline B — crossings surveys
+
+
 
 ### 5.1 ZTF
 
@@ -542,6 +550,7 @@ answered by BL's published nulls. Micro-follow-ups handed off (VLASS
 six-cutout quick-look; 3 teegarden APF spectra to the spectral-archive
 family, §5.17). Follow-ons: the CASDA/LoTSS extension (§5.7) and the
 cutout quick-look (§5.8).
+
 ### 5.6 TESS
 
 **Description.** FFI cutouts of the crossing windows from the
@@ -566,7 +575,7 @@ v2 needs a detrending layer); 1 vetoed exceedance, 1 budget-absorbed,
 1 retained-ambiguous (teegarden 0.1 AU — recurrence at a future
 ecliptic sector is the designated follow-up).
 
-### 5.7 Radio metadata extensions — ASKAP + LoTSS 
+### 5.7 Radio metadata extensions — ASKAP + LoTSS
 
 **Description.** The §5.5 geometry-only construction repeated on
 archives that revisit fields: CASDA ObsCore (RACS / VAST / EMU / FLASH
@@ -643,7 +652,7 @@ ASAS-SN v2 ceiling re-measured unchanged at 2025-06-16 (reprocessing
 lag); **A3** — no radec-list batching exists; a windowed task runs in
 ~2.2 min, so the 308-task fleet (231 B incl. the D3 mini-track ends,
 77 A) drained in 7.4 h with 0 failures (`scripts/atlas_drain.py`).
-**Coverage ledgers** (`results/coverage_v1_*`, `asassn_ledger_v1_*`):
+**Coverage ledgers** (`results/coverage_v1_`*, `asassn_ledger_v1_*`):
 the grazing rungs are attrition-dominated — B 1.2 R☉ 8/44 windows
 covered (van-maanen 4/11), 2.5 R☉ 25/55, against 0.1 AU 74/77 (B)
 and 68/77 (A) — because 0.5–1.3 d windows sit below ATLAS's nightly-
@@ -651,7 +660,8 @@ at-best revisit; the pre-declared ~100–180-exposure grazing stacks
 are ~18–30 exposures in reality (≈ 20.6 stacked), the 0.1 AU stacks
 reach ~21.5. ASAS-SN v2 field-level epoch lists show the same shape.
 Threshold freeze v1.0 (hypotheses §13; seed 20260904; dev = wolf-359
-+ gj-908; per-statistic gates, mirror-gated control validity, ≥ 4
+
+- gj-908; per-statistic gates, mirror-gated control validity, ≥ 4
 valid controls per trial): 14 searched units / 37 trials; S_stack
 constraint-only at every grazing rung. Dev 2 exceedances (one
 single-exposure epoch, adjudicated); blind confirmatory 5 vs 3.2
@@ -730,7 +740,8 @@ occulter; S1 2.5 R☉ 148/153 windows covered+visible in the
 [2.2, 2.5] R☉ wings; 0.1 AU rungs 96–98 % covered at ~1,000 C3
 frames/window); threshold freeze v1.0 + amendments v1.1/v1.2; dev
 closed and blind confirmatory run once, both 2026-08-26; completeness
-+ controls + report 2026-08-27. Later: STEREO HI-1 (own observer
+
+- controls + report 2026-08-27. Later: STEREO HI-1 (own observer
 list, §5.16, complete) and WISPR (PSP geometry pass, §5.18, complete;
 survey §5.19). Survey docs:
 `surveys/heliospheric-crossings/`.
@@ -898,7 +909,7 @@ eats real single-plate transients (v1.2 — `SUSPECTED_DEFECT`
 demoted to annotation), sub-limit stars are their own hit
 background (v1.3 quiescent gate).
 
-### 5.15 Kepler/K2 footprint intersect 
+### 5.15 Kepler/K2 footprint intersect
 
 **Description.** A one-afternoon footprint intersect: the K2 ecliptic
 campaign fields (2014–2018) and the Kepler prime field against the
@@ -1037,7 +1048,7 @@ and half-heights are literature values flagged for header recon.
 repeating heliocentric radius, so each target's geometry recurs every
 encounter (29 encounters E1–E29, q 35.7 → 9.85 R☉). The post-t_ca half
 of every window is on the ram side, the pre-t_ca half never is.
-**Grazing cones: `not_constrainable`.** 1.2 R☉ ≤ 6.9° at any encounter
+**Grazing cones:** `not_constrainable`**.** 1.2 R☉ ≤ 6.9° at any encounter
 (mission floor); 2.5 R☉ reaches the edge only at the E22+ perihelia
 for gj-1111 (13.7°, 2–3 min per window at b_e 2.42–2.49 R☉) and falls
 0.2° short for wolf-359 (13.3°) — a knife-edge on the baffle-limited
@@ -1122,7 +1133,7 @@ epochal-stack release / DR2; for WINTER, a public release (re-checked
 at each yearly refresh: IRSA holdings, Data Lab, `winter.caltech.edu`,
 the instrument-paper series).
 
-### 5.21 Rubin image-level crossings (future; former §6 / ledger item O11)
+### 5.21 Rubin image-level crossings
 
 **Description.** Image-level re-run of the §5.13 catalog-level unit
 (ross-128 B 0.1 AU r, plus whatever later visits add) on Rubin
@@ -1229,12 +1240,59 @@ whose outer skirt sits at ε ≳ 30–40°, reachable by a night-sky archive
 **Description.** Chandra / XMM / eROSITA / Swift and Fermi-LAT event
 products for opportunistic high-energy coincidence with the crossing
 windows and persistent-source tests on the corridors. The UV half of
-the original row ran as GALEX/gPhoton (§5.12).
+the original row ran as GALEX/gPhoton (§5.12). Recon (2026-09-07,
+`surveys/highenergy-crossings/notes/highenergy_recon_2026-09-07.md`)
+reshaped the row: **XMM-Newton (solar aspect 70–110°) and eROSITA
+(scan at 90° elongation) cannot observe any crossing window** — both
+channels sit at elongation 180° ± 6° — and join WISE/SPHEREx under
+Gate I (§5.3); Chandra has no in-window observation in 27 years; the
+pointed archives contribute one unit (Swift XRT 4.2 ks + UVOT UV grism
+on wolf-359, 2018-03-06, A 0.1 AU). The window substrate is the two
+all-sky monitors: **Fermi-LAT** (≥ 100 MeV; every grazing window
+2008 → 2018-03 has 1–19 ks of in-FoV livetime, measured from the
+weekly spacecraft files; after the 2018-03 solar-array anomaly one
+grazing window in three has none) and **Swift/BAT** (half of the
+grazing windows and 95 % of the 0.1 AU windows carry ≥ 1 ks within 30°
+of the boresight) — a high-energy pulse/burst coincidence cell,
+photon-starved and near-background-free at the LAT (7 photons > 100
+MeV within 1° in 3 d at the van-maanen antipode; arbitrary
+position/time pulls verified through the LAT data server). Corridor
+half: catalogue-level and ready — eROSITA-DE upper limits at
+arbitrary positions by API (DR1 eRASS1; DR2 eRASS:3 released
+2026-07-31, catalogue-only) for the 36 corridors in the western
+Galactic hemisphere (UL median 3.4 × 10⁻¹⁴ erg cm⁻² s⁻¹), plus
+5XMM-DR15 / CSC 2.1 / 2SXPS-LSXPS / BAT-157m / 4FGL-DR4 cones; sources
+within 7′ are common (34/88 corridors at eRASS:3 depth, LMC-direction
+corridors crowded), so the screen is an SGL-track test, not a
+presence test — first case: a persistent X-ray source 1.0′ from the
+teegarden antipode (LSXPS + eRASS:3).
 
-**Status.** Not adopted; no recon. 
+**Status.** **COMPLETE 2026-09-07** — report `report/highenergy_crossings.md`.
+Chain in one day: recon → freeze v1.0 (D1–D11) → amendments v1.1
+(Jeffreys rate floor; A gj-1276 1.2 R☉ demoted, 145 trials, T = 3.451)
+and v1.2 (per-trial ensemble exceedance gate: 9 B van-maanen trials
+constraint-only, 3C 279 at 1.8° from the antipode) → coverage (580
+windows, 518 searchable) → threshold freeze (55,474 pseudo-windows) →
+dev (controls GRB 130427A and the 3C 454.3 flare PASS) → blind
+confirmatory → completeness → Swift/BAT constraint-only arm (HEASoft
+`batsurvey` in a container, 238 pointings) → XRT look → corridor
+screen. Execution log `notes/project_history.md` §26.
 
-**Trigger.** None scheduled; would start with a reachability recon
-like every new archive.
+**Result.** **0 candidates blind**: 136 calibrated trials, 0
+exceedances vs 0.05 expected (lane L 10,778 photons vs 10,517
+expected); the 9 constraint-only B van-maanen trials all exceed
+through the 3C 279 April-2014 flare, vetoed `known_source`. 90 %
+limits (Γ = 2): recurrence-stacked 100 MeV–1 GeV flux 1.4–3.6 × 10⁻⁷
+ph cm⁻² s⁻¹ through the 1.2 R☉ cone (**0.12–0.33 MW**), 0.2–0.5 MW at
+2.5 R☉, 2–9 MW at 0.1 AU; single-window 0.5–1.2 MW (grazing); 1-ks
+pulses Φ50 ≈ 3 × 10⁻³ ph cm⁻². BAT 14–195 keV: 175 grazing windows at
+median ~30 mCrab (1.6 / 5.9 MW), no threshold. XRT look: wolf-359 at
+3.6× its quiescent rate, flat, nothing pulse-like. Corridor screen: 46
+corridors empty within 7′, 212 of 281 sources `fixed_sky` by the
+SGL-track test, 69 unresolved (LMC-direction and CSC-only); eRASS1 /
+eRASS:3 upper limits at all 36 western corridors. Hand-offs: the UVOT
+UV grism to §5.17; the yearly refresh re-pulls the LAT era (data
+server, ~90 s per position) and the post-2018 livetime table.
 
 ### 5.27 Standing maintenance
 
@@ -1242,123 +1300,128 @@ The yearly crossing-list refresh (the 2028 window end) as archives
 extend, and the items that ride on it:
 
 - Fold the TESS and GALEX rows into the covered-window ledger (GALEX:
-  5 searched + grazing/rim/empty ledger entries,
-  `report/galex_crossings.md` §5; `report/tess_crossings.md` §6
-  enumerates the TESS rows; the joint-stage v1 ledger predates TESS and
-  stays as pre-registered).
+5 searched + grazing/rim/empty ledger entries,
+`report/galex_crossings.md` §5; `report/tess_crossings.md` §6
+enumerates the TESS rows; the joint-stage v1 ledger predates TESS and
+stays as pre-registered).
 - Re-run the teegarden 0.1 AU recurrence test when a future ecliptic
-  sector covers the target (§5.6); the wolf-359 A NUV
-  retained-ambiguous burst (§5.12) awaits a future UV mission for its
-  recurrence test.
+sector covers the target (§5.6); the wolf-359 A NUV
+retained-ambiguous burst (§5.12) awaits a future UV mission for its
+recurrence test.
 - Radio: re-run the v2 CASDA/LoTSS arm
-  (`surveys/radio-crossings/scripts/coverage_intersect_v2.py`, ~12 min)
-  plus the v1 VLASS arm (epochs 3.2 / 4.x) — VAST's weeks-cadence over
-  the wolf-359/gj-1276 antipode field makes the 0.1 AU antipode windows
-  a recurring test; re-run the intersection if BL's MeerKAT holdings
-  reach the public archive. The v2-style null-ensemble redesign is the
-  designated route should the d = 1 wide-beam rung ever be searched
-  with calibrated error rates.
+(`surveys/radio-crossings/scripts/coverage_intersect_v2.py`, ~12 min)
+plus the v1 VLASS arm (epochs 3.2 / 4.x) — VAST's weeks-cadence over
+the wolf-359/gj-1276 antipode field makes the 0.1 AU antipode windows
+a recurring test; re-run the intersection if BL's MeerKAT holdings
+reach the public archive. The v2-style null-ensemble redesign is the
+designated route should the d = 1 wide-beam rung ever be searched
+with calibrated error rates.
 - Heliospheric: refresh `stereoa_v1`, `psp_v1` and `solo_v1` (SPK ends 2026-12-01 / 2030-11-20;
-  WISPR E28+ public L2; SoloHI P13+ — perihelion 2026-08-19 — public L2 after 2026-04-10).
+WISPR E28+ public L2; SoloHI P13+ — perihelion 2026-08-19 — public L2 after 2026-04-10).
 - Spectral archives (§5.17): pull the newly public
-  NIRPS/SPIRou/ESPRESSO/HARPS epochs of the 2026–27 windows (ensembles
-  and thresholds cached in `runs/spectral-archives/v1/`) and re-check
-  the SPIRou teegarden 2025-11-08 release.
+NIRPS/SPIRou/ESPRESSO/HARPS epochs of the 2026–27 windows (ensembles
+and thresholds cached in `runs/spectral-archives/v1/`) and re-check
+the SPIRou teegarden 2025-11-08 release.
 - Re-probe the near-IR time-domain substrates blocked in §5.20 (WINTER
-  release; any PGIR epochal-stack release or DR2).
+release; any PGIR epochal-stack release or DR2).
 - ~~Propagate impact-parameter uncertainty in the universal crossing
-  list~~ — **done 2026-09-06** (`sglsurvey/crossings_uncertainty.py`,
-  `crossings/universal_v1/uncertainty*.{ecsv,npz,json}`; history §24):
-  128-draw target-state Monte Carlo per event, no rung membership
-  changes at 95 % (half-width ≤ 0.012 R☉ overall, ≤ 1e-4 R☉ on the
-  grazing family; `t_ca` σ ≤ 264 s; side 100 % consistent), i.e. the
-  target-state term sits at or below the declared 0.010 R☉ LEO
-  observer floor (only eps-ind-b's worst event, 0.012 R☉, exceeds it). Observer state, ephemeris and the model floor
-  remain `not_propagated`. Re-run per list at the refresh
-  (`--product <name>`); the 84 boundary rows still at the window edge
-  are the 2028-end events the refresh will complete.
+list~~ — **done 2026-09-06** (`sglsurvey/crossings_uncertainty.py`,
+`crossings/universal_v1/uncertainty*.{ecsv,npz,json}`; history §24):
+128-draw target-state Monte Carlo per event, no rung membership
+changes at 95 % (half-width ≤ 0.012 R☉ overall, ≤ 1e-4 R☉ on the
+grazing family; `t_ca` σ ≤ 264 s; side 100 % consistent), i.e. the
+target-state term sits at or below the declared 0.010 R☉ LEO
+observer floor (only eps-ind-b's worst event, 0.012 R☉, exceeds it). Observer state, ephemeris and the model floor
+remain `not_propagated`. Re-run per list at the refresh
+(`--product <name>`); the 84 boundary rows still at the window edge
+are the 2028-end events the refresh will complete.
 - Channel A at the 1.0 AU rung keeps its programme-wide deferred
-  status.
+status.
+
+
 
 ## 7. Open questions and research directions
 
 - **Endpoint hypotheses.** A network may aim at a stellar component,
-  system barycenter, planet, or orbital acquisition region. Determine which
-  hypotheses are physically motivated for each nearby system and never use
-  component astrometry as an unlabeled barycenter substitute.
+system barycenter, planet, or orbital acquisition region. Determine which
+hypotheses are physically motivated for each nearby system and never use
+component astrometry as an unlabeled barycenter substitute.
 - **Emission models.** Translate flux limits into constraints separately
-  for reflected sunlight, equilibrium and actively heated thermal
-  emission, beacons, leakage, and pulsed or intermittent sources. Choose
-  observing bands from those models rather than labeling all infrared data
-  as equivalent waste-heat coverage.
+for reflected sunlight, equilibrium and actively heated thermal
+emission, beacons, leakage, and pulsed or intermittent sources. Choose
+observing bands from those models rather than labeling all infrared data
+as equivalent waste-heat coverage.
 - **Stationkeeping and inactive relays.** Quantify plausible deviations
-  from an ideal focal line, secular drift, and failure-state orbits.
-  Determine residual-motion priors that are broad enough to be physical
-  without making the search statistically unconstrained.
+from an ideal focal line, secular drift, and failure-state orbits.
+Determine residual-motion priors that are broad enough to be physical
+without making the search statistically unconstrained.
 - **Model accuracy budgets.** Allocate angular error among target-state
-  propagation, observer ephemerides, relativistic geometry, timing, and
-  numerical locus sampling. Validate that budget at the oldest epochs and
-  smallest relay distances before assigning coverage.
+propagation, observer ephemerides, relativistic geometry, timing, and
+numerical locus sampling. Validate that budget at the oldest epochs and
+smallest relay distances before assigning coverage.
 - **Footprint representation.** Establish a common discovery
-  representation, probably MOCs, while retaining exact spherical WCS,
-  detector masks, chip gaps, dithers, and spatial sensitivity for the
-  precise pass.
+representation, probably MOCs, while retaining exact spherical WCS,
+detector masks, chip gaps, dithers, and spatial sensitivity for the
+precise pass.
 - **Detection access at scale.** Coarse metadata queries are cheap;
-  image-level searches and epoch photometry are not. Benchmark bulk
-  downloads, TAP/SIA/IBE services, cloud-hosted collections, and archive
-  compute before scaling the target list.
+image-level searches and epoch photometry are not. Benchmark bulk
+downloads, TAP/SIA/IBE services, cloud-hosted collections, and archive
+compute before scaling the target list.
 - **Motion-model comparison.** Build calibrated likelihoods for the SGL
-  track, a static or ordinary stellar source, a Keplerian Solar-System
-  object, and detector artifacts. Test whether continuous distance and
-  residual-motion fits are identifiable at each archive's cadence.
+track, a static or ordinary stellar source, a Keplerian Solar-System
+object, and detector artifacts. Test whether continuous distance and
+residual-motion fits are identifiable at each archive's cadence.
 - **Statistical trials.** Define the global search family before candidate
-  selection and propagate trials over targets, roles, relay distance,
-  motion residuals, epochs, bands, source shapes, and persistence models.
+selection and propagate trials over targets, roles, relay distance,
+motion residuals, epochs, bands, source shapes, and persistence models.
 - **Target prioritization.** Score systems by endpoint quality, distance,
-  multiplicity, physical interest, astrometric history, corridor
-  background, and actual calibrated archive coverage. Do not let proximity
-  alone determine the order.
+multiplicity, physical interest, astrometric history, corridor
+background, and actual calibrated archive coverage. Do not let proximity
+alone determine the order.
 - **Crossing physics.** Replace generic ingress/egress language with
-  explicit transmitter and receiver geometries, beam profiles, scan
-  strategies, wavelength dependence, and duty cycles. Determine when
-  remote-target versus local-corridor data can constrain each case.
+explicit transmitter and receiver geometries, beam profiles, scan
+strategies, wavelength dependence, and duty cycles. Determine when
+remote-target versus local-corridor data can constrain each case.
 - **Radio scope.** ~~Decide whether this repository performs voltage or
-  spectrogram searches, delegates them to archive-specific pipelines, or
-  publishes only geometry and coverage products.~~ Decided 2026-08-24
-  (§5.5): geometry and coverage products only. In every case,
-  preserve frequency, drift-rate, polarization, time, and sensitivity
-  dimensions.
+spectrogram searches, delegates them to archive-specific pipelines, or
+publishes only geometry and coverage products.~~ Decided 2026-08-24
+(§5.5): geometry and coverage products only. In every case,
+preserve frequency, drift-rate, polarization, time, and sensitivity
+dimensions.
 - **Dark infrastructure.** Explore constraints from occultations,
-  microlensing, reflected-light phase behavior, thermal emission at longer
-  wavelengths, and gravitational or dynamical effects for objects that do
-  not transmit.
+microlensing, reflected-light phase behavior, thermal emission at longer
+wavelengths, and gravitational or dynamical effects for objects that do
+not transmit.
 - **Population inference.** Develop a hierarchical framework that combines
-  heterogeneous, model-specific completeness curves. A count of archive
-  intersections is not a population constraint.
+heterogeneous, model-specific completeness curves. A count of archive
+intersections is not a population constraint.
+
+
 
 ## 8. Practical notes
 
 - **Repo layout:** retain `notes/` for research and planning,
-  `sglsurvey/` (or similar) for the pipeline package, `registries/` for
-  curated target registries, and `runs/` or `build/` for generated products
-  that are ignored except for compact, reviewable summaries.
+`sglsurvey/` (or similar) for the pipeline package, `registries/` for
+curated target registries, and `runs/` or `build/` for generated products
+that are ignored except for compact, reviewable summaries.
 - **Core records:** model immutable `Observation`,
-  `IntersectionEvaluation`, `AnalysisRun`, `Constraint`, and `Candidate`
-  records separately. Do not overload one table with discovery, analysis,
-  and interpretation states.
+`IntersectionEvaluation`, `AnalysisRun`, `Constraint`, and `Candidate`
+records separately. Do not overload one table with discovery, analysis,
+and interpretation states.
 - **Archive adapters:** normalize identity, timing, footprint, band,
-  calibration, data-quality, and product-location fields, but preserve raw
-  archive metadata. Keep discovery, download, and instrument-specific
-  valid-pixel logic behind explicit adapter interfaces.
+calibration, data-quality, and product-location fields, but preserve raw
+archive metadata. Keep discovery, download, and instrument-specific
+valid-pixel logic behind explicit adapter interfaces.
 - **sglseti dependency:** during development, pin the adjacent checkout
-  (`../sglseti`) to an exact commit and record whether it was dirty. Every
-  run also pins target registry, geometry model, observer state, kernels,
-  and the model IDs introduced by the improvements roadmap.
+(`../sglseti`) to an exact commit and record whether it was dirty. Every
+run also pins target registry, geometry model, observer state, kernels,
+and the model IDs introduced by the improvements roadmap.
 - **Reproducibility:** snapshot archive queries and responses, checksums,
-  calibration files, software environments, configuration, random seeds,
-  and manifests. Archive services and catalogs evolve even when survey code
-  does not.
+calibration files, software environments, configuration, random seeds,
+and manifests. Archive services and catalogs evolve even when survey code
+does not.
 - **Data retention:** keep lightweight metadata and derived measurements
-  permanently; record content hashes and durable archive identifiers for
-  large images or event files; retain local cutouts and injected products
-  according to a documented regeneration policy.
+permanently; record content hashes and durable archive identifiers for
+large images or event files; retain local cutouts and injected products
+according to a documented regeneration policy.
+

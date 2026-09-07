@@ -1,0 +1,7955 @@
+{
+ "utc": "2026-09-07T16:03:08.263",
+ "rule": {
+  "z_min_au": 10000.0,
+  "match_arcsec": 10.0,
+  "disp_min_arcsec": 15.0
+ },
+ "corridors": [
+  {
+   "target": "61-cyg-a",
+   "ra": 136.74780771987668,
+   "dec": -38.76353320781861,
+   "hits": [
+    {
+     "ra": 136.67297138558038,
+     "dec": -38.73334482679585,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.9426017295084534,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J090641.5-384400"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 136.75512223270152,
+     "dec": -38.871435159193354,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.483141066323379,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J090701.2-385217"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 133.00308227539062,
+     "UL_B": 1.1227662950839129e-13,
+     "Count": 3,
+     "Bkg_counts": 0.6983230710029602
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 134.7281494140625,
+     "UL_B": 8.42759157815634e-14,
+     "Count": 1,
+     "Bkg_counts": 0.22978956997394562
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 347.11419677734375,
+     "UL_B": 4.499095798064616e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 2,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "61-cyg-b",
+   "ra": 136.75299931105917,
+   "dec": -38.75575413807076,
+   "hits": [
+    {
+     "ra": 136.67297138558038,
+     "dec": -38.73334482679585,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.979088741694993,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J090641.5-384400"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 136.75512223270152,
+     "dec": -38.871435159193354,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.9415708293221305,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J090701.2-385217"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 132.96751403808594,
+     "UL_B": 9.56968404801535e-14,
+     "Count": 2,
+     "Bkg_counts": 0.6990799903869629
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 134.68960571289062,
+     "UL_B": 6.411231002470194e-14,
+     "Count": 0,
+     "Bkg_counts": 0.22986412048339844
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 347.0098571777344,
+     "UL_B": 4.500699400840358e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 2,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "61-vir",
+   "ra": 19.591387239234336,
+   "dec": 18.32057444384326,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "82-eri",
+   "ra": 230.00894552903907,
+   "dec": 43.06502897431546,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "alpha-cen-a",
+   "ra": 39.88609865193064,
+   "dec": 60.83298102658951,
+   "hits": [
+    {
+     "ra": 39.82431,
+     "dec": 60.89983,
+     "catalogues": [
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 6227 d",
+     "sep_arcmin": 4.398327507418709,
+     "n_pairs": 1,
+     "names": [
+      "LSXPS J023917.8+605359"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 40.03249,
+     "dec": 60.77165,
+     "catalogues": [
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 6227 d",
+     "sep_arcmin": 5.648082240689473,
+     "n_pairs": 1,
+     "names": [
+      "LSXPS J024007.7+604617"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 2,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "alpha-cen-b",
+   "ra": 39.882191191719585,
+   "dec": 60.834175547932695,
+   "hits": [
+    {
+     "ra": 39.82431,
+     "dec": 60.89983,
+     "catalogues": [
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 6227 d",
+     "sep_arcmin": 4.286768221322129,
+     "n_pairs": 1,
+     "names": [
+      "LSXPS J023917.8+605359"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 40.03249,
+     "dec": 60.77165,
+     "catalogues": [
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 6227 d",
+     "sep_arcmin": 5.781514006591292,
+     "n_pairs": 1,
+     "names": [
+      "LSXPS J024007.7+604617"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 2,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "barnard-star",
+   "ra": 89.44985658899145,
+   "dec": -4.721913157968574,
+   "hits": [
+    {
+     "ra": 89.39851065960582,
+     "dec": -4.778153702374716,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 7.0\"",
+     "sep_arcmin": 4.562101284066405,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J055735.6-044641",
+      "3eRASS J055735.8-044647"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 89.36248826234366,
+     "dec": -4.676253137258851,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.89920313338024,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J055726.9-044034"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 89.50656410508037,
+     "dec": -4.811069841048979,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.333468768454381,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J055801.5-044839"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 89.4981623388777,
+     "dec": -4.618890664825067,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.823033859865327,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J055759.5-043708"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 116.05435943603516,
+     "UL_B": 7.103458175405225e-14,
+     "Count": 0,
+     "Bkg_counts": 0.348580926656723
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 117.5567626953125,
+     "UL_B": 7.345609987245358e-14,
+     "Count": 0,
+     "Bkg_counts": 0.09532861411571503
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 312.7673645019531,
+     "UL_B": 3.285141052960551e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 4,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "eps-eri",
+   "ra": 233.22873497591883,
+   "dec": 9.458178414612215,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "eps-ind-a",
+   "ra": 150.87226011884036,
+   "dec": 56.79717433680366,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "eps-ind-b",
+   "ra": 151.07630500234194,
+   "dec": 56.79373297874126,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "ez-aqr",
+   "ra": 159.650195373055,
+   "dec": 15.290112414602486,
+   "hits": [
+    {
+     "ra": 159.69707775995784,
+     "dec": 15.317328915904337,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.1667166854767004,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J103847.3+151901",
+      "3eRASS J103847.2+151902"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 159.5725149217221,
+     "dec": 15.305942417198589,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.5949143323210775,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J103817.4+151821"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 159.67177340695645,
+     "dec": 15.367068115381333,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.783190411325641,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J103841.2+152201"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 159.57700315856815,
+     "dec": 15.199014743326723,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.915767033781161,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J103818.4+151156"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 80.54887390136719,
+     "UL_B": 1.0234622529895279e-13,
+     "Count": 0,
+     "Bkg_counts": 0.3641487658023834
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 81.83329010009766,
+     "UL_B": 1.0552259207489284e-13,
+     "Count": 0,
+     "Bkg_counts": 0.12846189737319946
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 217.6977996826172,
+     "UL_B": 3.78684273337742e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 4,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "fomalhaut",
+   "ra": 164.41574345529227,
+   "dec": 29.62356912260917,
+   "hits": [
+    {
+     "ra": 164.3624083728473,
+     "dec": 29.652839421320515,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 20\" vs observed 4.9\"",
+     "sep_arcmin": 3.289468126208242,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J105726.6+293912",
+      "3eRASS J105726.9+293910"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 164.49007898949992,
+     "dec": 29.620655382209268,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 20\" vs observed 1.8\"",
+     "sep_arcmin": 3.8811510604821553,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J105757.7+293713",
+      "3eRASS J105757.6+293714"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 164.49353398442523,
+     "dec": 29.556577006465172,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.712241261555329,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J105758.4+293323"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 164.49092648295562,
+     "dec": 29.693238714146883,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.730644080650575,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J105757.8+294135"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 164.41888848566086,
+     "dec": 29.72363966013765,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 20\" vs observed 0.8\"",
+     "sep_arcmin": 6.006470369008095,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J105740.5+294325",
+      "3eRASS J105740.5+294325"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 164.49641595669888,
+     "dec": 29.550989558998126,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.056511769023559,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J105759.1+293303"
+     ],
+     "n_members": 2
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 91.54131317138672,
+     "UL_B": 9.005631255911556e-14,
+     "Count": 0,
+     "Bkg_counts": 0.4149520993232727
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 92.77967071533203,
+     "UL_B": 9.307277306714115e-14,
+     "Count": 0,
+     "Bkg_counts": 0.1648452877998352
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 232.56089782714844,
+     "UL_B": 4.393820444742631e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 6,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "gj-1002",
+   "ra": 181.6754325745113,
+   "dec": 7.548583464487834,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 96.6144790649414,
+     "UL_B": 8.532751057371141e-14,
+     "Count": 0,
+     "Bkg_counts": 0.4812232255935669
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 97.90526580810547,
+     "UL_B": 8.820016521608395e-14,
+     "Count": 0,
+     "Bkg_counts": 0.20360608398914337
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 278.9374084472656,
+     "UL_B": 4.3014247356034166e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-1061",
+   "ra": 234.003376336322,
+   "dec": 44.514335102576986,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-1087",
+   "ra": 269.10229387261813,
+   "dec": -5.355603111382486,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-11068",
+   "ra": 290.01324710381033,
+   "dec": 8.781381416309731,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-1111",
+   "ra": 307.45017857490313,
+   "dec": -26.773319395818476,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-11547",
+   "ra": 342.05325719556174,
+   "dec": 39.94003254478387,
+   "hits": [
+    {
+     "ra": 341.95141,
+     "dec": 39.94024,
+     "catalogues": [
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 5496 d",
+     "sep_arcmin": 4.685286431868417,
+     "n_pairs": 1,
+     "names": [
+      "LSXPS J224748.3+395624"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.03655,
+     "dec": 39.86163,
+     "catalogues": [
+      "swift2sxps",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 5496 d",
+     "sep_arcmin": 4.766596906887251,
+     "n_pairs": 6,
+     "names": [
+      "2SXPS J224808.7+395141",
+      "LSXPS J224808.7+395141"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 342.1653,
+     "dec": 39.89826,
+     "catalogues": [
+      "swift2sxps",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 5493 d",
+     "sep_arcmin": 5.732790174490738,
+     "n_pairs": 6,
+     "names": [
+      "2SXPS J224839.7+395353",
+      "LSXPS J224839.6+395353"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 342.09637,
+     "dec": 39.83903,
+     "catalogues": [
+      "swift2sxps",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 5493 d",
+     "sep_arcmin": 6.376896219575607,
+     "n_pairs": 6,
+     "names": [
+      "2SXPS J224823.1+395018",
+      "LSXPS J224823.1+395020"
+     ],
+     "n_members": 2
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 4,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-1221",
+   "ra": 87.00728095121474,
+   "dec": -70.88407661129921,
+   "hits": [
+    {
+     "ra": 87.0068127489534,
+     "dec": -70.90597603464188,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 3.0\"",
+     "sep_arcmin": 1.3139975696318642,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J054801.6-705421",
+      "3eRASS J054801.6-705424"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 86.86306830032406,
+     "dec": -70.87841961255762,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.8542659899192966,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054727.1-705242"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 87.04354525555928,
+     "dec": -70.83793752887043,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.858783382647328,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054810.4-705016"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 86.84770590999211,
+     "dec": -70.90610299972333,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.400999745525278,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054723.4-705421"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 86.99841074432221,
+     "dec": -70.826252291446,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.4738468941370084,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054759.6-704934"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 86.965751734114,
+     "dec": -70.9424394439222,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.5953153571951315,
+     "n_pairs": 0,
+     "names": [
+      "3015325010110113"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 87.13844489182848,
+     "dec": -70.93038253946479,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 2.7\"",
+     "sep_arcmin": 3.787587728842095,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J054833.2-705549",
+      "3eRASS J054832.8-705551"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 87.18110580080528,
+     "dec": -70.91949575637813,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.0200464903879505,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054843.4-705510"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 87.10724736617249,
+     "dec": -70.94408242004836,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.09988065503248,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054825.7-705638"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 86.81953370725944,
+     "dec": -70.91712942609378,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 4.185584498075553,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J054716.6-705501"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 87.0331336232688,
+     "dec": -70.96245015897392,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.729662410450445,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054807.9-705744"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 87.0329877492577,
+     "dec": -70.9657510898571,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 4.9263250708742525,
+     "n_pairs": 0,
+     "names": [
+      "3015325010109893"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 86.87169201842168,
+     "dec": -70.95523616090604,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 0.5\"",
+     "sep_arcmin": 5.030067813296352,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J054729.2-705719",
+      "3eRASS J054729.2-705718"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 86.8735652467541,
+     "dec": -70.9587985957634,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.193955569314053,
+     "n_pairs": 0,
+     "names": [
+      "3015325010103305"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 86.81372743925623,
+     "dec": -70.82089248267803,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.37416173341903,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054715.2-704915"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 86.7565532849306,
+     "dec": -70.9440834036024,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.095900795825113,
+     "n_pairs": 0,
+     "names": [
+      "3015325010113817"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 86.7445984461686,
+     "dec": -70.9532114589712,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.614676760170824,
+     "n_pairs": 0,
+     "names": [
+      "3015325010112216"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 87.34413625638999,
+     "dec": -70.8872101880981,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.6209519810807835,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054922.5-705313"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 86.67621152356348,
+     "dec": -70.90812183173047,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.659335688209331,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054642.2-705429"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 86.89630056669954,
+     "dec": -70.98920276149505,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 2.1\"",
+     "sep_arcmin": 6.671987333348744,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J054735.3-705922",
+      "3eRASS J054735.1-705921"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 86.80224311562709,
+     "dec": -70.97569389343569,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.809798777376148,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J054712.5-705832"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 86.8928683165579,
+     "dec": -70.99238084804,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.8741236451298855,
+     "n_pairs": 0,
+     "names": [
+      "3015325010101976"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 86.8047015892711,
+     "dec": -70.9788609440096,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.93620646484465,
+     "n_pairs": 0,
+     "names": [
+      "3015325010106972"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 86.9769226876721,
+     "dec": -70.9996637584991,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.96068565901085,
+     "n_pairs": 0,
+     "names": [
+      "3015325010111763"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 976.5877685546875,
+     "UL_B": 1.8251286576899742e-14,
+     "Count": 7,
+     "Bkg_counts": 5.097110271453857
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 987.471435546875,
+     "UL_B": 1.0629305493778125e-14,
+     "Count": 1,
+     "Bkg_counts": 1.5342379808425903
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 3085.70703125,
+     "UL_B": 8.96962574879626e-15,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 24,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "gj-12724",
+   "ra": 101.29975798630244,
+   "dec": 63.9603653204396,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-1276",
+   "ra": 163.49462555684,
+   "dec": 6.787849387304673,
+   "hits": [
+    {
+     "ra": 163.53847877197256,
+     "dec": 6.73066472019818,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.312723086714434,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J105409.2+064350"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 163.39205484232141,
+     "dec": 6.814301635004888,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.3136795883332315,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J105334.0+064851",
+      "3eRASS J105333.7+064848"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 75.47933197021484,
+     "UL_B": 1.4212584017667118e-13,
+     "Count": 1,
+     "Bkg_counts": 0.35019540786743164
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 76.4358139038086,
+     "UL_B": 1.1297402222705186e-13,
+     "Count": 0,
+     "Bkg_counts": 0.12257005274295807
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 239.38800048828125,
+     "UL_B": 4.269078580226848e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 2,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-13157",
+   "ra": 147.91562098613394,
+   "dec": -59.29284477847359,
+   "hits": [
+    {
+     "ra": 147.83076186142037,
+     "dec": -59.260427380726604,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.2480201530086914,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J095119.3-591537"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 148.08670234076965,
+     "dec": -59.33939554947438,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.9362948684105294,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J095220.8-592021"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 281.4678649902344,
+     "UL_B": 2.928886110422149e-14,
+     "Count": 0,
+     "Bkg_counts": 1.335993766784668
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 284.83795166015625,
+     "UL_B": 3.0316396772535684e-14,
+     "Count": 0,
+     "Bkg_counts": 0.3542879521846771
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 738.75,
+     "UL_B": 1.2806144592837892e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 2,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-2012",
+   "ra": 190.35372888536128,
+   "dec": 22.35421856674789,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 104.00650024414062,
+     "UL_B": 1.0214124332571725e-13,
+     "Count": 1,
+     "Bkg_counts": 0.474427729845047
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 104.22970581054688,
+     "UL_B": 8.284836710984247e-14,
+     "Count": 0,
+     "Bkg_counts": 0.18959210813045502
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 311.2764587402344,
+     "UL_B": 4.518229594716733e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-2066",
+   "ra": 304.0297920073361,
+   "dec": -1.3031281997296142,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-229-a",
+   "ra": 272.6433027111293,
+   "dec": 21.869183430937554,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-251",
+   "ra": 283.6986294547104,
+   "dec": -33.26572480216155,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-293",
+   "ra": 298.3169550515491,
+   "dec": 67.80472158306955,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-3112",
+   "ra": 205.74555603531542,
+   "dec": 67.31854662938215,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-318",
+   "ra": 310.37394135378156,
+   "dec": 32.93059564747453,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-3306",
+   "ra": 249.44984480885654,
+   "dec": 8.834562548489597,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-338-a",
+   "ra": 318.57736833831586,
+   "dec": -52.68268637737785,
+   "hits": [
+    {
+     "ra": 318.55657794867113,
+     "dec": -52.65689872740863,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 9.8\"",
+     "sep_arcmin": 1.7222725198519973,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J211413.7-523915",
+      "3eRASS J211413.5-523924"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 318.6361860550906,
+     "dec": -52.70146167623286,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.41747599269628,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J211432.6-524205"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 318.55824025910323,
+     "dec": -52.74491689913762,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.7980109989098283,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J211413.9-524441"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 92.4947738647461,
+     "UL_B": 8.912799155397916e-14,
+     "Count": 0,
+     "Bkg_counts": 0.5144813656806946
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 93.7159194946289,
+     "UL_B": 9.214294773149043e-14,
+     "Count": 0,
+     "Bkg_counts": 0.194510355591774
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 274.56500244140625,
+     "UL_B": 3.635417298144053e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 3,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-338-b",
+   "ra": 318.5850093113835,
+   "dec": -52.6818131935965,
+   "hits": [
+    {
+     "ra": 318.55657794867113,
+     "dec": -52.65689872740863,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 9.8\"",
+     "sep_arcmin": 1.8178995269448257,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J211413.7-523915",
+      "3eRASS J211413.5-523924"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 318.6361860550906,
+     "dec": -52.70146167623286,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.20307653977818,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J211432.6-524205"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 318.55824025910323,
+     "dec": -52.74491689913762,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.9092479752010725,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J211413.9-524441"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 92.25987243652344,
+     "UL_B": 8.935491506868037e-14,
+     "Count": 0,
+     "Bkg_counts": 0.5132386088371277
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 93.47111511230469,
+     "UL_B": 9.238427080629497e-14,
+     "Count": 0,
+     "Bkg_counts": 0.1940515786409378
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 274.19512939453125,
+     "UL_B": 3.006571567772988e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 3,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-3512",
+   "ra": 310.32890518138686,
+   "dec": -59.48492318926665,
+   "hits": [
+    {
+     "ra": 310.2017910313264,
+     "dec": -59.42923729850399,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.1171697629874044,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J204048.4-592545"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 96.64789581298828,
+     "UL_B": 1.0951364869202923e-13,
+     "Count": 1,
+     "Bkg_counts": 0.5244291424751282
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 97.88945007324219,
+     "UL_B": 1.165456620100258e-13,
+     "Count": 1,
+     "Bkg_counts": 0.17835600674152374
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 311.36920166015625,
+     "UL_B": 5.063296312714412e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 1,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-367",
+   "ra": 326.1179110126395,
+   "dec": 45.78216178903537,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-514",
+   "ra": 22.508278553454943,
+   "dec": -10.36856974655893,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-518",
+   "ra": 24.100362842994457,
+   "dec": -3.669790020738379,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-526",
+   "ra": 26.443378088768895,
+   "dec": -14.882840703823195,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-54",
+   "ra": 198.13329650452968,
+   "dec": 16.996133597054644,
+   "hits": [
+    {
+     "ra": 198.18797560708128,
+     "dec": 17.01595418128484,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.35512750933641,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J131245.1+170057"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 198.1141727782935,
+     "dec": 16.936134260786137,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.76353369021551,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J131227.4+165610"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 198.12360490596944,
+     "dec": 17.1107610543876,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.900079031769257,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J131229.6+170638"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 131.21478271484375,
+     "UL_B": 6.28273203861357e-14,
+     "Count": 0,
+     "Bkg_counts": 0.8566226363182068
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 132.97157287597656,
+     "UL_B": 6.494065403700802e-14,
+     "Count": 0,
+     "Bkg_counts": 0.40488818287849426
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 361.69549560546875,
+     "UL_B": 3.150976455126332e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 3,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-581",
+   "ra": 49.853426187965,
+   "dec": 7.722928732479175,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-588",
+   "ra": 53.043797958342566,
+   "dec": 41.282245993627924,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-625",
+   "ra": 66.35771583602587,
+   "dec": -54.302913222087035,
+   "hits": [
+    {
+     "ra": 66.30700542242747,
+     "dec": -54.306972690550026,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 1.791914578194542,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J042513.6-541825"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 66.28560215488066,
+     "dec": -54.29104632354456,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.6235298395765874,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J042508.5-541727"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 66.28889554302484,
+     "dec": -54.32556805738595,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 40\" vs observed 4.5\"",
+     "sep_arcmin": 2.765804311455571,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J042509.3-541932",
+      "3eRASS J042508.8-541934"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 66.28298189778,
+     "dec": -54.2577008855501,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.7699080799398175,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J042507.9-541527"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 66.22709588264915,
+     "dec": -54.29166675699195,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.623138611478667,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J042454.5-541730"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 66.30915180848024,
+     "dec": -54.37780113333142,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 40\" vs observed 7.7\"",
+     "sep_arcmin": 4.803647214084797,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J042514.8-542245",
+      "3eRASS J042514.1-542240"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 66.44433047721786,
+     "dec": -54.3692387540135,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.001716847225814,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J042546.6-542209"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 66.3863311219238,
+     "dec": -54.38885195893961,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.252544981108016,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J042532.7-542319"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 66.26210761385627,
+     "dec": -54.38156118518808,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 40\" vs observed 1.4\"",
+     "sep_arcmin": 5.783634859319345,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J042503.0-542254",
+      "3eRASS J042502.9-542253"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 66.29610171569561,
+     "dec": -54.20844779134456,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 40\" vs observed 4.1\"",
+     "sep_arcmin": 6.065408493192659,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J042511.2-541226",
+      "3eRASS J042511.0-541230"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 66.53175660529081,
+     "dec": -54.33200413617508,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.336168607161713,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J042607.6-541955"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 66.21047747122755,
+     "dec": -54.232740592163026,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 40\" vs observed 5.0\"",
+     "sep_arcmin": 6.659166347419072,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J042450.5-541352",
+      "3eRASS J042450.5-541357"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 557.2473754882812,
+     "UL_B": 2.3635197396237526e-14,
+     "Count": 3,
+     "Bkg_counts": 2.445479393005371
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 564.113525390625,
+     "UL_B": 1.917565702037015e-14,
+     "Count": 1,
+     "Bkg_counts": 0.9087989330291748
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 1498.4957275390625,
+     "UL_B": 1.0045190726318612e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 12,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "gj-66-a",
+   "ra": 204.95323584974284,
+   "dec": 56.193191647241754,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-66-b",
+   "ra": 204.95291960859427,
+   "dec": 56.19635709339953,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-667-c",
+   "ra": 79.75569024580426,
+   "dec": 34.998495610638585,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-674",
+   "ra": 82.17081947633409,
+   "dec": 46.899767191287154,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-682",
+   "ra": 84.25970982093082,
+   "dec": 44.3245210363402,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-687",
+   "ra": 84.10342480899385,
+   "dec": -68.33243311638253,
+   "hits": [
+    {
+     "ra": 84.1481628844063,
+     "dec": -68.32901079832,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 1.012214494133122,
+     "n_pairs": 1,
+     "names": [
+      "3069074180104239"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.150033536996,
+     "dec": -68.3416071927865,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 1.1699090305296818,
+     "n_pairs": 1,
+     "names": [
+      "3069074180108195"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.09776667526039,
+     "dec": -68.31267481674269,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 1.1921118746932275,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J053623.4-681845"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 84.1836531024254,
+     "dec": -68.331462308633,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 1.7783090285114727,
+     "n_pairs": 1,
+     "names": [
+      "3069074180112931"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.08522468170997,
+     "dec": -68.30194274728574,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 1.8733837859398283,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053620.4-681806"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 84.0067926040446,
+     "dec": -68.3235853030844,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 2.2059625577514197,
+     "n_pairs": 1,
+     "names": [
+      "3069074170103846"
+     ],
+     "n_members": 6
+    },
+    {
+     "ra": 84.00033647759858,
+     "dec": -68.32036564264509,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.3963478292466016,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J053600.0-681913"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 83.9949867825794,
+     "dec": -68.3324596789007,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 2.402252976928114,
+     "n_pairs": 1,
+     "names": [
+      "3069074170114102"
+     ],
+     "n_members": 5
+    },
+    {
+     "ra": 83.9950869248044,
+     "dec": -68.3371254660627,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 2.4162466193144505,
+     "n_pairs": 1,
+     "names": [
+      "3069074170113338"
+     ],
+     "n_members": 5
+    },
+    {
+     "ra": 83.99459876578692,
+     "dec": -68.32940132588685,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.41786281521427,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053558.7-681945"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 84.221770166096,
+     "dec": -68.3392359029614,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 2.6529288868707157,
+     "n_pairs": 1,
+     "names": [
+      "3069074180111035"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.1500037132636,
+     "dec": -68.29046255010454,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.721806204418963,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J053636.0-681725"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 84.106612231646,
+     "dec": -68.28540474213538,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.822587653914373,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J053625.5-681707"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 83.9867345217902,
+     "dec": -68.3123667349105,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 2.8527254730449787,
+     "n_pairs": 1,
+     "names": [
+      "3069074170113911"
+     ],
+     "n_members": 6
+    },
+    {
+     "ra": 84.0009081178095,
+     "dec": -68.2914949087088,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 3.3467056895855376,
+     "n_pairs": 1,
+     "names": [
+      "3069074170111290"
+     ],
+     "n_members": 6
+    },
+    {
+     "ra": 83.9627794798734,
+     "dec": -68.357515213349,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 3.458612547689214,
+     "n_pairs": 1,
+     "names": [
+      "3069074170112114"
+     ],
+     "n_members": 5
+    },
+    {
+     "ra": 83.9736779827787,
+     "dec": -68.2936335489664,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 3.7007049664191487,
+     "n_pairs": 1,
+     "names": [
+      "3069074170112667"
+     ],
+     "n_members": 6
+    },
+    {
+     "ra": 83.93537871721209,
+     "dec": -68.3404826362968,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.7533105534656763,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J053544.4-682025"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 84.1825908192759,
+     "dec": -68.3905720297849,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.9033806998348948,
+     "n_pairs": 0,
+     "names": [
+      "3069074390107516"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 83.99887582892025,
+     "dec": -68.27952322509374,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.9312625037509563,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053559.7-681646"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 84.09313619301946,
+     "dec": -68.25902683629843,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 6.6\"",
+     "sep_arcmin": 4.4102894357598235,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J053622.3-681532",
+      "3eRASS J053622.6-681526"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 84.00087016911259,
+     "dec": -68.26755211159345,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 4.508955688632432,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J053600.2-681603"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 84.0985760100529,
+     "dec": -68.4084613048417,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 4.562951607650789,
+     "n_pairs": 0,
+     "names": [
+      "3069074390107056"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 84.0226536217597,
+     "dec": -68.2616043833878,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 4.612143295917411,
+     "n_pairs": 1,
+     "names": [
+      "3069074170113909"
+     ],
+     "n_members": 6
+    },
+    {
+     "ra": 83.91388047284374,
+     "dec": -68.291299607188,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 4.873880049587667,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053539.3-681728"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 83.9993231357461,
+     "dec": -68.258827755708,
+     "catalogues": [
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 4.9839343768415585,
+     "n_pairs": 1,
+     "names": [
+      "3069074170101451",
+      "3eRASS J053559.3-681531"
+     ],
+     "n_members": 7
+    },
+    {
+     "ra": 83.97022869924785,
+     "dec": -68.39977458733699,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 5 decisive pairs, e.g. predicted 15\" vs observed 4.3\"",
+     "sep_arcmin": 5.00065640244666,
+     "n_pairs": 6,
+     "names": [
+      "1eRASS J053552.8-682359",
+      "3069074170100748",
+      "3eRASS J053552.2-682400"
+     ],
+     "n_members": 9
+    },
+    {
+     "ra": 84.3142440236311,
+     "dec": -68.3729788467608,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 5.262256713807839,
+     "n_pairs": 1,
+     "names": [
+      "3069074180109691"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.3398733442185,
+     "dec": -68.3225961500986,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 5.272371026963119,
+     "n_pairs": 1,
+     "names": [
+      "3069074180107237"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.3112318807321,
+     "dec": -68.2896927829925,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 5.273439115578933,
+     "n_pairs": 1,
+     "names": [
+      "3069074180102872"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 83.8647179480189,
+     "dec": -68.3279114876458,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 5 decisive pairs, e.g. predicted 34\" vs observed 6.9\"",
+     "sep_arcmin": 5.29560738868183,
+     "n_pairs": 6,
+     "names": [
+      "1eRASS J053526.8-681934",
+      "3069074170105088",
+      "3eRASS J053527.4-681938"
+     ],
+     "n_members": 8
+    },
+    {
+     "ra": 83.8987361149435,
+     "dec": -68.3797125710861,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 0.0\"",
+     "sep_arcmin": 5.3447524136360585,
+     "n_pairs": 1,
+     "names": [
+      "3069074170109892"
+     ],
+     "n_members": 6
+    },
+    {
+     "ra": 84.2925552939449,
+     "dec": -68.2756403852611,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 5.404641195619944,
+     "n_pairs": 1,
+     "names": [
+      "3069074180110197"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.0687448205419,
+     "dec": -68.4219764270138,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 0.0\"",
+     "sep_arcmin": 5.427037788095894,
+     "n_pairs": 1,
+     "names": [
+      "3069074380113508"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.12564015995001,
+     "dec": -68.24226459514036,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 5 decisive pairs, e.g. predicted 34\" vs observed 7.4\"",
+     "sep_arcmin": 5.432537810557831,
+     "n_pairs": 6,
+     "names": [
+      "1eRASS J053629.9-681426",
+      "3069074180104317",
+      "3eRASS J053630.1-681432"
+     ],
+     "n_members": 7
+    },
+    {
+     "ra": 84.3501304922976,
+     "dec": -68.32648781523723,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.4776689257269515,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053724.0-681935"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 84.3346439000364,
+     "dec": -68.370114758048,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 5.595147189350268,
+     "n_pairs": 1,
+     "names": [
+      "3069074180106134"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.07282210904583,
+     "dec": -68.42542595565352,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.620439689967917,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053617.4-682531"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 84.23404814169176,
+     "dec": -68.24953825942272,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.756888771642454,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053656.1-681458"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 84.27957356508713,
+     "dec": -68.26113254304866,
+     "catalogues": [
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 5.794561372482421,
+     "n_pairs": 1,
+     "names": [
+      "3069074180102965",
+      "3eRASS J053707.0-681540"
+     ],
+     "n_members": 5
+    },
+    {
+     "ra": 83.9392659342103,
+     "dec": -68.2564801414559,
+     "catalogues": [
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 5.834142984704414,
+     "n_pairs": 1,
+     "names": [
+      "3069074170113948",
+      "3eRASS J053545.3-681516"
+     ],
+     "n_members": 7
+    },
+    {
+     "ra": 83.9415786864853,
+     "dec": -68.409402100407,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 0.0\"",
+     "sep_arcmin": 5.842853711012723,
+     "n_pairs": 1,
+     "names": [
+      "3069074170111406"
+     ],
+     "n_members": 6
+    },
+    {
+     "ra": 84.2835705459633,
+     "dec": -68.25871964803056,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.961490709877488,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J053708.0-681531"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 84.2544707216596,
+     "dec": -68.4157504505874,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.012168756683599,
+     "n_pairs": 0,
+     "names": [
+      "3069074390110153"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 84.375985604825,
+     "dec": -68.3444357017833,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 6.079314473129445,
+     "n_pairs": 1,
+     "names": [
+      "3069074180111376"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.37483552866458,
+     "dec": -68.35163551226489,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 5 decisive pairs, e.g. predicted 34\" vs observed 8.4\"",
+     "sep_arcmin": 6.119524185474071,
+     "n_pairs": 6,
+     "names": [
+      "1eRASS J053729.9-682105",
+      "3069074180107529",
+      "3eRASS J053730.4-682108"
+     ],
+     "n_members": 7
+    },
+    {
+     "ra": 84.03806648509108,
+     "dec": -68.23225241241767,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.183515162288392,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053609.1-681356"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 84.1101730088056,
+     "dec": -68.2279355498339,
+     "catalogues": [
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 6.271644144563268,
+     "n_pairs": 1,
+     "names": [
+      "3069074180114138",
+      "3eRASS J053627.3-681336"
+     ],
+     "n_members": 5
+    },
+    {
+     "ra": 83.81683209609699,
+     "dec": -68.32204326786093,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.380925989056009,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053516.0-681919"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 83.841280617847,
+     "dec": -68.2884650218554,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 5 decisive pairs, e.g. predicted 34\" vs observed 8.5\"",
+     "sep_arcmin": 6.3835593609330425,
+     "n_pairs": 6,
+     "names": [
+      "1eRASS J053520.5-681722",
+      "3069074170108307",
+      "3eRASS J053521.4-681720"
+     ],
+     "n_members": 8
+    },
+    {
+     "ra": 84.3055408490275,
+     "dec": -68.4085270691686,
+     "catalogues": [
+      "erodat_DR2_Main",
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.389541074023826,
+     "n_pairs": 0,
+     "names": [
+      "3069074390101490",
+      "3eRASS J053713.6-682436"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.22108879363682,
+     "dec": -68.23296232313825,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.5149235341969725,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J053653.0-681358"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 84.03810446376497,
+     "dec": -68.44003337631048,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.6154525420578825,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J053609.1-682624"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 84.0876151505106,
+     "dec": -68.4449935763565,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 0.0\"",
+     "sep_arcmin": 6.762658038349049,
+     "n_pairs": 1,
+     "names": [
+      "3069074380106945"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.3409276493745,
+     "dec": -68.2616604512823,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 6.767609561227309,
+     "n_pairs": 1,
+     "names": [
+      "3069074180111991"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.4006370668471,
+     "dec": -68.3622819001351,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 16\" vs observed 0.0\"",
+     "sep_arcmin": 6.819265740768914,
+     "n_pairs": 1,
+     "names": [
+      "3069074180111568"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 84.2877668524911,
+     "dec": -68.425583694709,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.917098359619117,
+     "n_pairs": 0,
+     "names": [
+      "3069074390103847"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 1592.67333984375,
+     "UL_B": 1.9749803057073426e-14,
+     "Count": 30,
+     "Bkg_counts": 25.530567169189453
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 1615.1243896484375,
+     "UL_B": 1.1494927426092868e-14,
+     "Count": 8,
+     "Bkg_counts": 6.9333672523498535
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 4378.48193359375,
+     "UL_B": 1.1824530815759092e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 57,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "gj-783",
+   "ra": 122.80348306040287,
+   "dec": 36.1115888837257,
+   "hits": [
+    {
+     "ra": 122.82314828098427,
+     "dec": 36.12450450071048,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 4.9\"",
+     "sep_arcmin": 1.2284141045247372,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J081117.5+360728",
+      "3eRASS J081117.6+360732"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 122.86783489622898,
+     "dec": 36.134388273528245,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 7.4\"",
+     "sep_arcmin": 3.4056412059580685,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J081128.2+360803",
+      "3eRASS J081128.8+360800"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 122.88929551569761,
+     "dec": 36.10680799619745,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 4.169527631659112,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J081133.4+360624"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 122.918726808189,
+     "dec": 36.114726544334665,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.589182337027758,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J081140.4+360653"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 122.73398575151927,
+     "dec": 36.02115541655757,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 35\" vs observed 7.2\"",
+     "sep_arcmin": 6.387698697868742,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J081056.1+360116",
+      "3eRASS J081055.6+360119"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 122.7795865085521,
+     "dec": 36.005839831934985,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.449946664068268,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J081107.1+360021"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 122.74389301214107,
+     "dec": 36.21001261423839,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.573186921905572,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J081058.5+361236"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 77.57069396972656,
+     "UL_B": 1.0627561791752907e-13,
+     "Count": 0,
+     "Bkg_counts": 0.3219665288925171
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 78.56964111328125,
+     "UL_B": 1.0990582494660797e-13,
+     "Count": 0,
+     "Bkg_counts": 0.1047426089644432
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 230.19943237304688,
+     "UL_B": 6.341065503625079e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 7,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "gj-784",
+   "ra": 123.47988342998758,
+   "dec": 45.16508895876135,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-832",
+   "ra": 143.39116969374356,
+   "dec": 49.01358976605111,
+   "hits": [
+    {
+     "ra": 143.39275,
+     "dec": 48.96739,
+     "catalogues": [
+      "swift2sxps",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 5 decisive pairs, e.g. predicted 32\" vs observed 0.0\"",
+     "sep_arcmin": 2.772684132299838,
+     "n_pairs": 6,
+     "names": [
+      "2SXPS J093334.2+485802",
+      "LSXPS J093334.2+485802"
+     ],
+     "n_members": 2
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 1,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-876",
+   "ra": 163.32504150279192,
+   "dec": 14.267323706474842,
+   "hits": [
+    {
+     "ra": 163.33086533353057,
+     "dec": 14.367457031777247,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.017532087664198,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J105319.4+142202"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 163.34436784805914,
+     "dec": 14.168736114744114,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.021109486989252,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J105322.6+141007"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 163.43059793972247,
+     "dec": 14.30399033438527,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.519924304036544,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J105343.3+141814"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 75.79537963867188,
+     "UL_B": 1.0876484446160212e-13,
+     "Count": 0,
+     "Bkg_counts": 0.3399752080440521
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 76.7901840209961,
+     "UL_B": 1.1245267005988505e-13,
+     "Count": 0,
+     "Bkg_counts": 0.1214987263083458
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 196.13491821289062,
+     "UL_B": 4.203164509150592e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 3,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj-908",
+   "ra": 177.3086738623541,
+   "dec": -2.394900738292014,
+   "hits": [
+    {
+     "ra": 177.34891084949982,
+     "dec": -2.4158838356121684,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.7208883125524586,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J114923.7-022457"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 177.3637864853326,
+     "dec": -2.3965802547241757,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.3054035224775635,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J114927.3-022347"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 177.37481,
+     "dec": -2.32103,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 2 decisive pairs, e.g. predicted 16\" vs observed 7.0\"",
+     "sep_arcmin": 5.946805236386508,
+     "n_pairs": 3,
+     "names": [
+      "1eRASS J114930.3-021912",
+      "3eRASS J114930.3-021917",
+      "LSXPS J114929.9-021915"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 177.25644040522744,
+     "dec": -2.2941191590103367,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.809588786794811,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J114901.5-021738",
+      "3eRASS J114901.5-021738"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 96.45233917236328,
+     "UL_B": 8.547095052113124e-14,
+     "Count": 0,
+     "Bkg_counts": 0.46257755160331726
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 97.692138671875,
+     "UL_B": 8.83925907729094e-14,
+     "Count": 0,
+     "Bkg_counts": 0.17970643937587738
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 280.51348876953125,
+     "UL_B": 3.571560839503267e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 4,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "gj-915",
+   "ra": 180.55196278884034,
+   "dec": 43.17134485751063,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj-9193",
+   "ra": 268.79343424964594,
+   "dec": 4.184725717339564,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "gj65-a",
+   "ra": 204.76815379605924,
+   "dec": 17.948797736407577,
+   "hits": [
+    {
+     "ra": 204.81948168666653,
+     "dec": 18.029108642160846,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 23\" vs observed 4.3\"",
+     "sep_arcmin": 5.63907903062784,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J133916.8+180148",
+      "3eRASS J133916.6+180144"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 204.6768158575919,
+     "dec": 17.89211862370437,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.2253535467399175,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J133842.4+175331"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 204.65954335072678,
+     "dec": 17.939054356019646,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.227149937986489,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J133838.2+175620"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 204.69361900058982,
+     "dec": 17.87197841562423,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.2731547991469085,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J133846.4+175219"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 146.15476989746094,
+     "UL_B": 6.929295326548943e-14,
+     "Count": 1,
+     "Bkg_counts": 1.2900675535202026
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 148.08993530273438,
+     "UL_B": 5.831092715884861e-14,
+     "Count": 0,
+     "Bkg_counts": 0.6235184669494629
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 364.1379699707031,
+     "UL_B": 2.6092636487866014e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 4,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "gj65-b",
+   "ra": 204.76846206425182,
+   "dec": 17.948278820094067,
+   "hits": [
+    {
+     "ra": 204.81948168666653,
+     "dec": 18.029108642160846,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 23\" vs observed 4.3\"",
+     "sep_arcmin": 5.656634645643411,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J133916.8+180148",
+      "3eRASS J133916.6+180144"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 204.6768158575919,
+     "dec": 17.89211862370437,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.223194957226336,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J133842.4+175331"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 204.65954335072678,
+     "dec": 17.939054356019646,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.241840168494667,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J133838.2+175620"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 204.69361900058982,
+     "dec": 17.87197841562423,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.26231412835007,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J133846.4+175219"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 146.1642303466797,
+     "UL_B": 6.928788462033306e-14,
+     "Count": 1,
+     "Bkg_counts": 1.2902467250823975
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 148.09954833984375,
+     "UL_B": 7.434221830802598e-14,
+     "Count": 1,
+     "Bkg_counts": 0.6235897541046143
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 364.1716003417969,
+     "UL_B": 2.6089951393423218e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 4,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "groombridge-34-a",
+   "ra": 184.61258965890102,
+   "dec": -44.024703571546425,
+   "hits": [
+    {
+     "ra": 184.65063939847178,
+     "dec": -44.020215613784714,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 4.9\"",
+     "sep_arcmin": 1.663558133047202,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J121836.1-440112",
+      "3eRASS J121836.5-440114"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 184.68276628652464,
+     "dec": -44.003036337258834,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 3.3\"",
+     "sep_arcmin": 3.295410987587661,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J121843.7-440007",
+      "3eRASS J121843.8-440010"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 184.48979475550237,
+     "dec": -44.04997723475017,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 2.2\"",
+     "sep_arcmin": 5.509341897149576,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J121757.5-440259",
+      "3eRASS J121757.5-440302"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 184.48218691610577,
+     "dec": -44.02736161163621,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 2.9\"",
+     "sep_arcmin": 5.628022433472258,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J121755.5-440136",
+      "3eRASS J121755.7-440138"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 184.74981888532017,
+     "dec": -44.002945860679795,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.063680761585237,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J121859.9-440010"
+     ],
+     "n_members": 2
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 182.04449462890625,
+     "UL_B": 5.718474603349719e-14,
+     "Count": 1,
+     "Bkg_counts": 0.7729799747467041
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 184.35794067382812,
+     "UL_B": 4.683964804561014e-14,
+     "Count": 0,
+     "Bkg_counts": 0.2408229112625122
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 528.5801391601562,
+     "UL_B": 2.501251870825217e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 5,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "groombridge-34-b",
+   "ra": 184.62467134375248,
+   "dec": -44.028684132685456,
+   "hits": [
+    {
+     "ra": 184.65063939847178,
+     "dec": -44.020215613784714,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 4.9\"",
+     "sep_arcmin": 1.230168588937533,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J121836.1-440112",
+      "3eRASS J121836.5-440114"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 184.68276628652464,
+     "dec": -44.003036337258834,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 3.3\"",
+     "sep_arcmin": 2.9413955968083494,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J121843.7-440007",
+      "3eRASS J121843.8-440010"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 184.74981888532017,
+     "dec": -44.002945860679795,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.616457041262698,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J121859.9-440010"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 184.48979475550237,
+     "dec": -44.04997723475017,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 2.2\"",
+     "sep_arcmin": 5.956099643536666,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J121757.5-440259",
+      "3eRASS J121757.5-440302"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 184.48218691610577,
+     "dec": -44.02736161163621,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 2.9\"",
+     "sep_arcmin": 6.147289293353493,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J121755.5-440136",
+      "3eRASS J121755.7-440138"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 182.5166015625,
+     "UL_B": 4.5167798131242123e-14,
+     "Count": 0,
+     "Bkg_counts": 0.7760043740272522
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 184.85260009765625,
+     "UL_B": 4.6714307498207236e-14,
+     "Count": 0,
+     "Bkg_counts": 0.24186746776103973
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 528.569580078125,
+     "UL_B": 2.15704834365376e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 5,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "hd-219134",
+   "ra": 168.34746323211073,
+   "dec": -57.17040415782337,
+   "hits": [
+    {
+     "ra": 168.43399943446013,
+     "dec": -57.13660591022811,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 36\" vs observed 1.8\"",
+     "sep_arcmin": 3.470337338785695,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J111344.3-570812",
+      "3eRASS J111344.1-570811"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 168.27240889842744,
+     "dec": -57.12657375071436,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 36\" vs observed 2.0\"",
+     "sep_arcmin": 3.589361274537994,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J111305.1-570736",
+      "3eRASS J111305.3-570735"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 168.42138677721564,
+     "dec": -57.10784145089866,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 36\" vs observed 7.5\"",
+     "sep_arcmin": 4.4590062326711335,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J111341.1-570628",
+      "3eRASS J111341.9-570632"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 168.26640179039762,
+     "dec": -57.0841460124924,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.809876916944979,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J111303.9-570502"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 168.1533733008217,
+     "dec": -57.169597715670946,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.313714182483254,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J111236.8-571010"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 241.71875,
+     "UL_B": 3.4105229355712793e-14,
+     "Count": 0,
+     "Bkg_counts": 1.4799855947494507
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 244.84225463867188,
+     "UL_B": 3.526866976634804e-14,
+     "Count": 0,
+     "Bkg_counts": 0.38223251700401306
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 706.3137817382812,
+     "UL_B": 1.6959197108169614e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 5,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "kapteyn-star",
+   "ra": 257.9618137311868,
+   "dec": 45.0450330713006,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "lacaille-8760",
+   "ra": 139.2938166108696,
+   "dec": 38.87275795963977,
+   "hits": [
+    {
+     "ra": 139.32569951344905,
+     "dec": 38.81477678294185,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.7845017163220613,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J091718.1+384853"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 139.20416521152973,
+     "dec": 38.90725872274045,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 31\" vs observed 3.6\"",
+     "sep_arcmin": 4.670608496308372,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J091648.9+385426",
+      "3eRASS J091648.7+385427"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 139.371618728669,
+     "dec": 38.80678655473221,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.374814545207746,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J091729.1+384824"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 139.3849801022026,
+     "dec": 38.791922947521385,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 31\" vs observed 4.6\"",
+     "sep_arcmin": 6.4559036716457445,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J091732.3+384730",
+      "3eRASS J091732.6+384727"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 139.40706568502543,
+     "dec": 38.80161040715568,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.79976174293158,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J091737.6+384805"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 139.4162999231121,
+     "dec": 38.811392845865434,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 31\" vs observed 5.3\"",
+     "sep_arcmin": 6.805899093468532,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J091740.2+384837",
+      "3eRASS J091739.9+384841"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 77.39338684082031,
+     "UL_B": 1.0651908906788785e-13,
+     "Count": 0,
+     "Bkg_counts": 0.35376185178756714
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 78.64653778076172,
+     "UL_B": 1.0979836018252392e-13,
+     "Count": 0,
+     "Bkg_counts": 0.13376614451408386
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 241.49163818359375,
+     "UL_B": 3.413730141122763e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 6,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "lacaille-9352",
+   "ra": 166.50132494181173,
+   "dec": 35.847592788452964,
+   "hits": [
+    {
+     "ra": 166.51246004304693,
+     "dec": 35.86604189130906,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 1.2322905454017066,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J110602.9+355157"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 166.53760121187295,
+     "dec": 35.87353750279448,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.3526455342691177,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J110609.0+355224"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 166.56864453833296,
+     "dec": 35.9288208296686,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.870374701513185,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J110616.4+355543"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 166.62906673855144,
+     "dec": 35.86844897431453,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.336651174926975,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J110630.9+355206"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 166.41211970034485,
+     "dec": 35.92503130683797,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.355478405104716,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J110538.9+355530"
+     ],
+     "n_members": 2
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 96.18399047851562,
+     "UL_B": 8.570941401270585e-14,
+     "Count": 0,
+     "Bkg_counts": 0.46516624093055725
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 97.423095703125,
+     "UL_B": 8.863669889204451e-14,
+     "Count": 0,
+     "Bkg_counts": 0.17925415933132172
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 254.35939025878906,
+     "UL_B": 3.995402234968984e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 5,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "lalande-21185",
+   "ra": 345.8316544371621,
+   "dec": -35.95330593677002,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "lhs-1723",
+   "ra": 255.48596054554264,
+   "dec": 6.949369498504803,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "lp-145-141",
+   "ra": 356.46188550243113,
+   "dec": 64.8433251821163,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "ltt-1445-a",
+   "ra": 225.46132240555133,
+   "dec": 16.595282449714194,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "luhman16-a",
+   "ra": 342.32199360185643,
+   "dec": 53.31888196875281,
+   "hits": [
+    {
+     "ra": 342.33181531883645,
+     "dec": 53.30231668679478,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 1.054439018672087,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224919.6+531808"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.3577976038482,
+     "dec": 53.35248183623675,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.389502242148126,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224925.8+532108"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.3058061323608,
+     "dec": 53.27827504116111,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.5046071308326083,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224913.3+531641"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.39768998340287,
+     "dec": 53.354769793992006,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.462831218747106,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224935.4+532117"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.4221379782866,
+     "dec": 53.332694471972246,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.6832073781799997,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224941.3+531957"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.30887648472174,
+     "dec": 53.25756276226503,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.709111837892845,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224914.1+531527"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.44481,
+     "dec": 53.28858,
+     "catalogues": [
+      "csc21",
+      "swift2sxps",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 1786 d",
+     "sep_arcmin": 4.764074421199484,
+     "n_pairs": 6,
+     "names": [
+      "2CXO J224946.9+531719",
+      "2SXPS J224946.7+531718",
+      "LSXPS J224946.7+531718"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 342.34042,
+     "dec": 53.22576,
+     "catalogues": [
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 1786 d",
+     "sep_arcmin": 5.626299525195853,
+     "n_pairs": 1,
+     "names": [
+      "LSXPS J224921.7+531332"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.47714894404885,
+     "dec": 53.30348438256002,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.638230262257926,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224954.5+531812"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.1387733959739,
+     "dec": 53.34111535580872,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.699361641649395,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224833.3+532028"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 10,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "luhman16-b",
+   "ra": 342.32192085087354,
+   "dec": 53.31901933853484,
+   "hits": [
+    {
+     "ra": 342.33181531883645,
+     "dec": 53.30231668679478,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 1.0630788366115926,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224919.6+531808"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.3577976038482,
+     "dec": 53.35248183623675,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.383955758156715,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224925.8+532108"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.3058061323608,
+     "dec": 53.27827504116111,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 2.5120240379151144,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224913.3+531641"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.39768998340287,
+     "dec": 53.354769793992006,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.459753266559596,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224935.4+532117"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.4221379782866,
+     "dec": 53.332694471972246,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.6838975053439325,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224941.3+531957"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.30887648472174,
+     "dec": 53.25756276226503,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.716958148533322,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224914.1+531527"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.44481,
+     "dec": 53.28858,
+     "catalogues": [
+      "csc21",
+      "swift2sxps",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 1786 d",
+     "sep_arcmin": 4.769628962698421,
+     "n_pairs": 6,
+     "names": [
+      "2CXO J224946.9+531719",
+      "2SXPS J224946.7+531718",
+      "LSXPS J224946.7+531718"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 342.34042,
+     "dec": 53.22576,
+     "catalogues": [
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 1786 d",
+     "sep_arcmin": 5.634791461028266,
+     "n_pairs": 1,
+     "names": [
+      "LSXPS J224921.7+531332"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.47714894404885,
+     "dec": 53.30348438256002,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.642149952745503,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224954.5+531812"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 342.1387733959739,
+     "dec": 53.34111535580872,
+     "catalogues": [
+      "csc21"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.695159707276981,
+     "n_pairs": 0,
+     "names": [
+      "2CXO J224833.3+532028"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 10,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "luyten-star",
+   "ra": 291.85469289864886,
+   "dec": -5.209011674142209,
+   "hits": [
+    {
+     "ra": 291.87214,
+     "dec": -5.1944,
+     "catalogues": [
+      "swift2sxps",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 3 decisive pairs, e.g. predicted 15\" vs observed 1.9\"",
+     "sep_arcmin": 1.3621457584384569,
+     "n_pairs": 6,
+     "names": [
+      "2SXPS J192729.3-051139",
+      "LSXPS J192729.3-051138"
+     ],
+     "n_members": 2
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 1,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "procyon-a",
+   "ra": 294.82270587172684,
+   "dec": -5.220422215413397,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "procyon-b",
+   "ra": 294.82167586097125,
+   "dec": -5.220846310393792,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "proxima-cen",
+   "ra": 37.410334551664334,
+   "dec": 62.67775973960119,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "ross-128",
+   "ra": 356.93755579696875,
+   "dec": -0.7993852727338115,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "ross-154",
+   "ra": 102.45834438797539,
+   "dec": 23.836975509521395,
+   "hits": [
+    {
+     "ra": 102.49659281998923,
+     "dec": 23.860013488294065,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.513231954697631,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J064959.1+235136"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 73.4583969116211,
+     "UL_B": 1.461808105118756e-13,
+     "Count": 1,
+     "Bkg_counts": 0.3382030129432678
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 74.6557388305664,
+     "UL_B": 1.5406287899068227e-13,
+     "Count": 1,
+     "Bkg_counts": 0.09567946940660477
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 236.6331787109375,
+     "UL_B": 6.112731848473274e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 1,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "ross-248",
+   "ra": 175.47992929035286,
+   "dec": -44.171196251237596,
+   "hits": [
+    {
+     "ra": 175.4685073563204,
+     "dec": -44.186269416628676,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 1.0293110510499668,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J114152.4-441110"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 175.52370515160237,
+     "dec": -44.14781472510312,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.3491865952391153,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J114205.6-440852"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 175.4318046696974,
+     "dec": -44.13397122444128,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.046405561520997,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J114143.6-440802"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 175.47835763637065,
+     "dec": -44.10385916386389,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 30\" vs observed 9.7\"",
+     "sep_arcmin": 4.040792003569775,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J114153.9-440610",
+      "3eRASS J114154.8-440613"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 179.16091918945312,
+     "UL_B": 6.965788216422089e-14,
+     "Count": 2,
+     "Bkg_counts": 0.9415850043296814
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 181.52101135253906,
+     "UL_B": 6.197575411854769e-14,
+     "Count": 1,
+     "Bkg_counts": 0.3361889719963074
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 433.51385498046875,
+     "UL_B": 3.962095883043408e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 4,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "sigma-dra",
+   "ra": 113.1006856355632,
+   "dec": -69.65019083912395,
+   "hits": [
+    {
+     "ra": 113.06648581727244,
+     "dec": -69.6689972052464,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 1.334913110147974,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073215.9-694008"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.12320958705561,
+     "dec": -69.62575631835111,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 1.9\"",
+     "sep_arcmin": 1.5396377641186823,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J073229.5-693732",
+      "3eRASS J073229.7-693730"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 113.02675738057155,
+     "dec": -69.6723497289943,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 1.2\"",
+     "sep_arcmin": 2.0358133160456315,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J073206.4-694021",
+      "3eRASS J073206.4-694020"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 113.13218713217363,
+     "dec": -69.69858199405199,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.9767713285656736,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073231.7-694154"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 112.91983665467058,
+     "dec": -69.65803038384539,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.801935130536646,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073140.7-693928"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.11480046331846,
+     "dec": -69.71381922035017,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 4.3\"",
+     "sep_arcmin": 3.829011574978014,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J073227.5-694249",
+      "3eRASS J073227.1-694253"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 113.1517759345081,
+     "dec": -69.72397814052759,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.553333985375049,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073236.4-694326"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.24907666791785,
+     "dec": -69.70626740099966,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.569634329493335,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073259.7-694222"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.32304019505236,
+     "dec": -69.66277431580401,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 3.8\"",
+     "sep_arcmin": 4.699113316557076,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J073317.9-693948",
+      "3eRASS J073317.5-693945"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 112.90487337596885,
+     "dec": -69.69657076385997,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.939625293780204,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073137.1-694147"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 112.91485249322098,
+     "dec": -69.59547829635682,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.0842429716381,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073139.5-693543"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.01307459231866,
+     "dec": -69.56928006839594,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.188634391029945,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073203.1-693409"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.17861829084484,
+     "dec": -69.73691901956286,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.450844418640132,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073242.8-694412"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 112.86888048906712,
+     "dec": -69.60693656578813,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.493258732171638,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073128.5-693624"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.33535871929429,
+     "dec": -69.606292263329,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.56438470813536,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073320.4-693622"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.0616169140751,
+     "dec": -69.55554133365963,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.73743553833657,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073214.7-693319"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 113.34463409198493,
+     "dec": -69.60599293976736,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.744070877153497,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J073322.7-693621"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 112.88077994494091,
+     "dec": -69.58561525641966,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.0107287248481125,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J073131.3-693508"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 112.9300767691633,
+     "dec": -69.74536514444152,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.724914371307867,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073143.2-694443"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 112.7847818570656,
+     "dec": -69.62130968496582,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.819652264714741,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J073108.3-693716"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 956.3505249023438,
+     "UL_B": 1.1164844615778498e-14,
+     "Count": 2,
+     "Bkg_counts": 4.028319358825684
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 969.3074951171875,
+     "UL_B": 8.908691045603732e-15,
+     "Count": 0,
+     "Bkg_counts": 1.1020413637161255
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 2647.845703125,
+     "UL_B": 5.531917121376264e-15,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 20,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "sirius-a",
+   "ra": 281.2842422109569,
+   "dec": 16.720445376090378,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "sirius-b",
+   "ra": 281.28703166629293,
+   "dec": 16.720169410504173,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "struve-2398-a",
+   "ra": 100.68345077469519,
+   "dec": -59.63805472525942,
+   "hits": [
+    {
+     "ra": 100.67955873493742,
+     "dec": -59.608246867953035,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 2.4\"",
+     "sep_arcmin": 1.7923657686307706,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064243.0-593629",
+      "3eRASS J064242.9-593627"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.55546672181461,
+     "dec": -59.633865811588485,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 2.9\"",
+     "sep_arcmin": 3.889825102000951,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064213.3-593801",
+      "3eRASS J064212.9-593803"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.78786887905963,
+     "dec": -59.676240665327484,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 3.907214463862844,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J064309.0-594034"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 100.5996716710546,
+     "dec": -59.695171621350084,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 7.0\"",
+     "sep_arcmin": 4.26488176077566,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064223.6-594149",
+      "3eRASS J064223.9-594142"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.83181857001199,
+     "dec": -59.60893887033246,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.828685925339096,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J064319.6-593632"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 100.64062478803517,
+     "dec": -59.718886219294895,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.020386132609506,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J064233.7-594307"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 100.77285042988612,
+     "dec": -59.556813420433265,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 3.6\"",
+     "sep_arcmin": 5.5793701642459474,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064305.4-593324",
+      "3eRASS J064305.2-593321"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.48949025385546,
+     "dec": -59.628914934071226,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 7.6\"",
+     "sep_arcmin": 5.908668144632243,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064157.4-593736",
+      "3eRASS J064157.4-593744"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.69535499827408,
+     "dec": -59.738418000240365,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 2.3\"",
+     "sep_arcmin": 6.032576875515592,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064246.8-594418",
+      "3eRASS J064247.0-594420"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.47027067447505,
+     "dec": -59.660145982851375,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 8.9\"",
+     "sep_arcmin": 6.597636291272596,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064152.8-593936",
+      "3eRASS J064152.0-593943"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.78865850044693,
+     "dec": -59.54146736987791,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.617755753051644,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J064309.2-593229"
+     ],
+     "n_members": 2
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 512.5202026367188,
+     "UL_B": 1.6084972709242557e-14,
+     "Count": 0,
+     "Bkg_counts": 2.354877233505249
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 515.4351196289062,
+     "UL_B": 1.6753342690998402e-14,
+     "Count": 0,
+     "Bkg_counts": 0.7274786829948425
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 1501.3834228515625,
+     "UL_B": 6.649494509565956e-15,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 11,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "struve-2398-b",
+   "ra": 100.68348870270682,
+   "dec": -59.634833219554324,
+   "hits": [
+    {
+     "ra": 100.67955873493742,
+     "dec": -59.608246867953035,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 2.4\"",
+     "sep_arcmin": 1.5996318870660644,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064243.0-593629",
+      "3eRASS J064242.9-593627"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.55546672181461,
+     "dec": -59.633865811588485,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 2.9\"",
+     "sep_arcmin": 3.8834672866137785,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064213.3-593801",
+      "3eRASS J064212.9-593803"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.78786887905963,
+     "dec": -59.676240665327484,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.022820908981492,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J064309.0-594034"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 100.5996716710546,
+     "dec": -59.695171621350084,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 7.0\"",
+     "sep_arcmin": 4.422425894585924,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064223.6-594149",
+      "3eRASS J064223.9-594142"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.83181857001199,
+     "dec": -59.60893887033246,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.761283003191162,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J064319.6-593632"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 100.64062478803517,
+     "dec": -59.718886219294895,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.2076535666837955,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J064233.7-594307"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 100.77285042988612,
+     "dec": -59.556813420433265,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 3.6\"",
+     "sep_arcmin": 5.410804813935106,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064305.4-593324",
+      "3eRASS J064305.2-593321"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.48949025385546,
+     "dec": -59.628914934071226,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 7.6\"",
+     "sep_arcmin": 5.895301958860712,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064157.4-593736",
+      "3eRASS J064157.4-593744"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.69535499827408,
+     "dec": -59.738418000240365,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 2.3\"",
+     "sep_arcmin": 6.2254671131972295,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064246.8-594418",
+      "3eRASS J064247.0-594420"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 100.78865850044693,
+     "dec": -59.54146736987791,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.448669848038009,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J064309.2-593229"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 100.47027067447505,
+     "dec": -59.660145982851375,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 41\" vs observed 8.9\"",
+     "sep_arcmin": 6.640590713241023,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J064152.8-593936",
+      "3eRASS J064152.0-593943"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 512.0882568359375,
+     "UL_B": 1.6098540482991676e-14,
+     "Count": 0,
+     "Bkg_counts": 2.3539481163024902
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 515.0113525390625,
+     "UL_B": 1.6767127305182018e-14,
+     "Count": 0,
+     "Bkg_counts": 0.7270509004592896
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 1500.4842529296875,
+     "UL_B": 6.653409495848165e-15,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 11,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "tau-cet",
+   "ra": 206.00922229611794,
+   "dec": 15.933783437242273,
+   "hits": [
+    {
+     "ra": 206.00879589201796,
+     "dec": 15.96076425962009,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 1.6190362359684045,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J134402.1+155738"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 205.95450623415033,
+     "dec": 15.864045705054,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.241860771105711,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J134349.0+155150"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 206.10792966103884,
+     "dec": 15.918021996203533,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.773105504652207,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J134425.9+155504"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 206.11214925412193,
+     "dec": 15.956417787768043,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.091331955511607,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J134426.9+155723"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 206.0449573423746,
+     "dec": 16.041484787004496,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 23\" vs observed 2.3\"",
+     "sep_arcmin": 6.782839857292002,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J134410.7+160229",
+      "3eRASS J134410.7+160231"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 149.17013549804688,
+     "UL_B": 5.5264901812832057e-14,
+     "Count": 0,
+     "Bkg_counts": 1.3444819450378418
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 151.13931274414062,
+     "UL_B": 5.713444582895744e-14,
+     "Count": 0,
+     "Bkg_counts": 0.5962883234024048
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 355.03662109375,
+     "UL_B": 3.516500648613127e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 5,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "teegarden",
+   "ra": 223.26997666758584,
+   "dec": -16.864018719086054,
+   "hits": [
+    {
+     "ra": 223.27718,
+     "dec": -16.87935,
+     "catalogues": [
+      "erodat_DR2_Main",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 1.008581060683925,
+     "n_pairs": 1,
+     "names": [
+      "3eRASS J145306.7-165249",
+      "LSXPS J145306.5-165245"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 223.19626993918934,
+     "dec": -16.926032139109445,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.6347328457709684,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J145247.1-165533"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 223.16266931524316,
+     "dec": -16.9024474651216,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.57825880744505,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J145239.0-165408"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 146.22854614257812,
+     "UL_B": 6.994680171439754e-14,
+     "Count": 1,
+     "Bkg_counts": 1.0868263244628906
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 144.52349853515625,
+     "UL_B": 5.97498735059078e-14,
+     "Count": 0,
+     "Bkg_counts": 0.3017255663871765
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 392.1758117675781,
+     "UL_B": 2.8280071969095932e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 3,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "van-maanen",
+   "ra": 192.29744668975266,
+   "dec": -5.3750071575381675,
+   "hits": [
+    {
+     "ra": 192.318691500603,
+     "dec": -5.32064880067426,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.4997297450706983,
+     "n_pairs": 0,
+     "names": [
+      "3074347023100426"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 192.364837268381,
+     "dec": -5.34888040921528,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 4.3201829578849065,
+     "n_pairs": 0,
+     "names": [
+      "3074347023100394"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 192.376499227464,
+     "dec": -5.40487825673751,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.05086162407582,
+     "n_pairs": 0,
+     "names": [
+      "3074347023100170"
+     ],
+     "n_members": 5
+    },
+    {
+     "ra": 192.383638967713,
+     "dec": -5.38040731364018,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.158958966203144,
+     "n_pairs": 0,
+     "names": [
+      "3074347023100108"
+     ],
+     "n_members": 5
+    },
+    {
+     "ra": 192.21306,
+     "dec": -5.39756,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main",
+      "swift2sxps",
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 4 decisive pairs, e.g. predicted 26\" vs observed 6.2\"",
+     "sep_arcmin": 5.219308850022589,
+     "n_pairs": 10,
+     "names": [
+      "1eRASS J124851.2-052357",
+      "2SXPS J124851.1-052351",
+      "3eRASS J124850.8-052352",
+      "LSXPS J124850.9-052353"
+     ],
+     "n_members": 5
+    },
+    {
+     "ra": 192.315809694971,
+     "dec": -5.46346252523271,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 5.41947964773683,
+     "n_pairs": 0,
+     "names": [
+      "3074347023100577"
+     ],
+     "n_members": 4
+    },
+    {
+     "ra": 192.3353329888081,
+     "dec": -5.28567788768313,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.818052002712775,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J124920.4-051708"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 192.283527067391,
+     "dec": -5.4801114178622,
+     "catalogues": [
+      "xmmssc",
+      "xmmstack"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.360828593393633,
+     "n_pairs": 0,
+     "names": [
+      "3074347023100263"
+     ],
+     "n_members": 4
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 127.3446044921875,
+     "UL_B": 6.473672916089065e-14,
+     "Count": 0,
+     "Bkg_counts": 0.9979044795036316
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 129.03863525390625,
+     "UL_B": 6.691996674683398e-14,
+     "Count": 0,
+     "Bkg_counts": 0.3718339800834656
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 339.1507873535156,
+     "UL_B": 2.4307397660980855e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 8,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "wise-0855",
+   "ra": 313.8049229640344,
+   "dec": 7.245946704956392,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "wolf-1061",
+   "ra": 67.5747599453191,
+   "dec": 12.668507077521713,
+   "hits": [
+    {
+     "ra": 67.60808085277577,
+     "dec": 12.614289775278488,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 40\" vs observed 1.7\"",
+     "sep_arcmin": 3.793130575998729,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J043025.8+123650",
+      "3eRASS J043025.9+123651"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 67.61937688097207,
+     "dec": 12.745519011326085,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.3076063106749185,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J043028.6+124443"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 67.62474978537391,
+     "dec": 12.567387448122014,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 40\" vs observed 3.7\"",
+     "sep_arcmin": 6.736295818125171,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J043029.7+123359",
+      "3eRASS J043029.9+123402"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 112.93824768066406,
+     "UL_B": 9.496118220106778e-14,
+     "Count": 1,
+     "Bkg_counts": 0.3533875644207001
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 109.96099090576172,
+     "UL_B": 7.853022024979436e-14,
+     "Count": 0,
+     "Bkg_counts": 0.08920756727457047
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 340.2305603027344,
+     "UL_B": 4.2789787013143565e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 3,
+   "status": "all_fixed_sky"
+  },
+  {
+   "target": "wolf-1069",
+   "ra": 126.52700982638169,
+   "dec": -58.57827059861234,
+   "hits": [
+    {
+     "ra": 126.50882382512654,
+     "dec": -58.60742816056823,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 1.8395429455340344,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J082602.1-583626"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 126.50697354258506,
+     "dec": -58.54243374950225,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 2.23977808499312,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J082601.6-583232"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 126.57638898529058,
+     "dec": -58.626054954670636,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 39\" vs observed 8.7\"",
+     "sep_arcmin": 3.2561496793347806,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J082619.1-583740",
+      "3eRASS J082618.3-583733"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 126.51728471104309,
+     "dec": -58.52125766748777,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 3.4342971392561545,
+     "n_pairs": 0,
+     "names": [
+      "1eRASS J082604.1-583116"
+     ],
+     "n_members": 2
+    },
+    {
+     "ra": 126.58354297897063,
+     "dec": -58.64616817346764,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 4.440417680532384,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J082620.0-583846"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 126.6882279436407,
+     "dec": -58.53736996649479,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.610959436283549,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J082645.1-583214"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 126.69508485224664,
+     "dec": -58.62558298286918,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 5.971699458321977,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J082646.8-583732"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 126.72200141160347,
+     "dec": -58.56020499577362,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 39\" vs observed 3.2\"",
+     "sep_arcmin": 6.196450231225729,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J082653.2-583336",
+      "3eRASS J082653.5-583338"
+     ],
+     "n_members": 3
+    },
+    {
+     "ra": 126.51403532918306,
+     "dec": -58.68489240211327,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "single_epoch_unresolved",
+     "reason": "no second epoch / no multi-scan stack",
+     "sep_arcmin": 6.41012935638037,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J082603.3-584105"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 126.38898078532156,
+     "dec": -58.660166997109336,
+     "catalogues": [
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: eRASS:3 compact (ext = 0) over three scans",
+     "sep_arcmin": 6.53780243901351,
+     "n_pairs": 0,
+     "names": [
+      "3eRASS J082533.3-583936"
+     ],
+     "n_members": 1
+    },
+    {
+     "ra": 126.38790480692045,
+     "dec": -58.487917115838265,
+     "catalogues": [
+      "erass1main",
+      "erodat_DR1_Main",
+      "erodat_DR2_Main"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "two-epoch: 1 decisive pairs, e.g. predicted 39\" vs observed 3.0\"",
+     "sep_arcmin": 6.954950639709371,
+     "n_pairs": 1,
+     "names": [
+      "1eRASS J082533.0-582916",
+      "3eRASS J082533.0-582913"
+     ],
+     "n_members": 3
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 259.1233215332031,
+     "UL_B": 3.1814479571840373e-14,
+     "Count": 0,
+     "Bkg_counts": 1.1078708171844482
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": true,
+     "Exposure": 262.5267028808594,
+     "UL_B": 3.289288803896666e-14,
+     "Count": 0,
+     "Bkg_counts": 0.29960086941719055
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": true,
+     "Exposure": 812.4684448242188,
+     "UL_B": 1.903712986404439e-14,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": true,
+   "n_hits": 11,
+   "status": "has_unresolved"
+  },
+  {
+   "target": "wolf-359",
+   "ra": 344.1074943717831,
+   "dec": -7.005709379571389,
+   "hits": [],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 0,
+   "status": "no_source_within_7arcmin"
+  },
+  {
+   "target": "wolf-437",
+   "ra": 11.977295688578579,
+   "dec": -9.747502936300336,
+   "hits": [
+    {
+     "ra": 11.93318,
+     "dec": -9.77785,
+     "catalogues": [
+      "swiftlsxps"
+     ],
+     "disposition": "fixed_sky",
+     "reason": "stack: LSXPS compact over 376 d",
+     "sep_arcmin": 3.1812331503810563,
+     "n_pairs": 1,
+     "names": [
+      "LSXPS J004743.9-094640"
+     ],
+     "n_members": 1
+    }
+   ],
+   "upper_limits": [
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR1_eRASS1",
+     "band": "021",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    },
+    {
+     "dr_survey": "DR2_eRASSc3",
+     "band": "024",
+     "de_sky": false,
+     "Exposure": null,
+     "UL_B": null,
+     "Count": null,
+     "Bkg_counts": null
+    }
+   ],
+   "de_sky": false,
+   "n_hits": 1,
+   "status": "all_fixed_sky"
+  }
+ ],
+ "census": {
+  "corridors": 88,
+  "corridors_with_hits": 42,
+  "sources": 281,
+  "dispositions": {
+   "fixed_sky": 212,
+   "single_epoch_unresolved": 69
+  },
+  "de_sky_corridors": 36,
+  "status": {
+   "all_fixed_sky": 22,
+   "no_source_within_7arcmin": 46,
+   "has_unresolved": 20
+  }
+ }
+}

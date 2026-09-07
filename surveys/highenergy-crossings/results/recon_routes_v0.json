@@ -1,0 +1,155 @@
+{
+ "stage": "routes",
+ "utc": "2026-09-07T14:28:24.328692+00:00",
+ "probes": [
+  {
+   "label": "chandra cdaftp primary listing",
+   "url": "https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/26836/primary/",
+   "http": 200,
+   "content_type": "text/html;charset=ISO-8859-1",
+   "content_length": "1049",
+   "final_url": "https://cxc.cfa.harvard.edu/cdaftp/byobsid/6/26836/primary/",
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /cdaftp/byobsid/6/26836/primary</title>\n </head>\n <body>\n<h1>Index of /cdaftp/byobsid/6/26836/primary</h1>\n<ul><li><a href=\"acisf26836N002_cntr_img2.fits.gz\"> acisf26836N002_cntr_img2.fits.gz</a></li>\n<li><a hre"
+  },
+  {
+   "label": "chandra cxctap ObsCore",
+   "url": "https://cda.harvard.edu/cxctap/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT%20TOP%205%20obs_id%2C%20t_min%2C%20t_max%2C%20t_exptime%2C%20s_ra%2C%20s_dec%2C%20access_url%20FROM%20ivoa.obscore%20WHERE%20obs_id%3D%2726836%27",
+   "http": 500,
+   "content_type": "text/xml;charset=ISO-8859-1",
+   "content_length": null,
+   "final_url": "https://cda.harvard.edu/cxctap/sync/sh1mMN",
+   "head": "<?xml version=\"1.0\"?>\r\n<VOTABLE version=\"1.2\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n xsi:schemaLocation=\"http://www.ivoa.net/xml/VOTable/v1.2 http://www.ivoa.net/xml/VOTable/v1.2\"\r\n xmlns=\"http://www.ivoa.net/xml/VOTable/v1.2\">\r\n  <RESOURCE type=\"results\">\r\n    <INFO name=\"QUERY_S"
+  },
+  {
+   "label": "xmm nxsa AIO PPS listing",
+   "url": "https://nxsa.esac.esa.int/nxsa-sl/servlet/data-action-aio?obsno=0655380201&level=PPS&name=PIEVLI",
+   "http": 200,
+   "content_type": "image/fits",
+   "content_length": null,
+   "final_url": "https://nxsa.esac.esa.int/nxsa-sl/servlet/data-action-aio?obsno=0655380201&level=PPS&name=PIEVLI",
+   "head": ""
+  },
+  {
+   "label": "xmm XSA TAP public obs",
+   "url": "https://nxsa.esac.esa.int/tap-server/tap/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT%20TOP%205%20observation_id%2C%20start_utc%2C%20end_utc%2C%20ra%2C%20dec%2C%20duration%20FROM%20v_public_observations%20WHERE%20observation_id%3D%270655380201%27",
+   "http": 200,
+   "content_type": "text/csv",
+   "content_length": null,
+   "final_url": "https://nxsa.esac.esa.int/tap-server/tap/sync?REQUEST=doQuery&LANG=ADQL&FORMAT=csv&QUERY=SELECT%20TOP%205%20observation_id%2C%20start_utc%2C%20end_utc%2C%20ra%2C%20dec%2C%20duration%20FROM%20v_public_observations%20WHERE%20observation_id%3D%270655380201%27",
+   "head": "observation_id,start_utc,end_utc,ra,dec,duration\n0655380201,2010-12-02T19:39:10.0,2010-12-03T00:12:47.0,357.1737,2.239722,16417\n"
+  },
+  {
+   "label": "swift heasarc obs tree",
+   "url": "https://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2018_03/00010119025/",
+   "http": 200,
+   "content_type": "text/html;charset=ISO-8859-1",
+   "content_length": "1167",
+   "final_url": "https://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2018_03/00010119025/",
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /FTP/swift/data/obs/2018_03/00010119025</title>\n </head>\n <body>\n<h1>Index of /FTP/swift/data/obs/2018_03/00010119025</h1>\n<pre><img src=\"/icons/blank.gif\" alt=\"Icon \"> <a href=\"?C=N;O=D\">Name</a>               "
+  },
+  {
+   "label": "swift heasarc xrt event dir",
+   "url": "https://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2018_03/00010119025/xrt/event/",
+   "http": 200,
+   "content_type": "text/html;charset=ISO-8859-1",
+   "content_length": "1949",
+   "final_url": "https://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2018_03/00010119025/xrt/event/",
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /FTP/swift/data/obs/2018_03/00010119025/xrt/event</title>\n </head>\n <body>\n<h1>Index of /FTP/swift/data/obs/2018_03/00010119025/xrt/event</h1>\n<pre><img src=\"/icons/blank.gif\" alt=\"Icon \"> <a href=\"?C=N;O=D\">Nam"
+  },
+  {
+   "label": "swift heasarc bat survey dir",
+   "url": "https://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2018_03/00010119025/bat/survey/",
+   "http": 200,
+   "content_type": "text/html;charset=ISO-8859-1",
+   "content_length": "1489",
+   "final_url": "https://heasarc.gsfc.nasa.gov/FTP/swift/data/obs/2018_03/00010119025/bat/survey/",
+   "head": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /FTP/swift/data/obs/2018_03/00010119025/bat/survey</title>\n </head>\n <body>\n<h1>Index of /FTP/swift/data/obs/2018_03/00010119025/bat/survey</h1>\n<pre><img src=\"/icons/blank.gif\" alt=\"Icon \"> <a href=\"?C=N;O=D\">N"
+  },
+  {
+   "label": "swift UKSSDC swifttools API root",
+   "url": "https://www.swift.ac.uk/API/",
+   "http": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "content_length": null,
+   "final_url": "https://www.swift.ac.uk/API/",
+   "head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\">\n  <head> \n    <title>UKSSDC | Swifttools API</title>\n    <meta name=\"keywords\" content=\"Swift, GRB, XRT, light curve, documentation, API"
+  },
+  {
+   "label": "swift LSXPS upper-limit server page",
+   "url": "https://www.swift.ac.uk/LSXPS/ulserv.php",
+   "http": 200,
+   "content_type": "text/html; charset=UTF-8",
+   "content_length": null,
+   "final_url": "https://www.swift.ac.uk/LSXPS/ulserv.php",
+   "head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\">\n  <head> \n    <title>UKSSDC | LSXPS Catalogue | Upper limit server</title>\n    <meta name=\"keywords\" content=\"Swift, X-ray, XRT, point s"
+  },
+  {
+   "label": "fermi weekly photon HEAD",
+   "url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/lat/weekly/photon/lat_photon_weekly_w700_p305_v001.fits",
+   "http": 200,
+   "content_type": "application/fits",
+   "content_length": "190152000",
+   "final_url": "https://heasarc.gsfc.nasa.gov/FTP/fermi/data/lat/weekly/photon/lat_photon_weekly_w700_p305_v001.fits",
+   "head": ""
+  },
+  {
+   "label": "fermi LAT data server form",
+   "url": "https://fermi.gsfc.nasa.gov/cgi-bin/ssc/LAT/LATDataQuery.cgi",
+   "http": 200,
+   "content_type": "text/html; charset=ISO-8859-1",
+   "content_length": null,
+   "final_url": "https://fermi.gsfc.nasa.gov/cgi-bin/ssc/LAT/LATDataQuery.cgi",
+   "head": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Fermi SSC - LAT Photon, Event and Spacecraft Data</title>\n<!-- USWDS CSS -->\n<link rel=\"stylesheet\" href=\"/assets/uswds/css/styles.css\" />\n<!-- Optional p"
+  },
+  {
+   "label": "erosita skytile api (van-maanen antipode)",
+   "url": "https://erosita.mpe.mpg.de/erodat/skyview/skytile_search_api/?RA=192.3056&DEC=-5.3572&RAD=0",
+   "http": 200,
+   "content_type": "application/json",
+   "content_length": "317",
+   "final_url": "https://erosita.mpe.mpg.de/erodat/skyview/skytile_search_api/?RA=192.3056&DEC=-5.3572&RAD=0",
+   "head": "{\"success\": true, \"error\": \"none\", \"ra\": 192.3056, \"dec\": -5.3572, \"rad\": 0.0, \"tiles\": [{\"srvmap\": 194096, \"canonical\": true, \"de_sky\": true, \"dist_deg\": 1.3517052822092344, \"ra_min\": 192, \"ra_max\": 195, \"de_min\": -7.5, \"de_max\": -4.5, \"ra_cen\": 193.5, \"de_cen\": -6.001017888847835, \"owner_str\": \"MP"
+  },
+  {
+   "label": "erosita DR1 download tree (tile)",
+   "url": "https://erosita.mpe.mpg.de/erodat/data/download/096/194/",
+   "http": 200,
+   "content_type": "text/html; charset=utf-8",
+   "content_length": null,
+   "final_url": "https://erosita.mpe.mpg.de/erodat/data/download/096/194/",
+   "head": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <!--\n    ============================================================\n     eRODat, written by Jeremy Sanders (2022-2026)\n     Please report problems at https://erosita-forum.mpe.mpg.de/\n    ============================================================\n  -->\n"
+  },
+  {
+   "label": "erosita DR1 download EXP_010 (tile)",
+   "url": "https://erosita.mpe.mpg.de/erodat/data/download/096/194/EXP_010/",
+   "http": 200,
+   "content_type": "text/html; charset=utf-8",
+   "content_length": null,
+   "final_url": "https://erosita.mpe.mpg.de/erodat/data/download/096/194/EXP_010/",
+   "head": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <!--\n    ============================================================\n     eRODat, written by Jeremy Sanders (2022-2026)\n     Please report problems at https://erosita-forum.mpe.mpg.de/\n    ============================================================\n  -->\n"
+  },
+  {
+   "label": "erosita DR1 event list HEAD (tile)",
+   "url": "https://erosita.mpe.mpg.de/erodat/data/download/096/194/EXP_010/em01_194096_020_EventList_c010.fits.gz",
+   "http": 200,
+   "content_type": "application/fits",
+   "content_length": "14696528",
+   "final_url": "https://erosita.mpe.mpg.de/erodat/data/download/096/194/EXP_010/em01_194096_020_EventList_c010.fits.gz",
+   "head": ""
+  }
+ ],
+ "erosita_tile_example": {
+  "srvmap": 194096,
+  "canonical": true,
+  "de_sky": true,
+  "dist_deg": 1.3517052822092344,
+  "ra_min": 192,
+  "ra_max": 195,
+  "de_min": -7.5,
+  "de_max": -4.5,
+  "ra_cen": 193.5,
+  "de_cen": -6.001017888847835,
+  "owner_str": "MPE",
+  "owner": 2
+ }
+}

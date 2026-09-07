@@ -1,0 +1,535 @@
+{
+ "stage": "slew",
+ "utc": "2026-09-07T13:34:21.486514+00:00",
+ "positions": [
+  {
+   "channel": "A",
+   "target": "gj-1276",
+   "ra": 343.4753421008056,
+   "dec": -6.782592475310327,
+   "n_rows": 5,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9191400003",
+     "slew_exposure_id": "02F",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2010-05-23T07:29:53.0",
+     "end_utc": "2010-05-23T09:21:11.0",
+     "ra": "343.40408",
+     "dec": "-7.015176"
+    },
+    {
+     "slew_observation_id": "9237300002",
+     "slew_exposure_id": "020",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2012-11-23T00:47:38.0",
+     "end_utc": "2012-11-23T01:34:14.0",
+     "ra": "343.63826",
+     "dec": "-7.177712"
+    },
+    {
+     "slew_observation_id": "9255700004",
+     "slew_exposure_id": "01A",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2013-11-25T18:05:01.0",
+     "end_utc": "2013-11-25T18:39:09.0",
+     "ra": "343.2846467936853",
+     "dec": "-6.461637422222222"
+    },
+    {
+     "slew_observation_id": "9291900004",
+     "slew_exposure_id": "013",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2015-11-17T15:28:04.0",
+     "end_utc": "2015-11-17T16:20:16.0",
+     "ra": "343.6627040483553",
+     "dec": "-7.4494293888888885"
+    },
+    {
+     "slew_observation_id": "9291900004",
+     "slew_exposure_id": "014",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2015-11-17T15:28:04.0",
+     "end_utc": "2015-11-17T16:20:16.0",
+     "ra": "343.1925879030377",
+     "dec": "-6.468457333333333"
+    }
+   ],
+   "nearest_days": 73.39007289351866,
+   "nearest": [
+    "9291900004",
+    "2015-11-17T15:28:04.0"
+   ]
+  },
+  {
+   "channel": "A",
+   "target": "gj-908",
+   "ra": 357.3033525969116,
+   "dec": 2.400089622952453,
+   "n_rows": 4,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9073700003",
+     "slew_exposure_id": "034",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2003-12-18T12:22:53.0",
+     "end_utc": "2003-12-18T13:38:28.0",
+     "ra": "357.4895",
+     "dec": "2.4168413"
+    },
+    {
+     "slew_observation_id": "9192900004",
+     "slew_exposure_id": "009",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2010-06-22T05:53:34.0",
+     "end_utc": "2010-06-22T07:32:27.0",
+     "ra": "357.39037",
+     "dec": "2.4719804"
+    },
+    {
+     "slew_observation_id": "9201100006",
+     "slew_exposure_id": "000",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2010-12-03T00:17:00.0",
+     "end_utc": "2010-12-03T01:47:55.0",
+     "ra": "356.98739",
+     "dec": "2.6916051"
+    },
+    {
+     "slew_observation_id": "9247000002",
+     "slew_exposure_id": "011",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2013-06-04T08:53:10.0",
+     "end_utc": "2013-06-04T09:38:46.0",
+     "ra": "357.11142",
+     "dec": "2.2997476"
+    }
+   ],
+   "nearest_days": 72.30953273148043,
+   "nearest": [
+    "9201100006",
+    "2010-12-03T00:17:00.0"
+   ]
+  },
+  {
+   "channel": "A",
+   "target": "ross-128",
+   "ra": 176.93561378537925,
+   "dec": 0.8032952022120893,
+   "n_rows": 1,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9338900003",
+     "slew_exposure_id": "005",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2018-06-11T11:09:30.0",
+     "end_utc": "2018-06-11T13:00:06.0",
+     "ra": "176.82788230034197",
+     "dec": "1.0483331333333332"
+    }
+   ],
+   "nearest_days": 85.72306243055937,
+   "nearest": [
+    "9338900003",
+    "2018-06-11T11:09:30.0"
+   ]
+  },
+  {
+   "channel": "A",
+   "target": "ross-154",
+   "ra": 282.45645950401206,
+   "dec": -23.83645255398828,
+   "n_rows": 6,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9061300002",
+     "slew_exposure_id": "044",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2003-04-14T17:43:49.0",
+     "end_utc": "2003-04-14T18:52:40.0",
+     "ra": "282.53897",
+     "dec": "-23.509112"
+    },
+    {
+     "slew_observation_id": "9116200003",
+     "slew_exposure_id": "059",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2006-04-14T03:03:14.0",
+     "end_utc": "2006-04-14T04:14:09.0",
+     "ra": "282.43682",
+     "dec": "-23.836496"
+    },
+    {
+     "slew_observation_id": "9160800003",
+     "slew_exposure_id": "007",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2008-09-19T14:05:43.0",
+     "end_utc": "2008-09-19T15:56:10.0",
+     "ra": "282.35693",
+     "dec": "-23.382693"
+    },
+    {
+     "slew_observation_id": "9180100002",
+     "slew_exposure_id": "032",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2009-10-09T16:59:10.0",
+     "end_utc": "2009-10-09T17:47:34.0",
+     "ra": "282.87988",
+     "dec": "-24.338296"
+    },
+    {
+     "slew_observation_id": "9180100002",
+     "slew_exposure_id": "033",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2009-10-09T16:59:10.0",
+     "end_utc": "2009-10-09T17:47:34.0",
+     "ra": "282.52017",
+     "dec": "-23.31419"
+    },
+    {
+     "slew_observation_id": "9208000002",
+     "slew_exposure_id": "000",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2011-04-18T17:57:04.0",
+     "end_utc": "2011-04-18T19:49:35.0",
+     "ra": "284.22048",
+     "dec": "-14.594579"
+    }
+   ],
+   "nearest_days": -76.03207106481568,
+   "nearest": [
+    "9208000002",
+    "2011-04-18T17:57:04.0"
+   ]
+  },
+  {
+   "channel": "A",
+   "target": "teegarden",
+   "ra": 43.25804675187689,
+   "dec": 16.87668865453332,
+   "n_rows": 1,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9222900004",
+     "slew_exposure_id": "043",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2012-02-10T10:10:55.0",
+     "end_utc": "2012-02-10T11:01:11.0",
+     "ra": "43.119117",
+     "dec": "16.606764"
+    }
+   ],
+   "nearest_days": 93.68247681712819,
+   "nearest": [
+    "9222900004",
+    "2012-02-10T10:10:55.0"
+   ]
+  },
+  {
+   "channel": "A",
+   "target": "van-maanen",
+   "ra": 12.292705109741021,
+   "dec": 5.385404334892063,
+   "n_rows": 1,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9249200003",
+     "slew_exposure_id": "001",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2013-07-18T23:29:16.0",
+     "end_utc": "2013-07-18T23:47:19.0",
+     "ra": "12.431671851387295",
+     "dec": "5.6118462777777784"
+    }
+   ],
+   "nearest_days": -79.71357057870046,
+   "nearest": [
+    "9249200003",
+    "2013-07-18T23:29:16.0"
+   ]
+  },
+  {
+   "channel": "A",
+   "target": "wolf-359",
+   "ra": 164.116535413872,
+   "dec": 7.011974314134571,
+   "n_rows": 2,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9072500005",
+     "slew_exposure_id": "03A",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2003-11-24T18:02:49.0",
+     "end_utc": "2003-11-24T19:14:21.0",
+     "ra": "164.4041",
+     "dec": "7.3353162"
+    },
+    {
+     "slew_observation_id": "9191700002",
+     "slew_exposure_id": "002",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2010-05-28T11:09:58.0",
+     "end_utc": "2010-05-28T12:38:13.0",
+     "ra": "164.11028",
+     "dec": "6.7825414"
+    }
+   ],
+   "nearest_days": 85.98079528934613,
+   "nearest": [
+    "9191700002",
+    "2010-05-28T11:09:58.0"
+   ]
+  },
+  {
+   "channel": "B",
+   "target": "gj-1276",
+   "ra": 163.5135702711512,
+   "dec": 6.792692433136551,
+   "n_rows": 5,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9137900003",
+     "slew_exposure_id": "03A",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2007-06-21T02:17:54.0",
+     "end_utc": "2007-06-21T03:37:08.0",
+     "ra": "163.26949",
+     "dec": "6.6051034"
+    },
+    {
+     "slew_observation_id": "9174000002",
+     "slew_exposure_id": "037",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2009-06-10T06:19:38.0",
+     "end_utc": "2009-06-10T07:21:19.0",
+     "ra": "163.09531907892",
+     "dec": "6.394688455555556"
+    },
+    {
+     "slew_observation_id": "9174000002",
+     "slew_exposure_id": "038",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2009-06-10T06:19:38.0",
+     "end_utc": "2009-06-10T07:21:19.0",
+     "ra": "163.5238748007304",
+     "dec": "7.398289677777778"
+    },
+    {
+     "slew_observation_id": "9329400004",
+     "slew_exposure_id": "010",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2017-12-04T09:50:29.0",
+     "end_utc": "2017-12-04T10:09:53.0",
+     "ra": "164.0713978521855",
+     "dec": "6.709131044444445"
+    },
+    {
+     "slew_observation_id": "9329400004",
+     "slew_exposure_id": "011",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2017-12-04T09:50:29.0",
+     "end_utc": "2017-12-04T10:09:53.0",
+     "ra": "162.98307702981455",
+     "dec": "6.428843777777778"
+    }
+   ],
+   "nearest_days": -88.69180274305836,
+   "nearest": [
+    "9329400004",
+    "2017-12-04T09:50:29.0"
+   ]
+  },
+  {
+   "channel": "B",
+   "target": "gj-908",
+   "ra": 177.3115065907661,
+   "dec": -2.395271126863929,
+   "n_rows": 4,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9266600002",
+     "slew_exposure_id": "010",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2014-07-01T02:05:23.0",
+     "end_utc": "2014-07-01T03:52:51.0",
+     "ra": "177.60124376797543",
+     "dec": "-1.8020873444444443"
+    },
+    {
+     "slew_observation_id": "9266600002",
+     "slew_exposure_id": "011",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2014-07-01T02:05:23.0",
+     "end_utc": "2014-07-01T03:52:51.0",
+     "ra": "177.20015083546932",
+     "dec": "-2.8578393555555555"
+    },
+    {
+     "slew_observation_id": "9283900005",
+     "slew_exposure_id": "00A",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2015-06-11T08:27:12.0",
+     "end_utc": "2015-06-11T08:52:28.0",
+     "ra": "177.10051670628278",
+     "dec": "-2.7420035444444446"
+    },
+    {
+     "slew_observation_id": "9293500004",
+     "slew_exposure_id": "007",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2015-12-19T12:42:36.0",
+     "end_utc": "2015-12-19T14:16:37.0",
+     "ra": "177.57803221274958",
+     "dec": "-2.210607811111111"
+    }
+   ],
+   "nearest_days": 83.72797795139195,
+   "nearest": [
+    "9283900005",
+    "2015-06-11T08:27:12.0"
+   ]
+  },
+  {
+   "channel": "B",
+   "target": "ross-128",
+   "ra": 356.9390609485515,
+   "dec": -0.7948253513813621,
+   "n_rows": 0,
+   "error": null,
+   "rows": [],
+   "nearest_days": null,
+   "nearest": null
+  },
+  {
+   "channel": "B",
+   "target": "ross-154",
+   "ra": 102.46037847248547,
+   "dec": 23.839084658186195,
+   "n_rows": 0,
+   "error": null,
+   "rows": [],
+   "nearest_days": null,
+   "nearest": null
+  },
+  {
+   "channel": "B",
+   "target": "teegarden",
+   "ra": 223.28225346073873,
+   "dec": -16.851311126271412,
+   "n_rows": 3,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9130600004",
+     "slew_exposure_id": "052",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2007-01-26T20:44:27.0",
+     "end_utc": "2007-01-26T21:53:20.0",
+     "ra": "223.39609",
+     "dec": "-16.767139"
+    },
+    {
+     "slew_observation_id": "9158900003",
+     "slew_exposure_id": "045",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2008-08-12T13:08:27.0",
+     "end_utc": "2008-08-12T14:05:12.0",
+     "ra": "223.32003",
+     "dec": "-16.813156"
+    },
+    {
+     "slew_observation_id": "9168100002",
+     "slew_exposure_id": "04B",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2009-02-12T12:10:09.0",
+     "end_utc": "2009-02-12T13:16:18.0",
+     "ra": "223.44496",
+     "dec": "-16.698262"
+    }
+   ],
+   "nearest_days": -82.8366063888825,
+   "nearest": [
+    "9168100002",
+    "2009-02-12T12:10:09.0"
+   ]
+  },
+  {
+   "channel": "B",
+   "target": "van-maanen",
+   "ra": 192.30213215817128,
+   "dec": -5.364744217343889,
+   "n_rows": 1,
+   "error": null,
+   "rows": [
+    {
+     "slew_observation_id": "9165300002",
+     "slew_exposure_id": "006",
+     "instrument": "EPN",
+     "filter": "Medium",
+     "start_utc": "2008-12-18T20:21:54.0",
+     "end_utc": "2008-12-18T20:55:07.0",
+     "ra": "192.08528",
+     "dec": "-5.0296416"
+    }
+   ],
+   "nearest_days": -105.29797715277527,
+   "nearest": [
+    "9165300002",
+    "2008-12-18T20:21:54.0"
+   ]
+  },
+  {
+   "channel": "B",
+   "target": "wolf-359",
+   "ra": 344.0991315956742,
+   "dec": -7.00016652577677,
+   "n_rows": 0,
+   "error": null,
+   "rows": [],
+   "nearest_days": null,
+   "nearest": null
+  }
+ ],
+ "units": []
+}

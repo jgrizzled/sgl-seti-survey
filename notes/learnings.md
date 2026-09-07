@@ -726,3 +726,52 @@ barycentric grid does *not* see.
 - **Process hygiene, again**: `pkill -f` from a shell whose command
   contains the pattern kills that shell (twice in one session) — kill
   by PID from `pgrep -f '^python …'`.
+
+## §16 — High-energy crossings (2026-09-07): γ-ray monitors on the anti-Sun point
+
+- **Read the pointing law before scanning the archive.** XMM-Newton
+  (solar aspect 70–110°) and eROSITA (scan at 90° elongation) cannot
+  observe a crossing window at all, because both channels sit at
+  elongation 180° at t_ca; Gate I of §5.3 is a mission-constraint
+  statement (WISE, SPHEREx, XMM, eROSITA), and the recon's slew-date
+  and scan-date measurements only confirmed it. Chandra and Swift can
+  point at opposition and simply never did (one Swift visit in 27 yr).
+- **The anti-Sun point is crowded.** The full Moon (a LAT source)
+  passes through the channel positions every synodic month — 8 Ms of
+  41.6 Ms of window livetime excluded at 8° — and any bright variable
+  source within a PSF radius owns a wide-PSF aperture: 3C 279 at 1.8°
+  from the van-maanen antipode cost 9 of 145 trials (constraint-only
+  by the ensemble gate, vetoed known-source when the April-2014 flare
+  fired them). Do a per-position variable-source census (4FGL, and the
+  equivalent catalogue for any wide-PSF instrument) at the freeze and
+  size the aperture or the trial list accordingly.
+- **Fermi's survey profile changed in 2018-03**: window-by-window
+  livetime from the spacecraft files is the coverage record; 62 of 580
+  windows are empty afterwards. "Every point every 3 h" is pre-2018.
+- **Analytic Poisson thresholds need two validations per trial**: the
+  Jeffreys floor (Σn + ½)/Σexposure so an empty pool never gives λ = 0
+  (lane H has ~0.01 counts per grazing window), and a per-trial
+  pseudo-window exceedance gate, not only the dispersion fraction —
+  the dispersion gate (p < 0.05 fraction) is blind to a flaring
+  source that produces a few enormous members. With both, 52,686
+  pseudo-windows gave 15 vs 18.6 exceedances at T.
+- **IRFs without the mission software**: the CALDB effective-area and
+  PSF tables are plain FITS; exposure = Σ livetime × A_eff(cosθ) and a
+  King-function containment reproduce the published PSF (r68 3.4°
+  front at 100 MeV) — mind that PSFSCALE is in radians with β = −0.8
+  stored signed. The LAT data server answers 18-yr 3° pulls in ~90 s;
+  weekly photon files are never needed, and the era-long spacecraft
+  product (GB) must be skipped.
+- **HEASoft in a container, one hour**: `chbrandt/heasoft` 6.24 +
+  local CALDB tarball; `batsurvey` with the survey positions and the
+  Crab as `incatalog` yields per-pointing rates at arbitrary positions
+  and an empirical mCrab scale; outputs are ~370 MB per pointing
+  (delete after collect). Remote CALDB over https does not work in
+  6.24; `--user` needs `HOME`; prompts need `HEADASNOQUERY=1`.
+- **Burst completeness has an edge term**: a 1-ks pulse placed at a
+  random gated time is lost when the good-time run ends inside it, so
+  Φ90 sits 4× above Φ50; report both, and say which is the
+  edge effect.
+- **Process hygiene, third time**: `pkill -f <pattern>` from a shell
+  whose own command line contains the pattern kills that shell; use
+  the PID from `pgrep -f '^python …'` or `kill <pid>`.

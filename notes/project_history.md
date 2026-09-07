@@ -2203,3 +2203,166 @@ carries; a per-list run is `--product <name>` (same cost per event).
 The observer-state term — the one that does matter for TESS (0.54 R☉
 apogee), SOHO (0.9 R☉ halo) and the heliospheric observers — is
 handled by the per-observer lists themselves, not by this product.
+
+## 25. High-energy archives reachability recon (2026-09-07; plan §5.26 — recon complete, at the freeze)
+
+Live probes from the server, all anonymous
+(`surveys/highenergy-crossings/notes/highenergy_recon_2026-09-07.md`;
+scan `scripts/recon_scan.py` stages `masters slew bat lat lat01
+catalogs routes` → `results/recon_*_v0.json`, `scripts/recon_erodat_rows.py`,
+tables `scripts/recon_summary.py` → `results/recon_summary_v0.md`;
+2,106 response snapshots + 448 LAT weekly spacecraft files + one
+eRASS1 tile event list under `runs/highenergy-crossings/recon/`,
+1.2 GB). **The crossing windows are a wide-field-monitor cell; the
+freeze is not started.**
+
+**Geometry.** Both channels sit at solar elongation 180° ± 6° inside
+every window. XMM-Newton (solar aspect angle 70–110°, pointed and
+slew) and eROSITA (scan great circle at ~90° elongation) are therefore
+blind in principle — measured: the nearest of 33 XMM slews over the 14
+channel positions is 72 d from a `t_ca` (XSA `v_slew_exposure`
+footprint polygons answer `CONTAINS`), the wolf-359/teegarden XMM
+campaigns sit ±77–110 d from the windows, and the eRASS1 tile 194096
+event list shows the van-maanen antipode scanned 2019-12-23/24 (9
+passes every 4 h), 100 d before the 2020-04-02 crossing. Gate I of
+§5.3 now has four members. Chandra (anti-Sun allowed) has 11
+observations of the 7 stars/antipodes in 27 years, none in a window
+(nearest +7.0 d); Swift has 177 pointed observations of the 14
+positions and **one in-window unit**: obsid 00010119025, wolf-359 A
+0.1 AU 2018-03-06 (+2.9 d), XRT PC 4,167 s, UVOT UV grism 4,161 s, BAT
+survey 4,198 s (event lists verified in the obs tree).
+
+**Monitors.** Swift/BAT (308 per-window `swiftmastr` queries, BAT
+survey/event exposure pro-rated to the window, binned by pointing
+offset): ≥ 1 ks within 30° in 45/86 (A) and 40/88 (B) 1.2 R☉ windows,
+79/108 and 76/109 at 2.5 R☉, 147/151 and 146/153 at 0.1 AU (median
+33–40 ks). Fermi-LAT in-FoV livetime from the weekly spacecraft files
+(θ ≤ 60°, zenith ≤ 100°, DATA_QUAL > 0, LAT_CONFIG = 1) for all 182
+grazing-family windows and all 254 0.1 AU windows in the Fermi era:
+pre-2018-03-16 every grazing window has ≥ 1.2 ks (median 5.7–6.6 ks at
+1.2 R☉, 15–16 ks at 2.5 R☉; 0.1 AU 37–281 ks); post-anomaly 24/68
+1.2 R☉ windows and 8/119 0.1 AU windows have none (boresight held
+> 60° from the anti-Sun point; teegarden B 2023–26, ross-154 B
+2020–22). Photon route verified end to end through the LAT data
+server (query `L260907093219AD225ECD61`: 150 photons ≥ 100 MeV within
+5° over 3 d at the van-maanen antipode, 7 within 1°, 46 GTIs).
+
+**Corridors.** eRODat (DR1 eRASS1 event data; DR2 eRASS:3
+catalogue-only, released 2026-07-31) serves cones and arbitrary-position
+upper limits by API: 36/88 anti-star corridors (ross-128 and wolf-359
+of the deep family) in the DE sky, DR1 exposure median 132 s / UL
+median 7.1 × 10⁻¹⁴, DR2 347 s / 3.4 × 10⁻¹⁴ erg cm⁻² s⁻¹. Cones on all
+88 corridors: eRASS:3 34/88 with a source inside 7′ (187 sources;
+gj-687 and gj-1221 antipodes in the LMC, 221 and 49 matches), eRASS1
+26/88, LSXPS 11/88, 5XMM 3/88, CSC 2.1 2/88 (box query — the CSC TAP
+rejects ADQL geometry), BAT-157m 0, 4FGL none within 30′ of any channel
+position. Nothing within 1′ of a corridor centre; closest: a persistent
+X-ray source 1.0′ from the teegarden antipode (LSXPS J145306.5−165245 =
+3eRASS J145306.7−165249), the first SGL-track test case. Deep-family
+stars detected: wolf-359, teegarden, ross-154, gj-908 (5XMM/CSC/2SXPS),
+ross-128 (eRASS1); gj-1276 and van-maanen undetected.
+
+**Design read-out.** Row reframed as a Fermi-LAT + Swift/BAT
+pulse/burst coincidence survey (the high-energy twin of the TESS and
+GALEX pulse cells; pseudo-window controls available because the
+monitors observe continuously; a LAT null at ~3 photons in 5 ks is
+~10⁻⁷ ph cm⁻² s⁻¹ ≈ 6 × 10⁻¹¹ erg cm⁻² s⁻¹ above 100 MeV, power
+convention deferred to the freeze) plus a
+one-day catalogue-level corridor screen with an SGL-track test per
+hit; hand-offs: the UVOT grism to §5.17, the XRT light curve to the
+§5.12 flare-veto design. Seven numbered freeze recommendations in the
+note; plan §5.26 updated. Adapter cost is confined to HEASoft
+`batsurvey` for arbitrary-position BAT light curves. Nothing
+committed to git.
+
+## 26. High-energy (Fermi-LAT + Swift/BAT) crossings survey — freeze through report (2026-09-07; plan §5.26 — complete)
+
+User approval of the seven recon recommendations ("Freeze looks good,
+proceed") → the whole chain unattended on the server, same day.
+Report `report/highenergy_crossings.md`; survey docs
+`surveys/highenergy-crossings/` (`hypotheses.md` v1.0 + amendments
+v1.1/v1.2, `thresholds.md`, `corridor_screen.md`, 14 scripts,
+`results/`); runs under `runs/highenergy-crossings/v1/` (photons 250 MB
+sha-pinned, spacecraft cache 1.1 GB, CALDB, BAT 88 GB regenerable,
+XRT, catalogue snapshots). Nothing committed to git.
+
+**Freeze v1.0 (D1–D11).** Substrate: era-long LAT data-server photon
+pulls per channel position (16 queries, ~90 s each; the era-long
+spacecraft product is GB-scale and skipped — the 944 weekly files are
+the frozen source), P8R3 SOURCE class, the shared interval gate
+(θ ≤ 60°, DATA_QUAL > 0, LAT_CONFIG = 1, Moon/Sun > 8°) for photons
+and exposure, CALDB effective area per lane (P8R3_SOURCE_V2 FB tables
+read directly — no fermitools; PSF King-function containment
+implemented from the CALDB file, r68 3.4° / 0.45° / 0.09° front at
+0.1 / 1 / 10 GeV once the radian scaling and β = −0.8 were read
+correctly). Units = target × channel × rung (32); statistics
+S_stack_L/H, S_event_L/H, S_burst; pseudo-windows ±60 / ±120 d;
+analytic Poisson thresholds validated per trial; dev = gj-908 A/B +
+D1 window + controls. Pre-freeze contact: the recon's van-maanen B
+2020-04-02 photon pull → that event `forced_dev`.
+
+**Amendments.** v1.1 (threshold freeze): Jeffreys floor (Σn + ½)/Σexpo
+after a single-photon lane-H pool gave λ = 0; A gj-1276 1.2 R☉
+demoted to dev after its five statistics were printed in the first
+machinery test (all < T) → 29 units × 5 = 145 trials, T = 3.451.
+v1.2 (threshold freeze, off-window only): per-trial ensemble
+exceedance gate ≤ max(3, 3 × expected) — the B van-maanen lane-L
+apertures contain 3C 279 (4FGL J1256.1−0547, variability index
+33,299) at 1.8° plus two more variable 4FGL sources; 17/21/33
+pseudo-windows above T at the three rungs → 9 trials constraint-only;
+the other 52,686 pseudo-windows 15 vs 18.6 expected.
+
+**Coverage.** 580 windows, 518 searchable (≥ 1 ks gated livetime; the
+62 uncovered all post-2018-03); confirmatory 479 windows, 29.8 Ms,
+9.6 × 10⁵ m² s lane-L exposure; the Moon/Sun exclusion removed 8.0 of
+41.6 Ms (the full Moon crosses the anti-Sun point monthly).
+
+**Dev.** All dev statistics < T (max 3.16); D1 window n vs λ 4/4.1,
+12/12.4, 105/110; controls GRB 130427A (240 vs 4.7 photons) and the
+3C 454.3 Nov-2010 flare (7,353 vs 816) at the 300 cap — PASS; 70/70
+recon photons re-identified; gate census per position recorded.
+
+**Blind confirmatory.** 145 trials: 9 exceedances, all B van-maanen
+(S_stack_L 21–136, S_event_L 203–257, S_burst 5.0–5.6, window
+2014-04-03 = the 3C 279 April-2014 flare; centroids 0.8° from
+3C 279), `vetoed_known_source`, all constraint-only already; 136
+calibrated trials 0 vs 0.05 expected; highest A ross-154 0.1 AU
+S_event_L 3.42 vs T 3.451. Photons: lane L 10,778 vs 10,517, lane H
+212 vs 198.
+
+**Completeness.** F90 stack L 1.4–3.6 × 10⁻⁷ (1.2 R☉), 0.5–1.3 × 10⁻⁷
+(2.5 R☉), 0.7–3.1 × 10⁻⁸ (0.1 AU) ph cm⁻² s⁻¹; event-L best window
+4–9× higher; lane H 1–3 × 10⁻⁸ / 4–10 × 10⁻⁹ / 1–2 × 10⁻⁹; bursts
+Φ50 ≈ 3 × 10⁻³, Φ90 1–2 × 10⁻² ph cm⁻² (edge losses of a 1-ks pulse
+at good-time boundaries). Power (P = F_E πb², Γ = 2): 0.12–0.33 MW /
+0.2–0.5 MW / 2–9 MW stacked, 0.5–1.2 / 0.8–1.9 / 14–46 MW single
+window; Γ ± 0.3 → ⟨E⟩ × 1.13 / 0.89 (L), exposure ± 10 %.
+
+**BAT arm (constraint-only).** HEASoft 6.24 in the `chbrandt/heasoft`
+container (`--user 1000:1000 -e HOME=/tmp`, `:z` mount, HEADASNOQUERY,
+local Swift BAT CALDB 23 MB; remote CALDB over https fails in 6.24),
+`batsurvey` per obsid with the 14 positions + Crab as `incatalog`
+(~35 s each, 8 workers, 238 pointings in ~15 min): 175 of 391
+grazing-window rows covered, 3σ UL median 32 / 27 mCrab (1.2 /
+2.5 R☉; Crab 0.0408 units from 24 pointings), 1.6 / 5.9 MW; two
+windows at SNR 3.1–3.2 recorded.
+
+**XRT look.** wolf-359 2018-03-06: 0.112 ct/s flat over 4.2 ks vs
+quiescent 0.03 (2017: 23 visits; 2021-12: 80 visits, flare visits to
+0.67) — elevated 3.6×, nothing pulse-like; UVOT UV grism handed to
+§5.17.
+
+**Corridor screen.** 88 corridors: 46 empty within 7′; 281 sources,
+212 `fixed_sky` (5XMM merged epochs, LSXPS/2SXPS spans, eRASS1 →
+eRASS:3 pair, compact stacks), 69 unresolved (gj-687 / gj-1221 in the
+LMC direction, luhman16 CSC-only, van-maanen, sigma-dra); the
+teegarden-antipode source `fixed_sky`; eRODat upper limits at all 36
+western corridors (DR1 7.1 × 10⁻¹⁴, DR2 3.4 × 10⁻¹⁴ erg cm⁻² s⁻¹
+median). Supplementary epoch pull (HEASARC, snapshotted under
+`runs/highenergy-crossings/v1/catalogs/`).
+
+**Process notes.** `pkill -f` from a shell whose command line contains
+the pattern killed the shell again (twice) — kill by PID; the LAT
+data-server results page must be parsed for "(Query complete)" (an
+earlier "complete"/"pending" heuristic never terminated); the
+container needs `HOME` set for `headas-init.sh` under `--user`.
