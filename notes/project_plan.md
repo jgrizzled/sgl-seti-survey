@@ -1266,9 +1266,17 @@ extend, and the items that ride on it:
   the SPIRou teegarden 2025-11-08 release.
 - Re-probe the near-IR time-domain substrates blocked in §5.20 (WINTER
   release; any PGIR epochal-stack release or DR2).
-- Propagate impact-parameter uncertainty in the universal crossing
-  list — not done today (`sglseti.crossing_uncertainty` exists for
-  per-event follow-up).
+- ~~Propagate impact-parameter uncertainty in the universal crossing
+  list~~ — **done 2026-09-06** (`sglsurvey/crossings_uncertainty.py`,
+  `crossings/universal_v1/uncertainty*.{ecsv,npz,json}`; history §24):
+  128-draw target-state Monte Carlo per event, no rung membership
+  changes at 95 % (half-width ≤ 0.012 R☉ overall, ≤ 1e-4 R☉ on the
+  grazing family; `t_ca` σ ≤ 264 s; side 100 % consistent), i.e. the
+  target-state term sits at or below the declared 0.010 R☉ LEO
+  observer floor (only eps-ind-b's worst event, 0.012 R☉, exceeds it). Observer state, ephemeris and the model floor
+  remain `not_propagated`. Re-run per list at the refresh
+  (`--product <name>`); the 84 boundary rows still at the window edge
+  are the 2028-end events the refresh will complete.
 - Channel A at the 1.0 AU rung keeps its programme-wide deferred
   status.
 

@@ -31,5 +31,31 @@ beam-radius / wavelength / duty-cycle hypotheses there. Spacecraft
 tables and raw Horizons responses live under `observers/` with content
 hashes recorded in each run's manifest inputs.
 
-Impact-parameter uncertainty is **not** propagated (`uncertainty_not_propagated`
-warning); `sglseti.crossing_uncertainty` exists for per-event follow-up.
+The lists themselves carry the `uncertainty_not_propagated` warning. For
+`universal_v1` the target-state uncertainty is propagated as a companion
+product by `python -m sglsurvey.crossings_uncertainty --product universal_v1`
+(2026-09-06; plan §5.27): `uncertainty.ecsv` (one row per event, joinable
+on `event_id`: 95 % bounds, sigmas and median shift on `b_min`, `t_ca` and
+`v_perp`, side consistency, window-edge count, the list's nominal
+validity), `uncertainty_samples.npz` (the 128 `b_min` draws per event) and
+`uncertainty_summary.json` (parameters, input hashes, per-target maxima,
+rung-membership census). 128 Monte Carlo draws of the schema-v2 registry
+uncertainties (positions, proper motions, parallax, RV, orbital elements)
+per event, re-minimised inside ±45 d of the nominal `t_ca` at 1-s
+tolerance, seed 20260906 (+ per-event `event_id` hash); observer state,
+ephemeris and the geometry-model floor stay `not_propagated`, as the
+library labels them. **Result: no rung membership changes** — over the
+16,381 nominally valid events the 95 % half-width on `b_min` is
+≤ 0.012 R☉ everywhere (eps-ind-b, the 200 mas/yr allocation; median
+σ 2 × 10⁻⁶ R☉) and ≤ 1.0 × 10⁻⁴ R☉ on the 960 grazing-family events
+(≤ 2.5 R☉); `t_ca` σ median 0.2 s, p99 61 s, max 264 s; side-of-axis
+100 % consistent; 0 events ambiguous at 1.2 R☉ / 2.5 R☉ / 0.1 AU / 1 AU.
+The target-state term is therefore at or below the declared LEO observer
+floor (0.010 R☉) — under it for every target but eps-ind-b, whose worst
+event reaches 0.012 R☉ at b = 0.65 AU, far from any rung edge. The 205 interval-boundary rows the list
+flags `degraded` get their refined minimum from the same run (121 resolve
+inside ±45 d of the boundary, 84 lie further out and stay `degraded`) —
+a bookkeeping aid for the yearly refresh, not an uncertainty. The
+spacecraft lists share the registry, so the same bound applies to their
+target-state term; a per-list run is `--product <name>` (~3 h on 30
+workers for 16.6k events).

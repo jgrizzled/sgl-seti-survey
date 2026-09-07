@@ -2145,3 +2145,61 @@ stacks). Family stacks null. Completeness: S_stack m90 V_eq 9.1–13.9
 33–350 MW (median 89 MW); pulse V_eq 4.8–7.9. 9 units
 `constraint_only` (edge band). Report `report/solohi_crossings.md`;
 lessons `notes/learnings.md` §15.
+
+## 24. Universal crossing list — target-state uncertainty propagation (2026-09-06; plan §5.27 standing item — done)
+
+**Trigger.** Plan audit on 2026-09-06: every survey with an external
+trigger verified still blocked (IRSA `spherex.obscore` still QR2-only;
+Rubin RSP dp2 still coadd-only in SIA, no visit/difference images;
+NRL WISPR L2 tree still ends 2026-03-17 / L3 orbit27; SoloHI P13 not
+public; no WINTER release; Gaia DR4 ≥ 2026-12). The one §5.27 item
+with no external dependency — "propagate impact-parameter uncertainty
+in the universal crossing list — not done today" — was picked.
+
+**Machinery.** New driver `sglsurvey/crossings_uncertainty.py`: reads
+a `crossings/<product>/events.ecsv`, checks the registry sha against
+the product manifest, rebuilds each `CrossingEvent` and calls
+`sglseti.crossing_uncertainty` (library v1.1: target state propagated;
+observer state, ephemeris and geometry-model floor labelled
+`not_propagated`) with a per-event seed derived from the run seed and
+`event_id`, so the product is scheduler-independent. 30-worker pool;
+outputs `uncertainty.ecsv` / `uncertainty_samples.npz` /
+`uncertainty_summary.json` beside the list (README describes the
+columns). Parameters: 128 draws, 95 % bounds, ±45 d refinement window
+(the list's minimum same-target spacing is 69 d, so a window never
+holds two nominal minima; the library's window-edge flag catches the
+rest), 1-s refine tolerance (the 60-s default floored `t_ca` σ at 0
+for most events at no measurable cost), seed 20260906.
+
+**Run.** `universal_v1` (`xng-a09e2db7681d`), 16,586 events, 0
+invalid, 0 failures, 172 min. Smoke tests on ez-aqr / sirius-a /
+luhman16-a / van-maanen first surfaced that the largest
+nominal-to-median shifts (up to 140 R☉) were all the list's 205
+interval-boundary rows (`minimum_at_interval_start/stop`, 1980-01-01
+and 2028-01-01), where the refinement walks to the true minimum
+outside the interval — a boundary correction, not an uncertainty; the
+product now carries `nominal_validity` and the census splits on it.
+
+**Result.** Over the 16,381 nominally valid events: 95 % half-width on
+`b_min` max 0.012 R☉ (eps-ind-b, its 200 mas/yr allocation), then
+ez-aqr 0.008, procyon 0.0026, wise-0855 0.0022, sirius 0.0019, gj65
+0.0014 R☉; median σ 2.2 × 10⁻⁶ R☉, p99 1.9 × 10⁻³ R☉. On the 960
+grazing-family events (≤ 2.5 R☉) the maximum half-width is
+1.0 × 10⁻⁴ R☉ (van-maanen: 4 × 10⁻⁴ relative). `t_ca` σ median 0.18 s,
+p99 61 s, max 264 s (eps-ind-b); `v_perp` σ ≤ 1 × 10⁻⁴ km/s; side
+consistency 1.0 on every event; median shift ≤ 0.0014 R☉ / ≤ 47 s.
+Rung census at the 95 % bound: 726 / 960 / 1,346 / 16,586 events
+inside 1.2 R☉ / 2.5 R☉ / 0.1 AU / 1 AU, **0 ambiguous** at any rung.
+The target-state term is thus at or below the 0.010 R☉ LEO observer
+floor every product already declares (only eps-ind-b's worst event
+exceeds it, at 0.012 R☉) — the registry's inflated systematic
+allocations (Sirius 20 mas/yr, white-dwarf 50 km/s RV, ez-aqr 350 mas)
+do not reach the rung scales. Boundary rows: 121 of 205 resolve inside
+the ±45 d window (|Δt| median 32 d), 84 remain at the window edge
+(`degraded`, the 2028-end family the yearly refresh will complete).
+
+**Hand-off.** The spacecraft lists share the registry, so the bound
+carries; a per-list run is `--product <name>` (same cost per event).
+The observer-state term — the one that does matter for TESS (0.54 R☉
+apogee), SOHO (0.9 R☉ halo) and the heliospheric observers — is
+handled by the per-observer lists themselves, not by this product.

@@ -270,6 +270,20 @@ Amendments forced by evidence on development sets (the retrospectives):
   the ±6 d 0.1 AU windows — 6 validated epochs on 5 targets, none on
   the ≤ 1 d grazing windows. State which rung and which archive class a
   "nobody has looked" claim covers.
+- Target-state uncertainty does not move any crossing (2026-09-06,
+  `crossings/universal_v1/uncertainty*`): 128-draw propagation of the
+  registry's declared uncertainties — including the deliberately
+  inflated allocations (Sirius 20 mas/yr, white-dwarf 50 km/s RV,
+  ez-aqr 350 mas) — gives 95 % half-widths ≤ 0.012 R☉ on `b_min`
+  (≤ 1e-4 R☉ on the grazing family), `t_ca` σ ≤ 264 s, and zero
+  rung-membership ambiguities. The error budget of a crossing is the
+  *observer* term (LEO 0.010 R☉, TESS 0.54 R☉, SOHO 0.9 R☉, the
+  heliospheric orbits), which is why every substrate gets its own
+  observer list; a registry refinement will never change a window.
+  Two machinery facts: refine at 1-s tolerance (60 s floors the timing
+  scatter at zero), and split the census on the list's own validity —
+  interval-boundary rows walk to their true minimum outside the
+  interval, a correction that looks like a 100-R☉ "shift".
 - A spacecraft substrate needs its own crossing list before any
   intersect, and the cost is now ~15 min (`--fetch-observer` +
   `--observer` in `sglsurvey/crossings.py`; TESS, SOHO, Kepler). The
