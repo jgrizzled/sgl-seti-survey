@@ -2366,3 +2366,74 @@ the pattern killed the shell again (twice) — kill by PID; the LAT
 data-server results page must be parsed for "(Query complete)" (an
 earlier "complete"/"pending" heuristic never terminated); the
 container needs `HOME` set for `headas-init.sh` under `--user`.
+
+## 27. S2 1 AU outer-skirt blended search — recon through report (2026-09-07 → 2026-09-10; plan §5.25 — complete)
+
+"See notes/project_plan.md and begin the AU outer-skirt blended
+search" → recon, freeze proposal, user approval of D1–D8 ("Freeze
+recommendations look good, proceed"), then the chain unattended
+across a 30-h ATLAS queue drain. Report `report/skirt_crossings.md`;
+survey docs `surveys/skirt-crossings/` (`hypotheses.md` v1.0 +
+amendments A1–A5, `notes/skirt_recon_2026-09-07.md`, 13 scripts,
+`configs/threshold_freeze_v1.json` + the dev-only `v1-dev`,
+`results/`); runs under `runs/skirt-crossings/` (162 light curves
++ sidecars ~110 MB, 2 recon probes, 6 response-calibration tasks,
+geometry curves). Nothing committed to git.
+
+**Recon (2026-09-07).** Geometry pass over all 85 crossing-list
+targets (daily ε, b_e = r_E sin ε; conjunction minima reproduce the
+frozen list's 942 in-era S2 b_min to 0.0003 AU median): the 1 AU
+rung contains Earth all year (no signature); sub-1 AU rungs switch
+at ε_b = arcsin(r_b) on both sides of the Sun. Two full-history
+reduced-mode ATLAS probes at non-target ecliptic field stars: floor
+40.6° absolute, ~50° practical (night efficiency 5–8 % at 45–55°,
+18–21 % at 60–70°), 12–15 min execution, o precision 1.6 % per
+exposure at G 14; the queue applies proper motion server-side;
+Obs-prefix sites 03 = Sutherland / 04 = El Sauce (the ATLAS recon
+note had them swapped). Gaia DR3 scope of the 88 targets (transform
+o ≈ G − 0.22 + 0.13 (BP−RP), rms 0.13 on four unsaturated anchors):
+18 candidates; luhman16 dropped (no verified Gaia counterpart).
+Null-ensemble pools of 16 field stars per target in 1° cones; the
+five reddest targets have no colour match within 1.8–3.5 mag.
+
+**Freeze v1.0 (D1–D8, approved 2026-09-07).** Symmetric step search
+on both sides (S_sym / S_skirt / S_year, S_opp annotation); rungs
+0.90 / 0.95 AU; 18 targets, ATLAS D2 saturation rule on the
+measured value; reduced mode + server-side PM + nightly means +
+airmass regression; 8-control null ensemble, max rule, mirror-gated
+validity, ≥ 4 valid controls; all 162 tasks; dev = teegarden +
+gj-2012, seed 20260907.
+
+**Drain.** 162 tasks in 4-deep flight, median 813 s server time,
+0 failures; one death on a transient DNS failure at 19:30 UTC
+(patched with network retries, resumed from sidecars); complete
+2026-09-09 23:00 UTC.
+
+**Dev (2026-09-07).** G1 pass (forced positions track PM to 0.03″
+over 55″). G2 (A1/A2): the airmass layer is neutral on the ensemble
+floor; retained for the colour term. First dev search: 8/12
+exceedances, every teegarden trial, target above all 8 controls →
+the **parallax step** (A3): the parallactic displacement peaks at
+quadrature (out-of-beam) so the fixed-position fit loses ~1 % there;
+response exponent measured with six offset tasks (k = 2.42, between
+the two analytic forms); corrected fluxes. A4: colour-unmatched
+rule. After A3: 7/12, teegarden `retained_ambiguous_colour_unmatched`.
+
+**Cut / threshold freeze (2026-09-10).** gj-1111 (12.44) and
+wolf-1069 (12.38) saturation-excluded on the measured value; 28
+searched units, 81 trials (12 dev / 69 confirmatory), 9.0 expected
+crossings; 6 ledger-only units; no constraint-only unit.
+
+**Blind confirmatory.** 17 exceedances / 69 vs 7.7 expected; 13
+asymmetric, 1 single-cycle, 1 ensemble-shared, 2
+colour-unmatched (gj-3512). Post-blind annotation: gj-13157 crowded
+(G 9.4 at 14″, chi/N 35,800) — systematics-limited, disposition
+unchanged.
+
+**Completeness.** Injection into the real in-beam set; A5 — no depth
+for the 24 exceedance trials (the real excess is what "recovers").
+57 constraining trials: S_sym 0.6–24 MW (median 6–8), 1.5–6.5 mag
+contrast. 1 AU ledger built (`ledger_1au_v1.json`).
+
+**Result.** 0 candidates; the sub-1 AU uplink step cell opened at
+MW class on 16 targets. Lessons → `notes/learnings.md` §17.

@@ -1,0 +1,483 @@
+{
+ "split": "dev",
+ "exceedances": [
+  {
+   "target_id": "teegarden",
+   "rung_au": "0.9",
+   "statistics": [
+    "S_sym",
+    "S_skirt",
+    "S_year"
+   ],
+   "diagnostics": {
+    "symmetry": {
+     "S_skirt": 1.224148320255584,
+     "S_opp": 1.5948777308421538,
+     "delta_skirt": 0.0070457900834202504,
+     "delta_opp": 0.004343091057659672,
+     "asymmetric": false
+    },
+    "c_band": {
+     "S_sym": {
+      "S": -1.5791204179211071,
+      "delta_mean": -0.003492491232473184
+     },
+     "S_skirt": {
+      "S": null,
+      "delta_mean": null
+     },
+     "S_opp": {
+      "S": -4.230142265289336,
+      "delta_mean": -0.014661671532402777
+     }
+    },
+    "leave_one_cycle_out": {
+     "S_sym": {
+      "T": 0.0,
+      "S_without_cycle": {
+       "1": 1.8093381849813728,
+       "2": 2.083100013709431,
+       "3": 2.26869832805179,
+       "4": 2.429897181982722,
+       "5": 0.8753218081156885,
+       "6": 2.004982578491908,
+       "7": 2.0994232356347347,
+       "8": 1.9082916436901334,
+       "9": 1.3269486818115765,
+       "10": 2.1371362651757493
+      },
+      "single_cycle": false
+     },
+     "S_skirt": {
+      "T": 0.0,
+      "S_without_cycle": {
+       "4": 1.318305028623516,
+       "5": 0.8874285328076048,
+       "6": 0.5456550110237792,
+       "7": 1.518853290556038,
+       "8": 1.1591301708812587,
+       "9": 1.0439678527022818,
+       "10": 1.4198091425991612
+      },
+      "single_cycle": false
+     },
+     "S_year": {
+      "T": 2.9694009434911357,
+      "S_without_cycle": {},
+      "single_cycle": null
+     }
+    },
+    "ensemble": {
+     "0": {
+      "delta_target": -0.009781285138173265,
+      "mean_controls": -0.0170895845847387,
+      "sd_controls": 0.01347908139365551,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "1": {
+      "delta_target": 0.0212631434020055,
+      "mean_controls": 0.0023378456306553668,
+      "sd_controls": 0.008015169450803822,
+      "n_controls": 8,
+      "within_2sd": false
+     },
+     "2": {
+      "delta_target": 0.0011373065353779896,
+      "mean_controls": -0.002814294195076449,
+      "sd_controls": 0.006049644204676855,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "3": {
+      "delta_target": -0.0038028953612045738,
+      "mean_controls": -0.010306708081567098,
+      "sd_controls": 0.005943226024431409,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "4": {
+      "delta_target": -0.007036496829135985,
+      "mean_controls": -0.002244532186079668,
+      "sd_controls": 0.0035921141334462328,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "5": {
+      "delta_target": 0.03553662668523183,
+      "mean_controls": 0.009414295471186013,
+      "sd_controls": 0.008666558320634433,
+      "n_controls": 8,
+      "within_2sd": false
+     },
+     "6": {
+      "delta_target": 0.002541716609802995,
+      "mean_controls": -0.0006054415272979608,
+      "sd_controls": 0.005637567049121369,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "7": {
+      "delta_target": -0.0022475284774621275,
+      "mean_controls": -0.0007515539745579127,
+      "sd_controls": 0.007474452287255343,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "8": {
+      "delta_target": 0.004297641181054081,
+      "mean_controls": 0.005061533586794344,
+      "sd_controls": 0.003641153960247239,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "9": {
+      "delta_target": 0.013667107857817898,
+      "mean_controls": 0.020970388702086413,
+      "sd_controls": 0.01600457566943039,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "10": {
+      "delta_target": -0.0021955021892097523,
+      "mean_controls": 0.0007017067954247578,
+      "sd_controls": 0.005660887161989589,
+      "n_controls": 8,
+      "within_2sd": true
+     }
+    },
+    "neighbours_10as": [],
+    "colour": {
+     "target_bp_rp": 4.528503,
+     "min_control_gap_mag": 2.682441,
+     "unmatched": true,
+     "control_trend": {
+      "slope_per_mag": -0.001577357774952869,
+      "extrapolated_delta_at_target_colour": -0.0062053352951426345,
+      "target_delta": 0.005195043825271702,
+      "control_colour_span": [
+       1.237992,
+       1.846062
+      ]
+     }
+    }
+   },
+   "disposition": {
+    "S_sym": "retained_ambiguous_colour_unmatched",
+    "S_skirt": "retained_ambiguous_colour_unmatched",
+    "S_year": "retained_ambiguous_colour_unmatched"
+   }
+  },
+  {
+   "target_id": "teegarden",
+   "rung_au": "0.95",
+   "statistics": [
+    "S_sym",
+    "S_skirt",
+    "S_year"
+   ],
+   "diagnostics": {
+    "symmetry": {
+     "S_skirt": 0.4733379924082804,
+     "S_opp": 1.433706704977472,
+     "delta_skirt": 0.002906300481642125,
+     "delta_opp": 0.004708270010247351,
+     "asymmetric": false
+    },
+    "c_band": {
+     "S_sym": {
+      "S": -2.1187087862861236,
+      "delta_mean": -0.005330524382610741
+     },
+     "S_skirt": {
+      "S": null,
+      "delta_mean": null
+     },
+     "S_opp": {
+      "S": -1.9073684314776231,
+      "delta_mean": -0.007687082076021524
+     }
+    },
+    "leave_one_cycle_out": {
+     "S_sym": {
+      "T": 0.0,
+      "S_without_cycle": {
+       "1": 1.9828977990163186,
+       "3": 2.611064725453312,
+       "4": 2.435834993428564,
+       "5": 0.4297884020626792,
+       "6": 2.1808754936030086,
+       "7": 2.191389003112556,
+       "8": 1.6658594199561314,
+       "9": 1.04186975661762,
+       "10": 2.109370547924799
+      },
+      "single_cycle": false
+     },
+     "S_skirt": {
+      "T": 0.0,
+      "S_without_cycle": {
+       "4": 0.5482222591456395,
+       "6": 0.09760198084947372,
+       "7": 0.7647263219433422,
+       "8": 0.6368290643348533,
+       "9": -0.3265640355013775,
+       "10": 0.7164410470440448
+      },
+      "single_cycle": true
+     },
+     "S_year": {
+      "T": 3.4926398023190286,
+      "S_without_cycle": {},
+      "single_cycle": null
+     }
+    },
+    "ensemble": {
+     "0": {
+      "delta_target": 0.005316126388437294,
+      "mean_controls": 0.00735935134877149,
+      "sd_controls": 0.014275492608738609,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "1": {
+      "delta_target": 6.584633165295211e-05,
+      "mean_controls": 0.0007286406400715637,
+      "sd_controls": 0.010870243310952262,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "2": {
+      "delta_target": -0.009654291791959079,
+      "mean_controls": -0.004008162088676761,
+      "sd_controls": 0.004748031417159809,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "3": {
+      "delta_target": -0.007340079437643615,
+      "mean_controls": -0.008269566718630684,
+      "sd_controls": 0.00353558993407091,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "4": {
+      "delta_target": -0.00702517817513724,
+      "mean_controls": -0.00500551872083924,
+      "sd_controls": 0.0027663642522484707,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "5": {
+      "delta_target": 0.03818709418709512,
+      "mean_controls": 0.006198190175055329,
+      "sd_controls": 0.006159939865755442,
+      "n_controls": 8,
+      "within_2sd": false
+     },
+     "6": {
+      "delta_target": -0.0011819944915768513,
+      "mean_controls": -0.003218667855809082,
+      "sd_controls": 0.004636581304349708,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "7": {
+      "delta_target": -0.015239904106747956,
+      "mean_controls": -0.00403214156301606,
+      "sd_controls": 0.005773847373878143,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "8": {
+      "delta_target": 0.00789437635840886,
+      "mean_controls": 0.004256501030169787,
+      "sd_controls": 0.0038922056169849737,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "9": {
+      "delta_target": 0.01982316999054581,
+      "mean_controls": 0.038906007988924504,
+      "sd_controls": 0.025395257055862562,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "10": {
+      "delta_target": -0.0030503217667410066,
+      "mean_controls": -0.005040196394736093,
+      "sd_controls": 0.004027965755092496,
+      "n_controls": 8,
+      "within_2sd": true
+     }
+    },
+    "neighbours_10as": [],
+    "colour": {
+     "target_bp_rp": 4.528503,
+     "min_control_gap_mag": 2.682441,
+     "unmatched": true,
+     "control_trend": {
+      "slope_per_mag": -0.004344804761204916,
+      "extrapolated_delta_at_target_colour": -0.015753118354883217,
+      "target_delta": 0.005799289611305234,
+      "control_colour_span": [
+       1.237992,
+       1.846062
+      ]
+     }
+    }
+   },
+   "disposition": {
+    "S_sym": "retained_ambiguous_colour_unmatched",
+    "S_skirt": "non_promotable_single_cycle",
+    "S_year": "retained_ambiguous_colour_unmatched"
+   }
+  },
+  {
+   "target_id": "gj-2012",
+   "rung_au": "0.9",
+   "statistics": [
+    "S_sym"
+   ],
+   "diagnostics": {
+    "symmetry": {
+     "S_skirt": -0.25122240686501573,
+     "S_opp": 0.30149126433037465,
+     "delta_skirt": -0.0007199375829998748,
+     "delta_opp": 0.00043105581152607443,
+     "asymmetric": true
+    },
+    "c_band": {
+     "S_sym": {
+      "S": -1.2832834621921576,
+      "delta_mean": -0.0019319590108207022
+     },
+     "S_skirt": {
+      "S": -1.4236588501967935,
+      "delta_mean": -0.0055649503831072585
+     },
+     "S_opp": {
+      "S": -0.8253049073336082,
+      "delta_mean": -0.0016003106025964321
+     }
+    },
+    "leave_one_cycle_out": {
+     "S_sym": {
+      "T": 0.0,
+      "S_without_cycle": {
+       "0": -0.13634577200049317,
+       "1": -0.16013111655306533,
+       "2": 0.29046505341657547,
+       "3": 0.2157001036906048,
+       "4": -0.1395249058261547,
+       "5": -0.3468329032092514,
+       "6": -0.2418232386004033,
+       "7": -0.12928182036012362,
+       "8": -0.035993330744833255,
+       "9": 0.1119094319865524,
+       "10": 0.5369029985839913
+      },
+      "single_cycle": true
+     }
+    },
+    "ensemble": {
+     "0": {
+      "delta_target": 0.0008967068137802828,
+      "mean_controls": -0.002876386486244544,
+      "sd_controls": 0.003831897477426834,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "1": {
+      "delta_target": 0.0007277572053741282,
+      "mean_controls": 0.000914873708259688,
+      "sd_controls": 0.003970585127092894,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "2": {
+      "delta_target": -0.007695901878371885,
+      "mean_controls": -0.0013749469182074727,
+      "sd_controls": 0.002973377277207071,
+      "n_controls": 8,
+      "within_2sd": false
+     },
+     "3": {
+      "delta_target": -0.001802882325804592,
+      "mean_controls": -0.004779776953796582,
+      "sd_controls": 0.002005512917513057,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "4": {
+      "delta_target": 0.0017274501504591644,
+      "mean_controls": -0.0004534339617188664,
+      "sd_controls": 0.001455754729119281,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "5": {
+      "delta_target": 0.002459935485893885,
+      "mean_controls": -0.0023881575707771687,
+      "sd_controls": 0.0014575219237125162,
+      "n_controls": 8,
+      "within_2sd": false
+     },
+     "6": {
+      "delta_target": 0.011056717992718772,
+      "mean_controls": 0.0034971152563283018,
+      "sd_controls": 0.0036935344446874193,
+      "n_controls": 8,
+      "within_2sd": false
+     },
+     "7": {
+      "delta_target": 0.0063072125562392296,
+      "mean_controls": 0.007080034266203519,
+      "sd_controls": 0.0027000584174660734,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "8": {
+      "delta_target": 0.0012699123658751487,
+      "mean_controls": -0.0043497774260757155,
+      "sd_controls": 0.004331289773597752,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "9": {
+      "delta_target": -0.012240662082197196,
+      "mean_controls": -0.010476851085737083,
+      "sd_controls": 0.007307330488382394,
+      "n_controls": 8,
+      "within_2sd": true
+     },
+     "10": {
+      "delta_target": -0.018612955230774796,
+      "mean_controls": -0.021317270245210282,
+      "sd_controls": 0.0026901622354765136,
+      "n_controls": 8,
+      "within_2sd": true
+     }
+    },
+    "neighbours_10as": [],
+    "colour": {
+     "target_bp_rp": 0.911183,
+     "min_control_gap_mag": 0.0012950000000000461,
+     "unmatched": false,
+     "control_trend": {
+      "slope_per_mag": 0.004237280445723753,
+      "extrapolated_delta_at_target_colour": -0.0023407818144609424,
+      "target_delta": 9.8116326112094e-07,
+      "control_colour_span": [
+       0.781157,
+       0.981898
+      ]
+     }
+    }
+   },
+   "disposition": {
+    "S_sym": "non_promotable_asymmetric"
+   }
+  }
+ ]
+}

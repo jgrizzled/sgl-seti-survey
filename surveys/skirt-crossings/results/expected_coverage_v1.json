@@ -1,0 +1,522 @@
+{
+ "efficiency_by_eps_bin": {
+  "0-5": 0.0,
+  "5-10": 0.0,
+  "10-15": 0.0,
+  "15-20": 0.0,
+  "20-25": 0.0,
+  "25-30": 0.0,
+  "30-35": 0.0,
+  "35-40": 0.0,
+  "40-45": 0.019,
+  "45-50": 0.049,
+  "50-55": 0.075,
+  "55-60": 0.113,
+  "60-65": 0.178,
+  "65-70": 0.209,
+  "70-75": 0.207,
+  "75-80": 0.277,
+  "80-85": 0.254,
+  "85-90": 0.295,
+  "90-95": 0.284,
+  "95-100": 0.292,
+  "100-105": 0.331,
+  "105-110": 0.354,
+  "110-115": 0.413,
+  "115-120": 0.372,
+  "120-125": 0.354,
+  "125-130": 0.399,
+  "130-135": 0.389,
+  "135-140": 0.448,
+  "140-145": 0.409,
+  "145-150": 0.371,
+  "150-155": 0.39,
+  "155-160": 0.352,
+  "160-165": 0.383,
+  "165-170": 0.379,
+  "170-175": 0.419,
+  "175-180": 0.423
+ },
+ "targets": {
+  "teegarden": {
+   "ecl_lat_deg": 0.31615785639679866,
+   "o_est": 12.635466595649245,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.1,
+     "opp_nights_per_yr": 45.7,
+     "out_nights_per_yr": 37.4,
+     "skirt_days_per_yr": 117.8
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 4.0,
+     "opp_nights_per_yr": 50.2,
+     "out_nights_per_yr": 31.0,
+     "skirt_days_per_yr": 129.9
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 7.1,
+     "opp_nights_per_yr": 56.4,
+     "out_nights_per_yr": 21.7,
+     "skirt_days_per_yr": 145.5
+    }
+   }
+  },
+  "gj-12724": {
+   "ecl_lat_deg": -40.77759422770009,
+   "o_est": 14.454598798206362,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 4.6,
+     "opp_nights_per_yr": 38.9,
+     "out_nights_per_yr": 52.2,
+     "skirt_days_per_yr": 92.8
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 7.6,
+     "opp_nights_per_yr": 45.8,
+     "out_nights_per_yr": 42.3,
+     "skirt_days_per_yr": 110.2
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 12.1,
+     "opp_nights_per_yr": 55.0,
+     "out_nights_per_yr": 28.7,
+     "skirt_days_per_yr": 131.6
+    }
+   }
+  },
+  "gj-1111": {
+   "ecl_lat_deg": 7.5504964286357845,
+   "o_est": 12.522595375523297,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.1,
+     "opp_nights_per_yr": 44.9,
+     "out_nights_per_yr": 36.4,
+     "skirt_days_per_yr": 121.6
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 3.9,
+     "opp_nights_per_yr": 49.4,
+     "out_nights_per_yr": 30.1,
+     "skirt_days_per_yr": 133.7
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 7.1,
+     "opp_nights_per_yr": 55.4,
+     "out_nights_per_yr": 20.9,
+     "skirt_days_per_yr": 149.6
+    }
+   }
+  },
+  "gj-9193": {
+   "ecl_lat_deg": -27.60527333381912,
+   "o_est": 14.162384797161153,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.6,
+     "opp_nights_per_yr": 42.1,
+     "out_nights_per_yr": 41.5,
+     "skirt_days_per_yr": 110.3
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 4.8,
+     "opp_nights_per_yr": 47.3,
+     "out_nights_per_yr": 34.1,
+     "skirt_days_per_yr": 125.2
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 8.6,
+     "opp_nights_per_yr": 54.1,
+     "out_nights_per_yr": 23.5,
+     "skirt_days_per_yr": 144.0
+    }
+   }
+  },
+  "eps-ind-b": {
+   "ecl_lat_deg": -41.464262155924374,
+   "o_est": 18.475845130539003,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 4.7,
+     "opp_nights_per_yr": 39.1,
+     "out_nights_per_yr": 52.1,
+     "skirt_days_per_yr": 91.8
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 7.8,
+     "opp_nights_per_yr": 45.8,
+     "out_nights_per_yr": 42.3,
+     "skirt_days_per_yr": 109.7
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 12.3,
+     "opp_nights_per_yr": 54.8,
+     "out_nights_per_yr": 28.8,
+     "skirt_days_per_yr": 131.3
+    }
+   }
+  },
+  "gj-11068": {
+   "ecl_lat_deg": -30.625286835757766,
+   "o_est": 15.727381762193271,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.8,
+     "opp_nights_per_yr": 40.9,
+     "out_nights_per_yr": 42.7,
+     "skirt_days_per_yr": 109.2
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 5.0,
+     "opp_nights_per_yr": 46.3,
+     "out_nights_per_yr": 35.0,
+     "skirt_days_per_yr": 124.3
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 8.7,
+     "opp_nights_per_yr": 53.5,
+     "out_nights_per_yr": 24.1,
+     "skirt_days_per_yr": 142.9
+    }
+   }
+  },
+  "luhman16-a": {
+   "ecl_lat_deg": -53.888807201033615,
+   "o_est": 15.866581291521683,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 5.1,
+     "opp_nights_per_yr": 20.1,
+     "out_nights_per_yr": 73.1,
+     "skirt_days_per_yr": 54.0
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 10.2,
+     "opp_nights_per_yr": 31.7,
+     "out_nights_per_yr": 56.4,
+     "skirt_days_per_yr": 85.8
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 17.0,
+     "opp_nights_per_yr": 44.3,
+     "out_nights_per_yr": 37.0,
+     "skirt_days_per_yr": 119.4
+    }
+   }
+  },
+  "luhman16-b": {
+   "ecl_lat_deg": -53.88887024481932,
+   "o_est": 15.866581291521683,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 5.1,
+     "opp_nights_per_yr": 20.1,
+     "out_nights_per_yr": 73.1,
+     "skirt_days_per_yr": 54.0
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 10.2,
+     "opp_nights_per_yr": 31.7,
+     "out_nights_per_yr": 56.4,
+     "skirt_days_per_yr": 85.8
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 17.0,
+     "opp_nights_per_yr": 44.3,
+     "out_nights_per_yr": 37.0,
+     "skirt_days_per_yr": 119.4
+    }
+   }
+  },
+  "gj-915": {
+   "ecl_lat_deg": -39.08482559639911,
+   "o_est": 12.71246600407177,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 4.0,
+     "opp_nights_per_yr": 40.6,
+     "out_nights_per_yr": 49.4,
+     "skirt_days_per_yr": 95.3
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 6.9,
+     "opp_nights_per_yr": 46.9,
+     "out_nights_per_yr": 40.2,
+     "skirt_days_per_yr": 112.2
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 11.2,
+     "opp_nights_per_yr": 55.3,
+     "out_nights_per_yr": 27.5,
+     "skirt_days_per_yr": 133.3
+    }
+   }
+  },
+  "gj-518": {
+   "ecl_lat_deg": 12.774250692471211,
+   "o_est": 14.304080205583967,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.4,
+     "opp_nights_per_yr": 44.7,
+     "out_nights_per_yr": 38.1,
+     "skirt_days_per_yr": 116.3
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 4.4,
+     "opp_nights_per_yr": 49.3,
+     "out_nights_per_yr": 31.4,
+     "skirt_days_per_yr": 129.2
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 7.9,
+     "opp_nights_per_yr": 55.6,
+     "out_nights_per_yr": 21.7,
+     "skirt_days_per_yr": 146.0
+    }
+   }
+  },
+  "gj-1276": {
+   "ecl_lat_deg": 0.228649750007323,
+   "o_est": 15.384647687220552,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.2,
+     "opp_nights_per_yr": 48.0,
+     "out_nights_per_yr": 36.7,
+     "skirt_days_per_yr": 116.1
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 4.2,
+     "opp_nights_per_yr": 52.4,
+     "out_nights_per_yr": 30.3,
+     "skirt_days_per_yr": 128.0
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 7.4,
+     "opp_nights_per_yr": 58.5,
+     "out_nights_per_yr": 21.0,
+     "skirt_days_per_yr": 143.6
+    }
+   }
+  },
+  "gj-2012": {
+   "ecl_lat_deg": -24.524595771421026,
+   "o_est": 14.19362534846802,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.6,
+     "opp_nights_per_yr": 44.3,
+     "out_nights_per_yr": 41.0,
+     "skirt_days_per_yr": 109.4
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 4.9,
+     "opp_nights_per_yr": 49.6,
+     "out_nights_per_yr": 33.4,
+     "skirt_days_per_yr": 123.2
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 8.4,
+     "opp_nights_per_yr": 56.5,
+     "out_nights_per_yr": 23.0,
+     "skirt_days_per_yr": 140.6
+    }
+   }
+  },
+  "gj-11547": {
+   "ecl_lat_deg": -43.06803726794887,
+   "o_est": 14.460495326234067,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 4.8,
+     "opp_nights_per_yr": 35.9,
+     "out_nights_per_yr": 53.0,
+     "skirt_days_per_yr": 89.7
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 8.0,
+     "opp_nights_per_yr": 42.9,
+     "out_nights_per_yr": 42.7,
+     "skirt_days_per_yr": 110.1
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 12.8,
+     "opp_nights_per_yr": 51.9,
+     "out_nights_per_yr": 28.9,
+     "skirt_days_per_yr": 134.1
+    }
+   }
+  },
+  "gj-293": {
+   "ecl_lat_deg": -79.0507715300983,
+   "o_est": 13.667131502199231,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 0.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 104.6,
+     "skirt_days_per_yr": 0.0
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 0.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 104.6,
+     "skirt_days_per_yr": 0.0
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 0.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 104.6,
+     "skirt_days_per_yr": 0.0
+    }
+   }
+  },
+  "gj-3306": {
+   "ecl_lat_deg": -30.582425712188407,
+   "o_est": 13.45212620496367,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.7,
+     "opp_nights_per_yr": 41.0,
+     "out_nights_per_yr": 43.6,
+     "skirt_days_per_yr": 105.5
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 5.0,
+     "opp_nights_per_yr": 46.5,
+     "out_nights_per_yr": 35.9,
+     "skirt_days_per_yr": 120.8
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 8.9,
+     "opp_nights_per_yr": 53.6,
+     "out_nights_per_yr": 24.9,
+     "skirt_days_per_yr": 140.2
+    }
+   }
+  },
+  "gj-3112": {
+   "ecl_lat_deg": -65.94709014900144,
+   "o_est": 13.55912846288268,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 0.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 108.8,
+     "skirt_days_per_yr": 0.0
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 0.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 108.8,
+     "skirt_days_per_yr": 0.0
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 18.7,
+     "opp_nights_per_yr": 30.2,
+     "out_nights_per_yr": 59.9,
+     "skirt_days_per_yr": 89.8
+    }
+   }
+  },
+  "gj-1087": {
+   "ecl_lat_deg": -18.07428098087586,
+   "o_est": 13.855303146756524,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 2.3,
+     "opp_nights_per_yr": 43.3,
+     "out_nights_per_yr": 38.4,
+     "skirt_days_per_yr": 116.7
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 4.3,
+     "opp_nights_per_yr": 47.9,
+     "out_nights_per_yr": 31.7,
+     "skirt_days_per_yr": 130.3
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 7.8,
+     "opp_nights_per_yr": 54.3,
+     "out_nights_per_yr": 21.8,
+     "skirt_days_per_yr": 147.4
+    }
+   }
+  },
+  "wolf-1069": {
+   "ecl_lat_deg": 71.7315635149364,
+   "o_est": 12.56843448221518,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 0.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 105.0,
+     "skirt_days_per_yr": 0.0
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 0.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 105.0,
+     "skirt_days_per_yr": 0.0
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 9.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 96.0,
+     "skirt_days_per_yr": 43.3
+    }
+   }
+  },
+  "gj-3512": {
+   "ecl_lat_deg": 39.53634597628423,
+   "o_est": 13.341849870804014,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 3.9,
+     "opp_nights_per_yr": 38.8,
+     "out_nights_per_yr": 48.5,
+     "skirt_days_per_yr": 97.6
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 6.6,
+     "opp_nights_per_yr": 45.1,
+     "out_nights_per_yr": 39.5,
+     "skirt_days_per_yr": 115.5
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 10.9,
+     "opp_nights_per_yr": 53.2,
+     "out_nights_per_yr": 27.1,
+     "skirt_days_per_yr": 137.0
+    }
+   }
+  },
+  "gj-13157": {
+   "ecl_lat_deg": 63.73676804671258,
+   "o_est": 14.287887443923584,
+   "rungs": {
+    "0.85": {
+     "skirt_nights_per_yr": 0.0,
+     "opp_nights_per_yr": 0.0,
+     "out_nights_per_yr": 106.3,
+     "skirt_days_per_yr": 0.0
+    },
+    "0.9": {
+     "skirt_nights_per_yr": 4.1,
+     "opp_nights_per_yr": 8.0,
+     "out_nights_per_yr": 94.2,
+     "skirt_days_per_yr": 22.9
+    },
+    "0.95": {
+     "skirt_nights_per_yr": 18.2,
+     "opp_nights_per_yr": 36.1,
+     "out_nights_per_yr": 52.0,
+     "skirt_days_per_yr": 92.1
+    }
+   }
+  }
+ }
+}

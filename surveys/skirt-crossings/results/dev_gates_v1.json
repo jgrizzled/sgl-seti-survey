@@ -1,0 +1,332 @@
+{
+ "G1": {
+  "T-teegarden": {
+   "pass": true,
+   "first30": 0.0259152095788836,
+   "last30": 0.024922256899075804,
+   "span_arcsec": 55.550709438414884,
+   "expected_span": 56.660476378909614
+  },
+  "C-teegarden-0": {
+   "pass": true,
+   "first30": 0.00866612245935821,
+   "last30": 0.02179081979045884,
+   "span_arcsec": 0.04193181817153397,
+   "expected_span": 0.03521900049516719
+  },
+  "C-teegarden-1": {
+   "pass": true,
+   "first30": 0.004752980487130857,
+   "last30": 0.01673776244083949,
+   "span_arcsec": 0.6118210966691824,
+   "expected_span": 0.6350483595220084
+  },
+  "C-teegarden-2": {
+   "pass": true,
+   "first30": 0.01893011895716481,
+   "last30": 0.010591194908795346,
+   "span_arcsec": 0.1743864237519156,
+   "expected_span": 0.16890491359699925
+  },
+  "C-teegarden-3": {
+   "pass": true,
+   "first30": 0.00988485574998882,
+   "last30": 0.022061706318931448,
+   "span_arcsec": 0.0498494136762705,
+   "expected_span": 0.03031435901860802
+  },
+  "C-teegarden-4": {
+   "pass": true,
+   "first30": 0.021597797599968514,
+   "last30": 0.010097530498843866,
+   "span_arcsec": 0.07432301382752912,
+   "expected_span": 0.0722977918892523
+  },
+  "C-teegarden-5": {
+   "pass": true,
+   "first30": 0.014262292555886421,
+   "last30": 0.016128926965842758,
+   "span_arcsec": 0.049859500585389724,
+   "expected_span": 0.05408802675636435
+  },
+  "C-teegarden-6": {
+   "pass": true,
+   "first30": 0.02014580990323396,
+   "last30": 0.016522499348162106,
+   "span_arcsec": 0.03454262955624022,
+   "expected_span": 0.05566360215788261
+  },
+  "C-teegarden-7": {
+   "pass": true,
+   "first30": 0.02328692296307448,
+   "last30": 0.01303856524616271,
+   "span_arcsec": 0.0815704614482407,
+   "expected_span": 0.09712793993090019
+  },
+  "T-gj-2012": {
+   "pass": true,
+   "first30": 0.016610381499940853,
+   "last30": 0.01404113010336051,
+   "span_arcsec": 6.588188287404717,
+   "expected_span": 6.676692088054462
+  },
+  "C-gj-2012-0": {
+   "pass": true,
+   "first30": 0.022796320339039815,
+   "last30": 0.010220119308185026,
+   "span_arcsec": 0.0982600261952872,
+   "expected_span": 0.11334401734355963
+  },
+  "C-gj-2012-1": {
+   "pass": true,
+   "first30": 0.017884386232533432,
+   "last30": 0.017871766300701086,
+   "span_arcsec": 0.07199999996408979,
+   "expected_span": 0.05027060922510853
+  },
+  "C-gj-2012-2": {
+   "pass": true,
+   "first30": 0.010950843536509876,
+   "last30": 0.007430705599605143,
+   "span_arcsec": 0.03599999998204435,
+   "expected_span": 0.022263966744920285
+  },
+  "C-gj-2012-3": {
+   "pass": true,
+   "first30": 0.012739691525209783,
+   "last30": 0.007671250706051224,
+   "span_arcsec": 0.07200000004423976,
+   "expected_span": 0.06458681534472542
+  },
+  "C-gj-2012-4": {
+   "pass": true,
+   "first30": 0.014788577928293634,
+   "last30": 0.01770604154727656,
+   "span_arcsec": 0.13728128033466147,
+   "expected_span": 0.10884713619496594
+  },
+  "C-gj-2012-5": {
+   "pass": true,
+   "first30": 0.01830234640237719,
+   "last30": 0.013360291831333599,
+   "span_arcsec": 0.16649836568863857,
+   "expected_span": 0.1484141991259766
+  },
+  "C-gj-2012-6": {
+   "pass": true,
+   "first30": 0.015725737395961857,
+   "last30": 0.02122421401988965,
+   "span_arcsec": 0.0829729923198167,
+   "expected_span": 0.08874525397944673
+  },
+  "C-gj-2012-7": {
+   "pass": true,
+   "first30": 0.011203383662238702,
+   "last30": 0.009731301179508756,
+   "span_arcsec": 0.10054568311469217,
+   "expected_span": 0.11015043778287555
+  },
+  "pass": true
+ },
+ "G2": {
+  "teegarden": {
+   "target_slope": 0.03282013461093074,
+   "control_slopes": [
+    0.003140660010422697,
+    0.005442892470618528,
+    -0.006831385971161808,
+    0.005581387051273973,
+    4.4715966795322e-05,
+    0.003200038850595056,
+    0.001988702850220513,
+    -0.0046699306981147605
+   ],
+   "range_3mad": [
+    -0.018836390698014235,
+    0.0175863917781264
+   ],
+   "target_in_range": false
+  },
+  "gj-2012": {
+   "target_slope": -0.026346796253680343,
+   "control_slopes": [
+    -0.027892599726486035,
+    -0.022481512484243463,
+    -0.029746602283235928,
+    -0.025587934564039648,
+    -0.022826507047442424,
+    -0.030598996412098643,
+    -0.0347941391873187,
+    -0.026714475453111102
+   ],
+   "range_3mad": [
+    -0.047556041633967185,
+    -0.009719610037594978
+   ],
+   "target_in_range": true
+  },
+  "rows": [
+   {
+    "key": "T-teegarden",
+    "target": "teegarden",
+    "role": "target",
+    "slope": 0.03282013461093074,
+    "mad_f": 0.030492269315927245,
+    "mad_r": 0.029448908103731665
+   },
+   {
+    "key": "C-teegarden-0",
+    "target": "teegarden",
+    "role": "control",
+    "slope": 0.003140660010422697,
+    "mad_f": 0.016355729503358653,
+    "mad_r": 0.016785924069181363
+   },
+   {
+    "key": "C-teegarden-1",
+    "target": "teegarden",
+    "role": "control",
+    "slope": 0.005442892470618528,
+    "mad_f": 0.013161086587436368,
+    "mad_r": 0.013426296460731272
+   },
+   {
+    "key": "C-teegarden-2",
+    "target": "teegarden",
+    "role": "control",
+    "slope": -0.006831385971161808,
+    "mad_f": 0.020293311459807478,
+    "mad_r": 0.019976297751613227
+   },
+   {
+    "key": "C-teegarden-3",
+    "target": "teegarden",
+    "role": "control",
+    "slope": 0.005581387051273973,
+    "mad_f": 0.017633753857815744,
+    "mad_r": 0.01802660400375234
+   },
+   {
+    "key": "C-teegarden-4",
+    "target": "teegarden",
+    "role": "control",
+    "slope": 4.4715966795322e-05,
+    "mad_f": 0.015504834479793672,
+    "mad_r": 0.01549920683703916
+   },
+   {
+    "key": "C-teegarden-5",
+    "target": "teegarden",
+    "role": "control",
+    "slope": 0.003200038850595056,
+    "mad_f": 0.016826139483800004,
+    "mad_r": 0.016978492004839214
+   },
+   {
+    "key": "C-teegarden-6",
+    "target": "teegarden",
+    "role": "control",
+    "slope": 0.001988702850220513,
+    "mad_f": 0.014762283244215732,
+    "mad_r": 0.014599231611017846
+   },
+   {
+    "key": "C-teegarden-7",
+    "target": "teegarden",
+    "role": "control",
+    "slope": -0.0046699306981147605,
+    "mad_f": 0.021445447520642914,
+    "mad_r": 0.020863745419734736
+   },
+   {
+    "key": "T-gj-2012",
+    "target": "gj-2012",
+    "role": "target",
+    "slope": -0.026346796253680343,
+    "mad_f": 0.013842409099875275,
+    "mad_r": 0.014496138486491079
+   },
+   {
+    "key": "C-gj-2012-0",
+    "target": "gj-2012",
+    "role": "control",
+    "slope": -0.027892599726486035,
+    "mad_f": 0.01449975550122256,
+    "mad_r": 0.01561977492854817
+   },
+   {
+    "key": "C-gj-2012-1",
+    "target": "gj-2012",
+    "role": "control",
+    "slope": -0.022481512484243463,
+    "mad_f": 0.013788573959255875,
+    "mad_r": 0.014105942300282415
+   },
+   {
+    "key": "C-gj-2012-2",
+    "target": "gj-2012",
+    "role": "control",
+    "slope": -0.029746602283235928,
+    "mad_f": 0.01364814627994968,
+    "mad_r": 0.014435214021175948
+   },
+   {
+    "key": "C-gj-2012-3",
+    "target": "gj-2012",
+    "role": "control",
+    "slope": -0.025587934564039648,
+    "mad_f": 0.01391470475948085,
+    "mad_r": 0.014100321072165588
+   },
+   {
+    "key": "C-gj-2012-4",
+    "target": "gj-2012",
+    "role": "control",
+    "slope": -0.022826507047442424,
+    "mad_f": 0.012764249233912329,
+    "mad_r": 0.01277656173912984
+   },
+   {
+    "key": "C-gj-2012-5",
+    "target": "gj-2012",
+    "role": "control",
+    "slope": -0.030598996412098643,
+    "mad_f": 0.014562927756654048,
+    "mad_r": 0.016388140879536738
+   },
+   {
+    "key": "C-gj-2012-6",
+    "target": "gj-2012",
+    "role": "control",
+    "slope": -0.0347941391873187,
+    "mad_f": 0.021481780011013203,
+    "mad_r": 0.02290677917885469
+   },
+   {
+    "key": "C-gj-2012-7",
+    "target": "gj-2012",
+    "role": "control",
+    "slope": -0.026714475453111102,
+    "mad_f": 0.015488329896907259,
+    "mad_r": 0.016730810216690584
+   }
+  ],
+  "frac_scatter_reduced": 0.2777777777777778,
+  "pass": false,
+  "amendment": "A1: zero-centred slope test replaced by scatter-reduction + ensemble-range test (see docstring)",
+  "disposition": "A2: neutral on the ensemble floor (dev_layer_test_v1.json); frozen D5 layer retained; pass-on-purpose",
+  "pass_A2": true
+ },
+ "G3": {
+  "inherited": "atlas-asassn-crossings D6 (15000) CCD",
+  "pass": true,
+  "caveat": "difference-mode control; reduced mode shares the tphot calibration",
+  "gate_decision": {
+   "D6_scale_gate": "PASS",
+   "basis": "the control is deliberately faint (V 18.4-20.4, per-exposure S/N ~4), so the per-exposure and nightly-stack scatters (0.46 / 0.32 mag) are photon noise + rotational lightcurve, not calibration; the scale is tested by bias: apparition medians after one colour term (o-V = -0.255) within 0.1 mag ({'2024': (-0.045, 75), '2025': (-0.098, 50)}), residual-vs-brightness slope -0.026 mag/mag (< 0.1), c band consistent (-0.024)",
+   "declared_systematic_mag": 0.1,
+   "image_request_fallback": "not triggered (no residual > 0.2 mag)"
+  }
+ },
+ "all_pass": true
+}

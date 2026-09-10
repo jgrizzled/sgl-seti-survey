@@ -775,3 +775,41 @@ barycentric grid does *not* see.
 - **Process hygiene, third time**: `pkill -f <pattern>` from a shell
   whose own command line contains the pattern kills that shell; use
   the PID from `pgrep -f '^python …'` or `kill <pid>`.
+
+## §17 — Outer-skirt blended search (2026-09-10): a blended on-star step against a null ensemble
+
+- **Earth's distance from the Sun–star axis is exactly r_E sin ε.** A
+  1 AU beam therefore contains Earth all year (no temporal signature —
+  ledger only), and any sub-1 AU top-hat beam switches at
+  ε_b = arcsin(r_b/r_E) on *both* sides of the Sun: the skirt at
+  conjunction and the mirror band at opposition are the same beam.
+  Design the blended cell as a symmetric step and use the opposition
+  side as the veto — 13 of 17 blind exceedances failed it.
+- **A fixed-position forced-photometry series of a nearby star
+  carries a ~1 % annual parallax step** peaking at quadrature (the
+  fit loses flux where the parallactic offset is largest). The
+  response of a fixed-position PSF fit to an offset is neither the
+  peak factor exp(−d²/2σ²) nor the cross-correlation exp(−d²/4σ²);
+  measured k = 2.42 in exp(−d²/kσ²) (six offset tasks, 9,219
+  exposures). Correct with the measured exponent against the apparent
+  (PM + parallax) position; the residual is ±0.2 % for π ≈ 0.26″.
+- **ATLAS applies proper motion server-side** (`propermotion_ra` =
+  μα cos δ, `radec_epoch_year`): one full-history task per star at
+  any PM. Reduced-mode full history runs in 12–15 min (not the 25–70
+  of difference mode). Obs-prefix sites: 03 = Sutherland, 04 = El
+  Sauce. Practical solar-elongation floor ~50° (5–8 % night
+  efficiency at 45–55°).
+- **A null ensemble in a 1° field cannot colour-match BP−RP > 3.5
+  targets**; the colour-dependent twilight/airmass systematic then
+  survives on the S2 side alone. Pre-declare such targets
+  systematics-limited (A4) or widen the control field and accept a
+  different exposure set. The colour-matched targets ran to budget
+  (6 vs 5.0); the red ones drove the over-budget count.
+- **Injection into the real in-beam set with S > max(T, 0)** returns
+  the real excess for exceedance trials — inject into pseudo-sets, or
+  test S_inj − S_real against T, in any step-statistic v2.
+- **Isolation cones must scale with neighbour brightness**: a G 9.4
+  star at 14″ made gj-13157's tphot series (chi/N 35,800) wing
+  contamination; the 10″ cone missed it.
+- A drain that polls a remote queue for a day needs network-error
+  retries; a transient DNS failure killed it once.

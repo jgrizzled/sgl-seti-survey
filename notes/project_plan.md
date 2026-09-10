@@ -1227,13 +1227,42 @@ thin.
 ### 5.25 S2 1 AU outer-skirt blended search
 
 **Description.** The one sunward cell the 2026-08-25 geometry study
-left outside the coronagraph substrate: the S2 uplink at the 1 AU rung
-whose outer skirt sits at ε ≳ 30–40°, reachable by a night-sky archive
-(ATLAS-style, §5.9) as a blended search near the star.
+left outside the coronagraph substrate: the S2 uplink (star → relay
+beam intercepted by Earth on the anti-target side of the Sun) at the
+1 AU rung, whose outer skirt sits at ε ≳ 30–40° and is reachable by a
+night-sky archive (ATLAS, §5.9) as a blended search on the star. Recon
+(2026-09-07, `surveys/skirt-crossings/notes/skirt_recon_2026-09-07.md`)
+reshaped the cell: Earth's axis distance is exactly r_E sin ε, so the
+1 AU rung has no temporal signature (ledger only) and the testable
+quantity is the **elongation-locked step of sub-1 AU uplink beams**
+(0.90 / 0.95 AU, edges 64° / 72°) — on in the skirt below the edge and
+again past opposition, off in the quadrature band — above the
+measured ATLAS solar-elongation floor (~50°), tested with a null
+ensemble of 8 field stars per target in the same exposures.
 
-**Status.** Open, low priority (geometry study §4 caveat 3).
+**Status.** **COMPLETE 2026-09-10** — report `report/skirt_crossings.md`.
+Chain: recon → freeze v1.0 (D1–D8, approved 2026-09-07) → 162
+reduced-mode full-history ATLAS tasks with server-side proper motion
+(~30 h drain) → dev with amendments A1–A4 (airmass-layer gate
+rewording; **parallax response correction with a measured PSF-fit
+response exponent k = 2.42** — the parallactic displacement peaks at
+quadrature and is itself a ~1 % elongation-locked step; the
+colour-unmatched rule for the five reddest targets) → cut (16 of 18
+targets unsaturated) → threshold freeze (28 searched units, 81 trials,
+9.0 expected crossings) → blind confirmatory → adjudication →
+completeness (A5: no depth for exceedance trials) → report.
 
-**Trigger.** None scheduled.
+**Result.** **0 candidates.** 24 exceedances vs 9.0 expected — 13
+asymmetric (S2-side-only or opposite-sign, which a beam cannot do),
+2 single-cycle, 1 ensemble-shared, 8 `retained_ambiguous_colour_unmatched`
+(teegarden, gj-3512: red targets with no colour-matched control); the
+9 colour-matched targets ran to budget (6 vs 5.0). 90 % depths on the
+57 non-exceedance trials: **0.6–24 MW through the 0.90–0.95 AU beams
+(S_sym median 6–8 MW; 0.6–1.5 MW on gj-1276 / eps-ind-b)**, a
+1.5–6.5 mag contrast below each star — the first constraint on the
+sub-1 AU uplink rungs. gj-13157 crowded (G 9.4 star at 14″) and
+systematics-limited. 1 AU ledger: every conjunction cycle has 7–31
+S2-side nights at ε ≥ 50°.
 
 ### 5.26 High-energy archives
 

@@ -1,0 +1,224 @@
+{
+ "freeze_version": "skirt-crossings-thresholds-v1-dev",
+ "frozen_at": "2026-09-07T21:37:02.125413+00:00",
+ "hypothesis_version": "skirt-crossings-hypotheses-v1.0 (D1-D8 approved 2026-09-07)",
+ "seed": 20260907,
+ "input_hashes": {
+  "hypotheses": "sha256:1beeaae2171e1aa1cda54d9d49843cd8e4a892b66ed347c85e2b6ae7834c4fe7",
+  "task_list": "sha256:493087e7f100da0b7df11a005e5a1f6f49c28f160bf598cc52f7f479e4e48975",
+  "coverage": "sha256:2eeb9fb7d9fdb597a70aa0b38a8e1df8088e176f1316843c85fe6fcdfe5440db",
+  "control_pool": "sha256:ae3db1f1cc0d8077ca0f873a774682f6218d3d62816c42d6aa78f8263356e4cc",
+  "geometry": "sha256:7a8891b17396c76db93c1c2d5bb8f98a8c263a958ccf0cac6b83b25edb9485c8",
+  "search_core": "sha256:66ea8f9b70a730887902de9e5a6be2f2f487285843ca947aabd3f121655181d7"
+ },
+ "substrate": "ATLAS reduced-mode (target-image tphot) full-history forced photometry with server-side proper motion; o searched, c annotation",
+ "sites": {
+  "01": "Haleakala",
+  "02": "Mauna Loa",
+  "03": "Sutherland",
+  "04": "El Sauce"
+ },
+ "geometry": {
+  "floor_deg": 50.0,
+  "rungs_au": [
+   "0.9",
+   "0.95"
+  ],
+  "in_beam": "r_E sin(eps) < r_b (both sides)",
+  "cycle": "conjunction +/- 182.625 d",
+  "elongation_source": "target curve for target and controls"
+ },
+ "quality": {
+  "primary_mask": "FAQ recipe + site prefix in {01,02,03,04}",
+  "response_gate": "R >= 0.9",
+  "epoch": "nightly-unit median of >= 2 exposures",
+  "airmass_layer": "f = a + b (X-1) over all nightly epochs, per star and band"
+ },
+ "statistics": {
+  "S_sym": "sum(Delta_y/v_y)/sqrt(sum 1/v_y), IN both sides",
+  "S_skirt": "same, S2 side only",
+  "S_year": "max_y Delta_y/sqrt(v_y)",
+  "S_opp": "annotation, opposition side only"
+ },
+ "gates": {
+  "cycle_valid": "n_in >= 5 (skirt 3) and n_out >= 5",
+  "min_cycles": {
+   "S_sym": 3,
+   "S_skirt": 3,
+   "S_year": 1
+  },
+  "min_valid_controls": 4,
+  "control_validity": "same gate on the control series (mirror-gated)"
+ },
+ "threshold_rule": "T = max over valid controls; exceedance S > max(T, 0); p_crossing = 1/(n_valid+1)",
+ "controls": "null ensemble: 8 field stars per target drawn with seed 20260907 from control_pool_v1 (task_list_v1)",
+ "split": {
+  "dev": [
+   "teegarden",
+   "gj-2012"
+  ],
+  "confirmatory": []
+ },
+ "completeness": {
+  "method": "top-hat step of flux f x R_i added to every IN exposure (both sides) before normalisation; frozen chain; 100 draws per magnitude with 20 % random nightly-epoch dropout (pre-data clarification of hypotheses \u00a78: adding photon noise to a real series would double-count it); m90 = faintest grid magnitude with >= 90 % of draws exceeding max(T, 0)",
+  "mag_grid": [
+   15.0,
+   15.5,
+   16.0,
+   16.5,
+   17.0,
+   17.5,
+   18.0,
+   18.5,
+   19.0,
+   19.5,
+   20.0,
+   20.5,
+   21.0,
+   21.5,
+   22.0,
+   22.5,
+   23.0
+  ],
+  "dropout": 0.2,
+  "n_draw": 100,
+  "power": "P = F_line pi r_b^2, o-band line 690 nm / 260 nm width, +/-0.1 mag scale (inherited ATLAS D6)"
+ },
+ "units": [
+  {
+   "target_id": "teegarden",
+   "rung_au": "0.9",
+   "band": "o",
+   "split": "dev",
+   "class": "searched",
+   "saturation_status": "marginal",
+   "o_median": 12.54675410189345,
+   "n_nights_o": 728,
+   "statistics": {
+    "S_sym": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 10
+    },
+    "S_skirt": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 7
+    },
+    "S_year": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 10
+    }
+   },
+   "n_trials": 3,
+   "expected_control_crossings": 0.3333,
+   "notes": []
+  },
+  {
+   "target_id": "teegarden",
+   "rung_au": "0.95",
+   "band": "o",
+   "split": "dev",
+   "class": "searched",
+   "saturation_status": "marginal",
+   "o_median": 12.54675410189345,
+   "n_nights_o": 728,
+   "statistics": {
+    "S_sym": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 9
+    },
+    "S_skirt": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 6
+    },
+    "S_year": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 9
+    }
+   },
+   "n_trials": 3,
+   "expected_control_crossings": 0.3333,
+   "notes": []
+  },
+  {
+   "target_id": "gj-2012",
+   "rung_au": "0.9",
+   "band": "o",
+   "split": "dev",
+   "class": "searched",
+   "saturation_status": "ok",
+   "o_median": 14.197251954027456,
+   "n_nights_o": 849,
+   "statistics": {
+    "S_sym": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 11
+    },
+    "S_skirt": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 7
+    },
+    "S_year": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 11
+    }
+   },
+   "n_trials": 3,
+   "expected_control_crossings": 0.3333,
+   "notes": []
+  },
+  {
+   "target_id": "gj-2012",
+   "rung_au": "0.95",
+   "band": "o",
+   "split": "dev",
+   "class": "searched",
+   "saturation_status": "ok",
+   "o_median": 14.197251954027456,
+   "n_nights_o": 849,
+   "statistics": {
+    "S_sym": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 10
+    },
+    "S_skirt": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 7
+    },
+    "S_year": {
+     "n_valid_controls": 8,
+     "p_crossing": 0.1111,
+     "n_valid_cycles_target": 10
+    }
+   },
+   "n_trials": 3,
+   "expected_control_crossings": 0.3333,
+   "notes": []
+  }
+ ],
+ "population": {
+  "n_units": 4,
+  "n_searched_units": 4,
+  "n_trials": 12,
+  "n_trials_dev": 12,
+  "n_trials_confirmatory": 0,
+  "expected_control_crossings": 1.333,
+  "classes": {
+   "searched": 4,
+   "constraint_only": 0,
+   "ledger_only": 0,
+   "saturation_excluded": 0
+  }
+ },
+ "freeze_content_hash": "sha256:a1af149bdcd8d996cc6912abedd5c34427ecf4100be54b1899ae4c7f14a87c7d"
+}
