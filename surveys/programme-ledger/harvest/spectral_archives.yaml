@@ -1,0 +1,1507 @@
+survey_id: spectral_archives
+report: report/spectral_archives.md
+plan_section: '5.17'
+pipeline: B
+archives:
+- eso
+- harps
+- espresso
+- nirps
+- cadc
+- spirou
+- carmenes
+hypothesis_version: v1.0 + A1–A9 (amendment v1.1; A9 ESPRESSO vacuum frame during adjudication)
+era: 2006→2025
+run_dir: runs/spectral-archives/v1
+records_dir: null
+candidates: 0
+candidate_notes: 'Blind confirmatory: 24 units, 77 trials, 18 exceedances vs 4.7 expected — 12 sky/telluric, 4 Hg-lamp
+  contamination (one ESPRESSO spectrum), 2 cosmic (one 2-px feature); 0 retained-ambiguous (results/adjudication_confirmatory_v1.json).
+  n_trials is per (unit, cell): rows of one unit at different rungs repeat the same trials. Dev: 10 trials, 1 exceedance
+  (telluric). Recon: 7,644 on-star spectra; 633/30/14 in 0.1 AU / 2.5 R☉ / 1.2 R☉ windows; 29 units fixed, 24 confirmatory
+  searched.'
+rows:
+- target_id: wolf-359
+  channel: A
+  rung: 1.2 Rsun
+  band: 1550 nm (1530–1570 nm)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 12.3
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 1.23e-05
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: 'b 0.76 R☉; A90 0.066; exceedances 2 (S_line 8.4/7.5, S_coadd 17.4/9.0 at 1569.499 nm → telluric: CO₂ line,
+    NIRPS ATM_TRANSM 0.79; absent in SPIRou 2019/2021 in-window spectra); the first 1550 nm line-SED constraint
+    of the programme (deepest: 12 W through 1.2 R☉). power_mw converted from W.'
+- target_id: wolf-359
+  channel: A
+  rung: 2.5 Rsun
+  band: 1550 nm (1530–1570 nm)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 53.2
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 5.32e-05
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: 'b 0.76 R☉; A90 0.066; exceedances 2 (S_line 8.4/7.5, S_coadd 17.4/9.0 at 1569.499 nm → telluric: CO₂ line,
+    NIRPS ATM_TRANSM 0.79; absent in SPIRou 2019/2021 in-window spectra); the first 1550 nm line-SED constraint
+    of the programme (deepest: 12 W through 1.2 R☉). power_mw converted from W.'
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: 1550 nm (1530–1570 nm)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 3940.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00394
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: 'b 0.76 R☉; A90 0.066; exceedances 2 (S_line 8.4/7.5, S_coadd 17.4/9.0 at 1569.499 nm → telluric: CO₂ line,
+    NIRPS ATM_TRANSM 0.79; absent in SPIRou 2019/2021 in-window spectra); the first 1550 nm line-SED constraint
+    of the programme (deepest: 12 W through 1.2 R☉). power_mw converted from W.'
+- target_id: wolf-359
+  channel: A
+  rung: 1.2 Rsun
+  band: 1064 nm (1030–1090 nm)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 21.8
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 2.18e-05
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: b 0.76 R☉; A90 0.1; no exceedance; the first 1064 nm constraint (22 W through 1.2 R☉); cell null (5.5/7.3,
+    10.3/10.8). power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 2.5 Rsun
+  band: 1064 nm (1030–1090 nm)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 94.6
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 9.46e-05
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: b 0.76 R☉; A90 0.1; no exceedance; the first 1064 nm constraint (22 W through 1.2 R☉); cell null (5.5/7.3,
+    10.3/10.8). power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: 1064 nm (1030–1090 nm)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 7000.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.007
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: b 0.76 R☉; A90 0.1; no exceedance; the first 1064 nm constraint (22 W through 1.2 R☉); cell null (5.5/7.3,
+    10.3/10.8). power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 1.2 Rsun
+  band: generic (whole band)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 203
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000203
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: b 0.76 R☉; A90 1.622; exceedances 1 (S_coadd 62/58 at 1807 nm → telluric, 1.8 µm band); generic cell 966–1923
+    nm; F_λ from the measured NIRPS absolute SED. power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 2.5 Rsun
+  band: generic (whole band)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 882
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000882
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: b 0.76 R☉; A90 1.622; exceedances 1 (S_coadd 62/58 at 1807 nm → telluric, 1.8 µm band); generic cell 966–1923
+    nm; F_λ from the measured NIRPS absolute SED. power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 NIRPS 1D spectra (telluric-corrected, sky fibre)
+  status: searched
+  limit_kind: power
+  limit_value: 65200.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0652
+  power_mw_range: null
+  n_events: 8
+  n_trials: 2
+  epoch_range: '2025-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|NIRPS|2025-03-03)
+  notes: b 0.76 R☉; A90 1.622; exceedances 1 (S_coadd 62/58 at 1807 nm → telluric, 1.8 µm band); generic cell 966–1923
+    nm; F_λ from the measured NIRPS absolute SED. power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 1.2 Rsun
+  band: 1064 nm (1030–1090 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 193
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000193
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: 'b 0.77 R☉; A90 0.93; exceedances 1 (S_coadd 37.7/28.6 at 1080.088 nm → telluric: OH-subtraction plateau,
+    2021-03-02 night); power_mw converted from W.'
+- target_id: wolf-359
+  channel: A
+  rung: 2.5 Rsun
+  band: 1064 nm (1030–1090 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 839
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000839
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: 'b 0.77 R☉; A90 0.93; exceedances 1 (S_coadd 37.7/28.6 at 1080.088 nm → telluric: OH-subtraction plateau,
+    2021-03-02 night); power_mw converted from W.'
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: 1064 nm (1030–1090 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 62100.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0621
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: 'b 0.77 R☉; A90 0.93; exceedances 1 (S_coadd 37.7/28.6 at 1080.088 nm → telluric: OH-subtraction plateau,
+    2021-03-02 night); power_mw converted from W.'
+- target_id: wolf-359
+  channel: A
+  rung: 1.2 Rsun
+  band: 1550 nm (1530–1570 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 221
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000221
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: b 0.77 R☉; A90 1.24; no exceedance; power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 2.5 Rsun
+  band: 1550 nm (1530–1570 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 960
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00096
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: b 0.77 R☉; A90 1.24; no exceedance; power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: 1550 nm (1530–1570 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 71000.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.071
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: b 0.77 R☉; A90 1.24; no exceedance; power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 1.2 Rsun
+  band: generic (whole band)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: 'b 0.77 R☉; exceedances 1 (S_coadd 281/71 at 1355 nm → telluric, 1.35 µm band); Unconstrained at v1: A90
+    not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: wolf-359
+  channel: A
+  rung: 2.5 Rsun
+  band: generic (whole band)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: 'b 0.77 R☉; exceedances 1 (S_coadd 281/71 at 1355 nm → telluric, 1.35 µm band); Unconstrained at v1: A90
+    not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 20
+  n_trials: 2
+  epoch_range: '2021-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2021-03-03)
+  notes: 'b 0.77 R☉; exceedances 1 (S_coadd 281/71 at 1355 nm → telluric, 1.35 µm band); Unconstrained at v1: A90
+    not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: 1064 nm (1030–1090 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 83400.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0834
+  power_mw_range: null
+  n_events: 4
+  n_trials: 2
+  epoch_range: '2019-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2019-03-03)
+  notes: b 0.78 R☉; A90 1.25; no exceedance; null (all cells). power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: 1550 nm (1530–1570 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 72300.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0723
+  power_mw_range: null
+  n_events: 4
+  n_trials: 2
+  epoch_range: '2019-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2019-03-03)
+  notes: b 0.78 R☉; A90 1.26; no exceedance; null (all cells). power_mw converted from W.
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 2
+  epoch_range: '2019-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|SPIRou|2019-03-03)
+  notes: 'b 0.78 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2016-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|CARMENES-VIS|2016-03-03)
+  notes: 'b 0.79 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).
+    CARMENES generic cell declared unconstrained (airglow-dominated statistics; no sky fibre).'
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 7
+  n_trials: 2
+  epoch_range: '2017-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|CARMENES-VIS|2017-03-03)
+  notes: 'b 0.79 R☉; exceedances 1 (S_coadd 97.9/90.3 at 760.024 nm → telluric: O₂ A band); Unconstrained at v1:
+    A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited). CARMENES generic cell declared unconstrained
+    (airglow-dominated statistics; no sky fibre).'
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2018-03-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit wolf-359|CARMENES-VIS|2018-03-03)
+  notes: 'b 0.79 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).
+    CARMENES generic cell declared unconstrained (airglow-dominated statistics; no sky fibre).'
+- target_id: ross-128
+  channel: A
+  rung: 2.5 Rsun
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 37.2
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 3.72e-05
+  power_mw_range: null
+  n_events: 18
+  n_trials: 2
+  epoch_range: '2021-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2021-03-17)
+  notes: b 1.81 R☉; A90 0.556; no exceedance; first 532 nm constraint through a 2.5 R☉ cone (37 W); cell null (S_line
+    14.7/16.0; coadd 4.3/9.1). F_λ from BP–G interpolation, ±30 % systematic. power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 2750.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00275
+  power_mw_range: null
+  n_events: 18
+  n_trials: 2
+  epoch_range: '2021-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2021-03-17)
+  notes: b 1.81 R☉; A90 0.556; no exceedance; cell null. power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 2.5 Rsun
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 18
+  n_trials: 2
+  epoch_range: '2021-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2021-03-17)
+  notes: 'b 1.81 R☉; exceedances 1 (S_coadd 69.5/35.9 at 557.891 nm → telluric: [O I] 5577 airglow, in all 18 spectra);
+    Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 18
+  n_trials: 2
+  epoch_range: '2021-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2021-03-17)
+  notes: 'b 1.81 R☉; exceedances 1 (S_coadd 69.5/35.9 at 557.891 nm → telluric: [O I] 5577 airglow, in all 18 spectra);
+    Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 2.5 Rsun
+  band: 1550 nm (1530–1570 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 404
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000404
+  power_mw_range: null
+  n_events: 40
+  n_trials: 2
+  epoch_range: '2022-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|SPIRou|2022-03-17)
+  notes: b 1.81 R☉; A90 0.235; no exceedance; NIR F_λ = photometric interpolation × wolf-359 ratio (conservative,
+    limit-weakening). power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 1550 nm (1530–1570 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 29900.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0299
+  power_mw_range: null
+  n_events: 40
+  n_trials: 2
+  epoch_range: '2022-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|SPIRou|2022-03-17)
+  notes: b 1.81 R☉; A90 0.235; no exceedance; NIR F_λ = photometric interpolation × wolf-359 ratio (conservative,
+    limit-weakening). power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 2.5 Rsun
+  band: 1064 nm (1030–1090 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 2900.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0029
+  power_mw_range: null
+  n_events: 40
+  n_trials: 2
+  epoch_range: '2022-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|SPIRou|2022-03-17)
+  notes: b 1.81 R☉; A90 1.024; no exceedance; NIR F_λ = photometric interpolation × wolf-359 ratio (conservative,
+    limit-weakening). power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 1064 nm (1030–1090 nm)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 214000.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.214
+  power_mw_range: null
+  n_events: 40
+  n_trials: 2
+  epoch_range: '2022-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|SPIRou|2022-03-17)
+  notes: b 1.81 R☉; A90 1.024; no exceedance; NIR F_λ = photometric interpolation × wolf-359 ratio (conservative,
+    limit-weakening). power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 2.5 Rsun
+  band: generic (whole band)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 4180.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00418
+  power_mw_range: null
+  n_events: 40
+  n_trials: 2
+  epoch_range: '2022-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|SPIRou|2022-03-17)
+  notes: 'b 1.81 R☉; A90 1.822; exceedances 1 (S_coadd 139/127 at 1456.410 nm → telluric: OH sky line, model 208);
+    NIR F_λ = photometric interpolation × wolf-359 ratio (conservative, limit-weakening). power_mw converted from
+    W.'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CFHT SPIRou APERO 1D spectra via CADC
+  status: searched
+  limit_kind: power
+  limit_value: 309000.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.309
+  power_mw_range: null
+  n_events: 40
+  n_trials: 2
+  epoch_range: '2022-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|SPIRou|2022-03-17)
+  notes: 'b 1.81 R☉; A90 1.822; exceedances 1 (S_coadd 139/127 at 1456.410 nm → telluric: OH sky line, model 208);
+    NIR F_λ = photometric interpolation × wolf-359 ratio (conservative, limit-weakening). power_mw converted from
+    W.'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 2740.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00274
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2006-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2006-03-17)
+  notes: b 1.8 R☉; A90 0.554; no exceedance; cell null. power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2006-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2006-03-17)
+  notes: 'b 1.8 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 4050.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00405
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2013-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2013-03-17)
+  notes: b 1.81 R☉; A90 0.818; no exceedance; cell null. power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2013-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2013-03-17)
+  notes: 'b 1.81 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 3730.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00373
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2014-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2014-03-17)
+  notes: b 1.81 R☉; A90 0.753; no exceedance; cell null. power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2014-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2014-03-17)
+  notes: 'b 1.81 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 4590.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00459
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: '2015-03-18'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2015-03-18)
+  notes: b 1.81 R☉; A90 0.928; no exceedance; cell null. power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: '2015-03-18'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2015-03-18)
+  notes: 'b 1.81 R☉; exceedances 1 (S_coadd 37.6/28.8 at 557.888 nm → telluric: [O I] 5577 airglow); Unconstrained
+    at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 2790.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00279
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2019-03-18'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2019-03-18)
+  notes: b 1.81 R☉; A90 0.564; no exceedance; cell null. power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2019-03-18'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|HARPS|2019-03-18)
+  notes: 'b 1.81 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: searched
+  limit_kind: power
+  limit_value: 872
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000872
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2019-03-18'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|ESPRESSO|2019-03-18)
+  notes: b 1.81 R☉; A90 0.214; no exceedance; cell null; ESPRESSO grid re-run in the corrected vacuum frame (A9).
+    power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2019-03-18'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|ESPRESSO|2019-03-18)
+  notes: 'b 1.81 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: searched
+  limit_kind: power
+  limit_value: 922
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000922
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2020-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|ESPRESSO|2020-03-17)
+  notes: 'b 1.81 R☉; A90 0.227; exceedances 2 (S_line 20.3/14.9, S_coadd 17.6/10.3 → defect/contamination: Hg I
+    lamp light in the science fibre of the 2020-03-16 spectrum, 31 peaks above threshold; the 2020-03-22 spectrum
+    is clean, 532 S 6.0/14.9); archive fact: ESPRESSO ross-128 2020-03-16 (ADP.2021-04-27T19:22:55.144) carries
+    Hg I 404.8/436.0/546.2/577.1/579.2 nm lamp contamination. power_mw converted from W.'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2020-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|ESPRESSO|2020-03-17)
+  notes: 'b 1.81 R☉; exceedances 2 (S_line 465/127, S_coadd 458/110 at 546.228 nm → defect/contamination, same Hg-lamp
+    spectrum; clean spectrum generic 44/127); Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap;
+    systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: searched
+  limit_kind: power
+  limit_value: 944
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000944
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: '2021-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|ESPRESSO|2021-03-17)
+  notes: b 1.81 R☉; A90 0.232; no exceedance; cell null; ESPRESSO grid re-run in the corrected vacuum frame (A9).
+    power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: '2021-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|ESPRESSO|2021-03-17)
+  notes: 'b 1.81 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: searched
+  limit_kind: power
+  limit_value: 1400.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0014
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2022-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|ESPRESSO|2022-03-17)
+  notes: b 1.81 R☉; A90 0.345; no exceedance; cell null; ESPRESSO grid re-run in the corrected vacuum frame (A9).
+    power_mw converted from W.
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2022-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|ESPRESSO|2022-03-17)
+  notes: 'b 1.81 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2016-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|CARMENES-VIS|2016-03-17)
+  notes: 'b 1.81 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).
+    CARMENES generic cell declared unconstrained.'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: '2017-03-17'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit ross-128|CARMENES-VIS|2017-03-17)
+  notes: 'b 1.81 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).
+    CARMENES generic cell declared unconstrained.'
+- target_id: teegarden
+  channel: A
+  rung: 2.5 Rsun
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 7
+  n_trials: 2
+  epoch_range: '2017-11-08'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit teegarden|CARMENES-VIS|2017-11-08)
+  notes: 'b 1.12 R☉; exceedances 2 (S_line 83/67 at 882.950 nm and S_coadd 93/73 at 775.276 nm → telluric: OH 7-3
+    8827.10 Å and OH 9-4 7750.64 Å airglow; OH forest at z 9–50; amplitude anticorrelates with SNR); Unconstrained
+    at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited). CARMENES generic cell declared unconstrained;
+    the only grazing-rung teegarden unit at v1.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 7
+  n_trials: 2
+  epoch_range: '2017-11-08'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit teegarden|CARMENES-VIS|2017-11-08)
+  notes: 'b 1.12 R☉; exceedances 2 (S_line 83/67 at 882.950 nm and S_coadd 93/73 at 775.276 nm → telluric: OH 7-3
+    8827.10 Å and OH 9-4 7750.64 Å airglow; OH forest at z 9–50; amplitude anticorrelates with SNR); Unconstrained
+    at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited). CARMENES generic cell declared unconstrained;
+    the only grazing-rung teegarden unit at v1.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2016-11-08'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit teegarden|CARMENES-VIS|2016-11-08)
+  notes: 'b 1.12 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).
+    CARMENES generic cell declared unconstrained.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: '2018-11-08'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit teegarden|CARMENES-VIS|2018-11-08)
+  notes: 'b 1.11 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).
+    CARMENES generic cell declared unconstrained.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: '2019-11-08'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit teegarden|CARMENES-VIS|2019-11-08)
+  notes: 'b 1.11 R☉; exceedances 1 (S_line 82/67 at 882.956 nm → telluric: the same OH 8827 line, same observer
+    wavelength); Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited). CARMENES
+    generic cell declared unconstrained.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: searched
+  limit_kind: power
+  limit_value: 129
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.000129
+  power_mw_range: null
+  n_events: 4
+  n_trials: 2
+  epoch_range: '2024-11-08'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit teegarden|ESPRESSO|2024-11-08)
+  notes: 'b 1.08 R☉; A90 0.976; exceedances 2 (S_line 37.9/8.5, S_coadd 31.9/7.7 at 532.100 nm → defect/cosmic:
+    2-px spike z 23/29/8 in one spectrum, 2024-11-06T03:06, absent in the other three); deepest 0.1 AU line limit
+    of the survey (faint star: F_λ 4.67e-15; report §4 quotes 107 W in the reading paragraph vs 129 W in the table
+    — table value transcribed). 27 usable nulls. power_mw converted from W.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 ESPRESSO s1d spectra (vacuum WAVE, A9)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 2
+  epoch_range: '2024-11-08'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/confirmatory_v1.md (unit teegarden|ESPRESSO|2024-11-08)
+  notes: 'b 1.08 R☉; no exceedance; Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited).
+    generic null (134/171, 50/221).'
+- target_id: gj-908
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 8500.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0085
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: '2011-09-21'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/dev_v1.md (unit gj-908|HARPS|2011-09-21)
+  notes: 'b 12.32 R☉; A90 0.268; no exceedance; dev unit (not blind); dev pass v1.1: 0 exceedances (532 4.9/19.3;
+    generic 34.3/48.6). Bright star, photometric F_λ. power_mw converted from W.'
+- target_id: gj-908
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: '2011-09-21'
+  source: report/spectral_archives.md §2, §4 (dev completeness); surveys/spectral-archives/results/dev_v1.md
+  notes: b 12.32 R☉; dev unit; A90 2.000 / 2.000 sits at the 200 % injection cap (dev_v1.md lists 5.59e+04 W); report
+    §4 declares generic cells beyond 200 % of the local continuum unconstrained — limit not carried.
+- target_id: ross-154
+  channel: A
+  rung: 0.1 AU
+  band: 532 nm (515–545 nm)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 4410.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.00441
+  power_mw_range: null
+  n_events: 6
+  n_trials: 2
+  epoch_range: '2017-07-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/dev_v1.md (unit ross-154|HARPS|2017-07-03)
+  notes: 'b 3.4 R☉; A90 0.513; no exceedance; dev unit (not blind); dev pass v1.1: 0 exceedances (532 14.5/15.6).
+    Bright star, photometric F_λ. power_mw converted from W.'
+- target_id: ross-154
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: searched
+  limit_kind: power
+  limit_value: 12900.0
+  limit_unit: W (P = 1.0645 A90 F_λ FWHM_λ π b²; continuous line through the rung cone)
+  limit_range: null
+  power_mw: 0.0129
+  power_mw_range: null
+  n_events: 6
+  n_trials: 2
+  epoch_range: '2017-07-03'
+  source: surveys/spectral-archives/results/dev_v1.md (unit ross-154|HARPS|2017-07-03, A90 1.865 / 2.000)
+  notes: b 3.40 R☉; dev unit (not blind); power_mw converted from W; generic 0.1 AU value from dev_v1.md only —
+    the report §4 quotes only the 532 cell for dev units.
+- target_id: ross-154
+  channel: A
+  rung: 0.1 AU
+  band: generic (whole band)
+  substrate: CARMENES DR1 VIS spectra (no sky fibre)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: '2018-07-03'
+  source: report/spectral_archives.md §3–4 tables; surveys/spectral-archives/results/dev_v1.md (unit ross-154|CARMENES-VIS|2018-07-03)
+  notes: 'b 3.4 R☉; exceedances 1 (S_coadd 98.7/92.7 at 760.026 nm → telluric: O₂ A band); dev unit (not blind);
+    Unconstrained at v1: A90 not recovered ≤ 2.0 (200 % injection cap; systematics-limited). dev outcome: 10 trials,
+    1 exceedance vs 0.6 expected over the three v1.1 dev units.'
+- target_id: gj-908
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: ESO phase-3 X-shooter NIR spectra
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 36
+  n_trials: null
+  epoch_range: '2010-09-21'
+  source: report/spectral_archives.md §2 (amendment A8); surveys/spectral-archives/results/dev_v1.md
+  notes: b 12.32 R☉; dev unit excluded by amendment A8 (4 product variants per exposure, single-night nulls, no
+    BERV); its 5 dev-pass exceedances are not carried (dev_v1.md).
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: ESO phase-3 HARPS s1d spectra
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2019-03-03'
+  source: report/spectral_archives.md §3 (combos); surveys/spectral-archives/results/confirmatory_v1.md
+  notes: wolf-359|HARPS combo has only 18 usable out-of-window nulls (V 13.5, short exposures; ≥ 20 required) →
+    not searchable.
+- target_id: wolf-359
+  channel: A
+  rung: 2.5 Rsun
+  band: any
+  substrate: OHP SOPHIE public s1d spectra
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2022-03-04'
+  source: report/spectral_archives.md §2; §6 hand-offs
+  notes: 'SOPHIE wolf-359 2022 unit not admitted: public s1d header is date-stripped (BJD rounded to the day), so
+    the frozen "header UT inside the window" condition cannot be met; hand-off (hour requires the observatory).'
+- target_id: van-maanen
+  channel: A
+  rung: 1.2 Rsun
+  band: any
+  substrate: 11 spectral archives (recon 2026-09-05)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/spectral_archives.md §1 (units); §6
+  notes: 'No unit: van-maanen has no échelle spectrum in any grazing window in any archive (deepest graze, b 0.32–0.46
+    R☉); future-observation recommendation: one 20-min HARPS/ESPRESSO/NIRPS exposure at t_ca ± 7 h on Oct 6–7 of
+    any year.'
+- target_id: gj-1276
+  channel: A
+  rung: 1.2 Rsun
+  band: any
+  substrate: 11 spectral archives (recon 2026-09-05)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/spectral_archives.md §1 (units); §6
+  notes: 'No unit: gj-1276 is uncovered in every archive.'
+- target_id: van-maanen
+  channel: A
+  rung: 2.5 Rsun
+  band: any
+  substrate: 11 spectral archives (recon 2026-09-05)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/spectral_archives.md §1 (units); §6
+  notes: 'No unit: van-maanen has no échelle spectrum in any grazing window in any archive (deepest graze, b 0.32–0.46
+    R☉); future-observation recommendation: one 20-min HARPS/ESPRESSO/NIRPS exposure at t_ca ± 7 h on Oct 6–7 of
+    any year.'
+- target_id: gj-1276
+  channel: A
+  rung: 2.5 Rsun
+  band: any
+  substrate: 11 spectral archives (recon 2026-09-05)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/spectral_archives.md §1 (units); §6
+  notes: 'No unit: gj-1276 is uncovered in every archive.'
+- target_id: van-maanen
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: 11 spectral archives (recon 2026-09-05)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/spectral_archives.md §1 (units); §6
+  notes: 'No unit fixed for van-maanen at any rung (§1: "van-maanen and gj-1276 have none").'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: 11 spectral archives (recon 2026-09-05)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/spectral_archives.md §1 (units); §6
+  notes: 'No unit: gj-1276 is uncovered in every archive.'
+- target_id: wolf-359
+  channel: A
+  rung: 1.2 Rsun
+  band: any
+  substrate: KOA HIRES raw frames (I₂ cell in)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2010-03-03'
+  source: report/spectral_archives.md §5–6 hand-offs
+  notes: 'Hand-off: KOA HIRES wolf-359 2010-03-03 (1.2 R☉); Tellis & Marcy 2017 may already carry a per-spectrum
+    null — cross-match their table.'
+- target_id: teegarden
+  channel: A
+  rung: 2.5 Rsun
+  band: any
+  substrate: Gemini MAROON-X raw frames
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2021-11-08'
+  source: report/spectral_archives.md §5–6 hand-offs
+  notes: 'Hand-off: MAROON-X teegarden 2021-11-08 at +3.3 h (2.5 R☉); non-public/raw.'
+- target_id: ross-128
+  channel: A
+  rung: 2.5 Rsun
+  band: any
+  substrate: Gemini MAROON-X raw frames
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2024-03-17'
+  source: report/spectral_archives.md §5–6 hand-offs
+  notes: 'Hand-off: MAROON-X ross-128 2024-03-17 at +1.4 h (2.5 R☉); non-public/raw.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: generic (K band)
+  substrate: ESO CRIRES raw frames
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2009-11-08'
+  source: report/spectral_archives.md §5–6 hand-offs
+  notes: 'Hand-off: CRIRES teegarden 2009-11-08 (K band, generic cell).'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: BL APF raw 2D frames
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2016-11-13'
+  source: report/spectral_archives.md §5–6 hand-offs
+  notes: 'Hand-off: BL APF teegarden 2016 (raw 2D, 0.1 AU) — the 3 spectra flagged in report/radio_crossings.md
+    §2.'
+- target_id: teegarden
+  channel: A
+  rung: 1.2 Rsun
+  band: any
+  substrate: CFHT SPIRou (proprietary to ~2026-11)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2025-11-08'
+  source: report/spectral_archives.md §5–6 hand-offs
+  notes: 'Hand-off: SPIRou teegarden 2025-11-08 ×4 at +0.2 h (1.2 R☉); pre-registered re-run when public.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: generic (810–1280 nm)
+  substrate: HPF spectra (data ask)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: 2019–2020
+  source: report/spectral_archives.md §5–6 hand-offs
+  notes: 'Hand-off: HPF teegarden 2019/2020, 8 epochs at 0.1 AU; data ask.'
+- target_id: teegarden
+  channel: A
+  rung: 2.5 Rsun
+  band: any
+  substrate: CARMENES NIR channel (Calar Alto form)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: '2017-11-08'
+  source: report/spectral_archives.md §5–6 hand-offs
+  notes: 'Hand-off: CARMENES NIR twins of the 2017 grazing pair (OH-corrected reduction).'

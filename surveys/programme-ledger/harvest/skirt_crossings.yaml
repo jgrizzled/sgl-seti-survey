@@ -1,0 +1,986 @@
+survey_id: skirt_crossings
+report: report/skirt_crossings.md
+plan_section: '5.25'
+pipeline: B
+archives:
+- atlas
+hypothesis_version: v1.0 (D1–D8 approved 2026-09-07) + amendments A1–A4 (pre-confirmatory) and A5 (completeness reporting rule)
+era: 'ATLAS full history, 5–12 conjunction cycles per target (hypotheses §3: MJD 57227 → probe end MJD 61252)'
+run_dir: runs/skirt-crossings
+records_dir: null
+candidates: 0
+candidate_notes: '81 trials / 28 units, 24 exceedances vs 9.0 expected (dev 7 vs 1.3; confirmatory 17 vs 7.7): all non-promotable (asymmetric / single-cycle / ensemble-shared) or retained_ambiguous_colour_unmatched under A4 (teegarden both rungs, gj-3512 0.95 AU)'
+rows:
+- target_id: gj-915
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 19.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 8.5
+  power_mw_range: null
+  n_events: 599
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 12.98; S_sym -1.08/-0.04, S_skirt 0.60/0.30 exc, S_year 0.78/1.62 (S/T); dispositions: S_skirt non_promotable_asymmetric; limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 19.0 -> 8.5 MW; S_skirt no depth (exceedance trial); S_year m90 18.0 -> 21.4 MW; n_events = nightly units; 8 valid controls'
+- target_id: gj-915
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 19.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 5.98
+  power_mw_range: null
+  n_events: 599
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 12.98; S_sym -0.29/-0.10, S_skirt 1.60/1.11 exc, S_year 0.91/1.44 (S/T); dispositions: S_skirt non_promotable_asymmetric; limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 19.5 -> 5.98 MW; S_skirt no depth (exceedance trial); S_year m90 18.5 -> 15.0 MW; n_events = nightly units; 8 valid controls'
+- target_id: gj-3512
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 18.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 13.5
+  power_mw_range: null
+  n_events: 557
+  n_trials: 2
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 13.17; S_sym -0.75/1.38, S_year 2.92/3.08 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 18.5 -> 13.5 MW; S_year m90 18.0 -> 21.4 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-3512
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 19.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 5.98
+  power_mw_range: null
+  n_events: 557
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 13.17; S_sym -0.45/0.26, S_skirt 0.85/-0.12 exc, S_year 2.77/2.14 exc (S/T); dispositions: S_skirt retained_ambiguous_colour_unmatched, S_year retained_ambiguous_colour_unmatched (no control within 1.0 mag of BP−RP; nearest gap 1.79 mag); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 19.5 -> 5.98 MW; S_skirt no depth (exceedance trial); S_year no depth (exceedance trial); n_events = nightly units; 8 valid controls'
+- target_id: gj-3512
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: retained_ambiguous
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: 2
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3 table
+  notes: S_skirt retained_ambiguous_colour_unmatched, S_year retained_ambiguous_colour_unmatched; S_skirt 0.85/−0.12, S_year 2.77/2.14, Δ skirt/opp +0.3 / +0.3 %; colour-unmatched (gap 1.8 mag), not promotable (A4)
+- target_id: gj-3306
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 20.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 3.39
+  power_mw_range: null
+  n_events: 819
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 13.59; S_sym -1.01/-0.19, S_skirt -0.01/0.17, S_year 1.49/3.15 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 20.0 -> 3.39 MW; S_skirt m90 19.0 -> 8.5 MW; S_year m90 18.5 -> 13.5 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-3306
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 819
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 13.59; S_sym 1.13/0.75 exc, S_skirt 0.38/1.25, S_year 3.23/2.54 exc (S/T); dispositions: S_sym non_promotable_single_cycle, S_year non_promotable_ensemble_shared; S_sym is an exceedance trial — no S_sym depth claimed (hypotheses §12 A5); S_sym no depth (exceedance trial); S_skirt m90 19.0 -> 9.47 MW; S_year no depth (exceedance trial); n_events = nightly units; 8 valid controls'
+- target_id: gj-3112
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 18.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 15.0
+  power_mw_range: null
+  n_events: 362
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 13.67; S_sym -1.79/-0.36, S_skirt -1.53/-0.37, S_year 0.15/1.53 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 18.5 -> 15.0 MW; S_skirt m90 18.5 -> 15.0 MW; S_year m90 18.5 -> 15.0 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-1087
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 19.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 8.5
+  power_mw_range: null
+  n_events: 752
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 13.90; S_sym -0.26/1.87, S_skirt -2.30/-1.52, S_year 1.73/2.82 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 19.0 -> 8.5 MW; S_skirt m90 17.5 -> 33.9 MW; S_year m90 18.5 -> 13.5 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-1087
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 19.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 5.98
+  power_mw_range: null
+  n_events: 752
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 13.90; S_sym 0.09/1.66, S_skirt -3.06/-0.98, S_year 1.84/2.78 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 19.5 -> 5.98 MW; S_skirt m90 18.5 -> 15.0 MW; S_year m90 18.5 -> 15.0 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-9193
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 20.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 2.14
+  power_mw_range: null
+  n_events: 780
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 14.09; S_sym 0.37/1.22, S_skirt -0.62/2.16, S_year 2.47/3.04 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 20.5 -> 2.14 MW; S_skirt m90 19.0 -> 8.5 MW; S_year m90 19.0 -> 8.5 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-9193
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 20.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 3.77
+  power_mw_range: null
+  n_events: 780
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 14.09; S_sym 1.04/2.15, S_skirt -1.88/1.53, S_year 2.27/3.97 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 20.0 -> 3.77 MW; S_skirt m90 19.0 -> 9.47 MW; S_year m90 18.5 -> 15.0 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-13157
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 18.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 23.8
+  power_mw_range: null
+  n_events: 686
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 14.69; S_sym 0.65/1.16, S_skirt 1.30/0.55 exc, S_year 2.03/3.40 (S/T); dispositions: S_skirt non_promotable_asymmetric; limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 18.0 -> 23.8 MW; S_skirt no depth (exceedance trial); S_year m90 16.5 -> 94.7 MW; n_events = nightly units; 8 valid controls; crowded (§4.2): 14″ from a G 9.4 star, 11″ from a G 12.1 star, tphot chi/N 35,800 vs 13 for controls — depths reported systematics-limited'
+- target_id: gj-518
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 736
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 14.22; S_sym 1.02/1.02 exc, S_skirt -0.81/-0.70, S_year 2.57/2.36 exc (S/T); dispositions: S_sym non_promotable_asymmetric, S_year non_promotable_asymmetric; S_sym is an exceedance trial — no S_sym depth claimed (hypotheses §12 A5); S_sym no depth (exceedance trial); S_skirt m90 20.0 -> 3.39 MW; S_year no depth (exceedance trial); n_events = nightly units; 8 valid controls'
+- target_id: gj-518
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 20.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 3.77
+  power_mw_range: null
+  n_events: 736
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 14.22; S_sym -1.00/1.14, S_skirt -2.22/0.55, S_year 1.97/3.09 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 20.0 -> 3.77 MW; S_skirt m90 19.5 -> 5.98 MW; S_year m90 19.0 -> 9.47 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-12724
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 19.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 8.5
+  power_mw_range: null
+  n_events: 348
+  n_trials: 2
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 14.48; S_sym -1.30/-0.96, S_year 0.96/0.45 exc (S/T); dispositions: S_year non_promotable_asymmetric (no control within 1.0 mag of BP−RP; nearest gap 3.10 mag); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 19.0 -> 8.5 MW; S_year no depth (exceedance trial); n_events = nightly units; 8 valid controls'
+- target_id: gj-12724
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 348
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 14.48; S_sym 0.63/-0.73 exc, S_skirt 0.02/0.95, S_year 1.25/1.70 (S/T); dispositions: S_sym non_promotable_asymmetric (no control within 1.0 mag of BP−RP; nearest gap 3.10 mag); S_sym is an exceedance trial — no S_sym depth claimed (hypotheses §12 A5); S_sym no depth (exceedance trial); S_skirt m90 16.5 -> 94.7 MW; S_year m90 19.0 -> 9.47 MW; n_events = nightly units; 8 valid controls'
+- target_id: gj-11547
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 18.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 13.5
+  power_mw_range: null
+  n_events: 774
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 14.40; S_sym -1.81/0.94, S_skirt 3.00/1.44 exc, S_year 0.59/3.57 (S/T); dispositions: S_skirt non_promotable_asymmetric (no control within 1.0 mag of BP−RP; nearest gap 2.51 mag); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 18.5 -> 13.5 MW; S_skirt no depth (exceedance trial); S_year m90 17.5 -> 33.9 MW; n_events = nightly units; 8 valid controls'
+- target_id: gj-11547
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 18.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 15.0
+  power_mw_range: null
+  n_events: 774
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 14.40; S_sym -0.74/2.33, S_skirt 4.02/3.27 exc, S_year 1.37/4.06 (S/T); dispositions: S_skirt non_promotable_asymmetric (no control within 1.0 mag of BP−RP; nearest gap 2.51 mag); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 18.5 -> 15.0 MW; S_skirt no depth (exceedance trial); S_year m90 17.5 -> 37.7 MW; n_events = nightly units; 8 valid controls'
+- target_id: gj-1276
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 21.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 1.35
+  power_mw_range: null
+  n_events: 742
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 15.18; S_sym -0.31/2.02, S_skirt 1.00/2.57, S_year 1.63/4.25 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 21.0 -> 1.35 MW; S_skirt m90 20.0 -> 3.39 MW; S_year m90 19.5 -> 5.37 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-1276
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 21.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 1.5
+  power_mw_range: null
+  n_events: 742
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 15.18; S_sym -0.15/1.26, S_skirt 0.97/4.11, S_year 1.93/3.40 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 21.0 -> 1.5 MW; S_skirt m90 20.0 -> 3.77 MW; S_year m90 20.0 -> 3.77 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-11068
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 830
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 15.79; S_sym 0.13/-0.29 exc, S_skirt 0.94/0.87 exc, S_year 1.56/2.13 (S/T); dispositions: S_sym non_promotable_asymmetric, S_skirt non_promotable_asymmetric (no control within 1.0 mag of BP−RP; nearest gap 2.25 mag); S_sym is an exceedance trial — no S_sym depth claimed (hypotheses §12 A5); S_sym no depth (exceedance trial); S_skirt no depth (exceedance trial); S_year m90 20.0 -> 3.39 MW; n_events = nightly units; 8 valid controls'
+- target_id: gj-11068
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 830
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'confirmatory unit, o median 15.79; S_sym 0.32/0.29 exc, S_skirt 1.82/1.40 exc, S_year 1.79/2.86 (S/T); dispositions: S_sym non_promotable_asymmetric, S_skirt non_promotable_asymmetric (no control within 1.0 mag of BP−RP; nearest gap 2.25 mag); S_sym is an exceedance trial — no S_sym depth claimed (hypotheses §12 A5); S_sym no depth (exceedance trial); S_skirt no depth (exceedance trial); S_year m90 19.5 -> 5.98 MW; n_events = nightly units; 8 valid controls'
+- target_id: eps-ind-b
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 21.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 0.85
+  power_mw_range: null
+  n_events: 316
+  n_trials: 2
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 20.04; S_sym -1.75/1.17, S_year 0.12/2.62 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.90 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 21.5 -> 0.85 MW; S_year m90 20.5 -> 2.14 MW; n_events = nightly units; 8 valid controls; one of the three faintest targets (0.6–1.5 MW class)
+- target_id: eps-ind-b
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 0.598
+  power_mw_range: null
+  n_events: 316
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/confirmatory_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/confirmatory_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: confirmatory unit, o median 20.04; S_sym -0.37/0.77, S_skirt -0.54/1.07, S_year 0.86/1.88 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 22.0 -> 0.598 MW; S_skirt m90 21.0 -> 1.5 MW; S_year m90 21.5 -> 0.947 MW; n_events = nightly units; 8 valid controls; one of the three faintest targets (0.6–1.5 MW class)
+- target_id: teegarden
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: retained_ambiguous
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 728
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/dev_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/dev_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'dev unit, o median 12.55; S_sym 2.00/-0.29 exc, S_skirt 1.22/-0.55 exc, S_year 3.98/2.97 exc (S/T); dispositions: S_sym retained_ambiguous_colour_unmatched, S_skirt retained_ambiguous_colour_unmatched, S_year retained_ambiguous_colour_unmatched (no control within 1.0 mag of BP−RP; nearest gap 2.68 mag); S_sym no depth (exceedance trial); S_skirt no depth (exceedance trial); S_year no depth (exceedance trial); teegarden is an M7 flare star 2.7 mag redder than its nearest control: retained_ambiguous_colour_unmatched (A4), not promotable; n_events = nightly units; per-trial depth from completeness_v1.json (power = line power through the beam, 690 nm / 260 nm effective width)'
+- target_id: teegarden
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: retained_ambiguous
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 728
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/dev_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/dev_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'dev unit, o median 12.55; S_sym 1.96/-0.41 exc, S_skirt 0.47/-0.87 exc, S_year 4.49/3.49 exc (S/T); dispositions: S_sym retained_ambiguous_colour_unmatched, S_skirt non_promotable_single_cycle, S_year retained_ambiguous_colour_unmatched (no control within 1.0 mag of BP−RP; nearest gap 2.68 mag); S_sym no depth (exceedance trial); S_skirt no depth (exceedance trial); S_year no depth (exceedance trial); teegarden is an M7 flare star 2.7 mag redder than its nearest control: retained_ambiguous_colour_unmatched (A4), not promotable; n_events = nightly units; per-trial depth from completeness_v1.json (power = line power through the beam, 690 nm / 260 nm effective width)'
+- target_id: gj-2012
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 849
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/dev_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/dev_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: 'dev unit, o median 14.20; S_sym 0.00/-1.02 exc, S_skirt -0.25/0.92, S_year 1.45/1.51 (S/T); dispositions: S_sym non_promotable_asymmetric; S_sym is an exceedance trial — no S_sym depth claimed (hypotheses §12 A5); S_sym no depth (exceedance trial); S_skirt m90 19.5 -> 5.37 MW; S_year m90 20.5 -> 2.14 MW; n_events = nightly units; 8 valid controls'
+- target_id: gj-2012
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: searched
+  limit_kind: m90
+  limit_value: 20.5
+  limit_unit: AB mag (ATLAS o)
+  limit_range: null
+  power_mw: 2.38
+  power_mw_range: null
+  n_events: 849
+  n_trials: 3
+  epoch_range: null
+  source: surveys/skirt-crossings/results/dev_search_v1.json; surveys/skirt-crossings/results/completeness_v1.json; surveys/skirt-crossings/results/dev_adjudication_v1.json; report/skirt_crossings.md §3, §5
+  notes: dev unit, o median 14.20; S_sym -0.68/-0.98, S_skirt -1.62/0.76, S_year 0.90/1.70 (S/T); limit = S_sym (symmetric recurrent step) m90 -> line power through the 0.95 AU beam (690 nm / 260 nm effective width, ±0.1 mag scale, ±0.2 % parallax residual); S_sym m90 20.5 -> 2.38 MW; S_skirt m90 19.0 -> 9.47 MW; S_year m90 19.5 -> 5.98 MW; n_events = nightly units; 8 valid controls
+- target_id: gj-293
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §3 Ledger; surveys/skirt-crossings/results/ledger_1au_v1.json (ecl_lat_deg)
+  notes: 'Ledger-only unit: |β| ≥ ε_b (ecliptic latitude −79.1°) — the star never leaves the beam, no in/out step to search'
+- target_id: gj-293
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §3 Ledger; surveys/skirt-crossings/results/ledger_1au_v1.json (ecl_lat_deg)
+  notes: 'Ledger-only unit: |β| ≥ ε_b (ecliptic latitude −79.1°) — the star never leaves the beam, no in/out step to search'
+- target_id: gj-13157
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §3 Ledger; surveys/skirt-crossings/results/ledger_1au_v1.json (ecl_lat_deg)
+  notes: 'Ledger-only unit: |β| ≥ ε_b at the 0.90 AU rung (ecliptic latitude 63.7°) — the star never leaves the beam, no in/out step to search'
+- target_id: gj-3112
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §3 Ledger; surveys/skirt-crossings/results/ledger_1au_v1.json (ecl_lat_deg)
+  notes: 'Ledger-only unit: |β| ≥ ε_b at the 0.90 AU rung (ecliptic latitude −65.9°) — the star never leaves the beam, no in/out step to search'
+- target_id: wolf-1069
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §3 Ledger; surveys/skirt-crossings/results/ledger_1au_v1.json (ecl_lat_deg)
+  notes: 'Ledger-only unit: |β| ≥ ε_b (ecliptic latitude 71.7°); also saturation-excluded (o median 12.38) — the star never leaves the beam, no in/out step to search'
+- target_id: wolf-1069
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §3 Ledger; surveys/skirt-crossings/results/ledger_1au_v1.json (ecl_lat_deg)
+  notes: 'Ledger-only unit: |β| ≥ ε_b (ecliptic latitude 71.7°); also saturation-excluded (o median 12.38) — the star never leaves the beam, no in/out step to search'
+- target_id: gj-1111
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §2 population; surveys/skirt-crossings/results/ledger_1au_v1.json
+  notes: Saturation-excluded after the measured cut (o median 12.44); 1 AU coverage still logged
+- target_id: gj-1111
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §2 population; surveys/skirt-crossings/results/ledger_1au_v1.json
+  notes: Saturation-excluded after the measured cut (o median 12.44); 1 AU coverage still logged
+- target_id:
+  - luhman16-a
+  - luhman16-b
+  channel: S2
+  rung: 0.90 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §2 population
+  notes: luhman16 excluded at recon (no verified Gaia counterpart)
+- target_id:
+  - luhman16-a
+  - luhman16-b
+  channel: S2
+  rung: 0.95 AU
+  band: o
+  substrate: ATLAS reduced-mode forced photometry (o band), elongation-locked step vs 8-star Gaia DR3 null ensemble
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/skirt_crossings.md §2 population
+  notes: luhman16 excluded at recon (no verified Gaia counterpart)
+- target_id: gj-1111
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 177
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 12 conjunction cycles (12 S2-covered), S2-side nights at ε ≥ 50° floor 177 total / median 14 per cycle, A-side nights 497, minimum observed ε 40.9°, o median 12.44, saturation screen excluded'
+- target_id: wolf-1069
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 190
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 190 total / median 17 per cycle, A-side nights 519, minimum observed ε 71.7°, o median 12.38, saturation screen excluded'
+- target_id: teegarden
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 162
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 162 total / median 11 per cycle, A-side nights 560, minimum observed ε 40.3°, o median 12.55, saturation screen marginal'
+- target_id: gj-915
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 119
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 10 conjunction cycles (9 S2-covered), S2-side nights at ε ≥ 50° floor 119 total / median 7 per cycle, A-side nights 474, minimum observed ε 41.4°, o median 12.98, saturation screen marginal'
+- target_id: gj-3512
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 135
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 135 total / median 15 per cycle, A-side nights 415, minimum observed ε 44.3°, o median 13.17, saturation screen ok'
+- target_id: gj-3306
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 165
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 165 total / median 15 per cycle, A-side nights 647, minimum observed ε 47.7°, o median 13.59, saturation screen ok'
+- target_id: gj-3112
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 153
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 5 conjunction cycles (5 S2-covered), S2-side nights at ε ≥ 50° floor 153 total / median 26 per cycle, A-side nights 206, minimum observed ε 65.9°, o median 13.67, saturation screen ok'
+- target_id: gj-293
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 161
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 5 conjunction cycles (5 S2-covered), S2-side nights at ε ≥ 50° floor 161 total / median 31 per cycle, A-side nights 250, minimum observed ε 79.1°, o median 13.69, saturation screen ok'
+- target_id: gj-1087
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 161
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 161 total / median 13 per cycle, A-side nights 584, minimum observed ε 49.0°, o median 13.90, saturation screen ok'
+- target_id: gj-9193
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 189
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 189 total / median 15 per cycle, A-side nights 579, minimum observed ε 45.5°, o median 14.09, saturation screen ok'
+- target_id: gj-2012
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 206
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 206 total / median 15 per cycle, A-side nights 631, minimum observed ε 41.1°, o median 14.20, saturation screen ok'
+- target_id: gj-13157
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 190
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 190 total / median 18 per cycle, A-side nights 494, minimum observed ε 63.7°, o median 14.69, saturation screen ok'
+- target_id: gj-518
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 142
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 142 total / median 14 per cycle, A-side nights 558, minimum observed ε 42.9°, o median 14.22, saturation screen ok'
+- target_id: gj-12724
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 101
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 5 conjunction cycles (5 S2-covered), S2-side nights at ε ≥ 50° floor 101 total / median 18 per cycle, A-side nights 221, minimum observed ε 50.9°, o median 14.48, saturation screen ok'
+- target_id: gj-11547
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 136
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 136 total / median 9 per cycle, A-side nights 576, minimum observed ε 45.8°, o median 14.40, saturation screen ok'
+- target_id: gj-1276
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 127
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 127 total / median 12 per cycle, A-side nights 604, minimum observed ε 38.8°, o median 15.18, saturation screen ok'
+- target_id: gj-11068
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 199
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 11 conjunction cycles (11 S2-covered), S2-side nights at ε ≥ 50° floor 199 total / median 17 per cycle, A-side nights 621, minimum observed ε 42.8°, o median 15.79, saturation screen ok'
+- target_id: eps-ind-b
+  channel: S2
+  rung: 1.0 AU
+  band: o
+  substrate: ATLAS o-band nightly coverage (1 AU coverage ledger)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 77
+  n_trials: null
+  epoch_range: null
+  source: surveys/skirt-crossings/results/ledger_1au_v1.json; report/skirt_crossings.md §5 (1 AU ledger)
+  notes: 'Coverage record, not a constraint (a 1 AU beam contains Earth all year; no temporal signature): 5 conjunction cycles (5 S2-covered), S2-side nights at ε ≥ 50° floor 77 total / median 18 per cycle, A-side nights 229, minimum observed ε 56.6°, o median 20.04, saturation screen ok'

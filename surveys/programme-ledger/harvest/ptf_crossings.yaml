@@ -1,0 +1,457 @@
+survey_id: ptf_crossings
+report: report/ptf_crossings.md
+plan_section: '5.10'
+pipeline: B
+archives:
+- ptf
+hypothesis_version: v1.0 (D1–D8) + amendment v1.1 (confirmatory cutouts 256 -> 384 px; no statistic/threshold/gate
+  changed)
+era: MJD 54891–57051 (2009–2015)
+run_dir: runs/ptf-crossings
+records_dir: null
+candidates: 0
+candidate_notes: 10 blind confirmatory trials, 0 exceedances vs 1.11 expected control crossings; no retained
+  or ambiguous items
+rows:
+- target_id: van-maanen
+  channel: B
+  rung: 2.5 Rsun
+  band: g
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: searched
+  limit_kind: m90
+  limit_value: 21.37
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.00019
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55654.7
+  source: report/ptf_crossings.md §2 tables (S/T, m90) + §3; surveys/ptf-crossings/results/confirmatory_v1.json,
+    completeness_v1.json
+  notes: 'searched, null: S_event / T = 1.45 / 2.16; events (epochs) 1 (2 (same-night pair)); b = 0.28
+    Rsun, 2011 (evt-5c45890fa28c) — photosphere-grazing cell, pre-2015 era, first constraint: relay through
+    the 2.5 Rsun cone >~ ~190 W = 0.00019 MW (g) at 90%; 1 trial (S_event); events evt-5c45890fa28c'
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.008
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: MJD 54924.2–55654.7
+  source: report/ptf_crossings.md §2 tables (S/T, m90) + §3; surveys/ptf-crossings/results/confirmatory_v1.json,
+    completeness_v1.json
+  notes: 'searched, null: S_event / T = 1.19 / 3.16; S_stack / T = 0.95 / 2.98; events (epochs) 2 (4 +
+    12); m90 >= 22.0 grid-censored; April recurrence family; ~8 kW = 0.008 MW through the 0.1 AU cone
+    (censored depth); 2 trials (S_event + S_stack); recurrence-stack cell closes clean; events evt-3bd927de6a38,
+    evt-5c45890fa28c'
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: searched
+  limit_kind: m90
+  limit_value: 20.58
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.03
+  power_mw_range: null
+  n_events: 3
+  n_trials: 2
+  epoch_range: MJD 55289.4–56385.2
+  source: report/ptf_crossings.md §2 tables (S/T, m90) + §3; surveys/ptf-crossings/results/confirmatory_v1.json,
+    completeness_v1.json
+  notes: 'searched, null: S_event / T = 2.02 / 17.81; S_stack / T = 1.51 / 8.14; events (epochs) 3 (2
+    + 4 + 3); includes the PS1-lost 2010 event evt-4c4ea2c39734 (2 independent R epochs); threshold 17.8
+    confusion-dominated (bright static source on one ring trajectory; track passes 3.0 arcsec from nearest
+    catalogued static); ~30 kW = 0.03 MW (confusion-limited); 2 trials; 658 nm generic leakage in R; events
+    evt-4c4ea2c39734, evt-5c45890fa28c, evt-91843280452f'
+- target_id: ross-128
+  channel: B
+  rung: 2.5 Rsun
+  band: R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.00011
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: MJD 55459.1–56189.6
+  source: report/ptf_crossings.md §2 tables (S/T, m90) + §3; surveys/ptf-crossings/results/confirmatory_v1.json,
+    completeness_v1.json
+  notes: 'searched, null: S_event / T = 1.58 / 2.61; S_stack / T = 1.25 / 2.24; events (epochs) 2 (7 +
+    2); m90 >= 22.0 grid-censored; ross-128 2.5 Rsun windows (2010–2012) constrain <~ 110 W = 0.00011
+    MW (R, censored depth); 2 trials; recurrence stack closes clean; events evt-20efe2b70f8a, evt-3f7ad50e70e1'
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: searched
+  limit_kind: m90
+  limit_value: 21.61
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.011
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: MJD 55459.1–56189.6
+  source: report/ptf_crossings.md §2 tables (S/T, m90) + §3; surveys/ptf-crossings/results/confirmatory_v1.json,
+    completeness_v1.json
+  notes: 'searched, null: S_event / T = 2.76 / 5.48; S_stack / T = 2.56 / 5.26; events (epochs) 2 (18
+    + 2); ~11 kW = 0.011 MW through the 0.1 AU cone; 2 trials; recurrence stack closes clean; events evt-20efe2b70f8a,
+    evt-3f7ad50e70e1'
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.008
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 56189.6
+  source: report/ptf_crossings.md §2 tables (S/T, m90) + §3; surveys/ptf-crossings/results/confirmatory_v1.json,
+    completeness_v1.json
+  notes: 'searched, null: S_event / T = 3.86 / 5.12; events (epochs) 1 (44); m90 >= 22.0 grid-censored;
+    ~8 kW = 0.008 MW (censored depth); 1 trial; events evt-20efe2b70f8a'
+- target_id: programme
+  channel: B
+  rung: any
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: searched
+  limit_kind: m90
+  limit_value: null
+  limit_unit: AB mag
+  limit_range: 20.58–22.0
+  power_mw: null
+  power_mw_range: 0.00011–0.03
+  n_events: null
+  n_trials: 10
+  epoch_range: 2009–2013
+  source: report/ptf_crossings.md §2
+  notes: 'blind confirmatory run: 10 trials over 6 units (7 searched units frozen incl. gj-1276 A), 0
+    exceedances vs 1.11 expected control crossings (P(0) ~ 0.31); 600/600 cutouts, zero 404s; k rescales
+    1.00–1.10; powers rescaled from the ZTF anchor (m90 21.8 -> 130 W through the 2.5 Rsun cone at 550
+    AU, gain ~9e9)'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: R
+  substrate: PTF level-1 epochal images, scie-direct, at the star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: 0
+  epoch_range: null
+  source: report/ptf_crossings.md §1 item 6; surveys/ptf-crossings/results/dev_search_v1.md
+  notes: 'dev: resolved constraint-only at the frozen offset-validity gate (1/12 valid pseudo-window offsets
+    — campaign cadence); S = -3.84 reported (dev_search_v1.md); the only A unit surviving the saturation
+    cut; 0 searched trials'
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: null
+  source: report/ptf_crossings.md §1 item 6; surveys/ptf-crossings/results/dev_search_v1.md
+  notes: 'single_epoch class (dev, 0 trials): 1 in-window epoch, S 0.10 vs T 2.10 (8/8 ring controls),
+    clean; nearest catalogued static 8.2 arcsec'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: R
+  substrate: PTF level-1 epochal images, scie-direct, at the star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: report/ptf_crossings.md §1 item 4; surveys/ptf-crossings/results/saturation_cut_v1.*
+  notes: 'saturation-excluded A unit: star 13.7 mag vs frozen level E_R 14.5 / E_g 15.0 (Mould-R via Jordi
+    2006); excluded-class'
+- target_id: van-maanen
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: PTF level-1 epochal images, scie-direct, at the star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: report/ptf_crossings.md §1 item 4; surveys/ptf-crossings/results/saturation_cut_v1.*
+  notes: 'saturation-excluded A unit: star 12.4 mag vs frozen level E_R 14.5 / E_g 15.0 (Mould-R via Jordi
+    2006); excluded-class'
+- target_id: ross-128
+  channel: A
+  rung: 0.1 AU
+  band: R
+  substrate: PTF level-1 epochal images, scie-direct, at the star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: report/ptf_crossings.md §1 item 4; surveys/ptf-crossings/results/saturation_cut_v1.*
+  notes: 'saturation-excluded A unit: star 9.9 mag vs frozen level E_R 14.5 / E_g 15.0 (Mould-R via Jordi
+    2006); ross-128 star core fires dmask bits 8+6 at dev (exclusion confirmed)'
+- target_id: programme
+  channel: B
+  rung: 1.2 Rsun
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 24
+  n_trials: null
+  epoch_range: null
+  source: surveys/ptf-crossings/results/coverage_v1_summary.json; report/ptf_crossings.md §1 item 3
+  notes: '0/24 events covered — structurally uncovered: the 0.3–0.6 d windows fall between epochs (closest
+    0.36 d vs a ±0.3 d edge); coverage-without-statistic'
+- target_id: programme
+  channel: B
+  rung: 2.5 Rsun
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 27
+  n_trials: null
+  epoch_range: null
+  source: surveys/ptf-crossings/results/coverage_v1_summary.json; report/ptf_crossings.md §1 item 3
+  notes: 3/30 events covered (van-maanen 2011 b = 0.28 Rsun; ross-128 x2); uncovered remainder
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 35
+  n_trials: null
+  epoch_range: null
+  source: surveys/ptf-crossings/results/coverage_v1_summary.json; report/ptf_crossings.md §1 item 3
+  notes: 7/42 events covered (van-maanen April family 2009/2010/2011/2013, ross-128 x2, wolf-359 x1);
+    uncovered remainder
+- target_id:
+  - teegarden
+  - gj-908
+  - ross-154
+  channel: B
+  rung: any
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ptf_crossings.md §1 item 3; §3
+  notes: 'campaign cadence: these antipodes have zero PTF epochs (zero-coverage positions; declared unconstrained)'
+- target_id: programme
+  channel: A
+  rung: 0.1 AU
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct, at the star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 38
+  n_trials: null
+  epoch_range: null
+  source: surveys/ptf-crossings/results/coverage_v1_summary.json; report/ptf_crossings.md §1 item 3
+  notes: 4/42 events covered; uncovered remainder
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct, at the star position (blended)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 76
+  n_trials: null
+  epoch_range: null
+  source: surveys/ptf-crossings/results/coverage_v1_summary.json; report/ptf_crossings.md §1 item 3
+  notes: 76/513 events covered; rung constraint-only by the standing window~season theorem (freeze v1.0);
+    zero trials, coverage recorded
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct, at the star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 437
+  n_trials: null
+  epoch_range: null
+  source: surveys/ptf-crossings/results/coverage_v1_summary.json; report/ptf_crossings.md §1 item 3
+  notes: uncovered remainder of the 1.0 AU rung (513 - 76)
+- target_id: programme
+  channel:
+  - A
+  - B
+  rung: any
+  band: 1064/1550 nm
+  substrate: PTF g + Mould R
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ptf_crossings.md §1 item 2; §3
+  notes: 1064/1550 nm outside both bands; unconstrained
+- target_id: programme
+  channel: S1
+  rung: any
+  band: any
+  substrate: null
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: surveys/ptf-crossings/hypotheses.md §1
+  notes: sunward combinations out of scope (identical to the PS1 freeze; plan §5.8 item 9 owns them)
+- target_id: programme
+  channel: S2
+  rung: any
+  band: any
+  substrate: null
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: surveys/ptf-crossings/hypotheses.md §1
+  notes: sunward combinations out of scope (identical to the PS1 freeze; plan §5.8 item 9 owns them)
+- target_id: programme
+  channel: B
+  rung: any
+  band: g/R
+  substrate: PTF level-1 epochal images, scie-direct (no differencing), per-frame field-star calibration,
+    antipode relay track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ptf_crossings.md §3
+  notes: 'declared unconstrained: sub-exposure pulse schedules beyond x d scaling; transmitters avoiding
+    Earth-crossing windows'

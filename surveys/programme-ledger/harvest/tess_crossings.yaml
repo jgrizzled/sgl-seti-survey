@@ -1,0 +1,374 @@
+survey_id: tess_crossings
+report: report/tess_crossings.md
+plan_section: "5.6"
+pipeline: B
+archives: [tess]
+hypothesis_version: "v1.0 (threshold freeze v1.0 -> v1.1)"
+era: "2018-07 → 2026-08"
+run_dir: runs/tess-crossings
+records_dir: null
+candidates: 0
+candidate_notes: "1 retained_ambiguous (teegarden B 0.1 AU chord, S_c 79.7 vs T_c 52.1; non-promotable, designated follow-up = recurrence at a future ecliptic sector); 1 vetoed by chord-shape/timing test (teegarden B 2.5 Rsun); 1 adjudicated control-crossing (wolf-359 B 2.5 Rsun, margin +0.46); pulse statistic null in all 6 units"
+rows:
+  # ---- Channel B confirmatory units (6 units x 2 statistics = 12 trials) ----
+  - target_id: wolf-359
+    channel: B
+    rung: "1.2 Rsun"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, 600 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 18.0
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: 0.00056
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2021-09-05 (evt-e316050714db, s42)"
+    source: "report/tess_crossings.md §2 table, §3 table, §4; surveys/tess-crossings/results/completeness_v1.json"
+    notes: "statistic: chord S_c (d=1); m90 chord >= 18.0 grid-censored (true limit deeper); b = 0.55 Rsun; S_c 12.5 < T_c 15.3 (searched_null); power ≲ 560 W = 0.00056 MW (converted from W)"
+  - target_id: wolf-359
+    channel: B
+    rung: "1.2 Rsun"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, 600 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 16.5
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: 0.0022
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2021-09-05 (evt-e316050714db, s42)"
+    source: "report/tess_crossings.md §2 table, §3 table, §4"
+    notes: "statistic: pulse S_p (d=0.1 boxcar, >= 1 cadence of 600 s); S_p 2.5 < T_p 4.5; single pulse excluded above ~2.2 kW = 0.0022 MW (converted from kW) / 1.3 MJ per pulse; duty-cycle miss probability 2–7 % in the curves; 81 clean in-window cadences"
+  - target_id: wolf-359
+    channel: B
+    rung: "2.5 Rsun"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, 600 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 18.0
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: 0.0024
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2021-09-05 (evt-e316050714db, s42)"
+    source: "report/tess_crossings.md §2 table + adjudication bullets, §3 table, §4"
+    notes: "statistic: chord S_c; m90 >= 18.0 grid-censored; S_c 21.4 > T_c 20.9 (margin +0.46, 2 % of scale) adjudicated control-crossing under the 1/9 budget (nested-window cross-check contradicts a real source); power ≲ 2.4 kW = 0.0024 MW (converted from kW)"
+  - target_id: wolf-359
+    channel: B
+    rung: "2.5 Rsun"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, 600 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 16.3
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2021-09-05 (evt-e316050714db, s42)"
+    source: "report/tess_crossings.md §2 table, §3 table"
+    notes: "statistic: pulse S_p; S_p 2.9 < T_p 5.5; 184 in-window cadences; no per-rung pulse power stated in the report"
+  - target_id: wolf-359
+    channel: B
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, 600 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 15.2
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: 2.3
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2021-09-05 (evt-e316050714db, s42)"
+    source: "report/tess_crossings.md §2 table, §3 table, §4"
+    notes: "statistic: chord S_c; S_c −19.4 vs T_c 927.6 (one star-contaminated ring control) — searched_null but deeply insensitive; power ~2.3 MW"
+  - target_id: wolf-359
+    channel: B
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, 600 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 12.1
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2021-09-05 (evt-e316050714db, s42)"
+    source: "report/tess_crossings.md §2 table, §3 table"
+    notes: "statistic: pulse S_p; S_p 3.9 < T_p 137.2 (star-contaminated control; insensitive); 1116 in-window cadences"
+  - target_id: teegarden
+    channel: B
+    rung: "1.2 Rsun"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 91, 200 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 17.5
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: 0.00084
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2025-05-06 (evt-59dd98fa8d3d, s91)"
+    source: "report/tess_crossings.md §2 table, §3 table, §4"
+    notes: "statistic: chord S_c; b = 1.04 Rsun; S_c 17.2 < T_c 17.3 (searched_null); ±0.5 mag scale caveat (teegarden s91 ZP scatter 0.493 fails the 0.2 gate); power ~840 W = 0.00084 MW (converted from W), x~1.6 scale uncertainty"
+  - target_id: teegarden
+    channel: B
+    rung: "1.2 Rsun"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 91, 200 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.8
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: 0.011
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2025-05-06 (evt-59dd98fa8d3d, s91)"
+    source: "report/tess_crossings.md §2 table, §3 table, §4"
+    notes: "statistic: pulse S_p (>= 1 cadence of 200 s); S_p 3.0 < T_p 4.8; single pulse excluded above ~11 kW = 0.011 MW (converted from kW) / 2.2 MJ per pulse; ±0.5 mag scale caveat; 147 in-window cadences"
+  - target_id: teegarden
+    channel: B
+    rung: "2.5 Rsun"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 91, 200 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 17.6
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: 0.0037
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2025-05-06 (evt-59dd98fa8d3d, s91)"
+    source: "report/tess_crossings.md §2 table + adjudication bullets, §3 table, §4"
+    notes: "statistic: chord S_c; S_c 48.3 > T_c 24.9 VETOED by the frozen chord-shape/timing test (split-half ratio 0.31 = monotonic ramp; background anti-correlation −0.785; window in the sector's final day) — no vocabulary state for an instrumental veto, recorded as searched; ±0.5 mag caveat; power ~3.7 kW = 0.0037 MW (converted from kW)"
+  - target_id: teegarden
+    channel: B
+    rung: "2.5 Rsun"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 91, 200 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.7
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2025-05-06 (evt-59dd98fa8d3d, s91)"
+    source: "report/tess_crossings.md §2 table, §3 table"
+    notes: "statistic: pulse S_p; S_p 5.2 < T_p 7.8; ±0.5 mag caveat; 405 in-window cadences"
+  - target_id: teegarden
+    channel: B
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 91, 200 s cadence"
+    status: retained_ambiguous
+    limit_kind: "m90"
+    limit_value: 18.0
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: 0.18
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2025-05-06 (evt-59dd98fa8d3d, s91)"
+    source: "report/tess_crossings.md §2 table + adjudication bullets, §3 table, §4, §6"
+    notes: "statistic: chord S_c; S_c 79.7 > T_c 52.1 retained-ambiguous, non-promotable (shape test weakened by sector-end truncation — no egress; shares final-day cadences with the vetoed 2.5 Rsun sibling); promotion requires independent recurrence at a future ecliptic sector — the designated follow-up; m90 >= 18.0 censored; ±0.5 mag caveat; power ≲ 180 kW = 0.18 MW (converted from kW)"
+  - target_id: teegarden
+    channel: B
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 91, 200 s cadence"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.9
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2025-05-06 (evt-59dd98fa8d3d, s91)"
+    source: "report/tess_crossings.md §2 table, §3 table"
+    notes: "statistic: pulse S_p; S_p 6.9 < T_p 7.9; ±0.5 mag caveat; 1925 in-window cadences (only first 7.5 d of the 11.9 d window in-sector)"
+  # ---- Channel A zero-trial reference rows (constraint-only by freeze: >= 9 d windows in 27 d sectors) ----
+  - target_id: teegarden
+    channel: A
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 71, 200 s cadence, on-star"
+    status: constraint_only
+    limit_kind: "m90"
+    limit_value: 14.1
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: null
+    power_mw_range: "1–3"
+    n_events: 3424
+    n_trials: 0
+    epoch_range: "2023-11-08 (evt-2215379de80c, s71)"
+    source: "report/tess_crossings.md §2, §3 table, §4; surveys/tess-crossings/results/completeness_v1.json (A)"
+    notes: "S = 5 reference depth, threshold-free (zero controls, not a calibrated exclusion); pulse reference T ≈ 14.1, chord reference >= 18.0 censored; b = 1.11 Rsun; 3,424 in-window cadences; report: 10-m diffraction-limited transmitter at MW-class pulse power (~1–3 MW at 3.8–4.3 pc) for the two A reference units"
+  - target_id: van-maanen
+    channel: A
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 43, 600 s cadence, on-star"
+    status: constraint_only
+    limit_kind: "m90"
+    limit_value: 13.2
+    limit_unit: "TESS T mag"
+    limit_range: null
+    power_mw: null
+    power_mw_range: "1–3"
+    n_events: 1475
+    n_trials: 0
+    epoch_range: "2021-10-06 (evt-74fd54a743a0, s43)"
+    source: "report/tess_crossings.md §2, §3 table, §4; surveys/tess-crossings/results/completeness_v1.json (A)"
+    notes: "S = 5 reference depth, threshold-free; pulse reference T ≈ 13.2, chord >= 18.0 censored; ±0.3 mag scale caveat (self-calibration −0.31 mag at the FWHM-fit ceiling); b = 0.52 Rsun; complete near-grazing window, 1,475 in-window cadences"
+  - target_id: gj-1276
+    channel: A
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, 600 s cadence, on-star"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1084
+    n_trials: 0
+    epoch_range: "2021-09-04 (evt-b3eb38c057cd, s42)"
+    source: "report/tess_crossings.md §1.5, §2, §6; surveys/tess-crossings/results/usability_v1.json"
+    notes: "off_science_array (finding T1: TESScut served collateral non-science CCD pixels; source CCD x = 2094 > science column 2092) — nominal-covered / unusable; b = 0.97 Rsun complete near-grazing window, 1,084 nominal in-window cadences"
+  - target_id: teegarden
+    channel: A
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 44, 600 s cadence, on-star"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 460
+    n_trials: 0
+    epoch_range: "2021-11-08 (evt-a0efd7e7dac7, s44)"
+    source: "report/tess_crossings.md §2, §6; surveys/tess-crossings/results/usability_v1.json; surveys/tess-crossings/results/coverage_refined_v1.ecsv"
+    notes: "off_science_array (source CCD x = 11 < science column 45) — nominal-covered / unusable; 460 nominal in-window cadences; partial window (overlap 4.26 d of 11.22 d)"
+  - target_id: gj-908
+    channel: A
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, on-star"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 0
+    n_trials: 0
+    epoch_range: "2021-09-21 (evt-245b4f5d2661, s42)"
+    source: "report/tess_crossings.md §1.4; surveys/tess-crossings/results/tic_cut_v1.json; surveys/tess-crossings/results/coverage_refined_v1.ecsv"
+    notes: "saturation-excluded (T = 7.10 vs exclusion below 7.3); 0 in-window primary cadences, overlap 0.24 d only; the only target lost to the TIC cut"
+  # ---- Channel B off-science-array (dev unit lost) ----
+  - target_id: ross-128
+    channel: B
+    rung: "0.1 AU"
+    band: "T"
+    substrate: "TESS FFI cutout (TESScut), sector 42, 600 s cadence"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 48
+    n_trials: 0
+    epoch_range: "2021-09-19 (evt-72b3ddd1ed4f, s42)"
+    source: "report/tess_crossings.md §1.5, §6; surveys/tess-crossings/results/usability_v1.json; surveys/tess-crossings/results/coverage_refined_v1.ecsv"
+    notes: "off_science_array (source CCD x = 21 < 45) — the v1.0 dev unit, lost at re-freeze v1.1; b = 2.07 Rsun; 48 nominal in-window cadences (overlap 2.86 d of 11.35 d)"
+  # ---- Era's deepest grazes fell between sectors ----
+  - target_id: van-maanen
+    channel: B
+    rung: "1.2 Rsun"
+    band: "any"
+    substrate: "TESS Ecliptic sectors (none in-window)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2022-04-03 (evt-839fa5a41f21)"
+    source: "report/tess_crossings.md §1.2, §4; crossings/tess_v1/events.ecsv"
+    notes: "deepest graze of the era, b = 0.078 Rsun, fell between sectors (2022 spring) — remains open; channel/event id from crossings/tess_v1/events.ecsv (outbound tx anti_target)"
+  - target_id: gj-1276
+    channel: B
+    rung: "1.2 Rsun"
+    band: "any"
+    substrate: "TESS Ecliptic sectors (none in-window)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2022-03-03 (evt-055c893b7b6d)"
+    source: "report/tess_crossings.md §1.2, §4; crossings/tess_v1/events.ecsv"
+    notes: "second-deepest graze of the era, b = 0.49 Rsun (0.487 in the list), fell between sectors (2022 spring) — remains open"
+  # ---- A 1.0 AU wide rung: gate-level coverage only ----
+  - target_id: programme
+    channel: A
+    rung: "1.0 AU"
+    band: "any"
+    substrate: "TESS sector-date coverage gate (no cutouts pulled)"
+    status: ledger_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 292
+    n_trials: 0
+    epoch_range: "2018-07 → 2026-08"
+    source: "report/tess_crossings.md §4, §6; surveys/tess-crossings/results/coverage_gate_v1_summary.json"
+    notes: "report labels the rung programme-wide constraint-only, no statistic formed: 292 gate-level coverage events / 86 targets / 366 rows, 19 full-window events; recorded here as ledger_only (coverage logged, no search)"

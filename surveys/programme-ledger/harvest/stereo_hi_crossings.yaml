@@ -1,0 +1,319 @@
+survey_id: stereo_hi_crossings
+report: report/stereo_hi_crossings.md
+plan_section: '5.16'
+pipeline: B
+archives:
+- stereo-hi1
+hypothesis_version: v1.0 + threshold amendments v1.1/v1.2 (dev, pre-confirmatory)
+era: 2007-01 → 2026-08
+run_dir: runs/stereo-hi-crossings
+records_dir: null
+candidates: 0
+candidate_notes: 27 trials / 9 units, 3 exceedances vs 3.0 expected, all adjudicated non-point-source systematics (two coronal-transient fronts vetoed, one background-offset plateau retained non-promotable); coverage 272 of 295 event rows (2014-08 → 2015-11 safe-mode/conjunction gap takes 19)
+rows:
+- target_id: programme
+  channel: S1
+  rung: 1.2 Rsun
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §1, §5
+  notes: 'Grazing rungs (ε ≤ 0.7°) never enter the HI-1 field (inner edge |HPLN| 3.9°): 84 of 105 ledger events across the grazing rungs are not_constrainable; closed by geometry, not by data'
+- target_id: programme
+  channel: S1
+  rung: 2.5 Rsun
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §1, §5
+  notes: 'Grazing rungs (ε ≤ 0.7°) never enter the HI-1 field (inner edge |HPLN| 3.9°): 84 of 105 ledger events across the grazing rungs are not_constrainable; closed by geometry, not by data'
+- target_id: gj-1276
+  channel: S1
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 12.88
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 11.7
+  power_mw_range: null
+  n_events: 20
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json gj-1276|S1_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: S_stack 0.11 / 9.66, S_event 4.06 / 7.75, S_pulse 5.73 / 14.65 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 12.45 -> 17.4 MW; S_pulse m90 7.95 -> 1090.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)
+- target_id: gj-1276
+  channel: S2
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 11.91
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 60.9
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json gj-1276|S2_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: S_stack −0.21 / 17.64, S_event 8.22 / 7.75 exc, S_pulse 15.71 / 11.16 exc (S/T); S_pulse 2009-01-14 four consecutive frames = ~10-px diagonal band sweeping 2–3 px/frame over 2.5 h, extended moving front (CME/streamer class), vetoed non-point-source; S_event plateau retained (see retained_ambiguous row); power_mw = P_tx_10m (10-m-class uplink); P_cone 28.6 MW; S_event depth degenerate (null exceeds T); S_pulse m90 7.84 -> 2570.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)
+- target_id: ross-128
+  channel: S2
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 11.91
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 9.52
+  power_mw_range: null
+  n_events: 19
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json ross-128|S2_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: S_stack −9.16 / 12.41, S_event 3.43 / 37.20, S_pulse 8.43 / 73.08 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); P_cone 28.6 MW; S_event m90 10.7 -> 28.9 MW; S_pulse m90 6.04 -> 2130.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)
+- target_id: teegarden
+  channel: S1
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 12.88
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 11.7
+  power_mw_range: null
+  n_events: 17
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json teegarden|S1_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: 'S_stack −6.66 / 3.72, S_event 3.58 / 5.78, S_pulse 19.57 / 7.71 exc (S/T); S_pulse 2010-08-14 last two arc frames (+6.4, +10.0, back to −2.6): whole stamp lifts uniformly ~0.8 DN/s, extended transient front, vetoed non-point-source; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 13.2 -> 8.66 MW; S_pulse m90 7.67 -> 1420.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)'
+- target_id: teegarden
+  channel: S2
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 12.45
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 7.44
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json teegarden|S2_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: S_stack 1.54 / 10.94, S_event 6.45 / 10.91, S_pulse 10.59 / 29.22 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); P_cone 17.3 MW; S_event m90 11.52 -> 17.5 MW; S_pulse m90 7.42 -> 769.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)
+- target_id: van-maanen
+  channel: S1
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 11.91
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 28.6
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json van-maanen|S1_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: S_stack 1.51 / 21.08, S_event 4.81 / 15.73, S_pulse 9.68 / 106.35 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 11.52 -> 40.7 MW; S_pulse m90 5.59 -> 9620.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)
+- target_id: van-maanen
+  channel: S2
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 11.91
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 15.6
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json van-maanen|S2_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: S_stack −1.44 / 9.83, S_event 3.75 / 12.54, S_pulse 3.94 / 18.28 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); P_cone 28.6 MW; S_event m90 11.52 -> 22.2 MW; S_pulse m90 7.34 -> 1040.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)
+- target_id: wolf-359
+  channel: S1
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 12.45
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 17.3
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json wolf-359|S1_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: S_stack −3.27 / 6.85, S_event 5.62 / 6.51, S_pulse 5.53 / 13.31 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 12.88 -> 11.7 MW; S_pulse m90 7.85 -> 1200.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)
+- target_id: wolf-359
+  channel: S2
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 12.45
+  limit_unit: V_eq mag (B−V 0.65 source)
+  limit_range: null
+  power_mw: 2.94
+  power_mw_range: null
+  n_events: 20
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table; surveys/stereo-hi-crossings/results/power_limits_v1.json wolf-359|S2_0.1AU; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: S_stack 2.88 / 13.94, S_event 6.82 / 14.04, S_pulse 5.68 / 14.70 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); P_cone 17.3 MW; S_event m90 11.52 -> 6.91 MW; S_pulse m90 7.71 -> 233.0 MW (40-min frames); line-equivalent through W_eff 100 nm at 680 nm, ±0.3 mag band systematic; 532 nm out of band (broadband leakage cell)
+- target_id: gj-1276
+  channel: S2
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: retained_ambiguous
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: 2012-10-22/24
+  source: report/stereo_hi_crossings.md §3; surveys/stereo-hi-crossings/results/confirmatory_v1.md adjudication
+  notes: 'S_event 8.22 vs T 7.75: a +0.39-unit plateau over 54 epochs (V_eq 12.1) with no point source in the pixels at any epoch (gj-1276 is V 16); patch''s own baseline sits at −0.27 units — a regional level-2 residual-background offset between baseline and arc regions the flank controls do not share; null in the unit''s other 17 windows; retained, non-promotable'
+- target_id: ross-128
+  channel: S1
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 table, §6; surveys/stereo-hi-crossings/results/confirmatory_v1.md
+  notes: 'Antipode patch Tycho-masked: VT 7.2 star at 1.7 px — the same permanently blended fixed sky point LASCO found; 0 events searchable'
+- target_id: gj-908
+  channel: S1
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 19
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 (dev stage); surveys/stereo-hi-crossings/results/dev_v1.md unit table
+  notes: 'Dev-stage unit (no injection depth): S_event exceedance 2022-10 extended-background plateau (same class as gj-1276 S2); gj-908 (V 9.0) repeats to 0.2 % across 18 transits — the in-situ bright-star control; dev S_stack −1.32 / 6.61, S_event 7.80 / 7.46 exc, S_pulse 4.23 / 6.40 (S/T)'
+- target_id: gj-908
+  channel: S2
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 (dev stage); surveys/stereo-hi-crossings/results/dev_v1.md unit table
+  notes: Dev-stage unit (no injection depth); gj-908 (V 9.0) repeats to 0.2 % across 18 transits — the in-situ bright-star control; dev S_stack 6.62 / 9.36, S_event 7.77 / 14.66, S_pulse 6.13 / 21.76 (S/T)
+- target_id: ross-154
+  channel: S1
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 9
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 (dev stage); surveys/stereo-hi-crossings/results/dev_v1.md unit table
+  notes: 'Dev-stage unit (no injection depth); ross-154''s crowded west-era fields fail the ZP-scatter gate (MAD ≤ 0.12): dev units keep 9–10 of 20 events; dev S_stack 1.37 / 7.25, S_event 3.97 / 4.14, S_pulse 4.42 / 8.96 (S/T)'
+- target_id: ross-154
+  channel: S2
+  rung: 0.1 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 level-2 24h1A_br01 frames, ICRS-fixed sky-patch aperture photometry with star-fixed baseline
+  status: vetoed_known_source
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 10
+  n_trials: 3
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §3 (dev stage); surveys/stereo-hi-crossings/results/dev_v1.md unit table
+  notes: 'Dev-stage unit (no injection depth): S_pulse exceedance 2010-10-06 single-frame +6.4-unit flare-class event on V1216 Sgr, vetoed by the persistence rule; crowded west-era fields fail the ZP-scatter gate (9–10 of 20 events kept); dev S_stack 6.67 / 8.50, S_event 4.56 / 10.92, S_pulse 9.41 / 5.13 exc (S/T)'
+- target_id: programme
+  channel: S2
+  rung: 1.0 AU
+  band: HI-1 630–730 nm
+  substrate: STEREO-A HI-1 whole-transit in-beam passages
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 289
+  n_trials: null
+  epoch_range: null
+  source: report/stereo_hi_crossings.md §1
+  notes: 'S2 1 AU (whole HI-1 transit in-beam): 16 targets, 289 transits; out of scope by decision D7 — coverage logged, no statistic'

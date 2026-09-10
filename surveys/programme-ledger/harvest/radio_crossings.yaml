@@ -1,0 +1,271 @@
+survey_id: radio_crossings
+report: report/radio_crossings.md
+plan_section: '5.5'
+pipeline: B
+archives:
+- bl
+- vlass
+hypothesis_version: null
+era: 'BL: crossing events 2016–2028 (archive snapshot 2026-08-24); VLASS: four epochs 2018–2026'
+run_dir: runs/radio-crossings
+records_dir: null
+candidates: 0
+candidate_notes: 'Metadata-only coverage intersection executed 2026-08-24; no signal statistic formed. Decision
+  (plan §11.2 step 7): geometry products stay geometry-only; no radio signal search in this repository.'
+rows:
+- target_id: programme
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: Breakthrough Listen Open Data archive pointing metadata (GBT/Parkes/MeerKAT), 5-min bins, in-beam test
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings.md §2 table; §3 item 1
+  notes: 'Zero GBT/Parkes/MeerKAT pointings inside any A 0.1 AU window (93 cones, 0 query failures); targeted narrow-rung
+    radio re-analysis moot. Hand-off (c): re-run the intersection if BL MeerKAT holdings reach the public archive.
+    Scope: BL public open-data archive as snapshotted 2026-08-24.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: optical (APF spectra)
+  substrate: BL APF optical spectra of teegarden (as SO0253) inside an A 0.1 AU window
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2016-11-13'
+  source: report/radio_crossings.md §2 table; §3 item 4(b); surveys/radio-crossings/results/bl_inwindow_v1.ecsv
+  notes: '3 APF spectra 5.3 d inside an 11.5 d window (non-radio). Hand-off (b): optical laser-line inspection →
+    spectral-archive family (plan §3.6 row 10); report/spectral_archives.md §6 lists the raw 2D frames as a pending
+    hand-off.'
+- target_id: programme
+  channel: B
+  rung: 1.2 Rsun
+  band: any
+  substrate: Breakthrough Listen Open Data archive pointing metadata (GBT/Parkes/MeerKAT), 5-min bins, in-beam test
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings.md §2 table; §3 item 3; §5
+  notes: 'Zero BL pointings within 0.5° of any antipode in-window ("nobody has ever looked"); future-observation
+    recommendation, not an archival opportunity. Qualifier (§5, 2026-09-04): holds for targeted radio (BL) and the
+    grazing rungs; wide-field ASKAP epochs exist at the 0.1 AU antipode rung (report/radio_crossings_ext.md).'
+- target_id: programme
+  channel: B
+  rung: 2.5 Rsun
+  band: any
+  substrate: Breakthrough Listen Open Data archive pointing metadata (GBT/Parkes/MeerKAT), 5-min bins, in-beam test
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings.md §2 table; §3 item 3; §5
+  notes: 'Zero BL pointings within 0.5° of any antipode in-window ("nobody has ever looked"); future-observation
+    recommendation, not an archival opportunity. Qualifier (§5, 2026-09-04): holds for targeted radio (BL) and the
+    grazing rungs; wide-field ASKAP epochs exist at the 0.1 AU antipode rung (report/radio_crossings_ext.md).'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: any
+  substrate: Breakthrough Listen Open Data archive pointing metadata (GBT/Parkes/MeerKAT), 5-min bins, in-beam test
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings.md §2 table; §3 item 3; §5
+  notes: 'Zero BL pointings within 0.5° of any antipode in-window ("nobody has ever looked"); future-observation
+    recommendation, not an archival opportunity. Qualifier (§5, 2026-09-04): holds for targeted radio (BL) and the
+    grazing rungs; wide-field ASKAP epochs exist at the 0.1 AU antipode rung (report/radio_crossings_ext.md).'
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: Breakthrough Listen Open Data archive pointing metadata (GBT/Parkes/MeerKAT), 5-min bins, in-beam test
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 22
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings.md §2 table; §3 item 2; surveys/radio-crossings/results/coverage_v1_summary.json
+  notes: 143 in-beam observations, 22 events, 18 targets (incl. proxima-cen, barnard-era targets, teegarden); windows
+    tile ~1/3–2/3 of the calendar; BL published blind nulls cited as the constraint for these cells (their own thresholds
+    / drift-range caveats). 221 rows / 39 events / 28 targets within the 0.5° cone.
+- target_id: gj-908
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: VLASS quick-look tile epoch dates (NRAO dynamic-schedule summary), ±3 d tile tolerance
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: 2017-09 (VLASS1.1), 2025-09 (VLASS4.1)
+  source: report/radio_crossings.md §2 table; §3 item 4(a); surveys/radio-crossings/results/vlass_inwindow_v1.ecsv
+  notes: 'Two strict in-window tile epochs (offsets +2.5 d, +2.4 d). Hand-off (a) executed 2026-09-04 as the six-cutout
+    quick-look (report/radio_quicklook.md): nothing above 3σ; broadband only (continuum imaging dilutes CW lines
+    by ~1e9).'
+- target_id: ross-154
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: VLASS quick-look tile epoch dates (NRAO dynamic-schedule summary), ±3 d tile tolerance
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: 2019-07 (VLASS1.2)
+  source: report/radio_crossings.md §2 table; §3 item 4(a); surveys/radio-crossings/results/vlass_inwindow_v1.ecsv
+  notes: 'Strict in-window tile epoch (offset −1.9 d). Hand-off (a) executed: report/radio_quicklook.md.'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: VLASS quick-look tile epoch dates (NRAO dynamic-schedule summary), ±3 d tile tolerance
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: 2021-11 (VLASS2.2)
+  source: report/radio_crossings.md §2 table; §3 item 4(a); surveys/radio-crossings/results/vlass_inwindow_v1.ecsv
+  notes: 'Strict in-window tile epoch (offset −2.3 d). Hand-off (a) executed: report/radio_quicklook.md.'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: VLASS quick-look tile epoch dates (NRAO dynamic-schedule summary), ±3 d tile tolerance
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: 2020-09 (VLASS2.1)
+  source: report/radio_crossings.md §2 table; §3 item 4(a); surveys/radio-crossings/results/vlass_inwindow_v1.ecsv;
+    §3 item 4(a)
+  notes: Tolerance-edge row only (offset +8.4 d vs ±3 d tile tolerance); exact CADC tile times (report/radio_quicklook.md
+    §3) put it outside the strict window — no in-window VLASS epoch.
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: any
+  substrate: VLASS quick-look tile epoch dates (NRAO dynamic-schedule summary), ±3 d tile tolerance
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: 2020-09 (VLASS2.1)
+  source: report/radio_crossings.md §2 table; §3 item 4(a); surveys/radio-crossings/results/vlass_inwindow_v1.ecsv;
+    §3 item 4(a)
+  notes: Tolerance-edge row only (offset +8.0 d); exact CADC tile times put it outside the strict window — no in-window
+    VLASS antipode epoch.
+- target_id: programme
+  channel: B
+  rung: 1.2 Rsun
+  band: any
+  substrate: VLASS quick-look tile epoch dates (NRAO dynamic-schedule summary), ±3 d tile tolerance
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings.md §2 table
+  notes: Zero VLASS tile epochs in any grazing-rung antipode window.
+- target_id: programme
+  channel: B
+  rung: 2.5 Rsun
+  band: any
+  substrate: VLASS quick-look tile epoch dates (NRAO dynamic-schedule summary), ±3 d tile tolerance
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings.md §2 table
+  notes: Zero VLASS tile epochs in any grazing-rung antipode window.
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: VLASS quick-look tile epoch dates (NRAO dynamic-schedule summary), ±3 d tile tolerance
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 69
+  n_trials: null
+  epoch_range: null
+  source: surveys/radio-crossings/results/coverage_v1_summary.json (vlass A_1.0)
+  notes: 69 in-window tile epochs, 48 targets; not discussed in the report text (products file only).

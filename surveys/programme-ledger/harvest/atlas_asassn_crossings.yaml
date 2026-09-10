@@ -1,0 +1,903 @@
+survey_id: atlas_asassn_crossings
+report: report/atlas_asassn_crossings.md
+plan_section: "5.9"
+pipeline: B
+archives: [atlas, asassn]
+hypothesis_version: "v1.0 + A1–A3 (§12 pre-data amendments)"
+era: "2015-07 → 2026-09 (ATLAS, era end MJD 61286); ASAS-SN Sky Patrol v2 ceiling 2025-06-16"
+run_dir: runs/atlas-asassn-crossings
+records_dir: null
+candidates: 0
+candidate_notes: "27 blind confirmatory trials, 5 exceedances vs 3.23 expected on three events, none promotable: X1 van-maanen B 1.2+2.5 Rsun S_event 2.78 (2017-04-03, b = 0.24 Rsun, one 2.8σ chord in four covered windows) retained-ambiguous; X2 gj-1276 B 0.1 AU S_event 5.09 / S_pulse 3.04 adjudicated difference-image baseline systematic, retained, non-promotable; X3 teegarden A 0.1 AU S_stack 11.8 adjudicated channel-A blended systematic (PM dipole). Dev: wolf-359 B 2.5 Rsun single 3.5σ Sutherland exposure retained, non-promotable. Dev + confirmatory 37 trials, 7 exceedances vs 4.55 expected."
+rows:
+  # ================= B 1.2 Rsun =================
+  - target_id: van-maanen
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU, D5-detrended"
+    status: retained_ambiguous
+    limit_kind: "m90"
+    limit_value: 20.55
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.000078
+    power_mw_range: null
+    n_events: 4
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (4 covered of 11 windows; exceedance 2017-04-03, evt-fc686a)"
+    source: "report/atlas_asassn_crossings.md §2 (X1), §2 depth table, §3 table; surveys/atlas-asassn-crossings/results/power_limits_v1.json"
+    notes: "statistic: S_event (per-window chord); X1: S 2.78 > T 1.97 (4 valid controls) — three Haleakala exposures at dt +0.27…+0.30 d read 11, 66, 43 ± 30 µJy (quad-consistent +40 µJy, 2.8σ), SkyBoT clean, no recurrence in the other three covered windows (S_w −1.33, −0.84, −0.48); promotion requires recurrence at a second covered window; b = 0.24 Rsun photosphere-grazing cone excluded above 78 W = 0.000078 MW (converted from W) per window; ±0.1 mag systematic on every depth"
+  - target_id: van-maanen
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.78
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00016
+    power_mw_range: null
+    n_events: 4
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (4 covered of 11 windows)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3 table; surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_pulse (max in-window exposure, >= 30 s); S 2.54 < T 3.09; pulse cell excluded above 160 W = 0.00016 MW (converted from W)"
+  - target_id: van-maanen
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 4
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §1.5, §2 (constraint-only ledger), §2 depth table; surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json"
+    notes: "statistic: S_stack — constraint-only at every grazing rung (<= 3 valid pseudo-stacks; here 2 valid controls, S −0.83 vs T 0.86, not a trial); recurrence at the grazing rungs declared unconstrained"
+  - target_id: wolf-359
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU (dev unit, D1 forced)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.39
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00009
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (1 covered of 11 windows)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3 table; surveys/atlas-asassn-crossings/results/dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit (not blind); statistic: S_event; S −1.79 < T −0.66 (4 valid controls); b = 0.69 Rsun cone excluded above 90 W = 0.00009 MW (converted from W) in the one covered window"
+  - target_id: wolf-359
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU (dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.94
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00014
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (1 covered window)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3 table; surveys/atlas-asassn-crossings/results/dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit; statistic: S_pulse; S 0.24 < T 0.88; pulse cell 140 W = 0.00014 MW (converted from W)"
+  - target_id: wolf-359
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord (dev unit)"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; surveys/atlas-asassn-crossings/results/dev_search_v1.json"
+    notes: "statistic: S_stack — constraint-only (0 valid pseudo-stacks; single covered window)"
+  - target_id: gj-1276
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads)"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (1 covered window in the o-band search; coverage ledger 2 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 (constraint-only ledger); surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json; coverage_v1_summary.json"
+    notes: "constraint-only unit: 1 valid control (< 4 required for a trial); S_event −1.32, S_pulse 0.83, S_stack no threshold (per confirmatory_search_v1.json); no depth stated"
+  - target_id: teegarden
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads)"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (1 covered of 11 windows)"
+    source: "report/atlas_asassn_crossings.md §2 (constraint-only ledger), §3 table; surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json"
+    notes: "constraint-only unit: 3 valid controls (< 4 required); S_event 0.37 vs T 1.23, S_pulse 1.21 vs T 1.16 (non-trial lane), S_stack no threshold; b = 0.96 Rsun; report's 1.2 Rsun cone entry for teegarden: constraint-only"
+  # ================= B 2.5 Rsun =================
+  - target_id: teegarden
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.31
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00042
+    power_mw_range: null
+    n_events: 4
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (4 covered windows)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3 table; surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_event; S 0.54 < T 1.94 (7 valid controls); 2.5 Rsun cone excluded above 420 W = 0.00042 MW (converted from W) per window"
+  - target_id: teegarden
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.72
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00073
+    power_mw_range: null
+    n_events: 4
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (4 covered windows)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3 table; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_pulse; S 1.41 < T 2.33; pulse cell 730 W = 0.00073 MW (converted from W)"
+  - target_id: teegarden
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 4
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json"
+    notes: "statistic: S_stack — constraint-only (3 valid pseudo-stacks; S 0.47 vs T 1.22, not a trial)"
+  - target_id: van-maanen
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU"
+    status: retained_ambiguous
+    limit_kind: "m90"
+    limit_value: 19.95
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00059
+    power_mw_range: null
+    n_events: 5
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (5 covered windows; exceedance 2017-04-03, evt-fc686a)"
+    source: "report/atlas_asassn_crossings.md §2 (X1), §2 depth table, §3 table; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_event; X1 nested: the same 2017-04-03 epoch set as the 1.2 Rsun row, S 2.78 > T 2.64 (7 valid controls) — one epoch set counted in two nested rungs; no recurrence in the other four covered windows; retained-ambiguous, non-promotable; 590 W = 0.00059 MW (converted from W) per window"
+  - target_id: van-maanen
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.50
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00089
+    power_mw_range: null
+    n_events: 5
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (5 covered windows)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3 table; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_pulse; S 2.54 < T 3.20; pulse cell 890 W = 0.00089 MW (converted from W)"
+  - target_id: van-maanen
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 5
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json"
+    notes: "statistic: S_stack — constraint-only (3 valid pseudo-stacks; S −0.83 vs T 1.42, not a trial)"
+  - target_id: wolf-359
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU (dev unit)"
+    status: retained_ambiguous
+    limit_kind: "m90"
+    limit_value: 20.75
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00028
+    power_mw_range: null
+    n_events: 4
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (4 covered windows)"
+    source: "report/atlas_asassn_crossings.md §1.6 (dev stage), §2 depth table, §3 table; surveys/atlas-asassn-crossings/results/dev_search_v1.json; dev_adjudication_v1.json; power_limits_v1.json"
+    notes: "dev unit (not blind); statistic: S_event; dev exceedance S 3.55 > T 1.45 on one epoch — a single 3.5σ Sutherland exposure in a degraded-sky quad, quad-inconsistent, SkyBoT clean, no recurrence: retained, non-promotable; 280 W = 0.00028 MW (converted from W) per window"
+  - target_id: wolf-359
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track at z = 550 AU (dev unit)"
+    status: retained_ambiguous
+    limit_kind: "m90"
+    limit_value: 20.17
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.00048
+    power_mw_range: null
+    n_events: 4
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (4 covered windows)"
+    source: "report/atlas_asassn_crossings.md §1.6 (dev stage), §2 depth table, §3 table; dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit; statistic: S_pulse; the same single-exposure epoch: S 3.18 > T 2.14 (second of the 2 dev exceedances on one epoch), retained, non-promotable; pulse cell 480 W = 0.00048 MW (converted from W)"
+  - target_id: wolf-359
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord (dev unit)"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 4
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; surveys/atlas-asassn-crossings/results/dev_search_v1.json"
+    notes: "statistic: S_stack — constraint-only (3 valid pseudo-stacks; S 0.42 vs T 0.83, not a trial)"
+  - target_id: gj-1276
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads)"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 2
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (2 covered windows in the o-band search; coverage ledger 4 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 (constraint-only ledger); surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json; coverage_v1_summary.json"
+    notes: "constraint-only unit: 2 valid controls (< 4 required); S_event −0.17 vs T 1.20, S_pulse 0.83 vs T 1.19, S_stack no threshold; no depth stated"
+  - target_id: ross-128
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads)"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 2
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (2 covered windows in the o-band search; coverage ledger 3 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 (constraint-only ledger); surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json; coverage_v1_summary.json"
+    notes: "constraint-only unit: 1 valid control (< 4 required); S_event 0.19 vs T 0.93, S_pulse 2.44 vs T 1.26 (non-trial lane), S_stack no threshold; b = 1.85 Rsun; no depth stated"
+  # ================= B 0.1 AU =================
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track, nested-z max"
+    status: retained_ambiguous
+    limit_kind: "m90"
+    limit_value: 20.23
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0337
+    power_mw_range: null
+    n_events: 11
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (11 covered of 11 windows; exceedance 2025-03-31, evt-9c6a08)"
+    source: "report/atlas_asassn_crossings.md §2 (X2), §2 depth table, §3; surveys/atlas-asassn-crossings/results/confirmatory_adjudication_v1.json; power_limits_v1.json"
+    notes: "statistic: S_event; X2: S 5.09 > T 3.03 at z = 10000 AU (all 28 in-window epochs enter); in-window nightly means consistent with zero (−11…+10 µJy ± 5–9) — the excess is manufactured by a −10 to −25 µJy off-window baseline depression at dt −10…−25 d the 30-d running median cannot remove; other ten windows span S_w −3.4…+1.5; SkyBoT clean; adjudicated difference-image baseline systematic, retained, non-promotable; 33.7 kW = 0.0337 MW (converted from W: 33,669 W) per window"
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track, nested-z max"
+    status: retained_ambiguous
+    limit_kind: "m90"
+    limit_value: 19.90
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0457
+    power_mw_range: null
+    n_events: 11
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (11 covered windows; exceedance 2025-03-31)"
+    source: "report/atlas_asassn_crossings.md §2 (X2), §2 depth table; confirmatory_adjudication_v1.json; power_limits_v1.json"
+    notes: "statistic: S_pulse; X2: S 3.04 > T 2.93 — a +31 ± 15 µJy exposure whose quad reads −8, +22, +31, −3 (intra-quad rung 2 fail); same adjudication as the S_event row (retained, non-promotable); pulse cell 45.7 kW = 0.0457 MW (converted from W)"
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord (10–11 windows of 14–17 epochs)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.35
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0302
+    power_mw_range: null
+    n_events: 11
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_stack (the recurrence cell the survey was adopted for); S 0.38 < T 2.80 (8 valid controls); recurrence-stacked 30.2 kW = 0.0302 MW (converted from W); the stack adds only ~0.3 mag over per-window depth at 0.1 AU"
+  - target_id: gj-908
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track (dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.07
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0389
+    power_mw_range: null
+    n_events: 7
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (7 windows in the o-band search; coverage ledger 11 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3; surveys/atlas-asassn-crossings/results/dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit (not blind); statistic: S_event; S 2.06 < T 3.03; 38.9 kW = 0.0389 MW (converted from W) per window"
+  - target_id: gj-908
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track (dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.73
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0535
+    power_mw_range: null
+    n_events: 7
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit; statistic: S_pulse; S 1.98 < T 2.73; pulse cell 53.5 kW = 0.0535 MW (converted from W)"
+  - target_id: gj-908
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord (dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.50
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0263
+    power_mw_range: null
+    n_events: 7
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit; statistic: S_stack; S 1.10 < T 1.49; recurrence-stacked 26.3 kW = 0.0263 MW (converted from W)"
+  - target_id: ross-128
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: null
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 9
+    n_trials: 2
+    epoch_range: "2015-07 → 2026-09 (9 windows in the o-band search; coverage ledger 10 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 depth table + reading paragraph, §3; surveys/atlas-asassn-crossings/results/confirmatory_search_v1.json"
+    notes: "statistics: S_event and S_pulse, both artefact-set — max-rule thresholds T 412 / T 188 set by a single-frame outlier in one pseudo-window (S 3.24 / 2.44, no exceedance): valid but insensitive trials, no m90 (report: ≥ 0.4–0.6 MW class for the artefact-set trials, no per-unit number for ross-128)"
+  - target_id: ross-128
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.79
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0503
+    power_mw_range: null
+    n_events: 9
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_stack; S 3.12 < T 4.74 (8 valid controls); recurrence-stacked 50.3 kW = 0.0503 MW (converted from W)"
+  - target_id: ross-154
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.05
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0398
+    power_mw_range: null
+    n_events: 7
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (7 windows in the o-band search; coverage ledger 10 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_event; S 1.37 < T 3.28 (7 valid controls); 39.8 kW = 0.0398 MW (converted from W) per window"
+  - target_id: ross-154
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.30
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0793
+    power_mw_range: null
+    n_events: 7
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_pulse; S 1.48 < T 3.32; pulse cell 79.3 kW = 0.0793 MW (converted from W)"
+  - target_id: ross-154
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.23
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0337
+    power_mw_range: null
+    n_events: 7
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_stack; S 1.68 < T 2.94 (6 valid controls); recurrence-stacked 33.7 kW = 0.0337 MW (converted from W)"
+  - target_id: teegarden
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.71
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0546
+    power_mw_range: null
+    n_events: 10
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (10 windows in the o-band search; coverage ledger 11 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_event; S 1.34 < T 4.22 (8 valid controls); 54.6 kW = 0.0546 MW (converted from W) per window"
+  - target_id: teegarden
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.15
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0361
+    power_mw_range: null
+    n_events: 10
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_pulse; S 2.02 < T 2.36; pulse cell 36.1 kW = 0.0361 MW (converted from W)"
+  - target_id: teegarden
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.19
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0349
+    power_mw_range: null
+    n_events: 10
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_stack; S 0.67 < T 3.12; recurrence-stacked 34.9 kW = 0.0349 MW (converted from W)"
+  - target_id: van-maanen
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.12
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0374
+    power_mw_range: null
+    n_events: 11
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (11 covered of 11 windows)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_event; S 2.67 < T 3.37 (8 valid controls); 37.4 kW = 0.0374 MW (converted from W) per window"
+  - target_id: van-maanen
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 17.12
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.59
+    power_mw_range: null
+    n_events: 11
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table + reading paragraph, §3; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_pulse, artefact-set: T 22.4 from a single-frame outlier in one pseudo-window (S 2.54, no exceedance) — valid but insensitive; m90 17.12 → 590.6 kW = 0.59 MW (converted from W)"
+  - target_id: van-maanen
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.50
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0263
+    power_mw_range: null
+    n_events: 11
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_stack; S −0.60 < T 2.35; recurrence-stacked 26.3 kW = 0.0263 MW (converted from W)"
+  - target_id: wolf-359
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track (dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 19.69
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0554
+    power_mw_range: null
+    n_events: 9
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (9 windows in the o-band search; coverage ledger 10 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 depth table, §3; surveys/atlas-asassn-crossings/results/dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit (not blind); statistic: S_event; S 3.55 < T 4.14; 55.4 kW = 0.0554 MW (converted from W) per window"
+  - target_id: wolf-359
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry (nightly quads), D3 mini-track (dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 17.57
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.39
+    power_mw_range: null
+    n_events: 9
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §1.6, §2 depth table + reading paragraph; dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit; statistic: S_pulse, artefact-set: T 15.8 from a chi/N-45 single-frame artefact in a pseudo-window (S 3.18, no exceedance) — valid but insensitive; m90 17.57 → 390.8 kW = 0.39 MW (converted from W)"
+  - target_id: wolf-359
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry, pooled recurrence chord (dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 20.02
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 0.0410
+    power_mw_range: null
+    n_events: 9
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table; dev_search_v1.json; power_limits_v1.json"
+    notes: "dev unit; statistic: S_stack; S −0.06 < T 4.75; recurrence-stacked 41.0 kW = 0.0410 MW (converted from W)"
+  # ================= A 0.1 AU (on-star, difference imaging) =================
+  - target_id: gj-1276
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry at the star (no z-track), pooled recurrence chord"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 16.55
+    limit_unit: "AB mag (o)"
+    limit_range: null
+    power_mw: 2.2
+    power_mw_range: null
+    n_events: 9
+    n_trials: 1
+    epoch_range: "2015-07 → 2026-09 (9 windows in the o-band search; coverage ledger 10 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 depth table + reading paragraph, §3 (uplink); confirmatory_search_v1.json; power_limits_v1.json"
+    notes: "statistic: S_stack; S 44.8 < T 52.4 in k-rescaled units — systematics-limited; uplink interpretation (10-m diffraction-limited beam at the target): P_tx 2.2 MW (2,212,101 W in power_limits_v1.json); D2 saturation: gj-1276 ok (o 15.19)"
+  - target_id: gj-1276
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry at the star (no z-track)"
+    status: searched
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 9
+    n_trials: 2
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 depth table + reading paragraph; confirmatory_search_v1.json"
+    notes: "statistics: S_event (S 77.8 < T 99.9) and S_pulse (S 35.8 < T 74.6) — trials counted, no m90 (injections recover at <= 50 % even at o = 16); systematics-limited, the on-star cell delivers no constraint"
+  - target_id: teegarden
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS forced difference-flux photometry at the star (no z-track); star marginal-saturated (o 12.59) and > 1 FWHM off its template position (5.1 arcsec/yr PM)"
+    status: searched
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 10
+    n_trials: 3
+    epoch_range: "2015-07 → 2026-09 (10 windows in the o-band search; coverage ledger 10 of 11)"
+    source: "report/atlas_asassn_crossings.md §2 (X3), §2 depth table, §3 (uplink: teegarden none); confirmatory_search_v1.json; confirmatory_adjudication_v1.json"
+    notes: "X3: S_stack 11.8 > T 6.9 — the 'difference flux' is the star's full o-band flux (34–59 mJy; PM dipole, chi/N 60–5600, k 79 → 2.9e7); adjudicated channel-A blended systematic (marginal saturation + PM dipole; the ZTF v1.1 parallax/PM template was not in this freeze); S_event 11.95 < T 18.5, S_pulse 32.4 < T 65.1; no m90 for any statistic (S_stack recovery <= 0.5 at 16.0); reported systematics-limited with its measured null — no vocabulary state for 'searched, no constraint delivered'; recorded as searched with limit null"
+  # ---- Saturation-excluded A units (D2 rule on 20-d reduced-mode series) ----
+  - target_id: ross-128
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS reduced-mode photometry (D2 saturation screen)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 11
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (9 of 11 windows nominally covered per coverage ledger)"
+    source: "report/atlas_asassn_crossings.md §1.5, §2 (constraint-only ledger: the five saturation-excluded A units); surveys/atlas-asassn-crossings/results/saturation_cut_v1.json; coverage_v1_summary.json"
+    notes: "saturation-excluded (o median 11.2, chi/N median 2.6e5; rule: excluded m < 12.5)"
+  - target_id: ross-154
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS reduced-mode photometry (D2 saturation screen)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 11
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (10 of 11 windows nominally covered)"
+    source: "report/atlas_asassn_crossings.md §1.5, §2; saturation_cut_v1.json; coverage_v1_summary.json"
+    notes: "saturation-excluded (o median 11.66)"
+  - target_id: van-maanen
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS reduced-mode photometry (D2 saturation screen)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 11
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (10 of 11 windows nominally covered)"
+    source: "report/atlas_asassn_crossings.md §1.5, §2; saturation_cut_v1.json; coverage_v1_summary.json"
+    notes: "saturation-excluded (o 12.30 per report; rule: excluded m < 12.5); b = 0.32 Rsun on-star grazing family lost to saturation in channel A"
+  - target_id: gj-908
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS reduced-mode photometry (D2 saturation screen; dev)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 11
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (8 of 11 windows nominally covered)"
+    source: "report/atlas_asassn_crossings.md §1.5, §2; saturation_cut_v1.json; coverage_v1_summary.json"
+    notes: "saturation-excluded (o median 10.94)"
+  - target_id: wolf-359
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS reduced-mode photometry (D2 saturation screen; dev)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 11
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09 (11 of 11 windows nominally covered)"
+    source: "report/atlas_asassn_crossings.md §1.5, §2; saturation_cut_v1.json; coverage_v1_summary.json"
+    notes: "saturation-excluded (o median 11.46; c band 13.71 ok but c is annotation-only)"
+  # ---- A 1.0 AU: no pull ----
+  - target_id: programme
+    channel: A
+    rung: "1.0 AU"
+    band: "any"
+    substrate: "ATLAS (no pull)"
+    status: no_survey
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 957
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §2 (constraint-only ledger); surveys/atlas-asassn-crossings/results/era_scope_v1.json"
+    notes: "no ATLAS pull — window ≈ season; deferred to a ledger addendum (report lists it under the constraint-only ledger); 957 in-era events / 86 targets per era_scope_v1.json (axis-side filtered)"
+  # ---- Window coverage-fraction ledger (the survey's deliverable): uncovered windows per rung ----
+  - target_id: programme
+    channel: B
+    rung: "1.2 Rsun"
+    band: "o"
+    substrate: "ATLAS nightly cadence vs 0.3–1.3 d grazing windows (window coverage-fraction ledger)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 36
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §1.4, §3 (declared unconstrained), §4; surveys/atlas-asassn-crossings/results/coverage_v1_summary.json"
+    notes: "8 of 44 B 1.2 Rsun windows covered (36 uncovered, 82 %) over 4 targets — per target covered/events: gj-1276 2/11, teegarden 1/11, van-maanen 4/11, wolf-359 1/11; grazing stacks hold 14–30 exposures not the pre-declared 100–180; single-window transmissions below per-window depth at the uncovered windows declared unconstrained; ASAS-SN v2 field-level epoch ledger shows the same shape at ~2 d cadence"
+  - target_id: programme
+    channel: B
+    rung: "2.5 Rsun"
+    band: "o"
+    substrate: "ATLAS nightly cadence vs 0.3–1.3 d grazing windows (window coverage-fraction ledger)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 30
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §1.4, §3; surveys/atlas-asassn-crossings/results/coverage_v1_summary.json"
+    notes: "25 of 55 B 2.5 Rsun windows covered (30 uncovered, 55 %) over 5 targets — gj-1276 4/11, ross-128 3/11, teegarden 7/11, van-maanen 7/11, wolf-359 4/11"
+  - target_id: programme
+    channel: B
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS nightly cadence vs 10–12 d windows (window coverage-fraction ledger)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 3
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §1.4; surveys/atlas-asassn-crossings/results/coverage_v1_summary.json"
+    notes: "74 of 77 B 0.1 AU windows covered (3 uncovered: ross-128 10/11, ross-154 10/11, wolf-359 10/11; the other four targets 11/11)"
+  - target_id: programme
+    channel: A
+    rung: "0.1 AU"
+    band: "o"
+    substrate: "ATLAS nightly cadence vs 10–12 d windows (window coverage-fraction ledger)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 9
+    n_trials: 0
+    epoch_range: "2015-07 → 2026-09"
+    source: "report/atlas_asassn_crossings.md §1.4; surveys/atlas-asassn-crossings/results/coverage_v1_summary.json"
+    notes: "68 of 77 A 0.1 AU windows covered (9 uncovered: gj-1276 10/11, gj-908 8/11, ross-128 9/11, ross-154 10/11, teegarden 10/11, van-maanen 10/11, wolf-359 11/11); coverage-only for the five saturation-excluded targets"

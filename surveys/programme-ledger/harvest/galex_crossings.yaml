@@ -1,0 +1,390 @@
+survey_id: galex_crossings
+report: report/galex_crossings.md
+plan_section: "5.12"
+pipeline: B
+archives: [galex]
+hypothesis_version: "v1.0 + v1.1 + v1.2"
+era: "2003-06-07 → 2013-05-01"
+run_dir: runs/galex-crossings
+records_dir: null
+candidates: 0
+candidate_notes: "1 exceedance vs 1.56 expected over 15 frozen / 14 effective trials: wolf-359 A NUV 0.1 AU S_burst 4.68 > 4.13 (5-photon cluster in 0.5 s, 0.80 expected) retained-ambiguous, non-promotable — leading interpretation an ordinary CN Leo micro-flare; no in-archive recurrence test exists (recorded for a future UV mission, UVEX-class)"
+rows:
+  # ---- Confirmatory band-units (persistent statistics; 90 % recovery depths) ----
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton photon events (MAST), 8 arcsec aperture at the z-grid relay positions"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 21.3
+    limit_unit: "AB mag (231 nm effective)"
+    limit_range: null
+    power_mw: null
+    power_mw_range: "0.020–0.033"
+    n_events: 2
+    n_trials: 3
+    epoch_range: "2007-03-03 (109 s) + 2010-03-03 (1,637 s)"
+    source: "report/galex_crossings.md §2 trials table, §2 depth table, §3"
+    notes: "unit = gj-1276 B NUV (2007 + 2010, the recurrence pair); S_rate 0.275 < 0.349, S_burst 5.37 < 5.49, S_period 40.9 < 47.0 — clean; depth row is the 2007 window (r90 0.20 cts/s, m90 21.3, ZP_eff 19.592); persistent relay ≳ 20–33 kW NUV = 0.020–0.033 MW (converted from kW) through the 0.1 AU cone in the covered 2007 windows"
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton photon events (MAST), 1,637 s visit, 2010"
+    status: constraint_only
+    limit_kind: "m90"
+    limit_value: 21.9
+    limit_unit: "AB mag (231 nm effective)"
+    limit_range: null
+    power_mw: 0.020
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2010-03-03 (1,637 s)"
+    source: "report/galex_crossings.md §2 (constraint-only lanes), §2 depth table, §3"
+    notes: "D1a forced_dev reference lane (pre-freeze recon contact declared): S_rate measured 0.235 cts/s at the locus vs 0.209 background, excluded from the trial family; r90 0.12–0.2 cts/s, m90 ≈ 21.9 labeled reference; ≈ 20 kW = 0.020 MW (converted from kW) as the labeled D1a reference"
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "FUV"
+    substrate: "GALEX gPhoton photon events (MAST)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 21.2
+    limit_unit: "AB mag (154 nm effective)"
+    limit_range: null
+    power_mw: null
+    power_mw_range: "0.016–0.028"
+    n_events: 1
+    n_trials: 3
+    epoch_range: "2007-03-03 (109 s)"
+    source: "report/galex_crossings.md §2 trials table, §2 depth table, §3"
+    notes: "S_rate 0.018 < 0.037, S_burst 1.41 < 2.63, S_period 0 (gate) — clean; r90 0.07 cts/s, m90 ≈ 21.2 (FUV via nominal ZP + NUV-measured 0.49 mag aperture term, ±0.3 mag budget); FUV persistent ≈ 16–28 kW = 0.016–0.028 MW (converted from kW)"
+  - target_id: wolf-359
+    channel: A
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton photon events (MAST), on-star"
+    status: retained_ambiguous
+    limit_kind: "m90"
+    limit_value: 18.6
+    limit_unit: "AB mag (231 nm effective)"
+    limit_range: null
+    power_mw: 0.415
+    power_mw_range: null
+    n_events: 1
+    n_trials: 3
+    epoch_range: "2007-03-03 (97 s)"
+    source: "report/galex_crossings.md §2 trials table + adjudication paragraph, §2 depth table, §3; surveys/galex-crossings/results/adjudication_wolf359_v1.json"
+    notes: "S_burst 4.68 > T 4.13 (5 photons in 0.5 s, 0.80 expected); S_rate 1.61 < 3.84, S_period 27.9 < 32.6; veto ladder cannot fire (FRED unresolved at 5 photons; 0 FUV photons vs 0.067 expected; strict <= 25 arcmin re-run unchanged; asteroid excluded by timescale); no second covered wolf-359 A window in-archive; variability-limited depth r90 2.5 cts/s, m90 18.6; ≈ 415 kW = 0.415 MW (converted from kW)"
+  - target_id: ross-128
+    channel: A
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton photon events (MAST), on-star"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 21.9
+    limit_unit: "AB mag (231 nm effective)"
+    limit_range: null
+    power_mw: null
+    power_mw_range: "0.020–0.033"
+    n_events: 1
+    n_trials: 3
+    epoch_range: "2007-03-17 (110 s)"
+    source: "report/galex_crossings.md §2 trials table, §2 depth table, §3"
+    notes: "S_rate 0.455 < 0.509, S_burst 3.92 < 4.21, S_period 29.1 < 35.1 — clean; r90 0.12 cts/s, m90 21.9; ≳ 20–33 kW = 0.020–0.033 MW (converted from kW)"
+  - target_id: ross-128
+    channel: A
+    rung: "0.1 AU"
+    band: "FUV"
+    substrate: "GALEX gPhoton photon events (MAST), on-star"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 21.8
+    limit_unit: "AB mag (154 nm effective)"
+    limit_range: null
+    power_mw: null
+    power_mw_range: "0.016–0.028"
+    n_events: 1
+    n_trials: 2
+    epoch_range: "2007-03-17 (110 s)"
+    source: "report/galex_crossings.md §2 trials table, §2 depth table, §3"
+    notes: "S_rate 0.0455 = T (tie, not >), S_burst 2.51 < 2.64 — clean; S_period constraint-only (degraded at the frozen 10-photon control gate; the 15th frozen trial not effective); r90 0.04 cts/s, m90 ≈ 21.8 (±0.3 mag FUV budget); ≈ 16–28 kW = 0.016–0.028 MW (converted from kW)"
+  # ---- Constraint-only lanes (computed, labeled, zero trials; dev segment gate) ----
+  - target_id: gj-1276
+    channel: A
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton photon events (MAST), on-star, 92 s"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2007-09-05 (92 s)"
+    source: "report/galex_crossings.md §1, §2 (constraint-only lanes); surveys/galex-crossings/results/confirmatory_v1.json"
+    notes: "dev segment gate: no control supply — statistics computed and labeled, zero trials (S_rate 0.163, S_burst 2.71, S_period 34.8 per confirmatory_v1.json, no thresholds); no depth stated in the report"
+  - target_id: gj-1276
+    channel: A
+    rung: "0.1 AU"
+    band: "FUV"
+    substrate: "GALEX gPhoton photon events (MAST), on-star, 92 s"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2007-09-05 (92 s)"
+    source: "report/galex_crossings.md §1, §2 (constraint-only lanes); surveys/galex-crossings/results/confirmatory_v1.json"
+    notes: "dev segment gate; zero trials (S_rate 0.022, S_burst 1.41 per confirmatory_v1.json); no depth stated"
+  - target_id: wolf-359
+    channel: A
+    rung: "0.1 AU"
+    band: "FUV"
+    substrate: "GALEX gPhoton photon events (MAST), on-star, 97 s"
+    status: constraint_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2007-03-03 (97 s)"
+    source: "report/galex_crossings.md §1, §2, §4 lesson 4; surveys/galex-crossings/results/confirmatory_v1.json"
+    notes: "dev segment gate — wolf-359's long visits are NUV-only so the FUV lane has no controls (control supply is a per-band property); zero trials (S_rate 0.134, S_burst 2.85, S_period 36.8 per confirmatory_v1.json); no depth stated"
+  # ---- Pulse-period cell (the survey's new cell), 90 % recovery ----
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton photon events, 5 ms time tags, 1,637 s visit (2010)"
+    status: searched
+    limit_kind: "fluence"
+    limit_value: 4
+    limit_unit: "photons per pulse (0.05 s and 0.5 s widths)"
+    limit_range: null
+    power_mw: null
+    power_mw_range: "1.7–17"
+    n_events: 1
+    n_trials: null
+    epoch_range: "2010-03-03 (1,637 s)"
+    source: "report/galex_crossings.md §2 (pulses paragraph), §3"
+    notes: "single-pulse cell: 4 photons per pulse at both 0.05 s and 0.5 s widths on the 1,637 s unit; report: single pulses ≳ 1.7 MW peak (0.5 s) / 17 MW (0.05 s), ~0.8 MJ per pulse, through the 0.1 AU cone in the covered windows"
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton photon events, 5 ms time tags, 1,637 s visit (2010), coherent-train search (S_period, jittered)"
+    status: searched
+    limit_kind: "rate"
+    limit_value: 0.037
+    limit_unit: "cts/s time-averaged (60 photons total over 1,637 s; ≈ NUV 23.2-equivalent)"
+    limit_range: null
+    power_mw: 0.006
+    power_mw_range: null
+    n_events: 1
+    n_trials: null
+    epoch_range: "2010-03-03 (1,637 s)"
+    source: "report/galex_crossings.md §2 (pulses paragraph), §3"
+    notes: "coherent pulse trains at 80 % recovery: 60 photons total for P = 0.5–50 s (orbital drift sampled ± 2.56e-5); 120 photons at P = 0.05 s (drift smear); excluded above ≈ 6 kW = 0.006 MW time-averaged (converted from kW) — the programme's deepest time-averaged crossing constraint in any band; 266 nm (Nd:YAG 4th harmonic) falls in NUV"
+  - target_id: [gj-1276, wolf-359, ross-128]
+    channel: B
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton photon events, 100 s-class covered units (gj-1276 B 2007, wolf-359 A, ross-128 A)"
+    status: searched
+    limit_kind: "fluence"
+    limit_value: 5
+    limit_unit: "photons per pulse"
+    limit_range: null
+    power_mw: null
+    power_mw_range: "1.7–17"
+    n_events: 3
+    n_trials: null
+    epoch_range: "2007-03-03 → 2007-03-17"
+    source: "report/galex_crossings.md §2 (pulses paragraph), §3"
+    notes: "single-pulse 90 % depth on the 100 s-class units: 5 photons per pulse; channel is B for gj-1276 and A for wolf-359/ross-128 (row aggregates the three units as the report does); pulse power statement as for the 1,637 s unit"
+  - target_id: [gj-1276, ross-128]
+    channel: B
+    rung: "0.1 AU"
+    band: "FUV"
+    substrate: "GALEX gPhoton photon events, FUV covered units (gj-1276 B 2007, ross-128 A 2007)"
+    status: searched
+    limit_kind: "fluence"
+    limit_value: 2
+    limit_unit: "photons per pulse"
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 2
+    n_trials: null
+    epoch_range: "2007-03-03 → 2007-03-17"
+    source: "report/galex_crossings.md §2 (pulses paragraph)"
+    notes: "single-pulse 90 % depth 2 photons in FUV where the background is ~0; channel is B for gj-1276 and A for ross-128 (aggregated as in the report)"
+  # ---- Ledger entries (coverage-without-statistic) ----
+  - target_id: programme
+    channel: B
+    rung: "1.2 Rsun"
+    band: "any"
+    substrate: "GALEX gPhoton aspect coverage (visit cadence)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 39
+    n_trials: 0
+    epoch_range: "2003-06-07 → 2013-05-01"
+    source: "report/galex_crossings.md §1, §3 caveats; surveys/galex-crossings/results/coverage_v1.md; surveys/galex-crossings/results/coverage_v1_summary.json"
+    notes: "39 in-era B events at b < 1.2 Rsun over 4 targets (gj-1276 10, teegarden 9, van-maanen 10, wolf-359 10 per coverage_v1_events.ecsv), zero covered windows — the ±0.3–0.4 d grazing windows never meet the visit cadence; incl. the van-maanen deep-graze family (visits at the field 2004/2008, none in-window)"
+  - target_id: programme
+    channel: B
+    rung: "2.5 Rsun"
+    band: "any"
+    substrate: "GALEX gPhoton aspect coverage (visit cadence)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 49
+    n_trials: 0
+    epoch_range: "2003-06-07 → 2013-05-01"
+    source: "report/galex_crossings.md §1, §3 caveats; surveys/galex-crossings/results/coverage_v1.md; surveys/galex-crossings/results/coverage_v1_summary.json"
+    notes: "49 in-era B events at b < 2.5 Rsun over 5 targets (adds ross-128, 10 events), zero covered windows — structurally uncovered by GALEX's visit cadence"
+  - target_id: gj-908
+    channel: A
+    rung: "0.1 AU"
+    band: "NUV"
+    substrate: "GALEX gPhoton, one in-window visit 110 s entirely at 36.3 arcmin boresight (> 33 arcmin usable gate)"
+    status: ledger_only
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2007-09-21"
+    source: "report/galex_crossings.md §3 caveats; surveys/galex-crossings/results/coverage_v1.md (ledger entries)"
+    notes: "rim-limited: recorded, not searchable (freeze §9); 10 in-era A 0.1 AU events for gj-908 in coverage_v1_events.ecsv, this the only one with a visit"
+  - target_id: teegarden
+    channel: B
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "GALEX gPhoton aspect coverage"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 9
+    n_trials: 0
+    epoch_range: "2003-06-07 → 2013-05-01"
+    source: "report/galex_crossings.md §3 caveats; surveys/galex-crossings/results/coverage_v1.md; surveys/galex-crossings/results/coverage_v1_events.ecsv"
+    notes: "teegarden's antipode is archive-empty: zero GALEX aspect coverage anywhere in the era (9 in-era B 0.1 AU events)"
+  - target_id: teegarden
+    channel: A
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "GALEX gPhoton aspect coverage"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 10
+    n_trials: 0
+    epoch_range: "2003-06-07 → 2013-05-01"
+    source: "surveys/galex-crossings/results/coverage_v1.md (ledger entries); surveys/galex-crossings/results/coverage_v1_events.ecsv"
+    notes: "star has 2 visits in the era, none in-window; 10 in-era A 0.1 AU events"
+  - target_id: van-maanen
+    channel: A
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "GALEX gPhoton aspect coverage"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 10
+    n_trials: 0
+    epoch_range: "2003-06-07 → 2013-05-01"
+    source: "surveys/galex-crossings/results/coverage_v1.md (ledger entries); surveys/galex-crossings/results/coverage_v1_events.ecsv"
+    notes: "visits at the star field (2006), none in-window at any rung"
+  - target_id: van-maanen
+    channel: B
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "GALEX gPhoton aspect coverage"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 10
+    n_trials: 0
+    epoch_range: "2003-06-07 → 2013-05-01"
+    source: "surveys/galex-crossings/results/coverage_v1.md (ledger entries); surveys/galex-crossings/results/coverage_v1_events.ecsv"
+    notes: "visits at the antipode field (2004 AIS + 2008 GII), none in-window at any rung (grazing rungs counted in the programme rows above)"
+  - target_id: [ross-154, gj-908, wolf-359, ross-128]
+    channel: B
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "GALEX gPhoton aspect coverage"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 40
+    n_trials: 0
+    epoch_range: "2003-06-07 → 2013-05-01"
+    source: "surveys/galex-crossings/results/coverage_v1.md (ledger entries); surveys/galex-crossings/results/coverage_v1_events.ecsv"
+    notes: "no in-window seconds (10 in-era B 0.1 AU events each per coverage_v1_events.ecsv)"
+  - target_id: ross-154
+    channel: A
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "GALEX gPhoton aspect coverage"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 10
+    n_trials: 0
+    epoch_range: "2003-06-07 → 2013-05-01"
+    source: "surveys/galex-crossings/results/coverage_v1.md (ledger entries: ross-154 no in-window seconds); surveys/galex-crossings/results/coverage_v1_events.ecsv (0 of 10 A events covered)"
+    notes: "no in-window seconds"

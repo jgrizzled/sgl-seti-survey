@@ -1,0 +1,731 @@
+survey_id: ps1_crossings
+report: report/ps1_crossings.md
+plan_section: '5.2'
+pipeline: B
+archives:
+- ps1
+hypothesis_version: v1.0 (ZTF v1.1/v1.2 amendments adopted at freeze; no dev amendment)
+era: MJD 54900–57300 (warps span 54985–57067; 2009–2015)
+run_dir: runs/ps1-crossings
+records_dir: null
+candidates: 0
+candidate_notes: '2 exceedances vs 2.1 expected over the frozen 19-unit family: ross-128 r evt-3f7ad50e70
+  vetoed (stack-catalogued static); gj-1276 i evt-344c12d32a retained-ambiguous, non-promotable, handed
+  to the joint recurrence test'
+rows:
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: g/r/i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.00017
+  power_mw_range: null
+  n_events: 11
+  n_trials: 11
+  epoch_range: 2010–2014
+  source: report/ps1_crossings.md §2 depth table; §3
+  notes: 'report headline aggregate (per-target rows below): 11 searched B units, all bands, median m90
+    21.6 (4 grid-censored >= 22); deepest units ~170 W = 0.00017 MW (all-band median) through the 2.5
+    Rsun cone at 550 AU; 9 searched events on 6 targets; per-event statement'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: 19.2–22.0
+  power_mw: 0.00028
+  power_mw_range: null
+  n_events: 4
+  n_trials: 4
+  epoch_range: null
+  source: report/ps1_crossings.md §2 depth table; §3
+  notes: 'g units: 19.2 / 20.6 / 21.6 / >=22 (median 21.1); 532 nm line hypothesis; ~280 W = 0.00028 MW
+    (EIRP 2.5e12 W at 549 AU)'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: 20.5–21.4
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: report/ps1_crossings.md §2 depth table
+  notes: 'r units: 20.5 / 21.1 / 21.4'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: 21.7–22.0
+  power_mw: 3.7e-05
+  power_mw_range: null
+  n_events: 4
+  n_trials: 4
+  epoch_range: null
+  source: report/ps1_crossings.md §2 depth table; §3
+  notes: 'i units: 21.7 / >=22 / >=22 / >=22 (3 grid-censored); grid-censored i units <~ 37 W = 0.000037
+    MW (752 nm leakage)'
+- target_id:
+  - gj-1276
+  - teegarden
+  channel: A
+  rung: 0.1 AU
+  band: g/i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: null
+  limit_unit: AB mag
+  limit_range: 17.9–21.3
+  power_mw: null
+  power_mw_range: 0.001–0.032
+  n_events: 3
+  n_trials: null
+  epoch_range: null
+  source: report/ps1_crossings.md §2 depth table; §3
+  notes: 'reference depths, threshold = max(T,0), no calibrated false-alarm control: gj-1276 g 17.9 /
+    i 18.0; teegarden g 21.3; 10-m-class 532 nm uplink transmitter >~ ~1 kW = 0.001 MW (teegarden), ~23–32
+    kW = 0.023–0.032 MW (gj-1276); qualified sensitivity statements, not calibrated exclusions'
+- target_id: ross-154
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 20.55
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55198.1
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'searched units, null: evt-14662f1752ae; S 2.169; T 15.807; 0 grid-censored at 22.0'
+- target_id: ross-154
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 19.15
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55563.3
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'searched units, null: evt-321a36d0a31d; S 0.664; T 35.135; 0 grid-censored at 22.0'
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: retained_ambiguous
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 56719.1
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'evt-344c12d32a8d: S 3.315 vs T 2.303; night-consistent i ~22.7–23.4 signal (1.1–2.3 sigma per
+    epoch, 3 usable exposures over ~35 min) at the z = 550 node; census clean, TTI-consistent, no static
+    counterpart to ~23+; non-promotable; recurrence test designated to the joint stage (see joint_crossings.yaml);
+    m90 grid-censored >= 22'
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: vetoed_known_source
+  limit_kind: m90
+  limit_value: 21.08
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55459.1
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'evt-3f7ad50e70e1: S 5.055 vs T 3.613; vetoed — flux-consistent catalogued static (DR2 stack
+    sources 1.46 arcsec r 22.5–22.8 and 1.99 arcsec r 23.5 from the track nodes; node fluxes r ~21.6–22.1);
+    SkyBoT clean; TTI-pair excludes movers'
+- target_id: van-maanen
+  channel: B
+  rung: 1.2 Rsun
+  band: i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55289.4
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'track_masked (nominal-covered / mask-unusable): evt-4c4ea2c39734; every in-window sample lost
+    to CONV.BAD chip-gap bands; n_in_epochs [2]; van-maanen b = 0.28 Rsun graze (2010-04-03, TTI i-band
+    pair) — deepest graze in the programme, mask-lost'
+- target_id: van-maanen
+  channel: B
+  rung: 2.5 Rsun
+  band: i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55289.4
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'track_masked (nominal-covered / mask-unusable): evt-4c4ea2c39734; every in-window sample lost
+    to CONV.BAD chip-gap bands; n_in_epochs [2]; van-maanen b = 0.28 Rsun graze (2010-04-03, TTI i-band
+    pair) — deepest graze in the programme, mask-lost'
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55289.4
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'track_masked (nominal-covered / mask-unusable): evt-4c4ea2c39734; every in-window sample lost
+    to CONV.BAD chip-gap bands; n_in_epochs [2]; van-maanen b = 0.28 Rsun graze (2010-04-03, TTI i-band
+    pair) — deepest graze in the programme, mask-lost'
+- target_id: ross-154
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 56659.1
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'track_masked (nominal-covered / mask-unusable): evt-6f8116b6cb76; every in-window sample lost
+    to CONV.BAD chip-gap bands; n_in_epochs [2]'
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 56385.2
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'searched units, null: evt-91843280452f; S 1.625; T 2.472; 1 grid-censored at 22.0'
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55093.8
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'track_masked (nominal-covered / mask-unusable): evt-d36be8d1ffc0; every in-window sample lost
+    to CONV.BAD chip-gap bands; n_in_epochs [5]'
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 20.55
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55274.3
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'searched units, null: evt-ee99e18ab1f0; S 0.988; T 9.51; 0 grid-censored at 22.0; z = [550.0]
+    node dead (masked in every usable epoch), excluded from the depth statement'
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55639.6
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'track_masked (nominal-covered / mask-unusable): evt-eaafbff8ea51; every in-window sample lost
+    to CONV.BAD chip-gap bands; n_in_epochs [1]'
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 21.58
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55444.5
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'searched units, null: evt-0639d9d72c4b; S 0.287; T 1.651; 0 grid-censored at 22.0; dev split
+    (dev_search_v1.json)'
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: 21.69–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: MJD 55079.2–55809.7
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'searched units, null: evt-0639d9d72c4b, evt-a2c4ffdd0d1d, evt-f80401623d4d; S 0.427–1.145; T
+    1.836–2.344; 2 grid-censored at 22.0; dev split (dev_search_v1.json); one unit controls_partial_7of8
+    (recorded as anomaly P2)'
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: searched
+  limit_kind: m90
+  limit_value: 21.43
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55444.5
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'searched units, null: evt-0639d9d72c4b; S 1.114; T 5.21; 0 grid-censored at 22.0; z = [550.0]
+    node dead (masked in every usable epoch), excluded from the depth statement; dev split (dev_search_v1.json)'
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 56783.7
+  source: surveys/ps1-crossings/results/confirmatory_v1.json + dev_search_v1.json (B) + surveys/ps1-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'track_masked (nominal-covered / mask-unusable): evt-c349f1a1e62c; every in-window sample lost
+    to CONV.BAD chip-gap bands; n_in_epochs [3]; dev split (dev_search_v1.json)'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 18.03
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: 0.023–0.032
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/confirmatory_v1.json (A) + surveys/ps1-crossings/results/completeness_v1.json
+    (A m90)
+  notes: 'search_unit; reference_constraint_only (threshold max(T,0), no calibrated control): S 2.266,
+    T -1.602; windows with data 2, valid offsets 1/8; gj-1276 reference ~23–32 kW = 0.023–0.032 MW (report
+    §3, g/i together)'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 21.26
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.001
+  power_mw_range: null
+  n_events: 3
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/confirmatory_v1.json (A) + surveys/ps1-crossings/results/completeness_v1.json
+    (A m90)
+  notes: 'search_unit; reference_constraint_only (threshold max(T,0), no calibrated control): S -5.469,
+    T None; windows with data 3, valid offsets 0/8; ~1 kW = 0.001 MW 10-m-class 532 nm uplink transmitter
+    (reference sensitivity, threshold 0)'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.93
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: 0.023–0.032
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/confirmatory_v1.json (A) + surveys/ps1-crossings/results/completeness_v1.json
+    (A m90)
+  notes: 'single_window; reference_constraint_only (threshold max(T,0), no calibrated control): S 0.268,
+    T None; windows with data 1, valid offsets 0/8; gj-1276 reference ~23–32 kW = 0.023–0.032 MW (report
+    §3, g/i together)'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/confirmatory_v1.json (A) + surveys/ps1-crossings/results/completeness_v1.json
+    (A m90)
+  notes: 'single_window; reference_constraint_only (threshold max(T,0), no calibrated control): S None,
+    T 0.577; windows with data 0, valid offsets 1/8; completeness insufficient_data'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: any
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 33
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/coverage_v1_summary.json; report/ps1_crossings.md §1 item 3
+  notes: 14/47 wide-rung events covered on all seven narrow-rung targets; uncovered remainder (report
+    §3 lists "the 5 remaining uncovered wide-rung events" under not constrained)
+- target_id: programme
+  channel: B
+  rung: 1.2 Rsun
+  band: any
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 26
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/coverage_v1_summary.json; report/ps1_crossings.md §1 item 3
+  notes: 1/27 events covered (epoch-starved); the one covered event (van-maanen b = 0.28 Rsun) is mask-unusable
+- target_id: programme
+  channel: B
+  rung: 2.5 Rsun
+  band: any
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 33
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/coverage_v1_summary.json; report/ps1_crossings.md §1 item 3
+  notes: 1/34 events covered (epoch-starved); the one covered event (van-maanen) is mask-unusable
+- target_id: programme
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 28
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/coverage_v1_summary.json; report/ps1_crossings.md §1 item 3
+  notes: 18/46 events covered; uncovered remainder
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 294
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/coverage_v1_summary.json; report/ps1_crossings.md §1 item 3
+  notes: 294/563 events covered; rung declared constraint-only at freeze (window ~ observing season, ZTF
+    lesson 1); coverage recorded, per-window depths deferred, zero trials
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 269
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/results/coverage_v1_summary.json; report/ps1_crossings.md §1 item 3
+  notes: uncovered remainder of the 1.0 AU rung (563 - 294)
+- target_id: programme
+  channel: A
+  rung: 0.1 AU
+  band: grizy
+  substrate: PS1 DR2 single-epoch warps, star-calibrated, at the propagated star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ps1_crossings.md §1 item 4
+  notes: 'channel-A saturation cut: survivors gj-1276 (all bands), teegarden (g + marginal r), van-maanen
+    (y); all other targets saturated in PS1 warps (surveys/ps1-crossings/results/saturation_cut_v1.*)'
+- target_id: programme
+  channel: B
+  rung: any
+  band: any
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 7
+  n_trials: null
+  epoch_range: null
+  source: report/ps1_crossings.md §2
+  notes: 'mask attrition: 7 of 18 covered-window unit-rows lost every in-window sample to CONV.BAD chip-gap
+    bands (~40% unit-level attrition); enumerated per target above'
+- target_id: programme
+  channel:
+  - A
+  - B
+  rung: any
+  band: 1064/1550 nm
+  substrate: PS1 grizy
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ps1_crossings.md §1 item 2; §3
+  notes: 1064/1550 nm outside grizy; unconstrained
+- target_id: programme
+  channel: S1
+  rung: any
+  band: any
+  substrate: null
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/hypotheses.md §1
+  notes: sunward-arriving (post-lens downlink) declared out of scope at freeze
+- target_id: programme
+  channel: S2
+  rung: any
+  band: any
+  substrate: null
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: surveys/ps1-crossings/hypotheses.md §1
+  notes: sunward-arriving (uplink past the Sun) declared out of scope at freeze
+- target_id: programme
+  channel: B
+  rung: any
+  band: any
+  substrate: PS1 DR2 single-epoch warps, star-calibrated (warp-direct, no differencing), antipode relay
+    track
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ps1_crossings.md §3
+  notes: 'not constrained: transmitters scheduled to avoid Earth crossings; pulse periods between ~30
+    s and the window length'

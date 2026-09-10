@@ -1,0 +1,373 @@
+survey_id: dasch_crossings
+report: report/dasch_crossings.md
+plan_section: "5.14"
+pipeline: B
+archives: [dasch]
+hypothesis_version: "v1.0 + v1.1–v1.3"
+era: "1885 → 1993 (crossings/universal_1885_v1); DASCH DR7 plates ~1885–1990, Menzel gap 1953–68"
+run_dir: runs/dasch
+records_dir: null
+candidates: 0
+candidate_notes: "30 blind confirmatory trials, 2 exceedances vs 3.33 expected, both in wolf-359 A 0.1 AU (1943 ac37753, 1982 dny00425), both vetoed defect-class by plate pixels; no retained-ambiguous rows"
+rows:
+  # ---- Searched units: catalogue-level platephot hit statistic (B and limits-only A) ----
+  # m90 columns are the pooled field-star recovery per plate-limit stratum (lim<13 / 13–15 / >=15);
+  # limit_value = deepest resolved stratum; power = isotropic-equivalent relay power through the rung cone at that stratum.
+  - target_id: gj-1276
+    channel: A
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot (limits-only regime, star below plate limits)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 13.5
+    limit_unit: "B mag"
+    limit_range: "— / 12.5 / 13.5 (lim<13 / 13–15 / >=15 strata)"
+    power_mw: 15.7
+    power_mw_range: null
+    n_events: 58
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §3 table; surveys/dasch-crossings/results/confirmatory_v1.json; surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "58 covered windows / 176 exposures; S_event 0 = T 0, S_stack 0 = T 0 (clean); ≳ 15.7 MW at the lim>=15 stratum; remote-uplink interpretation (10-m aperture, η = 0.5) at B = 14: P_tx ~5 MW (gj-1276)"
+  - target_id: gj-1276
+    channel: B
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 13.5
+    limit_unit: "B mag"
+    limit_range: "10.5 / 12.5 / 13.5"
+    power_mw: 15.7
+    power_mw_range: null
+    n_events: 60
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §3 table; surveys/dasch-crossings/results/confirmatory_v1.json; surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "60 covered windows / 215 exposures; S_event 0 = T 0, S_stack 0 = T 0; ≳ 15.7 MW at the deepest stratum"
+  - target_id: gj-1276
+    channel: B
+    rung: "1.2 Rsun"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 13.5
+    limit_unit: "B mag"
+    limit_range: "10.5* / 12.5* / 13.5"
+    power_mw: 0.049
+    power_mw_range: null
+    n_events: 7
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §1.4, §3 table; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "7 covered windows / 12 exposures (photosphere-grazing on essentially every annual crossing of the century); * = field-curve fallback strata; S_event 0 = T 0, S_stack 0 = T 0; ≳ 49 kW = 0.049 MW (converted from kW) at the lim>=15 stratum"
+  - target_id: gj-1276
+    channel: B
+    rung: "2.5 Rsun"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 13.5
+    limit_unit: "B mag"
+    limit_range: "10.5 / 12.5* / 13.5"
+    power_mw: 0.213
+    power_mw_range: null
+    n_events: 16
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §3 table; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "16 covered windows / 31 exposures; S_event 0 = T 0, S_stack 0 = T 0; ≳ 213 kW = 0.213 MW (converted from kW)"
+  - target_id: ross-128
+    channel: A
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 lightcurve (detected-regime robust-z statistic, APASS-routed, era-local ±5 yr baselines)"
+    status: searched
+    limit_kind: "flux"
+    limit_value: null
+    limit_unit: "mag (window-locked excursion of the star)"
+    limit_range: "0.2–0.3"
+    power_mw: null
+    power_mw_range: null
+    n_events: 56
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §2 annotations, §3 (lightcurve units); surveys/dasch-crossings/results/confirmatory_v1.json; surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "the one detected-regime confirmatory lightcurve unit: 56 covered windows / 197 exposures, 938 usable rows; S_event 4.06 < T 7.09, S_stack −2.71 < T 4.57 (heavy-tailed photographic null absorbed by the max-of-8 threshold); excursions ≳ 0.2–0.3 mag (≈ 25 % of stellar B flux) sustained over a window excluded; no platephot depth applies; uplink interpretation at B = 14: P_tx ~1 MW"
+  - target_id: ross-128
+    channel: B
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 8.5
+    limit_unit: "B mag"
+    limit_range: "8.5 / 8.5 / 8.5"
+    power_mw: 1600
+    power_mw_range: null
+    n_events: 57
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §3 table + notes, §5 follow-up; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "57 covered windows / 208 exposures; S_event 0 = T 0, S_stack 0 = T 0; † the ross-128 antipode field's measured recovery never reaches 90 % beyond B 8.5 in any stratum (raw efficiencies 60–85 % over B 9–14; astrometric/source-splitting diagnosis is the standing follow-up); ≳ 1.6 GW = 1600 MW (converted from GW)"
+  - target_id: ross-128
+    channel: B
+    rung: "2.5 Rsun"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 8.5
+    limit_unit: "B mag"
+    limit_range: "8.5* / 8.5* / 8.5*"
+    power_mw: 21
+    power_mw_range: null
+    n_events: 10
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §3 table + notes; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "10 covered windows / 12 exposures; S_event 0 = T 0, S_stack 0 = T 0; † poor-recovery field (all strata field-curve fallback); ≳ 21 MW"
+  - target_id: teegarden
+    channel: A
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot (limits-only regime; dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 13.5
+    limit_unit: "B mag"
+    limit_range: "— / 12.5 / 13.5"
+    power_mw: 15.7
+    power_mw_range: null
+    n_events: 61
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §1.6 (v1.3), §2 dev results, §3 table; surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "dev unit (not blind): 61 covered windows / 240 exposures; S = T = 1, no exceedance after amendment v1.3 (the 1945 hit was the quiescent star at its off-window rate — measured B 17.11 vs expected ≈ 17.3; the 1941 hit defect-class by cutout); ≳ 15.7 MW; uplink at B = 14: P_tx ~1 MW"
+  - target_id: teegarden
+    channel: B
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 13.5
+    limit_unit: "B mag"
+    limit_range: "10.5 / 12.5 / 13.5"
+    power_mw: 15.7
+    power_mw_range: null
+    n_events: 56
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §2 annotations, §3 table; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "56 covered windows / 194 exposures; S_event 0 < T 1, S_stack 0 < T 1 (a ring control caught a single stray detection; locus clean); ≳ 15.7 MW"
+  - target_id: teegarden
+    channel: B
+    rung: "2.5 Rsun"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 13.5
+    limit_unit: "B mag"
+    limit_range: "10.5* / 12.5 / 13.5*"
+    power_mw: 0.213
+    power_mw_range: null
+    n_events: 9
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §3 table; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "9 covered windows / 15 exposures; S_event 0 = T 0, S_stack 0 = T 0; ≳ 213 kW = 0.213 MW (converted from kW)"
+  - target_id: van-maanen
+    channel: A
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 lightcurve (detected-regime; ATLAS-refcat2 routed after v1.1 PM-match rule; forced_dev)"
+    status: searched
+    limit_kind: "flux"
+    limit_value: null
+    limit_unit: "mag (window-locked excursion of the star)"
+    limit_range: "0.2–0.3"
+    power_mw: null
+    power_mw_range: null
+    n_events: 63
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §1.3, §1.6 (v1.1), §2 dev results, §3 (lightcurve units); surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "forced_dev after recon lightcurve contact (D1), not blind: 63 covered windows / 219 exposures; S_event 1.93 < T 9.65, S_stack −1.09 < T 1.20; DR7 APASS refcat has no proper motion for van-maanen (9 spurious APASS detections vs the 1,552-detection ATLAS lightcurve) — ATLAS false-trend caveat; excursions ≳ 0.2–0.3 mag excluded; uplink at B = 14: P_tx ~1 MW"
+  - target_id: van-maanen
+    channel: B
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.5
+    limit_unit: "B mag"
+    limit_range: "10.5 / 12.5 / 14.5"
+    power_mw: 6.3
+    power_mw_range: null
+    n_events: 62
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §2 annotations, §3 table; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "62 covered windows / 238 exposures; one locus hit annotated (1905, B 14.05, 5.7 arcsec) — S_stack 1 = T_stack 1, not an exceedance; ≳ 6.3 MW"
+  - target_id: van-maanen
+    channel: B
+    rung: "1.2 Rsun"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.5
+    limit_unit: "B mag"
+    limit_range: "10.5 / 12.5* / 14.5*"
+    power_mw: 0.020
+    power_mw_range: null
+    n_events: 12
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §1.1 census, §1.4, §3 table + notes; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "headline unit: 12 covered windows / 17 exposures (median chord half-width 7.1 h), b 0.59–0.69 Rsun throughout the century; S_event 0 = T 0, S_stack 0 = T 0; ≳ 20 kW = 0.020 MW (converted from kW) at the lim>=15 stratum; shallow-stratum bulk m90 10.5 → ≳ 780 kW over the lim<13 majority of its windows"
+  - target_id: van-maanen
+    channel: B
+    rung: "2.5 Rsun"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.5
+    limit_unit: "B mag"
+    limit_range: "10.5 / 12.5 / 14.5"
+    power_mw: 0.085
+    power_mw_range: null
+    n_events: 21
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §3 table; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "21 covered windows / 36 exposures; S_event 0 = T 0, S_stack 0 = T 0; ≳ 85 kW = 0.085 MW (converted from kW)"
+  - target_id: wolf-359
+    channel: A
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot (limits-only regime; PM-less refcat star appears as uncatalogued source; v1.3 quiescent gate)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 13.5
+    limit_unit: "B mag"
+    limit_range: "— / 12.5 / 13.5"
+    power_mw: 15.7
+    power_mw_range: null
+    n_events: 60
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §2 (adjudication), §3 table; surveys/dasch-crossings/results/adjudication_wolf359A_v1.json; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "60 covered windows / 217 exposures; both confirmatory exceedances here — S_event 1 > T 0, S_stack 2 > T 0: 1943/ac37753 (B 14.58, 7.4 arcsec, <= 3.8σ diffuse bump vs 19.6σ field stars) and 1982/dny00425 (B 13.02, 7.1 arcsec, <= 4.2σ vs 16.3σ) both vetoed defect-class by plate pixels (no vocabulary state for a defect veto; recorded as searched); quiescent B = 15.66 measured on 12/12 deep off-window plates; d = 1 persistent hypothesis independently refuted by the 56-window coverage; ≳ 15.7 MW; uplink at B = 14: P_tx ≳ 0.4 MW"
+  - target_id: wolf-359
+    channel: B
+    rung: "0.1 AU"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.5
+    limit_unit: "B mag"
+    limit_range: "— / 12.5 / 14.5"
+    power_mw: 6.3
+    power_mw_range: null
+    n_events: 59
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §2 annotations, §3 table; surveys/dasch-crossings/results/confirmatory_v1.json"
+    notes: "59 covered windows / 177 exposures; S_event 0 < T 1, S_stack 0 < T 1 (ring control stray detection; locus clean); ≳ 6.3 MW"
+  - target_id: wolf-359
+    channel: B
+    rung: "1.2 Rsun"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.5
+    limit_unit: "B mag"
+    limit_range: "— / 12.5 / 14.5*"
+    power_mw: 0.020
+    power_mw_range: null
+    n_events: 4
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §1.4, §3 table; surveys/dasch-crossings/results/confirmatory_v1.json; surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "4 covered windows / 6 exposures (184 in-era grazing events); S_event 0 = T 0, S_stack 0 = T 0; ≳ 20 kW = 0.020 MW (converted from kW) at the lim>=15 stratum (field-curve fallback)"
+  - target_id: wolf-359
+    channel: B
+    rung: "2.5 Rsun"
+    band: "B (Johnson; APASS DR8 refcat)"
+    substrate: "DASCH DR7 platephot uncatalogued detections within 10 arcsec of the z-family track (dev unit)"
+    status: searched
+    limit_kind: "m90"
+    limit_value: 14.5
+    limit_unit: "B mag"
+    limit_range: "— / 12.5 / 14.5*"
+    power_mw: 0.085
+    power_mw_range: null
+    n_events: 15
+    n_trials: 2
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §2 dev results, §3 table; surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "dev unit (not blind): 15 covered windows / 23 exposures; clean null S = T = 0; ≳ 85 kW = 0.085 MW (converted from kW)"
+  # ---- Ledger rows (coverage-without-statistic) ----
+  - target_id: teegarden
+    channel: B
+    rung: "1.2 Rsun"
+    band: "any"
+    substrate: "DASCH DR7 exposure listing (queryexps)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 38
+    n_trials: 0
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §1.1, §1.4, §3 (structural cells), §5; surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "38 grazing events in the century, 0 covered windows — ledger row (coverage-without-statistic); date-only exposures excluded at grazing rungs are enumerated in coverage_v1_windows.ecsv"
+  - target_id: ross-128
+    channel: B
+    rung: "1.2 Rsun"
+    band: "any"
+    substrate: "DASCH DR7 exposure listing (queryexps)"
+    status: not_constrainable
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 0
+    n_trials: 0
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §1.4, §3 (structural cells), §5; surveys/dasch-crossings/results/coverage_v1_summary.json"
+    notes: "no era events at b < 1.2 Rsun (the crossing geometry never reaches the rung in 1885–1993) — report lists it as a ledger row (coverage-without-statistic); recorded not_constrainable on geometry since no window exists to cover"
+  - target_id: programme
+    channel: A
+    rung: "1.0 AU"
+    band: "any"
+    substrate: "DASCH DR7 (not pulled)"
+    status: no_survey
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: null
+    n_trials: 0
+    epoch_range: "1885 → 1993"
+    source: "report/dasch_crossings.md §1.3 (ladder: + A 1.0 AU constraint-only), §5"
+    notes: "A 1.0 AU declared constraint-only in the ladder; no coverage or statistic reported; the 83 out-of-scope targets' 0.1 AU rungs (~1e4 windows) remain a declared future queue item"

@@ -1,0 +1,1382 @@
+survey_id: ztf_crossings
+report: report/ztf_crossings.md
+plan_section: '5.1'
+pipeline: B
+archives:
+- ztf
+hypothesis_version: v1.0 (threshold freeze v1.0 + amendments v1.1, v1.2)
+era: MJD 58178–61275 (2018–2026)
+run_dir: runs/ztf-crossings
+records_dir: null
+candidates: 0
+candidate_notes: 3 exceedances vs 4.0 expected control crossings (gj-908 g x1, gj-1276 g x2), all adjudicated
+  as control-crossing statistics, none promoted; 772 archive-404 epochs counted
+rows:
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: g/r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.8
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.00013
+  power_mw_range: null
+  n_events: 31
+  n_trials: 33
+  epoch_range: null
+  source: report/ztf_crossings.md §2 depth table; §3
+  notes: 'report headline aggregate (per-target rows below enumerate the same cells): 31 searchable units
+    with m90 (14 grid-censored >=22); 33 searchable B units in total on 5 targets; ~130 W = 0.00013 MW
+    transmitter power at 90% for a 550 AU relay through the 2.5 Rsun cone (gain ~9e9), 532 nm line in
+    g, EIRP 1.1e12 W at 549 AU; per-event statement only'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: g/r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §2 depth table
+  notes: single_epoch class (report headline aggregate; 8 units with m90); depth tabulated, no trial
+- target_id:
+  - gj-1276
+  - teegarden
+  channel: B
+  rung: 2.5 Rsun
+  band: g/r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.00015
+  power_mw_range: null
+  n_events: 9
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §2 depth table; §3
+  notes: single_epoch class (report headline aggregate, 9 units); grazing single-epoch median 21.6 ->
+    ~150 W = 0.00015 MW through the 2.5 Rsun cone; 5 grazing windows on 2 targets covered
+- target_id: gj-1276
+  channel: B
+  rung: 1.2 Rsun
+  band: g/r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.9
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §2 depth table
+  notes: single_epoch class (report headline aggregate, 2 units)
+- target_id:
+  - gj-1276
+  - wolf-359
+  - wolf-1069
+  channel: A
+  rung: any
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: searched
+  limit_kind: m90
+  limit_value: 16.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: report/ztf_crossings.md §2 depth table
+  notes: 'report headline aggregate (rungs 0.1 AU: gj-1276, wolf-359; 1.0 AU: wolf-1069): 3 searchable
+    A units, contrast-limited, median m90 16.6 (g); per-target rows below'
+- target_id: programme
+  channel: A
+  rung: any
+  band: g/r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: null
+  limit_unit: AB mag
+  limit_range: 14.4–18.4
+  power_mw: null
+  power_mw_range: null
+  n_events: 18
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §2 depth table
+  notes: 'report headline aggregate (rungs 0.1 AU and 1.0 AU): 18 constraint-only A units with parallax-factor
+    template; per-target rows below'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: g/r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.0002
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §2 depth table; §3
+  notes: empty-field limit (m90 >= 22, grid-censored); 10-m-class uplink transmitter >~200 W = 0.0002
+    MW at 2.28 pc; deepest uplink limit in the survey
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.8
+  limit_unit: AB mag
+  limit_range: 18.4–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: 8
+  epoch_range: MJD 58244.7–61166.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: searchable units, null; S -0.258–1.39; T 1.042–25.036; n_epochs [2, 4, 6]; best m90 22.0; 4 grid-censored
+    at 22.0
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 20.5
+  limit_unit: AB mag
+  limit_range: 17.4–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: 6
+  epoch_range: MJD 58244.7–60436.2
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: searchable units, null; S 0.043–1.376; T 1.247–93.609; n_epochs [2, 3, 4, 9]; best m90 22.0;
+    1 grid-censored at 22.0
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 60753.2
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'exceedance_adjudicated (control-crossing statistics, vetoed, not candidates; surveys/ztf-crossings/results/confirmatory_v1.md):
+    evt-1ff54c0eec27: S 1.334 vs T 1.094, amplitude 1.3 sigma; no recurrence (4 other events, max R =
+    0.48) -> control crossing'
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: 20.8–21.8
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 4
+  epoch_range: MJD 58545.4–61102.2
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: searchable units, null; S -0.764–1.201; T 1.285–2.573; n_epochs [2, 3, 5]; best m90 21.8; 0 grid-censored
+    at 22.0
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: 21.2–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: 5
+  epoch_range: MJD 58545.4–61102.2
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: searchable units, null; S -30.689–1.18; T 1.459–2.18; n_epochs [2, 3, 4, 6]; best m90 22.0; 3
+    grid-censored at 22.0
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 59111.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: searchable units, null; S 1.35; T 3.32; n_epochs [3]; best m90 None; 0 grid-censored at 22.0;
+    m90 not tabulated in completeness_v1.json
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 59111.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: searchable units, null; S 1.65; T 3.17; n_epochs [4]; best m90 None; 0 grid-censored at 22.0;
+    m90 not tabulated in completeness_v1.json
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.8
+  limit_unit: AB mag
+  limit_range: 21.6–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: MJD 59641.1–60736.9
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'exceedance_adjudicated (control-crossing statistics, vetoed, not candidates; surveys/ztf-crossings/results/confirmatory_v1.md):
+    evt-57e0c494a587: S 0.587 vs T 0.282, sub-1 sigma amplitude; exceeds only via freakishly low T ->
+    control underdispersion; evt-9c6a08c6df77: S 2.23 vs T 2.048, 2.2 sigma; no amplitude-consistent recurrence
+    (other 4 events R <= 0.77) -> control crossing'
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 60371.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'no_usable_data: unit with 0 usable epochs (status ''unit'', n_epochs 0)'
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 60371.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'no_usable_data: unit with 0 usable epochs (status ''unit'', n_epochs 0)'
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: MJD 59292.2–61118.5
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: searchable units, null; S 0.316–0.944; T 1.823–1.958; n_epochs [2, 7]; best m90 22.0; 2 grid-censored
+    at 22.0
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: 21.2–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: MJD 58196.4–61118.5
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: searchable units, null; S 0.291–0.982; T 1.569–2.372; n_epochs [2, 7]; best m90 22.0; 2 grid-censored
+    at 22.0
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 61166.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'status ''unit'' but not searchable under the freeze: evt-d6a207b21d89 n_epochs 2, 5/8 ring controls,
+    S 1.987 vs T 1.748; reported as controls_incomplete (5/8 ring controls), anomaly retained, not searched'
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 58211.5
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: 'status ''unit'' but not searchable under the freeze: evt-f3d9fc10fe38 n_epochs 1, 6/8 ring controls,
+    S -0.152 vs T 0.382; not searched'
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: 21.0–21.2
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 58609.9–60801.5
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S -0.35–2.132; T 1.063–2.489; n_epochs
+    [1]; 0 grid-censored at 22.0
+- target_id: gj-1276
+  channel: B
+  rung: 2.5 Rsun
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.9
+  limit_unit: AB mag
+  limit_range: 21.8–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 59275.9–59641.1
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S -0.687–-0.476; T -0.043–0.612; n_epochs
+    [1]; 1 grid-censored at 22.0
+- target_id: gj-1276
+  channel: B
+  rung: 2.5 Rsun
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: 21.4–21.8
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: null
+  epoch_range: MJD 58910.6–59641.1
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S -47.749–1.133; T 1.147–1.798; n_epochs
+    [1]; 0 grid-censored at 22.0
+- target_id: gj-1276
+  channel: B
+  rung: 1.2 Rsun
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 59641.1
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S -0.48; T -0.04; n_epochs [1]; 1 grid-censored
+    at 22.0
+- target_id: gj-1276
+  channel: B
+  rung: 1.2 Rsun
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.8
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 59641.1
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S -47.75; T 1.8; n_epochs [1]; 0 grid-censored
+    at 22.0
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: 21.0–21.2
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 58561.7–60387.9
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S 0.275–0.9; T 1.831–2.107; n_epochs
+    [1]; 0 grid-censored at 22.0
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.2
+  limit_unit: AB mag
+  limit_range: 21.2–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: null
+  epoch_range: MJD 58561.7–60387.9
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S 0.904–1.48; T 1.631–2.307; n_epochs
+    [1]; 1 grid-censored at 22.0
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 60403.0
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class with 0 usable epochs (no statistic)
+- target_id: teegarden
+  channel: B
+  rung: 2.5 Rsun
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.2
+  limit_unit: AB mag
+  limit_range: 20.6–21.8
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 58244.7–61166.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S 0.139–0.416; T 1.031–2.942; n_epochs
+    [1]; 0 grid-censored at 22.0
+- target_id: teegarden
+  channel: B
+  rung: 2.5 Rsun
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: 21.0–21.2
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 58244.7–61166.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S -1.651–1.29; T -0.135–2.458; n_epochs
+    [1]; 0 grid-censored at 22.0
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 58609.9
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S 1.1; T 1.68; n_epochs [1]; 0 grid-censored
+    at 22.0
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 58576.7
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class (constraint-only statement, no trial); S 0.59; T 2.01; n_epochs [1]; 0 grid-censored
+    at 22.0; m90 not tabulated
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 58211.5
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (B) + surveys/ztf-crossings/results/completeness_v1.json
+    (B m90)
+  notes: single_epoch class with 0 usable epochs (no statistic)
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: searched
+  limit_kind: m90
+  limit_value: 16.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.4
+  power_mw_range: null
+  n_events: 7
+  n_trials: 1
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -2.388 vs T 0.912; valid offsets 8/8; windows with data 7; k 985.1; ~400 kW = 0.4 MW,
+    10-m-class uplink transmitter (1-m-class x100)
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 15.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -1.863 vs T 0.557; valid offsets 8/8; windows with data 8; k 3523.1
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.056
+  power_mw_range: null
+  n_events: 7
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -18.175 vs T -2.407; valid offsets 8/8; windows with data 7; k 218.0; ~56 kW = 0.056
+    MW, 10-m diffraction-limited uplink transmitter (constraint-only) (1-m-class x100)
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 15.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -9.105 vs T -0.063; valid offsets 8/8; windows with data 6; k 3624.1
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: searched
+  limit_kind: m90
+  limit_value: 15.8
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.066
+  power_mw_range: null
+  n_events: 6
+  n_trials: 1
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -0.665 vs T 2.554; valid offsets 8/8; windows with data 6; k 8527.2; ~66 kW = 0.066 MW,
+    10-m-class uplink transmitter (1-m-class x100)
+- target_id: gj-1002
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 18.4
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -4.89 vs T 0.011; valid offsets 2/8; windows with data 8; k 7333.1
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 18.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -11.802 vs T 0.551; valid offsets 2/8; windows with data 8; k 985.1
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -10.562 vs T -0.703; valid offsets 2/8; windows with data 8; k 3523.1
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: i
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S 1296.156 vs T None; valid offsets 2/8; windows with data 2; k None
+- target_id: gj-13157
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 16.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -5.379 vs T -5.975; valid offsets 8/8; windows with data 8; k 913.9
+- target_id: gj-13157
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 16.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -8.216 vs T -0.39; valid offsets 8/8; windows with data 8; k 2284.5
+- target_id: gj-3306
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -4.67 vs T 0.055; valid offsets 4/8; windows with data 8; k 19669.6
+- target_id: gj-3306
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -3.232 vs T 0.925; valid offsets 4/8; windows with data 8; k 31834.0
+- target_id: gj65-b
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 15.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 7
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -5.811 vs T -1.107; valid offsets 4/8; windows with data 7; k 4586.5
+- target_id: teegarden
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 18.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -40.697 vs T -7.156; valid offsets 2/8; windows with data 8; k 278.4
+- target_id: teegarden
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -26.606 vs T -3.278; valid offsets 2/8; windows with data 8; k 3403.8
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S -4.841 vs T 1.067; valid offsets 4/8; windows with data 8; k 1.0; empty-field limit,
+    m90 >= 22 grid-censored
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S 3.316 vs T 1.095; valid offsets 4/8; windows with data 8; k 1.3; empty-field limit, m90
+    >= 22 grid-censored
+- target_id: wolf-1069
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: searched
+  limit_kind: m90
+  limit_value: 17.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: 1
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S 0.469 vs T 2.748; valid offsets 8/8; windows with data 8; k 1392.5
+- target_id: wolf-1069
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 16.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S 2.381 vs T 1.454; valid offsets 8/8; windows with data 8; k 7501.9
+- target_id: wolf-359
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.4
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 9
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: unit; S 3.26 vs T 0.331; valid offsets 2/8; windows with data 9; k 7239.1
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: i
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: single_window; S 601.258 vs T 644.724; valid offsets 8/8; windows with data 1; k None; single-window
+    unit (constraint-only by construction; raw unstandardized S where no template)
+- target_id: gj-1221
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 14.4
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: single_window; S -3.606 vs T 0.32; valid offsets 8/8; windows with data 1; k 4411.2; single-window
+    unit (constraint-only by construction; raw unstandardized S where no template)
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: single_window; S 480.359 vs T None; valid offsets 4/8; windows with data 1; k None; single-window
+    unit (constraint-only by construction; raw unstandardized S where no template)
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: single_window; S 569.554 vs T None; valid offsets 4/8; windows with data 1; k None; single-window
+    unit (constraint-only by construction; raw unstandardized S where no template)
+- target_id: gj-3512
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: single_window; S 21.106 vs T 57.632; valid offsets 6/8; windows with data 1; k None; single-window
+    unit (constraint-only by construction; raw unstandardized S where no template)
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: i
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/confirmatory_v1.json (A) + surveys/ztf-crossings/results/completeness_v1.json
+    (A m90)
+  notes: single_window; S -1274.926 vs T 1.461; valid offsets 4/8; windows with data 1; k None; single-window
+    unit (constraint-only by construction; raw unstandardized S where no template)
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 318
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/coverage_v1_summary.json; report/ztf_crossings.md §1 item 3
+  notes: 402/720 events covered; all 29 uncovered targets have dec < -30 deg (outside the ZTF footprint)
+- target_id: programme
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 15
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/coverage_v1_summary.json; report/ztf_crossings.md §1 item 3
+  notes: 44/59 events covered (coverage_v1_summary.json); uncovered remainder
+- target_id: programme
+  channel: B
+  rung: 1.2 Rsun
+  band: any
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 34
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/coverage_v1_summary.json; report/ztf_crossings.md §1 item 3
+  notes: 1/35 events covered (grazing rung epoch-starved as the cadence predicts)
+- target_id: programme
+  channel: B
+  rung: 2.5 Rsun
+  band: any
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 38
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/coverage_v1_summary.json; report/ztf_crossings.md §1 item 3
+  notes: 5/43 events covered (gj-1276 + teegarden only); grazing rung epoch-starved
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: any
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 27
+  n_trials: null
+  epoch_range: null
+  source: surveys/ztf-crossings/results/coverage_v1_summary.json; report/ztf_crossings.md §1 item 3
+  notes: 33/60 events covered; uncovered remainder
+- target_id: programme
+  channel: A
+  rung: any
+  band: g/r/i
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §1 item 4
+  notes: channel-A saturation cut excludes targets < 13.0 mag; searchable populations g 27 / r 20 / i
+    14 targets (M dwarfs, white dwarfs, late-T/Y); brighter targets saturated (surveys/ztf-crossings/results/saturation_cut_v1.*)
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: g/r
+  substrate: ZTF difference-image forced photometry at the propagated star position (blended)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §1 item 6; §4 lesson 1
+  notes: '1.0 AU rung constraint-only by geometry: windows ~ observing season, temporal pseudo-window
+    controls fail by construction'
+- target_id: programme
+  channel:
+  - A
+  - B
+  rung: any
+  band: 1064/1550 nm
+  substrate: ZTF g/r/i
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §3
+  notes: 1064/1550 nm links outside the ZTF response; 400–900 nm only
+- target_id: programme
+  channel: S1
+  rung: any
+  band: any
+  substrate: null
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §1 item 2; §3
+  notes: post-lens downlink arrives sunward; sunward-arriving combinations declared out of scope at freeze
+    v1.0
+- target_id: programme
+  channel: S2
+  rung: any
+  band: any
+  substrate: null
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §1 item 2; §3
+  notes: uplink past the Sun (sunward); declared out of scope at freeze v1.0
+- target_id: programme
+  channel: B
+  rung: any
+  band: any
+  substrate: ZTF difference-image forced photometry along the antipode relay track (z family 550–10000
+    AU)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/ztf_crossings.md §3
+  notes: 'not constrained: transmitters scheduled to avoid Earth crossings; pulse periods between 30 s
+    and the window length; the anti-target downlink outside covered windows'

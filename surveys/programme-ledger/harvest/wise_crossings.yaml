@@ -1,0 +1,1907 @@
+survey_id: wise_crossings
+report: report/wise_crossings.md
+plan_section: '5.3'
+pipeline: B
+archives:
+- wise
+hypothesis_version: 'v1.0 (+ pre-search amendments: qa_status quality value; threshold freeze v1.1 control-pool
+  rescale)'
+era: 2010–2024 (crossings/wise_v1; coverage era MJD 55203–60524)
+run_dir: runs/wise-crossings
+records_dir: null
+candidates: 0
+candidate_notes: 'structural null: 0 searchable units, 0 trials, no signal statistic formed; 30 constraint-only
+  unit-rows (18 single-window + 12 gate-blocked)'
+rows:
+- target_id: programme
+  channel: B
+  rung: 1.2 Rsun
+  band: W1/W2/W3/W4
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 50
+  n_trials: null
+  epoch_range: null
+  source: surveys/wise-crossings/configs/elongation_gate_v1.json; report/wise_crossings.md §2 table
+  notes: 'Gate I (elongation theorem): 50 in-era events, 0 observable in-window (WISE observes only at
+    solar elongation ~90 deg; beam source sits near the observer–Sun axis); geometric null, carries no
+    ledger rows'
+- target_id: programme
+  channel: B
+  rung: 2.5 Rsun
+  band: W1/W2/W3/W4
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 67
+  n_trials: null
+  epoch_range: null
+  source: surveys/wise-crossings/configs/elongation_gate_v1.json; report/wise_crossings.md §2 table
+  notes: 'Gate I (elongation theorem): 67 in-era events, 0 observable in-window (WISE observes only at
+    solar elongation ~90 deg; beam source sits near the observer–Sun axis); geometric null, carries no
+    ledger rows'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: W1/W2/W3/W4
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 102
+  n_trials: null
+  epoch_range: null
+  source: surveys/wise-crossings/configs/elongation_gate_v1.json; report/wise_crossings.md §2 table
+  notes: 'Gate I (elongation theorem): 102 in-era events, 0 observable in-window (WISE observes only at
+    solar elongation ~90 deg; beam source sits near the observer–Sun axis); geometric null, carries no
+    ledger rows'
+- target_id: programme
+  channel: A
+  rung: 0.1 AU
+  band: W1/W2/W3/W4
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 101
+  n_trials: null
+  epoch_range: null
+  source: surveys/wise-crossings/configs/elongation_gate_v1.json; report/wise_crossings.md §2 table
+  notes: 'Gate I (elongation theorem): 101 in-era events, 0 observable in-window (WISE observes only at
+    solar elongation ~90 deg; beam source sits near the observer–Sun axis); geometric null, carries no
+    ledger rows'
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: W1/W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1272
+  n_trials: 0
+  epoch_range: null
+  source: surveys/wise-crossings/configs/elongation_gate_v1.json; report/wise_crossings.md §2 table; §3
+  notes: 'Gate I passes 102 of 1272 in-era events (45 targets) — but Gate II (control-geometry theorem)
+    leaves 0 searchable units: ~116 d windows recurring annually cannot be cleared by the 8 designated
+    temporal pseudo-window controls (v1.0 pool ±23–97 d: 0 units; v1.1 pool ±130–245 d: 2–6 valid offsets,
+    still 0); 0 trials, 0 exceedance budget, no pixel searched'
+- target_id: barnard-star
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 59751.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [31]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 4.2 mag); coverage-without-statistic entry in the joint ledger
+- target_id: barnard-star
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 59751.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [31]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 3.6 mag); coverage-without-statistic entry in the joint ledger
+- target_id: eps-ind-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [13, 18, 17]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 2.14 mag); coverage-without-statistic entry in the joint ledger
+- target_id: eps-ind-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [13, 19, 17]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 1.94 mag); coverage-without-statistic entry in the joint ledger
+- target_id: eps-ind-b
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 3, off-window
+    epochs 263, valid offsets 2/8; in-window W1 epochs per event [12, 15, 16]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: eps-ind-b
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 3, off-window
+    epochs 266, valid offsets 2/8; in-window W2 epochs per event [12, 15, 16]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: ez-aqr
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56897.5
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [24]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 5.4 mag); coverage-without-statistic entry in the joint ledger
+- target_id: ez-aqr
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56897.5
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [24]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 5.2 mag); coverage-without-statistic entry in the joint ledger
+- target_id: fomalhaut
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: 0
+  epoch_range: MJD 57263.2–59819.9
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [22, 19, 30, 21, 23]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 0.9 mag); coverage-without-statistic entry in the joint ledger
+- target_id: fomalhaut
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: 0
+  epoch_range: MJD 57263.2–59819.9
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [22, 19, 30, 21, 25]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 0.9 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-1002
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 60209.3–60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [15, 13]; not a freeze unit — saturation cut
+    status_W1 = excluded (W1_est 7.34 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-1002
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 60209.3–60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [15, 14]; not a freeze unit — saturation cut
+    status_W2 = excluded (W2_est 7.14 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-1087
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56647.7
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 304, valid offsets 0/8; in-window W1 epochs per event [13]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-1087
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56647.7
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 305, valid offsets 0/8; in-window W2 epochs per event [13]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55208.8–58132.5
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 3, off-window
+    epochs 240, valid offsets 6/8; in-window W1 epochs per event [15, 28, 29]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55208.8–58132.5
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 3, off-window
+    epochs 243, valid offsets 6/8; in-window W2 epochs per event [15, 28, 29]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55208.8
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 0, valid offsets 0/8; in-window W3 epochs per event [15]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: W4
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55208.8
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 0, valid offsets 0/8; in-window W4 epochs per event [15]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-1111
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58506.0–60332.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [24, 25, 26]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 6.95 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-1111
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58506.0–60332.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [24, 25, 26]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 6.75 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57636.2–60523.0
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 2, off-window
+    epochs 247, valid offsets 0/8; in-window W1 epochs per event [22, 8]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57636.2–60523.0
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 2, off-window
+    epochs 248, valid offsets 0/8; in-window W2 epochs per event [22, 8]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 344, valid offsets 7/8; in-window W1 epochs per event [12]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 347, valid offsets 7/8; in-window W2 epochs per event [13]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-2066
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57049.5–59240.3
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [23, 28]; not a freeze unit — saturation cut
+    status_W1 = excluded (W1_est 5.67 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-2066
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57049.5–59240.3
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [24, 28]; not a freeze unit — saturation cut
+    status_W2 = excluded (W2_est 5.47 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-229-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58113.7–59937.9
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [15, 14, 18]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 4.07 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-229-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58113.7–59937.9
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [15, 14, 18]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 3.87 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-338-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 59237.4–60332.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [27, 31, 28]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 3.89 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-338-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 59237.4–60332.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [27, 32, 28]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 3.69 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-338-b
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 59237.4–60332.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [27, 32, 29]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 4.04 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-338-b
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 59237.4–60332.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [28, 32, 29]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 3.84 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-3512
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [32]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 8.43 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-3512
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 330, valid offsets 1/8; in-window W2 epochs per event [32]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-518
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 58585.7–60409.9
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 2, off-window
+    epochs 276, valid offsets 0/8; in-window W1 epochs per event [25, 24]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: gj-518
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 58585.7–60409.9
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 2, off-window
+    epochs 280, valid offsets 0/8; in-window W2 epochs per event [25, 24]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: gj-54
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [15]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 6.16 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-54
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [15]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 5.96 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-667-c
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 55360.4–56820.6
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [24, 23]; not a freeze unit — saturation cut
+    status_W1 = excluded (W1_est 5.89 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-667-c
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 55360.4–56820.6
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [24, 23]; not a freeze unit — saturation cut
+    status_W2 = excluded (W2_est 5.69 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-667-c
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55360.4
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 0, valid offsets 0/8; in-window W3 epochs per event [25]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-667-c
+  channel: A
+  rung: 1.0 AU
+  band: W4
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55360.4
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 0, valid offsets 0/8; in-window W4 epochs per event [13]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-674
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57553.6
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [27]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 4.76 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-674
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57553.6
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [27]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 4.56 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-682
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57189.4
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [28]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 5.51 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-682
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57189.4
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [28]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 5.31 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-783
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 58317.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [24]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 3.5 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-783
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 58317.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [24]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 3.4 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-784
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57586.6
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [27]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 4.18 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-784
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57586.6
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [28]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 3.98 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-832
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 58330.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [24]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 4.4 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-832
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 58330.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [24]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 4.2 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-876
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57996.7–58361.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [23, 26]; not a freeze unit — saturation cut
+    status_W1 = excluded (W1_est 4.86 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-876
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57996.7–58361.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [23, 26]; not a freeze unit — saturation cut
+    status_W2 = excluded (W2_est 4.66 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-908
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [13]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 4.97 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-908
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [13]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est 4.77 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj-915
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57632.6–60191.3
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 2, off-window
+    epochs 340, valid offsets 4/8; in-window W1 epochs per event [13, 15]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: gj-915
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57632.6–60191.3
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 2, off-window
+    epochs 343, valid offsets 4/8; in-window W2 epochs per event [13, 15]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: gj-9193
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56647.7
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 325, valid offsets 0/8; in-window W1 epochs per event [13]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj-9193
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56647.7
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 326, valid offsets 0/8; in-window W2 epochs per event [13]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: gj65-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57671.1–60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [25, 28, 12]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 5.12 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj65-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57671.1–60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [26, 27, 12]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 4.92 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj65-b
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57671.1–60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [25, 27, 12]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 5.0 mag); coverage-without-statistic entry in the joint ledger
+- target_id: gj65-b
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57671.1–60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [26, 27, 12]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 4.7 mag); coverage-without-statistic entry in the joint ledger
+- target_id: lacaille-8760
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [25, 29, 25]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 2.09 mag); coverage-without-statistic entry in the joint ledger
+- target_id: lacaille-8760
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [25, 29, 26]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 1.89 mag); coverage-without-statistic entry in the joint ledger
+- target_id: lacaille-9352
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 0
+  epoch_range: MJD 57259.4–59085.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [37, 27, 27, 25]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 3.36 mag); coverage-without-statistic entry in the joint ledger
+- target_id: lacaille-9352
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 0
+  epoch_range: MJD 57259.4–59085.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [37, 27, 27, 25]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 3.16 mag); coverage-without-statistic entry in the joint ledger
+- target_id: lhs-1723
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55536.0–59918.4
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [14, 32, 27]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 6.55 mag); coverage-without-statistic entry in the joint ledger
+- target_id: lhs-1723
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55536.0–59918.4
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [15, 32, 27]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 6.35 mag); coverage-without-statistic entry in the joint ledger
+- target_id: lhs-1723
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55536.0
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 16, valid offsets 0/8; in-window W3 epochs per event [14]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 0
+  epoch_range: MJD 55208.8–58496.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [14, 26, 24, 27]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 4.79 mag); coverage-without-statistic entry in the joint ledger
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 0
+  epoch_range: MJD 55208.8–58496.8
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [14, 26, 24, 27]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 4.59 mag); coverage-without-statistic entry in the joint ledger
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55208.8
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 0, valid offsets 0/8; in-window W3 epochs per event [14]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: W4
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55208.8
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 0, valid offsets 0/8; in-window W4 epochs per event [14]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: procyon-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [25]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 0.0 mag); coverage-without-statistic entry in the joint ledger
+- target_id: procyon-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [25]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est -0.1 mag); coverage-without-statistic entry in the joint ledger
+- target_id: procyon-b
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [25]; not a freeze unit — saturation cut status_W1
+    = excluded (W1_est 0.0 mag); coverage-without-statistic entry in the joint ledger
+- target_id: procyon-b
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [25]; not a freeze unit — saturation cut status_W2
+    = excluded (W2_est -0.1 mag); coverage-without-statistic entry in the joint ledger
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55274.3–60387.4
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [14, 23, 22]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 5.44 mag); coverage-without-statistic entry in the joint ledger
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55274.3–60387.4
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [14, 23, 22]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 5.24 mag); coverage-without-statistic entry in the joint ledger
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55274.3
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 0, valid offsets 0/8; in-window W3 epochs per event [14]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: W4
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55274.3
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 0, valid offsets 0/8; in-window W4 epochs per event [14]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: ross-154
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57206.2–60493.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [22, 12]; not a freeze unit — saturation cut
+    status_W1 = excluded (W1_est 5.19 mag); coverage-without-statistic entry in the joint ledger
+- target_id: ross-154
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57206.2–60493.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [22, 12]; not a freeze unit — saturation cut
+    status_W2 = excluded (W2_est 4.99 mag); coverage-without-statistic entry in the joint ledger
+- target_id: tau-cet
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 59132.0–60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [29, 17]; not a freeze unit — saturation cut
+    status_W1 = excluded (W1_est -0.55 mag); coverage-without-statistic entry in the joint ledger
+- target_id: tau-cet
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 59132.0–60523.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [29, 17]; not a freeze unit — saturation cut
+    status_W2 = excluded (W2_est -0.75 mag); coverage-without-statistic entry in the joint ledger
+- target_id: van-maanen
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57666.4–60523.0
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 3, off-window
+    epochs 211, valid offsets 0/8; in-window W1 epochs per event [23, 21, 10]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: van-maanen
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57666.4–60523.0
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class gate_blocked (report: constraint-only, never a candidate): windows 3, off-window
+    epochs 213, valid offsets 0/8; in-window W2 epochs per event [23, 21, 10]; coverage-without-statistic
+    entry in the joint ledger'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 59982.3
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 322, valid offsets 0/8; in-window W1 epochs per event [28]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 59982.3
+  source: surveys/wise-crossings/configs/threshold_freeze_v1.json search_units + surveys/wise-crossings/results/coverage_v1_events.ecsv
+  notes: 'Gate II unit class single_window (report: constraint-only, never a candidate): windows 1, off-window
+    epochs 325, valid offsets 0/8; in-window W2 epochs per event [28]; coverage-without-statistic entry
+    in the joint ledger'
+- target_id: wolf-359
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 58546.5–59642.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [24, 30]; not a freeze unit — saturation cut
+    status_W1 = excluded (W1_est 5.84 mag); coverage-without-statistic entry in the joint ledger
+- target_id: wolf-359
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 58546.5–59642.0
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [24, 30]; not a freeze unit — saturation cut
+    status_W2 = excluded (W2_est 5.64 mag); coverage-without-statistic entry in the joint ledger
+- target_id: wolf-437
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58937.1–60032.2
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W1 epochs per event [21, 24, 25]; not a freeze unit — saturation
+    cut status_W1 = excluded (W1_est 6.21 mag); coverage-without-statistic entry in the joint ledger
+- target_id: wolf-437
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58937.1–60032.2
+  source: surveys/wise-crossings/results/coverage_v1_events.ecsv + surveys/wise-crossings/results/saturation_cut_v1.ecsv
+  notes: covered window(s), in-window W2 epochs per event [21, 24, 28]; not a freeze unit — saturation
+    cut status_W2 = excluded (W2_est 6.01 mag); coverage-without-statistic entry in the joint ledger
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: W1/W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 91
+  n_trials: null
+  epoch_range: null
+  source: report/wise_crossings.md §4
+  notes: 'covered-window inventory: 91 events on 43 targets with in-window primary W1+W2 frames (W3/W4:
+    5/4 cryo-era events), 211–343-epoch off-window baselines per band; enumerated per target above'
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: W1/W2
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/wise_crossings.md §1 item 5; §5 lesson 2
+  notes: 'saturation cut: W1/W2 searchable population = 11 faint targets (white dwarfs, T/Y dwarfs, latest-M);
+    every ordinary M dwarf within 10 pc is brighter than the W1/W2 single-frame saturation limits'
+- target_id: programme
+  channel:
+  - A
+  - B
+  rung: any
+  band: 3–5 um
+  substrate: WISE/NEOWISE L1b single exposures (no image searched; TAP frame inventory only)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/wise_crossings.md §4
+  notes: '"Not constrained: everything" — no calibrated sensitivity, exclusion or reference depth for
+    any cell; the mid-IR crossing regime remains untested'

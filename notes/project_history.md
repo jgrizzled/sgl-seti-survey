@@ -2437,3 +2437,58 @@ contrast. 1 AU ledger built (`ledger_1au_v1.json`).
 
 **Result.** 0 candidates; the sub-1 AU uplink step cell opened at
 MW class on 16 targets. Lessons → `notes/learnings.md` §17.
+
+## 28. Programme ledger v2 — harvest, merge, records, report (2026-09-10; plan §6 — complete)
+
+"See notes/project_plan.md and determine if there is anything we can
+work on" → every plan row closed or release-gated (re-probed live:
+IRSA `spherex.obscore` still QR2 only; Data Lab `pgir_dr1` only; WISPR
+L2 through E27; WINTER no public archive) → the one unblocked item was
+goal 5: only the Pipeline A surveys emit Constraint / AnalysisRun /
+Candidate records, the ~20 Pipeline B surveys had survey-specific
+results files, and the only cross-archive ledger (joint v1, 593 rows)
+predates 17 later surveys. Five numbered decisions proposed
+(scope, states, native units, provenance, ECSV + report); "Recommendations
+look good, proceed with the ledger v2" → the chain unattended.
+
+**Harvest.** Schema `surveys/programme-ledger/harvest/SCHEMA.md`
+(one YAML per report; row = target × channel × rung × band × substrate
+with status, native limit, derived MW where the report gives one,
+`source` citation, notes; state / channel / rung / target vocabularies
+fixed). Six parallel passes over report groups (Pipeline A ×2; optical,
+space/plate, sunward, radio/spectral/high-energy crossings), each
+instructed to transcribe, never estimate; the plan's closed / blocked /
+deferred rows hand-written as `plan_no_survey.yaml`. 28 files, 28,476
+harvest rows; the Pipeline A files carry one row per Constraint record
+(27,383 rows, 24 MB) and were moved to
+`runs/programme-ledger/v2/harvest_generated/`; the five generator scripts
+were installed under `scripts/harvest/` with an output-dir argument and
+verified to regenerate all 22 generated files byte for byte (the six
+others — TESS, GALEX, DASCH, Rubin, ATLAS/ASAS-SN, plan — are hand
+transcriptions).
+
+**Merge / records / render.** `scripts/build_ledger_v2.py`: list-valued
+fields exploded, vocabulary + registry validation (fail) and
+channel–rung consistency (warn; the LAT is the one channel-A grazing
+substrate), `rung_class`, per-target matrix (best state, lowest
+published MW), summary, Constraint / AnalysisRun / Candidate records
+via `sglsurvey.records` (28 / 21,163 / 27), manifest with sha256 of every
+input and product. Full table (28,588 rows) under `runs/`; tracked
+results keep the 1,182-row crossings + programme-wide subset, matrix,
+summary and the seven rendered tables (`scripts/render_tables.py`).
+Bug caught by a harvest pass and fixed: the corridor z-interval parser
+read "550-10000 AU" as (−10000, 550). Six matrix cells spot-checked
+against their reports (TESS teegarden 840 W, PTF ross-128 110 W, LASCO
+wolf-359 40.7 MW, LAT van-maanen 5.6 MW within the 2–9 MW range, skirt
+gj-1276 1.35 MW within 0.6–1.5, ATLAS teegarden 35 kW).
+
+**Result.** `report/programme_ledger.md`: 0 candidates; census by
+state; Pipeline A all 88 endpoints searched (61 in six surveys);
+Pipeline B 102 searched cells over 37 targets, 35 with a power limit;
+14 registry targets with no per-target crossings row in any report;
+A 1.0 AU ledger-only bar one ZTF unit; S1 grazing rungs
+not-constrainable everywhere but LASCO C2 2.5 R☉; twelve
+retained-ambiguous cells enumerated; the harvest passes' mapping
+judgement calls and the report-internal inconsistencies they found
+listed for review (report §5). Plan §6 added, §5.27 TESS/GALEX fold-in
+struck; README status line updated. Nothing committed to git.

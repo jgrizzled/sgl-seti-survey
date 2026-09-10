@@ -1,0 +1,795 @@
+survey_id: wispr_crossings
+report: report/wispr_crossings.md
+plan_section: 5.18–5.19
+pipeline: B
+archives:
+- wispr
+hypothesis_version: v1.0 (D0–D10 approved 2026-09-05) + threshold amendments v1.1 (pre-dev), v1.2–v1.5 (dev-driven, pre-confirmatory)
+era: 2018-11 → 2026-03 (encounters E1–E27)
+run_dir: runs/wispr-crossings
+records_dir: null
+candidates: 0
+candidate_notes: '90 trials / 30 units, 15 exceedances vs 10.0 expected, all adjudicated: 9 static-content / latitude-curvature (Gaia-matched), 3 bright-star class, 2 arc-exit ramps, 1 extended coronal front; dev 61-vir S2 calibration drift retained non-promotable'
+rows:
+- target_id: programme
+  channel: S1
+  rung: 1.2 Rsun
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §1
+  notes: The grazing cones never enter the WISPR-I field (≤ 6.9° / 13.7° elongation vs the 13.5° inner edge)
+- target_id: programme
+  channel: S1
+  rung: 2.5 Rsun
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §1
+  notes: The grazing cones never enter the WISPR-I field (≤ 6.9° / 13.7° elongation vs the 13.5° inner edge)
+- target_id: ez-aqr
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 10.75
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 70.2
+  power_mw_range: null
+  n_events: 19
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json ez-aqr:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 11.07 / 12.54, S_event 21.04 / 26.15, S_pulse 32.25 / 63.44 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 7.93 -> 944.0 MW; P_cone 253.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-1002
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 11.96
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 83.3
+  power_mw_range: null
+  n_events: 11
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-1002:S1; report/wispr_crossings.md §3–4
+  notes: S_stack 16.61 / 18.24, S_event 12.46 / 12.94, S_pulse 2.85 / 6.22 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 12.48 -> 51.3 MW; S_pulse m90 6.27 -> 15700.0 MW (2 consecutive frames, 5–15 min); ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-1002
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 8.26
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1420.0
+  power_mw_range: null
+  n_events: 24
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-1002:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 0.39 / 22.61, S_event 6.55 / 43.77, S_pulse 20.11 / 89.09 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 6.58 -> 6670.0 MW; P_cone 2520.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-1087
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: vetoed_known_source
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 10
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-1087:S2; report/wispr_crossings.md §3–4
+  notes: 'S_stack 33.34 / 17.87 exc, S_event 72.13 / 8.76 exc, S_pulse 3.84 / 2.51 exc (S/T); static content (template incompleteness): z > 0 in all 10 events, Gaia DR3 predicts 0.61 units of static flux in the aperture (two G 10.3–10.8 stars 1.6 px off-centre absent from the Tycho extract) vs template 0.20 — excess 0.42 is the missing static flux; the pulse is an arc-exit ramp (last two frames of a 16-frame arc); no S_stack/S_event depth (degenerate); power_mw = P_tx_10m (10-m-class uplink); S_pulse m90 7.12 -> 11300.0 MW (2 consecutive frames, 5–15 min); ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: gj-1111
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 7.77
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 3940.0
+  power_mw_range: null
+  n_events: 17
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-1111:S1; report/wispr_crossings.md §3–4
+  notes: S_stack −7.65 / 13.37, S_event 5.92 / 30.72, S_pulse 22.11 / 27.24 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 7.18 -> 6790.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-1276
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 8.25
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 4410.0
+  power_mw_range: null
+  n_events: 23
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-1276:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 4.89 / 22.83, S_event 6.34 / 48.27, S_pulse 18.84 / 80.23 (S/T); searched-null (LASCO/HI-1 family); power_mw = P_tx_10m (10-m-class uplink); S_event m90 6.57 -> 20700.0 MW; P_cone 2530.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-251
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 9.98
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 517.0
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-251:S1; report/wispr_crossings.md §3–4
+  notes: S_stack 3.77 / 9.16, S_event 7.72 / 26.41, S_pulse 6.34 / 24.85 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 8.39 -> 2220.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-514
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 8.69
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1690.0
+  power_mw_range: null
+  n_events: 26
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-514:S1; report/wispr_crossings.md §3–4
+  notes: S_stack −11.51 / 30.00, S_event 3.38 / 25.48, S_pulse 12.62 / 75.27 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 7.91 -> 3450.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-514
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 9.46
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1160.0
+  power_mw_range: null
+  n_events: 19
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-514:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 6.06 / 11.74, S_event 3.99 / 13.44, S_pulse 5.76 / 4.25 exc (S/T); S_pulse exceedance = arc-exit ramp (4-frame ramp in the last frames of the E26 arc at the 53.5° field exit), curvature-corrected z null, non-recurrent; power_mw = P_tx_10m (10-m-class uplink); S_event m90 7.92 -> 4780.0 MW; S_pulse m90 5.09 -> 65100.0 MW (2 consecutive frames, 5–15 min); P_cone 833.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-518
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 10.0
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 505.0
+  power_mw_range: null
+  n_events: 24
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-518:S1; report/wispr_crossings.md §3–4
+  notes: S_stack 19.00 / 27.71, S_event 16.23 / 28.43, S_pulse 94.60 / 224.04 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 8.23 -> 2570.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-518
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 9.46
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1390.0
+  power_mw_range: null
+  n_events: 22
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-518:S2; report/wispr_crossings.md §3–4
+  notes: S_stack −1.85 / 10.88, S_event 4.33 / 8.80, S_pulse 5.97 / 12.01 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 8.69 -> 2820.0 MW; S_pulse m90 4.69 -> 112000.0 MW (2 consecutive frames, 5–15 min); P_cone 833.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-54
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 10.75
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 83.6
+  power_mw_range: null
+  n_events: 26
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-54:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 8.06 / 12.56, S_event 3.60 / 34.32, S_pulse 18.70 / 42.00 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 7.5 -> 1670.0 MW; S_pulse m90 3.55 -> 63400.0 MW (2 consecutive frames, 5–15 min); P_cone 253.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-581
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: vetoed_known_source
+  limit_kind: m90
+  limit_value: 6.96
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 8310.0
+  power_mw_range: null
+  n_events: 20
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-581:S1; report/wispr_crossings.md §3–4
+  notes: 'S_stack 24.99 / 21.17 exc, S_event 20.88 / 51.75, S_pulse 54.28 / 68.50 (S/T); latitude curvature + static content: z +5.0 median; curvature-corrected S_stack 11 < T; residual = faint Gaia stars (G 12.5) below the Tycho limit; S_stack depth degenerate; power_mw = P_cone downlink through the 0.1 AU cone; limit = S_event m90 (S_stack degenerate); ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: gj-581
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 9.07
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1130.0
+  power_mw_range: null
+  n_events: 23
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-581:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 14.56 / 27.16, S_event 8.88 / 50.37, S_pulse 17.89 / 47.53 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 7.52 -> 4720.0 MW; P_cone 1190.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-667-c
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: vetoed_known_source
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 9
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-667-c:S1; report/wispr_crossings.md §3–4
+  notes: 'S_stack 44.20 / 10.25 exc, S_event 21.32 / 5.22 exc, S_pulse 1.57 / 3.58 (S/T); static content (bright-neighbour template error): z +14.5 in every event; Gaia 4.39 units vs response-scaled template 2.13 (a G 7.0 star 2.7 px off-centre carried at the wrong encircled fraction/magnitude); no depth (S_stack/S_event degenerate; S_pulse not tabulated); power_mw = P_cone downlink through the 0.1 AU cone; S_pulse m90 6.32 -> 15000.0 MW (2 consecutive frames, 5–15 min); ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: gj-667-c
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 8.25
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 3170.0
+  power_mw_range: null
+  n_events: 21
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-667-c:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 0.60 / 15.10, S_event 19.61 / 16.94 exc, S_pulse 11.46 / 24.76 (S/T); S_event exceedance = one event (E01, V3-processed first encounter) level offset on a patch dominated by the HD 156384 AB pair (V 6.7, 35″; Gaia 6.1 vs template 14.2, pair over-counted) — bright-neighbour template systematic; other 20 events z median −2.4; S_event depth degenerate; power_mw = P_tx_10m (10-m-class uplink); P_cone 2530.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-783
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: vetoed_known_source
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 19
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-783:S2; report/wispr_crossings.md §3–4
+  notes: 'S_stack 19.32 / 10.77 exc, S_event 34.00 / 29.73 exc, S_pulse 17.00 / 8.90 exc (S/T); bright-star class (declared v1.3 limit): V 5.3 star; template counted the 1.6″/yr star more than once (Tycho positions not PM-propagated); S_event/S_stack from per-encounter calibration scatter of a S/N-100 star; the pulse is a 2-frame 17σ spike of the star itself (E14); no depth tabulated; power_mw = P_tx_10m (10-m-class uplink); no depth tabulated; ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: gj-876
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 9.46
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 436.0
+  power_mw_range: null
+  n_events: 21
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json gj-876:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 15.25 / 21.62, S_event 57.75 / 66.78, S_pulse 56.71 / 167.99 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 7.12 -> 3740.0 MW; P_cone 833.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: lacaille-8760
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 8.25
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 953.0
+  power_mw_range: null
+  n_events: 19
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json lacaille-8760:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 10.77 / 29.33, S_event 13.61 / 29.71, S_pulse 5.49 / 61.34 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 8.25 -> 960.0 MW; P_cone 2530.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: ross-128
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: vetoed_known_source
+  limit_kind: m90
+  limit_value: 7.82
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 3750.0
+  power_mw_range: null
+  n_events: 24
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json ross-128:S1; report/wispr_crossings.md §3–4
+  notes: 'S_stack 24.30 / 16.69 exc, S_event 13.35 / 25.75, S_pulse 22.29 / 102.05 (S/T); static content: z +4.9 median, 96 % of events positive; curvature leaves +4.0; Gaia 6.0 vs template 4.1 (a G 6.8 star 0.8 px from centre); S_stack depth degenerate; power_mw = P_cone downlink through the 0.1 AU cone; limit = S_event m90 (S_stack degenerate); ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: ross-128
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 10.75
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 68.9
+  power_mw_range: null
+  n_events: 11
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json ross-128:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 12.03 / 16.25, S_event 6.12 / 15.55, S_pulse 3.07 / 10.30 (S/T); searched-null (LASCO/HI-1 family); power_mw = P_tx_10m (10-m-class uplink); S_event m90 9.1 -> 318.0 MW; S_pulse m90 5.48 -> 8830.0 MW (2 consecutive frames, 5–15 min); P_cone 253.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: teegarden
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 9.07
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1190.0
+  power_mw_range: null
+  n_events: 23
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json teegarden:S1; report/wispr_crossings.md §3–4
+  notes: S_stack 9.41 / 19.66, S_event 7.18 / 26.52, S_pulse 11.67 / 42.66 (S/T); searched-null (LASCO/HI-1 family); power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 7.5 -> 5060.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: teegarden
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 9.07
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 417.0
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json teegarden:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 7.20 / 24.28, S_event 12.78 / 34.67, S_pulse 39.16 / 44.71 (S/T); searched-null (LASCO/HI-1 family); power_mw = P_tx_10m (10-m-class uplink); S_event m90 7.5 -> 1770.0 MW; S_pulse m90 3.41 -> 76700.0 MW (2 consecutive frames, 5–15 min); P_cone 1190.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: van-maanen
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 10.01
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 501.0
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json van-maanen:S1; report/wispr_crossings.md §3–4
+  notes: S_stack 17.20 / 14.92 exc, S_event 8.04 / 10.58, S_pulse 7.34 / 5.69 exc (S/T); S_stack exceedance = latitude curvature (source at orbit latitude −3° on the brightness ridge; curvature-corrected S_stack 5.1 < T), S_stack depth degenerate; S_pulse exceedance (E17) = whole-arc plateau with controls co-elevated 1–4σ, frame-common coronal transient; limit here is the S_event depth; power_mw = P_cone downlink through the 0.1 AU cone; limit = S_event m90 (S_stack degenerate); S_pulse m90 4.98 -> 51600.0 MW (2 consecutive frames, 5–15 min); ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: van-maanen
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 8.25
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1130.0
+  power_mw_range: null
+  n_events: 22
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json van-maanen:S2; report/wispr_crossings.md §3–4
+  notes: S_stack −7.21 / 24.30, S_event 12.38 / 39.27, S_pulse 60.15 / 103.73 (S/T); searched-null (LASCO/HI-1 family); power_mw = P_tx_10m (10-m-class uplink); S_event m90 6.59 -> 5230.0 MW; P_cone 2530.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: wolf-1061
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 11.58
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 118.0
+  power_mw_range: null
+  n_events: 18
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json wolf-1061:S1; report/wispr_crossings.md §3–4
+  notes: 'S_stack 13.18 / 15.13, S_event 5.50 / 21.65, S_pulse 6.77 / 5.74 exc (S/T); S_pulse exceedance (E22, 20 min, 6–7σ) = extended coronal front at the inner edge: 11 × 11 stamp uniformly elevated 0.5–1 unit/px with no point-source peak, within 3° of the inner edge; non-recurrent; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 8.25 -> 2530.0 MW; S_pulse m90 5.54 -> 30700.0 MW (2 consecutive frames, 5–15 min); ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: wolf-1061
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 10.75
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 112.0
+  power_mw_range: null
+  n_events: 23
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json wolf-1061:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 7.93 / 9.78, S_event 5.95 / 17.75, S_pulse 9.27 / 51.21 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 8.55 -> 856.0 MW; P_cone 253.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: wolf-359
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 8.97
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1300.0
+  power_mw_range: null
+  n_events: 22
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json wolf-359:S1; report/wispr_crossings.md §3–4
+  notes: S_stack 5.09 / 15.35, S_event 6.20 / 32.73, S_pulse 37.96 / 108.54 (S/T); searched-null (LASCO/HI-1 family); power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 6.96 -> 8330.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: wolf-437
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 9.07
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1190.0
+  power_mw_range: null
+  n_events: 26
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json wolf-437:S1; report/wispr_crossings.md §3–4
+  notes: S_stack 4.24 / 25.50, S_event 5.56 / 43.11, S_pulse 63.93 / 123.82 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 6.97 -> 8280.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: wolf-437
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: searched
+  limit_kind: m90
+  limit_value: 10.0
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 790.0
+  power_mw_range: null
+  n_events: 12
+  n_trials: 3
+  epoch_range: null
+  source: surveys/wispr-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/wispr-crossings/results/power_limits_v1.json wolf-437:S2; report/wispr_crossings.md §3–4
+  notes: S_stack 5.04 / 16.38, S_event 4.82 / 8.74, S_pulse 3.08 / 5.82 (S/T); searched-null; power_mw = P_tx_10m (10-m-class uplink); S_event m90 10.01 -> 781.0 MW; S_pulse m90 5.99 -> 31900.0 MW (2 consecutive frames, 5–15 min); P_cone 505.0 MW; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: procyon-a
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §3; surveys/wispr-crossings/results/confirmatory_v1.md unit table (status constraint_only)
+  notes: 'Not covered: source at orbit latitude +17.5° to +19.6°, above the real WISPR-I field''s +15° north edge (planning model''s ±20° was optimistic); results table labels the unit constraint_only'
+- target_id: procyon-b
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §3; surveys/wispr-crossings/results/confirmatory_v1.md unit table (status constraint_only)
+  notes: 'Not covered: source at orbit latitude +17.5° to +19.6°, above the real WISPR-I field''s +15° north edge (planning model''s ±20° was optimistic); results table labels the unit constraint_only'
+- target_id: luyten-star
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §3; surveys/wispr-crossings/results/confirmatory_v1.md unit table (status constraint_only)
+  notes: 'Not covered: source at orbit latitude +17.5° to +19.6°, above the real WISPR-I field''s +15° north edge (planning model''s ±20° was optimistic); results table labels the unit constraint_only'
+- target_id: gj-54
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §3; surveys/wispr-crossings/results/confirmatory_v1.md unit table (status constraint_only)
+  notes: 'Not covered: source at orbit latitude +17.5° to +19.6°, above the real WISPR-I field''s +15° north edge (planning model''s ±20° was optimistic); results table labels the unit constraint_only'
+- target_id: gj-1087
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §3; surveys/wispr-crossings/results/confirmatory_v1.md unit table (status constraint_only)
+  notes: 'Not covered: source at orbit latitude +17.5° to +19.6°, above the real WISPR-I field''s +15° north edge (planning model''s ±20° was optimistic); results table labels the unit constraint_only'
+- target_id: fomalhaut
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §3; surveys/wispr-crossings/results/confirmatory_v1.md unit table
+  notes: 'bright_star_unsearchable (V 1.2): saturated target star'
+- target_id: 61-vir
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 23
+  n_trials: 3
+  epoch_range: null
+  source: report/wispr_crossings.md §3 (dev); surveys/wispr-crossings/results/dev_v1.md unit table
+  notes: Dev-stage unit (no injection depth); dev S_stack −12.75 / 25.28, S_event 4.10 / 32.84, S_pulse 9.78 / 56.66 (S/T); dev stage 5 units, 15 trials, 1 exceedance vs 1.67 expected
+- target_id: 61-vir
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: retained_ambiguous
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 22
+  n_trials: 3
+  epoch_range: null
+  source: report/wispr_crossings.md §3 (dev); surveys/wispr-crossings/results/dev_v1.md unit table
+  notes: 'Dev-stage unit: S_event exceedance = monotonic 0.95 → 0.88 calibration drift of the V 4.7 star; retained, non-promotable; dev S_stack 18.70 / 20.05, S_event 31.59 / 7.00 exc, S_pulse 3.02 / 32.57 (S/T); dev stage 5 units, 15 trials, 1 exceedance vs 1.67 expected'
+- target_id: gj-908
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 11
+  n_trials: 3
+  epoch_range: null
+  source: report/wispr_crossings.md §3 (dev); surveys/wispr-crossings/results/dev_v1.md unit table
+  notes: Dev-stage unit (no injection depth); dev S_stack −7.63 / 42.73, S_event 1.73 / 30.56, S_pulse 3.22 / 66.87 (S/T); dev stage 5 units, 15 trials, 1 exceedance vs 1.67 expected
+- target_id: gj-908
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 24
+  n_trials: 3
+  epoch_range: null
+  source: report/wispr_crossings.md §3 (dev); surveys/wispr-crossings/results/dev_v1.md unit table
+  notes: 'Dev-stage unit (no injection depth): gj-908 (V 9.0) template null, z median +0.3 over 24 events — in-situ control; dev S_stack 4.65 / 18.62, S_event 9.49 / 19.29, S_pulse 21.01 / 66.58 (S/T); dev stage 5 units, 15 trials, 1 exceedance vs 1.67 expected'
+- target_id: ross-154
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 17
+  n_trials: 3
+  epoch_range: null
+  source: report/wispr_crossings.md §3 (dev); surveys/wispr-crossings/results/dev_v1.md unit table
+  notes: Dev-stage unit (no injection depth); dev S_stack 7.70 / 12.23, S_event 9.15 / 17.01, S_pulse 5.94 / 69.45 (S/T); dev stage 5 units, 15 trials, 1 exceedance vs 1.67 expected
+- target_id: programme
+  channel: S1
+  rung: 0.1 AU
+  band: WISPR-O (ε 50°–108°)
+  substrate: PSP/WISPR-O frames (ledger substrate)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §6 item 4
+  notes: WISPR-O carried as a ledger substrate; its arcs cover the outer cone only; not searched
+- target_id: programme
+  channel: S2
+  rung: 0.1 AU
+  band: WISPR-O (ε 50°–108°)
+  substrate: PSP/WISPR-O frames (ledger substrate)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §6 item 4
+  notes: WISPR-O carried as a ledger substrate; its arcs cover the outer cone only; not searched
+- target_id: programme
+  channel: S2
+  rung: 1.0 AU
+  band: WISPR-I λ_c 615 nm, W_eff 250 nm (532 nm in band)
+  substrate: PSP/WISPR-I level-3 synoptic frames (E1–E27), ICRS-fixed patch aperture photometry with Tycho/Hipparcos stellar template
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/wispr_crossings.md §1
+  notes: S2 1 AU rung out of scope (D7); no coverage count given in the report

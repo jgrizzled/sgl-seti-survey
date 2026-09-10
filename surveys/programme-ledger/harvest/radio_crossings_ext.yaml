@@ -1,0 +1,435 @@
+survey_id: radio_crossings_ext
+report: report/radio_crossings_ext.md
+plan_section: '5.7'
+pipeline: B
+archives:
+- casda
+- racs
+- vast
+- emu
+- flash
+- lotss
+hypothesis_version: null
+era: crossing events 2014–2028; CASDA archive span 2019-04-21 → 2026-08-28; LoTSS DR3 observations 2014-05-23 →
+  2024-08-18
+run_dir: runs/radio-crossings/v2
+records_dir: null
+candidates: 0
+candidate_notes: Metadata-only coverage intersection executed 2026-09-04; no pixel touched, no statistic formed.
+  Radio decision (§5.5, geometry-only) unchanged. Hand-offs (c) VLASS refresh at the yearly crossing-list refresh
+  and (d) BL-MeerKAT re-check remain open.
+rows:
+- target_id: programme
+  channel: B
+  rung: 1.2 Rsun
+  band: any
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 29
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table; §3 item 3
+  notes: 29 in-span events (4 targets), 0 covered. ±0.3–0.7 d windows vs 12–15-min visits at cadences of weeks (VAST)
+    to years (RACS); grazing rungs stay open in radio — scheduled observation only.
+- target_id: programme
+  channel: B
+  rung: 2.5 Rsun
+  band: any
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 36
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table; §3 item 3
+  notes: 36 in-span events (5 targets), 0 covered (65 in-span ASKAP grazing events in all, none touched).
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: any
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 50
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table; §2.1; §3 item 2
+  notes: '50 in-span events (7 targets): 7 covered in footprint, 6 validated (5 targets) — the antipode channel
+    is no longer archivally virgin at 0.1 AU. Hand-off (a) antipode cutout quick-look executed 2026-09-04 (report/radio_quicklook.md).'
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: 2023-09-03, 2024-09-10
+  source: report/radio_crossings_ext.md §2.1 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: 'b 0.71 R☉. VAST SB52549 VAST_2257-06 (UNCERTAIN; offset −2.1 of ±5.9 d; sep 0.80° / 3.13°) and VAST SB65727
+    VAST_2257-06 (GOOD; +5.6 / 5.9 d; 0.80° / 3.13°): the two clean primary-beam-core cases, the September wolf-359
+    B family also covered by ZTF/PGIR. 44 dated ASKAP antipode visits over all dates.'
+- target_id: ross-154
+  channel: B
+  rung: 0.1 AU
+  band: 1656 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2021-12-29'
+  source: report/radio_crossings_ext.md §2.1 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: b 3.30 R☉. RACS-high SB34957 RACS_0651+23 (GOOD; −3.4 / 5.6 d; sep 0.63° / 2.72°). 13 dated antipode visits
+    over all dates.
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: 1368 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2021-09-21'
+  source: report/radio_crossings_ext.md §2.1 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: b 1.85 R☉. VAST pilot SB32330 VAST_2338+00 (GOOD; +1.7 / 5.8 d; sep 2.45° / 2.82°); plus one in-image-only
+    row (second pilot field at 3.16°). 57 dated antipode visits over all dates.
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2022-03-29'
+  source: report/radio_crossings_ext.md §2.1 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: b 0.25 R☉. RACS-low SB38682 RACS_1237-06 (GOOD; −4.8 / 5.8 d; sep 3.12° / 3.13°, footprint edge); plus
+    one in-image-only row (second RACS field at 3.32°). 79 dated antipode visits over all dates.
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: 856 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2026-03-29'
+  source: report/radio_crossings_ext.md §2.1 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: b 0.24 R☉. FLASH SB83234 FLASH_497 (−5.0 / 5.8 d; sep 3.15° / 3.16°, edge) is REJECTED — failed the survey
+    validation, not released; excluded from the validated count.
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: 856 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2026-05-03'
+  source: report/radio_crossings_ext.md §2.1 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: b 0.98 R☉. FLASH SB84179 FLASH_389 (UNCERTAIN; −3.2 / 5.9 d; sep 2.18° / 3.16°). 21 dated antipode visits
+    over all dates.
+- target_id:
+  - gj-908
+  - gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: any
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2.1; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: 'No in-footprint in-window ASKAP observation for these two of the seven in-span targets; gj-908 2022 RACS-low
+    in-image only at 3.92°. Antipode visits over all dates: gj-908 89, gj-1276 45.'
+- target_id: programme
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 50
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table; §2.2
+  notes: '50 in-span events (7 targets): 3 covered / 3 validated. Wide-field continuum epochs only — none targeted
+    or high-time-resolution. Hand-off (b) executed 2026-09-04 (report/radio_quicklook.md).'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2023-09-03'
+  source: report/radio_crossings_ext.md §2.2 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: b 0.83 R☉. VAST SB52549 VAST_2257-06 (UNCERTAIN; −1.6 / 5.9 d; sep 1.10°).
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: 1368 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2024-11-11'
+  source: report/radio_crossings_ext.md §2.2 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: b 1.08 R☉. RACS-mid SB67840 RACS_0248+18 (+3.6 / 5.8 d; sep 2.09°); two further RACS-mid fields in-image
+    only at 3.7–4.2°.
+- target_id: van-maanen
+  channel: A
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2024-10-07'
+  source: report/radio_crossings_ext.md §2.2 table; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: b 0.33 R☉. VAST SB66449 VAST_0037+06 (+1.2 / 5.8 d; sep 3.11°, footprint edge).
+- target_id:
+  - wolf-359
+  - ross-128
+  - ross-154
+  - gj-908
+  channel: A
+  rung: 0.1 AU
+  band: any
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2.2; surveys/radio-crossings/results/askap_inwindow_v2.ecsv
+  notes: No in-footprint in-window ASKAP observation; gj-908 2021-09 in two VAST-pilot fields in-image only at 3.6°.
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: 'CASDA ObsCore Stokes-I continuum images (RACS/VAST/EMU/FLASH/…): SBID start/stop vs flat-chord window;
+    in_footprint = sep ≤ 2.25° + HPBW/2'
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 606
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table; §2.3
+  notes: '606 in-span events (86 targets): 211 covered in footprint / 206 validated (64 targets); over all in-era
+    events VAST covers 124, RACS 96. Constraint = the surveys'' own published transient/variable searches; nothing
+    added.'
+- target_id: programme
+  channel: B
+  rung: 1.2 Rsun
+  band: 144 MHz
+  substrate: LoTSS DR3 HBA pointing observation mid-MJDs (ASTRON VO); in_beam ≤ 1.98°
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 10
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table
+  notes: 10 in-span events (1 target), 0 covered.
+- target_id: programme
+  channel: B
+  rung: 2.5 Rsun
+  band: 144 MHz
+  substrate: LoTSS DR3 HBA pointing observation mid-MJDs (ASTRON VO); in_beam ≤ 1.98°
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 20
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table
+  notes: 20 in-span events (2 targets), 0 covered (30 LoTSS grazing events in all, zero observations).
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: 144 MHz
+  substrate: LoTSS DR3 HBA pointing observation mid-MJDs (ASTRON VO); in_beam ≤ 1.98°
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 30
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table; §2.1
+  notes: 30 in-span events (3 targets), 0 covered. LoTSS reaches only gj-1276 B (18), ross-128 B (4), ross-154 B
+    (1) antipode visits over all dates, none in-window.
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: 144 MHz
+  substrate: LoTSS DR3 HBA pointing observation mid-MJDs (ASTRON VO); in_beam ≤ 1.98°
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: 2023-11-04 22:09
+  source: report/radio_crossings_ext.md §2.2 table; surveys/radio-crossings/results/lotss_inwindow_v2.ecsv
+  notes: b 1.09 R☉. LoTSS pointing P043+19 (−3.9 / 5.8 d; sep 1.89°, in beam); 8-h run. Hand-off (b) executed (report/radio_quicklook.md
+    §4).
+- target_id: programme
+  channel: A
+  rung: 0.1 AU
+  band: 144 MHz
+  substrate: LoTSS DR3 HBA pointing observation mid-MJDs (ASTRON VO); in_beam ≤ 1.98°
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 50
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table
+  notes: 50 in-span events (5 targets at δ > −10°), 1 covered (teegarden); the other four targets have no in-beam
+    in-window LoTSS observation.
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: 144 MHz
+  substrate: LoTSS DR3 HBA pointing observation mid-MJDs (ASTRON VO); in_beam ≤ 1.98°
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 300
+  n_trials: null
+  epoch_range: null
+  source: report/radio_crossings_ext.md §2 table; §2.3
+  notes: '300 in-span events (30 targets): 13 covered (10 targets). Constraint = LoTSS published transient searches;
+    nothing added.'

@@ -1,0 +1,383 @@
+# Plan rows closed, blocked, deferred or not adopted without a search.
+# Source: notes/project_plan.md (2026-09-10 revision). Statuses per SCHEMA.md.
+survey_id: plan_no_survey
+report: notes/project_plan.md
+plan_section: 4.7–4.12, 5.15, 5.20–5.22, 5.24
+pipeline: null
+archives:
+- spherex
+- rubin
+- gaia
+- iras
+- akari
+- herschel
+- planck
+- spitzer
+- 2mass
+- poss
+- mpc
+- kepler
+- pgir
+- winter
+hypothesis_version: null
+era: null
+run_dir: null
+records_dir: null
+candidates: 0
+candidate_notes: null
+rows:
+- target_id: programme
+  channel: corridor
+  rung: 550-10000 AU
+  band: any
+  substrate: SPHEREx QR3 (Pipeline A re-run)
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §4.7
+  notes: Waiting on the release; IRSA spherex.obscore serves spherex_qr2 only (re-checked 2026-09-10).
+- target_id: programme
+  channel: corridor
+  rung: 550-10000 AU
+  band: any
+  substrate: Rubin/LSST visit and difference images (Pipeline A)
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §4.8
+  notes: 'Tabled 2026-08-26: Early DP2 corridor coverage is parallax-phase-poor; trigger = visit/difference-image
+    release (late 2026).'
+- target_id: programme
+  channel: corridor
+  rung: 550-10000 AU
+  band: G/BP/RP astrometry
+  substrate: Gaia DR4 per-transit astrometry (SGL-track test)
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §4.9
+  notes: Adopted 2026-08-24; trigger = DR4 release (not before 2026-12).
+- target_id: programme
+  channel: corridor
+  rung: 550-10000 AU
+  band: thermal IR / sub-mm
+  substrate: IRAS, AKARI, Herschel, Planck, Spitzer
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §4.10
+  notes: Not adopted; no recon. Priority 5 on the original list.
+- target_id: programme
+  channel: corridor
+  rung: 550-10000 AU
+  band: JHK / photographic
+  substrate: 2MASS and POSS plate corridors
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §4.11
+  notes: Not adopted; no recon.
+- target_id: programme
+  channel: corridor
+  rung: 550-10000 AU
+  band: any
+  substrate: MPC isolated observations, tracklets, known-object products
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §4.12
+  notes: Not adopted as a survey; known-object ephemerides serve as positive controls inside completed
+    surveys. Trigger = a candidate surviving a confirmatory run (none has).
+- target_id: programme
+  channel: A
+  rung:
+  - 0.1 AU
+  band: Kepler
+  substrate: Kepler prime + K2 campaign fields (crossings/kepler_v1, 1,435 field-active events)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1435
+  n_trials: null
+  epoch_range: 2009-05 → 2018-11
+  source: notes/project_plan.md §5.15
+  notes: 'Closed 2026-09-04 with no survey: 0 of 1,435 field-active events on silicon at any b; K2 boresights
+    stayed 61°–158° from the Sun (elongation gate).'
+- target_id: programme
+  channel:
+  - B
+  - S1
+  - S2
+  rung:
+  - 1.2 Rsun
+  - 2.5 Rsun
+  - 0.1 AU
+  band: Kepler
+  substrate: Kepler prime + K2 campaign fields (crossings/kepler_v1, 1,435 field-active events)
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1435
+  n_trials: null
+  epoch_range: 2009-05 → 2018-11
+  source: notes/project_plan.md §5.15
+  notes: 'Closed 2026-09-04 with no survey: 0 of 1,435 field-active events on silicon at any b; K2 boresights
+    stayed 61°–158° from the Sun (elongation gate).'
+- target_id:
+  - wolf-359
+  - ross-128
+  - ross-154
+  - van-maanen
+  - gj-876
+  channel: A
+  rung: 1.0 AU
+  band: Kepler
+  substrate: K2 light curves (C14, C1, C7, C8, C3)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: 2014 → 2018
+  source: notes/project_plan.md §5.15
+  notes: Five registry stars have K2 light curves at b ≈ 0.9–1.0 AU — wide rung, recorded only.
+- target_id: programme
+  channel: A
+  rung:
+  - 0.1 AU
+  band: J
+  substrate: Palomar Gattini-IR DR1 (Data Lab; 2MASS-source forced light curves, not images)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 14
+  n_trials: null
+  epoch_range: 2018-10 → 2022-10
+  source: notes/project_plan.md §5.20; surveys/gattini-crossings/notes/gattini_winter_recon_2026-09-04.md
+  notes: 'Blocked 2026-09-04: DR1 is forced at 2MASS-epoch positions (in-era targets read as empty sky),
+    times quantised to 0.25 d, epochal stacks not public; 14 units with 80–224 epochs recorded; blocker
+    = a PGIR data ask or DR2. Data Lab still serves pgir_dr1 only (re-checked 2026-09-10).'
+- target_id: programme
+  channel:
+  - B
+  rung:
+  - 1.2 Rsun
+  - 2.5 Rsun
+  - 0.1 AU
+  band: J
+  substrate: Palomar Gattini-IR DR1 (Data Lab; 2MASS-source forced light curves, not images)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 14
+  n_trials: null
+  epoch_range: 2018-10 → 2022-10
+  source: notes/project_plan.md §5.20; surveys/gattini-crossings/notes/gattini_winter_recon_2026-09-04.md
+  notes: 'Blocked 2026-09-04: DR1 is forced at 2MASS-epoch positions (in-era targets read as empty sky),
+    times quantised to 0.25 d, epochal stacks not public; 14 units with 80–224 epochs recorded; blocker
+    = a PGIR data ask or DR2. Data Lab still serves pgir_dr1 only (re-checked 2026-09-10).'
+- target_id: programme
+  channel: A
+  rung:
+  - 0.1 AU
+  band: Y/J/Hs (1064 nm needs WINTER Y)
+  substrate: WINTER
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §5.20
+  notes: No public release (login-only portal); re-checked at each yearly refresh.
+- target_id: programme
+  channel:
+  - B
+  rung:
+  - 1.2 Rsun
+  - 2.5 Rsun
+  - 0.1 AU
+  band: Y/J/Hs (1064 nm needs WINTER Y)
+  substrate: WINTER
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §5.20
+  notes: No public release (login-only portal); re-checked at each yearly refresh.
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: Rubin visit/difference images with pixel injections (image-level re-run of §5.13)
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §5.21
+  notes: Designated follow-up of §5.13, not started; trigger = visit/difference-image release (late 2026),
+    then Year-1.
+- target_id: programme
+  channel: A
+  rung:
+  - 0.1 AU
+  - 1.0 AU
+  band: G/BP/RP epoch photometry
+  substrate: Gaia DR4 per-transit photometry on an L2-observer crossing list
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §5.22
+  notes: Blocked, not started; trigger = DR4 release (not before 2026-12); candidate for the 2027 crossing-list
+    refresh.
+- target_id: programme
+  channel:
+  - B
+  rung:
+  - 1.2 Rsun
+  - 2.5 Rsun
+  - 0.1 AU
+  - 1.0 AU
+  band: G/BP/RP epoch photometry
+  substrate: Gaia DR4 per-transit photometry on an L2-observer crossing list
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: notes/project_plan.md §5.22
+  notes: Blocked, not started; trigger = DR4 release (not before 2026-12); candidate for the 2027 crossing-list
+    refresh.
+- target_id: programme
+  channel: A
+  rung:
+  - 0.1 AU
+  - 1.0 AU
+  band: 0.75–5 µm
+  substrate: SPHEREx spacecraft crossing list (crossings/spherex_v1, 1,130 events)
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1130
+  n_trials: null
+  epoch_range: 2025-03 → 2028-01 (list)
+  source: notes/project_plan.md §5.24
+  notes: 'Deferred 2026-08-24: 1.5-yr archive too thin; Gates I and II of §5.3 apply (B and A-0.1 AU invisible
+    in principle). Trigger = 3+ annual windows per target.'
+- target_id: programme
+  channel:
+  - B
+  rung:
+  - 1.2 Rsun
+  - 2.5 Rsun
+  - 0.1 AU
+  - 1.0 AU
+  band: 0.75–5 µm
+  substrate: SPHEREx spacecraft crossing list (crossings/spherex_v1, 1,130 events)
+  status: no_survey
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1130
+  n_trials: null
+  epoch_range: 2025-03 → 2028-01 (list)
+  source: notes/project_plan.md §5.24
+  notes: 'Deferred 2026-08-24: 1.5-yr archive too thin; Gates I and II of §5.3 apply (B and A-0.1 AU invisible
+    in principle). Trigger = 3+ annual windows per target.'

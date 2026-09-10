@@ -1,0 +1,330 @@
+survey_id: radio_quicklook
+report: report/radio_quicklook.md
+plan_section: '5.8'
+pipeline: B
+archives:
+- casda
+- vast
+- racs
+- flash
+- lotss
+- vlass
+hypothesis_version: null
+era: in-window epochs 2017-09-24 → 2026-05-03 (§2–3 tables)
+run_dir: runs/radio-crossings/quicklook
+records_dir: null
+candidates: 0
+candidate_notes: '"A look, not a search": no threshold frozen, no statistic claimed, no power constraint derived;
+  17 epochs (10 ASKAP, 1 LoTSS, 6 VLASS): 0 coincident catalogue components within 20″, 0 cutout pixels above 3σ
+  (12 ASKAP + 26 VLASS cutouts); largest value 2.7σ (gj-1276 star, VAST 2023-09) = noise-series maximum. A 3σ point
+  source is 0.2–0.7 mJy at 856–1656 MHz (ASKAP) and 0.35–0.5 mJy at 3 GHz (VLASS).'
+rows:
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.22
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2023-09-03'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 0.71 R☉; VAST SB52549 VAST_2257-06, Δt −2.1 d; per-SBID epoch-resolved catalogue, 77 in 0.5°, nearest
+    288″ (1.4 mJy); cutout value +0.03 mJy (0.1σ), peak 0.29, beam 12.8″ — empty.
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.17
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2024-09-10'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 0.71 R☉; VAST SB65727 VAST_2257-06, Δt +5.6 d; per-SBID catalogue, 107, nearest 292″ (1.8 mJy); value
+    −0.12 mJy (−0.7σ), peak 0.13, beam 13.1″ — empty.
+- target_id: ross-154
+  channel: B
+  rung: 0.1 AU
+  band: 1656 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.16
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2021-12-29'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 3.30 R☉; RACS-high SB34957 RACS_0651+23, Δt −3.4 d; RACS-high release catalogue (single epoch), 77, nearest
+    183″ (8.1 mJy); value −0.06 (−0.4σ), peak 0.20, beam 12.3″ — empty.
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: 1368 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.26
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2021-09-21'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 1.85 R☉; VAST pilot SB32330 VAST_2338+00, Δt +1.7 d; Selavy file (v2 reprocessing; v1 no permission),
+    49, nearest 219″ (9.1 mJy); value −0.17 (−0.7σ), peak 0.22, beam 12.7″ — empty.
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.23
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2022-03-29'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 0.25 R☉; RACS-low SB38682 RACS_1237-06, Δt −4.8 d; RACS-low2 release catalogue, 83 (Stokes V table empty),
+    nearest 29″ (3.1 mJy) — outside the 20″ radius, a fixed-sky background source (deep-graze antipode is a fixed
+    sky point; §4); value +0.18 (0.8σ), peak 0.34, beam 13.5″ — empty at the position.
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: 856 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.07
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2026-05-03'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 0.98 R☉; FLASH SB84179 FLASH_389, Δt −3.2 d; Selavy file, 234 (2-h FLASH integration), nearest 163″ (0.7
+    mJy); value +0.03 (0.4σ), peak 0.10, beam 24.3″ — empty; the deepest antipode epoch (5σ ≈ 0.36 mJy).
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: 856 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2026-03-29'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: 'b 0.24 R☉; FLASH SB83234 FLASH_497, Δt −5.0 d, REJECTED: image and catalogue return "no permission" (failed
+    the survey validation) — not checked.'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.24
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2023-09-03'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: 'b 0.83 R☉; VAST SB52549 VAST_2257-06, Δt −1.6 d; per-SBID catalogue, 70, nearest 219″ (10.7 mJy); value
+    +0.64 mJy (2.7σ), peak 0.75, beam 12.8″ — the largest value at any position; §4: maximum of the 16 VAST_2257-06
+    epochs (2023-07 → 2026-06; mean +0.09 mJy, scatter 0.25, 16-epoch mean 0.09 ± 0.06 mJy = 1.5σ; no catalogue
+    component within 60″ in any of 10 epochs; max of 16 Gaussian samples reaches 2.7σ ~5 % of the time) — not a
+    detection, not a flare candidate (12-min epoch needs ≳ 1 mJy for 5σ). Source: surveys/radio-crossings/results/quicklook_gj1276_epochs.json.'
+- target_id: van-maanen
+  channel: A
+  rung: 0.1 AU
+  band: 888 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.38
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2024-10-07'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 0.33 R☉; VAST SB66449 VAST_0037+06, Δt +1.2 d; per-SBID catalogue, 59, nearest 266″ (27.8 mJy); value
+    +0.33 (0.9σ), peak 0.63, beam 14.6″ — empty.
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: 1368 MHz
+  substrate: ASKAP continuum image cutout (3′) + per-epoch/release component catalogue cone (20″ coincidence)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.18
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2024-11-11'
+  source: report/radio_quicklook.md §2 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 1.08 R☉; RACS-mid SB67840 RACS_0248+18, Δt +3.6 d; own Selavy catalogue (SB not in the release), 87,
+    nearest 156″ (2.5 mJy); value +0.12 (0.7σ), peak 0.37, beam 11.9″ — empty.
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: 144 MHz
+  substrate: LoTSS DR3 mosaic source catalogue (lotss_dr3.main_sources; all runs on the pointing, not epoch-resolved)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.08
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2023-11-04'
+  source: report/radio_quicklook.md §4 (LoTSS bullet); surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 1.09 R☉; P043+19, Δt −3.9 d; 503 sources in 0.5°, nearest 71″ at 0.28 mJy — empty, but a mosaic of all
+    runs, never epoch-resolved.
+- target_id: gj-908
+  channel: A
+  rung: 0.1 AU
+  band: 3 GHz
+  substrate: VLASS quick-look tile cutout (3 GHz, 1″ pixels; CADC CAOM2 exact tile times)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.13
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2017-09-24'
+  source: report/radio_quicklook.md §3 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 12.3 R☉; VLASS1.1 T11t36.J235001+023000, Δt +2.7 d (in window); value +0.29 mJy (2.3σ), peak 0.30 — sub-threshold,
+    the largest pixel value at any VLASS position; 1.2σ at the same star in epoch 4.1.
+- target_id: gj-908
+  channel: A
+  rung: 0.1 AU
+  band: 3 GHz
+  substrate: VLASS quick-look tile cutout (3 GHz, 1″ pixels; CADC CAOM2 exact tile times)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.13
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2025-09-24'
+  source: report/radio_quicklook.md §3 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 12.3 R☉; VLASS4.1 T11t36.J235001+023000, Δt +2.8 d (in window); value +0.15 (1.2σ), peak 0.30 — noise.
+- target_id: ross-154
+  channel: A
+  rung: 0.1 AU
+  band: 3 GHz
+  substrate: VLASS quick-look tile cutout (3 GHz, 1″ pixels; CADC CAOM2 exact tile times)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.16
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2019-07-02'
+  source: report/radio_quicklook.md §3 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 3.4 R☉; VLASS1.2 T05t29.J185051-233000, Δt −1.5 d (in window); value +0.10 (0.6σ), peak 0.22 — noise.
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: 3 GHz
+  substrate: VLASS quick-look tile cutout (3 GHz, 1″ pixels; CADC CAOM2 exact tile times)
+  status: ledger_only
+  limit_kind: flux
+  limit_value: 0.11
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2021-11-06'
+  source: report/radio_quicklook.md §3 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 1.1 R☉; VLASS2.2 T15t04.J025431+163000, Δt −2.0 d (in window); value −0.06, peak −0.02 — noise.
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: 3 GHz
+  substrate: VLASS quick-look tile cutout (3 GHz, 1″ pixels; CADC CAOM2 exact tile times)
+  status: structurally_open
+  limit_kind: flux
+  limit_value: 0.14
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2020-09-13'
+  source: report/radio_quicklook.md §3 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 0.83 R☉; VLASS2.1 T09t35.J225404-063000, Δt +8.8 d (exact) — OUTSIDE the strict window (half-window 5.9
+    d; v1 tolerance edge); value +0.07, peak 0.30 — noise, out of window. Largest one-beam peak at any VLASS position
+    is 2.9σ (gj-1276, VLASS3.1, 2023, out of window).
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: 3 GHz
+  substrate: VLASS quick-look tile cutout (3 GHz, 1″ pixels; CADC CAOM2 exact tile times)
+  status: structurally_open
+  limit_kind: flux
+  limit_value: 0.14
+  limit_unit: mJy/beam rms at the position (cutout annulus MAD; noise floor, not a frozen limit)
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: '2020-09-13'
+  source: report/radio_quicklook.md §3 table; surveys/radio-crossings/results/quicklook_v1.json
+  notes: b 0.72 R☉; VLASS2.1 T09t35 (two overlapping tiles), Δt +8.3 d (exact) — OUTSIDE the strict window (tolerance
+    edge); values −0.15 / −0.16, peaks 0.19 / 0.22 — noise, out of window. Strict VLASS in-window set is four channel-A
+    epochs, none at the antipode.

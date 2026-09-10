@@ -1,0 +1,4519 @@
+survey_id: joint_crossings
+report: report/joint_crossings.md
+plan_section: '5.4'
+pipeline: B
+archives:
+- ztf
+- ps1
+- wise
+hypothesis_version: joint plan v1.0 + amendment v1.1 (single-epoch clip)
+era: ZTF 2018–2026, PS1 2009–2015, WISE 2010–2024 (eras disjoint per archive)
+run_dir: runs/joint-crossings
+records_dir: null
+candidates: 0
+candidate_notes: 'PS1 gj-1276 retained-ambiguous exceedance: flat-SED persistent-relay recurrence refuted
+  at 90% (joint recovery 0.94, joint m90 22.93); retained in the record, narrowed, not promotable; ledger
+  593 rows (ZTF 86, PS1 316, WISE 191)'
+rows:
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: g+r
+  substrate: ZTF channel-B stack at z fixed to 550 AU over 11 event-bands (7 events x g/r), ring controls
+    paired across event-bands; single joint trial (Arm R1)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.93
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 11
+  n_trials: 1
+  epoch_range: 2019–2026
+  source: surveys/joint-crossings/results/gj1276_recurrence_v1.json; report/joint_crossings.md §2
+  notes: 'gj-1276 recurrence test of the PS1 retained-ambiguous exceedance (evt-344c12d32a8d, i ~22.8
+    at z = 550, 2014-03-06): J = 0.154, T_J = 1.116, joint exceedance no; joint recovery at 22.8 AB (flat
+    F_nu) = 0.94; verdict flat_SED_recurrence_refuted_90pct (flat-SED persistent relay refuted at 90%);
+    amendment v1.1 single-epoch clip |f|/sigma > 20 applied (pre-amendment J = -13.45, recovery 0.535);
+    anomaly retained, narrowed, not a candidate'
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: ZTF i-band in-window epochs across all gj-1276 wide-rung windows
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/gj1276_recurrence_v1.json arm_R2_i_band; report/joint_crossings.md
+    §2
+  notes: 'Arm R2 (752 nm line / red SED) untestable: exactly 2 in-window i epochs archive-wide, 2-epoch
+    depth ~21.1 vs required 22.8; static arm settled by the PS1 DR2 stack catalog (no counterpart within
+    6 arcsec to ~23+)'
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.8
+  limit_unit: AB mag
+  limit_range: 18.4–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 8
+  n_trials: 8
+  epoch_range: MJD 58244.7–61166.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 8 ledger row(s), 8 event(s); m90 median 21.8, best 22.0, n with
+    m90 8, 0 grid-censored; S -0.258–1.39; T 1.042–25.036; n_epochs [2, 4, 6]
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.0
+  limit_unit: AB mag
+  limit_range: 17.4–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 7
+  n_trials: 7
+  epoch_range: MJD 58244.7–61166.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 7 ledger row(s), 7 event(s); m90 median 21.0, best 22.0, n with
+    m90 7, 0 grid-censored; S 0.043–1.987; T 1.247–93.609; n_epochs [2, 3, 4, 9]
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 60753.2
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status exceedance_adjudicated; 1 ledger row(s), 1 event(s); m90 median 22.0, best 22.0,
+    n with m90 1, 0 grid-censored; S 1.33; T 1.09; n_epochs [2]; exceedance_adjudicated (ZTF control-crossing
+    statistics, not candidates); events evt-1ff54c0eec27
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: 20.8–21.8
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 4
+  epoch_range: MJD 58545.4–61102.2
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 4 ledger row(s), 4 event(s); m90 median 21.6, best 21.8, n with
+    m90 4, 0 grid-censored; S -0.764–1.201; T 1.285–2.573; n_epochs [2, 3, 5]
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: 21.2–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: 5
+  epoch_range: MJD 58545.4–61102.2
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 5 ledger row(s), 5 event(s); m90 median 22.0, best 22.0, n with
+    m90 5, 0 grid-censored; S -30.689–1.18; T 1.459–2.18; n_epochs [2, 3, 4, 6]
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 59111.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 1 ledger row(s), 1 event(s); no m90 in ledger; S 1.35; T 3.32; n_epochs
+    [3]; events evt-2936c5c542ab
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 59111.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 1 ledger row(s), 1 event(s); no m90 in ledger; S 1.65; T 3.17; n_epochs
+    [4]; events evt-2936c5c542ab
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.8
+  limit_unit: AB mag
+  limit_range: 21.6–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: MJD 59641.1–60736.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status exceedance_adjudicated; 2 ledger row(s), 2 event(s); m90 median 21.8, best 22.0,
+    n with m90 2, 0 grid-censored; S 0.587–2.23; T 0.282–2.048; n_epochs [2, 3]; exceedance_adjudicated
+    (ZTF control-crossing statistics, not candidates); events evt-57e0c494a587, evt-9c6a08c6df77
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 60371.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status no_usable_data; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [0]; events
+    evt-ca2a82a2d41e
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 60371.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status no_usable_data; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [0]; events
+    evt-ca2a82a2d41e
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 2
+  epoch_range: MJD 59292.2–61118.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 2 ledger row(s), 2 event(s); m90 median 22.0, best 22.0, n with
+    m90 2, 0 grid-censored; S 0.316–0.944; T 1.823–1.958; n_epochs [2, 7]; events evt-ccb92e30c897, evt-dc367a0529c3
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: 21.2–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: MJD 58196.4–61118.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 3 ledger row(s), 3 event(s); m90 median 22.0, best 22.0, n with
+    m90 3, 0 grid-censored; S 0.291–0.982; T 1.569–2.372; n_epochs [2, 7]; events evt-ccb92e30c897, evt-dc1c51df25a2,
+    evt-dc367a0529c3
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 58211.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 1 ledger row(s), 1 event(s); no m90 in ledger; S -0.15; T 0.38;
+    n_epochs [1]; events evt-f3d9fc10fe38
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: 21.0–21.2
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 58609.9–60801.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 2 ledger row(s), 2 event(s); m90 median 21.1, best 21.2, n with m90
+    2, 0 grid-censored; S -0.35–2.132; T 1.063–2.489; n_epochs [1]; events evt-14efb12a5dfb, evt-bd8fc47e99f2
+- target_id: gj-1276
+  channel: B
+  rung: 2.5 Rsun
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.9
+  limit_unit: AB mag
+  limit_range: 21.8–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 59275.9–59641.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 2 ledger row(s), 2 event(s); m90 median 21.9, best 22.0, n with m90
+    2, 0 grid-censored; S -0.687–-0.476; T -0.043–0.612; n_epochs [1]; events evt-24912cfb2980, evt-57e0c494a587
+- target_id: gj-1276
+  channel: B
+  rung: 2.5 Rsun
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: 21.4–21.8
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: null
+  epoch_range: MJD 58910.6–59641.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 3 ledger row(s), 3 event(s); m90 median 21.6, best 21.8, n with m90
+    3, 0 grid-censored; S -47.749–1.133; T 1.147–1.798; n_epochs [1]; events evt-24912cfb2980, evt-57e0c494a587,
+    evt-64fbc0c53c7e
+- target_id: gj-1276
+  channel: B
+  rung: 1.2 Rsun
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 59641.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 1 ledger row(s), 1 event(s); m90 median 22.0, best 22.0, n with m90
+    1, 0 grid-censored; S -0.48; T -0.04; n_epochs [1]; events evt-57e0c494a587
+- target_id: gj-1276
+  channel: B
+  rung: 1.2 Rsun
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.8
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 59641.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 1 ledger row(s), 1 event(s); m90 median 21.8, best 21.8, n with m90
+    1, 0 grid-censored; S -47.75; T 1.8; n_epochs [1]; events evt-57e0c494a587
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: 21.0–21.2
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 58561.7–60387.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 2 ledger row(s), 2 event(s); m90 median 21.1, best 21.2, n with m90
+    2, 0 grid-censored; S 0.275–0.9; T 1.831–2.107; n_epochs [1]; events evt-942dca4c6bc1, evt-c6d788f0bf73
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.2
+  limit_unit: AB mag
+  limit_range: 21.2–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: null
+  epoch_range: MJD 58561.7–60387.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 3 ledger row(s), 3 event(s); m90 median 21.2, best 22.0, n with m90
+    3, 0 grid-censored; S 0.904–1.48; T 1.631–2.307; n_epochs [1]; events evt-942dca4c6bc1, evt-a317de8d931c,
+    evt-c6d788f0bf73
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 60403.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status no_usable_data; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [0]; events
+    evt-967947b04481
+- target_id: teegarden
+  channel: B
+  rung: 2.5 Rsun
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.2
+  limit_unit: AB mag
+  limit_range: 20.6–21.8
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 58244.7–61166.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 2 ledger row(s), 2 event(s); m90 median 21.2, best 21.8, n with m90
+    2, 0 grid-censored; S 0.139–0.416; T 1.031–2.942; n_epochs [1]; events evt-bb683d4cb6a4, evt-d6a207b21d89
+- target_id: teegarden
+  channel: B
+  rung: 2.5 Rsun
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.1
+  limit_unit: AB mag
+  limit_range: 21.0–21.2
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: MJD 58244.7–61166.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 2 ledger row(s), 2 event(s); m90 median 21.1, best 21.2, n with m90
+    2, 0 grid-censored; S -1.651–1.29; T -0.135–2.458; n_epochs [1]; events evt-bb683d4cb6a4, evt-d6a207b21d89
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 58609.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 1 ledger row(s), 1 event(s); m90 median 21.6, best 21.6, n with m90
+    1, 0 grid-censored; S 1.1; T 1.68; n_epochs [1]; events evt-bd8fc47e99f2
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 58576.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status single_epoch; 1 ledger row(s), 1 event(s); no m90 in ledger; S 0.59; T 2.01; n_epochs
+    [1]; events evt-ed0d233e1163
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 58211.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: ledger status no_usable_data; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [0]; events
+    evt-f3d9fc10fe38
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 16.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 16.6, best 16.6, n with
+    m90 1, 0 grid-censored; S -2.39; T 0.91; n_epochs [7]; ledger notes: searchable; events N/A'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 15.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 15.2, best 15.2, n with
+    m90 1, 0 grid-censored; S -1.86; T 0.56; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 17.0, best 17.0, n with
+    m90 1, 0 grid-censored; S -18.18; T -2.41; n_epochs [7]; ledger notes: constraint_only; events N/A'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 15.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 15.2, best 15.2, n with
+    m90 1, 0 grid-censored; S -9.11; T -0.06; n_epochs [6]; ledger notes: constraint_only; events N/A'
+- target_id: wolf-359
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 15.8
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 15.8, best 15.8, n with
+    m90 1, 0 grid-censored; S -0.67; T 2.55; n_epochs [6]; ledger notes: searchable; events N/A'
+- target_id: gj-1002
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 18.4
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 18.4, best 18.4, n with
+    m90 1, 0 grid-censored; S -4.89; T 0.01; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 18.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 18.2, best 18.2, n with
+    m90 1, 0 grid-censored; S -11.8; T 0.55; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 17.6, best 17.6, n with
+    m90 1, 0 grid-censored; S -10.56; T -0.7; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: i
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); no m90 in ledger; S 1296.16; n_epochs
+    [2]; ledger notes: constraint_only; events N/A'
+- target_id: gj-13157
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 16.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 16.6, best 16.6, n with
+    m90 1, 0 grid-censored; S -5.38; T -5.97; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: gj-13157
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 16.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 16.2, best 16.2, n with
+    m90 1, 0 grid-censored; S -8.22; T -0.39; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: gj-3306
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 17.2, best 17.2, n with
+    m90 1, 0 grid-censored; S -4.67; T 0.06; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: gj-3306
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 17.2, best 17.2, n with
+    m90 1, 0 grid-censored; S -3.23; T 0.93; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: gj65-b
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 15.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 15.2, best 15.2, n with
+    m90 1, 0 grid-censored; S -5.81; T -1.11; n_epochs [7]; ledger notes: constraint_only; events N/A'
+- target_id: teegarden
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 18.2
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 18.2, best 18.2, n with
+    m90 1, 0 grid-censored; S -40.7; T -7.16; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: teegarden
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 17.0, best 17.0, n with
+    m90 1, 0 grid-censored; S -26.61; T -3.28; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 22.0, best 22.0, n with
+    m90 1, 0 grid-censored; S -4.84; T 1.07; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 22.0, best 22.0, n with
+    m90 1, 0 grid-censored; S 3.32; T 1.09; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: wolf-1069
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 17.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 17.6, best 17.6, n with
+    m90 1, 0 grid-censored; S 0.47; T 2.75; n_epochs [8]; ledger notes: searchable; events N/A'
+- target_id: wolf-1069
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 16.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 16.0, best 16.0, n with
+    m90 1, 0 grid-censored; S 2.38; T 1.45; n_epochs [8]; ledger notes: constraint_only; events N/A'
+- target_id: wolf-359
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.4
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 17.4, best 17.4, n with
+    m90 1, 0 grid-censored; S 3.26; T 0.33; n_epochs [9]; ledger notes: constraint_only; events N/A'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: i
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); no m90 in ledger; S 601.26; T 644.72;
+    n_epochs [1]; ledger notes: constraint_only; events N/A'
+- target_id: gj-1221
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 14.4
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 14.4, best 14.4, n with
+    m90 1, 0 grid-censored; S -3.61; T 0.32; n_epochs [1]; ledger notes: constraint_only; events N/A'
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: g
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); no m90 in ledger; S 480.36; n_epochs
+    [1]; ledger notes: constraint_only; events N/A'
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); no m90 in ledger; S 569.55; n_epochs
+    [1]; ledger notes: constraint_only; events N/A'
+- target_id: gj-3512
+  channel: A
+  rung: 1.0 AU
+  band: r
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); no m90 in ledger; S 21.11; T 57.63;
+    n_epochs [1]; ledger notes: constraint_only; events N/A'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: i
+  substrate: ZTF difference-image forced photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ztf, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); no m90 in ledger; S -1274.93; T
+    1.46; n_epochs [1]; ledger notes: constraint_only; events N/A'
+- target_id: ross-154
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 20.55
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55198.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 20.55, best 20.55, n with
+    m90 1, 0 grid-censored; S 2.17; T 15.81; n_epochs [4]; events evt-14662f1752ae
+- target_id: ross-154
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 19.15
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55563.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 19.15, best 19.15, n with
+    m90 1, 0 grid-censored; S 0.66; T 35.13; n_epochs [4]; events evt-321a36d0a31d
+- target_id: gj-1276
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: retained_ambiguous
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 56719.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status retained_ambiguous; 1 ledger row(s), 1 event(s); m90 median 22.0, best 22.0, n
+    with m90 1, 1 grid-censored; S 3.31; T 2.3; n_epochs [11]; PS1 gj-1276 evt-344c12d32a8d — resolved
+    by the recurrence test row above (flat-SED refuted at 90%); events evt-344c12d32a8d
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: vetoed_known_source
+  limit_kind: m90
+  limit_value: 21.08
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55459.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status exceedance_vetoed; 1 ledger row(s), 1 event(s); m90 median 21.08, best 21.08, n
+    with m90 1, 0 grid-censored; S 5.05; T 3.61; n_epochs [2]; PS1 ross-128 stack-catalogued static; events
+    evt-3f7ad50e70e1
+- target_id: van-maanen
+  channel: B
+  rung: 1.2 Rsun
+  band: i
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55289.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status track_masked; 1 ledger row(s), 1 event(s); no m90 in ledger; T 0.88; n_epochs [2];
+    van-maanen b = 0.28 Rsun graze, nominal-covered / mask-unusable; events evt-4c4ea2c39734
+- target_id: van-maanen
+  channel: B
+  rung: 2.5 Rsun
+  band: i
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55289.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status track_masked; 1 ledger row(s), 1 event(s); no m90 in ledger; T 0.88; n_epochs [2];
+    van-maanen b = 0.28 Rsun graze, nominal-covered / mask-unusable; events evt-4c4ea2c39734
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55289.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status track_masked; 1 ledger row(s), 1 event(s); no m90 in ledger; T 0.88; n_epochs [2];
+    van-maanen b = 0.28 Rsun graze, nominal-covered / mask-unusable; events evt-4c4ea2c39734
+- target_id: ross-154
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 56659.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status track_masked; 1 ledger row(s), 1 event(s); no m90 in ledger; T 26.36; n_epochs
+    [2]; events evt-6f8116b6cb76
+- target_id: van-maanen
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 56385.2
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 22.0, best 22.0, n with
+    m90 1, 1 grid-censored; S 1.62; T 2.47; n_epochs [3]; events evt-91843280452f
+- target_id: ross-128
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55093.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status track_masked; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [5]; events
+    evt-d36be8d1ffc0
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 20.55
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55274.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 20.55, best 20.55, n with
+    m90 1, 0 grid-censored; S 0.99; T 9.51; n_epochs [3]; events evt-ee99e18ab1f0
+- target_id: gj-908
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 55639.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: ledger status track_masked; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [1]; events
+    evt-eaafbff8ea51
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.58
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55444.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 21.58, best 21.58, n with
+    m90 1, 0 grid-censored; S 0.29; T 1.65; n_epochs [2]; ledger notes: dev; events evt-0639d9d72c4b'
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 22.0
+  limit_unit: AB mag
+  limit_range: 21.69–22.0
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: MJD 55079.2–55809.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status searched_null; 3 ledger row(s), 3 event(s); m90 median 22.0, best 22.0, n with
+    m90 3, 2 grid-censored; S 0.427–1.145; T 1.836–2.344; n_epochs [2]; ledger notes: dev | dev;controls_partial_7of8;
+    events evt-0639d9d72c4b, evt-a2c4ffdd0d1d, evt-f80401623d4d'
+- target_id: wolf-359
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.43
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 1
+  epoch_range: MJD 55444.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status searched_null; 1 ledger row(s), 1 event(s); m90 median 21.43, best 21.43, n with
+    m90 1, 0 grid-censored; S 1.11; T 5.21; n_epochs [2]; ledger notes: dev; events evt-0639d9d72c4b'
+- target_id: teegarden
+  channel: B
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 56783.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status track_masked; 1 ledger row(s), 1 event(s); no m90 in ledger; T 1.07; n_epochs
+    [3]; ledger notes: dev; events evt-c349f1a1e62c'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: i
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 18.03
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 18.03, best 18.03, n
+    with m90 1, 0 grid-censored; S 2.27; T -1.6; n_epochs [2]; ledger notes: reference_constraint_only;
+    events N/A'
+- target_id: teegarden
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 21.26
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 21.26, best 21.26, n
+    with m90 1, 0 grid-censored; S -5.47; n_epochs [3]; ledger notes: reference_constraint_only; events
+    N/A'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: g
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: m90
+  limit_value: 17.93
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); m90 median 17.93, best 17.93, n
+    with m90 1, 0 grid-censored; S 0.27; n_epochs [1]; ledger notes: reference_constraint_only; events
+    N/A'
+- target_id: gj-1276
+  channel: A
+  rung: 0.1 AU
+  band: r
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status constraint_only; 1 ledger row(s), 1 event(s); no m90 in ledger; T 0.58; n_epochs
+    [0]; ledger notes: reference_constraint_only; events N/A'
+- target_id: 61-cyg-a
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: null
+  epoch_range: MJD 55439.9–56535.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 4 ledger row(s), 4 event(s); no m90 in ledger; n_epochs [11, 12,
+    18, 22]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: 61-cyg-b
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: null
+  epoch_range: MJD 55439.9–56535.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 4 ledger row(s), 4 event(s); no m90 in ledger; n_epochs [11, 12,
+    18, 22]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: 61-vir
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55301.2–56762.2
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [6, 9,
+    10, 16]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: barnard-star
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55367.9–56828.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [4, 6,
+    14, 15, 17]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: eps-eri
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55511.0–56972.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [2, 6,
+    10, 19, 26]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: ez-aqr
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55071.8–56898.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [4, 6,
+    12, 14, 15, 20]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: fomalhaut
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55070.2–56896.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 4,
+    6, 12, 14]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-1002
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55095.5–56921.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [10, 11,
+    13, 17, 18, 24]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-1087
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55551.2–57012.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [2, 12,
+    13, 16, 33]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55209.5–56670.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [8, 47,
+    50, 52, 60]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-1111
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55219.5–57045.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [5, 7,
+    8, 20, 23, 27]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55078.7–56905.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [6, 17,
+    23, 27, 33]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-13157
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55478.7–56939.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [4, 8,
+    9, 13]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55462.6–56923.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [4, 10,
+    12, 18]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-2066
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55222.2–57048.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [3, 10,
+    12, 14, 16]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-229-a
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55555.7–57016.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [6, 7,
+    9, 14, 27]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-251
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55198.3–57024.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 11,
+    12, 13, 16, 18]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-318
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 57067.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [6]; ledger
+    notes: rung frozen constraint-only, zero trials; events evt-e84b0918ee6a'
+- target_id: gj-3306
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55528.9–56990.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [6, 7,
+    8, 15]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-338-a
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55219.7–57046.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [4, 6,
+    15, 16, 17, 18]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-338-b
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55219.7–57046.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [4, 6,
+    15, 16, 17, 18]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-3512
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55211.5–57037.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [8, 11,
+    17, 18, 19, 28]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-514
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55292.7–56753.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [6, 7,
+    8, 13, 15]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-518
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55297.0–56758.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [3, 5,
+    8, 9, 19]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-526
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: null
+  epoch_range: MJD 55659.8–56755.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 4 ledger row(s), 4 event(s); no m90 in ledger; n_epochs [10, 11,
+    12, 22]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-54
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55472.4–56933.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [5, 8,
+    11, 17, 22]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-581
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55326.4–56787.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [9, 12,
+    14, 18, 19]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-625
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: null
+  epoch_range: MJD 55666.5–56397.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [4, 6,
+    7]; ledger notes: rung frozen constraint-only, zero trials; events evt-6d6441ef22c9, evt-968e98707858,
+    evt-dacee7d6ed51'
+- target_id: gj-876
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55075.6–56901.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 5,
+    10, 17, 18]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-908
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55095.5–56921.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [20, 22,
+    29, 32, 43]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj-9193
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55550.9–57011.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [4, 5,
+    8, 13, 14]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj65-a
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55113.2–56939.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 10,
+    14, 17]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: gj65-b
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55113.2–56939.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 10,
+    14, 17]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: groombridge-34-a
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55122.6–56948.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [7, 12,
+    20, 27, 28, 35]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: groombridge-34-b
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55122.7–56948.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [7, 12,
+    20, 27, 28, 35]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: hd-219134
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: null
+  epoch_range: MJD 55488.3–56584.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 4 ledger row(s), 4 event(s); no m90 in ledger; n_epochs [12, 24,
+    28, 30]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: lacaille-9352
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: MJD 56895.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [2]; ledger
+    notes: rung frozen constraint-only, zero trials; events evt-21f548aa1039'
+- target_id: lalande-21185
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55247.8–57074.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [7, 14,
+    16, 18, 25, 36]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: lhs-1723
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55535.9–56997.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [7, 8,
+    12, 15]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: ltt-1445-a
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55500.4–56961.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [4, 6,
+    7, 12, 24]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55574.4–57035.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [3, 16,
+    20, 26, 42]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: procyon-a
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55212.2–57038.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [3, 6,
+    10, 14, 20, 29]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: procyon-b
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55212.2–57038.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [3, 6,
+    10, 14, 20, 29]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55272.7–57099.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [9, 15,
+    18, 25, 28]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: ross-154
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55015.3–56841.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 4,
+    10, 19, 21]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: ross-248
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55115.5–56941.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [4, 20,
+    22, 29, 30, 32]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: sirius-a
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55200.7–57027.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 4,
+    6, 11, 14]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: sirius-b
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55200.7–57027.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 4,
+    6, 11, 14]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: tau-cet
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55480.6–56941.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [10, 14,
+    17, 20]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: teegarden
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55508.5–56969.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [4, 11,
+    12, 15]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: van-maanen
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55110.7–56937.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [6, 9,
+    10, 14, 15]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55234.5–57060.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 7,
+    8, 9, 12]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: wolf-1061
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 54980.2–56806.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [2, 5,
+    10, 18, 42]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: wolf-1069
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55462.8–56923.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [6, 7,
+    11]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: wolf-359
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: null
+  epoch_range: MJD 55258.5–57084.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 6 ledger row(s), 6 event(s); no m90 in ledger; n_epochs [6, 7,
+    12, 19, 21, 30]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: wolf-437
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: PS1 DR2 warp-direct star-calibrated photometry (covered-window ledger v1)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: null
+  epoch_range: MJD 55283.0–56744.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=ps1, channel,
+    rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [6, 9,
+    16, 22]; ledger notes: rung frozen constraint-only, zero trials'
+- target_id: barnard-star
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 59751.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [31]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-17b320d8f14d'
+- target_id: barnard-star
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 59751.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [31]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-17b320d8f14d'
+- target_id: eps-ind-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [13, 17,
+    18]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-e818b05dcf07,
+    evt-ebef4eb064e1, evt-f38f97f0a6e3'
+- target_id: eps-ind-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [13, 17,
+    19]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-e818b05dcf07,
+    evt-ebef4eb064e1, evt-f38f97f0a6e3'
+- target_id: eps-ind-b
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [12, 15,
+    16]; ledger notes: survey structural null; unit class: gate_blocked; events evt-621383f2aaac, evt-c344b50d5b7d,
+    evt-fbb23734cabb'
+- target_id: eps-ind-b
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [12, 15,
+    16]; ledger notes: survey structural null; unit class: gate_blocked; events evt-621383f2aaac, evt-c344b50d5b7d,
+    evt-fbb23734cabb'
+- target_id: ez-aqr
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56897.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [24]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-09cfea2a2ac4'
+- target_id: ez-aqr
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56897.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [24]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-09cfea2a2ac4'
+- target_id: fomalhaut
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: 0
+  epoch_range: MJD 57263.2–59819.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [19, 21,
+    22, 23, 30]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed'
+- target_id: fomalhaut
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: 0
+  epoch_range: MJD 57263.2–59819.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 5 ledger row(s), 5 event(s); no m90 in ledger; n_epochs [19, 21,
+    22, 25, 30]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed'
+- target_id: gj-1002
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 60209.3–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [13, 15];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-4dc2803e2319,
+    evt-51fe3adfedcd'
+- target_id: gj-1002
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 60209.3–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [14, 15];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-4dc2803e2319,
+    evt-51fe3adfedcd'
+- target_id: gj-1087
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56647.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [13]; ledger
+    notes: survey structural null; unit class: single_window; events evt-333424060d53'
+- target_id: gj-1087
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56647.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [13]; ledger
+    notes: survey structural null; unit class: single_window; events evt-333424060d53'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55208.8–58132.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [15, 28,
+    29]; ledger notes: survey structural null; unit class: gate_blocked; events evt-0ec2cec82d80, evt-68da11bdcf6c,
+    evt-ed5b9f472301'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55208.8–58132.5
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [15, 28,
+    29]; ledger notes: survey structural null; unit class: gate_blocked; events evt-0ec2cec82d80, evt-68da11bdcf6c,
+    evt-ed5b9f472301'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55208.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [15]; ledger
+    notes: survey structural null; unit class: single_window; events evt-ed5b9f472301'
+- target_id: gj-11068
+  channel: A
+  rung: 1.0 AU
+  band: W4
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55208.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [15]; ledger
+    notes: survey structural null; unit class: single_window; events evt-ed5b9f472301'
+- target_id: gj-1111
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58506.0–60332.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [24, 25,
+    26]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-13391de68e8e,
+    evt-3e0fb1f08a1c, evt-a7274990bdb3'
+- target_id: gj-1111
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58506.0–60332.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [24, 25,
+    26]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-13391de68e8e,
+    evt-3e0fb1f08a1c, evt-a7274990bdb3'
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57636.2–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [8, 22];
+    ledger notes: survey structural null; unit class: gate_blocked; events evt-beac6b4e1979, evt-ebdd1f490609'
+- target_id: gj-1276
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57636.2–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [8, 22];
+    ledger notes: survey structural null; unit class: gate_blocked; events evt-beac6b4e1979, evt-ebdd1f490609'
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [12]; ledger
+    notes: survey structural null; unit class: single_window; events evt-e7525e493767'
+- target_id: gj-2012
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [13]; ledger
+    notes: survey structural null; unit class: single_window; events evt-e7525e493767'
+- target_id: gj-2066
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57049.5–59240.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [23, 28];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-3e0cc3d39a93,
+    evt-45a17d9bddf3'
+- target_id: gj-2066
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57049.5–59240.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [24, 28];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-3e0cc3d39a93,
+    evt-45a17d9bddf3'
+- target_id: gj-229-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58113.7–59937.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [14, 15,
+    18]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-46fa15a4b4b8,
+    evt-4fffc5596fb2, evt-903a9b3d5a4a'
+- target_id: gj-229-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58113.7–59937.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [14, 15,
+    18]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-46fa15a4b4b8,
+    evt-4fffc5596fb2, evt-903a9b3d5a4a'
+- target_id: gj-338-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 59237.4–60332.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [27, 28,
+    31]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-4a082955fc29,
+    evt-64f838bf2e09, evt-ca1a19c1ff0c'
+- target_id: gj-338-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 59237.4–60332.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [27, 28,
+    32]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-4a082955fc29,
+    evt-64f838bf2e09, evt-ca1a19c1ff0c'
+- target_id: gj-338-b
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 59237.4–60332.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [27, 29,
+    32]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-09b25cb3a3cd,
+    evt-3e259066253c, evt-aada75ab809e'
+- target_id: gj-338-b
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 59237.4–60332.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [28, 29,
+    32]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-09b25cb3a3cd,
+    evt-3e259066253c, evt-aada75ab809e'
+- target_id: gj-3512
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [32]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-0fc816424aee'
+- target_id: gj-3512
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [32]; ledger
+    notes: survey structural null; unit class: single_window; events evt-0fc816424aee'
+- target_id: gj-518
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 58585.7–60409.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [24, 25];
+    ledger notes: survey structural null; unit class: gate_blocked; events evt-3bbab2ba6979, evt-4848bc63a1d1'
+- target_id: gj-518
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 58585.7–60409.9
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [24, 25];
+    ledger notes: survey structural null; unit class: gate_blocked; events evt-3bbab2ba6979, evt-4848bc63a1d1'
+- target_id: gj-54
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [15]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-8df4d9f37b72'
+- target_id: gj-54
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [15]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-8df4d9f37b72'
+- target_id: gj-667-c
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 55360.4–56820.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [23, 24];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-2cf704b95d3e,
+    evt-8610e5f72908'
+- target_id: gj-667-c
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 55360.4–56820.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [23, 24];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-2cf704b95d3e,
+    evt-8610e5f72908'
+- target_id: gj-667-c
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55360.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [25]; ledger
+    notes: survey structural null; unit class: single_window; events evt-8610e5f72908'
+- target_id: gj-667-c
+  channel: A
+  rung: 1.0 AU
+  band: W4
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55360.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [13]; ledger
+    notes: survey structural null; unit class: single_window; events evt-8610e5f72908'
+- target_id: gj-674
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57553.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [27]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-9a7b8e06ee51'
+- target_id: gj-674
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57553.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [27]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-9a7b8e06ee51'
+- target_id: gj-682
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57189.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [28]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-f7c5e22af38e'
+- target_id: gj-682
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57189.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [28]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-f7c5e22af38e'
+- target_id: gj-783
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 58317.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [24]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-c69352d065f4'
+- target_id: gj-783
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 58317.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [24]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-c69352d065f4'
+- target_id: gj-784
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57586.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [27]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-bd3c6bfc76d5'
+- target_id: gj-784
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57586.6
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [28]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-bd3c6bfc76d5'
+- target_id: gj-832
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 58330.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [24]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-fef32aadeb9b'
+- target_id: gj-832
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 58330.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [24]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-fef32aadeb9b'
+- target_id: gj-876
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57996.7–58361.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [23, 26];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-78462bc32263,
+    evt-a50e514b322a'
+- target_id: gj-876
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57996.7–58361.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [23, 26];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-78462bc32263,
+    evt-a50e514b322a'
+- target_id: gj-908
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [13]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-00ddbb20c3c8'
+- target_id: gj-908
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [13]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-00ddbb20c3c8'
+- target_id: gj-915
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57632.6–60191.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [13, 15];
+    ledger notes: survey structural null; unit class: gate_blocked; events evt-3e9d1d44adc9, evt-54d9273712ee'
+- target_id: gj-915
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57632.6–60191.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [13, 15];
+    ledger notes: survey structural null; unit class: gate_blocked; events evt-3e9d1d44adc9, evt-54d9273712ee'
+- target_id: gj-9193
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56647.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [13]; ledger
+    notes: survey structural null; unit class: single_window; events evt-4e30afbee219'
+- target_id: gj-9193
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 56647.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [13]; ledger
+    notes: survey structural null; unit class: single_window; events evt-4e30afbee219'
+- target_id: gj65-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57671.1–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [12, 25,
+    28]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-5fcfcbfcfe80,
+    evt-e120081971ab, evt-fdfb32583218'
+- target_id: gj65-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57671.1–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [12, 26,
+    27]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-5fcfcbfcfe80,
+    evt-e120081971ab, evt-fdfb32583218'
+- target_id: gj65-b
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57671.1–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [12, 25,
+    27]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-2a9a6f3cb8e4,
+    evt-6ccc4733a5e0, evt-7932cac7c8ae'
+- target_id: gj65-b
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57671.1–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [12, 26,
+    27]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-2a9a6f3cb8e4,
+    evt-6ccc4733a5e0, evt-7932cac7c8ae'
+- target_id: lacaille-8760
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [25, 29];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-5b9eaf80390d,
+    evt-85cd87800513, evt-d1bc8c5f2676'
+- target_id: lacaille-8760
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57966.6–59062.1
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [25, 26,
+    29]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-5b9eaf80390d,
+    evt-85cd87800513, evt-d1bc8c5f2676'
+- target_id: lacaille-9352
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 0
+  epoch_range: MJD 57259.4–59085.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 4 ledger row(s), 4 event(s); no m90 in ledger; n_epochs [25, 27,
+    37]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed'
+- target_id: lacaille-9352
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 0
+  epoch_range: MJD 57259.4–59085.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 4 ledger row(s), 4 event(s); no m90 in ledger; n_epochs [25, 27,
+    37]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed'
+- target_id: lhs-1723
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55536.0–59918.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [14, 27,
+    32]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-01c43ac4e04c,
+    evt-43a17188756b, evt-ae4354dcf1bb'
+- target_id: lhs-1723
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55536.0–59918.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [15, 27,
+    32]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-01c43ac4e04c,
+    evt-43a17188756b, evt-ae4354dcf1bb'
+- target_id: lhs-1723
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55536.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [14]; ledger
+    notes: survey structural null; unit class: single_window; events evt-ae4354dcf1bb'
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 0
+  epoch_range: MJD 55208.8–58496.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 4 ledger row(s), 4 event(s); no m90 in ledger; n_epochs [14, 24,
+    26, 27]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed'
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 0
+  epoch_range: MJD 55208.8–58496.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 4 ledger row(s), 4 event(s); no m90 in ledger; n_epochs [14, 24,
+    26, 27]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed'
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55208.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [14]; ledger
+    notes: survey structural null; unit class: single_window; events evt-ad630c316291'
+- target_id: luyten-star
+  channel: A
+  rung: 1.0 AU
+  band: W4
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55208.8
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [14]; ledger
+    notes: survey structural null; unit class: single_window; events evt-ad630c316291'
+- target_id: procyon-a
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [25]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-9a561976fbfc'
+- target_id: procyon-a
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [25]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-9a561976fbfc'
+- target_id: procyon-b
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [25]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-e2b2e33f133f'
+- target_id: procyon-b
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 57038.7
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [25]; ledger
+    notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-e2b2e33f133f'
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55274.3–60387.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [14, 22,
+    23]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-68e3c2487a94,
+    evt-96741dddab5c, evt-def6b17c0e9f'
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 55274.3–60387.4
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [14, 22,
+    23]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-68e3c2487a94,
+    evt-96741dddab5c, evt-def6b17c0e9f'
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: W3
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55274.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [14]; ledger
+    notes: survey structural null; unit class: single_window; events evt-68e3c2487a94'
+- target_id: ross-128
+  channel: A
+  rung: 1.0 AU
+  band: W4
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 55274.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [14]; ledger
+    notes: survey structural null; unit class: single_window; events evt-68e3c2487a94'
+- target_id: ross-154
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57206.2–60493.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [12, 22];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-576264375378,
+    evt-fa40b3931fd9'
+- target_id: ross-154
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 57206.2–60493.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [12, 22];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-576264375378,
+    evt-fa40b3931fd9'
+- target_id: tau-cet
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 59132.0–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [17, 29];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-a452cc63e9fa,
+    evt-d2fa6d7a5adb'
+- target_id: tau-cet
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 59132.0–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [17, 29];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-a452cc63e9fa,
+    evt-d2fa6d7a5adb'
+- target_id: van-maanen
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57666.4–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [10, 21,
+    23]; ledger notes: survey structural null; unit class: gate_blocked; events evt-38cbf8c2c612, evt-40c14a6afb30,
+    evt-82ab86780000'
+- target_id: van-maanen
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 57666.4–60523.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [10, 21,
+    23]; ledger notes: survey structural null; unit class: gate_blocked; events evt-38cbf8c2c612, evt-40c14a6afb30,
+    evt-82ab86780000'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 59982.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [28]; ledger
+    notes: survey structural null; unit class: single_window; events evt-fde2ad872adc'
+- target_id: wise-0855
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: 0
+  epoch_range: MJD 59982.3
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 1 ledger row(s), 1 event(s); no m90 in ledger; n_epochs [28]; ledger
+    notes: survey structural null; unit class: single_window; events evt-fde2ad872adc'
+- target_id: wolf-359
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 58546.5–59642.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [24, 30];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-4d07688770e5,
+    evt-82e47a2d0228'
+- target_id: wolf-359
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: 0
+  epoch_range: MJD 58546.5–59642.0
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 2 ledger row(s), 2 event(s); no m90 in ledger; n_epochs [24, 30];
+    ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-4d07688770e5,
+    evt-82e47a2d0228'
+- target_id: wolf-437
+  channel: A
+  rung: 1.0 AU
+  band: W1
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58937.1–60032.2
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [21, 24,
+    25]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-12a1f96ec42c,
+    evt-2f3e5b7eb2ef, evt-94a0654b9ab2'
+- target_id: wolf-437
+  channel: A
+  rung: 1.0 AU
+  band: W2
+  substrate: WISE/NEOWISE L1b frame inventory (covered-window ledger v1; no pixel searched)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 3
+  n_trials: 0
+  epoch_range: MJD 58937.1–60032.2
+  source: surveys/joint-crossings/results/covered_window_ledger_v1.ecsv (aggregated per archive=wise,
+    channel, rung, target, band, status)
+  notes: 'ledger status coverage_only; 3 ledger row(s), 3 event(s); no m90 in ledger; n_epochs [21, 24,
+    28]; ledger notes: survey structural null; unit class: band_excluded_or_unclassed; events evt-12a1f96ec42c,
+    evt-2f3e5b7eb2ef, evt-94a0654b9ab2'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: g/r
+  substrate: ZTF (ledger)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.8
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: 0.00013
+  power_mw_range: null
+  n_events: null
+  n_trials: 36
+  epoch_range: 2018–2026
+  source: report/joint_crossings.md §3
+  notes: 'programme tally: ZTF 36 searched units, B median m90 ~21.8 (relay >~ ~130 W = 0.00013 MW through
+    the 2.5 Rsun cone)'
+- target_id: programme
+  channel: B
+  rung: 0.1 AU
+  band: g/r/i
+  substrate: PS1 (ledger)
+  status: searched
+  limit_kind: m90
+  limit_value: 21.6
+  limit_unit: AB mag
+  limit_range: null
+  power_mw: null
+  power_mw_range: 0.00017–0.00028
+  n_events: null
+  n_trials: 11
+  epoch_range: 2010–2014
+  source: report/joint_crossings.md §3
+  notes: 'programme tally: PS1 11 searched units, B median 21.6 (>~ ~170–280 W = 0.00017–0.00028 MW)'
+- target_id: programme
+  channel:
+  - A
+  - B
+  rung: any
+  band: any
+  substrate: crossings programme steps 1–6
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: 47
+  epoch_range: null
+  source: report/joint_crossings.md §3
+  notes: 47 searched trials programme-wide (ZTF 36, PS1 11, WISE 0); 5 exceedances vs ~6.1 expected control
+    crossings; 0 candidates
+- target_id: programme
+  channel: B
+  rung: any
+  band: any
+  substrate: optical archives
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/joint_crossings.md §3
+  notes: 'structurally open: photosphere/coronal grazing rungs (ZTF: 5 windows on 2 targets searched [single-epoch];
+    PS1: the b = 0.28 Rsun event mask-lost)'
+- target_id: programme
+  channel:
+  - A
+  - B
+  rung: any
+  band: 1064/1550 nm and line SEDs redward of ~900 nm
+  substrate: optical archives
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/joint_crossings.md §3
+  notes: structurally open cell stated for the record
+- target_id: programme
+  channel:
+  - A
+  - B
+  rung: any
+  band: mid-IR
+  substrate: WISE
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/joint_crossings.md §3
+  notes: mid-IR crossings regime closed by the WISE elongation + control-geometry theorems
+- target_id: programme
+  channel: A
+  rung: 1.0 AU
+  band: any
+  substrate: all archives
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/joint_crossings.md §3
+  notes: 'the d = 1 wide-beam (1 AU) rung as a controlled search anywhere: three independent proofs it
+    defeats the frozen temporal-control family (ZTF, PS1, WISE); designated future route a v2-style null
+    ensemble'
+- target_id: programme
+  channel:
+  - A
+  - B
+  rung: any
+  band: any
+  substrate: all archives
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/joint_crossings.md §3
+  notes: 'not constrained: pulse periods between exposure length and window length; transmitters scheduled
+    to avoid Earth crossings'

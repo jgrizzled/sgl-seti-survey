@@ -1,0 +1,441 @@
+{
+ "ledger_version": "2.0.0",
+ "n_rows": 28588,
+ "n_surveys": 28,
+ "n_harvest_rows": 28476,
+ "candidates_total": 0,
+ "by_status": {
+  "constraint_only": 191,
+  "ledger_only": 344,
+  "no_survey": 97,
+  "not_constrainable": 87,
+  "retained_ambiguous": 16,
+  "searched": 20541,
+  "structurally_open": 7301,
+  "vetoed_known_source": 11
+ },
+ "by_channel": {
+  "A": 571,
+  "B": 342,
+  "S1": 78,
+  "S2": 120,
+  "corridor": 27477
+ },
+ "by_rung_class": {
+  "0.1 AU": 470,
+  "1.0 AU": 338,
+  "any": 36,
+  "corridor": 27477,
+  "grazing": 226,
+  "sub-1 AU skirt": 41
+ },
+ "by_pipeline": {
+  "": 42,
+  "A": 27383,
+  "B": 1163
+ },
+ "n_targets_named": 88,
+ "n_registry_targets": 88,
+ "targets_never_named": [],
+ "n_targets_with_power_limit": 36,
+ "per_survey": {
+  "atlas_asassn_crossings": {
+   "rows": 52,
+   "harvest_rows": 52,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.9",
+   "report": "report/atlas_asassn_crossings.md",
+   "statuses": {
+    "retained_ambiguous": 6,
+    "searched": 27,
+    "constraint_only": 9,
+    "structurally_open": 9,
+    "no_survey": 1
+   }
+  },
+  "dasch_crossings": {
+   "rows": 21,
+   "harvest_rows": 21,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.14",
+   "report": "report/dasch_crossings.md",
+   "statuses": {
+    "searched": 18,
+    "structurally_open": 1,
+    "not_constrainable": 1,
+    "no_survey": 1
+   }
+  },
+  "galex_crossings": {
+   "rows": 28,
+   "harvest_rows": 22,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.12",
+   "report": "report/galex_crossings.md",
+   "statuses": {
+    "searched": 11,
+    "constraint_only": 4,
+    "retained_ambiguous": 1,
+    "structurally_open": 11,
+    "ledger_only": 1
+   }
+  },
+  "highenergy_crossings": {
+   "rows": 218,
+   "harvest_rows": 218,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.26",
+   "report": "report/highenergy_crossings.md",
+   "statuses": {
+    "searched": 81,
+    "vetoed_known_source": 3,
+    "constraint_only": 57,
+    "structurally_open": 12,
+    "not_constrainable": 12,
+    "ledger_only": 53
+   }
+  },
+  "joint_crossings": {
+   "rows": 238,
+   "harvest_rows": 234,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.4",
+   "report": "report/joint_crossings.md",
+   "statuses": {
+    "searched": 26,
+    "structurally_open": 26,
+    "constraint_only": 29,
+    "retained_ambiguous": 1,
+    "vetoed_known_source": 1,
+    "ledger_only": 151,
+    "not_constrainable": 4
+   }
+  },
+  "lasco_crossings": {
+   "rows": 26,
+   "harvest_rows": 26,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.11",
+   "report": "report/lasco_crossings.md",
+   "statuses": {
+    "not_constrainable": 4,
+    "searched": 14,
+    "retained_ambiguous": 1,
+    "constraint_only": 6,
+    "no_survey": 1
+   }
+  },
+  "plan_no_survey": {
+   "rows": 42,
+   "harvest_rows": 18,
+   "candidates": 0,
+   "pipeline": null,
+   "plan_section": "4.7\u20134.12, 5.15, 5.20\u20135.22, 5.24",
+   "report": "notes/project_plan.md",
+   "statuses": {
+    "no_survey": 23,
+    "not_constrainable": 10,
+    "ledger_only": 5,
+    "structurally_open": 4
+   }
+  },
+  "ps1_crossings": {
+   "rows": 39,
+   "harvest_rows": 37,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.2",
+   "report": "report/ps1_crossings.md",
+   "statuses": {
+    "searched": 11,
+    "constraint_only": 6,
+    "retained_ambiguous": 1,
+    "vetoed_known_source": 1,
+    "structurally_open": 15,
+    "ledger_only": 1,
+    "not_constrainable": 2,
+    "no_survey": 2
+   }
+  },
+  "ptf_crossings": {
+   "rows": 26,
+   "harvest_rows": 23,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.10",
+   "report": "report/ptf_crossings.md",
+   "statuses": {
+    "searched": 7,
+    "constraint_only": 1,
+    "structurally_open": 13,
+    "ledger_only": 1,
+    "not_constrainable": 2,
+    "no_survey": 2
+   }
+  },
+  "radio_crossings": {
+   "rows": 14,
+   "harvest_rows": 14,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.5",
+   "report": "report/radio_crossings.md",
+   "statuses": {
+    "structurally_open": 8,
+    "ledger_only": 6
+   }
+  },
+  "radio_crossings_ext": {
+   "rows": 26,
+   "harvest_rows": 22,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.7",
+   "report": "report/radio_crossings_ext.md",
+   "statuses": {
+    "structurally_open": 12,
+    "ledger_only": 14
+   }
+  },
+  "radio_quicklook": {
+   "rows": 17,
+   "harvest_rows": 17,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.8",
+   "report": "report/radio_quicklook.md",
+   "statuses": {
+    "ledger_only": 14,
+    "structurally_open": 3
+   }
+  },
+  "rubin_crossings": {
+   "rows": 14,
+   "harvest_rows": 10,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.13",
+   "report": "report/rubin_crossings.md",
+   "statuses": {
+    "constraint_only": 1,
+    "not_constrainable": 1,
+    "structurally_open": 11,
+    "no_survey": 1
+   }
+  },
+  "skirt_crossings": {
+   "rows": 59,
+   "harvest_rows": 57,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.25",
+   "report": "report/skirt_crossings.md",
+   "statuses": {
+    "searched": 26,
+    "retained_ambiguous": 3,
+    "ledger_only": 24,
+    "structurally_open": 2,
+    "no_survey": 4
+   }
+  },
+  "solohi_crossings": {
+   "rows": 37,
+   "harvest_rows": 37,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.23",
+   "report": "report/solohi_crossings.md",
+   "statuses": {
+    "not_constrainable": 2,
+    "searched": 18,
+    "constraint_only": 13,
+    "structurally_open": 1,
+    "ledger_only": 3
+   }
+  },
+  "spectral_archives": {
+   "rows": 83,
+   "harvest_rows": 83,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.17",
+   "report": "report/spectral_archives.md",
+   "statuses": {
+    "searched": 38,
+    "constraint_only": 28,
+    "structurally_open": 17
+   }
+  },
+  "stereo_hi_crossings": {
+   "rows": 18,
+   "harvest_rows": 18,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.16",
+   "report": "report/stereo_hi_crossings.md",
+   "statuses": {
+    "not_constrainable": 2,
+    "searched": 9,
+    "retained_ambiguous": 1,
+    "constraint_only": 4,
+    "vetoed_known_source": 1,
+    "ledger_only": 1
+   }
+  },
+  "tess_crossings": {
+   "rows": 21,
+   "harvest_rows": 21,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.6",
+   "report": "report/tess_crossings.md",
+   "statuses": {
+    "searched": 11,
+    "retained_ambiguous": 1,
+    "constraint_only": 2,
+    "structurally_open": 6,
+    "ledger_only": 1
+   }
+  },
+  "wise_crossings": {
+   "rows": 104,
+   "harvest_rows": 103,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.3",
+   "report": "report/wise_crossings.md",
+   "statuses": {
+    "not_constrainable": 37,
+    "ledger_only": 66,
+    "structurally_open": 1
+   }
+  },
+  "wispr_crossings": {
+   "rows": 46,
+   "harvest_rows": 46,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.18\u20135.19",
+   "report": "report/wispr_crossings.md",
+   "statuses": {
+    "not_constrainable": 7,
+    "searched": 25,
+    "vetoed_known_source": 5,
+    "structurally_open": 1,
+    "constraint_only": 4,
+    "retained_ambiguous": 1,
+    "ledger_only": 2,
+    "no_survey": 1
+   }
+  },
+  "ztf_crossings": {
+   "rows": 76,
+   "harvest_rows": 72,
+   "candidates": 0,
+   "pipeline": "B",
+   "plan_section": "5.1",
+   "report": "report/ztf_crossings.md",
+   "statuses": {
+    "searched": 17,
+    "structurally_open": 27,
+    "constraint_only": 27,
+    "not_constrainable": 3,
+    "no_survey": 2
+   }
+  },
+  "decam_survey": {
+   "rows": 967,
+   "harvest_rows": 963,
+   "candidates": 0,
+   "pipeline": "A",
+   "plan_section": "4.6",
+   "report": "report/decam_survey.md",
+   "statuses": {
+    "searched": 512,
+    "structurally_open": 455
+   }
+  },
+  "joint_ps1_ztf_wise": {
+   "rows": 2667,
+   "harvest_rows": 2649,
+   "candidates": 0,
+   "pipeline": "A",
+   "plan_section": "4.5",
+   "report": "report/joint_ps1_ztf_wise.md",
+   "statuses": {
+    "searched": 2030,
+    "ledger_only": 1,
+    "no_survey": 21,
+    "structurally_open": 615
+   }
+  },
+  "ps1_survey": {
+   "rows": 5552,
+   "harvest_rows": 5534,
+   "candidates": 0,
+   "pipeline": "A",
+   "plan_section": "4.4",
+   "report": "report/ps1_survey.md",
+   "statuses": {
+    "searched": 971,
+    "structurally_open": 4562,
+    "no_survey": 19
+   }
+  },
+  "spherex_joint6": {
+   "rows": 1412,
+   "harvest_rows": 1412,
+   "candidates": 0,
+   "pipeline": "A",
+   "plan_section": "4.3",
+   "report": "report/spherex_joint6.md",
+   "statuses": {
+    "searched": 1332,
+    "structurally_open": 80
+   }
+  },
+  "spherex_survey": {
+   "rows": 8462,
+   "harvest_rows": 8462,
+   "candidates": 0,
+   "pipeline": "A",
+   "plan_section": "4.3",
+   "report": "report/spherex_survey.md",
+   "statuses": {
+    "searched": 8150,
+    "structurally_open": 312
+   }
+  },
+  "wise_survey": {
+   "rows": 5640,
+   "harvest_rows": 5640,
+   "candidates": 0,
+   "pipeline": "A",
+   "plan_section": "4.1",
+   "report": "report/wise_survey.md",
+   "statuses": {
+    "searched": 4831,
+    "structurally_open": 809
+   }
+  },
+  "ztf_survey": {
+   "rows": 2683,
+   "harvest_rows": 2665,
+   "candidates": 0,
+   "pipeline": "A",
+   "plan_section": "4.2",
+   "report": "report/ztf_survey.md",
+   "statuses": {
+    "searched": 2376,
+    "structurally_open": 288,
+    "no_survey": 19
+   }
+  }
+ }
+}

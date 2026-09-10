@@ -1,0 +1,187 @@
+survey_id: rubin_crossings
+report: report/rubin_crossings.md
+plan_section: "5.13"
+pipeline: B
+archives: [rubin]
+hypothesis_version: "v1.0 + v1.1"
+era: "MJD 60790.117 → 61047.354 (2025-03-26 → 2025-12-08; 28,698 LSSTCam visits, ugrizy, 30 s; DP2 Early, v30 / DM-55060)"
+run_dir: runs/rubin-crossings
+records_dir: null
+candidates: 0
+candidate_notes: "1 blind trial, 0 exceedances vs 0.11 expected; S_det = 0 (zero DiaSources of any kind in the 60 arcsec discovery cone); no adjudication occurred"
+rows:
+  # ---- The one searched unit (catalog-level, threshold statement — not injection-calibrated) ----
+  - target_id: ross-128
+    channel: B
+    rung: "0.1 AU"
+    band: "r"
+    substrate: "Rubin DP2 dp2.DiaSource difference-image detections, association at predicted relay-track positions (no pixels)"
+    status: constraint_only
+    limit_kind: "flux"
+    limit_value: 1.64
+    limit_unit: "µJy (served per-detector 5σ point-source depth, magLim r = 23.366; F ≈ 1.8e-18 W m^-2 band-integrated)"
+    limit_range: null
+    power_mw: 0.0013
+    power_mw_range: null
+    n_events: 1
+    n_trials: 1
+    epoch_range: "visit 2025091300612, MJD 60932.282 (Δt = −5.66 d from t_ca MJD 60937.94; evt-5197f21cd67b)"
+    source: "report/rubin_crossings.md §1, §2; surveys/rubin-crossings/results/confirmatory_v1.json; surveys/rubin-crossings/results/coverage_v1.md"
+    notes: "confirmatory_v1.json labels the unit status 'searched' (blind trial with 8 controls) but the constraint is explicitly a threshold statement, not injection-calibrated — recorded constraint_only; S_det = 0, T = 0, 8 valid controls, no exceedance; z family {1000, 2500, 5500, 10000} AU searched, all five z-grid positions on detector 102; rim sample: b(t_visit) = 20.9 Rsun = 0.0973 AU (beams narrower than 0.0973 AU unconstrained; the 1.86 Rsun core never sampled); threshold statement per C1 rule (DP2 has no injections, no pixels) — P ≈ 1.3 kW = 0.0013 MW (converted from kW) band-integrated for a relay at z 1000–10000 AU; equivalent EIRP at z = 1000 AU ~5e11 W (cone gain 4e8); one 30 s sample constrains persistent-during-window emission only; deepest wide-rung single-epoch flux threshold in the covered-window record (~4x ZTF's m90 21.8 in flux, a different record class); image-level re-run when DP2 publishes visit/difference images (late 2026) is the designated follow-up"
+  - target_id: ross-128
+    channel: B
+    rung: "0.1 AU"
+    band: "r"
+    substrate: "Rubin DP2 static Object catalog exclusion"
+    status: not_constrainable
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "visit 2025091300612, MJD 60932.282"
+    source: "report/rubin_crossings.md §1"
+    notes: "z = 550 AU rung point only: sits 2 arcsec from a bright static Object → not_constrainable at that rung point (static-sky exclusion); the other four z-grid points are the searched row above"
+  # ---- Grazing rungs structurally uncovered (±0.35 d-class windows, 0 visits) ----
+  - target_id: wolf-359
+    channel: B
+    rung: "1.2 Rsun"
+    band: "any"
+    substrate: "Rubin DP2 visit table (coverage intersect)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2025-03-26 → 2025-12-08"
+    source: "report/rubin_crossings.md §3; surveys/rubin-crossings/results/coverage_v1.md"
+    notes: "b = 0.70 Rsun; 0 visits in the in-era grazing window (also uncovered at 2.5 Rsun: B 2.5 Rsun has 3 in-era events, 0 with visits)"
+  - target_id: teegarden
+    channel: B
+    rung: "1.2 Rsun"
+    band: "any"
+    substrate: "Rubin DP2 visit table (coverage intersect)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2025-03-26 → 2025-12-08"
+    source: "report/rubin_crossings.md §3; surveys/rubin-crossings/results/coverage_v1.md"
+    notes: "b = 0.99 Rsun; 0 visits in the in-era grazing window (also uncovered at 2.5 Rsun)"
+  - target_id: ross-128
+    channel: B
+    rung: "2.5 Rsun"
+    band: "any"
+    substrate: "Rubin DP2 visit table (coverage intersect)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "t_ca MJD 60937.94 (evt-5197f21cd67b)"
+    source: "report/rubin_crossings.md §3; surveys/rubin-crossings/results/coverage_v1.md"
+    notes: "b = 1.86 Rsun: the same event whose 0.1 AU rim was searched; its photosphere-grazing core window fell between visits (0 visits)"
+  # ---- A 0.1 AU saturation-limited ----
+  - target_id: ross-154
+    channel: A
+    rung: "0.1 AU"
+    band: "i, z, r, y"
+    substrate: "Rubin DP2 DiaSource catalog (bright star, G = 9.13)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 16
+    n_trials: 0
+    epoch_range: "Δt −1.4 → +4.6 d around t_ca MJD 60859.41 (evt-04c01641edb6)"
+    source: "report/rubin_crossings.md §3; surveys/rubin-crossings/results/coverage_v1.md; surveys/rubin-crossings/results/coverage_v1_summary.json"
+    notes: "saturation-limited under the frozen §6 rule (G = 9.13): 16 on-detector visits (i 5 / z 6 / r 1 / y 4, magLim 20.6–24.0) incl. two at Δt = −0.31 d sampling b ≈ 3.6 Rsun (b_min 3.41 Rsun) — recorded coverage-without-statistic; the catalog substrate cannot serve bright-star channel A; waits for image-level handling or a different archive"
+  # ---- In-era 0.1 AU events with no candidate visits ----
+  - target_id: [ross-154, teegarden, wolf-359]
+    channel: B
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "Rubin DP2 visit table (coverage intersect)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 3
+    n_trials: 0
+    epoch_range: "2025-03-26 → 2025-12-08"
+    source: "report/rubin_crossings.md §3; surveys/rubin-crossings/results/coverage_v1.md"
+    notes: "3 of the 4 in-era B 0.1 AU events have no candidate visits (ross-128 is the searched fourth)"
+  - target_id: [gj-1276, gj-908, teegarden]
+    channel: A
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "Rubin DP2 visit table (coverage intersect)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 3
+    n_trials: 0
+    epoch_range: "2025-03-26 → 2025-12-08"
+    source: "report/rubin_crossings.md §3; surveys/rubin-crossings/results/coverage_v1.md"
+    notes: "in-era A 0.1 AU events with no candidate visits (5 in-era A events: ross-154 saturation-limited, these three + van-maanen uncovered)"
+  - target_id: van-maanen
+    channel: A
+    rung: "0.1 AU"
+    band: "any"
+    substrate: "Rubin DP2 visit table (coverage intersect)"
+    status: structurally_open
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 1
+    n_trials: 0
+    epoch_range: "2025 (in-era window)"
+    source: "report/rubin_crossings.md §3, §5"
+    notes: "b = 0.32 Rsun — the deep-graze family's 2025 window fell outside DP2's visited sky; may become covered when DP2 grows to its full span or Year-1 lands"
+  # ---- A 1.0 AU wide rung ----
+  - target_id: programme
+    channel: A
+    rung: "1.0 AU"
+    band: "any"
+    substrate: "Rubin DP2 (geometry-only)"
+    status: no_survey
+    limit_kind: null
+    limit_value: null
+    limit_unit: null
+    limit_range: null
+    power_mw: null
+    power_mw_range: null
+    n_events: 85
+    n_trials: 0
+    epoch_range: "2025-03-26 → 2025-12-08"
+    source: "report/rubin_crossings.md §3; surveys/rubin-crossings/results/coverage_v1_summary.json"
+    notes: "85 in-era events / 84 targets, geometry-only — the programme-wide deferred wide-beam rung (§5.7)"

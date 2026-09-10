@@ -13,7 +13,9 @@ tags:
 Companion documents: `notes/project_history.md` (chronological
 execution record — what ran, when, with what outcome) and
 `notes/learnings.md` (consolidated design lessons). This plan keeps
-goals, methodology, sequencing, and current status.
+goals, methodology, sequencing, and current status. The programme-wide
+index of every constraint and open cell is `report/programme_ledger.md`
+(§6).
 
 ## 1. Introduction
 
@@ -1328,11 +1330,11 @@ server, ~90 s per position) and the post-2018 livetime table.
 The yearly crossing-list refresh (the 2028 window end) as archives
 extend, and the items that ride on it:
 
-- Fold the TESS and GALEX rows into the covered-window ledger (GALEX:
-5 searched + grazing/rim/empty ledger entries,
-`report/galex_crossings.md` §5; `report/tess_crossings.md` §6
-enumerates the TESS rows; the joint-stage v1 ledger predates TESS and
-stays as pre-registered).
+- ~~Fold the TESS and GALEX rows into the covered-window ledger~~ —
+**done 2026-09-10** as part of the programme ledger v2 (§6), which
+folds every completed survey; the joint-stage v1 ledger predates TESS
+and stays as pre-registered. At the refresh, re-run the ledger build
+(§6) after the per-survey re-runs.
 - Re-run the teegarden 0.1 AU recurrence test when a future ecliptic
 sector covers the target (§5.6); the wolf-359 A NUV
 retained-ambiguous burst (§5.12) awaits a future UV mission for its
@@ -1368,6 +1370,44 @@ are the 2028-end events the refresh will complete.
 status.
 
 
+
+## 6. Programme ledger (goal 5)
+
+**Description.** The cross-survey index of every constraint and open
+cell: one harvest file per report transcribing what the report states
+(per target where it gives per-target numbers), merged into a single
+table keyed by target × channel × rung × band with the programme's
+coverage states (`searched`, `constraint_only`, `ledger_only`,
+`not_constrainable`, `structurally_open`, `vetoed_known_source`,
+`retained_ambiguous`, `no_survey`), native units plus the derived
+transmitter power where a report gives one, and the report-section or
+results-file citation on every row. Emits the shared Constraint /
+AnalysisRun / Candidate records for the Pipeline B surveys, which had
+only survey-specific results files. An index, not a re-analysis: no
+limit is re-derived. Survey docs `surveys/programme-ledger/`
+(`harvest/SCHEMA.md`, `scripts/`, `results/`); records and the full
+table under `runs/programme-ledger/v2/`.
+
+**Status.** **COMPLETE 2026-09-10** — report `report/programme_ledger.md`.
+Decisions 1–5 approved 2026-09-10 (scope, states, native units,
+provenance, ECSV + report); six parallel harvest passes over the 27
+reports; 22 of the 28 harvest files regenerate byte-identically from
+generators kept in `scripts/harvest/`, six are hand transcriptions.
+
+**Result.** 28,588 rows from 28 sources, **0 candidates**: 20,541
+searched, 191 constraint-only, 344 ledger-only, 7,301 structurally
+open, 87 not constrainable, 97 no-survey, 16 retained-ambiguous and 11
+vetoed rows; 28 AnalysisRun, 21,163 Constraint, 27 Candidate records.
+Pipeline A: all 88 endpoints searched, 61 in six surveys. Pipeline B:
+102 distinct (target, channel, rung) cells searched over 37 targets, 35
+with a published power limit; **14 registry targets have no per-target
+crossings row in any report** (82-eri, alpha-cen-a/b, gj-1061, gj-367,
+gj-66-a/b, gj-687, kapteyn-star, lp-145-141, proxima-cen, sigma-dra,
+struve-2398-a/b — programme-wide statements only); the A 1.0 AU rung
+is ledger-only bar one ZTF unit; the S1 grazing rungs are
+not-constrainable in every substrate but LASCO C2 at 2.5 R☉. The twelve
+retained-ambiguous cells are enumerated (report Table 7). Refresh: re-run
+the generators, then `build_ledger_v2.py` and `render_tables.py`.
 
 ## 7. Open questions and research directions
 

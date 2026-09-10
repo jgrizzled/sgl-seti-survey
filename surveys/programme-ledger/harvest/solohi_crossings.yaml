@@ -1,0 +1,642 @@
+survey_id: solohi_crossings
+report: report/solohi_crossings.md
+plan_section: '5.23'
+pipeline: B
+archives:
+- solohi
+hypothesis_version: v1.0 (D0–D9 approved 2026-09-06) + threshold amendments v1.1 (saturation mask), v1.2 (structure-noise gate, colour calibrators V ≥ 4.5)
+era: 2022-01 → 2026-04 (orbits P04–P12)
+run_dir: runs/solohi-crossings
+records_dir: null
+candidates: 0
+candidate_notes: '54 trials / 18 units, 8 exceedances vs 6.0 expected, all adjudicated: 4 control-interpolation artifacts (gj-1111 S2 ×3, gj-251 S2), 2 uncatalogued moving objects (teegarden S2), 2 extended level offsets of alternating sign (gj-876 S1); none retained'
+rows:
+- target_id: programme
+  channel: S1
+  rung: 1.2 Rsun
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §1
+  notes: The grazing cones never approach the 5.2° inner edge of the SoloHI tiles (≤ 1.1° / 2.4°)
+- target_id: programme
+  channel: S1
+  rung: 2.5 Rsun
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: not_constrainable
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: null
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §1
+  notes: The grazing cones never approach the 5.2° inner edge of the SoloHI tiles (≤ 1.1° / 2.4°)
+- target_id: ez-aqr
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 12.57
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 48.0
+  power_mw_range: null
+  n_events: 5
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json ez-aqr:S1; report/solohi_crossings.md §3–4
+  notes: S_stack 2.52 / 4.13, S_event 4.92 / 12.48, S_pulse 6.99 / 14.80 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 9.66 -> 706.0 MW; S_pulse m90 6.18 -> 17300.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-1002
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 10.47
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 334.0
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-1002:S1; report/solohi_crossings.md §3–4
+  notes: S_stack −0.63 / 6.56, S_event 3.99 / 15.37, S_pulse 2.78 / 10.11 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 9.32 -> 959.0 MW; S_pulse m90 6.68 -> 10900.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-1111
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-1111:S2; report/solohi_crossings.md §3–4
+  notes: 'S_stack 19.16 / 13.33 exc, S_event 16.93 / 12.81 exc, S_pulse 38.43 / 30.16 exc (S/T); all three exceedances = control-interpolation artifact: a bright star in the +1.5° control patch loses its core to the saturation mask on single frames (E′ −47 to −54 units) and the frozen quadratic, extrapolated to the source offset on a one-sided ladder, turns that into +50–60 units on the source; source pixels flat (−3.6 … +0.4 units); diagnostic median interpolation S_stack −3.5 vs 5.6, S_pulse 2.4 vs 5.4; all three statistics degenerate, no depth; power_mw = P_tx_10m (10-m-class uplink); no depth tabulated; n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: gj-1276
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 9.07
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 1210.0
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-1276:S1; report/solohi_crossings.md §3–4
+  notes: S_stack −7.59 / 14.21, S_event −3.23 / 19.59, S_pulse 2.17 / 7.22 (S/T); searched-null (LASCO/HI-1/WISPR family); power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 8.44 -> 2160.0 MW; S_pulse m90 6.75 -> 10200.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-251
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 10.09
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 348.0
+  power_mw_range: null
+  n_events: 4
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-251:S2; report/solohi_crossings.md §3–4
+  notes: S_stack −1.02 / 9.79, S_event 0.84 / 8.56, S_pulse 5.48 / 5.42 exc (S/T); S_pulse exceedance (marginal) = control-interpolation artifact, same mechanism on a one-sided ladder at +6.5°; diagnostic median 2.38 / 3.12; power_mw = P_tx_10m (10-m-class uplink); S_event m90 9.66 -> 519.0 MW; S_pulse m90 7.19 -> 5040.0 MW (2 consecutive frames, 12–48 min); P_cone 474.0 MW; n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-581
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 9.65
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 707.0
+  power_mw_range: null
+  n_events: 4
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-581:S1; report/solohi_crossings.md §3–4
+  notes: S_stack 3.44 / 13.91, S_event 3.48 / 12.14, S_pulse 1.47 / 8.43 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 9.53 -> 792.0 MW; S_pulse m90 6.79 -> 9910.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-588
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 11.39
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 143.0
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-588:S1; report/solohi_crossings.md §3–4
+  notes: S_stack 2.75 / 5.74, S_event 4.30 / 6.41, S_pulse 2.63 / 10.70 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 10.85 -> 235.0 MW; S_pulse m90 6.79 -> 9850.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-667-c
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 10.46
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 338.0
+  power_mw_range: null
+  n_events: 4
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-667-c:S1; report/solohi_crossings.md §3–4
+  notes: S_stack −1.43 / 10.67, S_event 1.45 / 13.46, S_pulse 3.56 / 4.39 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 10.09 -> 473.0 MW; S_pulse m90 7.54 -> 4970.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-674
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 13.36
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 23.3
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-674:S1; report/solohi_crossings.md §3–4
+  notes: S_stack 4.71 / 5.31, S_event 3.10 / 5.00, S_pulse 3.14 / 3.74 (S/T); searched-null; second-deepest unit; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 11.4 -> 142.0 MW; S_pulse m90 7.88 -> 3610.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-682
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 10.09
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 474.0
+  power_mw_range: null
+  n_events: 5
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-682:S1; report/solohi_crossings.md §3–4
+  notes: S_stack −0.83 / 7.85, S_event 3.56 / 6.49, S_pulse 2.50 / 7.64 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 10.47 -> 333.0 MW; S_pulse m90 6.78 -> 9970.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-783
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 13.89
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 14.3
+  power_mw_range: null
+  n_events: 7
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-783:S1; report/solohi_crossings.md §3–4
+  notes: S_stack 2.89 / 3.47, S_event 6.67 / 8.80, S_pulse 6.79 / 10.13 (S/T); searched-null; deepest unit; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 10.84 -> 237.0 MW; S_pulse m90 6.86 -> 9310.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: gj-876
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json gj-876:S1; report/solohi_crossings.md §3–4
+  notes: 'S_stack 4.60 / 3.71 exc, S_event 7.87 / 4.85 exc, S_pulse 2.10 / 17.96 (S/T); S_stack/S_event exceedances = extended level offsets of alternating sign on a starless antipode patch: per-orbit z +5.9 (P09), −5.4 (P10), +7.9 (P11); aligned mean stacks uniform ±0.01–0.04 units/px over 15 × 15 px, no point-source peak; marginal against 8 controls spanning −4.2 … +3.7; no consistent-sign recurrence; S_stack/S_event degenerate; power_mw = P_cone downlink through the 0.1 AU cone; S_pulse m90 6.21 -> 16900.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: ross-128
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 10.47
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 89.2
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json ross-128:S2; report/solohi_crossings.md §3–4
+  notes: S_stack 0.82 / 8.36, S_event 4.12 / 15.33, S_pulse 2.47 / 17.75 (S/T); searched-null (LASCO/HI-1/WISPR family); power_mw = P_tx_10m (10-m-class uplink); S_event m90 9.66 -> 189.0 MW; S_pulse m90 6.37 -> 3910.0 MW (2 consecutive frames, 12–48 min); P_cone 332.0 MW; n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: teegarden
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 11.83
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 33.0
+  power_mw_range: null
+  n_events: 8
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json teegarden:S2; report/solohi_crossings.md §3–4
+  notes: 'S_stack 1.78 / 4.37, S_event 7.80 / 6.77 exc, S_pulse 15.41 / 6.37 exc (S/T); S_event (P12, 16-epoch arc) and S_pulse exceedances = uncatalogued moving objects through the fixed patch: compact peaks displaced 4 px between consecutive frames, absent before/after (2026-02-23 20:02 → 20:26; 2025-03-24 05:13 → 05:37, diffuse); no H < 7 asteroid within 1°; star''s baseline 0.14–0.19 units; S_event/S_pulse degenerate; power_mw = P_tx_10m (10-m-class uplink); P_cone 95.4 MW; n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared'
+- target_id: van-maanen
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 9.68
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 693.0
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json van-maanen:S1; report/solohi_crossings.md §3–4
+  notes: S_stack −1.92 / 7.76, S_event 3.86 / 12.07, S_pulse 4.58 / 5.90 (S/T); searched-null (family); power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 8.98 -> 1310.0 MW; S_pulse m90 7.19 -> 6830.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: van-maanen
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 9.62
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 320.0
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json van-maanen:S2; report/solohi_crossings.md §3–4
+  notes: S_stack 0.75 / 8.89, S_event 1.32 / 9.20, S_pulse 4.26 / 33.89 (S/T); searched-null (family); power_mw = P_tx_10m (10-m-class uplink); S_event m90 8.91 -> 615.0 MW; S_pulse m90 4.75 -> 28400.0 MW (2 consecutive frames, 12–48 min); P_cone 730.0 MW; n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: wolf-1061
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 9.95
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 539.0
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json wolf-1061:S1; report/solohi_crossings.md §3–4
+  notes: S_stack −2.66 / 6.80, S_event 0.81 / 12.73, S_pulse 1.74 / 8.26 (S/T); searched-null; power_mw = P_cone downlink through the 0.1 AU cone; S_event m90 9.17 -> 1100.0 MW; S_pulse m90 7.08 -> 7590.0 MW (2 consecutive frames, 12–48 min); n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: wolf-359
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: searched
+  limit_kind: m90
+  limit_value: 10.48
+  limit_unit: V_eq mag
+  limit_range: null
+  power_mw: 45.3
+  power_mw_range: null
+  n_events: 3
+  n_trials: 3
+  epoch_range: null
+  source: surveys/solohi-crossings/results/confirmatory_v1.md unit + completeness + adjudication tables; surveys/solohi-crossings/results/power_limits_v1.json wolf-359:S2; report/solohi_crossings.md §3–4
+  notes: S_stack −4.34 / 1.12, S_event −0.48 / 3.74, S_pulse 2.44 / 8.22 (S/T); searched-null (family); power_mw = P_tx_10m (10-m-class uplink); S_event m90 10.46 -> 45.8 MW; S_pulse m90 6.58 -> 1630.0 MW (2 consecutive frames, 12–48 min); P_cone 332.0 MW; n_events = included events over 3–8 orbits; ±0.3 mag band and ±0.3 mag flux-scale systematics declared
+- target_id: ez-aqr
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (included, insufficient_after_veto, insufficient_epochs, no_baseline) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable'
+- target_id: gj-1002
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (included, insufficient_after_veto, insufficient_epochs) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable'
+- target_id: gj-1111
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (insufficient_epochs) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable'
+- target_id: gj-1276
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (included, insufficient_epochs) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable'
+- target_id: gj-876
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (included, insufficient_after_veto, insufficient_epochs) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable'
+- target_id: ross-128
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (included, no_baseline) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable; report §6: the seam rows (ross-128 P05–P09, in-plane) are ledger entries'
+- target_id: ross-154
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 0
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (insufficient_epochs) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable'
+- target_id: teegarden
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 2
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (included, insufficient_epochs) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable'
+- target_id: wolf-359
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3, §6; surveys/solohi-crossings/results/confirmatory_v1.md unit table
+  notes: 'Report state constraint_only: < 3 events survive the edge gates and the baseline rule (included, insufficient_epochs, no_baseline) — arcs lie mostly inside the sunward-edge band (ε ≲ 8°) or lack the same-tile baseline; report calls these ledger entries needing the 16-s perihelion geometry to become searchable'
+- target_id: 61-vir
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 3
+  epoch_range: null
+  source: report/solohi_crossings.md §3 (dev); surveys/solohi-crossings/results/dev_v1.md unit table
+  notes: Dev-stage unit (no injection depth); dev S_stack −4.63 / 6.59, S_event 2.48 / 8.88, S_pulse 2.62 / 14.46 (S/T); dev stage 5 units, 12 trials, 0 exceedances vs 1.33 expected
+- target_id: gj-908
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 5
+  n_trials: 3
+  epoch_range: null
+  source: report/solohi_crossings.md §3 (dev); surveys/solohi-crossings/results/dev_v1.md unit table
+  notes: Dev-stage unit (no injection depth); gj-908 S1 z median 0.00; dev S_stack −0.11 / 3.15, S_event 3.21 / 15.58, S_pulse 3.92 / 22.17 (S/T); dev stage 5 units, 12 trials, 0 exceedances vs 1.33 expected
+- target_id: gj-908
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 4
+  n_trials: 3
+  epoch_range: null
+  source: report/solohi_crossings.md §3 (dev); surveys/solohi-crossings/results/dev_v1.md unit table
+  notes: Dev-stage unit (no injection depth); gj-908 S2 (V 9.0) baseline null, z median −1.2 over 4 orbits — in-situ control; dev S_stack −2.38 / 11.77, S_event 1.77 / 13.70, S_pulse 3.61 / 28.19 (S/T); dev stage 5 units, 12 trials, 0 exceedances vs 1.33 expected
+- target_id: ross-154
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: constraint_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 6
+  n_trials: 3
+  epoch_range: null
+  source: report/solohi_crossings.md §3 (dev); surveys/solohi-crossings/results/dev_v1.md unit table
+  notes: Dev-stage unit (no injection depth); dev S_stack 10.59 / 16.75, S_event 9.56 / 18.84, S_pulse 2.61 / 20.65 (S/T); dev stage 5 units, 12 trials, 0 exceedances vs 1.33 expected
+- target_id: 61-vir
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: Solar Orbiter SoloHI level-2 inner-tile frames (P04–P12), ICRS-fixed patch aperture photometry with star-fixed off-beam baseline
+  status: structurally_open
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 1
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §3 (dev); surveys/solohi-crossings/results/dev_v1.md unit table
+  notes: 'bright_star_saturated: the V 4.7 star''s aperture fails the mask/validity gates in 5 of 6 events (dev)'
+- target_id: programme
+  channel: S1
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: SoloHI inner-tile sunward-edge band (ε ≲ 8°, inner ~120 px of every arc)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 49388
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §2, §5, §6 item 2
+  notes: 'F-corona / sunward-edge strip: saturation plateau in the ≥ 45-s regime and unresolved corona structure (6–11 units/frame) make the frames unusable for point sources; the structure-noise gate dropped 49,388 of 193,902 confirmatory arc records (25 %) — the inner quarter of every arc; a K/F-corona structure model or 16-s perihelion frames would be needed to recover it'
+- target_id: programme
+  channel: S2
+  rung: 0.1 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: SoloHI inner-tile sunward-edge band (ε ≲ 8°, inner ~120 px of every arc)
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 49388
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §2, §5, §6 item 2
+  notes: 'F-corona / sunward-edge strip: saturation plateau in the ≥ 45-s regime and unresolved corona structure (6–11 units/frame) make the frames unusable for point sources; the structure-noise gate dropped 49,388 of 193,902 confirmatory arc records (25 %) — the inner quarter of every arc; a K/F-corona structure model or 16-s perihelion frames would be needed to recover it'
+- target_id: programme
+  channel: S2
+  rung: 1.0 AU
+  band: SoloHI λ_c 610 nm, W_eff 250 nm (532 nm in band)
+  substrate: SoloHI outer tiles (ε 25°–45°), used only as baseline
+  status: ledger_only
+  limit_kind: null
+  limit_value: null
+  limit_unit: null
+  limit_range: null
+  power_mw: null
+  power_mw_range: null
+  n_events: 214
+  n_trials: null
+  epoch_range: null
+  source: report/solohi_crossings.md §1, §6 item 5
+  notes: 'S2 1 AU transits in the outer tiles: 36 stars, 214 covered star-orbit pairs; out of scope (D7) — coverage logged, no statistic'
