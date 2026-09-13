@@ -1,0 +1,917 @@
+{
+ "survey": "ptf",
+ "freeze_content_hash": "sha256:4915a38e50401cec9c18c3eb50a693c5a38d48ef7210f676bfe53cf39cec5c23",
+ "freeze_hash": "sha256:9cc7ca2fab710857347ff1dbb9802ca870e5462af88fb7b08104075c38575f83",
+ "dev": {
+  "n_endpoints": 14,
+  "n_cells": 36,
+  "n_void": 0,
+  "n_heavy_tail": 0,
+  "R_fwer": 1.4216268947578763,
+  "n_candidates": 0,
+  "candidates": [],
+  "n_real_R_gt_1": 1,
+  "expected_R_gt_1": 3.9374999999999996,
+  "holdout_null": {
+   "n_null_trajectories": 0,
+   "false_pass_rate": null,
+   "false_pass_ci68": null,
+   "n_above_q95": 0,
+   "false_pass_rate_above_q95": null
+  },
+  "n_ring_vs_traj_fail": 21,
+  "n_two_phase": 14,
+  "n_phase_ks_fail": 14,
+  "real_R_quantiles": {
+   "0.5": 0.7224126528832677,
+   "0.9": 0.9134144715496166,
+   "0.99": 1.0492705211984292,
+   "1.0": 1.1091709765361226
+  },
+  "mask_sensitivity": {
+   "n_common_cells": 30,
+   "R_fwer": {
+    "primary": 1.4216268947578763,
+    "strict": 1.5887098010125253,
+    "loose": 1.4196161584491187
+   },
+   "n_candidates": {
+    "primary": 0,
+    "strict": 0,
+    "loose": 0
+   },
+   "delta_R_vs_primary": {
+    "strict": {
+     "median": -0.004956994082996713,
+     "p16": -0.0912361390468503,
+     "p84": 0.07527766576079384
+    },
+    "loose": {
+     "median": 0.0,
+     "p16": -0.002432114887078668,
+     "p84": 0.0046536658007246155
+    }
+   },
+   "n_cells": {
+    "primary": 36,
+    "strict": 30,
+    "loose": 36
+   }
+  },
+  "void_by_band": {},
+  "cells_by_band": {
+   "R": 28,
+   "g": 8
+  },
+  "top_cells": [
+   {
+    "cell": "gj-12724/rx/R",
+    "R_norm": 0.9381807054337097,
+    "R": 1.1091709765361226,
+    "global_p": 0.9901,
+    "p_cell": 0.14285714285714285,
+    "p_phase": null,
+    "p_traj": 0.09090909090909091,
+    "S_phase": [
+     8.20055866241455,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "gj-12724/tx/R",
+    "R_norm": 0.9036688665098689,
+    "R": 0.9015113231123452,
+    "global_p": 0.9983,
+    "p_cell": 0.2857142857142857,
+    "p_phase": null,
+    "p_traj": 0.22727272727272727,
+    "S_phase": [
+     8.516684532165527,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "ez-aqr/rx/R",
+    "R_norm": 0.8922695293120634,
+    "R": 0.8704754884580651,
+    "global_p": 0.9993,
+    "p_cell": 0.1836734693877551,
+    "p_phase": null,
+    "p_traj": 0.022727272727272728,
+    "S_phase": [
+     10.66970443725586,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "kapteyn-star/rx/R",
+    "R_norm": 0.8872635707494799,
+    "R": 0.9258452814844731,
+    "global_p": 0.9995,
+    "p_cell": 0.40816326530612246,
+    "p_phase": 0.125,
+    "p_traj": 0.1590909090909091,
+    "S_phase": [
+     5.0552520751953125,
+     2.152585983276367
+    ],
+    "colour": null
+   },
+   {
+    "cell": "gj-784/rx/R",
+    "R_norm": 0.8844262710303857,
+    "R": 0.911529777745629,
+    "global_p": 0.9995,
+    "p_cell": 0.32653061224489793,
+    "p_phase": 0.69,
+    "p_traj": 0.11363636363636363,
+    "S_phase": [
+     5.978828430175781,
+     1.4106792211532593
+    ],
+    "colour": null
+   },
+   {
+    "cell": "alpha-cen-a/tx/R",
+    "R_norm": 0.8683436973022846,
+    "R": 0.9152991653536043,
+    "global_p": 0.9998,
+    "p_cell": 0.24489795918367346,
+    "p_phase": 0.345,
+    "p_traj": 0.09302325581395349,
+    "S_phase": [
+     8.218350410461426,
+     8.493821144104004
+    ],
+    "colour": null
+   },
+   {
+    "cell": "lacaille-8760/tx/R",
+    "R_norm": 0.8524069119663054,
+    "R": 0.8443119213207492,
+    "global_p": 1.0,
+    "p_cell": 0.24489795918367346,
+    "p_phase": 0.275,
+    "p_traj": 0.1590909090909091,
+    "S_phase": [
+     4.892314434051514,
+     0.8175679445266724
+    ],
+    "colour": null
+   },
+   {
+    "cell": "alpha-cen-a/rx/R",
+    "R_norm": 0.849042907830094,
+    "R": 0.8821370235702797,
+    "global_p": 1.0,
+    "p_cell": 0.32653061224489793,
+    "p_phase": 0.32,
+    "p_traj": 0.09302325581395349,
+    "S_phase": [
+     7.786269664764404,
+     7.102522850036621
+    ],
+    "colour": null
+   },
+   {
+    "cell": "barnard-star/tx/R",
+    "R_norm": 0.8348392533609362,
+    "R": 0.8222458458436707,
+    "global_p": 1.0,
+    "p_cell": 0.5306122448979592,
+    "p_phase": null,
+    "p_traj": 0.022727272727272728,
+    "S_phase": [
+     8.227604866027832,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "ross-128/tx/R",
+    "R_norm": 0.8163838908172955,
+    "R": 0.854301350972692,
+    "global_p": 1.0,
+    "p_cell": 0.3877551020408163,
+    "p_phase": null,
+    "p_traj": 0.5227272727272727,
+    "S_phase": [
+     12.749712944030762,
+     NaN
+    ],
+    "colour": null
+   }
+  ],
+  "adjudication": {
+   "survey": "ptf",
+   "set": "dev",
+   "mask": "primary",
+   "R_fwer_norm": 1.4216268947578763,
+   "n_candidates": 0,
+   "status_counts": {},
+   "retained_ambiguous": [],
+   "written": "/home/jgreene/code/sgl-seti-survey/runs/ptf/v2/records/candidate_dev.jsonl",
+   "utc": "2026-09-10T23:53:33.554589+00:00"
+  },
+  "candidate_records": [],
+  "completeness_summary": {
+   "set": "dev",
+   "mask": "primary",
+   "analysis_run_id": "run-a55afd948de5",
+   "R_fwer_norm": 1.4216268947578763,
+   "n_cells": 36,
+   "n_constraints": 576,
+   "n_recovery_curve": 528,
+   "median_m90": {
+    "g": {
+     "threshold": 20.733,
+     "final_candidate": 20.733
+    },
+    "R": {
+     "threshold": 20.253,
+     "final_candidate": 20.253
+    }
+   },
+   "vetoes_fired_total": {
+    "static_flux_consistent": 5
+   },
+   "median_prf_throughput": 0.6896287297213409
+  },
+  "m90_medians": {
+   "g/threshold/persistent": [
+    21.937,
+    55
+   ],
+   "g/threshold/flicker": [
+    20.9435,
+    48
+   ],
+   "g/threshold/visit": [
+    20.7085,
+    30
+   ],
+   "g/threshold/block": [
+    20.7165,
+    14
+   ],
+   "g/final_candidate/persistent": [
+    21.937,
+    55
+   ],
+   "g/final_candidate/flicker": [
+    20.9435,
+    48
+   ],
+   "g/final_candidate/visit": [
+    20.7085,
+    30
+   ],
+   "g/final_candidate/block": [
+    20.7165,
+    14
+   ],
+   "R/threshold/persistent": [
+    20.848,
+    208
+   ],
+   "R/threshold/flicker": [
+    20.273,
+    143
+   ],
+   "R/threshold/visit": [
+    20.341,
+    101
+   ],
+   "R/threshold/block": [
+    20.648,
+    87
+   ],
+   "R/final_candidate/persistent": [
+    20.848,
+    208
+   ],
+   "R/final_candidate/flicker": [
+    20.2735,
+    142
+   ],
+   "R/final_candidate/visit": [
+    20.341,
+    101
+   ],
+   "R/final_candidate/block": [
+    20.648,
+    87
+   ]
+  },
+  "prf_throughput_median": 0.6896287297213409,
+  "vetoes_on_injections": {
+   "static_flux_consistent": 5
+  },
+  "injection_test_rates": {
+   "n_threshold_recovered": 3626,
+   "holdout_pass_by_model": {
+    "persistent": null,
+    "flicker": null,
+    "visit": null,
+    "block": null
+   },
+   "static_fail_fraction": 0.0013789299503585218
+  }
+ },
+ "confirmatory": {
+  "n_endpoints": 31,
+  "n_cells": 66,
+  "n_void": 5,
+  "n_heavy_tail": 0,
+  "R_fwer": 1.7243064346395998,
+  "n_candidates": 0,
+  "candidates": [],
+  "n_real_R_gt_1": 8,
+  "expected_R_gt_1": 8.250000000000002,
+  "holdout_null": {
+   "n_null_trajectories": 0,
+   "false_pass_rate": null,
+   "false_pass_ci68": null,
+   "n_above_q95": 0,
+   "false_pass_rate_above_q95": null
+  },
+  "n_ring_vs_traj_fail": 29,
+  "n_two_phase": 33,
+  "n_phase_ks_fail": 33,
+  "real_R_quantiles": {
+   "0.5": 0.7726453876718373,
+   "0.9": 1.037706968421831,
+   "0.99": 1.5322112201729947,
+   "1.0": 1.9481493358775257
+  },
+  "mask_sensitivity": null,
+  "void_by_band": {
+   "R": 3,
+   "g": 2
+  },
+  "cells_by_band": {
+   "R": 58,
+   "g": 8
+  },
+  "top_cells": [
+   {
+    "cell": "gj-783/rx/R",
+    "R_norm": 1.2877541355948936,
+    "R": 1.308244542485945,
+    "global_p": 0.3355,
+    "p_cell": 0.02040816326530612,
+    "p_phase": 0.01,
+    "p_traj": 0.0,
+    "S_phase": [
+     7.218870639801025,
+     6.837472438812256
+    ],
+    "colour": null
+   },
+   {
+    "cell": "gj-1002/rx/R",
+    "R_norm": 1.1085474074975925,
+    "R": 1.9481493358775257,
+    "global_p": 0.6907,
+    "p_cell": 0.02040816326530612,
+    "p_phase": null,
+    "p_traj": 0.09090909090909091,
+    "S_phase": [
+     9.767842292785645,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "lhs-1723/rx/R",
+    "R_norm": 1.0956687298178378,
+    "R": 1.1267832527956116,
+    "global_p": 0.7074,
+    "p_cell": 0.02040816326530612,
+    "p_phase": null,
+    "p_traj": 0.09090909090909091,
+    "S_phase": [
+     9.229312896728516,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "gj65-a/rx/R",
+    "R_norm": 1.0611330751268038,
+    "R": 1.1663604411543715,
+    "global_p": 0.8084,
+    "p_cell": 0.02040816326530612,
+    "p_phase": null,
+    "p_traj": 0.3953488372093023,
+    "S_phase": [
+     10.088940620422363,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "gj-783/tx/R",
+    "R_norm": 1.0511263307537435,
+    "R": 0.9028796791176624,
+    "global_p": 0.816,
+    "p_cell": 0.061224489795918366,
+    "p_phase": 0.27,
+    "p_traj": 0.11363636363636363,
+    "S_phase": [
+     12.427757263183594,
+     0.5604369640350342
+    ],
+    "colour": null
+   },
+   {
+    "cell": "gj-832/tx/R",
+    "R_norm": 1.0290066139922736,
+    "R": 1.057583051102422,
+    "global_p": 0.901,
+    "p_cell": 0.02040816326530612,
+    "p_phase": 0.325,
+    "p_traj": 0.0,
+    "S_phase": [
+     13.400269508361816,
+     1.1108489036560059
+    ],
+    "colour": null
+   },
+   {
+    "cell": "gj65-b/rx/R",
+    "R_norm": 0.9323698490623511,
+    "R": 1.01783088574124,
+    "global_p": 0.9996,
+    "p_cell": 0.10204081632653061,
+    "p_phase": null,
+    "p_traj": 0.37209302325581395,
+    "S_phase": [
+     9.268464088439941,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "gj65-a/tx/R",
+    "R_norm": 0.9233473265399896,
+    "R": 0.95578920762752,
+    "global_p": 0.9999,
+    "p_cell": 0.10204081632653061,
+    "p_phase": null,
+    "p_traj": 0.023255813953488372,
+    "S_phase": [
+     10.912728309631348,
+     NaN
+    ],
+    "colour": null
+   },
+   {
+    "cell": "proxima-cen/rx/R",
+    "R_norm": 0.9049097450672626,
+    "R": 0.9146678091863315,
+    "global_p": 1.0,
+    "p_cell": 0.32653061224489793,
+    "p_phase": 0.405,
+    "p_traj": 0.1590909090909091,
+    "S_phase": [
+     6.13088846206665,
+     5.266085147857666
+    ],
+    "colour": null
+   },
+   {
+    "cell": "wolf-1061/tx/R",
+    "R_norm": 0.901203161902849,
+    "R": 0.9487734414141261,
+    "global_p": 1.0,
+    "p_cell": 0.32653061224489793,
+    "p_phase": 0.145,
+    "p_traj": 0.11363636363636363,
+    "S_phase": [
+     8.100476264953613,
+     0.7746137976646423
+    ],
+    "colour": null
+   }
+  ],
+  "adjudication": {
+   "survey": "ptf",
+   "set": "confirmatory",
+   "mask": "primary",
+   "R_fwer_norm": 1.7243064346395998,
+   "n_candidates": 0,
+   "status_counts": {},
+   "retained_ambiguous": [],
+   "written": "/home/jgreene/code/sgl-seti-survey/runs/ptf/v2/records/candidate_confirmatory.jsonl",
+   "utc": "2026-09-11T00:13:44.757320+00:00"
+  },
+  "candidate_records": [],
+  "completeness_summary": {
+   "set": "confirmatory",
+   "mask": "primary",
+   "analysis_run_id": "run-ef554e3f697d",
+   "R_fwer_norm": 1.7243064346395998,
+   "n_cells": 66,
+   "n_constraints": 1056,
+   "n_recovery_curve": 820,
+   "median_m90": {
+    "g": {
+     "threshold": 20.6725,
+     "final_candidate": 20.6725
+    },
+    "R": {
+     "threshold": 20.5025,
+     "final_candidate": 20.5025
+    }
+   },
+   "vetoes_fired_total": {
+    "static_flux_consistent": 2
+   },
+   "median_prf_throughput": 0.6813273283591544
+  },
+  "m90_medians": {
+   "g/threshold/persistent": [
+    21.082,
+    15
+   ],
+   "g/threshold/flicker": [
+    20.676499999999997,
+    14
+   ],
+   "g/threshold/visit": [
+    20.673000000000002,
+    6
+   ],
+   "g/threshold/block": [
+    20.666,
+    13
+   ],
+   "g/final_candidate/persistent": [
+    21.082,
+    15
+   ],
+   "g/final_candidate/flicker": [
+    20.676499999999997,
+    14
+   ],
+   "g/final_candidate/visit": [
+    20.673000000000002,
+    6
+   ],
+   "g/final_candidate/block": [
+    20.666,
+    13
+   ],
+   "R/threshold/persistent": [
+    21.027,
+    373
+   ],
+   "R/threshold/flicker": [
+    20.5685,
+    216
+   ],
+   "R/threshold/visit": [
+    20.5255,
+    134
+   ],
+   "R/threshold/block": [
+    20.472,
+    78
+   ],
+   "R/final_candidate/persistent": [
+    21.027,
+    373
+   ],
+   "R/final_candidate/flicker": [
+    20.5685,
+    216
+   ],
+   "R/final_candidate/visit": [
+    20.5255,
+    134
+   ],
+   "R/final_candidate/block": [
+    20.472,
+    78
+   ]
+  },
+  "prf_throughput_median": 0.6813273283591544,
+  "vetoes_on_injections": {
+   "static_flux_consistent": 2
+  },
+  "injection_test_rates": {
+   "n_threshold_recovered": 5092,
+   "holdout_pass_by_model": {
+    "persistent": null,
+    "flicker": null,
+    "visit": null,
+    "block": null
+   },
+   "static_fail_fraction": 0.00039277297721916735
+  }
+ },
+ "ledger": {
+  "n_analysis_runs": 2,
+  "n_constraints": 1632,
+  "by_set": {
+   "dev": {
+    "threshold/recovery_curve": 264,
+    "final_candidate/recovery_curve": 264,
+    "threshold/not_constrainable": 24,
+    "final_candidate/not_constrainable": 24
+   },
+   "confirmatory": {
+    "threshold/recovery_curve": 410,
+    "final_candidate/recovery_curve": 410,
+    "threshold/not_constrainable": 118,
+    "final_candidate/not_constrainable": 118
+   }
+  },
+  "n_superseding_v1": 0,
+  "v1_constraints": 0
+ },
+ "geometry": {
+  "mc_samples": 2000,
+  "mc_seed": 20260910,
+  "epochs_jyear": [
+   2009.5,
+   2012.0,
+   2014.5
+  ],
+  "z_au": [
+   550.0,
+   10000.0
+  ],
+  "threshold_arcsec": 1.05,
+  "fwhm_arcsec": 2.1,
+  "n_pairs": 90,
+  "n_cross_track_cells": 9,
+  "max_sigma_xt_99_overall": 11.532578232286296
+ },
+ "control": [
+  {
+   "asteroid": "388125",
+   "n_frames_ok": 17,
+   "rule": "v2 ring-48 / per-frame cap",
+   "clip_sigma": 5.0,
+   "source": "configs/asteroid_control_v1.json (IBE + Horizons site 675, snapshotted)",
+   "colours": {
+    "g": 0.25,
+    "R": -0.15
+   },
+   "n_calibrated": 17,
+   "zp_scatter_median": 0.05396250376160524,
+   "single_snr_median": 3.5309191905540973,
+   "single_frames_above_5sigma": 2,
+   "R": {
+    "n_epochs": 16,
+    "S_max_real": 12.852618217468262,
+    "S_centre": 12.852618217468262,
+    "T_designated": 2.345305919647217,
+    "R_real": 5.480145728452161,
+    "ring_R_median": 0.468806261224289,
+    "ring_R_q95": 1.1353683000156756,
+    "R_norm_real": 4.826755977224746,
+    "rank_statement": {
+     "n_controls": 48,
+     "n_ge": 0,
+     "p_cell": 0.02040816326530612,
+     "frac_ge_ci68": [
+      0.0,
+      0.020408163265306124
+     ],
+     "frac_ge_ci95": [
+      0.0,
+      0.0741026511527422
+     ]
+    },
+    "peak_offset_arcsec": [
+     0.0,
+     0.0
+    ],
+    "recovered_stack_mag": 21.517778396606445,
+    "predicted_mag": 21.32204726210545,
+    "throughput": {
+     "median_dmag": 0.19573020935058594
+    },
+    "throughput_note": "(recovered stack mag minus Horizons-predicted mag with solar colours)"
+   }
+  },
+  {
+   "asteroid": "388125 (no single-epoch clip)",
+   "n_frames_ok": 17,
+   "rule": "v2 ring-48 / per-frame cap",
+   "clip_sigma": null,
+   "source": "configs/asteroid_control_v1.json (IBE + Horizons site 675, snapshotted)",
+   "colours": {
+    "g": 0.25,
+    "R": -0.15
+   },
+   "n_calibrated": 17,
+   "zp_scatter_median": 0.05396250376160524,
+   "single_snr_median": 3.5309191905540973,
+   "single_frames_above_5sigma": 2,
+   "note": "the frozen clip removes frames where a bright mover is individually detected",
+   "R": {
+    "n_epochs": 16,
+    "S_max_real": 14.763398170471191,
+    "S_centre": 14.763398170471191,
+    "T_designated": 11.96999740600586,
+    "R_real": 1.233366864646417,
+    "ring_R_median": 0.10612078984965245,
+    "ring_R_q95": 1.8708588376866664,
+    "R_norm_real": 0.6592516975633962,
+    "rank_statement": {
+     "n_controls": 48,
+     "n_ge": 4,
+     "p_cell": 0.10204081632653061,
+     "frac_ge_ci68": [
+      0.051447816030483276,
+      0.13222565335727182
+     ],
+     "frac_ge_ci95": [
+      0.03288322434995555,
+      0.19553565161066291
+     ]
+    },
+    "peak_offset_arcsec": [
+     0.0,
+     0.0
+    ],
+    "recovered_stack_mag": 21.480945587158203,
+    "predicted_mag": 21.32204726210545,
+    "throughput": {
+     "median_dmag": 0.15889739990234375
+    },
+    "throughput_note": "(recovered stack mag minus Horizons-predicted mag with solar colours)"
+   }
+  },
+  {
+   "asteroid": "798452",
+   "n_frames_ok": 40,
+   "rule": "v2 ring-48 / per-frame cap",
+   "clip_sigma": 5.0,
+   "source": "configs/asteroid_control_v1.json (IBE + Horizons site 675, snapshotted)",
+   "colours": {
+    "g": 0.25,
+    "R": -0.15
+   },
+   "n_calibrated": 40,
+   "zp_scatter_median": 0.04368114664179383,
+   "single_snr_median": 8.507929131643627,
+   "single_frames_above_5sigma": 39,
+   "g": {
+    "n_epochs": 27,
+    "S_max_real": 17.316720962524414,
+    "S_centre": NaN,
+    "T_designated": 2.7725327014923096,
+    "R_real": 6.245813062260267,
+    "ring_R_median": 0.5109384895920446,
+    "ring_R_q95": 0.9311616630886387,
+    "R_norm_real": 6.707549623062305,
+    "rank_statement": {
+     "n_controls": 48,
+     "n_ge": 0,
+     "p_cell": 0.02040816326530612,
+     "frac_ge_ci68": [
+      0.0,
+      0.020408163265306124
+     ],
+     "frac_ge_ci95": [
+      0.0,
+      0.0741026511527422
+     ]
+    },
+    "peak_offset_arcsec": [
+     -1.0,
+     2.0
+    ],
+    "recovered_stack_mag": 21.509052276611328,
+    "predicted_mag": 20.385713712661058,
+    "throughput": {
+     "median_dmag": 1.1233386993408203
+    },
+    "throughput_note": "(recovered stack mag minus Horizons-predicted mag with solar colours)"
+   },
+   "R": {
+    "n_epochs": 13,
+    "S_max_real": 11.594338417053223,
+    "S_centre": NaN,
+    "T_designated": 3.0521275997161865,
+    "R_real": 3.7987725081124935,
+    "ring_R_median": 0.47234137879074184,
+    "ring_R_q95": 1.223497904493817,
+    "R_norm_real": 3.104845945513992,
+    "rank_statement": {
+     "n_controls": 48,
+     "n_ge": 0,
+     "p_cell": 0.02040816326530612,
+     "frac_ge_ci68": [
+      0.0,
+      0.020408163265306124
+     ],
+     "frac_ge_ci95": [
+      0.0,
+      0.0741026511527422
+     ]
+    },
+    "peak_offset_arcsec": [
+     2.0,
+     0.0
+    ],
+    "recovered_stack_mag": 21.385902404785156,
+    "predicted_mag": 20.12621742196896,
+    "throughput": {
+     "median_dmag": 1.2596855163574219
+    },
+    "throughput_note": "(recovered stack mag minus Horizons-predicted mag with solar colours)"
+   }
+  },
+  {
+   "asteroid": "798452 (no single-epoch clip)",
+   "n_frames_ok": 40,
+   "rule": "v2 ring-48 / per-frame cap",
+   "clip_sigma": null,
+   "source": "configs/asteroid_control_v1.json (IBE + Horizons site 675, snapshotted)",
+   "colours": {
+    "g": 0.25,
+    "R": -0.15
+   },
+   "n_calibrated": 40,
+   "zp_scatter_median": 0.04368114664179383,
+   "single_snr_median": 8.507929131643627,
+   "single_frames_above_5sigma": 39,
+   "note": "the frozen clip removes frames where a bright mover is individually detected",
+   "g": {
+    "n_epochs": 27,
+    "S_max_real": 45.9232063293457,
+    "S_centre": 45.9232063293457,
+    "T_designated": 9.540788650512695,
+    "R_real": 4.813355374650073,
+    "ring_R_median": 0.15318569987611258,
+    "ring_R_q95": 1.2201599081669552,
+    "R_norm_real": 3.9448561966612816,
+    "rank_statement": {
+     "n_controls": 48,
+     "n_ge": 0,
+     "p_cell": 0.02040816326530612,
+     "frac_ge_ci68": [
+      0.0,
+      0.020408163265306124
+     ],
+     "frac_ge_ci95": [
+      0.0,
+      0.0741026511527422
+     ]
+    },
+    "peak_offset_arcsec": [
+     0.0,
+     0.0
+    ],
+    "recovered_stack_mag": 20.504718780517578,
+    "predicted_mag": 20.385713712661058,
+    "throughput": {
+     "median_dmag": 0.11900520324707031
+    },
+    "throughput_note": "(recovered stack mag minus Horizons-predicted mag with solar colours)"
+   },
+   "R": {
+    "n_epochs": 13,
+    "S_max_real": 34.80849838256836,
+    "S_centre": 34.80849838256836,
+    "T_designated": 36.89107894897461,
+    "R_real": 0.9435478542309174,
+    "ring_R_median": 0.04222918890936869,
+    "ring_R_q95": 0.5235269432904807,
+    "R_norm_real": 1.8022909161093295,
+    "rank_statement": {
+     "n_controls": 48,
+     "n_ge": 1,
+     "p_cell": 0.04081632653061224,
+     "frac_ge_ci68": [
+      0.007986165483588315,
+      0.053238324312330054
+     ],
+     "frac_ge_ci95": [
+      0.003687015979399688,
+      0.10899469137531158
+     ]
+    },
+    "peak_offset_arcsec": [
+     0.0,
+     0.0
+    ],
+    "recovered_stack_mag": 20.22240447998047,
+    "predicted_mag": 20.12621742196896,
+    "throughput": {
+     "median_dmag": 0.09618759155273438
+    },
+    "throughput_note": "(recovered stack mag minus Horizons-predicted mag with solar colours)"
+   }
+  }
+ ]
+}

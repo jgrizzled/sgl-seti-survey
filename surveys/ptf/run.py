@@ -1,0 +1,11 @@
+"""PTF v2 driver: uv run python surveys/ptf/run.py <stage> [opts]."""
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from profile import PROFILE  # noqa: E402
+
+from sglsurvey.cli import main  # noqa: E402
+
+if __name__ == "__main__":
+    main(PROFILE)

@@ -1027,6 +1027,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -1035,9 +1036,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1102,6 +1104,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -1110,9 +1113,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1177,6 +1181,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -1185,9 +1190,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1252,6 +1258,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -1260,9 +1267,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1360,6 +1368,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -1368,9 +1377,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1435,6 +1445,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -1443,9 +1454,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1510,6 +1522,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -1518,9 +1531,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1585,6 +1599,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -1593,9 +1608,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1643,6 +1659,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -1650,9 +1667,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1717,6 +1735,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -1724,9 +1743,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1791,6 +1811,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -1798,9 +1819,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1865,6 +1887,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -1872,9 +1895,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -1972,6 +1996,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -1979,9 +2004,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2046,6 +2072,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2053,9 +2080,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2120,6 +2148,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2127,9 +2156,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2194,6 +2224,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2201,9 +2232,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2251,6 +2283,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2258,9 +2291,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2326,6 +2360,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2333,9 +2368,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2401,6 +2437,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2408,9 +2445,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2476,6 +2514,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2483,9 +2522,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2585,6 +2625,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2592,9 +2633,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2660,6 +2702,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2667,9 +2710,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2735,6 +2779,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2742,9 +2787,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2810,6 +2856,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2817,9 +2864,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2867,6 +2915,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2874,9 +2923,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -2941,6 +2991,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -2948,9 +2999,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3015,6 +3067,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -3022,9 +3075,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3089,6 +3143,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -3096,9 +3151,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3196,6 +3252,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -3203,9 +3260,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3270,6 +3328,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -3277,9 +3336,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3344,6 +3404,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -3351,9 +3412,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3418,6 +3480,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -3425,9 +3488,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3492,6 +3556,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -3500,9 +3565,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3567,6 +3633,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -3575,9 +3642,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3642,6 +3710,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -3650,9 +3719,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3717,6 +3787,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -3725,9 +3796,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3825,6 +3897,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -3833,9 +3906,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3900,6 +3974,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -3908,9 +3983,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -3975,6 +4051,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -3983,9 +4060,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4050,6 +4128,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4058,9 +4137,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4122,6 +4202,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4130,10 +4211,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4198,6 +4280,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4206,10 +4289,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4274,6 +4358,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4282,10 +4367,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4350,6 +4436,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4358,10 +4445,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4459,6 +4547,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4467,10 +4556,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4535,6 +4625,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4543,10 +4634,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4611,6 +4703,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4619,10 +4712,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4687,6 +4781,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -4695,10 +4790,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4762,15 +4858,17 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 2
+    "searched": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4835,15 +4933,17 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 2
+    "searched": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4908,15 +5008,17 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 2
+    "searched": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -4981,15 +5083,17 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 2
+    "searched": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5087,16 +5191,18 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 1,
+    "searched": 3,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5161,16 +5267,18 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 1,
+    "searched": 3,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5235,16 +5343,18 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 1,
+    "searched": 3,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5309,15 +5419,17 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 2
+    "searched": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5424,16 +5536,19 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
-    "structurally_open": 2
+    "searched": 1,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5499,16 +5614,19 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
-    "structurally_open": 2
+    "searched": 1,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5574,16 +5692,19 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
-    "structurally_open": 2
+    "searched": 1,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5649,16 +5770,19 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
-    "structurally_open": 2
+    "searched": 1,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5758,6 +5882,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -5766,9 +5891,10 @@
    "best_state": "searched",
    "states": {
     "searched": 1,
-    "structurally_open": 1
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5834,6 +5960,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -5842,9 +5969,10 @@
    "best_state": "searched",
    "states": {
     "searched": 1,
-    "structurally_open": 1
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5910,6 +6038,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -5918,9 +6047,10 @@
    "best_state": "searched",
    "states": {
     "searched": 1,
-    "structurally_open": 1
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -5986,16 +6116,19 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
-    "structurally_open": 2
+    "searched": 1,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6091,6 +6224,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -6100,9 +6234,10 @@
    "best_state": "searched",
    "states": {
     "searched": 3,
-    "structurally_open": 3
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6166,6 +6301,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -6175,9 +6311,10 @@
    "best_state": "searched",
    "states": {
     "searched": 3,
-    "structurally_open": 3
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6241,6 +6378,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -6250,9 +6388,10 @@
    "best_state": "searched",
    "states": {
     "searched": 3,
-    "structurally_open": 3
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6316,6 +6455,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -6324,10 +6464,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
-    "structurally_open": 3
+    "searched": 4,
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6423,6 +6564,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -6432,9 +6574,10 @@
    "best_state": "searched",
    "states": {
     "searched": 3,
-    "structurally_open": 3
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6498,6 +6641,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -6507,9 +6651,10 @@
    "best_state": "searched",
    "states": {
     "searched": 3,
-    "structurally_open": 3
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6573,6 +6718,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -6582,9 +6728,10 @@
    "best_state": "searched",
    "states": {
     "searched": 3,
-    "structurally_open": 3
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6648,6 +6795,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -6657,9 +6805,10 @@
    "best_state": "searched",
    "states": {
     "searched": 3,
-    "structurally_open": 3
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6738,6 +6887,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -6745,9 +6895,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6811,6 +6962,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -6818,9 +6970,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6884,6 +7037,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -6891,9 +7045,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -6957,6 +7112,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -6964,9 +7120,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7062,6 +7219,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -7069,9 +7227,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7135,6 +7294,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -7142,9 +7302,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7208,6 +7369,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -7215,9 +7377,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7281,6 +7444,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -7288,9 +7452,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7391,6 +7556,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -7399,9 +7565,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7466,6 +7633,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -7474,9 +7642,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7541,6 +7710,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -7549,9 +7719,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7616,6 +7787,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -7624,9 +7796,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7724,6 +7897,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -7732,9 +7906,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7799,6 +7975,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -7807,9 +7984,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7874,6 +8053,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -7882,9 +8062,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -7949,6 +8131,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -7957,9 +8140,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8007,6 +8192,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -8014,9 +8200,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8080,6 +8267,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -8087,9 +8275,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8153,6 +8342,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -8160,9 +8350,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8226,6 +8417,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -8233,10 +8425,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8332,6 +8525,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -8339,9 +8533,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8405,6 +8600,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -8412,9 +8608,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8478,6 +8675,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -8485,9 +8683,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8551,6 +8750,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -8558,9 +8758,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -8976,16 +9177,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -9650,16 +9853,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -10354,16 +10559,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -11017,16 +11224,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -11891,6 +12100,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -11898,9 +12108,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -11964,6 +12175,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -11971,9 +12183,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12037,6 +12250,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -12044,9 +12258,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12110,6 +12325,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -12117,9 +12333,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12215,6 +12432,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -12222,9 +12440,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12288,6 +12507,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -12295,9 +12515,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12361,6 +12582,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -12368,9 +12590,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12434,6 +12657,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -12441,9 +12665,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12815,6 +13040,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -12823,9 +13049,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12890,6 +13117,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -12898,9 +13126,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -12965,6 +13194,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -12973,9 +13203,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -13040,6 +13271,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -13048,9 +13280,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -13148,6 +13381,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -13156,9 +13390,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -13223,6 +13458,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -13231,9 +13467,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -13298,6 +13535,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -13306,9 +13544,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -13373,6 +13612,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -13381,9 +13621,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14024,6 +14265,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -14032,10 +14274,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14100,6 +14343,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -14108,10 +14352,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14176,6 +14421,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -14184,10 +14430,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14252,6 +14499,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -14260,10 +14508,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14361,6 +14610,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -14369,10 +14619,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14437,6 +14688,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -14445,10 +14697,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14513,6 +14766,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -14521,10 +14775,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14589,6 +14844,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -14597,10 +14853,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 7,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -14945,16 +15202,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -15574,16 +15833,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -16435,6 +16696,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -16444,9 +16706,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -16511,6 +16774,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -16519,10 +16783,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
-    "structurally_open": 2
+    "searched": 5,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -16587,6 +16852,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -16595,10 +16861,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
-    "structurally_open": 2
+    "searched": 5,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -16663,6 +16930,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -16671,10 +16939,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
-    "structurally_open": 2
+    "searched": 5,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -16772,6 +17041,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -16781,9 +17051,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -16848,6 +17119,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -16857,9 +17129,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -16924,6 +17197,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -16933,9 +17207,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -17000,6 +17275,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -17009,9 +17285,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -17377,16 +17654,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -17999,16 +18278,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -18391,6 +18672,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -18399,9 +18681,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -18465,6 +18748,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -18473,9 +18757,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -18539,6 +18824,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -18547,9 +18833,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -18613,6 +18900,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -18621,9 +18909,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -18719,6 +19008,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -18727,9 +19017,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -18793,6 +19084,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -18801,9 +19093,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -18867,6 +19160,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -18875,9 +19169,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -18941,6 +19236,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -18949,9 +19245,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -20812,16 +21109,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -21186,6 +21485,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21193,9 +21493,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21261,6 +21562,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21268,9 +21570,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21336,6 +21639,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21343,9 +21647,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21411,6 +21716,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21418,9 +21724,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21520,6 +21827,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21527,9 +21835,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21595,6 +21904,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21602,9 +21912,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21670,6 +21981,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21677,9 +21989,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21745,6 +22058,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21752,9 +22066,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21890,6 +22205,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21897,9 +22213,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -21964,6 +22281,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -21971,9 +22289,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22038,6 +22357,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22045,9 +22365,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22112,6 +22433,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22119,9 +22441,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22219,6 +22542,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22226,9 +22550,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22293,6 +22618,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22300,9 +22626,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22367,6 +22694,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22374,9 +22702,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22441,6 +22770,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22448,9 +22778,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22512,6 +22843,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22519,9 +22851,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22585,6 +22919,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22592,9 +22927,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22658,6 +22995,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22665,9 +23003,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22731,6 +23071,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22738,9 +23079,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22836,6 +23179,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22843,9 +23187,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22909,6 +23255,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22916,9 +23263,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -22982,6 +23331,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -22989,9 +23339,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -23055,6 +23407,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -23062,9 +23415,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -23437,16 +23792,19 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "constraint_only",
    "states": {
-    "constraint_only": 1
+    "constraint_only": 1,
+    "ledger_only": 1
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -23815,6 +24173,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -23823,9 +24182,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -23891,6 +24251,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -23899,9 +24260,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -23967,6 +24329,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -23975,9 +24338,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -24043,6 +24407,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -24051,9 +24416,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -24153,6 +24519,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -24161,9 +24528,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -24229,6 +24597,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -24237,9 +24606,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -24305,6 +24675,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -24313,9 +24684,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -24381,6 +24753,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -24389,9 +24762,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -24725,16 +25099,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -25543,6 +25919,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -25550,9 +25927,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -25617,6 +25995,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -25624,9 +26003,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -25691,6 +26071,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -25698,9 +26079,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -25765,6 +26147,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -25772,9 +26155,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -25872,6 +26256,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -25879,9 +26264,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -25946,6 +26332,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -25953,9 +26340,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26020,6 +26408,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26027,9 +26416,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26094,6 +26484,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26101,9 +26492,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26151,6 +26543,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26158,9 +26551,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26224,6 +26618,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26231,9 +26626,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26297,6 +26693,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26304,9 +26701,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26370,6 +26768,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26377,9 +26776,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26475,6 +26875,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26482,9 +26883,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26548,6 +26950,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26555,9 +26958,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26621,6 +27025,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26628,9 +27033,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -26694,6 +27100,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -26701,9 +27108,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -27081,16 +27489,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -27719,16 +28129,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -28357,16 +28769,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -29198,6 +29612,8 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -29206,9 +29622,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29273,6 +29691,8 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -29281,9 +29701,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29348,6 +29770,8 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -29356,9 +29780,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29423,6 +29849,8 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -29431,9 +29859,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29531,6 +29961,8 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -29539,9 +29971,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29606,6 +30040,8 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -29614,9 +30050,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29681,6 +30119,8 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -29689,9 +30129,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29756,6 +30198,8 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -29764,9 +30208,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29830,6 +30276,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -29838,10 +30285,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 6,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29907,6 +30355,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -29915,10 +30364,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 6,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -29984,6 +30434,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -29992,10 +30443,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 6,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30061,6 +30513,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -30069,10 +30522,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 6,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30172,6 +30626,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -30180,10 +30635,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 6,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30249,6 +30705,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -30257,10 +30714,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 6,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30326,6 +30784,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -30334,10 +30793,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 6,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30403,6 +30863,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -30411,10 +30872,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 6,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30478,6 +30940,8 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -30485,9 +30949,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30551,6 +31017,8 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -30558,9 +31026,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30624,6 +31094,8 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -30631,9 +31103,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30697,6 +31171,8 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -30704,9 +31180,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 5,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30802,6 +31280,8 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -30809,9 +31289,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30875,6 +31356,8 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -30882,9 +31365,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -30948,6 +31432,8 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -30955,9 +31441,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31021,6 +31508,8 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -31028,9 +31517,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31128,6 +31618,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -31136,9 +31627,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31204,6 +31696,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -31212,9 +31705,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31280,6 +31774,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -31288,9 +31783,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31356,6 +31852,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -31364,9 +31861,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31466,6 +31964,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -31474,9 +31973,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31542,6 +32042,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -31550,9 +32051,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31618,6 +32120,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -31626,9 +32129,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -31694,6 +32198,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -31702,9 +32207,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -32166,16 +32672,19 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "constraint_only",
    "states": {
-    "constraint_only": 1
+    "constraint_only": 1,
+    "ledger_only": 1
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -32565,6 +33074,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -32572,9 +33082,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -32639,6 +33150,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -32646,9 +33158,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -32713,6 +33226,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -32720,9 +33234,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -32787,6 +33302,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -32794,9 +33310,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -32894,6 +33411,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -32901,9 +33419,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -32968,6 +33487,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -32975,9 +33495,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -33042,6 +33563,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -33049,9 +33571,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -33116,6 +33639,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -33123,9 +33647,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -33513,16 +34038,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -33866,6 +34393,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -33873,9 +34401,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -33940,6 +34469,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -33947,9 +34477,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34014,6 +34545,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34021,9 +34553,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34088,6 +34621,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34095,9 +34629,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34195,6 +34730,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34202,9 +34738,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34269,6 +34806,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34276,9 +34814,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34343,6 +34882,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34350,9 +34890,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34417,6 +34958,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34424,9 +34966,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34494,6 +35037,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34501,9 +35045,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34569,6 +35114,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34576,9 +35122,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34644,6 +35191,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34651,9 +35199,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34719,6 +35268,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34726,9 +35276,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34828,6 +35379,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34835,9 +35387,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34903,6 +35456,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34910,9 +35464,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -34978,6 +35533,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -34985,9 +35541,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -35053,6 +35610,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -35060,9 +35618,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -36562,6 +37121,8 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -36569,9 +37130,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -36636,6 +37198,8 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -36643,9 +37207,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -36710,6 +37275,8 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -36717,9 +37284,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -36784,6 +37352,8 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -36791,9 +37361,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -36891,6 +37462,8 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -36898,9 +37471,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -36965,6 +37539,8 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -36972,9 +37548,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37039,6 +37616,8 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -37046,9 +37625,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37113,6 +37693,8 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -37120,9 +37702,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37200,6 +37783,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37207,9 +37791,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37275,6 +37860,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37282,9 +37868,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37350,6 +37937,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37357,9 +37945,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37425,6 +38014,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37432,9 +38022,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37534,6 +38125,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37541,9 +38133,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37609,6 +38202,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37616,9 +38210,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37684,6 +38279,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37691,9 +38287,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37759,6 +38356,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37766,9 +38364,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37833,6 +38432,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37840,9 +38440,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37906,6 +38507,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37913,9 +38515,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -37979,6 +38582,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -37986,9 +38590,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -38052,6 +38657,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -38059,9 +38665,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -38157,6 +38764,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -38164,9 +38772,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -38230,6 +38839,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -38237,9 +38847,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -38303,6 +38914,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -38310,9 +38922,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -38376,6 +38989,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -38383,9 +38997,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -38924,6 +39539,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -38932,9 +39548,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -38999,6 +39617,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -39007,9 +39626,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -39074,6 +39695,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -39082,9 +39704,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -39149,6 +39773,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -39157,9 +39782,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -39257,6 +39884,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -39265,9 +39893,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -39332,6 +39962,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -39340,9 +39971,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -39407,6 +40040,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -39415,9 +40049,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -39482,6 +40118,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -39490,9 +40127,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -39812,16 +40451,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -40154,6 +40795,8 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -40161,9 +40804,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -40227,6 +40872,8 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -40234,9 +40881,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -40299,6 +40948,8 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -40306,10 +40957,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
-    "structurally_open": 1
+    "searched": 6,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -40372,6 +41024,8 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -40379,10 +41033,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 1,
-    "structurally_open": 3
+    "searched": 3,
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -40478,6 +41133,8 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -40485,9 +41142,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -40551,6 +41210,8 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -40558,9 +41219,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -40624,6 +41287,8 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -40631,9 +41296,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -40697,6 +41364,8 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -40704,9 +41373,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 7,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -41058,16 +41729,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -41694,16 +42367,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -42343,16 +43018,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -42998,16 +43675,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -43653,16 +44332,18 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "ledger_only",
    "states": {
-    "ledger_only": 1
+    "ledger_only": 2
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -44423,6 +45104,7 @@
     "G/BP/RP astrometry",
     "J6",
     "JHK / photographic",
+    "R",
     "W1",
     "W1/W2 (colour axis)",
     "W2",
@@ -44446,14 +45128,15 @@
    "states": {
     "ledger_only": 1,
     "no_survey": 8,
-    "searched": 38,
-    "structurally_open": 24
+    "searched": 42,
+    "structurally_open": 25
    },
    "surveys": [
     "decam_survey",
     "joint_ps1_ztf_wise",
     "plan_no_survey",
     "ps1_survey",
+    "ptf_survey",
     "spherex_joint6",
     "spherex_survey",
     "wise_survey",
@@ -44483,16 +45166,19 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
+    "searched": 2,
     "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -44557,16 +45243,19 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
+    "searched": 2,
     "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -44632,16 +45321,19 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
+    "searched": 2,
     "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -44707,16 +45399,19 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
-   "best_state": "structurally_open",
+   "best_state": "searched",
    "states": {
+    "searched": 2,
     "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -44816,6 +45511,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -44823,9 +45519,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -44891,6 +45588,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -44898,9 +45596,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -44966,6 +45665,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -44973,9 +45673,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45041,6 +45742,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -45048,10 +45750,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45319,6 +46022,8 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -45326,9 +46031,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45393,6 +46099,8 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -45400,9 +46108,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45467,6 +46176,8 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -45474,9 +46185,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45541,6 +46253,8 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -45548,9 +46262,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45648,6 +46363,8 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -45655,9 +46372,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45722,6 +46440,8 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -45729,9 +46449,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45796,6 +46517,8 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -45803,9 +46526,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -45870,6 +46594,8 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zr"
    ],
@@ -45877,9 +46603,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 8
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -46345,16 +47072,19 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "constraint_only",
    "states": {
-    "constraint_only": 1
+    "constraint_only": 1,
+    "ledger_only": 1
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -49830,6 +50560,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -49837,9 +50568,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -49904,6 +50636,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -49911,9 +50644,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -49978,6 +50712,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -49985,9 +50720,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -50052,6 +50788,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -50059,9 +50796,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -50159,6 +50897,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -50166,9 +50905,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -50233,6 +50973,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -50240,9 +50981,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -50307,6 +51049,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -50314,9 +51057,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -50381,6 +51125,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -50388,9 +51133,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4
+    "searched": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -51048,16 +51794,19 @@
   },
   "corridor|550-10000 AU": {
    "bands": [
-    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones"
+    "0.2\u20132.3 keV (eROSITA UL) + X-ray/\u03b3-ray catalogue cones",
+    "any"
    ],
    "best_power_mw": null,
    "best_power_survey": null,
    "best_state": "constraint_only",
    "states": {
-    "constraint_only": 1
+    "constraint_only": 1,
+    "ledger_only": 1
    },
    "surveys": [
-    "highenergy_crossings"
+    "highenergy_crossings",
+    "ptf_survey"
    ]
   },
   "corridor|550-619.7 AU": {
@@ -51647,6 +52396,8 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -51655,10 +52406,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 9,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -51723,6 +52475,8 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -51731,10 +52485,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 8,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -51799,6 +52554,8 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -51807,10 +52564,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 8,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -51875,6 +52633,8 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -51883,10 +52643,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
+    "searched": 8,
     "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -51984,6 +52745,8 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -51992,9 +52755,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 10
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52059,6 +52823,8 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52067,9 +52833,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 10
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52134,6 +52901,8 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52142,9 +52911,10 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 10
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52209,6 +52979,8 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52217,10 +52989,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
+    "searched": 9,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52292,6 +53065,8 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52300,9 +53075,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52366,6 +53143,8 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52374,9 +53153,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52440,6 +53221,8 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52448,9 +53231,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52514,6 +53299,8 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52522,9 +53309,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 9,
+    "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52620,6 +53409,8 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52628,9 +53419,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52694,6 +53487,8 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52702,9 +53497,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52768,6 +53565,8 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52776,9 +53575,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52842,6 +53643,8 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -52850,9 +53653,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -52944,6 +53749,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -52953,9 +53759,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -53019,6 +53826,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -53028,9 +53836,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -53094,6 +53903,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -53103,9 +53913,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -53169,6 +53980,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -53178,9 +53990,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -53276,6 +54089,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -53285,9 +54099,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -53351,6 +54166,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -53360,9 +54176,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -53426,6 +54243,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -53435,9 +54253,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -53501,6 +54320,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zi",
     "zr"
@@ -53510,9 +54330,10 @@
    "best_state": "searched",
    "states": {
     "searched": 4,
-    "structurally_open": 2
+    "structurally_open": 4
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -54367,6 +55188,8 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -54375,10 +55198,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
-    "structurally_open": 1
+    "searched": 7,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -54442,6 +55266,8 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -54450,10 +55276,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
-    "structurally_open": 1
+    "searched": 7,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -54517,6 +55344,8 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -54525,10 +55354,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 4,
-    "structurally_open": 2
+    "searched": 5,
+    "structurally_open": 5
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -54592,6 +55422,8 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -54600,10 +55432,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
-    "structurally_open": 3
+    "searched": 4,
+    "structurally_open": 6
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -54699,6 +55532,8 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -54707,9 +55542,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -54773,6 +55610,8 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -54781,9 +55620,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 6
+    "searched": 8,
+    "structurally_open": 2
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -54847,6 +55688,8 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -54855,10 +55698,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
-    "structurally_open": 1
+    "searched": 7,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -54922,6 +55766,8 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
+    "g",
     "zg",
     "zi",
     "zr"
@@ -54930,10 +55776,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 5,
-    "structurally_open": 1
+    "searched": 7,
+    "structurally_open": 3
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -55026,6 +55873,7 @@
   },
   "corridor|1042.7-1345.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -55033,10 +55881,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -55100,6 +55949,7 @@
   },
   "corridor|1345.5-1896.5 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -55107,10 +55957,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -55174,6 +56025,7 @@
   },
   "corridor|1896.5-3211.3 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -55181,10 +56033,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -55248,6 +56101,7 @@
   },
   "corridor|3211.3-10000 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -55255,10 +56109,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -55354,6 +56209,7 @@
   },
   "corridor|550-622.4 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -55361,10 +56217,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -55428,6 +56285,7 @@
   },
   "corridor|622.4-719 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -55435,10 +56293,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -55502,6 +56361,7 @@
   },
   "corridor|719-851.1 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -55509,10 +56369,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },
@@ -55576,6 +56437,7 @@
   },
   "corridor|851.1-1042.7 AU": {
    "bands": [
+    "R",
     "zg",
     "zr"
    ],
@@ -55583,10 +56445,11 @@
    "best_power_survey": null,
    "best_state": "searched",
    "states": {
-    "searched": 3,
+    "searched": 5,
     "structurally_open": 1
    },
    "surveys": [
+    "ptf_survey",
     "ztf_survey"
    ]
   },

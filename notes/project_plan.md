@@ -472,6 +472,48 @@ controls of §4.4, §4.5, §5.9 and §5.13).
 
 **Trigger.** A candidate that survives a confirmatory run — none has.
 
+### 4.13 PTF/iPTF corridor survey
+
+**Description.** Pipeline A over the IRSA PTF level-1 epochal images
+(Palomar P48, 2009-03 → 2015-01, g + Mould R) on the 62 Palomar-
+visible corridors — the only other 1″-class multi-epoch optical
+archive of the PS1 era on the northern sky, from a different site,
+cadence and filter set. Adopted 2026-09-10 (the cross-pipeline
+data-set review) for the parallax phases PS1's single-phase 3π
+cadence lacks before 2018 and for an era-independent re-observation
+of the PS1 corridors; not for depth (R ~ 21 per epoch). The adapter
+built for the crossings survey (§5.10) served as-is bar a vectorised
+containment test; the substrate is scie-direct (no archive difference
+images) with per-frame PS1 DR2 star calibration (R via the Jordi 2006
+transform + 0.21 mag to AB) and full TAN-SIP sampling. Second survey
+built directly on the v2 engine with no v1 phase (`surveys/ptf/`).
+
+**Status.** **COMPLETE 2026-09-10** — report `report/ptf_survey.md`;
+execution log `notes/project_history.md` §29. Chain in one day: coarse
+discovery (69 endpoints, 5,933 CCD exposures) → precise pass (3,550 hit
+exposures, zero 404s) → overlay (40/62 corridors searchable at the
+5-epoch floor; 22 ledger-only) → pilot cutouts + zero points, WCS-
+linearity and flux-scale checks, geometry stage (9/90 cross-track
+cells) → two SkyBoT-found asteroid controls inside the pilot fields
+(the (60000) control has only 10 PTF frames) → freeze v1.0 (user-
+approved; ross128, kapteyn, ltt1445, vanmaanen forced into dev) → dev
+chain → blind confirmatory once → report.
+
+**Result.** **0 candidates** (blind confirmatory 31 endpoints / 66
+cells over 27 corridors, R̃_FWER 1.724, 8 R > 1 vs 8.3 expected, 5
+void; development 14 / 36, R̃_FWER 1.422); 1,632 injection-calibrated
+constraints; median persistent m90 **g 21.1 / R 21.0 AB** (threshold =
+final-candidate; the static veto fired on 0.0 % of recovered
+injections), ~2 mag shallower than PS1/ZTF as expected; 33 of 66
+confirmatory cells hold both parallax phases before 2015 — the cell
+the survey was adopted for; 118/528 confirmatory threshold constraints
+`not_constrainable` in the campaign-driven coverage (R carries 58 of
+66 cells). Controls: (798452) 2012 QR36 recovered R̃ 6.7 g / 3.1 R,
+flux scale +0.10–0.12 mag vs Horizons + solar colours; (388125)
+2005 UP482 (stack regime, V 21.6) recovered R̃ 4.8. Follow-on: a
+PS1 + PTF + ZTF joint on a common µ reference epoch is a rebuild
+(learnings §10); the archive is closed, no yearly refresh.
+
 ## 5. Pipeline B — crossings surveys
 
 
@@ -1393,12 +1435,15 @@ Decisions 1–5 approved 2026-09-10 (scope, states, native units,
 provenance, ECSV + report); six parallel harvest passes over the 27
 reports; 22 of the 28 harvest files regenerate byte-identically from
 generators kept in `scripts/harvest/`, six are hand transcriptions.
+The PTF corridor survey (§4.13) was folded in the same day by a seventh
+generator (`pipeline_a_ptf.py`).
 
-**Result.** 28,588 rows from 28 sources, **0 candidates**: 20,541
-searched, 191 constraint-only, 344 ledger-only, 7,301 structurally
-open, 87 not constrainable, 97 no-survey, 16 retained-ambiguous and 11
-vetoed rows; 28 AnalysisRun, 21,163 Constraint, 27 Candidate records.
-Pipeline A: all 88 endpoints searched, 61 in six surveys. Pipeline B:
+**Result.** 29,433 rows from 29 sources (refreshed 2026-09-10 with the
+PTF corridor survey, §4.13), **0 candidates**: 21,219 searched, 191
+constraint-only, 368 ledger-only, 7,444 structurally open, 87 not
+constrainable, 97 no-survey, 16 retained-ambiguous and 11 vetoed rows;
+29 AnalysisRun, 21,865 Constraint, 27 Candidate records. Pipeline A:
+all 88 endpoints searched, 61 in six or more surveys. Pipeline B:
 102 distinct (target, channel, rung) cells searched over 37 targets, 35
 with a published power limit; **14 registry targets have no per-target
 crossings row in any report** (82-eri, alpha-cen-a/b, gj-1061, gj-367,

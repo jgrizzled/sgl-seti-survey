@@ -80,6 +80,19 @@ class PtfNominalFootprint:
         return (-0.5 - p <= x <= self._nx - 0.5 + p
                 and -0.5 - p <= y <= self._ny - 0.5 + p)
 
+    def contains_any(self, radec_deg) -> bool:
+        """Vectorised containment for an (N, 2) deg array (coarse
+        stage of the corridor survey; ZTF adapter twin)."""
+        import numpy as np
+
+        pix = self._wcs.wcs_world2pix(radec_deg, 0)
+        with np.errstate(invalid="ignore"):
+            x, y = pix[:, 0], pix[:, 1]
+            p = self._pad_pix
+            ok = ((x >= -0.5 - p) & (x <= self._nx - 0.5 + p)
+                  & (y >= -0.5 - p) & (y <= self._ny - 0.5 + p))
+        return bool(np.any(ok))
+
 
 class PtfExactFootprint:
     """Exact usable-pixel test from a dmask product or cutout: full

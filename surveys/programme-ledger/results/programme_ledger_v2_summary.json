@@ -1,17 +1,17 @@
 {
  "ledger_version": "2.0.0",
- "n_rows": 28588,
- "n_surveys": 28,
- "n_harvest_rows": 28476,
+ "n_rows": 29433,
+ "n_surveys": 29,
+ "n_harvest_rows": 29298,
  "candidates_total": 0,
  "by_status": {
   "constraint_only": 191,
-  "ledger_only": 344,
+  "ledger_only": 368,
   "no_survey": 97,
   "not_constrainable": 87,
   "retained_ambiguous": 16,
-  "searched": 20541,
-  "structurally_open": 7301,
+  "searched": 21219,
+  "structurally_open": 7444,
   "vetoed_known_source": 11
  },
  "by_channel": {
@@ -19,19 +19,19 @@
   "B": 342,
   "S1": 78,
   "S2": 120,
-  "corridor": 27477
+  "corridor": 28322
  },
  "by_rung_class": {
   "0.1 AU": 470,
   "1.0 AU": 338,
   "any": 36,
-  "corridor": 27477,
+  "corridor": 28322,
   "grazing": 226,
   "sub-1 AU skirt": 41
  },
  "by_pipeline": {
   "": 42,
-  "A": 27383,
+  "A": 28228,
   "B": 1163
  },
  "n_targets_named": 88,
@@ -386,6 +386,19 @@
     "searched": 971,
     "structurally_open": 4562,
     "no_survey": 19
+   }
+  },
+  "ptf_survey": {
+   "rows": 845,
+   "harvest_rows": 822,
+   "candidates": 0,
+   "pipeline": "A",
+   "plan_section": "4.13",
+   "report": "report/ptf_survey.md",
+   "statuses": {
+    "searched": 678,
+    "structurally_open": 143,
+    "ledger_only": 24
    }
   },
   "spherex_joint6": {

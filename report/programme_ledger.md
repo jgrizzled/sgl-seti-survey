@@ -18,19 +18,19 @@ those statements available as the stable Constraint / AnalysisRun /
 Candidate records the plan promised, rather than as 27 differently shaped
 results directories?
 
-**Answer.** The ledger holds **28,588 rows from 28 sources** (27 reports +
+**Answer.** The ledger holds **29,433 rows from 29 sources** (28 reports +
 the plan's no-survey rows); **0 candidates** programme-wide. By coverage
-state: 20,541 `searched` (a calibrated depth), 191 `constraint_only`, 344
-`ledger_only`, 7,301 `structurally_open`, 87 `not_constrainable`, 97
+state: 21,219 `searched` (a calibrated depth), 191 `constraint_only`, 368
+`ledger_only`, 7,444 `structurally_open`, 87 `not_constrainable`, 97
 `no_survey`, plus 16 `retained_ambiguous` and 11 `vetoed_known_source`
 exceedance rows. The Pipeline A corridor half is dense and uniform: all 88
-endpoints have searched corridor cells, 61 of them in six surveys, and the
+endpoints have searched corridor cells, 61 of them in six or more surveys, and the
 per-endpoint depths are in Table 5. The Pipeline B crossings half is
 sparse by construction: **102 distinct (target, channel, rung) cells are
 searched across 37 targets**, 35 of those targets carry at least one
 published transmitter-power limit, and the per-target matrix (Table 3) is
 the first place every sunward, antipode and uplink cell of a given star
-can be read together. Records: 28 AnalysisRun, 21,163 Constraint and 27
+can be read together. Records: 29 AnalysisRun, 21,865 Constraint and 27
 Candidate records in the shared schema, content-addressed, each citing
 its report section or results file.
 
@@ -123,7 +123,7 @@ here, Table 4 (the 236 programme-wide statements) is in the results file.
 **Refresh.** Re-run the generators (or edit a hand-transcribed YAML),
 then `build_ledger_v2.py` and `render_tables.py`; a re-run survey needs
 only its generator's source paths pointed at the new records / results.
-The full 28,588-row table lives with the records under `runs/`; the
+The full 29,433-row table lives with the records under `runs/`; the
 tracked results directory keeps the 1,182-row crossings + programme-wide
 subset, the matrix, the summary and the tables.
 
@@ -486,7 +486,7 @@ the state vocabulary; the mapping is stated on the row's `notes`.
 | harvest, generated Pipeline A (7 YAML) | `runs/programme-ledger/v2/harvest_generated/*.yaml` |
 | harvest generators (5) | `surveys/programme-ledger/scripts/harvest/*.py` |
 | build / render | `surveys/programme-ledger/scripts/{build_ledger_v2,render_tables}.py` |
-| full ledger table (28,588 rows) | `runs/programme-ledger/v2/programme_ledger_v2.ecsv` |
+| full ledger table (29,433 rows) | `runs/programme-ledger/v2/programme_ledger_v2.ecsv` |
 | crossings + programme-wide subset | `surveys/programme-ledger/results/programme_ledger_v2_crossings.ecsv` |
 | per-target matrix | `surveys/programme-ledger/results/programme_ledger_v2_matrix.json` |
 | summary | `surveys/programme-ledger/results/programme_ledger_v2_summary.json` |

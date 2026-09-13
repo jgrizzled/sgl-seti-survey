@@ -2492,3 +2492,74 @@ retained-ambiguous cells enumerated; the harvest passes' mapping
 judgement calls and the report-internal inconsistencies they found
 listed for review (report §5). Plan §6 added, §5.27 TESS/GALEX fold-in
 struck; README status line updated. Nothing committed to git.
+
+## 29. PTF/iPTF corridor survey — recon through report (2026-09-10; plan §4.13 — complete)
+
+Origin: the cross-pipeline data-set review (which data sets of
+Pipeline B could serve Pipeline A and vice versa). Findings recorded
+for the plan: A → B has nothing to offer — DECam is the obvious
+candidate but a metadata intersect of its 16,283-exposure corridor
+registry with the universal crossing windows found 0 channel-B
+in-window exposures, because only the seven northern grazing-family
+targets have any crossing closer than 0.1 AU (the 15 DECam corridors
+belong to b_min ≥ 0.45 AU targets; the ledger's "14 targets with no
+crossings row" all have b_min 0.65–0.98 AU and can never get a sub-
+1 AU constraint from any archive); B → A: PTF/iPTF (adopted, this
+section) and a Rubin DP2 catalog-level corridor screen on the
+crossings survey's DiaSource machinery (noted, not run); the
+high-energy corridor screen and eROSITA upper limits were already
+realised inside §5.26.
+
+**Recon and geometric stages.** IRSA IBE up (12 s per corridor
+query). `surveys/ptf/` built on the DECam pattern: corridor set = the
+62 ZTF-visible corridors (same Palomar site → `GeometryContext.
+ztf_default()`), ports of the ZTF coarse/precise/fetch scripts onto
+`PtfLevel1Adapter` (one adapter addition: `contains_any` on the
+nominal footprint). Coarse: 69 endpoints, 5,933 CCD exposures,
+13,058 evaluations, 3,550 hit exposures (~35 min). Precise: 600-px
+dmask cutouts, 7,689 evaluations — 7,293 usable / 221 partial / 175
+no-usable-pixel crossing, zero 404s (12 min). Overlay
+(`targets/build_ptf_overlay.py`): 40/62 corridors searchable at the
+5-epoch floor (25 ok / 14 thin / 1 single-phase), 13 below floor, 9
+empty; coverage 0–346 usable exposures per corridor, R-dominated
+(g on ~⅓). Pilot (ross128, kapteyn, ltt1445) science cutouts + zero
+points: 616/620 frames calibrated on PS1 DR2 mean stars from the PS1
+corridor-screen snapshots (crossings calibrator rules + 0.21 mag
+Cousins-R → AB), scatter 0.05/0.065 mag, 25/45 stars; header MAGZPT
++3.85 mag off (never used). WCS-linearity check on 237 mask cutouts:
+linear Jacobian 0.08″ median / 0.39″ max inside ±200 px, 1.5″ at the
+corners → full SIP sampling (0.1 s per 475k points). Geometry stage:
+9/90 pairs cross-track (eps-ind-b 11.5″, ez-aqr, sirius, wise-0855).
+Tensor-build shakedown on ross128 (250 maps, 3.3 min). Positive
+control: (60000) has 10 PTF frames over all 763 candidate nights, 4
+surviving the ZP gate (bright-sky night scatter 0.31) — SkyBoT recon
+over the 600 ross128 + vanmaanen exposures (ecliptic fields) instead:
+(798452) 2012 QR36 (V 20.3–20.5, 46 frames / 11 nights, both bands)
+recovered R̃ 6.7 g / 3.1 R, no-clip +0.12/+0.10 mag vs Horizons +
+solar colours; (388125) 2005 UP482 (V 21.6, stack regime) recovered
+R̃ 4.8, +0.20 mag.
+
+**Freeze v1.0 (user-approved 2026-09-10, all nine recommendations
+as stated):** forced dev ross128 + kapteyn + ltt1445 + vanmaanen;
+searchable set = the 40 overlay corridors; R = Jordi + 0.21 AB with
+the 5-star / 0.2-mag gate; full-SIP sampling; NZ 192, T0 56000, 5×5 µ,
+ZP 25 AB, 5σ clip, no hold-out; masks primary seeing ≤ 4″ / strict
+seeing ≤ 2.5″ + |moonillf| ≤ 0.8 / loose none; PS1 DR2 static
+catalogue per band at full weight; the two controls; default m90
+21.5 ± 2. Freeze `sha256:4915a38e…`, seed 20260910: dev 13 corridors
+/ 14 endpoints, confirmatory 27 / 31.
+
+**Chain (`scripts/run_chain.sh data → dev → conf`, ~1.5 h).** All
+3,456 usable cutouts fetched (0 missing); 3,127 frames calibrated
+(321 R frames fail the scatter gate). Dev (`run-a55afd948de5`): 36
+cells, R̃_FWER 1.422, 1 R > 1 vs 3.9, 0 void, 0 candidates; mask
+sensitivity nil; median persistent m90 g 21.94 / R 20.85; no
+amendment. Blind confirmatory once (`run-ef554e3f697d`): **66 cells /
+31 endpoints, R̃_FWER 1.724, 8 R > 1 vs 8.3 expected, 5 void, 0
+candidates** (top gj-783/rx/R R̃ 1.29, global p 0.336); 1,056
+constraints (410 recovery curves × 2 kinds, 118 not_constrainable
+× 2); median persistent m90 g 21.08 / R 21.03 AB, static veto 0.0 %
+on recovered injections, PRF throughput 0.68. Report
+`report/ptf_survey.md`; plan §4.13; ledger harvest generator
+`surveys/programme-ledger/scripts/harvest/pipeline_a_ptf.py` and the
+ledger rebuilt. Nothing committed to git.

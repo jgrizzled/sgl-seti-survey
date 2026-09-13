@@ -813,3 +813,42 @@ barycentric grid does *not* see.
   contamination; the 10″ cone missed it.
 - A drain that polls a remote queue for a day needs network-error
   retries; a transient DNS failure killed it once.
+
+## §18 — PTF/iPTF corridor survey (2026-09-10): a sparse-cadence archive on the v2 engine
+
+- **Reuse across pipelines is mostly one-way.** A crossings survey's
+  adapter, calibrator rules and flux-map builder ported to Pipeline A
+  in a day (the ZTF corridor scripts are ~40 lines of substitutions
+  away); the reverse (a corridor archive into crossings) is gated by
+  geometry, not data — only seven targets have any crossing inside
+  0.1 AU, so a southern-corridor archive like DECam has nothing to
+  cross. Check the crossing list's b_min per target before proposing
+  an archive for Pipeline B.
+- **Grade coverage before the freeze and freeze the searchable set.**
+  Campaign-driven archives put 0–346 exposures on a corridor; the
+  overlay's 5-epoch floor removed 22 of 62 corridors as ledger-only
+  coverage without touching the family, and the per-cell epoch range
+  (6–192) then drove the not_constrainable fraction (22 %), not the
+  masks.
+- **A cross-survey positive control needs the archive's cadence.** The
+  (60000) asteroid used by ZTF/PS1/DECam has 10 PTF frames in six
+  years; a SkyBoT sweep over the pilot-corridor exposures themselves
+  (ecliptic fields) yields dozens of numbered asteroids with 20–46
+  frames, including a stack-regime one (V 21.6) — pick controls from
+  the survey's own frames, at both regimes, and keep the SkyBoT
+  snapshots.
+- **Measure the linear-WCS error on the real stamp size**: PTF's
+  TAN-SIP+PV solution departs from the centre Jacobian by 0.4″ inside
+  the locus span and 1.5″ at 600-px corners — above half the locus
+  tolerance — while the full inverse costs 0.1 s per half-million
+  points. Default to `linear_wcs=False` whenever the header carries
+  distortion terms.
+- **Signed metadata fields**: PTF's `moonillf` is signed
+  (waxing/waning); a `<= 0.8` mask silently passes −0.9. Add the
+  absolute value to the quality flags before the mask evaluator sees
+  it.
+- **Two magnitude systems in one archive**: Mould R calibrated through
+  a Cousins-R transform is Vega; declare the AB offset (+0.21) in the
+  calibrator prediction so the engine's single `mag_system` stays
+  honest, and let the asteroid control (no-clip) confirm the scale
+  (+0.10–0.12 mag here).

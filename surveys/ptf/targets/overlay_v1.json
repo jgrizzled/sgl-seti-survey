@@ -1,0 +1,1394 @@
+{
+ "built_utc": "2026-09-10T15:55:16.363768+00:00",
+ "min_epochs": 5,
+ "source": "runs/ptf/coarse_v1 + runs/ptf/precise_v1",
+ "rows": [
+  {
+   "corridor": "vanmaanen",
+   "endpoints": [
+    "van-maanen"
+   ],
+   "antipode_ra_deg": 192.34886127626584,
+   "antipode_dec_deg": -5.391995988651742,
+   "n_exposures_discovered": 346,
+   "n_usable_exposures": 346,
+   "usable_by_band": {
+    "R": 291,
+    "g": 55
+   },
+   "best_cell_epochs": 291,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 26,
+   "n_doy_bins_30d": 9,
+   "epoch_span_mjd": [
+    54907.26059722222,
+    56729.29385722223
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "61vir",
+   "endpoints": [
+    "61-vir"
+   ],
+   "antipode_ra_deg": 19.575048697464755,
+   "antipode_dec_deg": 18.326436722918125,
+   "n_exposures_discovered": 282,
+   "n_usable_exposures": 282,
+   "usable_by_band": {
+    "R": 282
+   },
+   "best_cell_epochs": 282,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 4,
+   "n_doy_bins_30d": 4,
+   "epoch_span_mjd": [
+    55434.49432722222,
+    55513.17834722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "kapteyn",
+   "endpoints": [
+    "kapteyn-star"
+   ],
+   "antipode_ra_deg": 258.0439107387367,
+   "antipode_dec_deg": 45.0886525992977,
+   "n_exposures_discovered": 666,
+   "n_usable_exposures": 285,
+   "usable_by_band": {
+    "R": 256,
+    "g": 29
+   },
+   "best_cell_epochs": 248,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 23,
+   "n_doy_bins_30d": 9,
+   "epoch_span_mjd": [
+    54962.19708722222,
+    56906.24909722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj832",
+   "endpoints": [
+    "gj-832"
+   ],
+   "antipode_ra_deg": 143.34335482491016,
+   "antipode_dec_deg": 49.048632980491234,
+   "n_exposures_discovered": 610,
+   "n_usable_exposures": 273,
+   "usable_by_band": {
+    "R": 245,
+    "g": 28
+   },
+   "best_cell_epochs": 245,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 23,
+   "n_doy_bins_30d": 8,
+   "epoch_span_mjd": [
+    55088.503557222226,
+    56972.51256722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj915",
+   "endpoints": [
+    "gj-915"
+   ],
+   "antipode_ra_deg": 180.5753128776902,
+   "antipode_dec_deg": 43.203853374279134,
+   "n_exposures_discovered": 435,
+   "n_usable_exposures": 218,
+   "usable_by_band": {
+    "R": 216,
+    "g": 2
+   },
+   "best_cell_epochs": 216,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 17,
+   "n_doy_bins_30d": 6,
+   "epoch_span_mjd": [
+    54957.237437222226,
+    56805.205817222224
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj1061",
+   "endpoints": [
+    "gj-1061"
+   ],
+   "antipode_ra_deg": 234.0564035935249,
+   "antipode_dec_deg": 44.54779445231594,
+   "n_exposures_discovered": 196,
+   "n_usable_exposures": 196,
+   "usable_by_band": {
+    "R": 196
+   },
+   "best_cell_epochs": 196,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 19,
+   "n_doy_bins_30d": 7,
+   "epoch_span_mjd": [
+    54957.186737222226,
+    56857.251017222225
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "epseri",
+   "endpoints": [
+    "eps-eri"
+   ],
+   "antipode_ra_deg": 233.179524042798,
+   "antipode_dec_deg": 9.48210566710507,
+   "n_exposures_discovered": 392,
+   "n_usable_exposures": 178,
+   "usable_by_band": {
+    "R": 178
+   },
+   "best_cell_epochs": 178,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 7,
+   "n_doy_bins_30d": 4,
+   "epoch_span_mjd": [
+    55010.23557722222,
+    56696.432907222224
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj3306",
+   "endpoints": [
+    "gj-3306"
+   ],
+   "antipode_ra_deg": 249.41794423183356,
+   "antipode_dec_deg": 8.865516995503931,
+   "n_exposures_discovered": 271,
+   "n_usable_exposures": 159,
+   "usable_by_band": {
+    "R": 159
+   },
+   "best_cell_epochs": 159,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 9,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    55015.25143722222,
+    56148.29996722222
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "ross128",
+   "endpoints": [
+    "ross-128"
+   ],
+   "antipode_ra_deg": 356.96462780853057,
+   "antipode_dec_deg": -0.7850031969850911,
+   "n_exposures_discovered": 313,
+   "n_usable_exposures": 254,
+   "usable_by_band": {
+    "R": 155,
+    "g": 99
+   },
+   "best_cell_epochs": 155,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 13,
+   "n_doy_bins_30d": 5,
+   "epoch_span_mjd": [
+    55008.397937222224,
+    56912.30579722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj65",
+   "endpoints": [
+    "gj65-a",
+    "gj65-b"
+   ],
+   "antipode_ra_deg": 204.79991515980993,
+   "antipode_dec_deg": 17.96326452008844,
+   "n_exposures_discovered": 258,
+   "n_usable_exposures": 135,
+   "usable_by_band": {
+    "R": 135
+   },
+   "best_cell_epochs": 135,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 12,
+   "n_doy_bins_30d": 5,
+   "epoch_span_mjd": [
+    54982.22631722222,
+    56729.41742722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "82eri",
+   "endpoints": [
+    "82-eri"
+   ],
+   "antipode_ra_deg": 229.95138774560345,
+   "antipode_dec_deg": 43.09273935968565,
+   "n_exposures_discovered": 122,
+   "n_usable_exposures": 122,
+   "usable_by_band": {
+    "R": 122
+   },
+   "best_cell_epochs": 122,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 14,
+   "n_doy_bins_30d": 7,
+   "epoch_span_mjd": [
+    54957.18528722222,
+    56076.389667222225
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj66",
+   "endpoints": [
+    "gj-66-a",
+    "gj-66-b"
+   ],
+   "antipode_ra_deg": 204.93309040446096,
+   "antipode_dec_deg": 56.246032136794135,
+   "n_exposures_discovered": 87,
+   "n_usable_exposures": 86,
+   "usable_by_band": {
+    "R": 86
+   },
+   "best_cell_epochs": 86,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 11,
+   "n_doy_bins_30d": 6,
+   "epoch_span_mjd": [
+    54961.206187222226,
+    56817.23890722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj783",
+   "endpoints": [
+    "gj-783"
+   ],
+   "antipode_ra_deg": 122.7392019780727,
+   "antipode_dec_deg": 36.1220226835208,
+   "n_exposures_discovered": 156,
+   "n_usable_exposures": 92,
+   "usable_by_band": {
+    "R": 85,
+    "g": 7
+   },
+   "best_cell_epochs": 85,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 14,
+   "n_doy_bins_30d": 9,
+   "epoch_span_mjd": [
+    54891.13625722222,
+    57047.500867222225
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "alphacen",
+   "endpoints": [
+    "alpha-cen-a",
+    "alpha-cen-b"
+   ],
+   "antipode_ra_deg": 39.821389697606534,
+   "antipode_dec_deg": 60.86192623595539,
+   "n_exposures_discovered": 182,
+   "n_usable_exposures": 72,
+   "usable_by_band": {
+    "R": 68,
+    "g": 4
+   },
+   "best_cell_epochs": 68,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 14,
+   "n_doy_bins_30d": 9,
+   "epoch_span_mjd": [
+    55043.48572722222,
+    57040.15863722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "ltt1445",
+   "endpoints": [
+    "ltt-1445-a"
+   ],
+   "antipode_ra_deg": 225.4100240581278,
+   "antipode_dec_deg": 16.62080111369175,
+   "n_exposures_discovered": 81,
+   "n_usable_exposures": 81,
+   "usable_by_band": {
+    "R": 25,
+    "g": 56
+   },
+   "best_cell_epochs": 56,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 8,
+   "n_doy_bins_30d": 5,
+   "epoch_span_mjd": [
+    54948.236937222224,
+    55596.43388722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "epsind",
+   "endpoints": [
+    "eps-ind-a",
+    "eps-ind-b"
+   ],
+   "antipode_ra_deg": 151.02152166192866,
+   "antipode_dec_deg": 56.83387519279609,
+   "n_exposures_discovered": 118,
+   "n_usable_exposures": 55,
+   "usable_by_band": {
+    "R": 54,
+    "g": 1
+   },
+   "best_cell_epochs": 54,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 8,
+   "n_doy_bins_30d": 7,
+   "epoch_span_mjd": [
+    54905.324347222224,
+    56987.493407222224
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "proxima",
+   "endpoints": [
+    "proxima-cen"
+   ],
+   "antipode_ra_deg": 37.48422163734371,
+   "antipode_dec_deg": 62.70666668860167,
+   "n_exposures_discovered": 85,
+   "n_usable_exposures": 45,
+   "usable_by_band": {
+    "R": 40,
+    "g": 5
+   },
+   "best_cell_epochs": 40,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 15,
+   "n_doy_bins_30d": 10,
+   "epoch_span_mjd": [
+    55043.48572722222,
+    57040.157437222224
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "lacaille9352",
+   "endpoints": [
+    "lacaille-9352"
+   ],
+   "antipode_ra_deg": 166.56616136308278,
+   "antipode_dec_deg": 35.85004493029921,
+   "n_exposures_discovered": 135,
+   "n_usable_exposures": 39,
+   "usable_by_band": {
+    "R": 36,
+    "g": 3
+   },
+   "best_cell_epochs": 36,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 4,
+   "n_doy_bins_30d": 4,
+   "epoch_span_mjd": [
+    56305.35444722222,
+    56961.508927222225
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj12724",
+   "endpoints": [
+    "gj-12724"
+   ],
+   "antipode_ra_deg": 101.22693626454223,
+   "antipode_dec_deg": 63.98623409772915,
+   "n_exposures_discovered": 160,
+   "n_usable_exposures": 35,
+   "usable_by_band": {
+    "R": 35
+   },
+   "best_cell_epochs": 35,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 4,
+   "n_doy_bins_30d": 4,
+   "epoch_span_mjd": [
+    56324.14315722222,
+    56676.40411722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj518",
+   "endpoints": [
+    "gj-518"
+   ],
+   "antipode_ra_deg": 24.086666026188794,
+   "antipode_dec_deg": -3.686538534025576,
+   "n_exposures_discovered": 64,
+   "n_usable_exposures": 35,
+   "usable_by_band": {
+    "R": 35
+   },
+   "best_cell_epochs": 35,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 7,
+   "n_doy_bins_30d": 5,
+   "epoch_span_mjd": [
+    55047.468477222224,
+    56272.27922722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "wolf359",
+   "endpoints": [
+    "wolf-359"
+   ],
+   "antipode_ra_deg": 344.0600942077201,
+   "antipode_dec_deg": -7.019307443869559,
+   "n_exposures_discovered": 134,
+   "n_usable_exposures": 55,
+   "usable_by_band": {
+    "R": 35,
+    "g": 20
+   },
+   "best_cell_epochs": 35,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 9,
+   "n_doy_bins_30d": 6,
+   "epoch_span_mjd": [
+    55008.38333722222,
+    56987.16194722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj876",
+   "endpoints": [
+    "gj-876"
+   ],
+   "antipode_ra_deg": 163.31695043689928,
+   "antipode_dec_deg": 14.279879618936443,
+   "n_exposures_discovered": 32,
+   "n_usable_exposures": 32,
+   "usable_by_band": {
+    "R": 32
+   },
+   "best_cell_epochs": 32,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 3,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    55931.29820722222,
+    56372.220627222225
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "wise0855",
+   "endpoints": [
+    "wise-0855"
+   ],
+   "antipode_ra_deg": 313.80529142272127,
+   "antipode_dec_deg": 7.267008364295578,
+   "n_exposures_discovered": 72,
+   "n_usable_exposures": 42,
+   "usable_by_band": {
+    "R": 32,
+    "g": 10
+   },
+   "best_cell_epochs": 32,
+   "n_cells_at_floor": 4,
+   "n_calendar_months": 7,
+   "n_doy_bins_30d": 6,
+   "epoch_span_mjd": [
+    55734.263267222224,
+    56126.25050722223
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj1276",
+   "endpoints": [
+    "gj-1276"
+   ],
+   "antipode_ra_deg": 163.52331881912392,
+   "antipode_dec_deg": 6.766450930366755,
+   "n_exposures_discovered": 86,
+   "n_usable_exposures": 31,
+   "usable_by_band": {
+    "R": 31
+   },
+   "best_cell_epochs": 31,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 3,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    55931.31529722222,
+    56365.210227222226
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "gj526",
+   "endpoints": [
+    "gj-526"
+   ],
+   "antipode_ra_deg": 26.46548931302623,
+   "antipode_dec_deg": -14.898645590592848,
+   "n_exposures_discovered": 35,
+   "n_usable_exposures": 31,
+   "usable_by_band": {
+    "R": 31
+   },
+   "best_cell_epochs": 31,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 5,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    55041.489477222225,
+    55465.45011722222
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "gj514",
+   "endpoints": [
+    "gj-514"
+   ],
+   "antipode_ra_deg": 22.538344978752438,
+   "antipode_dec_deg": -10.372316221743391,
+   "n_exposures_discovered": 42,
+   "n_usable_exposures": 31,
+   "usable_by_band": {
+    "R": 31
+   },
+   "best_cell_epochs": 30,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 7,
+   "n_doy_bins_30d": 5,
+   "epoch_span_mjd": [
+    55042.49446722223,
+    55868.33760722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "gj1002",
+   "endpoints": [
+    "gj-1002"
+   ],
+   "antipode_ra_deg": 181.68579826341326,
+   "antipode_dec_deg": 7.556046977431399,
+   "n_exposures_discovered": 31,
+   "n_usable_exposures": 31,
+   "usable_by_band": {
+    "R": 29,
+    "g": 2
+   },
+   "best_cell_epochs": 29,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 4,
+   "n_doy_bins_30d": 4,
+   "epoch_span_mjd": [
+    54991.19359722222,
+    56805.225467222226
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "ezaqr",
+   "endpoints": [
+    "ez-aqr"
+   ],
+   "antipode_ra_deg": 159.68779162062933,
+   "antipode_dec_deg": 15.277621407327814,
+   "n_exposures_discovered": 29,
+   "n_usable_exposures": 29,
+   "usable_by_band": {
+    "R": 28,
+    "g": 1
+   },
+   "best_cell_epochs": 28,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 4,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    55931.285557222225,
+    57036.49473722222
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "wolf437",
+   "endpoints": [
+    "wolf-437"
+   ],
+   "antipode_ra_deg": 11.984308379295088,
+   "antipode_dec_deg": -9.757061827023625,
+   "n_exposures_discovered": 22,
+   "n_usable_exposures": 22,
+   "usable_by_band": {
+    "R": 22
+   },
+   "best_cell_epochs": 22,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 9,
+   "n_doy_bins_30d": 5,
+   "epoch_span_mjd": [
+    55042.493047222226,
+    56940.35365722222
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "fomalhaut",
+   "endpoints": [
+    "fomalhaut"
+   ],
+   "antipode_ra_deg": 164.4673725938713,
+   "antipode_dec_deg": 29.596881746978628,
+   "n_exposures_discovered": 23,
+   "n_usable_exposures": 23,
+   "usable_by_band": {
+    "R": 20,
+    "g": 3
+   },
+   "best_cell_epochs": 20,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 8,
+   "n_doy_bins_30d": 5,
+   "epoch_span_mjd": [
+    54903.35992722222,
+    56961.506607222225
+   ],
+   "grade": "ok",
+   "searchable": true
+  },
+  {
+   "corridor": "barnard",
+   "endpoints": [
+    "barnard-star"
+   ],
+   "antipode_ra_deg": 89.42649589425032,
+   "antipode_dec_deg": -4.765293014447033,
+   "n_exposures_discovered": 20,
+   "n_usable_exposures": 20,
+   "usable_by_band": {
+    "R": 19,
+    "g": 1
+   },
+   "best_cell_epochs": 19,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 7,
+   "n_doy_bins_30d": 5,
+   "epoch_span_mjd": [
+    55868.44965722223,
+    57040.26506722222
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "gj293",
+   "endpoints": [
+    "gj-293"
+   ],
+   "antipode_ra_deg": 298.47130541640297,
+   "antipode_dec_deg": 67.8118615596058,
+   "n_exposures_discovered": 49,
+   "n_usable_exposures": 18,
+   "usable_by_band": {
+    "R": 18
+   },
+   "best_cell_epochs": 18,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 2,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    56251.08043722223,
+    56770.47216722222
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "lhs1723",
+   "endpoints": [
+    "lhs-1723"
+   ],
+   "antipode_ra_deg": 255.4431883306489,
+   "antipode_dec_deg": 6.972413566689479,
+   "n_exposures_discovered": 20,
+   "n_usable_exposures": 17,
+   "usable_by_band": {
+    "R": 17
+   },
+   "best_cell_epochs": 17,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 4,
+   "n_doy_bins_30d": 4,
+   "epoch_span_mjd": [
+    55404.259547222224,
+    56820.388337222226
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "gj2012",
+   "endpoints": [
+    "gj-2012"
+   ],
+   "antipode_ra_deg": 190.4039061795448,
+   "antipode_dec_deg": 22.344228379226756,
+   "n_exposures_discovered": 44,
+   "n_usable_exposures": 15,
+   "usable_by_band": {
+    "R": 15
+   },
+   "best_cell_epochs": 15,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 4,
+   "n_doy_bins_30d": 4,
+   "epoch_span_mjd": [
+    54974.169047222225,
+    56676.57418722222
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "taucet",
+   "endpoints": [
+    "tau-cet"
+   ],
+   "antipode_ra_deg": 205.97026638951436,
+   "antipode_dec_deg": 15.962975383800943,
+   "n_exposures_discovered": 39,
+   "n_usable_exposures": 14,
+   "usable_by_band": {
+    "R": 14
+   },
+   "best_cell_epochs": 14,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 5,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    54982.227787222226,
+    56729.41742722222
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "wolf1061",
+   "endpoints": [
+    "wolf-1061"
+   ],
+   "antipode_ra_deg": 67.53162383899227,
+   "antipode_dec_deg": 12.66041233270018,
+   "n_exposures_discovered": 13,
+   "n_usable_exposures": 10,
+   "usable_by_band": {
+    "R": 9,
+    "g": 1
+   },
+   "best_cell_epochs": 9,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 3,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    56244.220067222224,
+    57043.238377222224
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "gj581",
+   "endpoints": [
+    "gj-581"
+   ],
+   "antipode_ra_deg": 49.90229563570871,
+   "antipode_dec_deg": 7.739835302622859,
+   "n_exposures_discovered": 18,
+   "n_usable_exposures": 6,
+   "usable_by_band": {
+    "R": 6
+   },
+   "best_cell_epochs": 6,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 2,
+   "n_doy_bins_30d": 2,
+   "epoch_span_mjd": [
+    55402.46881722222,
+    55433.47558722222
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "lacaille8760",
+   "endpoints": [
+    "lacaille-8760"
+   ],
+   "antipode_ra_deg": 139.3536222658539,
+   "antipode_dec_deg": 38.857345888435844,
+   "n_exposures_discovered": 6,
+   "n_usable_exposures": 6,
+   "usable_by_band": {
+    "R": 6
+   },
+   "best_cell_epochs": 6,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 4,
+   "n_doy_bins_30d": 4,
+   "epoch_span_mjd": [
+    55080.51379722222,
+    56770.159097222226
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "gj784",
+   "endpoints": [
+    "gj-784"
+   ],
+   "antipode_ra_deg": 123.5442834980216,
+   "antipode_dec_deg": 45.142898987130984,
+   "n_exposures_discovered": 70,
+   "n_usable_exposures": 5,
+   "usable_by_band": {
+    "R": 5
+   },
+   "best_cell_epochs": 5,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 3,
+   "n_doy_bins_30d": 3,
+   "epoch_span_mjd": [
+    55080.49225722222,
+    56696.402257222224
+   ],
+   "grade": "thin",
+   "searchable": true
+  },
+  {
+   "corridor": "sirius",
+   "endpoints": [
+    "sirius-a",
+    "sirius-b"
+   ],
+   "antipode_ra_deg": 281.277460045819,
+   "antipode_dec_deg": 16.758919804715422,
+   "n_exposures_discovered": 5,
+   "n_usable_exposures": 5,
+   "usable_by_band": {
+    "R": 5
+   },
+   "best_cell_epochs": 5,
+   "n_cells_at_floor": 2,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 1,
+   "epoch_span_mjd": [
+    56844.31137722222,
+    56847.25005722222
+   ],
+   "grade": "single-phase",
+   "searchable": true
+  },
+  {
+   "corridor": "gj229",
+   "endpoints": [
+    "gj-229-a"
+   ],
+   "antipode_ra_deg": 272.58900631007856,
+   "antipode_dec_deg": 21.887797270414787,
+   "n_exposures_discovered": 4,
+   "n_usable_exposures": 4,
+   "usable_by_band": {
+    "g": 4
+   },
+   "best_cell_epochs": 4,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 2,
+   "epoch_span_mjd": [
+    56896.18169722222,
+    56899.30787722222
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj367",
+   "endpoints": [
+    "gj-367"
+   ],
+   "antipode_ra_deg": 326.1614298353949,
+   "antipode_dec_deg": 45.827918250075484,
+   "n_exposures_discovered": 9,
+   "n_usable_exposures": 4,
+   "usable_by_band": {
+    "R": 4
+   },
+   "best_cell_epochs": 4,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 1,
+   "epoch_span_mjd": [
+    56844.38593722222,
+    56847.403847222224
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj674",
+   "endpoints": [
+    "gj-674"
+   ],
+   "antipode_ra_deg": 82.21056669577598,
+   "antipode_dec_deg": 46.92299436651937,
+   "n_exposures_discovered": 3,
+   "n_usable_exposures": 3,
+   "usable_by_band": {
+    "R": 3
+   },
+   "best_cell_epochs": 3,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 1,
+   "epoch_span_mjd": [
+    56976.55256722222,
+    56978.55592722222
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "luhman16",
+   "endpoints": [
+    "luhman16-a",
+    "luhman16-b"
+   ],
+   "antipode_ra_deg": 342.3782700200579,
+   "antipode_dec_deg": 53.354986242132945,
+   "n_exposures_discovered": 7,
+   "n_usable_exposures": 3,
+   "usable_by_band": {
+    "R": 3
+   },
+   "best_cell_epochs": 3,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 1,
+   "epoch_span_mjd": [
+    56844.410107222226,
+    56847.479397222225
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj11547",
+   "endpoints": [
+    "gj-11547"
+   ],
+   "antipode_ra_deg": 342.0466711935277,
+   "antipode_dec_deg": 39.98331209258699,
+   "n_exposures_discovered": 4,
+   "n_usable_exposures": 4,
+   "usable_by_band": {
+    "R": 2,
+    "g": 2
+   },
+   "best_cell_epochs": 2,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 2,
+   "n_doy_bins_30d": 2,
+   "epoch_span_mjd": [
+    56844.400927222225,
+    56905.252307222225
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj588",
+   "endpoints": [
+    "gj-588"
+   ],
+   "antipode_ra_deg": 52.9740177276,
+   "antipode_dec_deg": 41.27899119741678,
+   "n_exposures_discovered": 4,
+   "n_usable_exposures": 2,
+   "usable_by_band": {
+    "R": 2
+   },
+   "best_cell_epochs": 2,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 1,
+   "epoch_span_mjd": [
+    55589.199997222226,
+    55589.24475722222
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "luyten",
+   "endpoints": [
+    "luyten-star"
+   ],
+   "antipode_ra_deg": 291.8056737997541,
+   "antipode_dec_deg": -5.207495860293498,
+   "n_exposures_discovered": 4,
+   "n_usable_exposures": 2,
+   "usable_by_band": {
+    "R": 2
+   },
+   "best_cell_epochs": 2,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 1,
+   "epoch_span_mjd": [
+    56936.13331722222,
+    56936.167567222226
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "procyon",
+   "endpoints": [
+    "procyon-a",
+    "procyon-b"
+   ],
+   "antipode_ra_deg": 294.7667674901397,
+   "antipode_dec_deg": -5.223461917703425,
+   "n_exposures_discovered": 2,
+   "n_usable_exposures": 2,
+   "usable_by_band": {
+    "R": 2
+   },
+   "best_cell_epochs": 2,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 1,
+   "epoch_span_mjd": [
+    56936.13331722222,
+    56936.167567222226
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj682",
+   "endpoints": [
+    "gj-682"
+   ],
+   "antipode_ra_deg": 84.29685870306739,
+   "antipode_dec_deg": 44.34495000679714,
+   "n_exposures_discovered": 1,
+   "n_usable_exposures": 1,
+   "usable_by_band": {
+    "R": 1
+   },
+   "best_cell_epochs": 1,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 1,
+   "n_doy_bins_30d": 1,
+   "epoch_span_mjd": [
+    56976.553717222225,
+    56976.553717222225
+   ],
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj1087",
+   "endpoints": [
+    "gj-1087"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  },
+  {
+   "corridor": "gj11068",
+   "endpoints": [
+    "gj-11068"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  },
+  {
+   "corridor": "gj1111",
+   "endpoints": [
+    "gj-1111"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  },
+  {
+   "corridor": "gj2066",
+   "endpoints": [
+    "gj-2066"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  },
+  {
+   "corridor": "gj3112",
+   "endpoints": [
+    "gj-3112"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 120,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj318",
+   "endpoints": [
+    "gj-318"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  },
+  {
+   "corridor": "gj54",
+   "endpoints": [
+    "gj-54"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 13,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj667",
+   "endpoints": [
+    "gj-667-c"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  },
+  {
+   "corridor": "gj908",
+   "endpoints": [
+    "gj-908"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 4,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "gj9193",
+   "endpoints": [
+    "gj-9193"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  },
+  {
+   "corridor": "lp145141",
+   "endpoints": [
+    "lp-145-141"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 9,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "below-floor",
+   "searchable": false
+  },
+  {
+   "corridor": "ross154",
+   "endpoints": [
+    "ross-154"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  },
+  {
+   "corridor": "teegarden",
+   "endpoints": [
+    "teegarden"
+   ],
+   "antipode_ra_deg": null,
+   "antipode_dec_deg": null,
+   "n_exposures_discovered": 0,
+   "n_usable_exposures": 0,
+   "usable_by_band": {},
+   "best_cell_epochs": 0,
+   "n_cells_at_floor": 0,
+   "n_calendar_months": 0,
+   "n_doy_bins_30d": 0,
+   "epoch_span_mjd": null,
+   "grade": "empty",
+   "searchable": false
+  }
+ ]
+}

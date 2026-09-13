@@ -1,0 +1,548 @@
+{
+ "freeze_content_hash": "sha256:4915a38e50401cec9c18c3eb50a693c5a38d48ef7210f676bfe53cf39cec5c23",
+ "frozen_at": "2026-09-10",
+ "hypotheses_hash": "sha256:907334007cd2ec3baa7a7f2ffd4553af973890e2f3f3632573082dc22c7dd62f",
+ "hypothesis_version": "ptf-hypotheses-v1.0",
+ "n_corridors": 40,
+ "n_endpoints": 45,
+ "parameters": {
+  "bands": [
+   "g",
+   "R"
+  ],
+  "clip_sigma": 5.0,
+  "designated_controls": [
+   0,
+   8,
+   16,
+   20,
+   24,
+   28,
+   32,
+   40
+  ],
+  "extra": {
+   "catalog": "ps1-dr2-mean (runs/panstarrs/screen_v1 corridor cones), per-band transformed",
+   "positive_controls": "(798452) 2012 QR36 catalogue regime (configs/asteroid_control_v1.json); (388125) 2005 UP482 stack regime (configs/asteroid_control_388125.json)",
+   "psf": "moffat beta=3 at header SEEING",
+   "search_image": "scie-direct (no difference images in the archive)",
+   "wcs_sampling": "full TAN-SIP inverse (linear_wcs=False)",
+   "zeropoint": "PS1 DR2 mean-star calibration per frame (zp_star; g = PS1 g, R = Jordi 2006 Cousins R + 0.21 AB); header MAGZPT never used",
+   "zp_gate": ">= 5 calibrators, robust scatter <= 0.2 mag, else unusable"
+  },
+  "fwer_alpha": 0.05,
+  "geometry": {
+   "mc_epochs_jyear": [
+    2009.5,
+    2012.0,
+    2014.5
+   ],
+   "mc_samples": 2000,
+   "mc_seed": 20260910,
+   "mc_z_au": [
+    550.0,
+    10000.0
+   ],
+   "observer": "palomar-p48 (terrestrial site; PTF = ZTF telescope)",
+   "psf_fwhm_nominal": {
+    "R": 2.1,
+    "g": 2.3
+   },
+   "xt_threshold_fwhm": 0.5
+  },
+  "heavy_tail_ratio": 2.5,
+  "holdout": {
+   "is_veto": false,
+   "min_S_late": 3.0,
+   "min_flux_ratio": 0.3,
+   "split_mjd": null
+  },
+  "hypothesis_version": "ptf-hypotheses-v1.0",
+  "injections": {
+   "mag_halfwidth": 2.0,
+   "n_per_cell": 400,
+   "n_z_intervals": 8,
+   "recovery_window": [
+    2,
+    1
+   ],
+   "spectrum": {
+    "R": "flat_fnu_ab",
+    "g": "flat_fnu_ab"
+   },
+   "stamp_half_pix": 16,
+   "temporal_models": [
+    "persistent",
+    "flicker",
+    "visit",
+    "block"
+   ],
+   "visit_gap_days": 5.0
+  },
+  "ks_alpha": 0.01,
+  "locus_bin_days": 0.05,
+  "locus_tol_arcsec": 0.5,
+  "mag_system": "ab",
+  "min_epochs": 5,
+  "min_good_frac": 0.7,
+  "motion_bound_norm": "linf",
+  "mu_grid_arcsec_yr": [
+   -1.0,
+   -0.5,
+   0.0,
+   0.5,
+   1.0
+  ],
+  "n_epoch_scramble_diagnostic": 50,
+  "n_phase_scramble": 200,
+  "n_pseudo_experiments": 10000,
+  "n_trajectory_donors": 50,
+  "norm_quantile": 0.95,
+  "pooled_null": "ring",
+  "quality_masks": {
+   "loose": {},
+   "primary": {
+    "seeing": [
+     "<=",
+     4.0
+    ]
+   },
+   "strict": {
+    "moonillf_abs": [
+     "<=",
+     0.8
+    ],
+    "seeing": [
+     "<=",
+     2.5
+    ]
+   }
+  },
+  "ring_offsets_arcsec": [
+   [
+    20.0,
+    0.0
+   ],
+   [
+    18.477591,
+    7.653669
+   ],
+   [
+    14.142136,
+    14.142136
+   ],
+   [
+    7.653669,
+    18.477591
+   ],
+   [
+    0.0,
+    20.0
+   ],
+   [
+    -7.653669,
+    18.477591
+   ],
+   [
+    -14.142136,
+    14.142136
+   ],
+   [
+    -18.477591,
+    7.653669
+   ],
+   [
+    -20.0,
+    0.0
+   ],
+   [
+    -18.477591,
+    -7.653669
+   ],
+   [
+    -14.142136,
+    -14.142136
+   ],
+   [
+    -7.653669,
+    -18.477591
+   ],
+   [
+    -0.0,
+    -20.0
+   ],
+   [
+    7.653669,
+    -18.477591
+   ],
+   [
+    14.142136,
+    -14.142136
+   ],
+   [
+    18.477591,
+    -7.653669
+   ],
+   [
+    30.0,
+    0.0
+   ],
+   [
+    27.716386,
+    11.480503
+   ],
+   [
+    21.213203,
+    21.213203
+   ],
+   [
+    11.480503,
+    27.716386
+   ],
+   [
+    0.0,
+    30.0
+   ],
+   [
+    -11.480503,
+    27.716386
+   ],
+   [
+    -21.213203,
+    21.213203
+   ],
+   [
+    -27.716386,
+    11.480503
+   ],
+   [
+    -30.0,
+    0.0
+   ],
+   [
+    -27.716386,
+    -11.480503
+   ],
+   [
+    -21.213203,
+    -21.213203
+   ],
+   [
+    -11.480503,
+    -27.716386
+   ],
+   [
+    -0.0,
+    -30.0
+   ],
+   [
+    11.480503,
+    -27.716386
+   ],
+   [
+    21.213203,
+    -21.213203
+   ],
+   [
+    27.716386,
+    -11.480503
+   ],
+   [
+    40.0,
+    0.0
+   ],
+   [
+    36.955181,
+    15.307337
+   ],
+   [
+    28.284271,
+    28.284271
+   ],
+   [
+    15.307337,
+    36.955181
+   ],
+   [
+    0.0,
+    40.0
+   ],
+   [
+    -15.307337,
+    36.955181
+   ],
+   [
+    -28.284271,
+    28.284271
+   ],
+   [
+    -36.955181,
+    15.307337
+   ],
+   [
+    -40.0,
+    0.0
+   ],
+   [
+    -36.955181,
+    -15.307337
+   ],
+   [
+    -28.284271,
+    -28.284271
+   ],
+   [
+    -15.307337,
+    -36.955181
+   ],
+   [
+    -0.0,
+    -40.0
+   ],
+   [
+    15.307337,
+    -36.955181
+   ],
+   [
+    28.284271,
+    -28.284271
+   ],
+   [
+    36.955181,
+    -15.307337
+   ]
+  ],
+  "split": {
+   "dev_fraction": 0.3,
+   "forced_dev": [
+    "ross128",
+    "kapteyn",
+    "ltt1445",
+    "vanmaanen"
+   ],
+   "seed": 20260910,
+   "strata": "confusion class",
+   "unit": "corridor"
+  },
+  "static_veto": {
+   "factor": 2.0,
+   "min_ndet": 3,
+   "search_arcsec": 30.0
+  },
+  "t0_mjd": 56000.0,
+  "weight_cap": {
+   "factor": 20.0,
+   "kind": "per-frame (band median frame weight)"
+  },
+  "z_grid": {
+   "max_au": 550.0,
+   "min_au": 10000.0,
+   "n": 192,
+   "spacing": "uniform in 1/z"
+  },
+  "zp_ref": 25.0
+ },
+ "registry_source_hash": "sha256:03b9ae3af1cfdbb2156b96d66c16a2f8486f37de5572cdeb0631cc3fa74d0fd4",
+ "split": {
+  "confirmatory": {
+   "corridors": [
+    "82eri",
+    "epseri",
+    "epsind",
+    "fomalhaut",
+    "gj1002",
+    "gj1061",
+    "gj1276",
+    "gj2012",
+    "gj293",
+    "gj3306",
+    "gj514",
+    "gj518",
+    "gj526",
+    "gj65",
+    "gj66",
+    "gj783",
+    "gj832",
+    "gj876",
+    "gj915",
+    "lacaille9352",
+    "lhs1723",
+    "proxima",
+    "sirius",
+    "taucet",
+    "wise0855",
+    "wolf1061",
+    "wolf359"
+   ],
+   "endpoints": [
+    "82-eri",
+    "eps-eri",
+    "eps-ind-a",
+    "eps-ind-b",
+    "fomalhaut",
+    "gj-1002",
+    "gj-1061",
+    "gj-1276",
+    "gj-2012",
+    "gj-293",
+    "gj-3306",
+    "gj-514",
+    "gj-518",
+    "gj-526",
+    "gj-66-a",
+    "gj-66-b",
+    "gj-783",
+    "gj-832",
+    "gj-876",
+    "gj-915",
+    "gj65-a",
+    "gj65-b",
+    "lacaille-9352",
+    "lhs-1723",
+    "proxima-cen",
+    "sirius-a",
+    "sirius-b",
+    "tau-cet",
+    "wise-0855",
+    "wolf-1061",
+    "wolf-359"
+   ],
+   "n_corridors": 27,
+   "n_endpoints": 31
+  },
+  "confusion_class": {
+   "61vir": "low",
+   "82eri": "mid",
+   "alphacen": "high+bright-star",
+   "barnard": "mid",
+   "epseri": "mid",
+   "epsind": "low",
+   "ezaqr": "mid",
+   "fomalhaut": "low",
+   "gj1002": "low",
+   "gj1061": "mid",
+   "gj12724": "mid",
+   "gj1276": "low",
+   "gj2012": "low",
+   "gj293": "mid",
+   "gj3306": "mid",
+   "gj514": "low",
+   "gj518": "low",
+   "gj526": "low",
+   "gj581": "low",
+   "gj65": "low",
+   "gj66": "mid",
+   "gj783": "low",
+   "gj784": "low",
+   "gj832": "low",
+   "gj876": "low",
+   "gj915": "low",
+   "kapteyn": "mid+bright-star",
+   "lacaille8760": "low",
+   "lacaille9352": "mid",
+   "lhs1723": "mid",
+   "ltt1445": "mid",
+   "proxima": "high+bright-star",
+   "ross128": "low",
+   "sirius": "high",
+   "taucet": "low",
+   "vanmaanen": "low",
+   "wise0855": "mid",
+   "wolf1061": "mid",
+   "wolf359": "low",
+   "wolf437": "low"
+  },
+  "dev_fraction": 0.3,
+  "development": {
+   "corridors": [
+    "61vir",
+    "alphacen",
+    "barnard",
+    "ezaqr",
+    "gj12724",
+    "gj581",
+    "gj784",
+    "kapteyn",
+    "lacaille8760",
+    "ltt1445",
+    "ross128",
+    "vanmaanen",
+    "wolf437"
+   ],
+   "endpoints": [
+    "61-vir",
+    "alpha-cen-a",
+    "alpha-cen-b",
+    "barnard-star",
+    "ez-aqr",
+    "gj-12724",
+    "gj-581",
+    "gj-784",
+    "kapteyn-star",
+    "lacaille-8760",
+    "ltt-1445-a",
+    "ross-128",
+    "van-maanen",
+    "wolf-437"
+   ],
+   "n_corridors": 13,
+   "n_endpoints": 14
+  },
+  "seed": 20260910,
+  "strata": {
+   "high": {
+    "dev": [],
+    "n_corridors": 1,
+    "n_dev": 0
+   },
+   "high+bright-star": {
+    "dev": [
+     "alphacen"
+    ],
+    "n_corridors": 2,
+    "n_dev": 1
+   },
+   "low": {
+    "dev": [
+     "61vir",
+     "gj581",
+     "gj784",
+     "lacaille8760",
+     "ross128",
+     "vanmaanen",
+     "wolf437"
+    ],
+    "forced": [
+     "ross128",
+     "vanmaanen"
+    ],
+    "n_corridors": 22,
+    "n_dev": 7
+   },
+   "mid": {
+    "dev": [
+     "barnard",
+     "ezaqr",
+     "gj12724",
+     "ltt1445"
+    ],
+    "forced": [
+     "ltt1445"
+    ],
+    "n_corridors": 14,
+    "n_dev": 4
+   },
+   "mid+bright-star": {
+    "dev": [
+     "kapteyn"
+    ],
+    "forced": [
+     "kapteyn"
+    ],
+    "n_corridors": 1,
+    "n_dev": 1
+   }
+  }
+ },
+ "survey": "ptf"
+}

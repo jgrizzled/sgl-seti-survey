@@ -25,13 +25,13 @@ both pipelines for a given archive.
 
 ## Current status
 
-27 archival surveys are complete (7 Pipeline A corridor surveys, 20
+28 archival surveys are complete (8 Pipeline A corridor surveys, 20
 Pipeline B crossings surveys) with **zero candidates**; the remaining
 plan rows wait on data releases (SPHEREx QR3, Rubin images, Gaia DR4,
 WINTER / PGIR). The programme-wide index of every constraint and open
-cell — 28,588 rows over 88 endpoints, with the shared Constraint /
+cell — 29,433 rows over 88 endpoints, with the shared Constraint /
 AnalysisRun / Candidate records — is `report/programme_ledger.md`
-(built 2026-09-10).
+(built and refreshed 2026-09-10; the PTF corridor survey is the latest fold-in).
 
 See `notes/project_plan.md` for per-survey status and
 `notes/project_history.md` for the execution record.
